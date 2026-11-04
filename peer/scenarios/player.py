@@ -107,7 +107,7 @@ def dry_run(st: Settings, name: str) -> Path:
 
 
 # -- live --------------------------------------------------------------------------------------------
-def live(st: Settings, name: str, click_timeout_s: int = 900) -> Path:
+def live(st: Settings, name: str, click_timeout_s: int = 900, record: bool = False, auto_click: bool = False) -> Path:
     from slack_sdk import WebClient
     from ..memory.discovery import load_world
 
@@ -139,6 +139,21 @@ def live(st: Settings, name: str, click_timeout_s: int = 900) -> Path:
     prev = st.get("presence.manual")
     st.set("presence.manual", sc.get("presence", "auto"))
     walk.note("start (live)", presence=sc.get("presence"), channel=sc["channel"])
+    wdir = st.owner_dir / "walks" / f"{sc['name']}-{datetime.now(timezone.utc):%Y%m%dT%H%M%SZ}"
+    rec = None
+    shots = 0
+    if record or auto_click:
+        from ..browser import SlackRecorder
+        rec = SlackRecorder(video_dir=wdir / "raw" if record else None)
+        rec.goto(channel_id)
+
+    def snap(label: str) -> None:
+        nonlocal shots
+        if rec and record:
+            shots += 1
+            out = wdir / f"{shots:02d}-{label}.png"
+            rec.shot(out)
+            walk.note("screenshot", file=str(out))
     root_ts = None
     last_ts = f"{time.time():.6f}"
     try:
@@ -152,8 +167,13 @@ def live(st: Settings, name: str, click_timeout_s: int = 900) -> Path:
                 last_ts = r["ts"]
                 walk.note(f"{people[p['as']]['name']} posts in #{sc['channel']}", ts=r["ts"], text=p["text"])
             if "click" in step:
-                walk.note(f"waiting for the owner to click {step['click']['button'].title()} in the DM "
-                          f"(up to {click_timeout_s // 60} min)")
+                label = step["click"]["button"].title()
+                if rec and auto_click:
+                    rec.goto(dm)
+                    r = rec.click(label)
+                    walk.note(f"owner's {label} clicked in the Peer's browser profile", ok=r.get("ok"), error=r.get("error"))
+                else:
+                    walk.note(f"waiting for the owner to click {label} in the DM (up to {click_timeout_s // 60} min)")
             exp = step.get("expect") or {}
             within = int(exp.get("within_s", 120)) + (click_timeout_s if "click" in step else 0)
             deadline = time.time() + within
@@ -178,10 +198,29 @@ def live(st: Settings, name: str, click_timeout_s: int = 900) -> Path:
             if exp:
                 if got:
                     walk.note(f"PASS {got['kind']}", after_s=round(time.time() - t0, 1), **{k: v for k, v in got.items() if k != "kind"})
+                    if rec:
+                        if got["kind"] == "thread_reply":
+                            rec.goto(channel_id, root_ts)
+                            rec.wait(3)
+                            snap("thread")
+                        else:
+                            rec.goto(dm)
+                            rec.wait(3)
+                            snap("owner-dm")
                 else:
                     walk.note(f"FAIL: no {', '.join(k for k in exp if k != 'within_s')} within {within}s")
         perm = bot.chat_getPermalink(channel=channel_id, message_ts=root_ts)["permalink"] if root_ts else None
-        walk.note("done", thread=perm)
+        if rec:
+            rec.goto(channel_id)
+            rec.wait(2)
+            snap("channel")
+            rec.goto(dm)
+            rec.wait(3)
+            snap("owner-dm-end")
+            video = rec.stop(mp4=wdir / "walk.mp4" if record else None)
+            if video:
+                walk.note("video", file=video)
+        walk.note("done", thread=perm, root_ts=root_ts, channel_id=channel_id, dm=dm)
         return walk.save()
     finally:
         st.set("presence.manual", prev)

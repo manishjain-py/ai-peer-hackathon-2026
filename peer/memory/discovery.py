@@ -69,7 +69,9 @@ def _title_of(text: str, fallback: str) -> str:
     if not m:
         return fallback
     t = m.group(1).strip()
-    t = re.sub(r":\s*(state|tracker|the state|status)$", "", t, flags=re.I)
+    t = re.sub(r"\s*[:—-]+\s*(current state|state|tracker|the state|status)$", "", t, flags=re.I)
+    if len(t) > 48 or ";" in t or t.lower().startswith(("current", "new direction", "read-only")):
+        return fallback
     return t
 
 

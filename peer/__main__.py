@@ -2,6 +2,7 @@
 
   discover [--no-ai]          build the memory from the profile + GitHub
   watch                       run the Peer (Slack Socket Mode); Ctrl-C to stop
+  start | stop                the same in the background (pid file + log in ~/.ai-peer/<owner>/)
   scenario <name> [--dry-run] play a scene (s1-online, s1-away) against the running Peer
   away | online | auto        the manual "I'm away" switch (auto = Slack presence + hours)
   set <key> <value>           change a setting, e.g. `set brain.backend codex`
@@ -17,6 +18,8 @@ import argparse
 import json
 import logging
 import sys
+
+from pathlib import Path
 
 import yaml
 
@@ -56,10 +59,49 @@ def cmd_watch(a) -> None:
         print("stopped")
 
 
+def _pidfile():
+    st = get_settings()
+    return st.owner_dir / "watch.pid", st.owner_dir / "watch.log"
+
+
+def cmd_start(a) -> None:
+    import os
+    import subprocess
+    pid_f, log_f = _pidfile()
+    if pid_f.exists():
+        try:
+            os.kill(int(pid_f.read_text()), 0)
+            print(f"already running (pid {pid_f.read_text().strip()}); log: {log_f}")
+            return
+        except (OSError, ValueError):
+            pid_f.unlink()
+    with open(log_f, "a") as log:
+        proc = subprocess.Popen([sys.executable, "-m", "peer", "watch"], stdout=log, stderr=subprocess.STDOUT,
+                                stdin=subprocess.DEVNULL, start_new_session=True, cwd=str(Path(__file__).resolve().parent.parent))
+    pid_f.write_text(str(proc.pid))
+    print(f"started (pid {proc.pid}); log: {log_f}; page: http://127.0.0.1:{get_settings().get('web.port', 8787)}")
+
+
+def cmd_stop(a) -> None:
+    import os
+    import signal
+    pid_f, _ = _pidfile()
+    if not pid_f.exists():
+        print("not running")
+        return
+    pid = int(pid_f.read_text())
+    try:
+        os.kill(pid, signal.SIGTERM)
+        print(f"stopped pid {pid}")
+    except OSError:
+        print(f"pid {pid} was not running")
+    pid_f.unlink()
+
+
 def cmd_scenario(a) -> None:
     from .scenarios import player
     st = get_settings()
-    path = player.dry_run(st, a.name) if a.dry_run else player.live(st, a.name)
+    path = player.dry_run(st, a.name) if a.dry_run else player.live(st, a.name, record=a.record, auto_click=a.auto_click)
     print(f"walk saved: {path}")
 
 
@@ -139,7 +181,12 @@ def main(argv: list[str] | None = None) -> None:
     sub = ap.add_subparsers(dest="cmd", required=True)
     p = sub.add_parser("discover"); p.add_argument("--no-ai", action="store_true"); p.set_defaults(fn=cmd_discover)
     p = sub.add_parser("watch"); p.set_defaults(fn=cmd_watch)
-    p = sub.add_parser("scenario"); p.add_argument("name"); p.add_argument("--dry-run", action="store_true"); p.set_defaults(fn=cmd_scenario)
+    sub.add_parser("start", help="run watch in the background (pid file, log)").set_defaults(fn=cmd_start)
+    sub.add_parser("stop", help="stop the background watch (by its pid file)").set_defaults(fn=cmd_stop)
+    p = sub.add_parser("scenario"); p.add_argument("name"); p.add_argument("--dry-run", action="store_true")
+    p.add_argument("--record", action="store_true", help="screenshots + video through the Peer's browser profile")
+    p.add_argument("--auto-click", action="store_true", help="click the owner's buttons through that profile")
+    p.set_defaults(fn=cmd_scenario)
     for mode in ("away", "online", "auto"):
         sub.add_parser(mode).set_defaults(fn=cmd_presence(mode))
     p = sub.add_parser("set"); p.add_argument("key"); p.add_argument("value"); p.set_defaults(fn=cmd_set)

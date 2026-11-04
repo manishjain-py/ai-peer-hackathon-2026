@@ -102,3 +102,89 @@ def click_latest(dm_channel: str, label: str = "Send", out: Path | None = None) 
         time.sleep(4)
         ctx.close()
         return True
+
+
+class SlackRecorder:
+    """One headless Slack page in its own thread, driven by commands from the walk:
+    goto(channel, thread_ts) / click(label) / shot(path) / stop() -> the video file (mp4 if ffmpeg exists)."""
+
+    def __init__(self, video_dir: Path | None = None, size=(1280, 860)):
+        import queue
+        import threading
+        self.q: "queue.Queue" = queue.Queue()
+        self.done = threading.Event()
+        self.result: dict = {}
+        self.video_dir = video_dir
+        self.size = size
+        self.t = threading.Thread(target=self._run, daemon=True)
+        self.t.start()
+
+    def _run(self) -> None:
+        from playwright.sync_api import sync_playwright
+        with sync_playwright() as p:
+            ctx = _context(p, headless=True, video_dir=self.video_dir, size=self.size)
+            page = ctx.pages[0] if ctx.pages else ctx.new_page()
+            while True:
+                cmd, arg, reply = self.q.get()
+                try:
+                    if cmd == "goto":
+                        page.goto(client_url(*arg))
+                        _settle(page, 2.0)
+                        reply["ok"] = True
+                    elif cmd == "click":
+                        b = page.get_by_role("button", name=arg, exact=True)
+                        n = b.count()
+                        if n:
+                            b.nth(n - 1).scroll_into_view_if_needed()
+                            time.sleep(1.0)
+                            b.nth(n - 1).click()
+                        reply["ok"] = bool(n)
+                    elif cmd == "shot":
+                        page.screenshot(path=str(arg))
+                        reply["ok"] = True
+                    elif cmd == "wait":
+                        time.sleep(arg)
+                        reply["ok"] = True
+                    elif cmd == "stop":
+                        video = page.video.path() if page.video else None
+                        ctx.close()
+                        reply["video"] = str(video) if video else None
+                        reply["ok"] = True
+                        break
+                except Exception as e:  # noqa: BLE001
+                    reply["ok"] = False
+                    reply["error"] = str(e)[:200]
+                finally:
+                    reply["_done"].set()
+
+    def _call(self, cmd: str, arg=None, timeout: float = 90) -> dict:
+        import threading
+        reply = {"_done": threading.Event()}
+        self.q.put((cmd, arg, reply))
+        reply["_done"].wait(timeout)
+        reply.pop("_done", None)
+        return reply
+
+    def goto(self, channel: str, thread_ts: str | None = None) -> dict:
+        return self._call("goto", (channel, thread_ts))
+
+    def click(self, label: str) -> dict:
+        return self._call("click", label)
+
+    def shot(self, path: Path) -> dict:
+        Path(path).parent.mkdir(parents=True, exist_ok=True)
+        return self._call("shot", path)
+
+    def wait(self, s: float) -> dict:
+        return self._call("wait", s, timeout=s + 30)
+
+    def stop(self, mp4: Path | None = None) -> str | None:
+        r = self._call("stop", None, timeout=120)
+        video = r.get("video")
+        if video and mp4:
+            import subprocess
+            mp4.parent.mkdir(parents=True, exist_ok=True)
+            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", video, "-c:v", "libx264", "-pix_fmt", "yuv420p",
+                            "-movflags", "+faststart", str(mp4)], check=False)
+            return str(mp4) if mp4.exists() else video
+        return video
