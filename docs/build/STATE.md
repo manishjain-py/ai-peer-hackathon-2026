@@ -5,7 +5,7 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
-2026-11-04 15:40. WP1 (foundation + S1) is running: `ai-peer-wp1-1` in
+2026-11-04 18:03. WP1 (foundation + S1) is running: `ai-peer-wp1-1` in
 `~/repos/ai-peer-wp1` on `wp1-foundation`.
 
 - Spikes 1a and 1b passed: `claude -p` 2.1.318 with `--setting-sources project`, empty
@@ -14,14 +14,17 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
   (`--ignore-user-config` still leaks the global AGENTS.md and user skills).
 - Spike 1c nearly passed (15:02): the bot posts as "Manish's AI Peer" over Socket Mode,
   a labelled test card with Send / Edit / Skip sits in Manish's DM, the bot replied in
-  its thread. Hearing a message and receiving a click remain (a listener runs to
-  about 18:00; otherwise folded into the colleague steps).
+  its thread. Hearing a message and receiving a click fold into the live walk (the
+  listener ended 18:02 with no reply).
 - **S1 passes in dry runs** (15:22; fake Slack, real brain, real memory), on Claude
   and on Codex. Away: a labelled thread answer in 17 to 25 s with sources, dates and
   certainty, the follow-up, one DM summary updated in place. Online: a draft DM with
   Send / Edit / Skip, the thread reply after Send. Live Slack pieces work: Socket Mode,
   owner lookup, presence, `port-check`. Draft [PR #1](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/1).
   The live walk needs the colleague accounts.
+- Brain answers run on Opus at effort "high": 21 to 27 s, measured; "max" took 113 to
+  139 s, too slow for S1's one-to-two-minute limits. Opus rather than Fable, so the Peer
+  cannot use up the account-wide Fable allowance (worker's measurement, 18:0x).
 - First discovery works (15:08): profile + GitHub (read-only) gave 15 project files
   from the trackers in 4 LLM repos, each with an AI "status in brief", plus 5 services
   and 5 people, under `~/.ai-peer/manish/`. S1 can answer from the real repo.
@@ -38,10 +41,12 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 - All accounts and `.env` names: [setup/accounts.md](setup/accounts.md).
 - Still running: the controller's watcher (background task of `ai-peer-controller-1`,
   started 16:12; ends with that session). It wakes the controller when a `.env` key name
-  appears, a PR changes, the worker passes 45% context or exits, else hourly. The worker's
-  own background helpers (Slack listener, spike 1d and colleague sign-in waiters) are its
-  to list. Controller context 17.5% at 16:12.
-- Weekly usage 35% (resets 10 Nov, 04:30 IST). Worker context 36% at 15:39 (idle, waiting on the setup steps).
+  appears, a PR changes, the worker passes 45% context or exits, else hourly. The worker's two
+  waiters run until about 18:05 on 5 Nov: spike 1d starts by itself 60 s after
+  `ZOOM_TEST_MEETING_URL` appears in `.env`; the colleague sign-in helper starts when
+  `SLACK_SCENARIO_CLIENT_ID` and `_SECRET` appear (it writes
+  `~/.ai-peer/world-auth-link.txt` for his step 4). Controller context 17.5% at 16:12.
+- Weekly usage 35% (resets 10 Nov, 04:30 IST). Worker context 37% at 18:03 (idle, waiting on the setup steps).
 
 | Session | Window | Worktree | Branch / PR | Job |
 |---|---|---|---|---|
