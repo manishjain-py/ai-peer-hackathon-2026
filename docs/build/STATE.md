@@ -5,7 +5,7 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
-2026-11-04 15:08. WP1 (foundation + S1) is running: `ai-peer-wp1-1` in
+2026-11-04 15:10. WP1 (foundation + S1) is running: `ai-peer-wp1-1` in
 `~/repos/ai-peer-wp1` on `wp1-foundation`.
 
 - Spikes 1a and 1b passed: `claude -p` 2.1.318 with `--setting-sources project`, empty
@@ -16,6 +16,9 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
   a labelled test card with Send / Edit / Skip sits in Manish's DM, the bot replied in
   its thread. Hearing a message and receiving a click remain (a listener runs to
   about 18:00; otherwise folded into the colleague steps).
+- First discovery works (15:08): profile + GitHub (read-only) gave 15 project files
+  from the trackers in 4 LLM repos, each with an AI "status in brief", plus 5 services
+  and 5 people, under `~/.ai-peer/manish/`. S1 can answer from the real repo.
 - Slack set up by the kickoff session with Manish (he let it drive his Chrome):
   workspace "learnlikemagic" (team T0CEDQU5X0X), app "AI Peer" (A0CEE0554HM), bot
   `@manishs_ai_peer`, steps in `docs/build/setup/slack.md`.
