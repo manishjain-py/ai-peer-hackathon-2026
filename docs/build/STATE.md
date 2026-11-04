@@ -42,12 +42,11 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 The controller asks one at a time, in this order.
 
-1. **Asked 15:03 (Telegram Attention + controller reply), waiting:** fake colleagues in
-   Slack, A) real member accounts from 5 email aliases (about 20 to 25 minutes, look
-   real on stage; recommended) or B) one scenario bot with custom names (about 3 minutes,
-   APP badge on every message). The worker sends the exact steps for his pick.
-2. A Zoom test meeting for spike 1d (join before host on, waiting room off); the link goes
-   in `~/.ai-peer/.env`, not chat (anyone with it can join).
+1. **Asked 15:20, waiting:** a Zoom test meeting for spike 1d (join before host on, waiting
+   room off); the link goes in `~/.ai-peer/.env` as `ZOOM_TEST_MEETING_URL`, not chat
+   (anyone with it can join).
+2. Next: the steps for the fake colleagues as real member accounts (his pick A, below);
+   the worker writes them.
 3. One command for the Peer's own Codex login (today it uses a copy of his token, good
    until about 7 Nov).
 4. The Google Internal OAuth client (WP3).
@@ -84,6 +83,12 @@ authority does not carry over; ask him before any session reuses it for a new st
   message, DM, mention or reply to her: the Peer engages only with Manish and the
   invented colleagues (hard block in code), and the scene channels are created without
   her.
+
+## Manish's answers
+
+| Time (UTC) | Question | His words, verbatim |
+|---|---|---|
+| 15:20 | Fake colleagues: A) real member accounts (recommended) or B) one scenario bot | "A (real accounts, recommended) - sure" |
 
 ## Airbnb notes
 
