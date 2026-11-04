@@ -199,7 +199,7 @@ def discover(st: Settings, progress: Progress = print, ai: bool = True) -> dict:
         def summarize(p: dict) -> tuple[str, dict | None, str | None]:
             req = {"playbook": "summarize_tracker", "path": p["source_rel"], "project": p["title"], "repo": p["repo"]}
             res = run_agent("summarize_tracker " + json.dumps(req, ensure_ascii=False), SUMMARIZE_TRACKER,
-                            label=f"summarize:{p['slug']}")
+                            label=f"summarize:{p['slug']}", effort=st.get("brain.summary_effort"), timeout=600)
             return p["slug"], res.output, res.error
 
         with ThreadPoolExecutor(max_workers=4) as pool:

@@ -94,7 +94,7 @@ def _record(entry: dict) -> None:
         pass
 
 
-def _run_claude(prompt: str, schema: dict, timeout: int) -> AgentResult:
+def _run_claude(prompt: str, schema: dict, timeout: int, effort: str | None = None) -> AgentResult:
     st = get_settings()
     cmd = [
         _claude_bin(), "-p", f"/peer-brain {prompt}",
@@ -108,6 +108,9 @@ def _run_claude(prompt: str, schema: dict, timeout: int) -> AgentResult:
         "--model", st.get("brain.claude_model", "opus"),
         "--no-session-persistence",
     ]
+    effort = effort or st.get("brain.claude_effort")
+    if effort:
+        cmd += ["--effort", str(effort)]
     env = {k: v for k, v in os.environ.items() if k not in ("ANTHROPIC_API_KEY", "CLAUDECODE")}
     env.update({"CLAUDE_NO_IDLE_PING": "1", "DISABLE_AUTOUPDATER": "1"})
     t0 = time.time()
@@ -143,7 +146,7 @@ def _run_claude(prompt: str, schema: dict, timeout: int) -> AgentResult:
     return AgentResult(output is not None and not error, output, "claude", time.time() - t0, error, usage)
 
 
-def _run_codex(prompt: str, schema: dict, timeout: int) -> AgentResult:
+def _run_codex(prompt: str, schema: dict, timeout: int, effort: str | None = None) -> AgentResult:
     st = get_settings()
     ok, why = _codex_auth_ok()
     if not ok:
@@ -158,6 +161,8 @@ def _run_codex(prompt: str, schema: dict, timeout: int) -> AgentResult:
            "--skip-git-repo-check", "-C", str(st.owner_dir), "-o", str(out_file), "--json"]
     if st.get("brain.codex_model"):
         cmd += ["-m", st.get("brain.codex_model")]
+    if effort:
+        cmd += ["-c", f'model_reasoning_effort="{effort}"']   # max and xhigh both work on 0.153.4
     env = {k: v for k, v in os.environ.items() if k not in ("OPENAI_API_KEY",)}
     env.update({"HOME": str(home / "home"), "CODEX_HOME": str(home)})
     t0 = time.time()
@@ -193,19 +198,19 @@ BACKENDS = {"claude": _run_claude, "codex": _run_codex}
 
 
 def run_agent(prompt: str, schema: dict, *, backend: str | None = None, label: str = "",
-              timeout: int | None = None, fallback: bool | None = None) -> AgentResult:
+              timeout: int | None = None, fallback: bool | None = None, effort: str | None = None) -> AgentResult:
     st = get_settings()
     primary = backend or st.get("brain.backend", "claude")
     timeout = timeout or int(st.get("brain.timeout_s", 240))
     fallback = st.get("brain.fallback", True) if fallback is None else fallback
     run_id = uuid.uuid4().hex[:8]
-    res = BACKENDS[primary](prompt, schema, timeout)
+    res = BACKENDS[primary](prompt, schema, timeout, effort)
     _record({"at": now_iso(), "run": run_id, "label": label, "backend": res.backend, "ok": res.ok,
              "duration_s": round(res.duration_s, 1), "error": res.error, **res.usage})
     if not res.ok and fallback:
         other = "codex" if primary == "claude" else "claude"
         log.warning("brain %s failed (%s); falling back to %s", primary, res.error, other)
-        res2 = BACKENDS[other](prompt, schema, timeout)
+        res2 = BACKENDS[other](prompt, schema, timeout, effort)
         _record({"at": now_iso(), "run": run_id, "label": label + " (fallback)", "backend": res2.backend,
                  "ok": res2.ok, "duration_s": round(res2.duration_s, 1), "error": res2.error, **res2.usage})
         if res2.ok:
