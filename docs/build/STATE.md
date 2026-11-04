@@ -5,7 +5,7 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
-2026-11-04 15:15. WP1 (foundation + S1) is running: `ai-peer-wp1-1` in
+2026-11-04 15:08. WP1 (foundation + S1) is running: `ai-peer-wp1-1` in
 `~/repos/ai-peer-wp1` on `wp1-foundation`.
 
 - Spikes 1a and 1b passed: `claude -p` 2.1.318 with `--setting-sources project`, empty
@@ -31,7 +31,7 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 | Session | Window | Worktree | Branch / PR | Job |
 |---|---|---|---|---|
-| kickoff, registry name `learnlikemagic-27` | 1661 | `~/repos/ai-peer-hackathon-2026` | `main` | Interview, docs, restructure, Slack, Recall, ElevenLabs, GitHub set up; handed off at 46% (15:13), closed. The controller owns every ask to Manish |
+| kickoff, registry name `learnlikemagic-27` | 1661 | `~/repos/ai-peer-hackathon-2026` | `main` | Interview, docs, restructure, Slack, Recall, ElevenLabs, GitHub set up; handed off at 46% (about 15:07), closed. The controller owns every ask to Manish |
 | ai-peer-controller-1 | 1715 | `~/repos/ai-peer-hackathon-2026` | `main` (docs only) | Runs the build; https://claude.ai/code/session_01Nfn5h9PisnJvGpbLbRtbiB |
 | ai-peer-wp1-1 | 1725 | `~/repos/ai-peer-wp1` | `wp1-foundation`, no PR yet | WP1 foundation + S1; idle pings off (`CLAUDE_NO_IDLE_PING=1`), asks go through the controller; https://claude.ai/code/session_01Nfn5h8PVD6txxjBUfab4nR |
 
