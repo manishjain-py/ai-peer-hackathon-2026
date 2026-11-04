@@ -5,16 +5,27 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
-2026-11-04 14:55. WP1 (foundation + S1) is running: `ai-peer-wp1-1` in
-`~/repos/ai-peer-wp1` on `wp1-foundation`. Spikes 1a and 1b passed: `claude -p`
-2.1.318 with `--setting-sources project`, empty MCP and a read-only tool list loads none
-of Manish's global config; `codex exec` 0.153.4 loads skills, but needs its own
-`CODEX_HOME` and `HOME` under `~/.ai-peer` (`--ignore-user-config` still leaks the
-global AGENTS.md and user skills). Slack: Manish created the workspace "learnlikemagic" (team
-T0CEDQU5X0X) about 14:47; the kickoff session is walking him through the app with
-`docs/build/setup/slack.md` and tells the controller and the worker when the tokens are
-in `~/.ai-peer/.env` (the worker does not write its own manifest). Weekly usage 34%
-(resets 10 Nov, 04:30 IST).
+2026-11-04 15:05. WP1 (foundation + S1) is running: `ai-peer-wp1-1` in
+`~/repos/ai-peer-wp1` on `wp1-foundation`.
+
+- Spikes 1a and 1b passed: `claude -p` 2.1.318 with `--setting-sources project`, empty
+  MCP and a read-only tool list loads none of Manish's global config; `codex exec`
+  0.153.4 loads skills, but needs its own `CODEX_HOME` and `HOME` under `~/.ai-peer`
+  (`--ignore-user-config` still leaks the global AGENTS.md and user skills).
+- Spike 1c nearly passed (15:02): the bot posts as "Manish's AI Peer" over Socket Mode,
+  a labelled test card with Send / Edit / Skip sits in Manish's DM, the bot replied in
+  its thread. Hearing a message and receiving a click remain (a listener runs to
+  about 18:00; otherwise folded into the colleague steps).
+- Slack set up by the kickoff session with Manish (he let it drive his Chrome):
+  workspace "learnlikemagic" (team T0CEDQU5X0X), app "AI Peer" (A0CEE0554HM), bot
+  `@manishs_ai_peer`, steps in `docs/build/setup/slack.md`.
+- In `~/.ai-peer/.env`, each checked: the Slack app, bot and user tokens;
+  `ELEVENLABS_API_KEY`; `GITHUB_TOKEN` (his `gh` login, full repo scope, so the Peer
+  makes read calls only; PLAN's fine-grained read-only token would be safer, optional).
+- Meetings: Zoom is his paid Workplace Pro account (personal Gmail login); Recall.ai
+  account on manish@learnlikemagic.com, **Tokyo region**, $5 credit (keep test meetings
+  short). The kickoff session is adding the Recall API key and the Zoom connection.
+- Weekly usage 34% (resets 10 Nov, 04:30 IST).
 
 | Session | Window | Worktree | Branch / PR | Job |
 |---|---|---|---|---|
@@ -24,20 +35,22 @@ in `~/.ai-peer/.env` (the worker does not write its own manifest). Weekly usage 
 
 ## Needs Manish
 
-1. The setup list in PLAN. Slack: workspace done, app setup in progress with the kickoff
-   session. Then Google, GitHub token, Zoom app, Recall.ai, ElevenLabs: WP1 sends exact
-   steps through the controller when it reaches each.
-   Queued asks, sent one at a time after the Slack install: (a) fake colleagues as real
-   member accounts (recommended, about 20 minutes) or one scenario bot with an APP badge;
-   (b) one command for the Peer's own Codex login (today it uses a copy of his token,
-   good until about 7 Nov).
-2. The Airbnb asks in PLAN, this week.
-3. Your other Mac's copy (`~/repos/Hackathon 2026`, per the `$ai-peer` skill) predates
+1. **Asked 15:03 (Telegram Attention + controller reply), waiting:** fake colleagues in
+   Slack, A) real member accounts from 5 email aliases (about 20 to 25 minutes, look
+   real on stage; recommended) or B) one scenario bot with custom names (about 3 minutes,
+   APP badge on every message). The worker sends the exact steps for his pick.
+2. Queued, after that: one command for the Peer's own Codex login (today it uses a copy
+   of his token, good until about 7 Nov).
+3. Rest of the setup list (PLAN): Google OAuth client; Zoom app and Recall key (kickoff
+   session doing these now). WP1 sends exact steps through the controller when needed.
+4. The Airbnb asks in PLAN, this week.
+5. His other Mac's copy (`~/repos/Hackathon 2026`, per the `$ai-peer` skill) predates
    the `film/` move: push anything unpushed there, then pull.
 
 ## Next
 
-1. WP1: spikes 1a to 1c, then the Slack setup ask to Manish; 1d when the Zoom and Recall accounts exist.
+1. WP1: finish 1c (hear + click), the colleague setup after Manish's pick, then the
+   build; 1d once the Recall key and the Zoom connection are in.
 2. WP1 done → Checkpoint 1 → WP2 and WP3 in parallel.
 
 ## Checkpoints (D15)
@@ -54,6 +67,11 @@ in `~/.ai-peer/.env` (the worker does not write its own manifest). Weekly usage 
 - No unit tests, CI, code review or quality gate (D13). Do not add them.
 - The upstream-break warning is an extra only (D3).
 - The Peer never touches LLM production and is read-only on LLM code.
+- **A real person is in the test Slack.** `preethi` in the learnlikemagic workspace is a
+  real person (Manish confirmed 14:55 UTC). The Peer and the scenario script never
+  message, DM, mention or reply to her: the Peer engages only with Manish and the
+  invented colleagues (hard block in code), and the scene channels are created without
+  her.
 
 ## Airbnb notes
 
