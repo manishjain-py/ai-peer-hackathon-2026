@@ -1,5 +1,8 @@
 # Hackathon 2026 — AI Peer
 
+> Moved under `film/` on 2026-11-04. The repo root now hosts the AI Peer product build
+> (see `../AGENTS.md`). Paths below are relative to this `film/` folder.
+
 ## Purpose
 Create a polished company hackathon concept film. Draft 07 is 4:23, with a seated
 photographic employee, clear use-case chapters, generic cross-team Zoom participants,

@@ -1,38 +1,30 @@
 ---
 name: ai-peer
-description: Resume Manish's AI Peer / Hackathon 2026 project with its latest saved context. Use when the user invokes $ai-peer or asks to continue this specific project, revise its demo video, or work on its product idea.
+description: Resume Manish's AI Peer / Hackathon 2026 project with its latest saved context, either the product build (the generic AI Peer) or the concept film. Use when the user invokes $ai-peer or /ai-peer, or asks to continue this project, its build, its demo, or its film.
 ---
 
 # AI Peer
 
 Load this project's current context and carry out the user's task without making
-them repeat the project brief. The project documents remain the source of truth;
-do not store a copy of their changing status in this skill.
+them repeat the brief. The repo's documents are the source of truth; do not store a
+copy of their changing status in this skill.
 
 ## Find the project
 
-The canonical skill lives at `.agents/skills/ai-peer/` inside the project.
-Resolve this skill's real filesystem path first if it was loaded through a
-symlink. For a `SKILL.md` path, its fourth parent (`Path(path).resolve().parents[3]`)
-is the project root. On this Mac it is currently
-`/Users/manishjain/repos/Hackathon 2026`.
-
-Use that root as the working directory for project commands. Reading the skill
-from another workspace does not itself switch the app's selected project.
+The canonical skill lives at `.agents/skills/ai-peer/` inside the project (Claude Code
+reaches it through the `.claude/skills/ai-peer` link). Resolve this skill's real path
+first if it was loaded through a link; the project root is the folder that holds
+`.agents/`. On Mac-48-GB it is `~/repos/ai-peer-hackathon-2026`.
 
 ## Resume selectively
 
-1. Read root `AGENTS.md` and `docs/progress/current-state.md`.
-2. Follow the task-specific reading route in `AGENTS.md`. Load only the necessary
-   documents and applicable nested instructions. Read history or the full original
-   idea only when the task calls for that detail.
-3. Inspect the source or artifact relevant to the request before relying on its
-   recorded status. Preserve the distinction between the concept film and any
-   actually implemented product behavior.
-4. If the user supplied a task, proceed with it. If they invoked only `$ai-peer`,
-   give a short orientation: project purpose, latest draft/state, outstanding work,
-   and readiness for their next task. Ask what they want to work on; do not start
-   a new render or implement a feature merely because it appears in next steps.
-5. After substantive work, follow the project's handoff instructions to update
-   current state, session history and relevant decisions. A context-only invocation
-   does not need a progress-log entry.
+1. Read root `AGENTS.md`, then `docs/build/STATE.md` (the build's live state).
+2. Film work instead (the concept film, its video source or renders): read
+   `film/AGENTS.md`, then `film/docs/progress/current-state.md`.
+3. Load only the documents the task needs, following the routing table in `AGENTS.md`.
+   Inspect the actual code or artifact before relying on a recorded status.
+4. If the user supplied a task, do it. If they only invoked the skill, give a short
+   orientation: where the build is, what is next, what waits on Manish. Then ask what
+   to work on; do not start a package or a render merely because it is listed as next.
+5. After substantive work, update `docs/build/STATE.md` (or the film's current-state
+   for film work) as `AGENTS.md` describes.
