@@ -24,7 +24,7 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
   The live walk needs the colleague accounts.
 - Brain answers run on Opus at effort "high": 21 to 27 s, measured; "max" took 113 to
   139 s, too slow for S1's one-to-two-minute limits. Opus rather than Fable, so the Peer
-  cannot use up the account-wide Fable allowance (worker's measurement, 18:0x).
+  cannot use up the account-wide Fable allowance (the worker's measurement, reported with the 18:02 listener news).
 - First discovery works (15:08): profile + GitHub (read-only) gave 15 project files
   from the trackers in 4 LLM repos, each with an AI "status in brief", plus 5 services
   and 5 people, under `~/.ai-peer/manish/`. S1 can answer from the real repo.
