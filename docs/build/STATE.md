@@ -48,7 +48,7 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 The controller asks one at a time, in this order.
 
-1. **Asked 15:20, waiting:** a Zoom test meeting for spike 1d (join before host on, waiting
+1. **Asked 15:20 (Telegram 15:23), waiting:** a Zoom test meeting for spike 1d (join before host on, waiting
    room off); the link goes in `~/.ai-peer/.env` as `ZOOM_TEST_MEETING_URL`, not chat
    (anyone with it can join).
 2. Next: the colleague accounts (his pick A, below), about 25 minutes at the Mac, steps in
@@ -112,6 +112,10 @@ What went wrong once, with its mechanism.
   `document.execCommand("insertText")`; a value the page only offers by clipboard needs
   a main-world script tag that overrides `navigator.clipboard.writeText` (works on
   Recall, blocked on api.slack.com). From the kickoff session, 2026-11-04.
+- The idle hook misses the controller's asks: worker messages wake the controller within
+  the hook's 60 seconds, so no ping fires (the 15:20 Zoom ask reached Telegram only by
+  hand, at 15:23). Every ask to Manish goes to the Attention group explicitly
+  (`tg-attention.sh`); the hook's pings are only a bonus.
 
 ## Session log
 
