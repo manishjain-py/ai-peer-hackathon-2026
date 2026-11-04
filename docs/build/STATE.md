@@ -5,14 +5,15 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
-2026-11-04 14:37. Kickoff done: interview locked as D1 to D16, the film moved into
-`film/`, build docs written. Next: the controller `ai-peer-controller-1` starts WP1
+2026-11-04 14:40. Kickoff done: interview locked as D1 to D16, the film moved into
+`film/`, build docs written. `ai-peer-controller-1` is running and starts WP1
 (foundation + S1) in its own worktree. Manish's setup list (PLAN) is open; WP1 can
 start on the parts that need no accounts.
 
 | Session | Window | Worktree | Branch / PR | Job |
 |---|---|---|---|---|
-| kickoff (this interview) | | `~/repos/ai-peer-hackathon-2026` | `main` | Interview, docs, restructure; ends after the controller starts |
+| kickoff (this interview) | 1661 | `~/repos/ai-peer-hackathon-2026` | `main` | Interview, docs, restructure; done, closes after its wrap-up |
+| ai-peer-controller-1 | 1715 | `~/repos/ai-peer-hackathon-2026` | `main` (docs only) | Runs the build; https://claude.ai/code/session_01Nfn5h9PisnJvGpbLbRtbiB |
 
 ## Needs Manish
 
