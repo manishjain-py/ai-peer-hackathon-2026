@@ -36,6 +36,11 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
   Zoom with no Zoom app of ours; spike 1d checks that against Zoom's on-behalf-of rule,
   with Manish not in the call. Zoom: his paid Workplace Pro account (personal Gmail).
 - All accounts and `.env` names: [setup/accounts.md](setup/accounts.md).
+- Still running: the controller's watcher (background task of `ai-peer-controller-1`,
+  started 16:12; ends with that session). It wakes the controller when a `.env` key name
+  appears, a PR changes, the worker passes 45% context or exits, else hourly. The worker's
+  own background helpers (Slack listener, spike 1d and colleague sign-in waiters) are its
+  to list. Controller context 17.5% at 16:12.
 - Weekly usage 35% (resets 10 Nov, 04:30 IST). Worker context 36% at 15:39 (idle, waiting on the setup steps).
 
 | Session | Window | Worktree | Branch / PR | Job |
