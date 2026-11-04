@@ -97,7 +97,7 @@ def discover(st: Settings, progress: Progress = print, ai: bool = True) -> dict:
         "", "## Interests", "", *[f"- {i}" for i in profile.get("interests", [])],
     ])
     mem.write_note("me.md", profile["name"], me_body, kind="person",
-                   summary=f"who {profile.get('preferred_name')} is: role, time zone, what he owns",
+                   summary=f"who {profile.get('preferred_name')} is: role, time zone, what {profile.get('preferred_name')} owns",
                    sources=[{"title": "Directory profile", "url": "directory:person:" + profile["person_id"],
                              "date": datetime.now().strftime("%Y-%m-%d")}])
     store.upsert_person(profile["person_id"], name=profile["name"], email=profile["email"],

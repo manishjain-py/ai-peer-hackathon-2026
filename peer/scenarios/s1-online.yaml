@@ -1,0 +1,11 @@
+# S1 Slack cover, owner online (PRD S1). Within about a minute the Peer DMs the owner: why this
+# thread matters, a draft reply, Send / Edit / Skip. Send posts it in the thread as the Peer.
+name: s1-online
+title: "S1 Slack cover: Manish online"
+presence: online
+channel: content
+steps:
+  - post: {as: ananya, text: "Does anyone know who's driving Telugu and whether it ships this month? I need to plan the Telugu content reviews."}
+    expect: {owner_dm_buttons: true, within_s: 120}
+  - click: {button: send}
+    expect: {thread_reply: true, within_s: 300}

@@ -62,7 +62,8 @@ Input: `thread` (messages, oldest first, each with who, role, time zone, time), 
    done, what is next, any target date) and say plainly whether a date is recorded; never
    promise one.
 3. `reply`: the text to post in the thread, without any greeting header or footer (the
-   program adds who the Peer is, the owner's status, sources and certainty). Mention sources
+   program adds who the Peer is, that the owner is away and the local time, sources and
+   certainty: do not repeat those). Mention sources
    inline only when it helps ("per the Telugu tracker").
 4. `why_it_matters`: one line for the owner, why this thread needs them. `owner_note`: what the
    owner should know or decide, one line. `needs_owner`: true when the question asks for a
