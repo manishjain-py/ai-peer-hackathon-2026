@@ -1,6 +1,6 @@
 # Current state
 
-Updated: **2026-11-04 — documentation refreshed; private GitHub import in progress**.
+Updated: **2026-11-04 — private GitHub import complete; documentation refreshed**.
 
 Production/delivery date: **2026-09-19**. A read-only audit on 1 November verified
 actual MP4 metadata, both media hashes, exact caption sidecars, actual timing and
@@ -10,12 +10,19 @@ facts still have their September/August source dates; no live company refresh oc
 
 ## Repository state
 
-The workspace now has Git initialized on `main` and a private
+The complete project import is on `main` in the private
 [GitHub repository](https://github.com/manishjain-py/ai-peer-hackathon-2026).
-The initial import is being verified before upload. Git LFS preserves media;
+The local checkout uses `main`, tracking `origin/main`. There were no preexisting
+branches or pull requests to merge. Git LFS preserves media;
 selected audio, alignment caches, earlier drafts, QA and delivery records in
 `work/` are included. Installed dependencies, model/build caches and credentials
 remain local. See the [repository guide](../technical/repository.md).
+
+GitHub confirmed all 1,666 unique LFS objects (3,734,757,297 bytes) are available
+for download. Local LFS integrity, TypeScript and documentation-link checks pass.
+The final/preview MP4s, both SRTs and all 15 frozen production inputs still match
+their recorded hashes. See the [import verification](../../work/repository-import-2026-11-04/).
+No rendering, full decoding or direct listening was repeated for this import.
 
 The 1 November handoff's “not a Git repository” statement describes that earlier
 snapshot. Draft 07 remains delivered and awaits explicit creative acceptance;

@@ -105,7 +105,7 @@
   ],
   "all_hashes_match": true,
   "markdown_files_checked": 50,
-  "relative_links_checked": 375,
+  "relative_links_checked": 379,
   "broken_links": [],
   "typecheck": "npm --prefix video run typecheck passed on 2026-11-04"
 }

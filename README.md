@@ -24,6 +24,12 @@ interface states and AI actions are authored scenarios. See
 [current state](docs/progress/current-state.md) for verification details and
 the [ownership handoff](docs/progress/session-handoff-2026-11-01.md) for context.
 
+Source control lives in the private
+[AI Peer GitHub repository](https://github.com/manishjain-py/ai-peer-hackathon-2026)
+on `main`. Media uses Git LFS. Follow the
+[repository and restoration guide](docs/technical/repository.md) when cloning
+or moving to another machine; the dated handoff predates Git setup.
+
 ## Resume with the AI Peer skill
 
 In a new local Codex session, type `$ai-peer` for a short catch-up, or add your task:
