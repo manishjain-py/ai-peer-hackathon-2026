@@ -1,11 +1,14 @@
 # Reinstallable dependencies and generated build/model caches only.
-/video/node_modules/
-/video/.remotion/
-/video/build/
+/film/video/node_modules/
+/film/video/.remotion/
+/film/video/build/
 /.cache/
-/work/draft03/audio-venv/
-/work/audio-models/
+/film/work/draft03/audio-venv/
+/film/work/audio-models/
 __pycache__/
+node_modules/
+.venv/
+venv/
 *.py[cod]
 .DS_Store
 
@@ -15,6 +18,6 @@ __pycache__/
 !.env.example
 !.env.sample
 
-# Keep work/ audio selections, alignments, provenance, QA and delivery records.
+# Keep film/work/ audio selections, alignments, provenance, QA and delivery records.
 # Keep every draft, including intermediate picture and review stills.
 # Large binary assets are stored through Git LFS; see .gitattributes.
