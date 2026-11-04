@@ -8,6 +8,7 @@
   status                      presence, roles, backend, adapters
   port-check                  list adapters, exercise each verb (act in dry run), print a table
   web [--port N]              the activity log page (http://127.0.0.1:8787)
+  world manifest|auth|setup   test world in Slack: the scenario app, colleague logins, channels
 """
 from __future__ import annotations
 
@@ -89,6 +90,18 @@ def cmd_port_check(a) -> None:
     port_check(get_settings())
 
 
+def cmd_world(a) -> None:
+    from .scenarios import slack_world
+    if a.what == "manifest":
+        print(slack_world.MANIFEST)
+    elif a.what == "auth":
+        slack_world.world_auth()
+    elif a.what == "setup":
+        slack_world.world_setup()
+    elif a.what == "code":
+        slack_world.world_code(a.url or input("address: "))
+
+
 def cmd_web(a) -> None:
     import uvicorn
     st = get_settings()
@@ -110,6 +123,9 @@ def main(argv: list[str] | None = None) -> None:
     sub.add_parser("status").set_defaults(fn=cmd_status)
     sub.add_parser("port-check").set_defaults(fn=cmd_port_check)
     p = sub.add_parser("web"); p.add_argument("--port", type=int); p.set_defaults(fn=cmd_web)
+    p = sub.add_parser("world", help="test world in Slack: manifest | auth | setup")
+    p.add_argument("what", choices=["manifest", "auth", "setup", "code"]); p.add_argument("url", nargs="?")
+    p.set_defaults(fn=cmd_world)
     a = ap.parse_args(argv)
     a.fn(a)
 
