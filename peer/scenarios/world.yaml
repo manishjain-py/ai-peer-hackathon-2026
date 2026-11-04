@@ -1,0 +1,57 @@
+# The test world (DESIGN D4): Learn Like Magic as the company. The owner's real repos are what
+# he owns; these colleagues are invented and played by the scenario script. Their Slack
+# accounts use the email aliases below; the script posts as them with their user tokens
+# (SLACK_AS_<ID> in ~/.ai-peer/.env), or, without one, through the scenario bot.
+
+company: Learn Like Magic
+workspace: learnlikemagic
+owner: manish
+
+channels:
+  - name: general
+    purpose: Company-wide news and questions.
+  - name: product
+    purpose: Product questions, plans and launches.
+  - name: content
+    purpose: Curriculum and content work, Hindi and Telugu, the content factories.
+  - name: schools
+    purpose: School partnerships, pilots and what schools ask for.
+  - name: engineering
+    purpose: Engineering, releases and CI.
+
+colleagues:
+  - person_id: ananya
+    name: Ananya Rao
+    title: Content Lead
+    tz: Asia/Kolkata
+    city: Bengaluru
+    email: ananya@learnlikemagic.com
+    about: Leads curriculum content and the Hindi and Telugu content reviews.
+  - person_id: kabir
+    name: Kabir Mehta
+    title: UX Designer
+    tz: Asia/Kolkata
+    city: Mumbai
+    email: kabir@learnlikemagic.com
+    about: Designs the student app and the language picker.
+  - person_id: lakshmi
+    name: Lakshmi Reddy
+    title: School Partnerships Lead
+    tz: Asia/Kolkata
+    city: Hyderabad
+    email: lakshmi@learnlikemagic.com
+    about: Runs the school pilots; Telugu-medium schools in Hyderabad are her main pipeline.
+  - person_id: david
+    name: David Okafor
+    title: Advisor (product and growth)
+    tz: America/Los_Angeles
+    city: San Francisco
+    email: david@learnlikemagic.com
+    about: US-based advisor; joins the weekly product sync.
+  - person_id: rohan
+    name: Rohan Gupta
+    title: iOS Engineer (contract)
+    tz: Asia/Kolkata
+    city: Pune
+    email: rohan@learnlikemagic.com
+    about: Works on the iOS app releases.

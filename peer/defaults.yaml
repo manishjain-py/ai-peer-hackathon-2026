@@ -1,0 +1,39 @@
+# AI Peer default settings. The live copy is ~/.ai-peer/<owner>/settings.yaml (made from this
+# file on first run); edit that one, or use `peer set <key> <value>`. The watcher re-reads it.
+
+owner:
+  id: manish                    # folder name under ~/.ai-peer/
+  profile: peer/world/profiles/manish.json   # the directory adapter's record (repo-relative)
+
+presence:
+  manual: auto                  # auto | away | online   (the "I'm away" switch)
+  away_status_words: [vacation, holiday, ooo, "out of office", away, sick, leave, offline, travelling, traveling]
+  away_status_emoji: [":palm_tree:", ":airplane:", ":face_with_thermometer:", ":sleeping:", ":no_entry:", ":house_with_garden:"]
+
+roles:                          # F3 switches
+  watch_my_work: true
+  stand_in_when_away: true
+  find_opportunities: true
+  cover_meetings: true
+  daily_brief: true
+
+brain:
+  backend: claude               # claude | codex   (F8: one setting)
+  fallback: true                # on a rate limit or failure, try the other backend once
+  timeout_s: 240
+  claude_bin: ~/.ai-peer/bin/claude-2.1.318   # pinned copy (spike 1a); falls back to `claude` if missing
+  claude_model: opus
+  codex_bin: codex
+  codex_model: ""               # empty = the CLI's default for the login (gpt-6-astra on 0.153.4)
+  codex_home: ~/.ai-peer/codex-home
+
+slack:
+  debounce_s: 6                 # wait this long for more messages in a thread before thinking
+  watch_channels: []            # empty = every channel the bot is in
+
+github:
+  poll_minutes: 15
+
+web:
+  host: 127.0.0.1
+  port: 8787
