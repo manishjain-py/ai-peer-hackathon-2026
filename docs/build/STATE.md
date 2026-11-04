@@ -5,9 +5,12 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
-2026-11-04 14:50. WP1 (foundation + S1) is running: `ai-peer-wp1-1` in
-`~/repos/ai-peer-wp1` on `wp1-foundation`. Spike 1a passed (Claude Code 2.1.318), 1b
-(Codex) under way. Slack: Manish created the workspace "learnlikemagic" (team
+2026-11-04 14:55. WP1 (foundation + S1) is running: `ai-peer-wp1-1` in
+`~/repos/ai-peer-wp1` on `wp1-foundation`. Spikes 1a and 1b passed: `claude -p`
+2.1.318 with `--setting-sources project`, empty MCP and a read-only tool list loads none
+of Manish's global config; `codex exec` 0.153.4 loads skills, but needs its own
+`CODEX_HOME` and `HOME` under `~/.ai-peer` (`--ignore-user-config` still leaks the
+global AGENTS.md and user skills). Slack: Manish created the workspace "learnlikemagic" (team
 T0CEDQU5X0X) about 14:47; the kickoff session is walking him through the app with
 `docs/build/setup/slack.md` and tells the controller and the worker when the tokens are
 in `~/.ai-peer/.env` (the worker does not write its own manifest). Weekly usage 34%
@@ -24,6 +27,10 @@ in `~/.ai-peer/.env` (the worker does not write its own manifest). Weekly usage 
 1. The setup list in PLAN. Slack: workspace done, app setup in progress with the kickoff
    session. Then Google, GitHub token, Zoom app, Recall.ai, ElevenLabs: WP1 sends exact
    steps through the controller when it reaches each.
+   Queued asks, sent one at a time after the Slack install: (a) fake colleagues as real
+   member accounts (recommended, about 20 minutes) or one scenario bot with an APP badge;
+   (b) one command for the Peer's own Codex login (today it uses a copy of his token,
+   good until about 7 Nov).
 2. The Airbnb asks in PLAN, this week.
 3. Your other Mac's copy (`~/repos/Hackathon 2026`, per the `$ai-peer` skill) predates
    the `film/` move: push anything unpushed there, then pull.
