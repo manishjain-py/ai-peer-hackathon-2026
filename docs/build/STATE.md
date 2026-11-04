@@ -5,7 +5,7 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
-2026-11-04 15:05. WP1 (foundation + S1) is running: `ai-peer-wp1-1` in
+2026-11-04 15:15. WP1 (foundation + S1) is running: `ai-peer-wp1-1` in
 `~/repos/ai-peer-wp1` on `wp1-foundation`.
 
 - Spikes 1a and 1b passed: `claude -p` 2.1.318 with `--setting-sources project`, empty
@@ -22,30 +22,39 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 - In `~/.ai-peer/.env`, each checked: the Slack app, bot and user tokens;
   `ELEVENLABS_API_KEY`; `GITHUB_TOKEN` (his `gh` login, full repo scope, so the Peer
   makes read calls only; PLAN's fine-grained read-only token would be safer, optional).
-- Meetings: Zoom is his paid Workplace Pro account (personal Gmail login); Recall.ai
-  account on manish@learnlikemagic.com, **Tokyo region**, $5 credit (keep test meetings
-  short). The kickoff session is adding the Recall API key and the Zoom connection.
+- Recall.ai: key `ai-peer-runtime` in `.env` and working; Tokyo region
+  (`RECALL_BASE_URL`), $5 credit, so keep test meetings short. Recall says its bots join
+  Zoom with no Zoom app of ours; spike 1d checks that against Zoom's on-behalf-of rule,
+  with Manish not in the call. Zoom: his paid Workplace Pro account (personal Gmail).
+- All accounts and `.env` names: [setup/accounts.md](setup/accounts.md).
 - Weekly usage 34% (resets 10 Nov, 04:30 IST).
 
 | Session | Window | Worktree | Branch / PR | Job |
 |---|---|---|---|---|
-| kickoff, registry name `learnlikemagic-27` | 1661 | `~/repos/ai-peer-hackathon-2026` | `main` | Interview, docs, restructure done; now walking Manish through the Slack app setup |
+| kickoff, registry name `learnlikemagic-27` | 1661 | `~/repos/ai-peer-hackathon-2026` | `main` | Interview, docs, restructure, Slack, Recall, ElevenLabs, GitHub set up; handed off at 46% (15:13), closed. The controller owns every ask to Manish |
 | ai-peer-controller-1 | 1715 | `~/repos/ai-peer-hackathon-2026` | `main` (docs only) | Runs the build; https://claude.ai/code/session_01Nfn5h9PisnJvGpbLbRtbiB |
 | ai-peer-wp1-1 | 1725 | `~/repos/ai-peer-wp1` | `wp1-foundation`, no PR yet | WP1 foundation + S1; idle pings off (`CLAUDE_NO_IDLE_PING=1`), asks go through the controller; https://claude.ai/code/session_01Nfn5h8PVD6txxjBUfab4nR |
 
 ## Needs Manish
 
+The controller asks one at a time, in this order.
+
 1. **Asked 15:03 (Telegram Attention + controller reply), waiting:** fake colleagues in
    Slack, A) real member accounts from 5 email aliases (about 20 to 25 minutes, look
    real on stage; recommended) or B) one scenario bot with custom names (about 3 minutes,
    APP badge on every message). The worker sends the exact steps for his pick.
-2. Queued, after that: one command for the Peer's own Codex login (today it uses a copy
-   of his token, good until about 7 Nov).
-3. Rest of the setup list (PLAN): Google OAuth client; Zoom app and Recall key (kickoff
-   session doing these now). WP1 sends exact steps through the controller when needed.
-4. The Airbnb asks in PLAN, this week.
-5. His other Mac's copy (`~/repos/Hackathon 2026`, per the `$ai-peer` skill) predates
+2. A Zoom test meeting for spike 1d (join before host on, waiting room off); the link goes
+   in `~/.ai-peer/.env`, not chat (anyone with it can join).
+3. One command for the Peer's own Codex login (today it uses a copy of his token, good
+   until about 7 Nov).
+4. The Google Internal OAuth client (WP3).
+5. The Airbnb asks in PLAN, this week.
+6. His other Mac's copy (`~/repos/Hackathon 2026`, per the `$ai-peer` skill) predates
    the `film/` move: push anything unpushed there, then pull.
+7. Optional housekeeping: delete the unused Recall key "ai-peer" in the Recall dashboard.
+
+Chrome: Manish let the kickoff session do setup steps in his logged-in Chrome. That
+authority does not carry over; ask him before any session reuses it for a new step.
 
 ## Next
 
@@ -80,6 +89,13 @@ Answers to the Airbnb asks land here, with date and source.
 ## Lessons
 
 What went wrong once, with its mechanism.
+
+- Driving Chrome by AppleScript (`execute javascript`, bridge in the LLM repo's
+  `.claude/skills/ship-chapter-monitor/scripts/eval.applescript`): the script runs in an
+  isolated world, so page JS objects are invisible; text inputs need
+  `document.execCommand("insertText")`; a value the page only offers by clipboard needs
+  a main-world script tag that overrides `navigator.clipboard.writeText` (works on
+  Recall, blocked on api.slack.com). From the kickoff session, 2026-11-04.
 
 ## Session log
 
