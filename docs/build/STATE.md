@@ -75,7 +75,14 @@ authority does not carry over; ask him before any session reuses it for a new st
 
 1. WP1: finish 1c (hear + click), the colleague setup after Manish's pick, then the
    build; 1d once the Recall key and the Zoom connection are in.
-2. WP1 done → Checkpoint 1 → WP2 and WP3 in parallel.
+2. WP1 done → Checkpoint 1 → WP2 and WP3 in parallel. Their brief drafts (17:25) sit in
+   the controller's scratchpad,
+   `/private/tmp/claude-501/-Users-manishjain-repos-ai-peer-hackathon-2026/ce734d56-18c2-403f-826e-b980254d3571/scratchpad/draft-HANDOFF-ai-peer-wp{2,3}-1.md`;
+   at the merge: re-check every cited line on the new head, a read-only check for stale
+   facts, then push them as the dated briefs and spawn. The film's look for both: colours in
+   `film/video/src/draft02/Shared.tsx`, screens in `film/video/src/draft07/SetupScene.tsx`,
+   `StoryScenes.tsx` and `film/video/src/draft05/PersonalBrief.tsx` (the film's screens say
+   "OneAirbnb" and "AirChat": not in build files).
 
 ## Checkpoints (D15)
 
