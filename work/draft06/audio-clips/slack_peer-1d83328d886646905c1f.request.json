@@ -1,0 +1,16 @@
+{
+  "voice_id": "jpdt2U2ncF4tVZvy35oY",
+  "output_format": "pcm_44100",
+  "body": {
+    "text": "I'm Manish's AI Peer. Dispute agents need to see whether the guest canceled inside or outside the flexibility window, to help assess the chargeback.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0,
+      "speed": 1.0,
+      "use_speaker_boost": true
+    },
+    "seed": 19092026
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "movie": "renders/ai-peer-draft-03-preview.mp4",
+  "samples_per_sheet": 12,
+  "segments": [
+    [
+      "reveal",
+      15.5,
+      19.5
+    ],
+    [
+      "brief_entry",
+      39.5,
+      46.5
+    ],
+    [
+      "brief_change",
+      44.5,
+      50.5
+    ],
+    [
+      "brief_event",
+      53.5,
+      60.5
+    ],
+    [
+      "brief_opportunity",
+      63.5,
+      70.5
+    ],
+    [
+      "brief_save",
+      71,
+      79.8
+    ],
+    [
+      "slack_peer",
+      92.8,
+      99.8
+    ],
+    [
+      "slack_reply",
+      99.8,
+      110.3
+    ],
+    [
+      "meeting_bridge",
+      110.7,
+      117.7
+    ],
+    [
+      "zoom_share",
+      117,
+      124
+    ],
+    [
+      "zoom_turns",
+      125.5,
+      138.3
+    ],
+    [
+      "return",
+      138,
+      144
+    ],
+    [
+      "return_finish",
+      150,
+      158.3
+    ],
+    [
+      "close",
+      158.3,
+      166.3
+    ]
+  ],
+  "note": "Even temporal samples across intervals; sheets read left to right, top to bottom."
+}

@@ -1,0 +1,27 @@
+{
+  "status": "PASS numerical, reuse and supporting ASR checks",
+  "script_sha256": "046c98c5042577faa9f2bfc37efe9281590574d305acae797b4656f5ccaaae9f",
+  "mix_sha256": "6d2420f762ec5e55f50d2b6051f6a11c4b2866447213e67659b83606a0dd08cf",
+  "duration": 179.5,
+  "bpm": 124,
+  "new_lines": 13,
+  "reused_lines": 22,
+  "new_time_stretch": 1.0,
+  "zoom_gaps_seconds": [
+    0.35,
+    0.35,
+    0.35,
+    0.35,
+    0.35
+  ],
+  "reused_normalized_clips_match_new_narration": true,
+  "maximum_reuse_sample_error": 1.1891825124621391e-07,
+  "secondary_recognition": {
+    "model": "Whisper small.en",
+    "count": 13,
+    "path": "../../../../work/draft04/audio-qa/asr-small-new.json",
+    "observations": "All 13 new lines recognized with the intended meaning. Small.en did not reproduce base.en spurious tails. Numerals, Runbook, Sourcegraph and AI Peer tokenization differ; captions retain exact script copy."
+  },
+  "direct_listening_performed": false,
+  "limitation": "No available audio-input listening tool. ASR and numerical checks do not establish voice naturalness or music quality."
+}

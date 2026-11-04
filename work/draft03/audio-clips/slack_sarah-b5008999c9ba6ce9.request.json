@@ -1,0 +1,8 @@
+{
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-4bit",
+  "speaker": "Authored American English colleague",
+  "text": "Manish, daily totals or each dispute's final result?",
+  "instruct": "A female native American English speaker in her thirties with a lower middle register, warm slightly textured voice. Conversational office video call, casual and direct. Natural question intonation, quick connected phrasing with short pauses. Pronounce the name Manish as muh-NEESH.",
+  "seed": 43,
+  "temperature": 0.7
+}

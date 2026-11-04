@@ -1,0 +1,166 @@
+{
+  "validation": "PASS",
+  "source_duration": 240,
+  "duration": 224.1,
+  "removed_seconds": 15.9,
+  "edit_sha256": "3edc43158f3e7958017e51541641b628429f27791384dd8065c55aa2c87335ae",
+  "cuts": [
+    {
+      "source_start": 136.5,
+      "source_end": 138,
+      "removed_seconds": 1.5,
+      "speech_peak_in_cut_and_fades": 0.0,
+      "speech_overlap": false
+    },
+    {
+      "source_start": 144,
+      "source_end": 145.7,
+      "removed_seconds": 1.7,
+      "speech_peak_in_cut_and_fades": 0.0,
+      "speech_overlap": false
+    },
+    {
+      "source_start": 153.3,
+      "source_end": 156,
+      "removed_seconds": 2.7,
+      "speech_peak_in_cut_and_fades": 0.0,
+      "speech_overlap": false
+    },
+    {
+      "source_start": 170.4,
+      "source_end": 174,
+      "removed_seconds": 3.6,
+      "speech_peak_in_cut_and_fades": 0.0,
+      "speech_overlap": false
+    },
+    {
+      "source_start": 181,
+      "source_end": 183,
+      "removed_seconds": 2,
+      "speech_peak_in_cut_and_fades": 0.0,
+      "speech_overlap": false
+    },
+    {
+      "source_start": 187.7,
+      "source_end": 189.2,
+      "removed_seconds": 1.5,
+      "speech_peak_in_cut_and_fades": 0.0,
+      "speech_overlap": false
+    },
+    {
+      "source_start": 202.3,
+      "source_end": 205.2,
+      "removed_seconds": 2.9,
+      "speech_peak_in_cut_and_fades": 0.0,
+      "speech_overlap": false
+    }
+  ],
+  "checks": {
+    "narration": {
+      "duration": 224.1,
+      "sample_rate": 48000,
+      "channels": 2,
+      "peak_dbfs": -3.923,
+      "rms_dbfs": -20.754,
+      "clipped_samples": 0,
+      "frames": 10756800,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    },
+    "music": {
+      "duration": 224.1,
+      "sample_rate": 48000,
+      "channels": 2,
+      "peak_dbfs": -15.269,
+      "rms_dbfs": -37.829,
+      "clipped_samples": 0,
+      "frames": 10756800,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    },
+    "effects": {
+      "duration": 224.1,
+      "sample_rate": 48000,
+      "channels": 2,
+      "peak_dbfs": -22.161,
+      "rms_dbfs": -51.316,
+      "clipped_samples": 0,
+      "frames": 10756800,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    },
+    "mixed": {
+      "duration": 224.1,
+      "sample_rate": 48000,
+      "channels": 2,
+      "peak_dbfs": -3.722,
+      "rms_dbfs": -20.664,
+      "clipped_samples": 0,
+      "frames": 10756800,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    },
+    "music-unducked": {
+      "duration": 224.1,
+      "sample_rate": 48000,
+      "channels": 2,
+      "peak_dbfs": -9.458,
+      "rms_dbfs": -27.568,
+      "clipped_samples": 0,
+      "frames": 10756800,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "join_fade_out_ms": 12,
+  "join_fade_in_ms": 12,
+  "duration_lost_to_fades": 0,
+  "all_remaining_narration_samples_bit_identical": true,
+  "all_scripted_words_preserved": true,
+  "speech_overlap": false,
+  "stems_sum_to_mix": true,
+  "stem_rounding_error": 3.5762786865234375e-07,
+  "captions": {
+    "count": 69,
+    "non_overlapping": true,
+    "within_video": true
+  },
+  "loudness": {
+    "integrated_lufs": -16.0,
+    "true_peak_dbfs": -3.7,
+    "loudness_range_lu": 9.9,
+    "summary": "Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -27.8 LUFS\n\n  Loudness range:\n    LRA:         9.9 LU\n    Threshold: -38.1 LUFS\n    LRA low:   -25.2 LUFS\n    LRA high:  -15.3 LUFS\n\n  True peak:\n    Peak:       -3.7 dBFS"
+  },
+  "direct_listening_performed": false,
+  "direct_listening_limitation": "No audio-listening input tool was available. Original full-mix ASR reviewed; edited narration samples are unchanged."
+}

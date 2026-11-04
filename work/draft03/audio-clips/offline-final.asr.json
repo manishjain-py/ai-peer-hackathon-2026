@@ -1,0 +1,66 @@
+{
+  "sha256": "41476d59e5aa3da6d41ba889a78d96cecc694157fb6fd961e96163e003af2c1e",
+  "text": "Later, when Manish goes offline, his team still needs context.",
+  "words": [
+    {
+      "word": " Later,",
+      "start": 0.0,
+      "end": 0.26,
+      "probability": 0.9635645747184753
+    },
+    {
+      "word": " when",
+      "start": 0.54,
+      "end": 0.6,
+      "probability": 0.9983687996864319
+    },
+    {
+      "word": " Manish",
+      "start": 0.6,
+      "end": 0.96,
+      "probability": 0.9004092812538147
+    },
+    {
+      "word": " goes",
+      "start": 0.96,
+      "end": 1.14,
+      "probability": 0.9975149631500244
+    },
+    {
+      "word": " offline,",
+      "start": 1.14,
+      "end": 1.64,
+      "probability": 0.966951847076416
+    },
+    {
+      "word": " his",
+      "start": 2.12,
+      "end": 2.2,
+      "probability": 0.9973745346069336
+    },
+    {
+      "word": " team",
+      "start": 2.2,
+      "end": 2.44,
+      "probability": 0.9695185422897339
+    },
+    {
+      "word": " still",
+      "start": 2.44,
+      "end": 2.88,
+      "probability": 0.9824641346931458
+    },
+    {
+      "word": " needs",
+      "start": 2.88,
+      "end": 3.12,
+      "probability": 0.9850714206695557
+    },
+    {
+      "word": " context.",
+      "start": 3.12,
+      "end": 3.5,
+      "probability": 0.9634882807731628
+    }
+  ]
+}

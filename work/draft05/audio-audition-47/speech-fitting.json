@@ -1,0 +1,253 @@
+[
+  {
+    "id": "brief_event",
+    "start": 0,
+    "limit": 14,
+    "speaker": "peer",
+    "text": "Weather Protection still needs product identity and policy results. Charan's integration work depends on those answers. I've drafted a question for the owners.",
+    "seed": 47,
+    "direction": "Speak naturally in fluent American English. A helpful male colleague giving a concise update on a video call. Calm, warm, practical and confident. Brisk, connected, conversational phrasing with varied natural inflection and short pauses. No robot voice, no announcer voice, no dramatic emphasis. Pronounce the name Charan as chuh-run, in two clear syllables.",
+    "source_path": "work/draft05/audio-audition-47/brief_event-667499223625013f.wav",
+    "source_duration": 9.28,
+    "voice": "Aiden",
+    "voice_engine": "mlx-community/Qwen3-TTS-12Hz-1.7B-CustomVoice-4bit",
+    "spoken_text": "Weather Protection still needs product identity and policy results. Charan's integration work depends on those answers. I've drafted a question for the owners.",
+    "end": 9.276,
+    "duration": 9.276,
+    "original_duration": 9.276041666666666,
+    "edge_silence_trim_seconds": [
+      0.003958333333333334,
+      0.0
+    ],
+    "time_stretch": 1.0,
+    "tts_rate": "instructed brisk",
+    "fit": true,
+    "words": [
+      {
+        "text": "Weather",
+        "start": 0.0,
+        "end": 0.24
+      },
+      {
+        "text": "Protection",
+        "start": 0.24,
+        "end": 0.54
+      },
+      {
+        "text": "still",
+        "start": 0.54,
+        "end": 1.06
+      },
+      {
+        "text": "needs",
+        "start": 1.06,
+        "end": 1.34
+      },
+      {
+        "text": "product",
+        "start": 1.34,
+        "end": 1.68
+      },
+      {
+        "text": "identity",
+        "start": 1.68,
+        "end": 2.26
+      },
+      {
+        "text": "and",
+        "start": 2.26,
+        "end": 2.6
+      },
+      {
+        "text": "policy",
+        "start": 2.6,
+        "end": 2.96
+      },
+      {
+        "text": "results.",
+        "start": 2.96,
+        "end": 3.46
+      },
+      {
+        "text": "Charan's",
+        "start": 3.46,
+        "end": 4.38
+      },
+      {
+        "text": "integration",
+        "start": 4.38,
+        "end": 4.86
+      },
+      {
+        "text": "work",
+        "start": 4.86,
+        "end": 5.44
+      },
+      {
+        "text": "depends",
+        "start": 5.44,
+        "end": 5.64
+      },
+      {
+        "text": "on",
+        "start": 5.64,
+        "end": 6.08
+      },
+      {
+        "text": "those",
+        "start": 6.08,
+        "end": 6.28
+      },
+      {
+        "text": "answers.",
+        "start": 6.28,
+        "end": 6.66
+      },
+      {
+        "text": "I've",
+        "start": 7.62,
+        "end": 7.64
+      },
+      {
+        "text": "drafted",
+        "start": 7.64,
+        "end": 7.84
+      },
+      {
+        "text": "a",
+        "start": 7.84,
+        "end": 8.1
+      },
+      {
+        "text": "question",
+        "start": 8.1,
+        "end": 8.42
+      },
+      {
+        "text": "for",
+        "start": 8.42,
+        "end": 8.72
+      },
+      {
+        "text": "the",
+        "start": 8.72,
+        "end": 8.82
+      },
+      {
+        "text": "owners.",
+        "start": 8.82,
+        "end": 9.0
+      }
+    ],
+    "asr_match_ratio": 0.9565,
+    "asr_text": "Weather protection still needs product identity and policy results. Trans integration work depends on those answers. I've drafted a question for the owners."
+  },
+  {
+    "id": "slack_peer",
+    "start": 15,
+    "limit": 29,
+    "speaker": "peer",
+    "text": "I am Manish's AI Peer. Each product's disputed amount. It shows investigators what the chargeback covers.",
+    "seed": 47,
+    "source_path": "work/draft05/audio-audition-47/slack_peer-c89e5c809e43184b.wav",
+    "source_duration": 6.88,
+    "voice": "Aiden",
+    "voice_engine": "mlx-community/Qwen3-TTS-12Hz-1.7B-CustomVoice-4bit",
+    "direction": "Speak quickly and smoothly in conversational American English, like a helpful male colleague answering a question. Warm and clear. Connected flowing phrasing, with only very short pauses between sentences. Pronounce the name Manish as muh-NEESH.",
+    "spoken_text": "I am Manish's AI Peer. Each product's disputed amount. It shows investigators what the chargeback covers.",
+    "end": 21.8668,
+    "duration": 6.8668,
+    "original_duration": 6.8668125,
+    "edge_silence_trim_seconds": [
+      0.0131875,
+      0.0
+    ],
+    "time_stretch": 1.0,
+    "tts_rate": "instructed brisk",
+    "fit": true,
+    "words": [
+      {
+        "text": "I",
+        "start": 15.0,
+        "end": 15.16
+      },
+      {
+        "text": "am",
+        "start": 15.16,
+        "end": 15.34
+      },
+      {
+        "text": "Manish's",
+        "start": 15.34,
+        "end": 15.92
+      },
+      {
+        "text": "AI",
+        "start": 15.92,
+        "end": 16.2
+      },
+      {
+        "text": "Peer.",
+        "start": 16.2,
+        "end": 16.54
+      },
+      {
+        "text": "Each",
+        "start": 17.42,
+        "end": 17.42
+      },
+      {
+        "text": "product's",
+        "start": 17.42,
+        "end": 17.9
+      },
+      {
+        "text": "disputed",
+        "start": 17.9,
+        "end": 18.32
+      },
+      {
+        "text": "amount.",
+        "start": 18.32,
+        "end": 18.64
+      },
+      {
+        "text": "It",
+        "start": 19.24,
+        "end": 19.36
+      },
+      {
+        "text": "shows",
+        "start": 19.36,
+        "end": 19.56
+      },
+      {
+        "text": "investigators",
+        "start": 19.56,
+        "end": 20.12
+      },
+      {
+        "text": "what",
+        "start": 20.12,
+        "end": 20.62
+      },
+      {
+        "text": "the",
+        "start": 20.62,
+        "end": 20.74
+      },
+      {
+        "text": "chargeback",
+        "start": 20.74,
+        "end": 21.24
+      },
+      {
+        "text": "covers.",
+        "start": 21.24,
+        "end": 21.58
+      }
+    ],
+    "asr_match_ratio": 0.9091,
+    "asr_text": "I am Minish's AI peer, each product's disputed amount. It shows investigators what the chargeback covers. members."
+  }
+]

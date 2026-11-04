@@ -1,0 +1,1414 @@
+{
+  "title": "AI Peer — fictional concept demo",
+  "duration": 120.0,
+  "sample_rate": 48000,
+  "bpm": 116,
+  "voices": {
+    "narrator": "en-US-AriaNeural",
+    "peer": "en-US-GuyNeural"
+  },
+  "voice_disclosure": "Both voices are stock synthetic voices. No voice cloning. The Peer identifies itself in each spoken appearance.",
+  "music": "Original procedural composition for this demo, composed from synthesized oscillators and noise; no samples or third-party recording.",
+  "notes": "All narration lines preserved from brief. atempo used only where needed to fit scene windows. SRT times derive from synthesis word boundaries, scaled to actual clip timing.",
+  "lines": [
+    {
+      "id": 1,
+      "speaker": "narrator",
+      "voice": "en-US-AriaNeural",
+      "text": "A ten-minute question can cost a whole day, when the person with the context is asleep.",
+      "start": 1.0,
+      "end": 6.544,
+      "duration": 5.544,
+      "scene_limit": 8.8,
+      "tts_rate": "+5%",
+      "time_stretch": 1.0,
+      "original_duration": 5.544,
+      "words": [
+        {
+          "text": "A",
+          "start": 1.0976,
+          "end": 1.2286
+        },
+        {
+          "text": "ten-minute",
+          "start": 1.2405,
+          "end": 1.7285
+        },
+        {
+          "text": "question",
+          "start": 1.7405,
+          "end": 2.2167
+        },
+        {
+          "text": "can",
+          "start": 2.2286,
+          "end": 2.3833
+        },
+        {
+          "text": "cost",
+          "start": 2.3952,
+          "end": 2.7048
+        },
+        {
+          "text": "a",
+          "start": 2.7167,
+          "end": 2.7643
+        },
+        {
+          "text": "whole",
+          "start": 2.7762,
+          "end": 3.0024
+        },
+        {
+          "text": "day,",
+          "start": 3.0143,
+          "end": 3.3119
+        },
+        {
+          "text": "when",
+          "start": 3.6214,
+          "end": 3.7524
+        },
+        {
+          "text": "the",
+          "start": 3.7643,
+          "end": 3.8476
+        },
+        {
+          "text": "person",
+          "start": 3.8595,
+          "end": 4.2405
+        },
+        {
+          "text": "with",
+          "start": 4.2524,
+          "end": 4.3714
+        },
+        {
+          "text": "the",
+          "start": 4.3833,
+          "end": 4.4667
+        },
+        {
+          "text": "context",
+          "start": 4.4786,
+          "end": 5.0619
+        },
+        {
+          "text": "is",
+          "start": 5.0738,
+          "end": 5.1452
+        },
+        {
+          "text": "asleep.",
+          "start": 5.1571,
+          "end": 5.7047
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "speaker": "narrator",
+      "voice": "en-US-AriaNeural",
+      "text": "Meet AI Peer. An always-on teammate that knows your work, even when you are offline.",
+      "start": 10.0,
+      "end": 16.456,
+      "duration": 6.456,
+      "scene_limit": 16.8,
+      "tts_rate": "+5%",
+      "time_stretch": 1.0,
+      "original_duration": 6.456,
+      "words": [
+        {
+          "text": "Meet",
+          "start": 10.0976,
+          "end": 10.4548
+        },
+        {
+          "text": "AI",
+          "start": 10.4667,
+          "end": 10.8119
+        },
+        {
+          "text": "Peer.",
+          "start": 10.8238,
+          "end": 11.2642
+        },
+        {
+          "text": "An",
+          "start": 12.0833,
+          "end": 12.2857
+        },
+        {
+          "text": "always-on",
+          "start": 12.2976,
+          "end": 12.8214
+        },
+        {
+          "text": "teammate",
+          "start": 12.8333,
+          "end": 13.2857
+        },
+        {
+          "text": "that",
+          "start": 13.2976,
+          "end": 13.4167
+        },
+        {
+          "text": "knows",
+          "start": 13.4286,
+          "end": 13.6905
+        },
+        {
+          "text": "your",
+          "start": 13.7024,
+          "end": 13.8333
+        },
+        {
+          "text": "work,",
+          "start": 13.8453,
+          "end": 14.1667
+        },
+        {
+          "text": "even",
+          "start": 14.3929,
+          "end": 14.6191
+        },
+        {
+          "text": "when",
+          "start": 14.631,
+          "end": 14.75
+        },
+        {
+          "text": "you",
+          "start": 14.7619,
+          "end": 14.8572
+        },
+        {
+          "text": "are",
+          "start": 14.869,
+          "end": 15.0119
+        },
+        {
+          "text": "offline.",
+          "start": 15.0238,
+          "end": 15.6309
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "speaker": "narrator",
+      "voice": "en-US-AriaNeural",
+      "text": "Create your Peer. It starts with your profile, then connects your projects, conversations, documents, and code. A living picture of your work takes shape.",
+      "start": 18.0,
+      "end": 29.184,
+      "duration": 11.184,
+      "scene_limit": 30.7,
+      "tts_rate": "+5%",
+      "time_stretch": 1.0,
+      "original_duration": 11.184,
+      "words": [
+        {
+          "text": "Create",
+          "start": 18.0976,
+          "end": 18.4667
+        },
+        {
+          "text": "your",
+          "start": 18.4786,
+          "end": 18.6333
+        },
+        {
+          "text": "Peer.",
+          "start": 18.6453,
+          "end": 19.0738
+        },
+        {
+          "text": "It",
+          "start": 19.8929,
+          "end": 20.0715
+        },
+        {
+          "text": "starts",
+          "start": 20.0833,
+          "end": 20.4405
+        },
+        {
+          "text": "with",
+          "start": 20.4524,
+          "end": 20.5714
+        },
+        {
+          "text": "your",
+          "start": 20.5833,
+          "end": 20.7024
+        },
+        {
+          "text": "profile,",
+          "start": 20.7143,
+          "end": 21.3214
+        },
+        {
+          "text": "then",
+          "start": 21.4405,
+          "end": 21.6309
+        },
+        {
+          "text": "connects",
+          "start": 21.6429,
+          "end": 22.0238
+        },
+        {
+          "text": "your",
+          "start": 22.0357,
+          "end": 22.1428
+        },
+        {
+          "text": "projects,",
+          "start": 22.1547,
+          "end": 22.8095
+        },
+        {
+          "text": "conversations,",
+          "start": 22.9643,
+          "end": 23.8095
+        },
+        {
+          "text": "documents,",
+          "start": 23.9762,
+          "end": 24.5833
+        },
+        {
+          "text": "and",
+          "start": 24.7262,
+          "end": 24.9048
+        },
+        {
+          "text": "code.",
+          "start": 24.9167,
+          "end": 25.369
+        },
+        {
+          "text": "A",
+          "start": 26.2024,
+          "end": 26.3214
+        },
+        {
+          "text": "living",
+          "start": 26.3333,
+          "end": 26.6667
+        },
+        {
+          "text": "picture",
+          "start": 26.6786,
+          "end": 27.0715
+        },
+        {
+          "text": "of",
+          "start": 27.0833,
+          "end": 27.1429
+        },
+        {
+          "text": "your",
+          "start": 27.1547,
+          "end": 27.2857
+        },
+        {
+          "text": "work",
+          "start": 27.2976,
+          "end": 27.5833
+        },
+        {
+          "text": "takes",
+          "start": 27.5953,
+          "end": 27.869
+        },
+        {
+          "text": "shape.",
+          "start": 27.881,
+          "end": 28.3452
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "speaker": "narrator",
+      "voice": "en-US-AriaNeural",
+      "text": "Ask what is blocking Premium Chargebacks. Your Peer connects the requirement to the data dependency, the owning team, and the source.",
+      "start": 32.0,
+      "end": 40.928,
+      "duration": 8.928,
+      "scene_limit": 41.7,
+      "tts_rate": "+5%",
+      "time_stretch": 1.0,
+      "original_duration": 8.928,
+      "words": [
+        {
+          "text": "Ask",
+          "start": 32.0976,
+          "end": 32.431
+        },
+        {
+          "text": "what",
+          "start": 32.4429,
+          "end": 32.5976
+        },
+        {
+          "text": "is",
+          "start": 32.6095,
+          "end": 32.7167
+        },
+        {
+          "text": "blocking",
+          "start": 32.7286,
+          "end": 33.1572
+        },
+        {
+          "text": "Premium",
+          "start": 33.169,
+          "end": 33.6095
+        },
+        {
+          "text": "Chargebacks.",
+          "start": 33.6214,
+          "end": 34.4428
+        },
+        {
+          "text": "Your",
+          "start": 35.2619,
+          "end": 35.4762
+        },
+        {
+          "text": "Peer",
+          "start": 35.4881,
+          "end": 35.7619
+        },
+        {
+          "text": "connects",
+          "start": 35.7738,
+          "end": 36.1905
+        },
+        {
+          "text": "the",
+          "start": 36.2024,
+          "end": 36.2976
+        },
+        {
+          "text": "requirement",
+          "start": 36.3095,
+          "end": 36.9405
+        },
+        {
+          "text": "to",
+          "start": 36.9524,
+          "end": 37.0357
+        },
+        {
+          "text": "the",
+          "start": 37.0476,
+          "end": 37.1547
+        },
+        {
+          "text": "data",
+          "start": 37.1667,
+          "end": 37.4167
+        },
+        {
+          "text": "dependency,",
+          "start": 37.4286,
+          "end": 38.0833
+        },
+        {
+          "text": "the",
+          "start": 38.3095,
+          "end": 38.4286
+        },
+        {
+          "text": "owning",
+          "start": 38.4405,
+          "end": 38.7619
+        },
+        {
+          "text": "team,",
+          "start": 38.7738,
+          "end": 39.1071
+        },
+        {
+          "text": "and",
+          "start": 39.2976,
+          "end": 39.4167
+        },
+        {
+          "text": "the",
+          "start": 39.4286,
+          "end": 39.5238
+        },
+        {
+          "text": "source.",
+          "start": 39.5357,
+          "end": 40.0833
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "speaker": "narrator",
+      "voice": "en-US-AriaNeural",
+      "text": "And it stays current. When a decision changes, your Peer updates its understanding, with the source and the latest timestamp.",
+      "start": 43.0,
+      "end": 51.352,
+      "duration": 8.352,
+      "scene_limit": 51.7,
+      "tts_rate": "+5%",
+      "time_stretch": 1.0,
+      "original_duration": 8.352,
+      "words": [
+        {
+          "text": "And",
+          "start": 43.0976,
+          "end": 43.2881
+        },
+        {
+          "text": "it",
+          "start": 43.3,
+          "end": 43.419
+        },
+        {
+          "text": "stays",
+          "start": 43.431,
+          "end": 43.7643
+        },
+        {
+          "text": "current.",
+          "start": 43.7762,
+          "end": 44.2643
+        },
+        {
+          "text": "When",
+          "start": 45.0833,
+          "end": 45.2738
+        },
+        {
+          "text": "a",
+          "start": 45.2857,
+          "end": 45.3452
+        },
+        {
+          "text": "decision",
+          "start": 45.3571,
+          "end": 45.8214
+        },
+        {
+          "text": "changes,",
+          "start": 45.8333,
+          "end": 46.3452
+        },
+        {
+          "text": "your",
+          "start": 46.5357,
+          "end": 46.6786
+        },
+        {
+          "text": "Peer",
+          "start": 46.6905,
+          "end": 47.0
+        },
+        {
+          "text": "updates",
+          "start": 47.0119,
+          "end": 47.4167
+        },
+        {
+          "text": "its",
+          "start": 47.4286,
+          "end": 47.5476
+        },
+        {
+          "text": "understanding,",
+          "start": 47.5595,
+          "end": 48.2738
+        },
+        {
+          "text": "with",
+          "start": 48.5119,
+          "end": 48.6429
+        },
+        {
+          "text": "the",
+          "start": 48.6547,
+          "end": 48.7381
+        },
+        {
+          "text": "source",
+          "start": 48.75,
+          "end": 49.131
+        },
+        {
+          "text": "and",
+          "start": 49.1429,
+          "end": 49.2858
+        },
+        {
+          "text": "the",
+          "start": 49.2976,
+          "end": 49.3929
+        },
+        {
+          "text": "latest",
+          "start": 49.4047,
+          "end": 49.7738
+        },
+        {
+          "text": "timestamp.",
+          "start": 49.7857,
+          "end": 50.5119
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "speaker": "narrator",
+      "voice": "en-US-AriaNeural",
+      "text": "Now it is two A M. You are offline. A teammate in another timezone needs more context.",
+      "start": 53.0,
+      "end": 59.6823,
+      "duration": 6.6823,
+      "scene_limit": 59.7,
+      "tts_rate": "+5%",
+      "time_stretch": 1.160597,
+      "original_duration": 7.776,
+      "words": [
+        {
+          "text": "Now",
+          "start": 53.0841,
+          "end": 53.3713
+        },
+        {
+          "text": "it",
+          "start": 53.3816,
+          "end": 53.4431
+        },
+        {
+          "text": "is",
+          "start": 53.4534,
+          "end": 53.5662
+        },
+        {
+          "text": "two",
+          "start": 53.5765,
+          "end": 53.7714
+        },
+        {
+          "text": "A",
+          "start": 53.7816,
+          "end": 53.9355
+        },
+        {
+          "text": "M.",
+          "start": 53.9457,
+          "end": 54.2534
+        },
+        {
+          "text": "You",
+          "start": 54.9694,
+          "end": 55.1335
+        },
+        {
+          "text": "are",
+          "start": 55.1438,
+          "end": 55.3079
+        },
+        {
+          "text": "offline.",
+          "start": 55.3182,
+          "end": 55.8721
+        },
+        {
+          "text": "A",
+          "start": 56.5798,
+          "end": 56.7029
+        },
+        {
+          "text": "teammate",
+          "start": 56.7132,
+          "end": 57.0825
+        },
+        {
+          "text": "in",
+          "start": 57.0927,
+          "end": 57.1748
+        },
+        {
+          "text": "another",
+          "start": 57.185,
+          "end": 57.462
+        },
+        {
+          "text": "timezone",
+          "start": 57.4722,
+          "end": 57.9133
+        },
+        {
+          "text": "needs",
+          "start": 57.9236,
+          "end": 58.139
+        },
+        {
+          "text": "more",
+          "start": 58.1493,
+          "end": 58.3134
+        },
+        {
+          "text": "context.",
+          "start": 58.3236,
+          "end": 58.9903
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "speaker": "peer",
+      "voice": "en-US-GuyNeural",
+      "text": "I am Manish’s AI Peer. He is offline. Premium Chargebacks needs the dispute outcome before reconciliation. Which dataset is authoritative? Here is the requirement and latest project context.",
+      "start": 61.0,
+      "end": 75.3798,
+      "duration": 14.3798,
+      "scene_limit": 75.4,
+      "tts_rate": "+2%",
+      "time_stretch": 1.053333,
+      "original_duration": 15.168,
+      "words": [
+        {
+          "text": "I",
+          "start": 61.094,
+          "end": 61.2685
+        },
+        {
+          "text": "am",
+          "start": 61.2801,
+          "end": 61.3848
+        },
+        {
+          "text": "Manish’s",
+          "start": 61.4081,
+          "end": 61.8619
+        },
+        {
+          "text": "AI",
+          "start": 61.8851,
+          "end": 62.1062
+        },
+        {
+          "text": "Peer.",
+          "start": 62.1295,
+          "end": 62.5018
+        },
+        {
+          "text": "He",
+          "start": 63.3152,
+          "end": 63.5014
+        },
+        {
+          "text": "is",
+          "start": 63.5247,
+          "end": 63.6526
+        },
+        {
+          "text": "offline.",
+          "start": 63.6759,
+          "end": 64.246
+        },
+        {
+          "text": "Premium",
+          "start": 65.0604,
+          "end": 65.4909
+        },
+        {
+          "text": "Chargebacks",
+          "start": 65.5142,
+          "end": 66.0959
+        },
+        {
+          "text": "needs",
+          "start": 66.1075,
+          "end": 66.3286
+        },
+        {
+          "text": "the",
+          "start": 66.3402,
+          "end": 66.4449
+        },
+        {
+          "text": "dispute",
+          "start": 66.4565,
+          "end": 66.8405
+        },
+        {
+          "text": "outcome",
+          "start": 66.8521,
+          "end": 67.2128
+        },
+        {
+          "text": "before",
+          "start": 67.236,
+          "end": 67.5385
+        },
+        {
+          "text": "reconciliation.",
+          "start": 67.5618,
+          "end": 68.4693
+        },
+        {
+          "text": "Which",
+          "start": 69.2953,
+          "end": 69.5746
+        },
+        {
+          "text": "dataset",
+          "start": 69.5862,
+          "end": 70.0981
+        },
+        {
+          "text": "is",
+          "start": 70.1214,
+          "end": 70.2377
+        },
+        {
+          "text": "authoritative?",
+          "start": 70.261,
+          "end": 71.0405
+        },
+        {
+          "text": "Here",
+          "start": 71.8549,
+          "end": 72.0876
+        },
+        {
+          "text": "is",
+          "start": 72.0992,
+          "end": 72.2039
+        },
+        {
+          "text": "the",
+          "start": 72.2272,
+          "end": 72.3203
+        },
+        {
+          "text": "requirement",
+          "start": 72.3319,
+          "end": 72.9602
+        },
+        {
+          "text": "and",
+          "start": 72.9718,
+          "end": 73.0765
+        },
+        {
+          "text": "latest",
+          "start": 73.0998,
+          "end": 73.4488
+        },
+        {
+          "text": "project",
+          "start": 73.4604,
+          "end": 73.8909
+        },
+        {
+          "text": "context.",
+          "start": 73.9142,
+          "end": 74.5657
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "speaker": "narrator",
+      "voice": "en-US-AriaNeural",
+      "text": "The owning team has what it needs. The answer arrives, and the dependency moves forward before your next working day begins.",
+      "start": 77.0,
+      "end": 85.4,
+      "duration": 8.4,
+      "scene_limit": 86.7,
+      "tts_rate": "+5%",
+      "time_stretch": 1.0,
+      "original_duration": 8.4,
+      "words": [
+        {
+          "text": "The",
+          "start": 77.0976,
+          "end": 77.2881
+        },
+        {
+          "text": "owning",
+          "start": 77.3,
+          "end": 77.6214
+        },
+        {
+          "text": "team",
+          "start": 77.6333,
+          "end": 77.8952
+        },
+        {
+          "text": "has",
+          "start": 77.9071,
+          "end": 78.1333
+        },
+        {
+          "text": "what",
+          "start": 78.1453,
+          "end": 78.2881
+        },
+        {
+          "text": "it",
+          "start": 78.3,
+          "end": 78.3833
+        },
+        {
+          "text": "needs.",
+          "start": 78.3953,
+          "end": 78.8833
+        },
+        {
+          "text": "The",
+          "start": 79.7143,
+          "end": 79.881
+        },
+        {
+          "text": "answer",
+          "start": 79.8929,
+          "end": 80.2619
+        },
+        {
+          "text": "arrives,",
+          "start": 80.2738,
+          "end": 80.7976
+        },
+        {
+          "text": "and",
+          "start": 80.9762,
+          "end": 81.1191
+        },
+        {
+          "text": "the",
+          "start": 81.131,
+          "end": 81.2262
+        },
+        {
+          "text": "dependency",
+          "start": 81.2381,
+          "end": 81.8214
+        },
+        {
+          "text": "moves",
+          "start": 81.8333,
+          "end": 82.1429
+        },
+        {
+          "text": "forward",
+          "start": 82.1548,
+          "end": 82.5952
+        },
+        {
+          "text": "before",
+          "start": 82.6071,
+          "end": 82.9524
+        },
+        {
+          "text": "your",
+          "start": 82.9643,
+          "end": 83.0714
+        },
+        {
+          "text": "next",
+          "start": 83.0833,
+          "end": 83.4286
+        },
+        {
+          "text": "working",
+          "start": 83.4405,
+          "end": 83.7381
+        },
+        {
+          "text": "day",
+          "start": 83.75,
+          "end": 83.9167
+        },
+        {
+          "text": "begins.",
+          "start": 83.9286,
+          "end": 84.5715
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "speaker": "narrator",
+      "voice": "en-US-AriaNeural",
+      "text": "Cannot make the project sync? Your Peer can join, identify itself, and share grounded updates.",
+      "start": 88.0,
+      "end": 94.6806,
+      "duration": 6.6806,
+      "scene_limit": 94.7,
+      "tts_rate": "+5%",
+      "time_stretch": 1.085373,
+      "original_duration": 7.272,
+      "words": [
+        {
+          "text": "Cannot",
+          "start": 88.0899,
+          "end": 88.4409
+        },
+        {
+          "text": "make",
+          "start": 88.4519,
+          "end": 88.6383
+        },
+        {
+          "text": "the",
+          "start": 88.6493,
+          "end": 88.7261
+        },
+        {
+          "text": "project",
+          "start": 88.7371,
+          "end": 89.1539
+        },
+        {
+          "text": "sync?",
+          "start": 89.1648,
+          "end": 89.5707
+        },
+        {
+          "text": "Your",
+          "start": 90.3253,
+          "end": 90.5227
+        },
+        {
+          "text": "Peer",
+          "start": 90.5337,
+          "end": 90.775
+        },
+        {
+          "text": "can",
+          "start": 90.7859,
+          "end": 90.9395
+        },
+        {
+          "text": "join,",
+          "start": 90.9505,
+          "end": 91.3015
+        },
+        {
+          "text": "identify",
+          "start": 91.477,
+          "end": 91.9705
+        },
+        {
+          "text": "itself,",
+          "start": 91.9815,
+          "end": 92.4203
+        },
+        {
+          "text": "and",
+          "start": 92.5848,
+          "end": 92.6945
+        },
+        {
+          "text": "share",
+          "start": 92.7054,
+          "end": 92.9577
+        },
+        {
+          "text": "grounded",
+          "start": 92.9687,
+          "end": 93.3307
+        },
+        {
+          "text": "updates.",
+          "start": 93.3416,
+          "end": 93.9119
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "speaker": "peer",
+      "voice": "en-US-GuyNeural",
+      "text": "I am Manish’s AI Peer. Development is complete. Validation is in progress. The launch date still needs his confirmation.",
+      "start": 95.2,
+      "end": 103.6818,
+      "duration": 8.4818,
+      "scene_limit": 103.7,
+      "tts_rate": "+12%",
+      "time_stretch": 1.101176,
+      "original_duration": 9.36,
+      "words": [
+        {
+          "text": "I",
+          "start": 95.2859,
+          "end": 95.438
+        },
+        {
+          "text": "am",
+          "start": 95.4481,
+          "end": 95.5393
+        },
+        {
+          "text": "Manish’s",
+          "start": 95.5596,
+          "end": 95.9549
+        },
+        {
+          "text": "AI",
+          "start": 95.9752,
+          "end": 96.1677
+        },
+        {
+          "text": "Peer.",
+          "start": 96.188,
+          "end": 96.5123
+        },
+        {
+          "text": "Development",
+          "start": 97.2169,
+          "end": 97.7845
+        },
+        {
+          "text": "is",
+          "start": 97.8048,
+          "end": 97.9162
+        },
+        {
+          "text": "complete.",
+          "start": 97.9264,
+          "end": 98.4129
+        },
+        {
+          "text": "Validation",
+          "start": 99.1224,
+          "end": 99.7204
+        },
+        {
+          "text": "is",
+          "start": 99.7305,
+          "end": 99.8318
+        },
+        {
+          "text": "in",
+          "start": 99.8521,
+          "end": 99.9534
+        },
+        {
+          "text": "progress.",
+          "start": 99.9636,
+          "end": 100.4602
+        },
+        {
+          "text": "The",
+          "start": 101.1595,
+          "end": 101.271
+        },
+        {
+          "text": "launch",
+          "start": 101.2913,
+          "end": 101.5244
+        },
+        {
+          "text": "date",
+          "start": 101.5346,
+          "end": 101.6866
+        },
+        {
+          "text": "still",
+          "start": 101.7068,
+          "end": 101.9703
+        },
+        {
+          "text": "needs",
+          "start": 101.9906,
+          "end": 102.1933
+        },
+        {
+          "text": "his",
+          "start": 102.2136,
+          "end": 102.3352
+        },
+        {
+          "text": "confirmation.",
+          "start": 102.3453,
+          "end": 102.9737
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "speaker": "narrator",
+      "voice": "en-US-AriaNeural",
+      "text": "When you return, review every answer, source, and follow-up. Routine context keeps moving. Important decisions stay with you.",
+      "start": 105.0,
+      "end": 113.6807,
+      "duration": 8.6807,
+      "scene_limit": 113.7,
+      "tts_rate": "+5%",
+      "time_stretch": 1.117241,
+      "original_duration": 9.72,
+      "words": [
+        {
+          "text": "When",
+          "start": 105.0874,
+          "end": 105.2579
+        },
+        {
+          "text": "you",
+          "start": 105.2685,
+          "end": 105.3644
+        },
+        {
+          "text": "return,",
+          "start": 105.3751,
+          "end": 105.7693
+        },
+        {
+          "text": "review",
+          "start": 105.9291,
+          "end": 106.1849
+        },
+        {
+          "text": "every",
+          "start": 106.1955,
+          "end": 106.4406
+        },
+        {
+          "text": "answer,",
+          "start": 106.4513,
+          "end": 106.8455
+        },
+        {
+          "text": "source,",
+          "start": 106.9734,
+          "end": 107.357
+        },
+        {
+          "text": "and",
+          "start": 107.4742,
+          "end": 107.6127
+        },
+        {
+          "text": "follow-up.",
+          "start": 107.6234,
+          "end": 108.2414
+        },
+        {
+          "text": "Routine",
+          "start": 108.9745,
+          "end": 109.3901
+        },
+        {
+          "text": "context",
+          "start": 109.4007,
+          "end": 109.9335
+        },
+        {
+          "text": "keeps",
+          "start": 109.9441,
+          "end": 110.1786
+        },
+        {
+          "text": "moving.",
+          "start": 110.1892,
+          "end": 110.6048
+        },
+        {
+          "text": "Important",
+          "start": 111.3507,
+          "end": 111.8302
+        },
+        {
+          "text": "decisions",
+          "start": 111.8408,
+          "end": 112.3097
+        },
+        {
+          "text": "stay",
+          "start": 112.3203,
+          "end": 112.5228
+        },
+        {
+          "text": "with",
+          "start": 112.5334,
+          "end": 112.6719
+        },
+        {
+          "text": "you.",
+          "start": 112.6826,
+          "end": 112.949
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "speaker": "narrator",
+      "voice": "en-US-AriaNeural",
+      "text": "Your work has a timezone. Your Peer does not.",
+      "start": 115.0,
+      "end": 119.272,
+      "duration": 4.272,
+      "scene_limit": 119.45,
+      "tts_rate": "+5%",
+      "time_stretch": 1.0,
+      "original_duration": 4.272,
+      "words": [
+        {
+          "text": "Your",
+          "start": 115.0976,
+          "end": 115.3
+        },
+        {
+          "text": "work",
+          "start": 115.3119,
+          "end": 115.55
+        },
+        {
+          "text": "has",
+          "start": 115.5619,
+          "end": 115.7286
+        },
+        {
+          "text": "a",
+          "start": 115.7405,
+          "end": 115.8
+        },
+        {
+          "text": "timezone.",
+          "start": 115.8119,
+          "end": 116.4786
+        },
+        {
+          "text": "Your",
+          "start": 117.2976,
+          "end": 117.5357
+        },
+        {
+          "text": "Peer",
+          "start": 117.5476,
+          "end": 117.8095
+        },
+        {
+          "text": "does",
+          "start": 117.8214,
+          "end": 117.9881
+        },
+        {
+          "text": "not.",
+          "start": 118.0,
+          "end": 118.4405
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "time": 9.0,
+      "kind": "reveal"
+    },
+    {
+      "time": 17.0,
+      "kind": "transition"
+    },
+    {
+      "time": 22.0,
+      "kind": "connect"
+    },
+    {
+      "time": 25.8,
+      "kind": "connect"
+    },
+    {
+      "time": 31.0,
+      "kind": "transition"
+    },
+    {
+      "time": 34.0,
+      "kind": "click"
+    },
+    {
+      "time": 37.6,
+      "kind": "connect"
+    },
+    {
+      "time": 42.0,
+      "kind": "transition"
+    },
+    {
+      "time": 46.5,
+      "kind": "connect"
+    },
+    {
+      "time": 52.0,
+      "kind": "soft"
+    },
+    {
+      "time": 60.0,
+      "kind": "reveal"
+    },
+    {
+      "time": 76.0,
+      "kind": "success"
+    },
+    {
+      "time": 87.0,
+      "kind": "transition"
+    },
+    {
+      "time": 90.2,
+      "kind": "click"
+    },
+    {
+      "time": 95.0,
+      "kind": "soft"
+    },
+    {
+      "time": 104.0,
+      "kind": "transition"
+    },
+    {
+      "time": 108.7,
+      "kind": "connect"
+    },
+    {
+      "time": 114.0,
+      "kind": "reveal"
+    }
+  ],
+  "stats": {
+    "narration": {
+      "duration": 120.0,
+      "sample_rate": 48000,
+      "peak_dbfs": -1.724,
+      "rms_dbfs": -20.954,
+      "clipped_samples": 0
+    },
+    "music": {
+      "duration": 120.0,
+      "sample_rate": 48000,
+      "peak_dbfs": -15.502,
+      "rms_dbfs": -34.261,
+      "clipped_samples": 0
+    },
+    "effects": {
+      "duration": 120.0,
+      "sample_rate": 48000,
+      "peak_dbfs": -23.52,
+      "rms_dbfs": -50.895,
+      "clipped_samples": 0
+    },
+    "mixed": {
+      "duration": 120.0,
+      "sample_rate": 48000,
+      "peak_dbfs": -1.556,
+      "rms_dbfs": -20.751,
+      "clipped_samples": 0
+    }
+  }
+}

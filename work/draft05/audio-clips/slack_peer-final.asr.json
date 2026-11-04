@@ -1,0 +1,102 @@
+{
+  "sha256": "8fb95792d30b218497e41858a13e1b9a5c8f52d95d26d533a0881117be5f67c3",
+  "text": "I'm Manish's AI peer. Each product's disputed amount. It shows investigators what the chargeback covers. covers.",
+  "words": [
+    {
+      "word": " I'm",
+      "start": 0.0,
+      "end": 0.22,
+      "probability": 0.9087587594985962
+    },
+    {
+      "word": " Manish's",
+      "start": 0.22,
+      "end": 0.82,
+      "probability": 0.8022408882776896
+    },
+    {
+      "word": " AI",
+      "start": 0.82,
+      "end": 1.14,
+      "probability": 0.8907478451728821
+    },
+    {
+      "word": " peer.",
+      "start": 1.14,
+      "end": 1.6,
+      "probability": 0.4639894366264343
+    },
+    {
+      "word": " Each",
+      "start": 2.24,
+      "end": 2.32,
+      "probability": 0.992021381855011
+    },
+    {
+      "word": " product's",
+      "start": 2.32,
+      "end": 2.88,
+      "probability": 0.8977261781692505
+    },
+    {
+      "word": " disputed",
+      "start": 2.88,
+      "end": 3.24,
+      "probability": 0.9969902038574219
+    },
+    {
+      "word": " amount.",
+      "start": 3.24,
+      "end": 3.58,
+      "probability": 0.9979185461997986
+    },
+    {
+      "word": " It",
+      "start": 4.14,
+      "end": 4.26,
+      "probability": 0.9930710196495056
+    },
+    {
+      "word": " shows",
+      "start": 4.26,
+      "end": 4.48,
+      "probability": 0.9957700371742249
+    },
+    {
+      "word": " investigators",
+      "start": 4.48,
+      "end": 5.08,
+      "probability": 0.9961373209953308
+    },
+    {
+      "word": " what",
+      "start": 5.08,
+      "end": 5.54,
+      "probability": 0.9962097406387329
+    },
+    {
+      "word": " the",
+      "start": 5.54,
+      "end": 5.66,
+      "probability": 0.9957938194274902
+    },
+    {
+      "word": " chargeback",
+      "start": 5.66,
+      "end": 6.12,
+      "probability": 0.7717478275299072
+    },
+    {
+      "word": " covers.",
+      "start": 6.12,
+      "end": 6.46,
+      "probability": 0.997528612613678
+    },
+    {
+      "word": " covers.",
+      "start": 6.46,
+      "end": 6.6,
+      "probability": 0.1318856179714203
+    }
+  ]
+}

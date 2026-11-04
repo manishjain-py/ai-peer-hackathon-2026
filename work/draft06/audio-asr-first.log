@@ -1,0 +1,45 @@
+ASR intro_day: A new day, a clear head, something great to build.
+ASR intro_work: then a quick question and another.
+ASR intro_inbox: 150 unread emails.
+ASR intro_pings: 10 slack bangs, one after another.
+ASR intro_meetings: three meetings, two of them after hours.
+ASR intro_focus: Your attention is everywhere, your work is still waiting.
+ASR intro_relief: Meet AIPO, a teammate who makes room for your best work.
+ASR intro_create: Start with one click, create my AIPO.
+ASR intro_profile: One Airbnb brings in your role, risk partner systems and your projects.
+ASR intro_github: GitHub connects your team's code, services, and changes already in progress.
+ASR intro_airchat: Add the AIPR plugin in AHR. It understands your local projects, current tasks, and uncommitted changes, even before you push to GitHub.
+ASR intro_access: Connect Slack, Zoom, email, and your calendar.
+ASR intro_ready: Your beer is ready.
+ASR bobo_title: spot the work that needs you.
+ASR bobo_intro: A new product let someone book on behalf of a guest. Payments risk wasn't in the loop.
+ASR bobo_alert: Bobo may change how we handle chargebacks. I couldn't find payments risk in the launch discussion. Here's the product owner. Worth checking before this becomes a problem.
+ASR bobo_impact: A company announcement becomes an early heads up with someone to contact.
+ASR slack_title: Keep collaboration going across time zones.
+ASR slack_intro: Mainish needs cancellation window daughter. The data team works in the US.
+ASR slack_question: What do you need it for?
+ASR slack_wait: It's 2 a.m. for Manish. One clarification could cost another day.
+ASR slack_peer: I'm Manish's AI peer. Dispute agents need to see whether the guest cancelled inside or outside the flexibility window to help assess the chargeback.
+ASR slack_reply: Got it, the purchased items expiry gives you the Windows end. I'll share an example to verify.
+ASR slack_impact: and answer before the next morning.
+ASR zoom_title: Be there through your peer.
+ASR zoom_ask: Manish's Pier, what's the latest on premium chargebacks?
+ASR zoom_update: The data contract is merged, interface and back-end changes are still drafts.
+ASR zoom_source: validate with a fresh dispute case.
+ASR zoom_sarah: I'll coordinate the example case.
+ASR zoom_date: Can we set a date?
+ASR zoom_boundary: Manish needs to review the validation before we commit.
+ASR missed_title: Catch would slip through.
+ASR missed_cleanup: 150 emails marked as red, but was everything handled?
+ASR missed_airversary: Yasha's 5 year anniversary is coming up, Vijay shared an appreciation board, here's his email and the link to add your message.
+ASR missed_fireside: You follow AI closely. This fireside chat with Boris Chirny looks relevant. Your invitation is still unanswered. Would you like me to accept it?
+ASR missed_cassette: You may have missed this cassette announcement. Case creation may be interrupted affecting your chargeback review and dispute classification queues. I've tagged you in the thread. Here's what to check.
+ASR missed_brief: One brief, the people, opportunities and changes that matter to you.
+ASR close_possibilities: These are just a few possibilities. What could you appear, unlock for you?
+ASR close: AIPL, more room for your best work.
+{
+  "model": "Whisper small.en",
+  "count": 39,
+  "path": "../../../../work/draft06/audio-qa/asr-small.json",
+  "note": "Supporting content recognition, not listening or voice-naturalness approval."
+}

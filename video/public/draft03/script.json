@@ -1,0 +1,319 @@
+{
+  "duration": 166.5,
+  "beatOrigin": 18,
+  "tagline": "Your work. A step ahead.",
+  "scenes": [
+    {
+      "id": "problem",
+      "start": 0,
+      "end": 18
+    },
+    {
+      "id": "reveal",
+      "start": 18,
+      "end": 28
+    },
+    {
+      "id": "context",
+      "start": 28,
+      "end": 40
+    },
+    {
+      "id": "brief",
+      "start": 40,
+      "end": 80
+    },
+    {
+      "id": "offline",
+      "start": 80,
+      "end": 86
+    },
+    {
+      "id": "slack",
+      "start": 86,
+      "end": 111
+    },
+    {
+      "id": "meeting_bridge",
+      "start": 111,
+      "end": 117
+    },
+    {
+      "id": "zoom",
+      "start": 117,
+      "end": 138.5
+    },
+    {
+      "id": "return",
+      "start": 138.5,
+      "end": 158.5
+    },
+    {
+      "id": "close",
+      "start": 158.5,
+      "end": 166.5
+    }
+  ],
+  "lines": [
+    {
+      "id": "problem1",
+      "start": 0.7,
+      "limit": 7.9,
+      "speaker": "narrator",
+      "text": "A change to your service. A deadline in your inbox. A teammate waiting on an answer."
+    },
+    {
+      "id": "problem2",
+      "start": 8.3,
+      "limit": 16.6,
+      "speaker": "narrator",
+      "text": "Important things arrive all day. Finding what matters, and keeping everyone up to date, still falls on you."
+    },
+    {
+      "id": "reveal",
+      "start": 18.5,
+      "limit": 27.4,
+      "speaker": "narrator",
+      "text": "Meet AI Peer. It knows your work, brings you what matters, and helps your team when you're away."
+    },
+    {
+      "id": "context",
+      "start": 28.4,
+      "limit": 39.2,
+      "speaker": "narrator",
+      "text": "It connects your projects, services, conversations, and decisions. It keeps watch on the sources you allow, with the boundaries you choose."
+    },
+    {
+      "id": "brief_intro",
+      "start": 40.3,
+      "limit": 44.7,
+      "speaker": "narrator",
+      "text": "Start your day with a brief built around you."
+    },
+    {
+      "id": "brief_change",
+      "start": 45,
+      "limit": 54.2,
+      "speaker": "peer",
+      "text": "First, the dispute feed is changing. It affects your Chargebacks service. I've pulled together the migration guide and the code to review."
+    },
+    {
+      "id": "brief_event",
+      "start": 54.6,
+      "limit": 64.1,
+      "speaker": "peer",
+      "text": "Today's data office hours cover results that change later, one of your open checks. I've drafted the question you need answered."
+    },
+    {
+      "id": "brief_opportunity",
+      "start": 64.5,
+      "limit": 74.8,
+      "speaker": "peer",
+      "text": "And the company hackathon opens Friday. The agent track fits your handoff idea. Here's a draft pitch, if you want to take it further."
+    },
+    {
+      "id": "brief_payoff",
+      "start": 75.2,
+      "limit": 79.5,
+      "speaker": "narrator",
+      "text": "What matters, and what to do next."
+    },
+    {
+      "id": "offline",
+      "start": 80.3,
+      "limit": 85.6,
+      "speaker": "narrator",
+      "text": "Later, when Manish goes offline, his team still needs context."
+    },
+    {
+      "id": "slack_sarah",
+      "start": 86.3,
+      "limit": 90.7,
+      "speaker": "sarah",
+      "text": "Manish, daily totals or each dispute's final result?"
+    },
+    {
+      "id": "slack_alex",
+      "start": 91.1,
+      "limit": 93,
+      "speaker": "alex",
+      "text": "It's two a.m. for him."
+    },
+    {
+      "id": "slack_peer",
+      "start": 93.4,
+      "limit": 100.1,
+      "speaker": "peer",
+      "text": "I am Manish's AI Peer. Each dispute's final result, updated hourly. Here's the requirement."
+    },
+    {
+      "id": "slack_reply",
+      "start": 100.5,
+      "limit": 105.7,
+      "speaker": "sarah",
+      "text": "Use Dispute Events. It updates hourly. I'll send the new field mapping."
+    },
+    {
+      "id": "slack_ack",
+      "start": 106.1,
+      "limit": 110.5,
+      "speaker": "peer",
+      "text": "Thanks. I'll add it to his morning brief."
+    },
+    {
+      "id": "meeting_bridge",
+      "start": 111.5,
+      "limit": 116.4,
+      "speaker": "narrator",
+      "text": "Next, a project sync he's delegated to his Peer."
+    },
+    {
+      "id": "zoom_ask",
+      "start": 117.3,
+      "limit": 121.0984,
+      "speaker": "alex",
+      "text": "Manish's Peer, what's the Chargebacks status?"
+    },
+    {
+      "id": "zoom_update",
+      "start": 121.2484,
+      "limit": 126.4005,
+      "speaker": "peer",
+      "text": "The build is ready. Two checks remain: repeated events, and results that change later."
+    },
+    {
+      "id": "zoom_source",
+      "start": 126.5505,
+      "limit": 129.6293,
+      "speaker": "peer",
+      "text": "Sarah's confirmed the hourly source in Slack."
+    },
+    {
+      "id": "zoom_sarah",
+      "start": 129.7793,
+      "limit": 131.4193,
+      "speaker": "sarah",
+      "text": "I'll send both examples."
+    },
+    {
+      "id": "zoom_date",
+      "start": 131.5693,
+      "limit": 133.047,
+      "speaker": "alex",
+      "text": "Can we lock Friday?"
+    },
+    {
+      "id": "zoom_boundary",
+      "start": 133.197,
+      "limit": 137.1521,
+      "speaker": "peer",
+      "text": "That's Manish's call. I'll bring him the test plan and the decision."
+    },
+    {
+      "id": "return1",
+      "start": 139.0,
+      "limit": 145.2,
+      "speaker": "narrator",
+      "text": "Morning. The mapping's here, and Sarah's offered the test examples."
+    },
+    {
+      "id": "return2",
+      "start": 145.6,
+      "limit": 152.4,
+      "speaker": "peer",
+      "text": "Next, follow up on validation, then decide on Friday. Your hackathon pitch is saved."
+    },
+    {
+      "id": "return3",
+      "start": 152.8,
+      "limit": 158.2,
+      "speaker": "narrator",
+      "text": "Less time piecing it together. More room for your best work."
+    },
+    {
+      "id": "close",
+      "start": 159.5,
+      "limit": 166.1,
+      "speaker": "narrator",
+      "text": "AI Peer. Your work. A step ahead."
+    }
+  ],
+  "effects": [
+    {
+      "time": 1,
+      "kind": "message"
+    },
+    {
+      "time": 3,
+      "kind": "message"
+    },
+    {
+      "time": 5,
+      "kind": "message"
+    },
+    {
+      "time": 17.5,
+      "kind": "riser"
+    },
+    {
+      "time": 18,
+      "kind": "reveal"
+    },
+    {
+      "time": 28,
+      "kind": "transition"
+    },
+    {
+      "time": 40,
+      "kind": "transition"
+    },
+    {
+      "time": 45,
+      "kind": "connect"
+    },
+    {
+      "time": 54.6,
+      "kind": "connect"
+    },
+    {
+      "time": 64.5,
+      "kind": "connect"
+    },
+    {
+      "time": 80,
+      "kind": "transition"
+    },
+    {
+      "time": 86.3,
+      "kind": "message"
+    },
+    {
+      "time": 93.4,
+      "kind": "message"
+    },
+    {
+      "time": 100.5,
+      "kind": "message"
+    },
+    {
+      "time": 111,
+      "kind": "transition"
+    },
+    {
+      "time": 117,
+      "kind": "join"
+    },
+    {
+      "time": 121.2484,
+      "kind": "transition"
+    },
+    {
+      "time": 138.5,
+      "kind": "transition"
+    },
+    {
+      "time": 158.5,
+      "kind": "reveal"
+    }
+  ]
+}

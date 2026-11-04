@@ -1,0 +1,8 @@
+{
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-4bit",
+  "speaker": "Authored American English presenter",
+  "text": "Meet AI Peer. It knows your work, brings you what matters, and helps your team when you're away.",
+  "instruct": "A native American English female voice in her early thirties. Warm midrange pitch, clear smooth timbre, lively and confident. Natural conversational delivery with crisp diction and quick connected phrasing, like an engaging premium product commercial. Speak briskly with short pauses.",
+  "seed": 43,
+  "temperature": 0.7
+}

@@ -1,0 +1,340 @@
+1
+00:00:00,600 --> 00:00:01,489
+A new day.
+
+2
+00:00:01,534 --> 00:00:02,569
+A clear head.
+
+3
+00:00:02,648 --> 00:00:04,315
+Something great to build.
+
+4
+00:00:05,600 --> 00:00:07,140
+Then, a quick question.
+
+5
+00:00:07,253 --> 00:00:08,386
+And another.
+
+6
+00:00:09,000 --> 00:00:11,508
+One hundred and fifty unread emails.
+
+7
+00:00:12,600 --> 00:00:14,874
+Ten Slack pings, one after another.
+
+8
+00:00:15,500 --> 00:00:16,494
+Three meetings.
+
+9
+00:00:16,608 --> 00:00:18,240
+Two of them after hours.
+
+10
+00:00:19,200 --> 00:00:20,809
+Your attention is everywhere.
+
+11
+00:00:20,830 --> 00:00:22,590
+Your work is still waiting.
+
+12
+00:00:24,400 --> 00:00:25,858
+Meet AI Peer.
+
+13
+00:00:25,937 --> 00:00:28,580
+A teammate who makes room for your best work.
+
+14
+00:00:30,300 --> 00:00:31,538
+Start with one click.
+
+15
+00:00:31,582 --> 00:00:33,412
+Create my AI Peer.
+
+16
+00:00:34,300 --> 00:00:37,265
+One Airbnb brings in your role, Risk Partner
+
+17
+00:00:37,277 --> 00:00:39,130
+Systems, and your projects.
+
+18
+00:00:40,200 --> 00:00:43,188
+GitHub connects your team's code, services, and changes
+
+19
+00:00:43,200 --> 00:00:44,751
+already in progress.
+
+20
+00:00:46,200 --> 00:00:48,831
+Add the AI Peer plugin in AirChat.
+
+21
+00:00:48,875 --> 00:00:52,184
+It understands your local projects, current tasks, and
+
+22
+00:00:52,196 --> 00:00:55,819
+uncommitted changes, even before you push to GitHub.
+
+23
+00:00:58,100 --> 00:01:01,258
+Connect Slack, Zoom, email and your calendar.
+
+24
+00:01:01,550 --> 00:01:02,897
+Your Peer is ready.
+
+25
+00:01:04,600 --> 00:01:06,365
+Spot the work that needs you.
+
+26
+00:01:08,500 --> 00:01:10,624
+A new product lets someone book on behalf
+
+27
+00:01:10,636 --> 00:01:11,509
+of a guest.
+
+28
+00:01:11,704 --> 00:01:13,696
+Payments risk wasn't in the loop.
+
+29
+00:01:17,200 --> 00:01:19,819
+MANISH’S AI PEER: BOBO may change how we handle chargebacks.
+
+30
+00:01:20,072 --> 00:01:22,641
+MANISH’S AI PEER: I couldn't find payments risk in the launch discussion.
+
+31
+00:01:22,836 --> 00:01:24,196
+MANISH’S AI PEER: Here's the product owner.
+
+32
+00:01:24,449 --> 00:01:26,952
+MANISH’S AI PEER: Worth checking before this becomes a problem.
+
+33
+00:01:30,000 --> 00:01:32,675
+A company announcement becomes an early heads-up, with
+
+34
+00:01:32,687 --> 00:01:34,040
+someone to contact.
+
+35
+00:01:36,600 --> 00:01:39,479
+Keep collaboration going across time zones.
+
+36
+00:01:40,400 --> 00:01:42,659
+Manish needs cancellation-window data.
+
+37
+00:01:42,855 --> 00:01:44,828
+The data team works in the U.S.
+
+38
+00:01:46,300 --> 00:01:47,424
+DATA PARTNER: What do you need it for?
+
+39
+00:01:49,500 --> 00:01:51,074
+It's two a.m. for Manish.
+
+40
+00:01:51,270 --> 00:01:53,772
+One clarification could cost another day.
+
+41
+00:01:55,000 --> 00:01:56,574
+MANISH’S AI PEER: I'm Manish's AI Peer.
+
+42
+00:01:56,688 --> 00:01:59,033
+MANISH’S AI PEER: Dispute agents need to see whether the guest
+
+43
+00:01:59,045 --> 00:02:02,133
+MANISH’S AI PEER: canceled inside or outside the flexibility window, to
+
+44
+00:02:02,145 --> 00:02:03,777
+MANISH’S AI PEER: help assess the chargeback.
+
+45
+00:02:05,600 --> 00:02:06,199
+DATA PARTNER: Got it.
+
+46
+00:02:06,278 --> 00:02:09,020
+DATA PARTNER: The purchased item's expiry gives you the window's end.
+
+47
+00:02:09,332 --> 00:02:10,963
+DATA PARTNER: I'll share an example to verify.
+
+48
+00:02:13,000 --> 00:02:14,858
+An answer, before the next morning.
+
+49
+00:02:16,600 --> 00:02:18,179
+Cover the cross-team sync.
+
+50
+00:02:20,350 --> 00:02:22,969
+MAYA: Welcome to the premium chargebacks sync.
+
+51
+00:02:23,118 --> 00:02:25,567
+MAYA: Any update from Risk Partner Systems?
+
+52
+00:02:26,050 --> 00:02:27,698
+JORDAN: I don't see anyone from that team.
+
+53
+00:02:29,350 --> 00:02:31,795
+MANISH’S AI PEER: I'm Manish's AI Peer, here on his behalf.
+
+54
+00:02:31,990 --> 00:02:33,948
+MANISH’S AI PEER: It's late for him, so he couldn't join.
+
+55
+00:02:36,850 --> 00:02:39,597
+MANISH’S AI PEER: Our interface and backend changes are still in draft.
+
+56
+00:02:39,908 --> 00:02:42,701
+MANISH’S AI PEER: Deployment and a fresh-case check remain.
+
+57
+00:02:43,050 --> 00:02:45,237
+MANISH’S AI PEER: Alex, can D-REX provide a fresh case with
+
+58
+00:02:45,249 --> 00:02:47,316
+MANISH’S AI PEER: each disputed product and its amount?
+
+59
+00:02:49,150 --> 00:02:51,986
+ALEX: The data changes are merged.
+
+60
+00:02:52,065 --> 00:02:55,055
+ALEX: I'll coordinate an example and confirm rollout.
+
+61
+00:02:55,650 --> 00:02:58,714
+JORDAN: We'll help trace that case into the dispute classification queue.
+
+62
+00:03:00,650 --> 00:03:03,184
+MANISH’S AI PEER: Thanks, I've saved those follow-ups for Manish.
+
+63
+00:03:03,437 --> 00:03:06,118
+MANISH’S AI PEER: He'll review the validation before we commit to launch.
+
+64
+00:03:09,600 --> 00:03:11,172
+Catch what slipped through.
+
+65
+00:03:13,500 --> 00:03:15,179
+One hundred and fifty emails.
+
+66
+00:03:15,223 --> 00:03:16,235
+Marked as read.
+
+67
+00:03:16,431 --> 00:03:18,142
+But was everything handled?
+
+68
+00:03:19,000 --> 00:03:21,468
+MANISH’S AI PEER: Yash's five-year Airversary is coming up.
+
+69
+00:03:21,664 --> 00:03:23,744
+MANISH’S AI PEER: Vijay shared an appreciation board.
+
+70
+00:03:23,823 --> 00:03:27,266
+MANISH’S AI PEER: Here's his email, and the link to add your message.
+
+71
+00:03:31,000 --> 00:03:32,876
+MANISH’S AI PEER: You follow AI closely.
+
+72
+00:03:33,071 --> 00:03:36,742
+MANISH’S AI PEER: This fireside chat with Boris Cherny looks relevant.
+
+73
+00:03:36,938 --> 00:03:38,821
+MANISH’S AI PEER: Your invitation is still unanswered.
+
+74
+00:03:38,900 --> 00:03:40,474
+MANISH’S AI PEER: Would you like me to accept it?
+
+75
+00:03:48,000 --> 00:03:50,143
+MANISH’S AI PEER: You may have missed this Cassette announcement.
+
+76
+00:03:50,396 --> 00:03:53,194
+MANISH’S AI PEER: Case creation may be interrupted, affecting your chargeback
+
+77
+00:03:53,206 --> 00:03:55,565
+MANISH’S AI PEER: review and dispute classification queues.
+
+78
+00:03:55,818 --> 00:03:57,307
+MANISH’S AI PEER: I've tagged you in the thread.
+
+79
+00:03:57,618 --> 00:03:58,815
+MANISH’S AI PEER: Here's what to check.
+
+80
+00:04:03,400 --> 00:04:04,220
+One brief.
+
+81
+00:04:04,415 --> 00:04:08,197
+The people, opportunities and changes that matter to you.
+
+82
+00:04:10,000 --> 00:04:11,830
+These are just a few possibilities.
+
+83
+00:04:11,909 --> 00:04:14,272
+What could your Peer unlock for you?
+
+84
+00:04:18,000 --> 00:04:19,017
+AI Peer.
+
+85
+00:04:19,212 --> 00:04:20,865
+More room for your best work.
+

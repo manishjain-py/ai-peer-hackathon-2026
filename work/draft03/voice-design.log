@@ -1,0 +1,7 @@
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 12 files:   8%|▊         | 1/12 [00:00<00:02,  3.73it/s]Fetching 12 files:  33%|███▎      | 4/12 [00:00<00:00, 11.33it/s]Fetching 12 files:  75%|███████▌  | 9/12 [00:00<00:00, 18.07it/s]Fetching 12 files:  92%|█████████▏| 11/12 [00:00<00:00, 17.17it/s]Fetching 12 files:  92%|█████████▏| 11/12 [00:20<00:00, 17.17it/s]Fetching 12 files: 100%|██████████| 12/12 [01:00<00:00,  9.81s/it]Fetching 12 files: 100%|██████████| 12/12 [01:00<00:00,  5.04s/it]
+[transformers] You are using a model of type `qwen3_tts` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+  Initialized encoder codebooks
+Loaded speech tokenizer from /Users/manishjain/.cache/huggingface/hub/models--mlx-community--Qwen3-TTS-12Hz-1.7B-VoiceDesign-4bit/snapshots/5c390979e4b93af5f2932f90742ca99c7dd04687/speech_tokenizer
+narrator 2.0 1.3559992089867592
+sarah 3.6 2.016252333065495

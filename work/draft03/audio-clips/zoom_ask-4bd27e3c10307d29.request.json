@@ -1,0 +1,8 @@
+{
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-CustomVoice-4bit",
+  "speaker": "Ryan",
+  "text": "Manish's Peer, can you give us the latest on Chargebacks?",
+  "instruct": "Speak naturally in fluent American English. A relaxed male colleague in a live video meeting, asking a quick practical question. Casual, friendly and direct, brisk conversational pace, connected words, rising inflection on questions. Not an announcer and not a formal reading. Pronounce the name Manish as muh-NEESH.",
+  "seed": 43,
+  "temperature": 0.7
+}

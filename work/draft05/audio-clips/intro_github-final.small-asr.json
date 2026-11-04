@@ -1,0 +1,60 @@
+{
+  "sha256": "3166ac806aebd4984540264bdbca74b04f5f8dc559150962fd4ac0c2d5525fce",
+  "text": "GitHub connects your team's repositories, services, and recent changes.",
+  "words": [
+    {
+      "word": " GitHub",
+      "start": 0.0,
+      "end": 0.34,
+      "probability": 0.9473009705543518
+    },
+    {
+      "word": " connects",
+      "start": 0.34,
+      "end": 0.7,
+      "probability": 0.9924895763397217
+    },
+    {
+      "word": " your",
+      "start": 0.7,
+      "end": 0.88,
+      "probability": 0.9940094947814941
+    },
+    {
+      "word": " team's",
+      "start": 0.88,
+      "end": 1.18,
+      "probability": 0.8950647711753845
+    },
+    {
+      "word": " repositories,",
+      "start": 1.18,
+      "end": 1.76,
+      "probability": 0.9986273050308228
+    },
+    {
+      "word": " services,",
+      "start": 2.2,
+      "end": 2.5,
+      "probability": 0.9990492463111877
+    },
+    {
+      "word": " and",
+      "start": 2.98,
+      "end": 3.1,
+      "probability": 0.9992726445198059
+    },
+    {
+      "word": " recent",
+      "start": 3.1,
+      "end": 3.52,
+      "probability": 0.9980450868606567
+    },
+    {
+      "word": " changes.",
+      "start": 3.52,
+      "end": 3.98,
+      "probability": 0.9994896650314331
+    }
+  ]
+}

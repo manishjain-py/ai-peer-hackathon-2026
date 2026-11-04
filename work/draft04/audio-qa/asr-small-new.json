@@ -1,0 +1,730 @@
+[
+  {
+    "id": "intro_day",
+    "script": "Your day begins.",
+    "sha256": "287ca2e8b3097f8647361efbe6c0de255d02f9f881909c0a8e7f74d88fc77f81",
+    "recognized": "Your day begins.",
+    "words": [
+      {
+        "text": " Your",
+        "start": 0.0,
+        "end": 0.16,
+        "probability": 0.9555028676986694
+      },
+      {
+        "text": " day",
+        "start": 0.16,
+        "end": 0.36,
+        "probability": 0.9526330232620239
+      },
+      {
+        "text": " begins.",
+        "start": 0.36,
+        "end": 0.78,
+        "probability": 0.9964519739151001
+      }
+    ]
+  },
+  {
+    "id": "intro_routine",
+    "script": "A quick question about the runbook.",
+    "sha256": "e906f78082c3c5b9749843ffe66bb8b78c0f78fe27e52d77f2dd754e03ccfa03",
+    "recognized": "A quick question about the Runbook.",
+    "words": [
+      {
+        "text": " A",
+        "start": 0.0,
+        "end": 0.14,
+        "probability": 0.8929430842399597
+      },
+      {
+        "text": " quick",
+        "start": 0.14,
+        "end": 0.42,
+        "probability": 0.9899104237556458
+      },
+      {
+        "text": " question",
+        "start": 0.42,
+        "end": 0.86,
+        "probability": 0.9939633011817932
+      },
+      {
+        "text": " about",
+        "start": 0.86,
+        "end": 1.08,
+        "probability": 0.9979984164237976
+      },
+      {
+        "text": " the",
+        "start": 1.08,
+        "end": 1.22,
+        "probability": 0.9284323453903198
+      },
+      {
+        "text": " Runbook.",
+        "start": 1.22,
+        "end": 1.6,
+        "probability": 0.6526674032211304
+      }
+    ]
+  },
+  {
+    "id": "intro_inbox",
+    "script": "A hundred and fifty unread emails.",
+    "sha256": "21781cee76d44dafecc413143c7c20dd0e7ff06a68a2674a76e58992d5e83a9e",
+    "recognized": "a hundred and fifty unread emails.",
+    "words": [
+      {
+        "text": " a",
+        "start": 0.0,
+        "end": 0.12,
+        "probability": 0.156411275267601
+      },
+      {
+        "text": " hundred",
+        "start": 0.12,
+        "end": 0.4,
+        "probability": 0.8323432207107544
+      },
+      {
+        "text": " and",
+        "start": 0.4,
+        "end": 0.62,
+        "probability": 0.9719255566596985
+      },
+      {
+        "text": " fifty",
+        "start": 0.62,
+        "end": 0.96,
+        "probability": 0.993060827255249
+      },
+      {
+        "text": " unread",
+        "start": 0.96,
+        "end": 1.4,
+        "probability": 0.9532255530357361
+      },
+      {
+        "text": " emails.",
+        "start": 1.4,
+        "end": 1.74,
+        "probability": 0.9586889743804932
+      }
+    ]
+  },
+  {
+    "id": "intro_pings",
+    "script": "Ten Slack pings, one after another.",
+    "sha256": "6daa291b6f9a30222e9c8d2416d9a5a9b61a4e38aae2f2255497e685cbcfab1a",
+    "recognized": "10 slack pings, one after another.",
+    "words": [
+      {
+        "text": " 10",
+        "start": 0.0,
+        "end": 0.24,
+        "probability": 0.7612860798835754
+      },
+      {
+        "text": " slack",
+        "start": 0.24,
+        "end": 0.54,
+        "probability": 0.40021201968193054
+      },
+      {
+        "text": " pings,",
+        "start": 0.54,
+        "end": 0.9,
+        "probability": 0.8456989228725433
+      },
+      {
+        "text": " one",
+        "start": 1.06,
+        "end": 1.2,
+        "probability": 0.9919173121452332
+      },
+      {
+        "text": " after",
+        "start": 1.2,
+        "end": 1.44,
+        "probability": 0.9995817542076111
+      },
+      {
+        "text": " another.",
+        "start": 1.44,
+        "end": 1.76,
+        "probability": 0.9963177442550659
+      }
+    ]
+  },
+  {
+    "id": "intro_meetings",
+    "script": "Three meeting invites. Two after hours.",
+    "sha256": "f517f6998dd661593df54639909747fdb4b9a9187540d29c78c370f827fb7d96",
+    "recognized": "Three meeting invites. Two after hours.",
+    "words": [
+      {
+        "text": " Three",
+        "start": 0.0,
+        "end": 0.2,
+        "probability": 0.7068493962287903
+      },
+      {
+        "text": " meeting",
+        "start": 0.2,
+        "end": 0.46,
+        "probability": 0.9749557375907898
+      },
+      {
+        "text": " invites.",
+        "start": 0.46,
+        "end": 0.86,
+        "probability": 0.9941487312316895
+      },
+      {
+        "text": " Two",
+        "start": 1.76,
+        "end": 1.92,
+        "probability": 0.9699307680130005
+      },
+      {
+        "text": " after",
+        "start": 1.92,
+        "end": 2.36,
+        "probability": 0.9799779057502747
+      },
+      {
+        "text": " hours.",
+        "start": 2.36,
+        "end": 2.78,
+        "probability": 0.6829099655151367
+      }
+    ]
+  },
+  {
+    "id": "intro_focus",
+    "script": "Your attention. Everywhere except where you need it.",
+    "sha256": "c9b8dafabf121adfb5220973e8badde461195d2cf5c02a1b3ba1a93b767f46a1",
+    "recognized": "Your attention, everywhere except where you need it.",
+    "words": [
+      {
+        "text": " Your",
+        "start": 0.0,
+        "end": 0.18,
+        "probability": 0.8615594506263733
+      },
+      {
+        "text": " attention,",
+        "start": 0.18,
+        "end": 0.62,
+        "probability": 0.9677681922912598
+      },
+      {
+        "text": " everywhere",
+        "start": 1.0,
+        "end": 1.46,
+        "probability": 0.991193950176239
+      },
+      {
+        "text": " except",
+        "start": 1.46,
+        "end": 2.12,
+        "probability": 0.5379634499549866
+      },
+      {
+        "text": " where",
+        "start": 2.12,
+        "end": 2.36,
+        "probability": 0.9379971623420715
+      },
+      {
+        "text": " you",
+        "start": 2.36,
+        "end": 2.5,
+        "probability": 0.99936443567276
+      },
+      {
+        "text": " need",
+        "start": 2.5,
+        "end": 2.64,
+        "probability": 0.9991031885147095
+      },
+      {
+        "text": " it.",
+        "start": 2.64,
+        "end": 2.82,
+        "probability": 0.9971097111701965
+      }
+    ]
+  },
+  {
+    "id": "intro_relief",
+    "script": "Meet AI Peer. So you can focus where you're needed most.",
+    "sha256": "2f0d964b710b1789a0a7b321922bf847aba8230050fcbfe7875418a6bbdd73f1",
+    "recognized": "Meet A.I. Peer, so you can focus where you're needed most.",
+    "words": [
+      {
+        "text": " Meet",
+        "start": 0.0,
+        "end": 0.28,
+        "probability": 0.9044398069381714
+      },
+      {
+        "text": " A",
+        "start": 0.28,
+        "end": 0.58,
+        "probability": 0.2989329695701599
+      },
+      {
+        "text": ".I.",
+        "start": 0.58,
+        "end": 1.02,
+        "probability": 0.8281653523445129
+      },
+      {
+        "text": " Peer,",
+        "start": 1.32,
+        "end": 1.4,
+        "probability": 0.4417576193809509
+      },
+      {
+        "text": " so",
+        "start": 1.74,
+        "end": 1.94,
+        "probability": 0.9972026348114014
+      },
+      {
+        "text": " you",
+        "start": 1.94,
+        "end": 2.08,
+        "probability": 0.9987706542015076
+      },
+      {
+        "text": " can",
+        "start": 2.08,
+        "end": 2.24,
+        "probability": 0.9983614087104797
+      },
+      {
+        "text": " focus",
+        "start": 2.24,
+        "end": 2.52,
+        "probability": 0.9987375140190125
+      },
+      {
+        "text": " where",
+        "start": 2.52,
+        "end": 2.78,
+        "probability": 0.9964666366577148
+      },
+      {
+        "text": " you're",
+        "start": 2.78,
+        "end": 3.0,
+        "probability": 0.9643896520137787
+      },
+      {
+        "text": " needed",
+        "start": 3.0,
+        "end": 3.16,
+        "probability": 0.9953576922416687
+      },
+      {
+        "text": " most.",
+        "start": 3.16,
+        "end": 3.48,
+        "probability": 0.9965847730636597
+      }
+    ]
+  },
+  {
+    "id": "intro_create",
+    "script": "Start with one click: Create my AI Peer.",
+    "sha256": "920d7a440c92e73c1034f97c3ca09eb6adbe0595b7bd96727a1b483dd33115ab",
+    "recognized": "Start with one click. Create my AIPer.",
+    "words": [
+      {
+        "text": " Start",
+        "start": 0.0,
+        "end": 0.28,
+        "probability": 0.8394663333892822
+      },
+      {
+        "text": " with",
+        "start": 0.28,
+        "end": 0.44,
+        "probability": 0.998284637928009
+      },
+      {
+        "text": " one",
+        "start": 0.44,
+        "end": 0.64,
+        "probability": 0.9841564297676086
+      },
+      {
+        "text": " click.",
+        "start": 0.64,
+        "end": 0.96,
+        "probability": 0.9874994158744812
+      },
+      {
+        "text": " Create",
+        "start": 1.58,
+        "end": 1.78,
+        "probability": 0.962384819984436
+      },
+      {
+        "text": " my",
+        "start": 1.78,
+        "end": 2.18,
+        "probability": 0.8898696303367615
+      },
+      {
+        "text": " AIPer.",
+        "start": 2.18,
+        "end": 3.1,
+        "probability": 0.6107974449793497
+      }
+    ]
+  },
+  {
+    "id": "intro_profile",
+    "script": "Your One Airbnb profile gives it a starting point: your role, your team, your projects.",
+    "sha256": "a06a3e0dde6520a5a0031357f19a924ce305221fc5030addcc1b8ddc9ccd23b1",
+    "recognized": "Your one Airbnb profile gives it a starting point. Your role, your team, your projects.",
+    "words": [
+      {
+        "text": " Your",
+        "start": 0.0,
+        "end": 0.18,
+        "probability": 0.9124078154563904
+      },
+      {
+        "text": " one",
+        "start": 0.18,
+        "end": 0.38,
+        "probability": 0.8497704863548279
+      },
+      {
+        "text": " Airbnb",
+        "start": 0.38,
+        "end": 0.78,
+        "probability": 0.8107187747955322
+      },
+      {
+        "text": " profile",
+        "start": 0.78,
+        "end": 1.4,
+        "probability": 0.9797367453575134
+      },
+      {
+        "text": " gives",
+        "start": 1.4,
+        "end": 1.66,
+        "probability": 0.9926859140396118
+      },
+      {
+        "text": " it",
+        "start": 1.66,
+        "end": 1.84,
+        "probability": 0.9944668412208557
+      },
+      {
+        "text": " a",
+        "start": 1.84,
+        "end": 1.94,
+        "probability": 0.998497486114502
+      },
+      {
+        "text": " starting",
+        "start": 1.94,
+        "end": 2.18,
+        "probability": 0.9955447316169739
+      },
+      {
+        "text": " point.",
+        "start": 2.18,
+        "end": 2.58,
+        "probability": 0.998630166053772
+      },
+      {
+        "text": " Your",
+        "start": 3.1,
+        "end": 3.18,
+        "probability": 0.9958052635192871
+      },
+      {
+        "text": " role,",
+        "start": 3.18,
+        "end": 3.44,
+        "probability": 0.9598922729492188
+      },
+      {
+        "text": " your",
+        "start": 3.84,
+        "end": 3.94,
+        "probability": 0.9930405616760254
+      },
+      {
+        "text": " team,",
+        "start": 3.94,
+        "end": 4.26,
+        "probability": 0.9994811415672302
+      },
+      {
+        "text": " your",
+        "start": 4.62,
+        "end": 4.72,
+        "probability": 0.9978121519088745
+      },
+      {
+        "text": " projects.",
+        "start": 4.72,
+        "end": 5.06,
+        "probability": 0.9835748672485352
+      }
+    ]
+  },
+  {
+    "id": "intro_sourcegraph",
+    "script": "Sourcegraph connects the services and code you work on.",
+    "sha256": "40ab4574d21f4b1c4e5249141a62ff5e02d9a5b799f01e5232f2c417cfecf114",
+    "recognized": "Sourcegraph connects the services and code you work on.",
+    "words": [
+      {
+        "text": " Sourcegraph",
+        "start": 0.0,
+        "end": 0.6,
+        "probability": 0.8981342315673828
+      },
+      {
+        "text": " connects",
+        "start": 0.6,
+        "end": 0.92,
+        "probability": 0.9966844916343689
+      },
+      {
+        "text": " the",
+        "start": 0.92,
+        "end": 1.14,
+        "probability": 0.9978713989257812
+      },
+      {
+        "text": " services",
+        "start": 1.14,
+        "end": 1.48,
+        "probability": 0.9945817589759827
+      },
+      {
+        "text": " and",
+        "start": 1.48,
+        "end": 1.78,
+        "probability": 0.9929243326187134
+      },
+      {
+        "text": " code",
+        "start": 1.78,
+        "end": 1.96,
+        "probability": 0.9894355535507202
+      },
+      {
+        "text": " you",
+        "start": 1.96,
+        "end": 2.14,
+        "probability": 0.9983901977539062
+      },
+      {
+        "text": " work",
+        "start": 2.14,
+        "end": 2.36,
+        "probability": 0.999500036239624
+      },
+      {
+        "text": " on.",
+        "start": 2.36,
+        "end": 2.62,
+        "probability": 0.9995206594467163
+      }
+    ]
+  },
+  {
+    "id": "intro_github",
+    "script": "GitHub adds your code and recent changes.",
+    "sha256": "80db09ba118ac021e19937f378373efb02b0d68de75727cfbabf91a6bb362b69",
+    "recognized": "GitHub adds your code and recent changes.",
+    "words": [
+      {
+        "text": " GitHub",
+        "start": 0.0,
+        "end": 0.32,
+        "probability": 0.9610164761543274
+      },
+      {
+        "text": " adds",
+        "start": 0.32,
+        "end": 0.72,
+        "probability": 0.9407724142074585
+      },
+      {
+        "text": " your",
+        "start": 0.72,
+        "end": 0.86,
+        "probability": 0.995576024055481
+      },
+      {
+        "text": " code",
+        "start": 0.86,
+        "end": 1.1,
+        "probability": 0.9984351992607117
+      },
+      {
+        "text": " and",
+        "start": 1.1,
+        "end": 1.36,
+        "probability": 0.9170677661895752
+      },
+      {
+        "text": " recent",
+        "start": 1.36,
+        "end": 1.64,
+        "probability": 0.9918136596679688
+      },
+      {
+        "text": " changes.",
+        "start": 1.64,
+        "end": 2.06,
+        "probability": 0.9993404746055603
+      }
+    ]
+  },
+  {
+    "id": "intro_access",
+    "script": "Choose Slack and Zoom access. Set what it can answer, and when to ask you.",
+    "sha256": "8dbc9971f495ee0e93a0b67b82ef9a32279581dee07e50d3e136b2af3c69bf75",
+    "recognized": "choose Slack and Zoom access, set what it can answer and when to ask you.",
+    "words": [
+      {
+        "text": " choose",
+        "start": 0.0,
+        "end": 0.22,
+        "probability": 0.41694334149360657
+      },
+      {
+        "text": " Slack",
+        "start": 0.22,
+        "end": 0.52,
+        "probability": 0.9501203894615173
+      },
+      {
+        "text": " and",
+        "start": 0.52,
+        "end": 0.78,
+        "probability": 0.9671711325645447
+      },
+      {
+        "text": " Zoom",
+        "start": 0.78,
+        "end": 1.02,
+        "probability": 0.9551229476928711
+      },
+      {
+        "text": " access,",
+        "start": 1.02,
+        "end": 1.46,
+        "probability": 0.506956934928894
+      },
+      {
+        "text": " set",
+        "start": 1.96,
+        "end": 2.22,
+        "probability": 0.9948495030403137
+      },
+      {
+        "text": " what",
+        "start": 2.22,
+        "end": 2.4,
+        "probability": 0.9977121353149414
+      },
+      {
+        "text": " it",
+        "start": 2.4,
+        "end": 2.5,
+        "probability": 0.9960864782333374
+      },
+      {
+        "text": " can",
+        "start": 2.5,
+        "end": 2.66,
+        "probability": 0.9981926083564758
+      },
+      {
+        "text": " answer",
+        "start": 2.66,
+        "end": 3.08,
+        "probability": 0.9990586638450623
+      },
+      {
+        "text": " and",
+        "start": 3.08,
+        "end": 3.62,
+        "probability": 0.6235623359680176
+      },
+      {
+        "text": " when",
+        "start": 3.62,
+        "end": 3.76,
+        "probability": 0.9814566373825073
+      },
+      {
+        "text": " to",
+        "start": 3.76,
+        "end": 3.92,
+        "probability": 0.9995160102844238
+      },
+      {
+        "text": " ask",
+        "start": 3.92,
+        "end": 4.18,
+        "probability": 0.9989463686943054
+      },
+      {
+        "text": " you.",
+        "start": 4.18,
+        "end": 4.52,
+        "probability": 0.994073212146759
+      }
+    ]
+  },
+  {
+    "id": "intro_ready",
+    "script": "Your Peer is ready.",
+    "sha256": "95e02a09d02b4ecf5e005ec86eb18d2c14ae78dac3dfb80957bba1221e1ae2e1",
+    "recognized": "Your peer is ready.",
+    "words": [
+      {
+        "text": " Your",
+        "start": 0.0,
+        "end": 0.18,
+        "probability": 0.8811359405517578
+      },
+      {
+        "text": " peer",
+        "start": 0.18,
+        "end": 0.42,
+        "probability": 0.9546810984611511
+      },
+      {
+        "text": " is",
+        "start": 0.42,
+        "end": 0.74,
+        "probability": 0.9975033402442932
+      },
+      {
+        "text": " ready.",
+        "start": 0.74,
+        "end": 1.04,
+        "probability": 0.9960283041000366
+      }
+    ]
+  }
+]

@@ -1,0 +1,60 @@
+{
+  "sha256": "9b11aefc83b3dffad59e68ef35403493639861c8fa1186b4f5489498501e9a0f",
+  "text": "Not yet. Manish needs to review validation before confirming.",
+  "words": [
+    {
+      "word": " Not",
+      "start": 0.0,
+      "end": 0.32,
+      "probability": 0.891792893409729
+    },
+    {
+      "word": " yet.",
+      "start": 0.32,
+      "end": 0.66,
+      "probability": 0.9881393909454346
+    },
+    {
+      "word": " Manish",
+      "start": 1.32,
+      "end": 1.5,
+      "probability": 0.7221819013357162
+    },
+    {
+      "word": " needs",
+      "start": 1.5,
+      "end": 1.76,
+      "probability": 0.9968516230583191
+    },
+    {
+      "word": " to",
+      "start": 1.76,
+      "end": 2.0,
+      "probability": 0.9987359642982483
+    },
+    {
+      "word": " review",
+      "start": 2.0,
+      "end": 2.36,
+      "probability": 0.9918493032455444
+    },
+    {
+      "word": " validation",
+      "start": 2.36,
+      "end": 3.02,
+      "probability": 0.970744252204895
+    },
+    {
+      "word": " before",
+      "start": 3.02,
+      "end": 3.58,
+      "probability": 0.9964048862457275
+    },
+    {
+      "word": " confirming.",
+      "start": 3.58,
+      "end": 4.16,
+      "probability": 0.9958943128585815
+    }
+  ]
+}

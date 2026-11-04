@@ -1,0 +1,42 @@
+[
+  {
+    "id": "slack1",
+    "script": "Now it's two a.m. in Bengaluru. But Sarah's afternoon is just getting started.",
+    "asr": "Now it's 2am in Bengaluru, but Sarah's afternoon is just getting started."
+  },
+  {
+    "id": "slack4",
+    "script": "I'm Manish's AI Peer. He's offline. I can share the project context.",
+    "asr": "I'm Anisha's AI peer. He's offline. I can share the project context."
+  },
+  {
+    "id": "slack5",
+    "script": "We need the final won-or-lost result for each dispute, updated hourly. It feeds the reconciliation dashboard. Here's the latest requirement.",
+    "asr": "We need the final one or lost result for each dispute, updated hourly. It feeds the reconciliation dashboard. Here's the latest requirement."
+  },
+  {
+    "id": "zoom3",
+    "script": "Hi, I'm Manish's AI Peer. He couldn't join, so he asked me to cover this update.",
+    "asr": "Hi, I'm Anisha's AI peer. He couldn't join, so he asked me to cover this update."
+  },
+  {
+    "id": "zoom5",
+    "script": "The dashboard build is complete. Two data checks are still open: the same event arriving twice, and an outcome changing later.",
+    "asr": "The dashboard build is complete. Two data checks are still open, the same event arriving twice, and an outcome changing later."
+  },
+  {
+    "id": "zoom6",
+    "script": "Sarah just confirmed the hourly data source in Slack. So that question is answered.",
+    "asr": "Sarah just confirmed the hourly data source in Slack, so that question is answered."
+  },
+  {
+    "id": "zoom9",
+    "script": "That needs Manish's approval. I'll take back the test plan and ask him to confirm the date once validation is complete.",
+    "asr": "That needs Manish's approval. I'll take back the test plan and ask him to confirm the date once validation is complete."
+  },
+  {
+    "id": "handoff2",
+    "script": "One decision still needs him: the launch date. Less catching up. A clear next step.",
+    "asr": "One decision still needs him. The launch date. Less catching up. A clear next step."
+  }
+]

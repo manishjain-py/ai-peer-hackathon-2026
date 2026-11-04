@@ -1,0 +1,90 @@
+{
+  "sha256": "87440cc778192027aaf65e055018eb654bb080db6ce27f9844ffd4b4f4d3e404",
+  "text": "Got it. The contract changes are merged. I'll send an example case for validation.",
+  "words": [
+    {
+      "word": " Got",
+      "start": 0.0,
+      "end": 0.28,
+      "probability": 0.8282899856567383
+    },
+    {
+      "word": " it.",
+      "start": 0.28,
+      "end": 0.52,
+      "probability": 0.9954273700714111
+    },
+    {
+      "word": " The",
+      "start": 0.84,
+      "end": 0.96,
+      "probability": 0.9829461574554443
+    },
+    {
+      "word": " contract",
+      "start": 0.96,
+      "end": 1.36,
+      "probability": 0.99126136302948
+    },
+    {
+      "word": " changes",
+      "start": 1.36,
+      "end": 1.82,
+      "probability": 0.9988059997558594
+    },
+    {
+      "word": " are",
+      "start": 1.82,
+      "end": 2.0,
+      "probability": 0.9982878565788269
+    },
+    {
+      "word": " merged.",
+      "start": 2.0,
+      "end": 2.4,
+      "probability": 0.9973222613334656
+    },
+    {
+      "word": " I'll",
+      "start": 2.96,
+      "end": 3.1,
+      "probability": 0.9910583198070526
+    },
+    {
+      "word": " send",
+      "start": 3.1,
+      "end": 3.26,
+      "probability": 0.9977748990058899
+    },
+    {
+      "word": " an",
+      "start": 3.26,
+      "end": 3.42,
+      "probability": 0.9904116988182068
+    },
+    {
+      "word": " example",
+      "start": 3.42,
+      "end": 3.74,
+      "probability": 0.9969586133956909
+    },
+    {
+      "word": " case",
+      "start": 3.74,
+      "end": 4.0,
+      "probability": 0.9964733719825745
+    },
+    {
+      "word": " for",
+      "start": 4.0,
+      "end": 4.2,
+      "probability": 0.9979606866836548
+    },
+    {
+      "word": " validation.",
+      "start": 4.2,
+      "end": 4.62,
+      "probability": 0.9911794066429138
+    }
+  ]
+}

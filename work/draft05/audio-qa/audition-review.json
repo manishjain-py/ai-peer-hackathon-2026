@@ -1,0 +1,38 @@
+[
+  {
+    "id": "brief_event",
+    "seed": 31,
+    "duration": 9.3586,
+    "base": "Weather protection still needs product identity and policy results. Trans integration work depends on those answers. I've drafted a question for the owners.",
+    "small": "Whether protection still needs product identity and policy results, trans integration work depends on those answers. I've drafted a question for the owners.",
+    "source_path": "work/draft05/audio-audition-31/brief_event-4ab30a327d353e93.wav",
+    "direction": "Speak naturally in fluent American English. A helpful male colleague giving a concise update on a video call. Calm, warm, practical and confident. Brisk, connected, conversational phrasing with varied natural inflection and short pauses. No robot voice, no announcer voice, no dramatic emphasis. Pronounce the name Charan as chuh-run, in two clear syllables."
+  },
+  {
+    "id": "slack_peer",
+    "seed": 31,
+    "duration": 6.7985,
+    "base": "I'm Manish's AI peer. Each product's disputed amount. It shows investigators what the chargeback covers. covers.",
+    "small": "I'm Manish's A.I. Peer. Each product's disputed amount. It shows investigators what the chargeback covers.",
+    "source_path": "work/draft05/audio-audition-31/slack_peer-185e0d5767921392.wav",
+    "direction": "Speak quickly and smoothly in conversational American English, like a helpful male colleague answering a question. Warm and clear. Connected flowing phrasing, with only very short pauses between sentences. Pronounce the name Manish as muh-NEESH."
+  },
+  {
+    "id": "brief_event",
+    "seed": 47,
+    "duration": 9.276,
+    "base": "Weather protection still needs product identity and policy results. Trans integration work depends on those answers. I've drafted a question for the owners.",
+    "small": "Weather protection still needs product identity and policy results. Trans integration work depends on those answers. I've drafted a question for the owners.",
+    "source_path": "work/draft05/audio-audition-47/brief_event-667499223625013f.wav",
+    "direction": "Speak naturally in fluent American English. A helpful male colleague giving a concise update on a video call. Calm, warm, practical and confident. Brisk, connected, conversational phrasing with varied natural inflection and short pauses. No robot voice, no announcer voice, no dramatic emphasis. Pronounce the name Charan as chuh-run, in two clear syllables."
+  },
+  {
+    "id": "slack_peer",
+    "seed": 47,
+    "duration": 6.8668,
+    "base": "I am Minish's AI peer, each product's disputed amount. It shows investigators what the chargeback covers. members.",
+    "small": "I am Minish's AI peer. Each product's disputed amount. It shows investigators what the charge back covers.",
+    "source_path": "work/draft05/audio-audition-47/slack_peer-c89e5c809e43184b.wav",
+    "direction": "Speak quickly and smoothly in conversational American English, like a helpful male colleague answering a question. Warm and clear. Connected flowing phrasing, with only very short pauses between sentences. Pronounce the name Manish as muh-NEESH."
+  }
+]

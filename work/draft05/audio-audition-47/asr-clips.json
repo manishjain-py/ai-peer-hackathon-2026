@@ -1,0 +1,14 @@
+[
+  {
+    "id": "brief_event",
+    "script": "Weather Protection still needs product identity and policy results. Charan's integration work depends on those answers. I've drafted a question for the owners.",
+    "recognized": "Weather protection still needs product identity and policy results. Trans integration work depends on those answers. I've drafted a question for the owners.",
+    "match": 0.9565217391304348
+  },
+  {
+    "id": "slack_peer",
+    "script": "I am Manish's AI Peer. Each product's disputed amount. It shows investigators what the chargeback covers.",
+    "recognized": "I am Minish's AI peer, each product's disputed amount. It shows investigators what the chargeback covers. members.",
+    "match": 0.9090909090909091
+  }
+]

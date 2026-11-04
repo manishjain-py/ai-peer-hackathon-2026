@@ -1,0 +1,440 @@
+{
+  "duration": 179.5,
+  "beatOrigin": 20,
+  "tagline": "Your work. A step ahead.",
+  "scenes": [
+    {
+      "id": "overload",
+      "start": 0,
+      "end": 20
+    },
+    {
+      "id": "relief",
+      "start": 20,
+      "end": 26
+    },
+    {
+      "id": "setup",
+      "start": 26,
+      "end": 53
+    },
+    {
+      "id": "brief",
+      "start": 53,
+      "end": 93
+    },
+    {
+      "id": "offline",
+      "start": 93,
+      "end": 99
+    },
+    {
+      "id": "slack",
+      "start": 99,
+      "end": 124
+    },
+    {
+      "id": "meeting_bridge",
+      "start": 124,
+      "end": 130
+    },
+    {
+      "id": "zoom",
+      "start": 130,
+      "end": 151.5
+    },
+    {
+      "id": "return",
+      "start": 151.5,
+      "end": 171.5
+    },
+    {
+      "id": "close",
+      "start": 171.5,
+      "end": 179.5
+    }
+  ],
+  "lines": [
+    {
+      "id": "intro_day",
+      "start": 0.3,
+      "limit": 1.5,
+      "speaker": "narrator",
+      "text": "Your day begins."
+    },
+    {
+      "id": "intro_routine",
+      "start": 1.65,
+      "limit": 4.25,
+      "speaker": "narrator",
+      "text": "A quick question about the runbook."
+    },
+    {
+      "id": "intro_inbox",
+      "start": 4.75,
+      "limit": 7.9,
+      "speaker": "narrator",
+      "text": "A hundred and fifty unread emails."
+    },
+    {
+      "id": "intro_pings",
+      "start": 8.25,
+      "limit": 11.25,
+      "speaker": "narrator",
+      "text": "Ten Slack pings, one after another."
+    },
+    {
+      "id": "intro_meetings",
+      "start": 11.75,
+      "limit": 15.35,
+      "speaker": "narrator",
+      "text": "Three meeting invites. Two after hours."
+    },
+    {
+      "id": "intro_focus",
+      "start": 15.75,
+      "limit": 19.05,
+      "speaker": "narrator",
+      "text": "Your attention. Everywhere except where you need it."
+    },
+    {
+      "id": "intro_relief",
+      "start": 20.25,
+      "limit": 25.6,
+      "speaker": "narrator",
+      "text": "Meet AI Peer. So you can focus where you're needed most."
+    },
+    {
+      "id": "intro_create",
+      "start": 26.3,
+      "limit": 29.7,
+      "speaker": "narrator",
+      "text": "Start with one click: Create my AI Peer."
+    },
+    {
+      "id": "intro_profile",
+      "start": 30.15,
+      "limit": 36.6,
+      "speaker": "narrator",
+      "text": "Your One Airbnb profile gives it a starting point: your role, your team, your projects."
+    },
+    {
+      "id": "intro_sourcegraph",
+      "start": 37,
+      "limit": 40.8,
+      "speaker": "narrator",
+      "text": "Sourcegraph connects the services and code you work on."
+    },
+    {
+      "id": "intro_github",
+      "start": 41.1,
+      "limit": 44.05,
+      "speaker": "narrator",
+      "text": "GitHub adds your code and recent changes."
+    },
+    {
+      "id": "intro_access",
+      "start": 44.4,
+      "limit": 49.7,
+      "speaker": "narrator",
+      "text": "Choose Slack and Zoom access. Set what it can answer, and when to ask you."
+    },
+    {
+      "id": "intro_ready",
+      "start": 50.25,
+      "limit": 52.7,
+      "speaker": "narrator",
+      "text": "Your Peer is ready."
+    },
+    {
+      "id": "brief_intro",
+      "start": 53.3,
+      "limit": 57.7,
+      "speaker": "narrator",
+      "text": "Start your day with a brief built around you."
+    },
+    {
+      "id": "brief_change",
+      "start": 58,
+      "limit": 67.2,
+      "speaker": "peer",
+      "text": "First, the dispute feed is changing. It affects your Chargebacks service. I've pulled together the migration guide and the code to review."
+    },
+    {
+      "id": "brief_event",
+      "start": 67.6,
+      "limit": 77.1,
+      "speaker": "peer",
+      "text": "Today's data office hours cover results that change later, one of your open checks. I've drafted the question you need answered."
+    },
+    {
+      "id": "brief_opportunity",
+      "start": 77.5,
+      "limit": 87.8,
+      "speaker": "peer",
+      "text": "And the company hackathon opens Friday. The agent track fits your handoff idea. Here's a draft pitch, if you want to take it further."
+    },
+    {
+      "id": "brief_payoff",
+      "start": 88.2,
+      "limit": 92.5,
+      "speaker": "narrator",
+      "text": "What matters, and what to do next."
+    },
+    {
+      "id": "offline",
+      "start": 93.3,
+      "limit": 98.6,
+      "speaker": "narrator",
+      "text": "Later, when Manish goes offline, his team still needs context."
+    },
+    {
+      "id": "slack_sarah",
+      "start": 99.3,
+      "limit": 103.7,
+      "speaker": "sarah",
+      "text": "Manish, daily totals or each dispute's final result?"
+    },
+    {
+      "id": "slack_alex",
+      "start": 104.1,
+      "limit": 106,
+      "speaker": "alex",
+      "text": "It's two a.m. for him."
+    },
+    {
+      "id": "slack_peer",
+      "start": 106.4,
+      "limit": 113.1,
+      "speaker": "peer",
+      "text": "I am Manish's AI Peer. Each dispute's final result, updated hourly. Here's the requirement."
+    },
+    {
+      "id": "slack_reply",
+      "start": 113.5,
+      "limit": 118.7,
+      "speaker": "sarah",
+      "text": "Use Dispute Events. It updates hourly. I'll send the new field mapping."
+    },
+    {
+      "id": "slack_ack",
+      "start": 119.1,
+      "limit": 123.5,
+      "speaker": "peer",
+      "text": "Thanks. I'll add it to his morning brief."
+    },
+    {
+      "id": "meeting_bridge",
+      "start": 124.5,
+      "limit": 129.4,
+      "speaker": "narrator",
+      "text": "Next, a project sync he's delegated to his Peer."
+    },
+    {
+      "id": "zoom_ask",
+      "start": 130.3,
+      "limit": 134.0984,
+      "speaker": "alex",
+      "text": "Manish's Peer, what's the Chargebacks status?"
+    },
+    {
+      "id": "zoom_update",
+      "start": 134.2484,
+      "limit": 139.4005,
+      "speaker": "peer",
+      "text": "The build is ready. Two checks remain: repeated events, and results that change later."
+    },
+    {
+      "id": "zoom_source",
+      "start": 139.5505,
+      "limit": 142.6293,
+      "speaker": "peer",
+      "text": "Sarah's confirmed the hourly source in Slack."
+    },
+    {
+      "id": "zoom_sarah",
+      "start": 142.7793,
+      "limit": 144.4193,
+      "speaker": "sarah",
+      "text": "I'll send both examples."
+    },
+    {
+      "id": "zoom_date",
+      "start": 144.5693,
+      "limit": 146.047,
+      "speaker": "alex",
+      "text": "Can we lock Friday?"
+    },
+    {
+      "id": "zoom_boundary",
+      "start": 146.197,
+      "limit": 150.1521,
+      "speaker": "peer",
+      "text": "That's Manish's call. I'll bring him the test plan and the decision."
+    },
+    {
+      "id": "return1",
+      "start": 152.0,
+      "limit": 158.2,
+      "speaker": "narrator",
+      "text": "Morning. The mapping's here, and Sarah's offered the test examples."
+    },
+    {
+      "id": "return2",
+      "start": 158.6,
+      "limit": 165.4,
+      "speaker": "peer",
+      "text": "Next, follow up on validation, then decide on Friday. Your hackathon pitch is saved."
+    },
+    {
+      "id": "return3",
+      "start": 165.8,
+      "limit": 171.2,
+      "speaker": "narrator",
+      "text": "Less time piecing it together. More room for your best work."
+    },
+    {
+      "id": "close",
+      "start": 172.5,
+      "limit": 179.1,
+      "speaker": "narrator",
+      "text": "AI Peer. Your work. A step ahead."
+    }
+  ],
+  "effects": [
+    {
+      "time": 1.5,
+      "kind": "attention",
+      "pan": 0.6,
+      "pitch": 79
+    },
+    {
+      "time": 4.5,
+      "kind": "attention",
+      "pan": -0.6,
+      "pitch": 74
+    },
+    {
+      "time": 8,
+      "kind": "attention",
+      "pan": 0.6,
+      "pitch": 79
+    },
+    {
+      "time": 8.6,
+      "kind": "attention",
+      "pan": 0.5,
+      "pitch": 81
+    },
+    {
+      "time": 9.2,
+      "kind": "attention",
+      "pan": 0.4,
+      "pitch": 83
+    },
+    {
+      "time": 11.5,
+      "kind": "attention",
+      "pan": -0.5,
+      "pitch": 72
+    },
+    {
+      "time": 15.3,
+      "kind": "attention",
+      "pan": 0,
+      "pitch": 76
+    },
+    {
+      "time": 19.25,
+      "kind": "intake"
+    },
+    {
+      "time": 20,
+      "kind": "reveal"
+    },
+    {
+      "time": 26,
+      "kind": "transition"
+    },
+    {
+      "time": 29.5,
+      "kind": "connect"
+    },
+    {
+      "time": 33,
+      "kind": "connect"
+    },
+    {
+      "time": 37,
+      "kind": "connect"
+    },
+    {
+      "time": 41,
+      "kind": "connect"
+    },
+    {
+      "time": 45,
+      "kind": "connect"
+    },
+    {
+      "time": 47.8,
+      "kind": "connect"
+    },
+    {
+      "time": 50.3,
+      "kind": "settle"
+    },
+    {
+      "time": 53,
+      "kind": "transition"
+    },
+    {
+      "time": 58,
+      "kind": "connect"
+    },
+    {
+      "time": 67.6,
+      "kind": "connect"
+    },
+    {
+      "time": 77.5,
+      "kind": "connect"
+    },
+    {
+      "time": 93,
+      "kind": "transition"
+    },
+    {
+      "time": 99.3,
+      "kind": "message"
+    },
+    {
+      "time": 106.4,
+      "kind": "message"
+    },
+    {
+      "time": 113.5,
+      "kind": "message"
+    },
+    {
+      "time": 124,
+      "kind": "transition"
+    },
+    {
+      "time": 130,
+      "kind": "join"
+    },
+    {
+      "time": 134.2484,
+      "kind": "transition"
+    },
+    {
+      "time": 151.5,
+      "kind": "transition"
+    },
+    {
+      "time": 171.5,
+      "kind": "reveal"
+    }
+  ]
+}

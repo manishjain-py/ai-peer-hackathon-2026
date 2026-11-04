@@ -1,0 +1,66 @@
+{
+  "sha256": "920d7a440c92e73c1034f97c3ca09eb6adbe0595b7bd96727a1b483dd33115ab",
+  "text": "Start with one click. Create my AI peer. year. 7",
+  "words": [
+    {
+      "word": " Start",
+      "start": 0.0,
+      "end": 0.24,
+      "probability": 0.8922125101089478
+    },
+    {
+      "word": " with",
+      "start": 0.24,
+      "end": 0.4,
+      "probability": 0.9961974620819092
+    },
+    {
+      "word": " one",
+      "start": 0.4,
+      "end": 0.56,
+      "probability": 0.9246712327003479
+    },
+    {
+      "word": " click.",
+      "start": 0.56,
+      "end": 0.84,
+      "probability": 0.9689568281173706
+    },
+    {
+      "word": " Create",
+      "start": 1.4,
+      "end": 1.7,
+      "probability": 0.9892504215240479
+    },
+    {
+      "word": " my",
+      "start": 1.7,
+      "end": 2.08,
+      "probability": 0.951600193977356
+    },
+    {
+      "word": " AI",
+      "start": 2.08,
+      "end": 2.46,
+      "probability": 0.6902270913124084
+    },
+    {
+      "word": " peer.",
+      "start": 2.46,
+      "end": 2.88,
+      "probability": 0.7750659584999084
+    },
+    {
+      "word": " year.",
+      "start": 2.88,
+      "end": 3.04,
+      "probability": 0.05930547043681145
+    },
+    {
+      "word": " 7",
+      "start": 3.16,
+      "end": 3.24,
+      "probability": 0.002933031413704157
+    }
+  ]
+}

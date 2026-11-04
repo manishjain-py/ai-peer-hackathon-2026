@@ -1,0 +1,54 @@
+{
+  "sha256": "c16ca56ab03f60bf0a9c7b8f9ff08eaf2b34b6938bfb7c6410ece904ff5b3f72",
+  "text": "Manish, daily totals or each dispute's final result.",
+  "words": [
+    {
+      "word": " Manish,",
+      "start": 0.0,
+      "end": 0.44,
+      "probability": 0.8666987121105194
+    },
+    {
+      "word": " daily",
+      "start": 1.26,
+      "end": 1.26,
+      "probability": 0.7137123942375183
+    },
+    {
+      "word": " totals",
+      "start": 1.26,
+      "end": 1.8,
+      "probability": 0.9944478273391724
+    },
+    {
+      "word": " or",
+      "start": 1.8,
+      "end": 2.12,
+      "probability": 0.8363488912582397
+    },
+    {
+      "word": " each",
+      "start": 2.12,
+      "end": 2.4,
+      "probability": 0.9804313778877258
+    },
+    {
+      "word": " dispute's",
+      "start": 2.4,
+      "end": 3.2,
+      "probability": 0.7065612077713013
+    },
+    {
+      "word": " final",
+      "start": 3.2,
+      "end": 3.44,
+      "probability": 0.9963142275810242
+    },
+    {
+      "word": " result.",
+      "start": 3.44,
+      "end": 4.06,
+      "probability": 0.8665030002593994
+    }
+  ]
+}

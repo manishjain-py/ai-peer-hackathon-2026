@@ -1,0 +1,90 @@
+{
+  "sha256": "30a5cc2506720ac22a093d82512a7f764ca9224396ee7fd508e15fce61e9824a",
+  "text": "Backing deployment comes first, then we need to validate with a fresh dispute case",
+  "words": [
+    {
+      "word": " Backing",
+      "start": 0.0,
+      "end": 0.54,
+      "probability": 0.4037465900182724
+    },
+    {
+      "word": " deployment",
+      "start": 0.54,
+      "end": 0.94,
+      "probability": 0.9102445244789124
+    },
+    {
+      "word": " comes",
+      "start": 0.94,
+      "end": 1.28,
+      "probability": 0.9899170994758606
+    },
+    {
+      "word": " first,",
+      "start": 1.28,
+      "end": 1.7,
+      "probability": 0.9974021911621094
+    },
+    {
+      "word": " then",
+      "start": 2.06,
+      "end": 2.36,
+      "probability": 0.9771093726158142
+    },
+    {
+      "word": " we",
+      "start": 2.36,
+      "end": 2.72,
+      "probability": 0.9534516930580139
+    },
+    {
+      "word": " need",
+      "start": 2.72,
+      "end": 2.92,
+      "probability": 0.9939423203468323
+    },
+    {
+      "word": " to",
+      "start": 2.92,
+      "end": 3.08,
+      "probability": 0.9969221949577332
+    },
+    {
+      "word": " validate",
+      "start": 3.08,
+      "end": 3.5,
+      "probability": 0.9963418841362
+    },
+    {
+      "word": " with",
+      "start": 3.5,
+      "end": 3.74,
+      "probability": 0.991374671459198
+    },
+    {
+      "word": " a",
+      "start": 3.74,
+      "end": 3.92,
+      "probability": 0.9802964925765991
+    },
+    {
+      "word": " fresh",
+      "start": 3.92,
+      "end": 4.16,
+      "probability": 0.9935140609741211
+    },
+    {
+      "word": " dispute",
+      "start": 4.16,
+      "end": 4.62,
+      "probability": 0.9665201306343079
+    },
+    {
+      "word": " case",
+      "start": 4.62,
+      "end": 4.96,
+      "probability": 0.9676918387413025
+    }
+  ]
+}

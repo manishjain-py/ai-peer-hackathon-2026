@@ -1,0 +1,162 @@
+{
+  "sha256": "e07f2907b50bb8af9bf8ca5b03e524b174187500201c37c94074262f335ee4c6",
+  "text": "a change to your service, a deadline in your inbox, a teammate waiting on an answer. for the next week. Thank you, Mr. Mr. Mr. Mr.",
+  "words": [
+    {
+      "word": " a",
+      "start": 0.0,
+      "end": 0.14,
+      "probability": 0.19561545550823212
+    },
+    {
+      "word": " change",
+      "start": 0.14,
+      "end": 0.58,
+      "probability": 0.9689993262290955
+    },
+    {
+      "word": " to",
+      "start": 0.58,
+      "end": 0.8,
+      "probability": 0.9943897128105164
+    },
+    {
+      "word": " your",
+      "start": 0.8,
+      "end": 0.88,
+      "probability": 0.9959654808044434
+    },
+    {
+      "word": " service,",
+      "start": 0.88,
+      "end": 1.2,
+      "probability": 0.9978860020637512
+    },
+    {
+      "word": " a",
+      "start": 1.84,
+      "end": 1.96,
+      "probability": 0.9947705864906311
+    },
+    {
+      "word": " deadline",
+      "start": 1.96,
+      "end": 2.18,
+      "probability": 0.9985361099243164
+    },
+    {
+      "word": " in",
+      "start": 2.18,
+      "end": 2.4,
+      "probability": 0.9826403260231018
+    },
+    {
+      "word": " your",
+      "start": 2.4,
+      "end": 2.5,
+      "probability": 0.9981649518013
+    },
+    {
+      "word": " inbox,",
+      "start": 2.5,
+      "end": 2.74,
+      "probability": 0.9946584105491638
+    },
+    {
+      "word": " a",
+      "start": 3.44,
+      "end": 3.6,
+      "probability": 0.9964215755462646
+    },
+    {
+      "word": " teammate",
+      "start": 3.6,
+      "end": 3.84,
+      "probability": 0.8069673776626587
+    },
+    {
+      "word": " waiting",
+      "start": 3.84,
+      "end": 4.42,
+      "probability": 0.9855578541755676
+    },
+    {
+      "word": " on",
+      "start": 4.42,
+      "end": 4.76,
+      "probability": 0.9989564418792725
+    },
+    {
+      "word": " an",
+      "start": 4.76,
+      "end": 4.88,
+      "probability": 0.9954466223716736
+    },
+    {
+      "word": " answer.",
+      "start": 4.88,
+      "end": 5.2,
+      "probability": 0.9938541650772095
+    },
+    {
+      "word": " for",
+      "start": 5.2,
+      "end": 5.2,
+      "probability": 0.012820187024772167
+    },
+    {
+      "word": " the",
+      "start": 5.2,
+      "end": 5.2,
+      "probability": 0.1446431279182434
+    },
+    {
+      "word": " next",
+      "start": 5.2,
+      "end": 5.2,
+      "probability": 0.090116485953331
+    },
+    {
+      "word": " week.",
+      "start": 5.2,
+      "end": 5.22,
+      "probability": 0.07017798721790314
+    },
+    {
+      "word": " Thank",
+      "start": 5.22,
+      "end": 5.22,
+      "probability": 0.15091615915298462
+    },
+    {
+      "word": " you,",
+      "start": 5.22,
+      "end": 5.24,
+      "probability": 0.975540816783905
+    },
+    {
+      "word": " Mr.",
+      "start": 5.24,
+      "end": 5.32,
+      "probability": 0.26227009296417236
+    },
+    {
+      "word": " Mr.",
+      "start": 5.32,
+      "end": 5.34,
+      "probability": 0.0689973309636116
+    },
+    {
+      "word": " Mr.",
+      "start": 5.42,
+      "end": 5.44,
+      "probability": 0.6287568807601929
+    },
+    {
+      "word": " Mr.",
+      "start": 5.44,
+      "end": 5.48,
+      "probability": 0.9015477299690247
+    }
+  ]
+}

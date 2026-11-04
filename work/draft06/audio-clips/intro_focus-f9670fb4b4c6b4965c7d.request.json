@@ -1,0 +1,18 @@
+{
+  "voice_id": "EXAVITQu4vr4xnSDxMaL",
+  "output_format": "pcm_44100",
+  "body": {
+    "text": "Your attention is everywhere. Your work is still waiting.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0,
+      "speed": 1.0,
+      "use_speaker_boost": true
+    },
+    "seed": 19092026,
+    "previous_text": "Three meetings. Two of them after hours.",
+    "next_text": "Meet AI Peer. A teammate who makes room for your best work."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-CustomVoice-4bit",
+  "speaker": "Aiden",
+  "text": "Your next step: follow up on validation, then decide on Friday. Your hackathon pitch is saved for later.",
+  "instruct": "Speak naturally in fluent American English. A helpful male colleague giving a concise update on a video call. Calm, warm, practical and confident. Brisk, connected, conversational phrasing with varied natural inflection and short pauses. No robot voice, no announcer voice, no dramatic emphasis.",
+  "seed": 43,
+  "temperature": 0.7
+}

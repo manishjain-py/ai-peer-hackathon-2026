@@ -1,0 +1,15 @@
+# Draft03 root proposal — Your work. A step ahead.
+174s (2:54),26short spokenlines; sameperson/work/contextinbothdirections. Exact proposed copy/times video/public/draft03/script.json.
+
+Problem0–18: large kinetic 'Relevant. Urgent. Somewhere.' Three rawsource snippets orbitManish: emailfeedmigration,Slackcolleagueneedsanswer,eventdeadline. Split arrows incomingnoise andoutgoingquestions convergeononeperson. Phrase 'One person. Too many places to be.' 16–18pressurepeaks,hardstop/musicintake.
+Reveal18–28: fragmentsbecometwocleanpaths throughPeer, avatarbrandgrows fromcenter. Massive 'AI Peer' withtwo verbs 'Keeps you ahead / Keeps your team moving'. Tagline 'Your work. A step ahead.' Repeatedsourcechipforcontinuity.
+Context28–40: approvedemail/Slack/docs/companyevents→servicesChargebacks,openchecks(late reversals),savedideaagenthandoff. Onepulseupdatescontext. Boundariesinline sourcesallowed,answerwithsources,askfordecisions.
+Personalbrief40–80 (majorhero): fulloriginalAI Peer workspace. Three focused evidence→whyManish→nextaction beats. SourceemailDisputeEventsmigration→affectsyourChargebacksmapper→Reviewmigrationguide+fieldmapping. EventsfeedDataofficehourstoday→coversyouropenlatereversaltest→preparedquestion 'Howshouldweverifylateoutcomechanges?' Companyhackathonannouncement→agenttrackmatchesyoursavedhandoffidea→draftpitch, userSaveforlater. Noautomaticregistration/sending. Sourceevidenceappearslargerawpanel,exactlinehighlights,flowsintoprioritycard. Finaloverview 'Needs attention / Worth joining / Worth exploring',notgenericdigest.
+Offline80–86: nightclock2AMIndia/1:30PMSFonlytimezonemention. 'For your team, too'.
+Slack86–111: realisticUIpreservedbutdialogueshorter,0.4s turngaps not2sec; directquestion→it's2AM→PeerAIcontext→Sarahnewmapping→briefack. Linkbacktopersonalbriefsourcefeedchange.
+Bridge111–117: samefieldmappingchiptravelsintomeetingtile. 'Delegated sync'. Noabsencejoke/repeated2AM.
+Zoom117–143: AlexdirectlyaddressesManishPeer. Shortconversationalturns. Peeridentifiedinlabelalready,notlongrepeatedintroduction. Gallerybriefthenlargeshareevidence; humanvideooff/avatarstoavoidfakefrozenmouths unlessanotherbettervisualsolution. Buildready/data checksopen/sourceconfirmed/testsamplespromised/dateforManish.
+Return143–163: updatedpersonalbrief,notgenericactivitylog. 'New since your last brief': fieldmappingreceived,testsSarah,decisionlaunchpending,opportunitysaved. HighlightwhatneedsManishnow,sourcechainrecoverable. Oneaction 'Review launch readiness'.
+Close163–174: keypathsfoldtowardManishwithPeerbesidehim. 'Your work. A step ahead.' Morevisibleboldbrand thanendcard. Opportunity + focus + collaborationthreequietbenefitsbeforefinalmark. Persistentconceptlabel andclosingintegrationdisclosure.
+
+Beatlanguage120–124BPM groove; noambientlongvoids. Rawsourcecard→relevanceconnection→actioncausaltransitions. Keepimportantreadingtext≥28px; meaningfulvoicegaps0.3–0.6. ChangedengineQwenlocalbeingtestedformorenaturaldelivery; don'tassertsubjectiveproofwithoutlistening.

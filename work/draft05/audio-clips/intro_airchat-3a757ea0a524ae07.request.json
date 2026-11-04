@@ -1,0 +1,8 @@
+{
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-4bit",
+  "speaker": "Authored American English presenter",
+  "text": "Install the AI Peer plugin in AirChat. It follows local projects, current progress and uncommitted changes, even before you push to GitHub.",
+  "instruct": "A native American English female voice in her early thirties. Warm midrange pitch, clear smooth timbre, lively and confident. Natural conversational delivery with crisp diction and quick connected phrasing, like an engaging premium product commercial. Speak briskly with short pauses. Pronounce AirChat as air chat.",
+  "seed": 43,
+  "temperature": 0.7
+}

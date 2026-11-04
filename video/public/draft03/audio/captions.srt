@@ -1,0 +1,216 @@
+1
+00:00:00,700 --> 00:00:02,000
+A change to your service.
+
+2
+00:00:02,510 --> 00:00:03,540
+A deadline in your inbox.
+
+3
+00:00:04,110 --> 00:00:06,000
+A teammate waiting on an answer.
+
+4
+00:00:08,300 --> 00:00:09,900
+Important things arrive all day.
+
+5
+00:00:10,250 --> 00:00:13,378
+Finding what matters, and keeping everyone up to
+
+6
+00:00:13,390 --> 00:00:15,400
+date, still falls on you.
+
+7
+00:00:18,500 --> 00:00:20,218
+Meet AI Peer.
+
+8
+00:00:20,230 --> 00:00:22,440
+It knows your work, brings you what matters,
+
+9
+00:00:22,790 --> 00:00:24,540
+and helps your team when you're away.
+
+10
+00:00:28,400 --> 00:00:31,360
+It connects your projects, services, conversations, and decisions.
+
+11
+00:00:32,030 --> 00:00:33,760
+It keeps watch on the sources you allow,
+
+12
+00:00:33,970 --> 00:00:35,220
+with the boundaries you choose.
+
+13
+00:00:40,300 --> 00:00:42,120
+Start your day with a brief built around you.
+
+14
+00:00:45,000 --> 00:00:46,760
+MANISH'S AI PEER: First, the dispute feed is changing.
+
+15
+00:00:47,270 --> 00:00:48,598
+MANISH'S AI PEER: It affects your Chargebacks service.
+
+16
+00:00:48,610 --> 00:00:51,178
+MANISH'S AI PEER: I've pulled together the migration guide and the
+
+17
+00:00:51,190 --> 00:00:51,940
+MANISH'S AI PEER: code to review.
+
+18
+00:00:54,600 --> 00:00:57,018
+MANISH'S AI PEER: Today's data office hours cover results that change
+
+19
+00:00:57,030 --> 00:00:58,780
+MANISH'S AI PEER: later, one of your open checks.
+
+20
+00:00:59,210 --> 00:01:00,920
+MANISH'S AI PEER: I've drafted the question you need answered.
+
+21
+00:01:04,500 --> 00:01:06,680
+MANISH'S AI PEER: And the company hackathon opens Friday.
+
+22
+00:01:07,570 --> 00:01:09,620
+MANISH'S AI PEER: The agent track fits your handoff idea.
+
+23
+00:01:10,230 --> 00:01:11,878
+MANISH'S AI PEER: Here's a draft pitch, if you want to
+
+24
+00:01:11,890 --> 00:01:12,460
+MANISH'S AI PEER: take it further.
+
+25
+00:01:15,200 --> 00:01:17,200
+What matters, and what to do next.
+
+26
+00:01:20,300 --> 00:01:23,900
+Later, when Manish goes offline, his team still needs context.
+
+27
+00:01:26,300 --> 00:01:30,460
+SARAH: Manish, daily totals or each dispute's final result?
+
+28
+00:01:31,100 --> 00:01:32,520
+ALEX: It's two a.m. for him.
+
+29
+00:01:33,400 --> 00:01:34,840
+MANISH'S AI PEER: I am Manish's AI Peer.
+
+30
+00:01:35,870 --> 00:01:38,420
+MANISH'S AI PEER: Each dispute's final result, updated hourly.
+
+31
+00:01:39,070 --> 00:01:39,700
+MANISH'S AI PEER: Here's the requirement.
+
+32
+00:01:40,500 --> 00:01:41,340
+SARAH: Use Dispute Events.
+
+33
+00:01:42,370 --> 00:01:43,160
+SARAH: It updates hourly.
+
+34
+00:01:44,030 --> 00:01:45,100
+SARAH: I'll send the new field mapping.
+
+35
+00:01:46,100 --> 00:01:46,440
+MANISH'S AI PEER: Thanks.
+
+36
+00:01:46,870 --> 00:01:48,060
+MANISH'S AI PEER: I'll add it to his morning brief.
+
+37
+00:01:51,500 --> 00:01:54,300
+Next, a project sync he's delegated to his Peer.
+
+38
+00:01:57,300 --> 00:02:00,660
+ALEX: Manish's Peer, what's the Chargebacks status?
+
+39
+00:02:01,248 --> 00:02:02,128
+MANISH'S AI PEER: The build is ready.
+
+40
+00:02:02,738 --> 00:02:06,108
+MANISH'S AI PEER: Two checks remain: repeated events, and results that change later.
+
+41
+00:02:06,550 --> 00:02:09,190
+MANISH'S AI PEER: Sarah's confirmed the hourly source in Slack.
+
+42
+00:02:09,779 --> 00:02:10,859
+SARAH: I'll send both examples.
+
+43
+00:02:11,569 --> 00:02:12,629
+ALEX: Can we lock Friday?
+
+44
+00:02:13,197 --> 00:02:14,397
+MANISH'S AI PEER: That's Manish's call.
+
+45
+00:02:14,887 --> 00:02:16,657
+MANISH'S AI PEER: I'll bring him the test plan and the decision.
+
+46
+00:02:19,000 --> 00:02:19,300
+Morning.
+
+47
+00:02:19,570 --> 00:02:21,900
+The mapping's here, and Sarah's offered the test examples.
+
+48
+00:02:25,600 --> 00:02:29,820
+MANISH'S AI PEER: Next, follow up on validation, then decide on Friday.
+
+49
+00:02:30,390 --> 00:02:31,760
+MANISH'S AI PEER: Your hackathon pitch is saved.
+
+50
+00:02:32,800 --> 00:02:34,200
+Less time piecing it together.
+
+51
+00:02:34,570 --> 00:02:36,540
+More room for your best work.
+
+52
+00:02:39,500 --> 00:02:40,638
+AI Peer.
+
+53
+00:02:40,650 --> 00:02:41,320
+Your work.
+
+54
+00:02:41,710 --> 00:02:42,460
+A step ahead.
+

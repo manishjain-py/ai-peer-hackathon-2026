@@ -1,0 +1,48 @@
+{
+  "status": "PASS technical checks, exact performance reuse and supporting recognition review",
+  "duration_seconds": 263,
+  "script_sha256": "a8e55e9d1be756f69fb5645d182665bf97018dba9b12ed41d0eba44c568de820",
+  "mix_sha256": "f5103068e28c99053f562e95467c89651c44b1be6b7cbade7dd01a37e733b35f",
+  "spoken_lines": 41,
+  "reused_performances": 32,
+  "new_performances": 9,
+  "speaker_line_counts": {
+    "narrator": 26,
+    "peer": 9,
+    "sarah": 2,
+    "maya": 1,
+    "jordan": 2,
+    "alex": 1
+  },
+  "all_speech_native_speed_1_0": true,
+  "vendor_word_alignment_minimum": 1.0,
+  "reuse_validation": {
+    "reused_normalized_clips_match_narration": true,
+    "checked_clips": 32,
+    "maximum_sample_error": 1.1894735507667065e-07,
+    "allowance": "Only final PCM_24 quantization and the common master gain."
+  },
+  "captions": {
+    "count": 85,
+    "non_overlapping": true,
+    "within_video": true,
+    "all_script_text_preserved": true
+  },
+  "loudness": {
+    "integrated_lufs": -16.0,
+    "true_peak_dbfs": -2.8,
+    "loudness_range_lu": 8.1,
+    "summary": "Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -27.3 LUFS\n\n  Loudness range:\n    LRA:         8.1 LU\n    Threshold: -37.3 LUFS\n    LRA low:   -22.8 LUFS\n    LRA high:  -14.7 LUFS\n\n  True peak:\n    Peak:       -2.8 dBFS"
+  },
+  "recognition": {
+    "new_lines_reviewed": 9,
+    "prior_recognition_reused_for_unchanged_clips": 32,
+    "primary": "Whisper small.en",
+    "primary_path": "../../../../work/draft07/audio-qa/asr-small.json",
+    "secondary": "Whisper base.en on meeting welcome and Peer introduction",
+    "secondary_path": "../../../../work/draft07/audio-qa/asr-base-new.json",
+    "observations": "New welcome, status, request, team responses and recorded follow-ups recovered. Small.en misrecognized the possessive name in the Peer introduction; base.en recovered the full intended introduction including Manish’s AI identity, delegated attendance and late hour. Earlier documented proper-name normalization in unchanged lines remains unchanged."
+  },
+  "direct_listening_performed": false,
+  "limitation": "The available audio-input tool reported that listening is unsupported. ASR and numerical checks do not establish subjective voice naturalness or music balance."
+}

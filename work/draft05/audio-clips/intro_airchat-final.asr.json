@@ -1,0 +1,144 @@
+{
+  "sha256": "13226c7043b6e180b4351e362ee99a99b2ab66c1ca0328de00b69fffcce2406e",
+  "text": "Install the AI peer plug-in in AirChat. It follows local projects, current progress, and uncommitted changes, even before you push to GitHub.",
+  "words": [
+    {
+      "word": " Install",
+      "start": 0.0,
+      "end": 0.34,
+      "probability": 0.6604644060134888
+    },
+    {
+      "word": " the",
+      "start": 0.34,
+      "end": 0.56,
+      "probability": 0.9953292608261108
+    },
+    {
+      "word": " AI",
+      "start": 0.56,
+      "end": 0.78,
+      "probability": 0.6821519136428833
+    },
+    {
+      "word": " peer",
+      "start": 0.78,
+      "end": 1.06,
+      "probability": 0.5477865934371948
+    },
+    {
+      "word": " plug",
+      "start": 1.06,
+      "end": 1.32,
+      "probability": 0.557425320148468
+    },
+    {
+      "word": "-in",
+      "start": 1.32,
+      "end": 1.52,
+      "probability": 0.9551806151866913
+    },
+    {
+      "word": " in",
+      "start": 1.52,
+      "end": 1.58,
+      "probability": 0.6931940317153931
+    },
+    {
+      "word": " AirChat.",
+      "start": 1.58,
+      "end": 2.0,
+      "probability": 0.6758854687213898
+    },
+    {
+      "word": " It",
+      "start": 2.9,
+      "end": 2.94,
+      "probability": 0.9925574064254761
+    },
+    {
+      "word": " follows",
+      "start": 2.94,
+      "end": 3.24,
+      "probability": 0.9980454444885254
+    },
+    {
+      "word": " local",
+      "start": 3.24,
+      "end": 3.58,
+      "probability": 0.9982652068138123
+    },
+    {
+      "word": " projects,",
+      "start": 3.58,
+      "end": 4.1,
+      "probability": 0.9984074234962463
+    },
+    {
+      "word": " current",
+      "start": 4.78,
+      "end": 4.78,
+      "probability": 0.9987959861755371
+    },
+    {
+      "word": " progress,",
+      "start": 4.78,
+      "end": 5.2,
+      "probability": 0.9985781908035278
+    },
+    {
+      "word": " and",
+      "start": 5.46,
+      "end": 5.48,
+      "probability": 0.9978413581848145
+    },
+    {
+      "word": " uncommitted",
+      "start": 5.48,
+      "end": 5.94,
+      "probability": 0.9805116951465607
+    },
+    {
+      "word": " changes,",
+      "start": 5.94,
+      "end": 6.4,
+      "probability": 0.9994946718215942
+    },
+    {
+      "word": " even",
+      "start": 6.82,
+      "end": 7.1,
+      "probability": 0.9976486563682556
+    },
+    {
+      "word": " before",
+      "start": 7.1,
+      "end": 7.36,
+      "probability": 0.9997177720069885
+    },
+    {
+      "word": " you",
+      "start": 7.36,
+      "end": 7.54,
+      "probability": 0.9986652135848999
+    },
+    {
+      "word": " push",
+      "start": 7.54,
+      "end": 7.72,
+      "probability": 0.973828911781311
+    },
+    {
+      "word": " to",
+      "start": 7.72,
+      "end": 7.9,
+      "probability": 0.996068000793457
+    },
+    {
+      "word": " GitHub.",
+      "start": 7.9,
+      "end": 8.02,
+      "probability": 0.9484513401985168
+    }
+  ]
+}

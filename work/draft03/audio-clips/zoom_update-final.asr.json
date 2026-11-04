@@ -1,0 +1,90 @@
+{
+  "sha256": "4b6febb89c9f36a39e40a64c0489a6ea47e11d0100d97c1ec9441fed73142df4",
+  "text": "The build is ready. Two checks remain. Repeated events and results that change later.",
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.12,
+      "probability": 0.9237083196640015
+    },
+    {
+      "word": " build",
+      "start": 0.12,
+      "end": 0.36,
+      "probability": 0.9592416882514954
+    },
+    {
+      "word": " is",
+      "start": 0.36,
+      "end": 0.54,
+      "probability": 0.9989299178123474
+    },
+    {
+      "word": " ready.",
+      "start": 0.54,
+      "end": 0.78,
+      "probability": 0.9992417097091675
+    },
+    {
+      "word": " Two",
+      "start": 1.52,
+      "end": 1.52,
+      "probability": 0.8863725662231445
+    },
+    {
+      "word": " checks",
+      "start": 1.52,
+      "end": 1.7,
+      "probability": 0.9658096432685852
+    },
+    {
+      "word": " remain.",
+      "start": 1.7,
+      "end": 2.14,
+      "probability": 0.9986942410469055
+    },
+    {
+      "word": " Repeated",
+      "start": 2.86,
+      "end": 3.08,
+      "probability": 0.9877617955207825
+    },
+    {
+      "word": " events",
+      "start": 3.08,
+      "end": 3.28,
+      "probability": 0.9847244024276733
+    },
+    {
+      "word": " and",
+      "start": 3.28,
+      "end": 3.58,
+      "probability": 0.99644535779953
+    },
+    {
+      "word": " results",
+      "start": 3.58,
+      "end": 3.86,
+      "probability": 0.9980521202087402
+    },
+    {
+      "word": " that",
+      "start": 3.86,
+      "end": 4.16,
+      "probability": 0.977893054485321
+    },
+    {
+      "word": " change",
+      "start": 4.16,
+      "end": 4.34,
+      "probability": 0.9916111826896667
+    },
+    {
+      "word": " later.",
+      "start": 4.34,
+      "end": 4.76,
+      "probability": 0.9985259175300598
+    }
+  ]
+}

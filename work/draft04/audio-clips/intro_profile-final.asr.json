@@ -1,0 +1,126 @@
+{
+  "sha256": "a06a3e0dde6520a5a0031357f19a924ce305221fc5030addcc1b8ddc9ccd23b1",
+  "text": "Your one Airbnb profile gives it a starting point. Your role? Your team? Your projects? We'll see you next time.",
+  "words": [
+    {
+      "word": " Your",
+      "start": 0.0,
+      "end": 0.14,
+      "probability": 0.9311974048614502
+    },
+    {
+      "word": " one",
+      "start": 0.14,
+      "end": 0.34,
+      "probability": 0.35174760222435
+    },
+    {
+      "word": " Airbnb",
+      "start": 0.34,
+      "end": 0.5,
+      "probability": 0.5148155093193054
+    },
+    {
+      "word": " profile",
+      "start": 0.5,
+      "end": 1.2,
+      "probability": 0.9835377335548401
+    },
+    {
+      "word": " gives",
+      "start": 1.2,
+      "end": 1.62,
+      "probability": 0.9966964721679688
+    },
+    {
+      "word": " it",
+      "start": 1.62,
+      "end": 1.8,
+      "probability": 0.9882848262786865
+    },
+    {
+      "word": " a",
+      "start": 1.8,
+      "end": 1.86,
+      "probability": 0.9976531863212585
+    },
+    {
+      "word": " starting",
+      "start": 1.86,
+      "end": 2.1,
+      "probability": 0.9972379207611084
+    },
+    {
+      "word": " point.",
+      "start": 2.1,
+      "end": 2.46,
+      "probability": 0.9985393285751343
+    },
+    {
+      "word": " Your",
+      "start": 3.06,
+      "end": 3.12,
+      "probability": 0.9815727472305298
+    },
+    {
+      "word": " role?",
+      "start": 3.12,
+      "end": 3.34,
+      "probability": 0.9826915860176086
+    },
+    {
+      "word": " Your",
+      "start": 3.84,
+      "end": 3.88,
+      "probability": 0.9778532385826111
+    },
+    {
+      "word": " team?",
+      "start": 3.88,
+      "end": 4.16,
+      "probability": 0.9939702749252319
+    },
+    {
+      "word": " Your",
+      "start": 4.6,
+      "end": 4.66,
+      "probability": 0.9744082093238831
+    },
+    {
+      "word": " projects?",
+      "start": 4.66,
+      "end": 4.94,
+      "probability": 0.9691201448440552
+    },
+    {
+      "word": " We'll",
+      "start": 4.94,
+      "end": 5.26,
+      "probability": 0.13305814331397414
+    },
+    {
+      "word": " see",
+      "start": 5.26,
+      "end": 5.26,
+      "probability": 0.3199901282787323
+    },
+    {
+      "word": " you",
+      "start": 5.26,
+      "end": 5.26,
+      "probability": 0.8263252973556519
+    },
+    {
+      "word": " next",
+      "start": 5.26,
+      "end": 5.26,
+      "probability": 0.3889105021953583
+    },
+    {
+      "word": " time.",
+      "start": 5.26,
+      "end": 5.42,
+      "probability": 0.39301595091819763
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+1
+00:00:01,078 --> 00:00:03,412
+A ten-minute question can cost a whole day,
+
+2
+00:00:03,601 --> 00:00:05,805
+when the person with the context is asleep.
+
+3
+00:00:10,078 --> 00:00:11,364
+Meet AI Peer.
+
+4
+00:00:12,063 --> 00:00:14,599
+An always-on teammate that knows your work, even
+
+5
+00:00:14,611 --> 00:00:15,731
+when you are offline.
+
+6
+00:00:18,078 --> 00:00:19,174
+Create your Peer.
+
+7
+00:00:19,873 --> 00:00:22,123
+It starts with your profile, then connects your
+
+8
+00:00:22,135 --> 00:00:25,469
+projects, conversations, documents, and code.
+
+9
+00:00:26,182 --> 00:00:28,445
+A living picture of your work takes shape.
+
+10
+00:00:32,078 --> 00:00:34,543
+Ask what is blocking Premium Chargebacks.
+
+11
+00:00:35,242 --> 00:00:37,397
+Your Peer connects the requirement to the data
+
+12
+00:00:37,409 --> 00:00:40,183
+dependency, the owning team, and the source.
+
+13
+00:00:43,078 --> 00:00:44,364
+And it stays current.
+
+14
+00:00:45,063 --> 00:00:47,527
+When a decision changes, your Peer updates its
+
+15
+00:00:47,540 --> 00:00:50,612
+understanding, with the source and the latest timestamp.
+
+16
+00:00:53,064 --> 00:00:54,353
+Now it is two A M.
+
+17
+00:00:54,949 --> 00:00:55,972
+You are offline.
+
+18
+00:00:56,560 --> 00:00:59,090
+A teammate in another timezone needs more context.
+
+19
+00:01:01,074 --> 00:01:02,602
+AI PEER: I am Manish’s AI Peer.
+
+20
+00:01:03,295 --> 00:01:04,346
+AI PEER: He is offline.
+
+21
+00:01:05,040 --> 00:01:08,569
+AI PEER: Premium Chargebacks needs the dispute outcome before reconciliation.
+
+22
+00:01:09,275 --> 00:01:11,140
+AI PEER: Which dataset is authoritative?
+
+23
+00:01:11,835 --> 00:01:14,666
+AI PEER: Here is the requirement and latest project context.
+
+24
+00:01:17,078 --> 00:01:18,983
+The owning team has what it needs.
+
+25
+00:01:19,694 --> 00:01:22,575
+The answer arrives, and the dependency moves forward
+
+26
+00:01:22,587 --> 00:01:24,672
+before your next working day begins.
+
+27
+00:01:28,070 --> 00:01:29,671
+Cannot make the project sync?
+
+28
+00:01:30,305 --> 00:01:34,012
+Your Peer can join, identify itself, and share grounded updates.
+
+29
+00:01:35,266 --> 00:01:36,612
+AI PEER: I am Manish’s AI Peer.
+
+30
+00:01:37,197 --> 00:01:38,513
+AI PEER: Development is complete.
+
+31
+00:01:39,102 --> 00:01:40,560
+AI PEER: Validation is in progress.
+
+32
+00:01:41,140 --> 00:01:43,074
+AI PEER: The launch date still needs his confirmation.
+
+33
+00:01:45,067 --> 00:01:48,341
+When you return, review every answer, source, and follow-up.
+
+34
+00:01:48,955 --> 00:01:50,705
+Routine context keeps moving.
+
+35
+00:01:51,331 --> 00:01:53,049
+Important decisions stay with you.
+
+36
+00:01:55,078 --> 00:01:56,579
+Your work has a timezone.
+
+37
+00:01:57,278 --> 00:01:58,540
+Your Peer does not.
+

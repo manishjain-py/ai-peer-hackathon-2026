@@ -1,0 +1,42 @@
+{
+  "sha256": "ca861a2f252909c876bb14cbf7ec77740ce52cd77ca2bd5a39f7e6fab124d13d",
+  "text": "It's 2 a.m. for him.",
+  "words": [
+    {
+      "word": " It's",
+      "start": 0.0,
+      "end": 0.28,
+      "probability": 0.8993769586086273
+    },
+    {
+      "word": " 2",
+      "start": 0.28,
+      "end": 0.44,
+      "probability": 0.9099912643432617
+    },
+    {
+      "word": " a",
+      "start": 0.44,
+      "end": 0.66,
+      "probability": 0.25191530585289
+    },
+    {
+      "word": ".m.",
+      "start": 0.66,
+      "end": 0.88,
+      "probability": 0.9973803758621216
+    },
+    {
+      "word": " for",
+      "start": 1.02,
+      "end": 1.06,
+      "probability": 0.8562965393066406
+    },
+    {
+      "word": " him.",
+      "start": 1.06,
+      "end": 1.32,
+      "probability": 0.9689664244651794
+    }
+  ]
+}

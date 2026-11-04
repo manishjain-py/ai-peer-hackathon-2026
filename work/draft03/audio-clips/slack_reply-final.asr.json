@@ -1,0 +1,144 @@
+{
+  "sha256": "7c56e56ff8bcecca80ee2f5b9db90156907ae1184d592bc58c019c6f408d8b40",
+  "text": "Use dispute events. It updates hourly. I'll send the new field mapping. In this case, I was able to make that happen. No.",
+  "words": [
+    {
+      "word": " Use",
+      "start": 0.0,
+      "end": 0.14,
+      "probability": 0.35802599787712097
+    },
+    {
+      "word": " dispute",
+      "start": 0.14,
+      "end": 0.34,
+      "probability": 0.9602299332618713
+    },
+    {
+      "word": " events.",
+      "start": 0.34,
+      "end": 0.74,
+      "probability": 0.995964527130127
+    },
+    {
+      "word": " It",
+      "start": 1.9,
+      "end": 1.98,
+      "probability": 0.9753065705299377
+    },
+    {
+      "word": " updates",
+      "start": 1.98,
+      "end": 2.16,
+      "probability": 0.9970042109489441
+    },
+    {
+      "word": " hourly.",
+      "start": 2.16,
+      "end": 2.56,
+      "probability": 0.9917216897010803
+    },
+    {
+      "word": " I'll",
+      "start": 3.56,
+      "end": 3.74,
+      "probability": 0.98858842253685
+    },
+    {
+      "word": " send",
+      "start": 3.74,
+      "end": 3.88,
+      "probability": 0.9953382015228271
+    },
+    {
+      "word": " the",
+      "start": 3.88,
+      "end": 4.0,
+      "probability": 0.9894401431083679
+    },
+    {
+      "word": " new",
+      "start": 4.0,
+      "end": 4.12,
+      "probability": 0.9277117252349854
+    },
+    {
+      "word": " field",
+      "start": 4.12,
+      "end": 4.32,
+      "probability": 0.9924106597900391
+    },
+    {
+      "word": " mapping.",
+      "start": 4.32,
+      "end": 4.5,
+      "probability": 0.9970384836196899
+    },
+    {
+      "word": " In",
+      "start": 4.52,
+      "end": 4.52,
+      "probability": 0.006563677452504635
+    },
+    {
+      "word": " this",
+      "start": 4.52,
+      "end": 4.52,
+      "probability": 0.0904756709933281
+    },
+    {
+      "word": " case,",
+      "start": 4.52,
+      "end": 4.54,
+      "probability": 0.6991147398948669
+    },
+    {
+      "word": " I",
+      "start": 4.54,
+      "end": 4.56,
+      "probability": 0.07885712385177612
+    },
+    {
+      "word": " was",
+      "start": 4.56,
+      "end": 4.72,
+      "probability": 0.030438899993896484
+    },
+    {
+      "word": " able",
+      "start": 4.72,
+      "end": 4.72,
+      "probability": 0.01635122299194336
+    },
+    {
+      "word": " to",
+      "start": 4.72,
+      "end": 4.72,
+      "probability": 0.9770630598068237
+    },
+    {
+      "word": " make",
+      "start": 4.72,
+      "end": 4.72,
+      "probability": 0.06953837722539902
+    },
+    {
+      "word": " that",
+      "start": 4.72,
+      "end": 4.72,
+      "probability": 0.031588729470968246
+    },
+    {
+      "word": " happen.",
+      "start": 4.72,
+      "end": 4.72,
+      "probability": 0.2390267699956894
+    },
+    {
+      "word": " No.",
+      "start": 4.86,
+      "end": 4.94,
+      "probability": 0.004193724598735571
+    }
+  ]
+}

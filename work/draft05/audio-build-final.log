@@ -1,0 +1,151 @@
+SYNTH brief_change: 9.36s for 9.45s window (Aiden)
+SYNTH brief_event: 9.28s for 9.50s window (Aiden)
+SYNTH brief_opportunity: 7.44s for 10.30s window (Aiden)
+SYNTH slack_alex: 2.72s for 2.82s window (Ryan)
+SYNTH slack_peer: 6.80s for 6.90s window (Aiden)
+SYNTH slack_ack: 2.64s for 2.73s window (Aiden)
+SYNTH zoom_ask: 4.48s for 4.58s window (Ryan)
+SYNTH zoom_update: 5.52s for 5.62s window (Aiden)
+SYNTH zoom_source: 5.12s for 5.21s window (Aiden)
+SYNTH zoom_date: 1.60s for 1.70s window (Ryan)
+SYNTH zoom_boundary: 4.40s for 4.49s window (Aiden)
+SYNTH return2: 7.20s for 7.30s window (Aiden)
+SYNTH intro_profile: 4.88s for 6.45s window (Authored American English presenter)
+SYNTH intro_github: 4.40s for 5.80s window (Authored American English presenter)
+SYNTH intro_airchat: 8.48s for 10.60s window (Authored American English presenter)
+SYNTH intro_access: 3.04s for 3.90s window (Authored American English presenter)
+SYNTH slack_sarah: 5.52s for 5.62s window (Authored American English male colleague)
+SYNTH slack_reply: 5.20s for 5.29s window (Authored American English male colleague)
+SYNTH zoom_sarah: 2.32s for 2.39s window (Authored American English male colleague)
+SYNTH return1: 4.96s for 6.20s window (Authored American English presenter)
+FIT intro_profile: 30.15–35.03, 1.000x; ASR=1.000: Your one AirBnB profile brings in your role risk partner systems and your projects.
+FIT intro_github: 37.00–41.36, 1.000x; ASR=1.000: GitHub connects your team's repositories, services, and recent changes.
+FIT intro_airchat: 43.20–51.68, 1.000x; ASR=0.933: Install the AI peer plug-in in AirChat. It follows local projects, current progress, and uncommitted changes, even before you push to GitHub.
+FIT intro_access: 55.10–58.13, 1.000x; ASR=1.000: Choose Slack and Zoom Access. Keep decisions with you.
+FIT brief_change: 67.00–76.36, 1.000x; ASR=0.913: First, premium chargebacks. Deploy the back end before validating the new interface in production. I've linked that to your local work in AirChat. that.
+FIT brief_event: 76.60–85.88, 1.000x; ASR=0.957: Weather protection still needs product identity and policy results. Trans integration work depends on those answers. I've drafted a question for the owners.
+FIT brief_opportunity: 86.50–93.93, 1.000x; ASR=0.818: Payments ML is driving the chargeback prevention pilot. Your earlier prototype is relevant. I've prepared a brief for the discussion. Thank you for your discussion.
+FIT slack_sarah: 108.30–113.82, 1.000x; ASR=1.000: For premium chargebacks, do analysts need booking totals or disputed amounts by product?
+FIT slack_alex: 114.17–116.89, 1.000x; ASR=0.833: Manish is offline. It's 2 AM.
+FIT slack_peer: 117.24–124.03, 1.000x; ASR=0.875: I'm Manish's AI peer. Each product's disputed amount. It shows investigators what the chargeback covers. covers.
+FIT slack_reply: 124.38–129.57, 1.000x; ASR=1.000: Got it. The contract changes are merged. I'll send an example case for validation.
+FIT slack_ack: 129.92–132.55, 1.000x; ASR=0.857: Thanks, I'll flag that for Manisha's brief.
+FIT zoom_ask: 142.30–146.78, 1.000x; ASR=0.706: Manish is pure. Where are we on premium chargebacks?
+FIT zoom_update: 147.13–152.65, 1.000x; ASR=0.857: The contract changes are merged. The interface and back end changes are still drafts. Crafts.
+FIT zoom_source: 153.00–158.11, 1.000x; ASR=0.929: Backing deployment comes first, then we need to validate with a fresh dispute case.
+FIT zoom_sarah: 158.46–160.75, 1.000x; ASR=1.000: I'll help coordinate the example case.
+FIT zoom_date: 161.10–162.70, 1.000x; ASR=1.000: Can we commit to a launch date?
+FIT zoom_boundary: 163.05–167.44, 1.000x; ASR=1.000: Not yet, Manish needs to review validation before confirming.
+FIT return1: 168.50–173.43, 1.000x; ASR=1.000: Morning! Your brief connects the partner response with the work still in progress.
+FIT return2: 174.70–181.89, 1.000x; ASR=1.000: Next, confirm deployment, validate a fresh case, then decide on launch. Your automation brief is saved.
+REUSE intro_day: 0.30–1.42; original selected performance
+REUSE intro_routine: 1.65–3.72; original selected performance
+REUSE intro_inbox: 4.75–6.83; original selected performance
+REUSE intro_pings: 8.25–10.29; original selected performance
+REUSE intro_meetings: 11.75–14.95; original selected performance
+REUSE intro_focus: 15.75–18.70; original selected performance
+REUSE intro_relief: 20.25–24.09; original selected performance
+REUSE intro_create: 26.30–29.57; original selected performance
+REUSE intro_ready: 59.25–60.53; original selected performance
+REUSE brief_intro: 62.30–64.30; original selected performance
+REUSE brief_payoff: 97.20–99.52; original selected performance
+REUSE offline: 102.30–106.30; original selected performance
+REUSE meeting_bridge: 136.50–139.30; original selected performance
+REUSE return3: 182.30–186.27; original selected performance
+REUSE close: 189.00–192.24; original selected performance
+0.0–1.6  Your day begins.
+1.6–3.6  A quick question about the runbook?
+4.6–7.0  150 unread emails.
+8.0–10.4  10 Slack pings, one after another.
+11.4–13.0  Three meeting invites.
+13.2–15.0  Two after hours.
+15.6–18.8  Your attention, everywhere, except where you need it.
+20.0–24.0  Meet AI peer, so you can focus where you're needed most.
+26.2–27.6  Start with one click.
+27.6–29.6  Create my AI peer.
+29.6–34.6  Your one Airbnb profile brings in your role risk partner systems and your projects.
+37.0–41.0  GitHub connects your team's repositories, services and recent changes.
+43.0–46.0  Install the AI peer plug-in and air chat.
+46.0–50.0  It follows local projects, current progress and uncommitted changes,
+50.0–52.0  even before you push to GitHub.
+52.0–56.8  Choose Slack and Zoom Access.
+56.8–58.8  Keep decisions with you.
+58.8–60.8  Your peer is ready.
+61.8–63.8  Start your day with a brief built around you.
+67.0–69.0  First, premium chargebacks.
+70.0–74.0  Deploy the backend before validating the new interface and production.
+74.0–76.0  I've linked that to your local work and air chat.
+76.0–80.0  Weather protection still needs product identity and policy results.
+80.0–83.0  Trans integration work depends on those answers.
+84.0–86.0  I've drafted a question for the owners.
+86.0–90.0  Payments ML is driving the chargeback prevention pilot.
+90.0–92.0  Your earlier prototype is relevant.
+92.0–94.0  I've prepared a brief for the discussion.
+94.0–99.5  What matters and what to do next.
+99.5–106.0  Later when Manish goes offline, his team still needs context.
+108.4–113.4  For premium chargebacks, to analysts need booking totals or disputed amounts by product.
+114.4–115.4  Manish is offline.
+115.4–117.4  It's 2 a.m.
+117.4–119.4  I'm Manish's AI peer.
+119.4–121.4  Each product's disputed amount.
+121.4–124.4  It shows investigators what the chargeback covers.
+124.4–125.4  Got it.
+125.4–127.4  The contract changes are merged.
+127.4–130.4  The interface and backend changes are still drafts.
+130.4–132.4  Backing deployment comes first.
+132.4–139.3  Then we need to validate with a fresh dispute case.
+139.3–144.9  I'll help coordinate the example case.
+144.9–146.9  Can we commit to a launch date?
+146.9–147.9  Not yet.
+147.9–150.9  Manish needs to review validation before confirming.
+150.9–152.9  Morning.
+152.9–156.9  Your brief connects the partner response with the work still in progress.
+156.9–158.9  Next.
+158.9–159.9  Confirm deployment.
+159.9–161.9  Validate a fresh case.
+161.9–164.9  I'll help coordinate the example case.
+164.9–166.9  Can we commit to a launch date?
+166.9–167.9  Not yet.
+167.9–171.9  Manish needs to review validation before confirming.
+171.9–173.9  Morning.
+173.9–176.9  Your brief connects the partner response with the work still in progress.
+176.9–177.9  Validate a fresh case.
+177.9–179.9  Then decide on launch.
+179.9–181.9  Your automation brief is saved.
+181.9–183.9  Last time piecing it together.
+183.9–189.0  More room for your best work.
+189.0–190.0  AI peer.
+190.0–191.0  Your work.
+191.0–192.0  A step ahead.
+SECONDARY ASR intro_profile: Your one AirBnB profile brings in your role risk partner systems and your projects.
+SECONDARY ASR intro_github: GitHub connects your team's repositories, services, and recent changes.
+SECONDARY ASR intro_airchat: install the AI peer plugin in AirChat. It follows local projects, current progress and uncommitted changes, even before you push to GitHub.
+SECONDARY ASR intro_access: Choose Slack and Zoom Access. Keep decisions with you.
+SECONDARY ASR brief_change: First, premium chargebacks. Deploy the backend before validating the new interface in production. I've linked that to your local work in AirChat.
+SECONDARY ASR brief_event: Weather protection still needs product identity and policy results. Trans integration work depends on those answers. I've drafted a question for the owners.
+SECONDARY ASR brief_opportunity: PaymentsML is driving the chargeback prevention pilot. Your earlier prototype is relevant. I've prepared a brief for the discussion.
+SECONDARY ASR slack_sarah: For premium chargebacks, do analysts need booking totals or disputed amounts by product?
+SECONDARY ASR slack_alex: Manish is offline. It's 2am.
+SECONDARY ASR slack_peer: I'm Manish's A.I. Peer. Each product's disputed amount. It shows investigators what the chargeback covers.
+SECONDARY ASR slack_reply: Got it. The contract changes are merged. I'll send an example case for validation.
+SECONDARY ASR slack_ack: Thanks! I'll flag that for Manisha's brief.
+SECONDARY ASR zoom_ask: Manus' Pier? Where are we on premium chargebacks?
+SECONDARY ASR zoom_update: The contract changes are merged. The interface and backend changes are still drafts.
+SECONDARY ASR zoom_source: Backing deployment comes first, then we need to validate with a fresh dispute case
+SECONDARY ASR zoom_sarah: I'll help coordinate the example case.
+SECONDARY ASR zoom_date: Can we commit to a launch date?
+SECONDARY ASR zoom_boundary: Not yet. Manish needs to review validation before confirming.
+SECONDARY ASR return1: Morning! Your brief connects the partner response with the work still in progress.
+SECONDARY ASR return2: Next, confirm deployment, validate a fresh case, then decide on launch. Your automation brief is saved.
+{
+  "validation": "PASS",
+  "loudness": {
+    "integrated_lufs": -16.0,
+    "true_peak_dbfs": -2.3,
+    "loudness_range_lu": 6.5,
+    "summary": "Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.8 LUFS\n\n  Loudness range:\n    LRA:         6.5 LU\n    Threshold: -36.8 LUFS\n    LRA low:   -21.0 LUFS\n    LRA high:  -14.5 LUFS\n\n  True peak:\n    Peak:       -2.3 dBFS"
+  },
+  "duration": 196,
+  "reused": 15,
+  "new": 20
+}

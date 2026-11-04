@@ -1,0 +1,59 @@
+ELEVENLABS zoom_absent: 1.765s; Chris - Charming, Down-to-Earth
+ELEVENLABS zoom_title: 1.579s; Sarah - Mature, Reassuring, Confident
+ELEVENLABS zoom_welcome: 5.387s; Alice - Clear, Engaging Educator
+ELEVENLABS zoom_intro: 4.598s; Aarav J - Cool Wise Friend
+ELEVENLABS zoom_status: 5.851s; Aarav J - Cool Wise Friend
+ELEVENLABS zoom_question: 4.458s; Aarav J - Cool Wise Friend
+ELEVENLABS zoom_platform: 3.251s; Chris - Charming, Down-to-Earth
+ELEVENLABS zoom_data: 5.944s; Karthik | Indian AI Voice
+ELEVENLABS zoom_capture: 5.666s; Aarav J - Cool Wise Friend
+FIT zoom_title: 136.600–138.179; natural 1.00x; fit=True
+FIT zoom_welcome: 140.350–145.567; natural 1.00x; fit=True
+FIT zoom_absent: 146.050–147.698; natural 1.00x; fit=True
+FIT zoom_intro: 149.350–153.948; natural 1.00x; fit=True
+FIT zoom_status: 156.850–162.701; natural 1.00x; fit=False
+FIT zoom_question: 163.050–167.316; natural 1.00x; fit=True
+FIT zoom_data: 170.150–176.055; natural 1.00x; fit=False
+FIT zoom_platform: 175.650–178.714; natural 1.00x; fit=True
+FIT zoom_capture: 180.650–186.118; natural 1.00x; fit=True
+REUSE intro_day: exact Draft06 performance at 0.600–4.315
+REUSE intro_work: exact Draft06 performance at 5.600–8.386
+REUSE intro_inbox: exact Draft06 performance at 9.000–11.508
+REUSE intro_pings: exact Draft06 performance at 12.600–14.874
+REUSE intro_meetings: exact Draft06 performance at 15.500–18.240
+REUSE intro_focus: exact Draft06 performance at 19.200–22.590
+REUSE intro_relief: exact Draft06 performance at 24.400–28.580
+REUSE intro_create: exact Draft06 performance at 30.300–33.411
+REUSE intro_profile: exact Draft06 performance at 34.300–39.130
+REUSE intro_github: exact Draft06 performance at 40.200–44.751
+REUSE intro_airchat: exact Draft06 performance at 46.200–55.819
+REUSE intro_access: exact Draft06 performance at 58.100–61.258
+REUSE intro_ready: exact Draft06 performance at 61.550–62.897
+REUSE bobo_title: exact Draft06 performance at 64.600–66.365
+REUSE bobo_intro: exact Draft06 performance at 68.500–73.697
+REUSE bobo_alert: exact Draft06 performance at 77.200–86.952
+REUSE bobo_impact: exact Draft06 performance at 90.000–94.040
+REUSE slack_title: exact Draft06 performance at 96.600–99.479
+REUSE slack_intro: exact Draft06 performance at 100.400–104.828
+REUSE slack_question: exact Draft06 performance at 106.300–107.424
+REUSE slack_wait: exact Draft06 performance at 109.500–113.772
+REUSE slack_peer: exact Draft06 performance at 115.000–123.777
+REUSE slack_reply: exact Draft06 performance at 125.600–130.963
+REUSE slack_impact: exact Draft06 performance at 133.000–134.858
+REUSE missed_title: exact Draft06 performance at 189.600–191.173
+REUSE missed_cleanup: exact Draft06 performance at 193.500–198.142
+REUSE missed_airversary: exact Draft06 performance at 199.000–207.266
+REUSE missed_fireside: exact Draft06 performance at 211.000–220.474
+REUSE missed_cassette: exact Draft06 performance at 228.000–238.815
+REUSE missed_brief: exact Draft06 performance at 243.400–248.197
+REUSE close_possibilities: exact Draft06 performance at 250.000–254.273
+REUSE close: exact Draft06 performance at 258.000–260.865
+Traceback (most recent call last):
+  File "/Users/manishjain/repos/Hackathon 2026/video/scripts/audio_build_07.py", line 390, in <module>
+    main()
+  File "/Users/manishjain/repos/Hackathon 2026/video/scripts/audio_build_07.py", line 341, in main
+    voice, timeline = narration(script, records, reusable)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/manishjain/repos/Hackathon 2026/video/scripts/audio_build_07.py", line 293, in narration
+    raise RuntimeError("Natural speech needs revised windows or copy; no speech accelerated: " + json.dumps(failures))
+RuntimeError: Natural speech needs revised windows or copy; no speech accelerated: [{"id": "zoom_status", "duration": 5.8514375, "window": 5.849999999999994, "needed_limit": 162.7814}, {"id": "zoom_data", "duration": 5.905020833333333, "window": 5.150000000000006, "needed_limit": 176.135}]

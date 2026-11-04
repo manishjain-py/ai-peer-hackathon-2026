@@ -1,0 +1,50 @@
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/Users/manishjain/Documents/Codex/Hackathon 2026/renders/ai-peer-draft-01-silent.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf62.12.102
+    comment         : Made with Remotion 4.0.526
+  Duration: 00:02:00.00, start: 0.000000, bitrate: 511 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuvj420p(pc, bt470bg/unknown/unknown, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 508 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      encoder         : Lavc62.28.102 libx264
+    Side data:
+      ICC Profile: (456 bytes)
+[aist#1:0/pcm_s24le @ 0x9bec0c480] Guessed Channel Layout: stereo
+Input #1, wav, from '/Users/manishjain/Documents/Codex/Hackathon 2026/video/public/audio/mixed.wav':
+  Duration: 00:02:00.00, bitrate: 2304 kb/s
+  Stream #1:0: Audio: pcm_s24le ([1][0][0][0] / 0x0001), 48000 Hz, stereo, s32 (24 bit), 2304 kb/s
+Input #2, srt, from '/Users/manishjain/Documents/Codex/Hackathon 2026/video/public/audio/captions.srt':
+  Duration: N/A, bitrate: N/A
+  Stream #2:0: Subtitle: subrip (srt)
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+  Stream #1:0 -> #0:1 (pcm_s24le (native) -> aac (native))
+  Stream #2:0 -> #0:2 (subrip (srt) -> mov_text (native))
+Press [q] to stop, [?] for help
+Output #0, mp4, to '/Users/manishjain/Documents/Codex/Hackathon 2026/renders/ai-peer-draft-01.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : AI Peer — Hackathon 2026 — Concept Draft 01
+    comment         : Made with Remotion 4.0.526
+    encoder         : Lavf62.12.102
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuvj420p(pc, bt470bg/unknown/unknown, progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 508 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      encoder         : Lavc62.28.102 libx264
+    Side data:
+      ICC Profile: (456 bytes)
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 256 kb/s
+    Metadata:
+      encoder         : Lavc62.28.102 aac
+  Stream #0:2(eng): Subtitle: mov_text (tx3g / 0x67337874)
+    Metadata:
+      encoder         : Lavc62.28.102 mov_text
+frame=  878 fps=0.0 q=-1.0 size=    2816KiB time=00:00:29.09 bitrate= 792.8kbits/s speed=57.9x elapsed=0:00:00.50    frame= 1776 fps=1753 q=-1.0 size=    5376KiB time=00:00:59.02 bitrate= 746.1kbits/s speed=58.3x elapsed=0:00:01.01    frame= 2640 fps=1733 q=-1.0 size=    8192KiB time=00:01:27.82 bitrate= 764.1kbits/s speed=57.7x elapsed=0:00:01.52    frame= 3471 fps=1707 q=-1.0 size=   10496KiB time=00:01:55.52 bitrate= 744.3kbits/s speed=56.8x elapsed=0:00:02.03    [mp4 @ 0x9bf020a00] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0x9bf0246c0] video:7456KiB audio:3487KiB subtitle:1KiB other streams:0KiB global headers:0KiB muxing overhead: 1.201228%
+frame= 3600 fps=1703 q=-1.0 Lsize=   11076KiB time=00:01:58.54 bitrate= 765.4kbits/s speed=56.1x elapsed=0:00:02.11    
+[aac @ 0x9bec39c00] Qavg: 45414.027

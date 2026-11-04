@@ -1,0 +1,80 @@
+[
+  {
+    "id": "intro_day",
+    "script": "Your day begins.",
+    "recognized": "Your day begins.",
+    "match": 1.0
+  },
+  {
+    "id": "intro_routine",
+    "script": "A quick question about the runbook.",
+    "recognized": "A quick question about the run book.",
+    "match": 0.7692307692307693
+  },
+  {
+    "id": "intro_inbox",
+    "script": "A hundred and fifty unread emails.",
+    "recognized": "150 unread emails.",
+    "match": 0.4444444444444444
+  },
+  {
+    "id": "intro_pings",
+    "script": "Ten Slack pings, one after another.",
+    "recognized": "10 slack pings, one after another.",
+    "match": 0.8333333333333334
+  },
+  {
+    "id": "intro_meetings",
+    "script": "Three meeting invites. Two after hours.",
+    "recognized": "Three meeting invites. Two after hours.",
+    "match": 1.0
+  },
+  {
+    "id": "intro_focus",
+    "script": "Your attention. Everywhere except where you need it.",
+    "recognized": "Your attention, everywhere, except where you need it.",
+    "match": 1.0
+  },
+  {
+    "id": "intro_relief",
+    "script": "Meet AI Peer. So you can focus where you're needed most.",
+    "recognized": "Meet A.I. Pier so you can focus where you're needed most.",
+    "match": 0.782608695652174
+  },
+  {
+    "id": "intro_create",
+    "script": "Start with one click: Create my AI Peer.",
+    "recognized": "Start with one click. Create my AI peer. year. 7",
+    "match": 0.8888888888888888
+  },
+  {
+    "id": "intro_profile",
+    "script": "Your One Airbnb profile gives it a starting point: your role, your team, your projects.",
+    "recognized": "Your one Airbnb profile gives it a starting point. Your role? Your team? Your projects? We'll see you next time.",
+    "match": 0.8571428571428571
+  },
+  {
+    "id": "intro_sourcegraph",
+    "script": "Sourcegraph connects the services and code you work on.",
+    "recognized": "Source Graph connects the services and code you work on.",
+    "match": 0.8421052631578947
+  },
+  {
+    "id": "intro_github",
+    "script": "GitHub adds your code and recent changes.",
+    "recognized": "GitHub adds your code and recent changes.",
+    "match": 1.0
+  },
+  {
+    "id": "intro_access",
+    "script": "Choose Slack and Zoom access. Set what it can answer, and when to ask you.",
+    "recognized": "Choose Slack and Zoom Access. Set what it can answer and when to ask you.",
+    "match": 1.0
+  },
+  {
+    "id": "intro_ready",
+    "script": "Your Peer is ready.",
+    "recognized": "Your peer is ready.",
+    "match": 1.0
+  }
+]

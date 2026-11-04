@@ -1,0 +1,26 @@
+[
+  {
+    "id": "intro_relief",
+    "script": "Meet AI Peer. A teammate who makes room for your best work.",
+    "sha256": "7314242e241d0bca6a39f444009c57bfbc0340931a41dee7f6b125c0cc7f3bb9",
+    "recognized": "Meet A.I. Peer, a teammate who makes room for your best work."
+  },
+  {
+    "id": "intro_airchat",
+    "script": "Add the AI Peer plugin in AirChat. It understands your local projects, current tasks, and uncommitted changes, even before you push to GitHub.",
+    "sha256": "d0348c494af393b220e9db47bb863afb9b827dde12d70156df2ec26a6b9e6de5",
+    "recognized": "Add the AI Peer plugin in AirChat. It understands your local projects, current tasks, and uncommitted changes even before you push to GitHub."
+  },
+  {
+    "id": "slack_intro",
+    "script": "Manish needs cancellation-window data. The data team works in the U.S.",
+    "sha256": "ff1a66d0f7ee751c7aac86dc129eba08df3a1f0283a954aa674c204da0dfbf46",
+    "recognized": "Manish needs cancellation window data. The data team works in the U.S."
+  },
+  {
+    "id": "close",
+    "script": "AI Peer. More room for your best work.",
+    "sha256": "0f012fa7f9b0451ee85021d13325297aa9a46c9f7803e43227e2957a28167d8d",
+    "recognized": "AI Peer, more room for your best work."
+  }
+]

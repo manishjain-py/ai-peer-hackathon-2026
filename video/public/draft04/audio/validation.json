@@ -1,0 +1,103 @@
+{
+  "validation": "PASS",
+  "checks": {
+    "narration": {
+      "frames": 8616000,
+      "duration": 179.5,
+      "channels": 2,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    },
+    "music": {
+      "frames": 8616000,
+      "duration": 179.5,
+      "channels": 2,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    },
+    "effects": {
+      "frames": 8616000,
+      "duration": 179.5,
+      "channels": 2,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    },
+    "mixed": {
+      "frames": 8616000,
+      "duration": 179.5,
+      "channels": 2,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    },
+    "music-unducked": {
+      "frames": 8616000,
+      "duration": 179.5,
+      "channels": 2,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "loudness": {
+    "integrated_lufs": -16.0,
+    "true_peak_dbfs": -2.8,
+    "loudness_range_lu": 5.9,
+    "summary": "Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -27.0 LUFS\n\n  Loudness range:\n    LRA:         5.9 LU\n    Threshold: -37.0 LUFS\n    LRA low:   -20.7 LUFS\n    LRA high:  -14.8 LUFS\n\n  True peak:\n    Peak:       -2.8 dBFS"
+  },
+  "all_clips_within_scene_windows": true,
+  "speech_overlap": false,
+  "maximum_time_stretch": 1.031863,
+  "stems_sum_to_mix": true,
+  "stem_rounding_error": 3.5762786865234375e-07,
+  "captions": {
+    "count": 60,
+    "non_overlapping": true,
+    "within_video": true,
+    "all_script_text_preserved": true
+  },
+  "direct_listening_performed": false,
+  "direct_listening_limitation": "No audio-listening input tool was available; numerical and ASR QA do not replace human listening.",
+  "voice_engine": [
+    "mlx-community/Qwen3-TTS-12Hz-1.7B-CustomVoice-4bit",
+    "mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-4bit"
+  ],
+  "bpm": 124,
+  "reused_performances": 22,
+  "new_performances": 13,
+  "asr_clip_match_minimum": 0.4444,
+  "asr": {
+    "model": "faster-whisper tiny.en",
+    "segments": 61,
+    "transcript": "../../../../work/draft04/audio-qa/asr.json",
+    "note": "Supporting content check only. Transcript requires inspection and is not direct listening."
+  }
+}

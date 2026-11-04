@@ -1,0 +1,84 @@
+{
+  "sha256": "479ec46b5d4f3285fe7eb8232ed0f9dc09b8b5039c537823c0d1da7aa1833935",
+  "text": "Morning! Your brief connects the partner response with the work still in progress.",
+  "words": [
+    {
+      "word": " Morning!",
+      "start": 0.0,
+      "end": 0.22,
+      "probability": 0.36474984884262085
+    },
+    {
+      "word": " Your",
+      "start": 0.94,
+      "end": 1.12,
+      "probability": 0.9891153573989868
+    },
+    {
+      "word": " brief",
+      "start": 1.12,
+      "end": 1.36,
+      "probability": 0.9396288394927979
+    },
+    {
+      "word": " connects",
+      "start": 1.36,
+      "end": 1.74,
+      "probability": 0.9929777979850769
+    },
+    {
+      "word": " the",
+      "start": 1.74,
+      "end": 2.0,
+      "probability": 0.994954526424408
+    },
+    {
+      "word": " partner",
+      "start": 2.0,
+      "end": 2.2,
+      "probability": 0.9723489284515381
+    },
+    {
+      "word": " response",
+      "start": 2.2,
+      "end": 2.62,
+      "probability": 0.9900707602500916
+    },
+    {
+      "word": " with",
+      "start": 2.62,
+      "end": 3.12,
+      "probability": 0.9606679081916809
+    },
+    {
+      "word": " the",
+      "start": 3.12,
+      "end": 3.26,
+      "probability": 0.995912492275238
+    },
+    {
+      "word": " work",
+      "start": 3.26,
+      "end": 3.46,
+      "probability": 0.9555574059486389
+    },
+    {
+      "word": " still",
+      "start": 3.46,
+      "end": 3.82,
+      "probability": 0.9923697710037231
+    },
+    {
+      "word": " in",
+      "start": 3.82,
+      "end": 4.14,
+      "probability": 0.9986225366592407
+    },
+    {
+      "word": " progress.",
+      "start": 4.14,
+      "end": 4.48,
+      "probability": 0.996551513671875
+    }
+  ]
+}

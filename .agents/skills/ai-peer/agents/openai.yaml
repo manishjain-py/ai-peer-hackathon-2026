@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Peer"
+  short_description: "Resume the AI Peer hackathon project"
+  default_prompt: "Use $ai-peer to load the latest project state and get ready for my next task."

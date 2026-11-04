@@ -1,0 +1,60 @@
+{
+  "sha256": "1a102787d733212c865fbc8fa75f4a673c1015d64fc3cfdcfba4f6d4de6a4ce9",
+  "text": "Next, a project sink he's delegated to is pure.",
+  "words": [
+    {
+      "word": " Next,",
+      "start": 0.0,
+      "end": 0.26,
+      "probability": 0.9204946160316467
+    },
+    {
+      "word": " a",
+      "start": 0.38,
+      "end": 0.5,
+      "probability": 0.9743791222572327
+    },
+    {
+      "word": " project",
+      "start": 0.5,
+      "end": 0.82,
+      "probability": 0.9804930090904236
+    },
+    {
+      "word": " sink",
+      "start": 0.82,
+      "end": 1.12,
+      "probability": 0.9101086854934692
+    },
+    {
+      "word": " he's",
+      "start": 1.12,
+      "end": 1.44,
+      "probability": 0.9781818091869354
+    },
+    {
+      "word": " delegated",
+      "start": 1.44,
+      "end": 1.72,
+      "probability": 0.996303915977478
+    },
+    {
+      "word": " to",
+      "start": 1.72,
+      "end": 2.08,
+      "probability": 0.99688321352005
+    },
+    {
+      "word": " is",
+      "start": 2.08,
+      "end": 2.22,
+      "probability": 0.7261549830436707
+    },
+    {
+      "word": " pure.",
+      "start": 2.22,
+      "end": 2.44,
+      "probability": 0.29047584533691406
+    }
+  ]
+}

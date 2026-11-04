@@ -1,0 +1,71 @@
+{
+  "validation": "PASS",
+  "checks": {
+    "narration": {
+      "frames": 5760000,
+      "channels": 2,
+      "sample_rate": 48000,
+      "duration": 120.0,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    },
+    "music": {
+      "frames": 5760000,
+      "channels": 2,
+      "sample_rate": 48000,
+      "duration": 120.0,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    },
+    "effects": {
+      "frames": 5760000,
+      "channels": 2,
+      "sample_rate": 48000,
+      "duration": 120.0,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    },
+    "mixed": {
+      "frames": 5760000,
+      "channels": 2,
+      "sample_rate": 48000,
+      "duration": 120.0,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "captions": {
+    "count": 37,
+    "non_overlapping": true,
+    "within_video": true
+  },
+  "all_clips_within_scene_windows": true,
+  "stems_sum_to_mix": true,
+  "loudness_summary": "Integrated loudness:\n    I:         -16.5 LUFS\n    Threshold: -27.8 LUFS\n\n  Loudness range:\n    LRA:         6.4 LU\n    Threshold: -37.8 LUFS\n    LRA low:   -21.9 LUFS\n    LRA high:  -15.5 LUFS\n\n  True peak:\n    Peak:       -1.5 dBFS",
+  "direct_listening_performed": false,
+  "asr_model": "faster-whisper tiny.en; supporting content check, not a listening substitute"
+}

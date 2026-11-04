@@ -1,0 +1,48 @@
+{
+  "sha256": "80db09ba118ac021e19937f378373efb02b0d68de75727cfbabf91a6bb362b69",
+  "text": "GitHub adds your code and recent changes.",
+  "words": [
+    {
+      "word": " GitHub",
+      "start": 0.0,
+      "end": 0.2,
+      "probability": 0.9181782007217407
+    },
+    {
+      "word": " adds",
+      "start": 0.2,
+      "end": 0.6,
+      "probability": 0.7784806489944458
+    },
+    {
+      "word": " your",
+      "start": 0.6,
+      "end": 0.82,
+      "probability": 0.9868000745773315
+    },
+    {
+      "word": " code",
+      "start": 0.82,
+      "end": 1.04,
+      "probability": 0.9983830451965332
+    },
+    {
+      "word": " and",
+      "start": 1.04,
+      "end": 1.28,
+      "probability": 0.9256362318992615
+    },
+    {
+      "word": " recent",
+      "start": 1.28,
+      "end": 1.52,
+      "probability": 0.9821808338165283
+    },
+    {
+      "word": " changes.",
+      "start": 1.52,
+      "end": 2.04,
+      "probability": 0.9988998174667358
+    }
+  ]
+}

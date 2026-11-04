@@ -1,0 +1,245 @@
+{
+  "duration": 240,
+  "scenes": [
+    {
+      "id": "opening",
+      "start": 0,
+      "end": 24
+    },
+    {
+      "id": "context",
+      "start": 24,
+      "end": 56
+    },
+    {
+      "id": "slack",
+      "start": 56,
+      "end": 119
+    },
+    {
+      "id": "bridge",
+      "start": 119,
+      "end": 130
+    },
+    {
+      "id": "zoom",
+      "start": 130,
+      "end": 211
+    },
+    {
+      "id": "handoff",
+      "start": 211,
+      "end": 231
+    },
+    {
+      "id": "close",
+      "start": 231,
+      "end": 240
+    }
+  ],
+  "lines": [
+    {
+      "id": "open1",
+      "start": 1,
+      "limit": 7.5,
+      "speaker": "narrator",
+      "text": "A quick question. The right person. The wrong time."
+    },
+    {
+      "id": "open2",
+      "start": 9,
+      "limit": 17.8,
+      "speaker": "narrator",
+      "text": "When the context lives with one person, everyone else waits."
+    },
+    {
+      "id": "open3",
+      "start": 19,
+      "limit": 23.6,
+      "speaker": "narrator",
+      "text": "What if the context could stay?"
+    },
+    {
+      "id": "context1",
+      "start": 25,
+      "limit": 30.5,
+      "speaker": "narrator",
+      "text": "Meet AI Peer. A teammate built around your work."
+    },
+    {
+      "id": "context2",
+      "start": 32,
+      "limit": 41,
+      "speaker": "narrator",
+      "text": "Before Manish signs off, his Peer connects the project requirements, his latest handoff, and the release plan."
+    },
+    {
+      "id": "context3",
+      "start": 42,
+      "limit": 48,
+      "speaker": "narrator",
+      "text": "When the requirements change, the new source replaces the old one."
+    },
+    {
+      "id": "context4",
+      "start": 49,
+      "limit": 55.7,
+      "speaker": "narrator",
+      "text": "Manish chooses what it can share, and which decisions must come back to him."
+    },
+    {
+      "id": "slack1",
+      "start": 57,
+      "limit": 62.5,
+      "speaker": "narrator",
+      "text": "Now it's two a.m. in Bengaluru. But Sarah's afternoon is just getting started."
+    },
+    {
+      "id": "slack2",
+      "start": 64,
+      "limit": 70.5,
+      "speaker": "sarah",
+      "text": "Quick question, Manish. Do you need daily totals, or the result for each dispute?"
+    },
+    {
+      "id": "slack3",
+      "start": 72,
+      "limit": 76.8,
+      "speaker": "alex",
+      "text": "It's two a.m. for him. We may have to wait."
+    },
+    {
+      "id": "slack4",
+      "start": 79,
+      "limit": 85,
+      "speaker": "peer",
+      "text": "I'm Manish's AI Peer. He's offline. I can share the project context."
+    },
+    {
+      "id": "slack5",
+      "start": 86,
+      "limit": 96.7,
+      "speaker": "peer",
+      "text": "We need the final won-or-lost result for each dispute, updated hourly. It feeds the reconciliation dashboard. Here's the latest requirement."
+    },
+    {
+      "id": "slack6",
+      "start": 98,
+      "limit": 106,
+      "speaker": "sarah",
+      "text": "Use Dispute Events. It refreshes hourly. The daily summary is too late. I'll send the field mapping."
+    },
+    {
+      "id": "slack7",
+      "start": 107.5,
+      "limit": 112.5,
+      "speaker": "peer",
+      "text": "Thanks, Sarah. I'll include that in Manish's handoff."
+    },
+    {
+      "id": "slack8",
+      "start": 113.5,
+      "limit": 118.4,
+      "speaker": "narrator",
+      "text": "A useful answer. Without waiting for another working day."
+    },
+    {
+      "id": "bridge1",
+      "start": 120,
+      "limit": 128.8,
+      "speaker": "narrator",
+      "text": "Ten minutes later, the same project moves into a Zoom meeting. Manish has asked his Peer to cover the update."
+    },
+    {
+      "id": "zoom1",
+      "start": 131,
+      "limit": 137.5,
+      "speaker": "alex",
+      "text": "Hey Manish, where are we on Chargebacks? Are we ready for Friday?"
+    },
+    {
+      "id": "zoom2",
+      "start": 139,
+      "limit": 145.5,
+      "speaker": "sarah",
+      "text": "I don't think Manish is here. It's past two in the morning for him."
+    },
+    {
+      "id": "zoom3",
+      "start": 147,
+      "limit": 155.5,
+      "speaker": "peer",
+      "text": "Hi, I'm Manish's AI Peer. He couldn't join, so he asked me to cover this update."
+    },
+    {
+      "id": "zoom4",
+      "start": 157,
+      "limit": 159.8,
+      "speaker": "alex",
+      "text": "Great. What's still blocking us?"
+    },
+    {
+      "id": "zoom5",
+      "start": 161,
+      "limit": 173.4,
+      "speaker": "peer",
+      "text": "The dashboard build is complete. Two data checks are still open: the same event arriving twice, and an outcome changing later."
+    },
+    {
+      "id": "zoom6",
+      "start": 175,
+      "limit": 182.5,
+      "speaker": "peer",
+      "text": "Sarah just confirmed the hourly data source in Slack. So that question is answered."
+    },
+    {
+      "id": "zoom7",
+      "start": 184,
+      "limit": 188.8,
+      "speaker": "sarah",
+      "text": "I can provide those two test examples today."
+    },
+    {
+      "id": "zoom8",
+      "start": 190,
+      "limit": 193.1,
+      "speaker": "alex",
+      "text": "Can we confirm Friday, then?"
+    },
+    {
+      "id": "zoom9",
+      "start": 194.5,
+      "limit": 204.7,
+      "speaker": "peer",
+      "text": "That needs Manish's approval. I'll take back the test plan and ask him to confirm the date once validation is complete."
+    },
+    {
+      "id": "zoom10",
+      "start": 206,
+      "limit": 210.5,
+      "speaker": "alex",
+      "text": "Perfect. We can keep validation moving."
+    },
+    {
+      "id": "handoff1",
+      "start": 212,
+      "limit": 220,
+      "speaker": "narrator",
+      "text": "Morning. Manish returns to the answer from Slack, the test plan from Zoom, and the sources behind both."
+    },
+    {
+      "id": "handoff2",
+      "start": 222,
+      "limit": 229.5,
+      "speaker": "narrator",
+      "text": "One decision still needs him: the launch date. Less catching up. A clear next step."
+    },
+    {
+      "id": "close1",
+      "start": 232,
+      "limit": 239,
+      "speaker": "narrator",
+      "text": "Your work has a timezone. Your Peer doesn't. AI Peer. Keep the context moving."
+    }
+  ]
+}

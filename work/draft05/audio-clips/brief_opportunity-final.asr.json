@@ -1,0 +1,156 @@
+{
+  "sha256": "a1421bdeb4e2e1ad1eb3d88c05d9a78df8d91b225a27f4c540c500e33e596b7c",
+  "text": "Payments ML is driving the chargeback prevention pilot. Your earlier prototype is relevant. I've prepared a brief for the discussion. Thank you for your discussion.",
+  "words": [
+    {
+      "word": " Payments",
+      "start": 0.0,
+      "end": 0.22,
+      "probability": 0.34045475721359253
+    },
+    {
+      "word": " ML",
+      "start": 0.22,
+      "end": 0.52,
+      "probability": 0.8537697792053223
+    },
+    {
+      "word": " is",
+      "start": 0.52,
+      "end": 0.96,
+      "probability": 0.9950023293495178
+    },
+    {
+      "word": " driving",
+      "start": 0.96,
+      "end": 1.24,
+      "probability": 0.9902964234352112
+    },
+    {
+      "word": " the",
+      "start": 1.24,
+      "end": 1.54,
+      "probability": 0.9958423972129822
+    },
+    {
+      "word": " chargeback",
+      "start": 1.54,
+      "end": 2.08,
+      "probability": 0.6441554427146912
+    },
+    {
+      "word": " prevention",
+      "start": 2.08,
+      "end": 2.32,
+      "probability": 0.9892968535423279
+    },
+    {
+      "word": " pilot.",
+      "start": 2.32,
+      "end": 2.88,
+      "probability": 0.9963691234588623
+    },
+    {
+      "word": " Your",
+      "start": 3.6,
+      "end": 3.62,
+      "probability": 0.9884923696517944
+    },
+    {
+      "word": " earlier",
+      "start": 3.62,
+      "end": 3.94,
+      "probability": 0.989611029624939
+    },
+    {
+      "word": " prototype",
+      "start": 3.94,
+      "end": 4.42,
+      "probability": 0.9965907335281372
+    },
+    {
+      "word": " is",
+      "start": 4.42,
+      "end": 4.78,
+      "probability": 0.998547375202179
+    },
+    {
+      "word": " relevant.",
+      "start": 4.78,
+      "end": 5.0,
+      "probability": 0.9880706071853638
+    },
+    {
+      "word": " I've",
+      "start": 5.74,
+      "end": 5.8,
+      "probability": 0.9625013172626495
+    },
+    {
+      "word": " prepared",
+      "start": 5.8,
+      "end": 6.08,
+      "probability": 0.9981176853179932
+    },
+    {
+      "word": " a",
+      "start": 6.08,
+      "end": 6.24,
+      "probability": 0.9982491731643677
+    },
+    {
+      "word": " brief",
+      "start": 6.24,
+      "end": 6.52,
+      "probability": 0.999384880065918
+    },
+    {
+      "word": " for",
+      "start": 6.52,
+      "end": 6.68,
+      "probability": 0.9943051934242249
+    },
+    {
+      "word": " the",
+      "start": 6.68,
+      "end": 6.8,
+      "probability": 0.994040310382843
+    },
+    {
+      "word": " discussion.",
+      "start": 6.8,
+      "end": 7.14,
+      "probability": 0.9975351095199585
+    },
+    {
+      "word": " Thank",
+      "start": 7.14,
+      "end": 7.14,
+      "probability": 0.03544239699840546
+    },
+    {
+      "word": " you",
+      "start": 7.14,
+      "end": 7.14,
+      "probability": 0.9780558347702026
+    },
+    {
+      "word": " for",
+      "start": 7.14,
+      "end": 7.14,
+      "probability": 0.49720901250839233
+    },
+    {
+      "word": " your",
+      "start": 7.14,
+      "end": 7.26,
+      "probability": 0.41860637068748474
+    },
+    {
+      "word": " discussion.",
+      "start": 7.26,
+      "end": 7.28,
+      "probability": 0.2862924337387085
+    }
+  ]
+}

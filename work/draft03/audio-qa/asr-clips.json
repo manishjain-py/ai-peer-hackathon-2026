@@ -1,0 +1,158 @@
+[
+  {
+    "id": "problem1",
+    "script": "A change to your service. A deadline in your inbox. A teammate waiting on an answer.",
+    "recognized": "a change to your service, a deadline in your inbox, a teammate waiting on an answer. for the next week. Thank you, Mr. Mr. Mr. Mr.",
+    "match": 0.7619047619047619
+  },
+  {
+    "id": "problem2",
+    "script": "Important things arrive all day. Finding what matters, and keeping everyone up to date, still falls on you.",
+    "recognized": "Important things arrive all day, finding what matters, and keeping everyone up to date still falls on you.",
+    "match": 1.0
+  },
+  {
+    "id": "reveal",
+    "script": "Meet AI Peer. It knows your work, brings you what matters, and helps your team when you're away.",
+    "recognized": "Meet AIP here. It knows your work, brings you what matters, and helps your team when you're away. away.",
+    "match": 0.8648648648648649
+  },
+  {
+    "id": "context",
+    "script": "It connects your projects, services, conversations, and decisions. It keeps watch on the sources you allow, with the boundaries you choose.",
+    "recognized": "It connects your projects, services, conversations and decisions. It keeps watch on the sources you allow, with the boundaries you choose.",
+    "match": 1.0
+  },
+  {
+    "id": "brief_intro",
+    "script": "Start your day with a brief built around you.",
+    "recognized": "Start your day with a brief build around you.",
+    "match": 0.8888888888888888
+  },
+  {
+    "id": "brief_change",
+    "script": "First, the dispute feed is changing. It affects your Chargebacks service. I've pulled together the migration guide and the code to review.",
+    "recognized": "First, the dispute feed is changing. It affects your chargeback service. Have pulled together the migration guide and the code to review.",
+    "match": 0.9090909090909091
+  },
+  {
+    "id": "brief_event",
+    "script": "Today's data office hours cover results that change later, one of your open checks. I've drafted the question you need answered.",
+    "recognized": "Today's data office hours cover results that change later. One of your open checks, I've drafted the question you need answered.",
+    "match": 1.0
+  },
+  {
+    "id": "brief_opportunity",
+    "script": "And the company hackathon opens Friday. The agent track fits your handoff idea. Here's a draft pitch, if you want to take it further.",
+    "recognized": "And the company Hackathon opens Friday. The agent track fits your handoff idea. Here's a draft pitch if you want to take it further. further.",
+    "match": 0.9795918367346939
+  },
+  {
+    "id": "brief_payoff",
+    "script": "What matters, and what to do next.",
+    "recognized": "what matters and what to do next.",
+    "match": 1.0
+  },
+  {
+    "id": "offline",
+    "script": "Later, when Manish goes offline, his team still needs context.",
+    "recognized": "Later, when Manish goes offline, his team still needs context.",
+    "match": 1.0
+  },
+  {
+    "id": "slack_sarah",
+    "script": "Manish, daily totals or each dispute's final result?",
+    "recognized": "Manish, daily totals or each dispute's final result.",
+    "match": 1.0
+  },
+  {
+    "id": "slack_alex",
+    "script": "It's two a.m. for him.",
+    "recognized": "It's 2 a.m. for him.",
+    "match": 0.5454545454545454
+  },
+  {
+    "id": "slack_peer",
+    "script": "I am Manish's AI Peer. Each dispute's final result, updated hourly. Here's the requirement.",
+    "recognized": "I'm Manish's AI peer. Each disputes final result, updated hourly. Here's the requirement. environment.",
+    "match": 0.8571428571428571
+  },
+  {
+    "id": "slack_reply",
+    "script": "Use Dispute Events. It updates hourly. I'll send the new field mapping.",
+    "recognized": "Use dispute events. It updates hourly. I'll send the new field mapping. In this case, I was able to make that happen. No.",
+    "match": 0.6857142857142857
+  },
+  {
+    "id": "slack_ack",
+    "script": "Thanks. I'll add it to his morning brief.",
+    "recognized": "Thanks! I'll add it to his morning brief.",
+    "match": 1.0
+  },
+  {
+    "id": "meeting_bridge",
+    "script": "Next, a project sync he's delegated to his Peer.",
+    "recognized": "Next, a project sink he's delegated to is pure.",
+    "match": 0.6666666666666666
+  },
+  {
+    "id": "zoom_ask",
+    "script": "Manish's Peer, what's the Chargebacks status?",
+    "recognized": "Manish's peer was the chargeback status.",
+    "match": 0.6666666666666666
+  },
+  {
+    "id": "zoom_update",
+    "script": "The build is ready. Two checks remain: repeated events, and results that change later.",
+    "recognized": "The build is ready. Two checks remain. Repeated events and results that change later.",
+    "match": 1.0
+  },
+  {
+    "id": "zoom_source",
+    "script": "Sarah's confirmed the hourly source in Slack.",
+    "recognized": "Sarah's confirmed the hourly source in slack.",
+    "match": 1.0
+  },
+  {
+    "id": "zoom_sarah",
+    "script": "I'll send both examples.",
+    "recognized": "I'll send both examples.",
+    "match": 1.0
+  },
+  {
+    "id": "zoom_date",
+    "script": "Can we lock Friday?",
+    "recognized": "Can we lock Friday?",
+    "match": 1.0
+  },
+  {
+    "id": "zoom_boundary",
+    "script": "That's Manish's call. I'll bring him the test plan and the decision.",
+    "recognized": "That's Manish's call. I'll bring him the test plan and the decision.",
+    "match": 1.0
+  },
+  {
+    "id": "return1",
+    "script": "Morning. The mapping's here, and Sarah's offered the test examples.",
+    "recognized": "Morning, the mappings here and Sarah's offered the test examples.",
+    "match": 1.0
+  },
+  {
+    "id": "return2",
+    "script": "Next, follow up on validation, then decide on Friday. Your hackathon pitch is saved.",
+    "recognized": "Next, follow up on Validation. Then, decide on Friday. Your hackathon pitch is saved.",
+    "match": 1.0
+  },
+  {
+    "id": "return3",
+    "script": "Less time piecing it together. More room for your best work.",
+    "recognized": "Less time piecing it together. More room for your best work. work. Thank you.",
+    "match": 0.88
+  },
+  {
+    "id": "close",
+    "script": "AI Peer. Your work. A step ahead.",
+    "recognized": "AIP here, your work, a step ahead.",
+    "match": 0.7142857142857143
+  }
+]

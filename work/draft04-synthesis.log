@@ -1,0 +1,17 @@
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 4879.93it/s]
+[transformers] You are using a model of type `qwen3_tts` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+  Initialized encoder codebooks
+Loaded speech tokenizer from /Users/manishjain/.cache/huggingface/hub/models--mlx-community--Qwen3-TTS-12Hz-1.7B-VoiceDesign-4bit/snapshots/5c390979e4b93af5f2932f90742ca99c7dd04687/speech_tokenizer
+SYNTH intro_day: 1.12s for 1.05s window (Authored American English presenter)
+SYNTH intro_routine: 2.08s for 2.60s window (Authored American English presenter)
+SYNTH intro_inbox: 2.08s for 3.15s window (Authored American English presenter)
+SYNTH intro_pings: 2.08s for 3.00s window (Authored American English presenter)
+SYNTH intro_meetings: 3.20s for 3.60s window (Authored American English presenter)
+SYNTH intro_focus: 2.96s for 3.30s window (Authored American English presenter)
+SYNTH intro_relief: 3.84s for 5.35s window (Authored American English presenter)
+SYNTH intro_create: 3.28s for 3.40s window (Authored American English presenter)
+SYNTH intro_profile: 5.44s for 6.45s window (Authored American English presenter)
+SYNTH intro_sourcegraph: 2.88s for 3.80s window (Authored American English presenter)
+SYNTH intro_github: 4.32s for 2.95s window (Authored American English presenter)
+SYNTH intro_access: 4.72s for 5.30s window (Authored American English presenter)
+SYNTH intro_ready: 1.28s for 2.45s window (Authored American English presenter)

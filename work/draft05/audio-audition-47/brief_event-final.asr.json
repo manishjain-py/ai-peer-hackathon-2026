@@ -1,0 +1,144 @@
+{
+  "sha256": "1917c992df6cff35439a419207657102d4e0450fe6b11d2f1beec45b6118ff8e",
+  "text": "Weather protection still needs product identity and policy results. Trans integration work depends on those answers. I've drafted a question for the owners.",
+  "words": [
+    {
+      "word": " Weather",
+      "start": 0.0,
+      "end": 0.24,
+      "probability": 0.8923041820526123
+    },
+    {
+      "word": " protection",
+      "start": 0.24,
+      "end": 0.54,
+      "probability": 0.9292404055595398
+    },
+    {
+      "word": " still",
+      "start": 0.54,
+      "end": 1.06,
+      "probability": 0.9977377653121948
+    },
+    {
+      "word": " needs",
+      "start": 1.06,
+      "end": 1.34,
+      "probability": 0.9951459765434265
+    },
+    {
+      "word": " product",
+      "start": 1.34,
+      "end": 1.68,
+      "probability": 0.9812394380569458
+    },
+    {
+      "word": " identity",
+      "start": 1.68,
+      "end": 2.26,
+      "probability": 0.9718176126480103
+    },
+    {
+      "word": " and",
+      "start": 2.26,
+      "end": 2.6,
+      "probability": 0.9870196580886841
+    },
+    {
+      "word": " policy",
+      "start": 2.6,
+      "end": 2.96,
+      "probability": 0.9986047148704529
+    },
+    {
+      "word": " results.",
+      "start": 2.96,
+      "end": 3.46,
+      "probability": 0.999213457107544
+    },
+    {
+      "word": " Trans",
+      "start": 4.3,
+      "end": 4.38,
+      "probability": 0.31177687644958496
+    },
+    {
+      "word": " integration",
+      "start": 4.38,
+      "end": 4.86,
+      "probability": 0.7471560835838318
+    },
+    {
+      "word": " work",
+      "start": 4.86,
+      "end": 5.44,
+      "probability": 0.9980226755142212
+    },
+    {
+      "word": " depends",
+      "start": 5.44,
+      "end": 5.64,
+      "probability": 0.9991251826286316
+    },
+    {
+      "word": " on",
+      "start": 5.64,
+      "end": 6.08,
+      "probability": 0.9990450739860535
+    },
+    {
+      "word": " those",
+      "start": 6.08,
+      "end": 6.28,
+      "probability": 0.9965375661849976
+    },
+    {
+      "word": " answers.",
+      "start": 6.28,
+      "end": 6.66,
+      "probability": 0.9989644289016724
+    },
+    {
+      "word": " I've",
+      "start": 7.62,
+      "end": 7.64,
+      "probability": 0.9888963103294373
+    },
+    {
+      "word": " drafted",
+      "start": 7.64,
+      "end": 7.84,
+      "probability": 0.9967380166053772
+    },
+    {
+      "word": " a",
+      "start": 7.84,
+      "end": 8.1,
+      "probability": 0.9970852732658386
+    },
+    {
+      "word": " question",
+      "start": 8.1,
+      "end": 8.42,
+      "probability": 0.9981254935264587
+    },
+    {
+      "word": " for",
+      "start": 8.42,
+      "end": 8.72,
+      "probability": 0.9957386255264282
+    },
+    {
+      "word": " the",
+      "start": 8.72,
+      "end": 8.82,
+      "probability": 0.9980260729789734
+    },
+    {
+      "word": " owners.",
+      "start": 8.82,
+      "end": 9.0,
+      "probability": 0.9933544397354126
+    }
+  ]
+}

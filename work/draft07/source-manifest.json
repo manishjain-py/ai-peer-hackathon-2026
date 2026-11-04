@@ -1,0 +1,17 @@
+{
+  "video/src/draft07/Shared.tsx": "9bfa5bd219f1ae2dc3dd771ddeb4565dde71326151bccbe390a74eecfc1acf67",
+  "video/src/draft07/OverloadScene.tsx": "bd4bb92868af1e10940b586cdc606daebe4b408c4dd431d6ebc03680e3408d74",
+  "video/src/draft07/ZoomScene.tsx": "f00618962721f06dc8c51ffc4ac68e9413473470f9fd029a99e204477d6bb73e",
+  "video/src/draft07/Film07.tsx": "845324d4e0e7a43cff971adb7a15f5a3853f14e1fe2f1bb49be84689ff75dc82",
+  "video/src/draft07/SeatedEmployee.tsx": "e400b1f8d0a0be437d8031388abefb28b02f90d36ce68a8b8264c9de129d9840",
+  "video/src/draft07/StoryScenes.tsx": "80f71aaaf215f5e539d6a0afe90e0fc7464ffe09b7fff77d765c58af4867c303",
+  "video/src/draft07/SetupScene.tsx": "1f653dae1f5841eafc127d38817606c99b34a20529e3ca654e945fbe3ec1da6b",
+  "video/public/draft07/opening/employee-concerned.png": "c52fb6110308e7751e6a0894118cc9792047a8646b28deb87652c32a58a7bcf2",
+  "video/public/draft07/opening/employee-happy.png": "4ed6d0ff7961fef973f89c582206a4ba797933d6b53cd163e8b7a2420dd1adac",
+  "video/public/draft07/opening/employee-neutral.png": "0c98d690bc178f880a4cfe30fc805cbae347fefdbf12bf05d75e0297f32c1d7c",
+  "video/public/draft07/script.json": "a8e55e9d1be756f69fb5645d182665bf97018dba9b12ed41d0eba44c568de820",
+  "video/public/draft07/audio/timing.json": "812bd8ae1fb5f7570c3af745d49b92665a5f59c3c4335be2714ecb8b9bcde429",
+  "video/public/draft07/audio/mixed.wav": "f5103068e28c99053f562e95467c89651c44b1be6b7cbade7dd01a37e733b35f",
+  "video/scripts/render-07.mjs": "c4c3defe942a7a13f1e1b4ad54a3d789b77de49f79aa34c8e620e6bbe8efc2d2",
+  "video/scripts/finalize-07.sh": "438eb4c4c33b8f10739e9eb2d33139ed0758b0d22db116b05e6c406dfd8f0cc3"
+}

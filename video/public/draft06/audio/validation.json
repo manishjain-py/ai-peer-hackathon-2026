@@ -1,0 +1,101 @@
+{
+  "validation": "PASS",
+  "checks": {
+    "narration": {
+      "frames": 11520000,
+      "duration": 240.0,
+      "channels": 2,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    },
+    "music": {
+      "frames": 11520000,
+      "duration": 240.0,
+      "channels": 2,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    },
+    "effects": {
+      "frames": 11520000,
+      "duration": 240.0,
+      "channels": 2,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    },
+    "mixed": {
+      "frames": 11520000,
+      "duration": 240.0,
+      "channels": 2,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    },
+    "music-unducked": {
+      "frames": 11520000,
+      "duration": 240.0,
+      "channels": 2,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "loudness": {
+    "integrated_lufs": -16.0,
+    "true_peak_dbfs": -2.8,
+    "loudness_range_lu": 8.1,
+    "summary": "Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -27.3 LUFS\n\n  Loudness range:\n    LRA:         8.1 LU\n    Threshold: -37.3 LUFS\n    LRA low:   -22.8 LUFS\n    LRA high:  -14.7 LUFS\n\n  True peak:\n    Peak:       -2.8 dBFS"
+  },
+  "all_clips_within_scene_windows": true,
+  "speech_overlap": false,
+  "maximum_time_stretch": 1.0,
+  "stems_sum_to_mix": true,
+  "stem_rounding_error": 3.5762786865234375e-07,
+  "captions": {
+    "count": 79,
+    "non_overlapping": true,
+    "within_video": true,
+    "all_script_text_preserved": true
+  },
+  "direct_listening_performed": false,
+  "direct_listening_limitation": "No audio-listening input tool was available; numerical and ASR QA do not replace human listening.",
+  "voice_provider": "ElevenLabs",
+  "voice_engine": "eleven_multilingual_v2",
+  "all_speech_new": true,
+  "script_sha256": "66cb480c15183c8109d50445a58a9e551a553ecf59a2ff770cbff5c39fecdb52",
+  "mix_sha256": "6e3c33fee0dc72ed330e94674396061910ebf18e22469c7ea199d6d0517ddde6",
+  "word_alignment": "ElevenLabs supplied character timing",
+  "supporting_asr": {
+    "model": "Whisper small.en",
+    "count": 39,
+    "path": "../../../../work/draft06/audio-qa/asr-small.json",
+    "note": "Supporting content recognition, not listening or voice-naturalness approval."
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "sha256": "b7bf9e9d27c20182dddec2867b925726d7b0c7bad14c7ccb4314c894ac119605",
+  "text": "Manus' Pier? Where are we on premium chargebacks?",
+  "words": [
+    {
+      "word": " Manus'",
+      "start": 0.0,
+      "end": 0.56,
+      "probability": 0.7420963644981384
+    },
+    {
+      "word": " Pier?",
+      "start": 0.74,
+      "end": 1.1,
+      "probability": 0.25213322043418884
+    },
+    {
+      "word": " Where",
+      "start": 2.0,
+      "end": 2.3,
+      "probability": 0.9639763236045837
+    },
+    {
+      "word": " are",
+      "start": 2.3,
+      "end": 2.44,
+      "probability": 0.956027090549469
+    },
+    {
+      "word": " we",
+      "start": 2.44,
+      "end": 2.58,
+      "probability": 0.9960058331489563
+    },
+    {
+      "word": " on",
+      "start": 2.58,
+      "end": 2.82,
+      "probability": 0.9935815334320068
+    },
+    {
+      "word": " premium",
+      "start": 2.82,
+      "end": 3.38,
+      "probability": 0.8518176078796387
+    },
+    {
+      "word": " chargebacks?",
+      "start": 3.38,
+      "end": 4.14,
+      "probability": 0.8833075761795044
+    }
+  ]
+}

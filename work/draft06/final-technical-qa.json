@@ -1,0 +1,145 @@
+{
+  "status": "PASS",
+  "duration_seconds": 240,
+  "expected_frames": 7200,
+  "script_sha256": "66cb480c15183c8109d50445a58a9e551a553ecf59a2ff770cbff5c39fecdb52",
+  "exports": [
+    {
+      "path": "renders/ai-peer-draft-06.mp4",
+      "bytes": 23378607,
+      "sha256": "f14372ae6597356800e0651852c6c249adaddd03c8a913538c6b421d2e42f7a3",
+      "video": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30.0,
+        "metadata_frames": 7200,
+        "decoded_frames": 7200,
+        "duration": 240.0,
+        "pixel_format": "yuvj420p"
+      },
+      "audio": {
+        "codec": "aac",
+        "profile": "LC",
+        "sample_rate": 48000,
+        "channels": 2,
+        "channel_layout": "stereo",
+        "duration": 240.0,
+        "bit_rate": 193021,
+        "integrated_lufs": -16.0,
+        "true_peak_dbfs": -2.7,
+        "loudness_range_lu": 8.1
+      },
+      "full_decode": {
+        "result": "PASS",
+        "actual_video_frames": 7200,
+        "errors": 0,
+        "log": "work/draft06/ai-peer-draft-06-decode-loudness.log"
+      },
+      "subtitle_streams": 0,
+      "no_additional_subtitle_stream": true,
+      "fast_start": true,
+      "top_level_atoms": [
+        {
+          "type": "ftyp",
+          "offset": 0,
+          "bytes": 32
+        },
+        {
+          "type": "moov",
+          "offset": 32,
+          "bytes": 264283
+        },
+        {
+          "type": "free",
+          "offset": 264315,
+          "bytes": 8
+        },
+        {
+          "type": "mdat",
+          "offset": 264323,
+          "bytes": 23114284
+        }
+      ],
+      "captions": {
+        "count": 79,
+        "non_overlapping": true,
+        "within_video": true,
+        "matches_source_bytes": true,
+        "first_start": 0.6,
+        "last_end": 237.864,
+        "sha256": "cfde848427c3e989f0cbb50a740415fcdc024b612f4389501b4592a47410d9b3"
+      }
+    },
+    {
+      "path": "renders/ai-peer-draft-06-preview.mp4",
+      "bytes": 10130883,
+      "sha256": "f4419fe1d7652af56772692b3172ccda3c3bc92a487b0f76e56f20f944b6ecf4",
+      "video": {
+        "codec": "h264",
+        "width": 960,
+        "height": 540,
+        "fps": 30.0,
+        "metadata_frames": 7200,
+        "decoded_frames": 7200,
+        "duration": 240.0,
+        "pixel_format": "yuvj420p"
+      },
+      "audio": {
+        "codec": "aac",
+        "profile": "LC",
+        "sample_rate": 48000,
+        "channels": 2,
+        "channel_layout": "stereo",
+        "duration": 240.0,
+        "bit_rate": 193021,
+        "integrated_lufs": -16.0,
+        "true_peak_dbfs": -2.7,
+        "loudness_range_lu": 8.1
+      },
+      "full_decode": {
+        "result": "PASS",
+        "actual_video_frames": 7200,
+        "errors": 0,
+        "log": "work/draft06/ai-peer-draft-06-preview-decode-loudness.log"
+      },
+      "subtitle_streams": 0,
+      "no_additional_subtitle_stream": true,
+      "fast_start": true,
+      "top_level_atoms": [
+        {
+          "type": "ftyp",
+          "offset": 0,
+          "bytes": 32
+        },
+        {
+          "type": "moov",
+          "offset": 32,
+          "bytes": 263539
+        },
+        {
+          "type": "free",
+          "offset": 263571,
+          "bytes": 8
+        },
+        {
+          "type": "mdat",
+          "offset": 263579,
+          "bytes": 9867304
+        }
+      ],
+      "captions": {
+        "count": 79,
+        "non_overlapping": true,
+        "within_video": true,
+        "matches_source_bytes": true,
+        "first_start": 0.6,
+        "last_end": 237.864,
+        "sha256": "cfde848427c3e989f0cbb50a740415fcdc024b612f4389501b4592a47410d9b3"
+      }
+    }
+  ],
+  "direct_listening_performed": false,
+  "visual_review_scope": "Performed separately by root and independent creative reviewer; this report covers technical export integrity.",
+  "assembly_note": "Full and preview were each fully decoded in their separate audits. Both artifact and caption hashes were rechecked when assembling this combined report; unchanged preview decode evidence was reused."
+}

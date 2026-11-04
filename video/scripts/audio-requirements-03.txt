@@ -1,0 +1,7 @@
+# Tested on Apple Silicon / Python 3.12.14. Draft 03 does not use Edge TTS.
+mlx-audio==0.5.4
+mlx==0.32.2
+numpy==2.5.3
+scipy==1.18.1
+soundfile==0.14.0
+faster-whisper==1.2.1

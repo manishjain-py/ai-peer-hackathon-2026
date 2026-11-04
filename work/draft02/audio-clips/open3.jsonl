@@ -1,0 +1,6 @@
+{"type": "WordBoundary", "offset": 1000000, "duration": 2125000, "text": "What"}
+{"type": "WordBoundary", "offset": 3250000, "duration": 750000, "text": "if"}
+{"type": "WordBoundary", "offset": 4125000, "duration": 750000, "text": "the"}
+{"type": "WordBoundary", "offset": 5000000, "duration": 5250000, "text": "context"}
+{"type": "WordBoundary", "offset": 10375000, "duration": 1250000, "text": "could"}
+{"type": "WordBoundary", "offset": 11750000, "duration": 4375000, "text": "stay"}

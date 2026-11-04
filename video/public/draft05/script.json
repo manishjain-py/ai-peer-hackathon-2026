@@ -1,0 +1,453 @@
+{
+  "duration": 196,
+  "beatOrigin": 20,
+  "tagline": "Your work. A step ahead.",
+  "scenes": [
+    {
+      "id": "overload",
+      "start": 0,
+      "end": 20
+    },
+    {
+      "id": "relief",
+      "start": 20,
+      "end": 26
+    },
+    {
+      "id": "setup",
+      "start": 26,
+      "end": 62
+    },
+    {
+      "id": "brief",
+      "start": 62,
+      "end": 102
+    },
+    {
+      "id": "offline",
+      "start": 102,
+      "end": 108
+    },
+    {
+      "id": "slack",
+      "start": 108,
+      "end": 136
+    },
+    {
+      "id": "meeting_bridge",
+      "start": 136,
+      "end": 142
+    },
+    {
+      "id": "zoom",
+      "start": 142,
+      "end": 168
+    },
+    {
+      "id": "return",
+      "start": 168,
+      "end": 188
+    },
+    {
+      "id": "close",
+      "start": 188,
+      "end": 196
+    }
+  ],
+  "lines": [
+    {
+      "id": "intro_day",
+      "start": 0.3,
+      "limit": 1.5,
+      "speaker": "narrator",
+      "text": "Your day begins."
+    },
+    {
+      "id": "intro_routine",
+      "start": 1.65,
+      "limit": 4.25,
+      "speaker": "narrator",
+      "text": "A quick question about the runbook."
+    },
+    {
+      "id": "intro_inbox",
+      "start": 4.75,
+      "limit": 7.9,
+      "speaker": "narrator",
+      "text": "A hundred and fifty unread emails."
+    },
+    {
+      "id": "intro_pings",
+      "start": 8.25,
+      "limit": 11.25,
+      "speaker": "narrator",
+      "text": "Ten Slack pings, one after another."
+    },
+    {
+      "id": "intro_meetings",
+      "start": 11.75,
+      "limit": 15.35,
+      "speaker": "narrator",
+      "text": "Three meeting invites. Two after hours."
+    },
+    {
+      "id": "intro_focus",
+      "start": 15.75,
+      "limit": 19.05,
+      "speaker": "narrator",
+      "text": "Your attention. Everywhere except where you need it."
+    },
+    {
+      "id": "intro_relief",
+      "start": 20.25,
+      "limit": 25.6,
+      "speaker": "narrator",
+      "text": "Meet AI Peer. So you can focus where you're needed most."
+    },
+    {
+      "id": "intro_create",
+      "start": 26.3,
+      "limit": 29.7,
+      "speaker": "narrator",
+      "text": "Start with one click: Create my AI Peer."
+    },
+    {
+      "id": "intro_profile",
+      "start": 30.15,
+      "limit": 36.6,
+      "speaker": "narrator",
+      "text": "Your One Airbnb profile brings in your role, Risk Partner Systems, and your projects."
+    },
+    {
+      "id": "intro_github",
+      "start": 37,
+      "limit": 42.8,
+      "speaker": "narrator",
+      "text": "GitHub connects your team's repositories, services, and recent changes."
+    },
+    {
+      "id": "intro_airchat",
+      "start": 43.2,
+      "limit": 53.8,
+      "speaker": "narrator",
+      "text": "Install the AI Peer plugin in AirChat. It follows local projects, current progress and uncommitted changes, even before you push to GitHub."
+    },
+    {
+      "id": "intro_access",
+      "start": 55.1,
+      "limit": 59,
+      "speaker": "narrator",
+      "text": "Choose Slack and Zoom access. Keep decisions with you."
+    },
+    {
+      "id": "intro_ready",
+      "start": 59.25,
+      "limit": 61.7,
+      "speaker": "narrator",
+      "text": "Your Peer is ready."
+    },
+    {
+      "id": "brief_intro",
+      "start": 62.3,
+      "limit": 66.7,
+      "speaker": "narrator",
+      "text": "Start your day with a brief built around you."
+    },
+    {
+      "id": "brief_change",
+      "start": 67,
+      "limit": 76.45,
+      "speaker": "peer",
+      "text": "First, premium chargebacks. Deploy the backend before validating the new interface in production. I've linked that to your local work in AirChat."
+    },
+    {
+      "id": "brief_event",
+      "start": 76.6,
+      "limit": 86.1,
+      "speaker": "peer",
+      "text": "Weather Protection still needs product identity and policy results. Charan's integration work depends on those answers. I've drafted a question for the owners.",
+      "seed": 47,
+      "direction": "Speak naturally in fluent American English. A helpful male colleague giving a concise update on a video call. Calm, warm, practical and confident. Brisk, connected, conversational phrasing with varied natural inflection and short pauses. No robot voice, no announcer voice, no dramatic emphasis. Pronounce the name Charan as chuh-run, in two clear syllables."
+    },
+    {
+      "id": "brief_opportunity",
+      "start": 86.5,
+      "limit": 96.8,
+      "speaker": "peer",
+      "text": "Payments ML is driving the chargeback-prevention pilot. Your earlier prototype is relevant. I've prepared a brief for the discussion."
+    },
+    {
+      "id": "brief_payoff",
+      "start": 97.2,
+      "limit": 101.5,
+      "speaker": "narrator",
+      "text": "What matters, and what to do next."
+    },
+    {
+      "id": "offline",
+      "start": 102.3,
+      "limit": 107.6,
+      "speaker": "narrator",
+      "text": "Later, when Manish goes offline, his team still needs context."
+    },
+    {
+      "id": "slack_sarah",
+      "start": 108.3,
+      "limit": 113.92,
+      "speaker": "sarah",
+      "text": "For premium chargebacks, do analysts need booking totals, or disputed amounts by product?"
+    },
+    {
+      "id": "slack_alex",
+      "start": 114.17,
+      "limit": 116.9863,
+      "speaker": "alex",
+      "text": "Manish is offline. It's two a.m."
+    },
+    {
+      "id": "slack_peer",
+      "start": 117.2363,
+      "limit": 124.1348,
+      "speaker": "peer",
+      "text": "I am Manish's AI Peer. Each product's disputed amount. It shows investigators what the chargeback covers.",
+      "seed": 31
+    },
+    {
+      "id": "slack_reply",
+      "start": 124.3848,
+      "limit": 129.6746,
+      "speaker": "sarah",
+      "text": "Got it. The contract changes are merged. I'll send an example case for validation."
+    },
+    {
+      "id": "slack_ack",
+      "start": 129.9246,
+      "limit": 132.6546,
+      "speaker": "peer",
+      "text": "Thanks. I'll flag that for Manish's brief."
+    },
+    {
+      "id": "meeting_bridge",
+      "start": 136.5,
+      "limit": 141.4,
+      "speaker": "narrator",
+      "text": "Next, a project sync he's delegated to his Peer."
+    },
+    {
+      "id": "zoom_ask",
+      "start": 142.3,
+      "limit": 146.8784,
+      "speaker": "alex",
+      "text": "Manish's Peer, where are we on premium chargebacks?"
+    },
+    {
+      "id": "zoom_update",
+      "start": 147.1284,
+      "limit": 152.747,
+      "speaker": "peer",
+      "text": "The contract changes are merged. The interface and backend changes are still drafts."
+    },
+    {
+      "id": "zoom_source",
+      "start": 152.997,
+      "limit": 158.2086,
+      "speaker": "peer",
+      "text": "Backend deployment comes first. Then we need to validate with a fresh dispute case."
+    },
+    {
+      "id": "zoom_sarah",
+      "start": 158.4586,
+      "limit": 160.8482,
+      "speaker": "sarah",
+      "text": "I'll help coordinate the example case."
+    },
+    {
+      "id": "zoom_date",
+      "start": 161.0982,
+      "limit": 162.7959,
+      "speaker": "alex",
+      "text": "Can we commit to a launch date?"
+    },
+    {
+      "id": "zoom_boundary",
+      "start": 163.0459,
+      "limit": 167.5387,
+      "speaker": "peer",
+      "text": "Not yet. Manish needs to review validation before confirming."
+    },
+    {
+      "id": "return1",
+      "start": 168.5,
+      "limit": 174.7,
+      "speaker": "narrator",
+      "text": "Morning. Your brief connects the partner response with the work still in progress."
+    },
+    {
+      "id": "return2",
+      "start": 174.7,
+      "limit": 182.0,
+      "speaker": "peer",
+      "text": "Next: confirm deployment, validate a fresh case, then decide on launch. Your automation brief is saved."
+    },
+    {
+      "id": "return3",
+      "start": 182.3,
+      "limit": 187.7,
+      "speaker": "narrator",
+      "text": "Less time piecing it together. More room for your best work."
+    },
+    {
+      "id": "close",
+      "start": 189,
+      "limit": 194.5,
+      "speaker": "narrator",
+      "text": "AI Peer. Your work. A step ahead."
+    }
+  ],
+  "effects": [
+    {
+      "time": 1.5,
+      "kind": "attention",
+      "pan": 0.6,
+      "pitch": 79
+    },
+    {
+      "time": 4.5,
+      "kind": "attention",
+      "pan": -0.6,
+      "pitch": 74
+    },
+    {
+      "time": 8,
+      "kind": "attention",
+      "pan": 0.6,
+      "pitch": 79
+    },
+    {
+      "time": 8.6,
+      "kind": "attention",
+      "pan": 0.5,
+      "pitch": 81
+    },
+    {
+      "time": 9.2,
+      "kind": "attention",
+      "pan": 0.4,
+      "pitch": 83
+    },
+    {
+      "time": 11.5,
+      "kind": "attention",
+      "pan": -0.5,
+      "pitch": 72
+    },
+    {
+      "time": 15.3,
+      "kind": "attention",
+      "pan": 0,
+      "pitch": 76
+    },
+    {
+      "time": 19.25,
+      "kind": "intake"
+    },
+    {
+      "time": 20,
+      "kind": "reveal"
+    },
+    {
+      "time": 26,
+      "kind": "transition"
+    },
+    {
+      "time": 29.5,
+      "kind": "connect"
+    },
+    {
+      "time": 30,
+      "kind": "connect"
+    },
+    {
+      "time": 37,
+      "kind": "connect"
+    },
+    {
+      "time": 43,
+      "kind": "connect"
+    },
+    {
+      "time": 45,
+      "kind": "connect"
+    },
+    {
+      "time": 49,
+      "kind": "connect"
+    },
+    {
+      "time": 55,
+      "kind": "connect"
+    },
+    {
+      "time": 57.2,
+      "kind": "connect"
+    },
+    {
+      "time": 59.3,
+      "kind": "settle"
+    },
+    {
+      "time": 62,
+      "kind": "transition"
+    },
+    {
+      "time": 67,
+      "kind": "connect"
+    },
+    {
+      "time": 76.6,
+      "kind": "connect"
+    },
+    {
+      "time": 86.5,
+      "kind": "connect"
+    },
+    {
+      "time": 102,
+      "kind": "transition"
+    },
+    {
+      "time": 108.3,
+      "kind": "message"
+    },
+    {
+      "time": 117.2363,
+      "kind": "message"
+    },
+    {
+      "time": 124.3848,
+      "kind": "message"
+    },
+    {
+      "time": 136,
+      "kind": "transition"
+    },
+    {
+      "time": 142,
+      "kind": "join"
+    },
+    {
+      "time": 147.1284,
+      "kind": "transition"
+    },
+    {
+      "time": 168,
+      "kind": "transition"
+    },
+    {
+      "time": 188,
+      "kind": "reveal"
+    }
+  ],
+  "context_date": "2026-09-19",
+  "disclosure": "Real team context supplied by user; authored interactions, UI and local-work examples. AI Peer and AirChat plugin integration proposed."
+}

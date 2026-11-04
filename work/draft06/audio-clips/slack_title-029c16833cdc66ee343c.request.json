@@ -1,0 +1,18 @@
+{
+  "voice_id": "EXAVITQu4vr4xnSDxMaL",
+  "output_format": "pcm_44100",
+  "body": {
+    "text": "Keep collaboration going across time zones.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0,
+      "speed": 1.0,
+      "use_speaker_boost": true
+    },
+    "seed": 19092026,
+    "previous_text": "A company announcement becomes an early heads-up, with someone to contact.",
+    "next_text": "Manish needs cancellation-window data. The data team works in the U.S."
+  }
+}

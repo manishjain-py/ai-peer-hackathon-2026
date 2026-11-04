@@ -1,0 +1,90 @@
+{
+  "sha256": "50416b75d09bfbcde3120fbca02ccead5ab1e72d6641b93d628e185f9b9a4b81",
+  "text": "I'm Manish's AI peer. Each disputes final result, updated hourly. Here's the requirement. environment.",
+  "words": [
+    {
+      "word": " I'm",
+      "start": 0.0,
+      "end": 0.26,
+      "probability": 0.923741340637207
+    },
+    {
+      "word": " Manish's",
+      "start": 0.26,
+      "end": 0.72,
+      "probability": 0.5762931704521179
+    },
+    {
+      "word": " AI",
+      "start": 0.72,
+      "end": 0.98,
+      "probability": 0.868011474609375
+    },
+    {
+      "word": " peer.",
+      "start": 0.98,
+      "end": 1.34,
+      "probability": 0.5600737929344177
+    },
+    {
+      "word": " Each",
+      "start": 2.5,
+      "end": 2.5,
+      "probability": 0.9888188242912292
+    },
+    {
+      "word": " disputes",
+      "start": 2.5,
+      "end": 2.78,
+      "probability": 0.6630616188049316
+    },
+    {
+      "word": " final",
+      "start": 2.78,
+      "end": 3.22,
+      "probability": 0.9766879677772522
+    },
+    {
+      "word": " result,",
+      "start": 3.22,
+      "end": 3.74,
+      "probability": 0.9775251746177673
+    },
+    {
+      "word": " updated",
+      "start": 4.08,
+      "end": 4.52,
+      "probability": 0.987234890460968
+    },
+    {
+      "word": " hourly.",
+      "start": 4.52,
+      "end": 4.92,
+      "probability": 0.9930009841918945
+    },
+    {
+      "word": " Here's",
+      "start": 5.7,
+      "end": 5.86,
+      "probability": 0.9775315225124359
+    },
+    {
+      "word": " the",
+      "start": 5.86,
+      "end": 5.96,
+      "probability": 0.9973174929618835
+    },
+    {
+      "word": " requirement.",
+      "start": 5.96,
+      "end": 6.2,
+      "probability": 0.8791185617446899
+    },
+    {
+      "word": " environment.",
+      "start": 6.2,
+      "end": 6.5,
+      "probability": 0.5727688074111938
+    }
+  ]
+}

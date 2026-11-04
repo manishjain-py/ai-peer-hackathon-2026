@@ -1,0 +1,57 @@
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 3767.90it/s]
+[transformers] You are using a model of type `qwen3_tts` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+  Initialized encoder codebooks
+Loaded speech tokenizer from /Users/manishjain/.cache/huggingface/hub/models--mlx-community--Qwen3-TTS-12Hz-1.7B-CustomVoice-4bit/snapshots/f35faf19b0cc2160865af64ecf0f22f83d335135/speech_tokenizer
+SYNTH brief_change: 9.36s for 9.20s window (Aiden)
+SYNTH brief_event: 9.36s for 9.50s window (Aiden)
+SYNTH brief_opportunity: 7.44s for 10.30s window (Aiden)
+SYNTH slack_alex: 2.72s for 2.50s window (Ryan)
+SYNTH slack_peer: 7.20s for 6.60s window (Aiden)
+SYNTH slack_ack: 2.64s for 4.30s window (Aiden)
+SYNTH zoom_ask: 4.48s for 3.70s window (Ryan)
+SYNTH zoom_update: 5.52s for 4.55s window (Aiden)
+SYNTH zoom_source: 5.12s for 5.55s window (Aiden)
+SYNTH zoom_date: 1.60s for 2.65s window (Ryan)
+SYNTH zoom_boundary: 4.40s for 4.30s window (Aiden)
+SYNTH return2: 7.20s for 6.80s window (Aiden)
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 2742.87it/s]
+[transformers] You are using a model of type `qwen3_tts` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+  Initialized encoder codebooks
+Loaded speech tokenizer from /Users/manishjain/.cache/huggingface/hub/models--mlx-community--Qwen3-TTS-12Hz-1.7B-VoiceDesign-4bit/snapshots/5c390979e4b93af5f2932f90742ca99c7dd04687/speech_tokenizer
+SYNTH intro_profile: 4.88s for 6.45s window (Authored American English presenter)
+SYNTH intro_github: 4.40s for 5.80s window (Authored American English presenter)
+SYNTH intro_airchat: 8.48s for 10.60s window (Authored American English presenter)
+SYNTH intro_access: 3.04s for 3.90s window (Authored American English presenter)
+SYNTH slack_sarah: 5.52s for 6.40s window (Authored American English male colleague)
+SYNTH slack_reply: 5.20s for 5.80s window (Authored American English male colleague)
+SYNTH zoom_sarah: 2.32s for 2.75s window (Authored American English male colleague)
+SYNTH return1: 4.96s for 6.20s window (Authored American English presenter)
+FIT intro_profile: 30.15–35.03, 1.000x; ASR=1.000: Your one AirBnB profile brings in your role risk partner systems and your projects.
+FIT intro_github: 37.00–41.36, 1.000x; ASR=1.000: GitHub connects your team's repositories, services, and recent changes.
+FIT intro_airchat: 43.20–51.68, 1.000x; ASR=0.933: Install the AI peer plug-in in AirChat. It follows local projects, current progress, and uncommitted changes, even before you push to GitHub.
+FIT intro_access: 55.10–58.13, 1.000x; ASR=1.000: Choose Slack and Zoom Access. Keep decisions with you.
+FIT brief_change: 67.00–76.17, 1.021x; ASR=0.933: First, premium chargebacks. Deploy the back end before validating the new interface in production. I've linked that to your local work in AirChat.
+FIT brief_event: 76.60–85.95, 1.000x; ASR=0.913: Whether protection still needs product identity and policy results. Tran's integration work depends on those answers. I've drafted a question for the owners.
+FIT brief_opportunity: 86.50–93.93, 1.000x; ASR=0.818: Payments ML is driving the chargeback prevention pilot. Your earlier prototype is relevant. I've prepared a brief for the discussion. Thank you for your discussion.
+FIT slack_sarah: 108.30–113.82, 1.000x; ASR=1.000: For premium chargebacks, do analysts need booking totals or disputed amounts by product?
+FIT slack_peer: 118.00–124.58, 1.096x; ASR=0.839: I'm Manish's AI peer. Each product's disputed amount. It shows investigators with the chargeback covers.
+FIT slack_reply: 125.00–130.19, 1.000x; ASR=1.000: Got it. The contract changes are merged. I'll send an example case for validation.
+FIT slack_ack: 131.20–133.83, 1.000x; ASR=0.857: Thanks, I'll flag that for Manisha's brief.
+FIT zoom_source: 151.25–156.36, 1.000x; ASR=0.929: Backing deployment comes first, then we need to validate with a fresh dispute case.
+FIT zoom_sarah: 157.15–159.44, 1.000x; ASR=1.000: I'll help coordinate the example case.
+FIT zoom_date: 160.25–161.85, 1.000x; ASR=1.000: Can we commit to a launch date?
+FIT zoom_boundary: 163.25–167.51, 1.030x; ASR=1.000: Not yet, Manish needs to review validation before confirming.
+FIT return1: 168.50–173.43, 1.000x; ASR=1.000: Morning! Your brief connects the partner response with the work still in progress.
+FIT return2: 175.10–181.88, 1.063x; ASR=1.000: Next, confirm deployment, validate a fresh case, then decide on launch. Your automation brief is saved.
+Traceback (most recent call last):
+  File "/Users/manishjain/repos/Hackathon 2026/video/scripts/audio_build_05.py", line 318, in <module>
+    main()
+  File "/Users/manishjain/repos/Hackathon 2026/video/scripts/audio_build_05.py", line 263, in main
+    voice, timeline = narration(script, records, reusable, new_script)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/manishjain/repos/Hackathon 2026/video/scripts/audio_build_05.py", line 89, in narration
+    voice, timeline = base.narration(new_script, records)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/manishjain/repos/Hackathon 2026/video/scripts/audio_build_03.py", line 207, in narration
+    raise RuntimeError("Adjust copy/windows; no voiced samples cut: "+json.dumps(failures))
+RuntimeError: Adjust copy/windows; no voiced samples cut: [{"id": "slack_alex", "duration": 2.7163333333333335, "window": 2.5, "minimum_limit": 117.619}, {"id": "zoom_ask", "duration": 4.478375, "window": 3.6999999999999886, "minimum_limit": 146.421}, {"id": "zoom_update", "duration": 5.518625, "window": 4.550000000000011, "minimum_limit": 151.417}]

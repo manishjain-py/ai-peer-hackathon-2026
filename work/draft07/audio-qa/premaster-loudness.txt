@@ -1,0 +1,31 @@
+[aist#0:0/pcm_f32le @ 0xb02c0c180] Guessed Channel Layout: stereo
+Input #0, wav, from '/Users/manishjain/repos/Hackathon 2026/work/draft07/audio-qa/premaster.wav':
+  Duration: 00:04:23.00, bitrate: 3072 kb/s
+  Stream #0:0: Audio: pcm_f32le ([3][0][0][0] / 0x0003), 48000 Hz, stereo, flt, 3072 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_f32le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    encoder         : Lavf62.12.102
+  Stream #0:0: Audio: pcm_s16le, 48000 Hz, stereo, s16, 1536 kb/s
+    Metadata:
+      encoder         : Lavc62.28.102 pcm_s16le
+size=N/A time=00:01:45.60 bitrate=N/A speed= 210x elapsed=0:00:00.50    
+size=N/A time=00:03:17.60 bitrate=N/A speed= 197x elapsed=0:00:01.00    
+[Parsed_ebur128_0 @ 0xb0301c9c0] Summary:
+
+  Integrated loudness:
+    I:         -18.1 LUFS
+    Threshold: -29.4 LUFS
+
+  Loudness range:
+    LRA:         8.1 LU
+    Threshold: -39.4 LUFS
+    LRA low:   -24.9 LUFS
+    LRA high:  -16.8 LUFS
+
+  True peak:
+    Peak:       -4.9 dBFS
+[out#0/null @ 0xb0301c240] video:0KiB audio:49312KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:04:23.00 bitrate=N/A speed= 198x elapsed=0:00:01.32    

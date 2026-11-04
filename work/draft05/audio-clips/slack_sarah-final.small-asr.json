@@ -1,0 +1,84 @@
+{
+  "sha256": "66ce66340eedd65393dd2df7fbcaa15559c37738e8d7cd55930487de90ccaf6b",
+  "text": "For premium chargebacks, do analysts need booking totals or disputed amounts by product?",
+  "words": [
+    {
+      "word": " For",
+      "start": 0.0,
+      "end": 0.18,
+      "probability": 0.9453829526901245
+    },
+    {
+      "word": " premium",
+      "start": 0.18,
+      "end": 0.6,
+      "probability": 0.937050998210907
+    },
+    {
+      "word": " chargebacks,",
+      "start": 0.6,
+      "end": 1.26,
+      "probability": 0.875342607498169
+    },
+    {
+      "word": " do",
+      "start": 1.82,
+      "end": 1.9,
+      "probability": 0.9814606308937073
+    },
+    {
+      "word": " analysts",
+      "start": 1.9,
+      "end": 2.32,
+      "probability": 0.9911371469497681
+    },
+    {
+      "word": " need",
+      "start": 2.32,
+      "end": 2.62,
+      "probability": 0.9989097118377686
+    },
+    {
+      "word": " booking",
+      "start": 2.62,
+      "end": 2.98,
+      "probability": 0.9821608066558838
+    },
+    {
+      "word": " totals",
+      "start": 2.98,
+      "end": 3.32,
+      "probability": 0.9988527297973633
+    },
+    {
+      "word": " or",
+      "start": 3.32,
+      "end": 3.74,
+      "probability": 0.9553444385528564
+    },
+    {
+      "word": " disputed",
+      "start": 3.74,
+      "end": 4.22,
+      "probability": 0.9951150417327881
+    },
+    {
+      "word": " amounts",
+      "start": 4.22,
+      "end": 4.58,
+      "probability": 0.9987795948982239
+    },
+    {
+      "word": " by",
+      "start": 4.58,
+      "end": 4.88,
+      "probability": 0.9983190894126892
+    },
+    {
+      "word": " product?",
+      "start": 4.88,
+      "end": 5.24,
+      "probability": 0.9817249774932861
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "sha256": "0ce48422150292c67f042a2767dd489e62d8477ef59dc7732de43688db7af127",
+  "text": "Your one AirBnB profile brings in your role risk partner systems and your projects.",
+  "words": [
+    {
+      "word": " Your",
+      "start": 0.0,
+      "end": 0.12,
+      "probability": 0.9251529574394226
+    },
+    {
+      "word": " one",
+      "start": 0.12,
+      "end": 0.32,
+      "probability": 0.2614102065563202
+    },
+    {
+      "word": " AirBnB",
+      "start": 0.32,
+      "end": 0.92,
+      "probability": 0.6933057904243469
+    },
+    {
+      "word": " profile",
+      "start": 0.92,
+      "end": 1.22,
+      "probability": 0.9362367391586304
+    },
+    {
+      "word": " brings",
+      "start": 1.22,
+      "end": 1.7,
+      "probability": 0.9927969574928284
+    },
+    {
+      "word": " in",
+      "start": 1.7,
+      "end": 1.92,
+      "probability": 0.997802197933197
+    },
+    {
+      "word": " your",
+      "start": 1.92,
+      "end": 2.06,
+      "probability": 0.9945384860038757
+    },
+    {
+      "word": " role",
+      "start": 2.06,
+      "end": 2.3,
+      "probability": 0.8168096542358398
+    },
+    {
+      "word": " risk",
+      "start": 2.3,
+      "end": 2.6,
+      "probability": 0.7122907638549805
+    },
+    {
+      "word": " partner",
+      "start": 2.6,
+      "end": 2.88,
+      "probability": 0.9872165322303772
+    },
+    {
+      "word": " systems",
+      "start": 2.88,
+      "end": 3.32,
+      "probability": 0.9792866706848145
+    },
+    {
+      "word": " and",
+      "start": 3.32,
+      "end": 3.88,
+      "probability": 0.9149605631828308
+    },
+    {
+      "word": " your",
+      "start": 3.88,
+      "end": 4.08,
+      "probability": 0.9865972399711609
+    },
+    {
+      "word": " projects.",
+      "start": 4.08,
+      "end": 4.44,
+      "probability": 0.9528106451034546
+    }
+  ]
+}

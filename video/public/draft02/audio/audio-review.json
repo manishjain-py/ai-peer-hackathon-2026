@@ -1,0 +1,30 @@
+{
+  "script_sha256": "f1f317e07179a8b98a38cc62a79279e852fce034c9e646631c4a40b920a6753a",
+  "script_matches_audio_metadata": true,
+  "script_line_count": 29,
+  "script_word_count": 368,
+  "speech_seconds": 144.576,
+  "all_lines_natural_speed": true,
+  "full_mix_asr_checked_against_entire_script": true,
+  "asr_normalizations": [
+    "2am \u2192 two a.m.",
+    "time zone \u2192 timezone",
+    "case and punctuation"
+  ],
+  "remaining_asr_differences": [
+    {
+      "kind": "replace",
+      "script": "won",
+      "asr": "one"
+    }
+  ],
+  "interpretation": "Only remaining full-mix difference is the won/one homophone; no omitted scripted content was found.",
+  "critical_line_asr_checked": true,
+  "critical_line_review": "Isolated identity clips sometimes transcribe I am Manish's as I am Anisha's. Full-mix transcription recognizes Manish. Data checks, hourly source and launch approval are recovered correctly.",
+  "direct_listening_performed": false,
+  "listening_review_items": [
+    "Name in the Peer introductions",
+    "Naturalness of conversational turn-taking",
+    "Score balance and transition accents"
+  ]
+}

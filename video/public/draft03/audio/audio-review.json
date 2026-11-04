@@ -1,0 +1,91 @@
+{
+  "status": "TECHNICAL_PASS_WITH_LISTENING_LIMITATION",
+  "duration": 166.5,
+  "script_sha256": "5a44f302fbcbdda7b1c3cf80285fbdc8c453d1b5021cf591b5bbf40fc392832f",
+  "mix_sha256": "3d4bbb0fba6cdbb2bdc3b9e2fea24dd684a6dc8931f80972a40bb126c0a700e2",
+  "lines": 26,
+  "captions": 54,
+  "maximum_time_stretch": 1.031863,
+  "zoom_gaps_seconds": [
+    0.35,
+    0.35,
+    0.35,
+    0.35,
+    0.35
+  ],
+  "loudness": {
+    "integrated_lufs": -16.0,
+    "true_peak_dbfs": -1.7,
+    "loudness_range_lu": 6.6,
+    "summary": "Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.6 LUFS\n\n  Loudness range:\n    LRA:         6.6 LU\n    Threshold: -36.6 LUFS\n    LRA low:   -21.0 LUFS\n    LRA high:  -14.3 LUFS\n\n  True peak:\n    Peak:       -1.7 dBFS"
+  },
+  "secondary_asr": {
+    "model": "faster-whisper small.en",
+    "clips": [
+      {
+        "id": "problem1",
+        "transcript": "a change to your service, a deadline in your inbox, a teammate waiting on an answer.",
+        "clip_sha256": "e07f2907b50bb8af9bf8ca5b03e524b174187500201c37c94074262f335ee4c6"
+      },
+      {
+        "id": "reveal",
+        "transcript": "Meet AI Peer. It knows your work, brings you what matters, and helps your team when you're away.",
+        "clip_sha256": "795d95810b63969715d2c5cc01d42eb9cbb920138d46f43dafca63d7e4f3744d"
+      },
+      {
+        "id": "brief_intro",
+        "transcript": "Start your day with a brief build around you.",
+        "clip_sha256": "9b7c2ef10e9384d33d1871a40f2f66cb029dc5a1d4ca3bfdf9a69c017284c582"
+      },
+      {
+        "id": "brief_change",
+        "transcript": "First, the dispute feed is changing. It affects your chargeback service. I've pulled together the migration guide and the code to review",
+        "clip_sha256": "7bc82ea573d16af9e0c352a6a257c65c9093376f628a1a8fdc26f6a58e23543f"
+      },
+      {
+        "id": "brief_opportunity",
+        "transcript": "And the company Hackathon opens Friday. The agent track fits your handoff idea. Here's a draft pitch if you want to take it further.",
+        "clip_sha256": "2f1dce9e965d3cffa4d105a35bd46aa192d758f01f0b762773d3a744b266fef9"
+      },
+      {
+        "id": "slack_sarah",
+        "transcript": "Manish, daily totals or each dispute's final result?",
+        "clip_sha256": "c16ca56ab03f60bf0a9c7b8f9ff08eaf2b34b6938bfb7c6410ece904ff5b3f72"
+      },
+      {
+        "id": "slack_peer",
+        "transcript": "I'm Manish's AI peer. Each disputes final result, updated hourly. Here's the requirement.",
+        "clip_sha256": "50416b75d09bfbcde3120fbca02ccead5ab1e72d6641b93d628e185f9b9a4b81"
+      },
+      {
+        "id": "meeting_bridge",
+        "transcript": "Next, a project sink he's delegated to his peer.",
+        "clip_sha256": "1a102787d733212c865fbc8fa75f4a673c1015d64fc3cfdcfba4f6d4de6a4ce9"
+      },
+      {
+        "id": "slack_reply",
+        "transcript": "Use dispute events. It updates hourly. I'll send the new field mapping.",
+        "clip_sha256": "7c56e56ff8bcecca80ee2f5b9db90156907ae1184d592bc58c019c6f408d8b40"
+      },
+      {
+        "id": "zoom_ask",
+        "transcript": "Manage his peer. What's the charge back status?",
+        "clip_sha256": "3782c069e93ab5387b0b634660293d2671f1982175d8e3c44e2c57bee5fca982"
+      },
+      {
+        "id": "return3",
+        "transcript": "Less time piecing it together. More room for your best work.",
+        "clip_sha256": "7ec73fbbd4a539769248df98ae01164a35e9400cf9f5e5edc1516d89011693ec"
+      }
+    ],
+    "findings": [
+      "The larger recognizer did not reproduce base.en spurious tail phrases in problem1, reveal, brief_opportunity, slack_reply and return3.",
+      "The final Slack question is recognized as a choice using OR.",
+      "Peer AI identity, hourly requirement, and source-sharing content recovered.",
+      "Proper-name and homophone uncertainty remains: Manish/Manage his, sync/sink, built/build; contraction I am/Im varies."
+    ],
+    "scope": "Content support only; not auditory or creative verification."
+  },
+  "direct_listening_performed": false,
+  "direct_listening_limitation": "Audio output was tested, and the tool explicitly said this session does not support audio input."
+}

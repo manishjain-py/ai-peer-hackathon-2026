@@ -1,0 +1,496 @@
+{
+  "duration": 240,
+  "beatOrigin": 24,
+  "tagline": "More room for your best work.",
+  "scenes": [
+    {
+      "id": "overload",
+      "start": 0,
+      "end": 24
+    },
+    {
+      "id": "relief",
+      "start": 24,
+      "end": 30
+    },
+    {
+      "id": "setup",
+      "start": 30,
+      "end": 64
+    },
+    {
+      "id": "title_bobo",
+      "start": 64,
+      "end": 68
+    },
+    {
+      "id": "bobo",
+      "start": 68,
+      "end": 96
+    },
+    {
+      "id": "title_slack",
+      "start": 96,
+      "end": 100
+    },
+    {
+      "id": "slack",
+      "start": 100,
+      "end": 136
+    },
+    {
+      "id": "title_zoom",
+      "start": 136,
+      "end": 140
+    },
+    {
+      "id": "zoom",
+      "start": 140,
+      "end": 166
+    },
+    {
+      "id": "title_missed",
+      "start": 166,
+      "end": 170
+    },
+    {
+      "id": "missed",
+      "start": 170,
+      "end": 226
+    },
+    {
+      "id": "close",
+      "start": 226,
+      "end": 240
+    }
+  ],
+  "lines": [
+    {
+      "id": "intro_day",
+      "start": 0.6,
+      "limit": 4.8,
+      "speaker": "narrator",
+      "text": "A new day. A clear head. Something great to build."
+    },
+    {
+      "id": "intro_work",
+      "start": 5.6,
+      "limit": 8.4,
+      "speaker": "narrator",
+      "text": "Then, a quick question. And another."
+    },
+    {
+      "id": "intro_inbox",
+      "start": 9.0,
+      "limit": 12.3,
+      "speaker": "narrator",
+      "text": "One hundred and fifty unread emails."
+    },
+    {
+      "id": "intro_pings",
+      "start": 12.6,
+      "limit": 15.1,
+      "speaker": "narrator",
+      "text": "Ten Slack pings, one after another."
+    },
+    {
+      "id": "intro_meetings",
+      "start": 15.5,
+      "limit": 18.9,
+      "speaker": "narrator",
+      "text": "Three meetings. Two of them after hours."
+    },
+    {
+      "id": "intro_focus",
+      "start": 19.2,
+      "limit": 23.5,
+      "speaker": "narrator",
+      "text": "Your attention is everywhere. Your work is still waiting."
+    },
+    {
+      "id": "intro_relief",
+      "start": 24.4,
+      "limit": 29.7,
+      "speaker": "narrator",
+      "text": "Meet AI Peer. A teammate who makes room for your best work."
+    },
+    {
+      "id": "intro_create",
+      "start": 30.3,
+      "limit": 33.7,
+      "speaker": "narrator",
+      "text": "Start with one click. Create my AI Peer."
+    },
+    {
+      "id": "intro_profile",
+      "start": 34.3,
+      "limit": 39.7,
+      "speaker": "narrator",
+      "text": "One Airbnb brings in your role, Risk Partner Systems, and your projects."
+    },
+    {
+      "id": "intro_github",
+      "start": 40.2,
+      "limit": 45.6,
+      "speaker": "narrator",
+      "text": "GitHub connects your team's code, services, and changes already in progress."
+    },
+    {
+      "id": "intro_airchat",
+      "start": 46.2,
+      "limit": 57.2,
+      "speaker": "narrator",
+      "text": "Add the AI Peer plugin in AirChat. It understands your local projects, current tasks, and uncommitted changes, even before you push to GitHub."
+    },
+    {
+      "id": "intro_access",
+      "start": 58.1,
+      "limit": 61.35,
+      "speaker": "narrator",
+      "text": "Connect Slack, Zoom, email and your calendar."
+    },
+    {
+      "id": "intro_ready",
+      "start": 61.55,
+      "limit": 63.7,
+      "speaker": "narrator",
+      "text": "Your Peer is ready."
+    },
+    {
+      "id": "bobo_title",
+      "start": 64.6,
+      "limit": 67.6,
+      "speaker": "narrator",
+      "text": "Spot the work that needs you."
+    },
+    {
+      "id": "bobo_intro",
+      "start": 68.5,
+      "limit": 76.8,
+      "speaker": "narrator",
+      "text": "A new product lets someone book on behalf of a guest. Payments risk wasn't in the loop."
+    },
+    {
+      "id": "bobo_alert",
+      "start": 77.2,
+      "limit": 89.4,
+      "speaker": "peer",
+      "text": "BOBO may change how we handle chargebacks. I couldn't find payments risk in the launch discussion. Here's the product owner. Worth checking before this becomes a problem."
+    },
+    {
+      "id": "bobo_impact",
+      "start": 90.0,
+      "limit": 95.6,
+      "speaker": "narrator",
+      "text": "A company announcement becomes an early heads-up, with someone to contact."
+    },
+    {
+      "id": "slack_title",
+      "start": 96.6,
+      "limit": 99.6,
+      "speaker": "narrator",
+      "text": "Keep collaboration going across time zones."
+    },
+    {
+      "id": "slack_intro",
+      "start": 100.4,
+      "limit": 105.9,
+      "speaker": "narrator",
+      "text": "Manish needs cancellation-window data. The data team works in the U.S."
+    },
+    {
+      "id": "slack_question",
+      "start": 106.3,
+      "limit": 109.1,
+      "speaker": "sarah",
+      "text": "What do you need it for?"
+    },
+    {
+      "id": "slack_wait",
+      "start": 109.5,
+      "limit": 114.5,
+      "speaker": "narrator",
+      "text": "It's two a.m. for Manish. One clarification could cost another day."
+    },
+    {
+      "id": "slack_peer",
+      "start": 115.0,
+      "limit": 125.2,
+      "speaker": "peer",
+      "text": "I'm Manish's AI Peer. Dispute agents need to see whether the guest canceled inside or outside the flexibility window, to help assess the chargeback."
+    },
+    {
+      "id": "slack_reply",
+      "start": 125.6,
+      "limit": 132.6,
+      "speaker": "sarah",
+      "text": "Got it. The purchased item's expiry gives you the window's end. I'll share an example to verify."
+    },
+    {
+      "id": "slack_impact",
+      "start": 133.0,
+      "limit": 135.7,
+      "speaker": "narrator",
+      "text": "An answer, before the next morning."
+    },
+    {
+      "id": "zoom_title",
+      "start": 136.6,
+      "limit": 139.6,
+      "speaker": "narrator",
+      "text": "Be there through your Peer."
+    },
+    {
+      "id": "zoom_ask",
+      "start": 140.3,
+      "limit": 144.3,
+      "speaker": "alex",
+      "text": "Manish's Peer, what's the latest on premium chargebacks?"
+    },
+    {
+      "id": "zoom_update",
+      "start": 144.6,
+      "limit": 150.4,
+      "speaker": "peer",
+      "text": "The data contract is merged. Interface and backend changes are still drafts."
+    },
+    {
+      "id": "zoom_source",
+      "start": 150.8,
+      "limit": 156.0,
+      "speaker": "peer",
+      "text": "Deploy the backend first, then validate with a fresh dispute case."
+    },
+    {
+      "id": "zoom_sarah",
+      "start": 156.35,
+      "limit": 158.8,
+      "speaker": "sarah",
+      "text": "I'll coordinate the example case."
+    },
+    {
+      "id": "zoom_date",
+      "start": 159.15,
+      "limit": 161.1,
+      "speaker": "alex",
+      "text": "Can we set a date?"
+    },
+    {
+      "id": "zoom_boundary",
+      "start": 161.45,
+      "limit": 165.7,
+      "speaker": "peer",
+      "text": "Manish needs to review the validation before we commit."
+    },
+    {
+      "id": "missed_title",
+      "start": 166.6,
+      "limit": 169.6,
+      "speaker": "narrator",
+      "text": "Catch what slipped through."
+    },
+    {
+      "id": "missed_cleanup",
+      "start": 170.5,
+      "limit": 175.5,
+      "speaker": "narrator",
+      "text": "One hundred and fifty emails. Marked as read. But was everything handled?"
+    },
+    {
+      "id": "missed_airversary",
+      "start": 176.0,
+      "limit": 187.6,
+      "speaker": "peer",
+      "text": "Yash's five-year Airversary is coming up. Vijay shared an appreciation board. Here's his email, and the link to add your message."
+    },
+    {
+      "id": "missed_fireside",
+      "start": 188.0,
+      "limit": 201.7,
+      "speaker": "peer",
+      "text": "You follow AI closely. This fireside chat with Boris Cherny looks relevant. Your invitation is still unanswered. Would you like me to accept it?"
+    },
+    {
+      "id": "missed_cassette",
+      "start": 205.0,
+      "limit": 220.0,
+      "speaker": "peer",
+      "text": "You may have missed this Cassette announcement. Case creation may be interrupted, affecting your chargeback review and dispute classification queues. I've tagged you in the thread. Here's what to check."
+    },
+    {
+      "id": "missed_brief",
+      "start": 220.4,
+      "limit": 225.7,
+      "speaker": "narrator",
+      "text": "One brief. The people, opportunities and changes that matter to you."
+    },
+    {
+      "id": "close_possibilities",
+      "start": 227.0,
+      "limit": 233.4,
+      "speaker": "narrator",
+      "text": "These are just a few possibilities. What could your Peer unlock for you?"
+    },
+    {
+      "id": "close",
+      "start": 235.0,
+      "limit": 239.6,
+      "speaker": "narrator",
+      "text": "AI Peer. More room for your best work."
+    }
+  ],
+  "effects": [
+    {
+      "time": 5.4,
+      "kind": "attention",
+      "pitch": 79,
+      "pan": 0.6
+    },
+    {
+      "time": 8.6,
+      "kind": "attention",
+      "pitch": 74,
+      "pan": -0.6
+    },
+    {
+      "time": 12,
+      "kind": "attention",
+      "pitch": 79,
+      "pan": 0.6
+    },
+    {
+      "time": 12.6,
+      "kind": "attention",
+      "pitch": 81,
+      "pan": 0.5
+    },
+    {
+      "time": 13.2,
+      "kind": "attention",
+      "pitch": 83,
+      "pan": 0.4
+    },
+    {
+      "time": 15.3,
+      "kind": "attention",
+      "pitch": 72,
+      "pan": -0.5
+    },
+    {
+      "time": 18.8,
+      "kind": "attention",
+      "pitch": 76,
+      "pan": 0
+    },
+    {
+      "time": 23.4,
+      "kind": "intake"
+    },
+    {
+      "time": 24,
+      "kind": "reveal"
+    },
+    {
+      "time": 30,
+      "kind": "transition"
+    },
+    {
+      "time": 33,
+      "kind": "connect"
+    },
+    {
+      "time": 34,
+      "kind": "connect"
+    },
+    {
+      "time": 40,
+      "kind": "connect"
+    },
+    {
+      "time": 46,
+      "kind": "connect"
+    },
+    {
+      "time": 50,
+      "kind": "connect"
+    },
+    {
+      "time": 54.5,
+      "kind": "connect"
+    },
+    {
+      "time": 58,
+      "kind": "connect"
+    },
+    {
+      "time": 61,
+      "kind": "settle"
+    },
+    {
+      "time": 64,
+      "kind": "transition"
+    },
+    {
+      "time": 77.2,
+      "kind": "connect"
+    },
+    {
+      "time": 90,
+      "kind": "settle"
+    },
+    {
+      "time": 96,
+      "kind": "transition"
+    },
+    {
+      "time": 106.3,
+      "kind": "message"
+    },
+    {
+      "time": 115,
+      "kind": "message"
+    },
+    {
+      "time": 125.6,
+      "kind": "message"
+    },
+    {
+      "time": 136,
+      "kind": "transition"
+    },
+    {
+      "time": 140,
+      "kind": "join"
+    },
+    {
+      "time": 144.5,
+      "kind": "transition"
+    },
+    {
+      "time": 166,
+      "kind": "transition"
+    },
+    {
+      "time": 176,
+      "kind": "connect"
+    },
+    {
+      "time": 188,
+      "kind": "connect"
+    },
+    {
+      "time": 203.5,
+      "kind": "connect"
+    },
+    {
+      "time": 205,
+      "kind": "message"
+    },
+    {
+      "time": 226,
+      "kind": "reveal"
+    }
+  ],
+  "context_date": "2026-09-19",
+  "disclosure": "Real user-reported work context; simulated dialogue, announcements, invitations and interfaces. AI Peer integrations proposed; source-field example illustrative."
+}

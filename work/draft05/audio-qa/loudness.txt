@@ -1,0 +1,30 @@
+[aist#0:0/pcm_s24le @ 0x959014180] Guessed Channel Layout: stereo
+Input #0, wav, from '/Users/manishjain/repos/Hackathon 2026/video/public/draft05/audio/mixed.wav':
+  Duration: 00:03:16.00, bitrate: 2304 kb/s
+  Stream #0:0: Audio: pcm_s24le ([1][0][0][0] / 0x0001), 48000 Hz, stereo, s32 (24 bit), 2304 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s24le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    encoder         : Lavf62.12.102
+  Stream #0:0: Audio: pcm_s16le, 48000 Hz, stereo, s16, 1536 kb/s
+    Metadata:
+      encoder         : Lavc62.28.102 pcm_s16le
+size=N/A time=00:02:38.90 bitrate=N/A speed= 312x elapsed=0:00:00.51    
+[Parsed_ebur128_0 @ 0x95900d080] Summary:
+
+  Integrated loudness:
+    I:         -16.0 LUFS
+    Threshold: -26.8 LUFS
+
+  Loudness range:
+    LRA:         6.5 LU
+    Threshold: -36.8 LUFS
+    LRA low:   -21.0 LUFS
+    LRA high:  -14.5 LUFS
+
+  True peak:
+    Peak:       -2.3 dBFS
+[out#0/null @ 0x95900c900] video:0KiB audio:36750KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:03:16.00 bitrate=N/A speed= 312x elapsed=0:00:00.62    

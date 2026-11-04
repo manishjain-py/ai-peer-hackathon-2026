@@ -1,0 +1,8 @@
+{
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-CustomVoice-4bit",
+  "speaker": "Vivian",
+  "text": "I'll send both test examples today.",
+  "instruct": "Speak in fluent English with a natural American accent. A female colleague in a real video meeting, warm, engaged and matter-of-fact. Casual quick replies, natural conversational inflection, connected words and short pauses. Not a narrator and not a formal reading.",
+  "seed": 43,
+  "temperature": 0.7
+}

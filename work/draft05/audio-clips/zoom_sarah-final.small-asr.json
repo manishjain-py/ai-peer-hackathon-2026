@@ -1,0 +1,42 @@
+{
+  "sha256": "eaf39053bb9f49e7a5d8c48cb0a719e8f97b49ffc6c81f5fe414f434e88fb2dd",
+  "text": "I'll help coordinate the example case.",
+  "words": [
+    {
+      "word": " I'll",
+      "start": 0.0,
+      "end": 0.3,
+      "probability": 0.9805894494056702
+    },
+    {
+      "word": " help",
+      "start": 0.3,
+      "end": 0.46,
+      "probability": 0.999238133430481
+    },
+    {
+      "word": " coordinate",
+      "start": 0.46,
+      "end": 0.9,
+      "probability": 0.9961140155792236
+    },
+    {
+      "word": " the",
+      "start": 0.9,
+      "end": 1.14,
+      "probability": 0.9985567927360535
+    },
+    {
+      "word": " example",
+      "start": 1.14,
+      "end": 1.5,
+      "probability": 0.9905301928520203
+    },
+    {
+      "word": " case.",
+      "start": 1.5,
+      "end": 1.9,
+      "probability": 0.9961611032485962
+    }
+  ]
+}

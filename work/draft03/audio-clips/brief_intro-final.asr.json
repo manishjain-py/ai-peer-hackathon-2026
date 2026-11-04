@@ -1,0 +1,60 @@
+{
+  "sha256": "9b7c2ef10e9384d33d1871a40f2f66cb029dc5a1d4ca3bfdf9a69c017284c582",
+  "text": "Start your day with a brief build around you.",
+  "words": [
+    {
+      "word": " Start",
+      "start": 0.0,
+      "end": 0.2,
+      "probability": 0.9363397359848022
+    },
+    {
+      "word": " your",
+      "start": 0.2,
+      "end": 0.32,
+      "probability": 0.9954231381416321
+    },
+    {
+      "word": " day",
+      "start": 0.32,
+      "end": 0.48,
+      "probability": 0.998314619064331
+    },
+    {
+      "word": " with",
+      "start": 0.48,
+      "end": 0.62,
+      "probability": 0.9988728165626526
+    },
+    {
+      "word": " a",
+      "start": 0.62,
+      "end": 0.7,
+      "probability": 0.9867033958435059
+    },
+    {
+      "word": " brief",
+      "start": 0.7,
+      "end": 0.92,
+      "probability": 0.9973729848861694
+    },
+    {
+      "word": " build",
+      "start": 0.92,
+      "end": 1.14,
+      "probability": 0.4424637258052826
+    },
+    {
+      "word": " around",
+      "start": 1.14,
+      "end": 1.38,
+      "probability": 0.945822536945343
+    },
+    {
+      "word": " you.",
+      "start": 1.38,
+      "end": 1.72,
+      "probability": 0.9977930784225464
+    }
+  ]
+}

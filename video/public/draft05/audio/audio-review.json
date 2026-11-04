@@ -1,0 +1,39 @@
+{
+  "status": "PASS numerical and selected-performance reuse checks",
+  "script_sha256": "9dc577f8fe36668745f71e459cc329f20248a1653f2cb3a38e4e511e4fdc06ba",
+  "mix_sha256": "27d397e3b1addcce2a0255909b4de02249f85ada3f86bde475ea09490ce313b0",
+  "duration": 196,
+  "bpm": 124,
+  "new_lines": 20,
+  "reused_lines": 15,
+  "maximum_new_time_stretch": 1.0,
+  "zoom_gaps_seconds": [
+    0.35,
+    0.35,
+    0.35,
+    0.35,
+    0.35
+  ],
+  "reused_normalized_clips_match_new_narration": true,
+  "maximum_reuse_sample_error": 1.1888914741575718e-07,
+  "secondary_recognition": {
+    "performed": true,
+    "model": "Whisper small.en",
+    "count": 20,
+    "path": "../../../../work/draft05/audio-qa/asr-small-new.json",
+    "observations": "All 20 new performances reviewed using small.en recognition. The selected Slack Peer retake recovers the full intended final phrase; small.en does not repeat the extra tail phrases seen in base.en. ASR spelling/tokenization remains uncertain for Charan (Tran/Trans), Manish/Manish’s Peer, Payments ML, and backend (backing). Captions preserve the locked script; these checks do not establish pronunciation or naturalness."
+  },
+  "direct_listening_performed": false,
+  "limitation": "ASR and numerical checks do not establish voice naturalness or subjective music balance. Direct listening was not performed.",
+  "selected_alternates": {
+    "slack_peer": {
+      "seed": 31,
+      "reason": "Both recognizers recover the intended what-the-chargeback-covers phrase; small.en has the complete AI identity without spurious tail words."
+    },
+    "brief_event": {
+      "seed": 47,
+      "reason": "Already-generated take with explicit Charan pronunciation direction and correctly recognized Weather Protection phrase; proper-name ASR uncertainty remains."
+    }
+  },
+  "full_mix_recognition_note": "tiny.en is a supporting content check only; omissions and shifted segment times mean its transcript is not used for caption alignment. Captions use per-line recognition anchors."
+}

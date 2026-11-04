@@ -1,0 +1,8 @@
+{
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-CustomVoice-4bit",
+  "speaker": "Aiden",
+  "text": "I am Manish's AI Peer. Each product's disputed amount. It shows investigators what the chargeback covers.",
+  "instruct": "Speak quickly and smoothly in conversational American English, like a helpful male colleague answering a question. Warm and clear. Connected flowing phrasing, with only very short pauses between sentences. Pronounce the name Manish as muh-NEESH.",
+  "seed": 47,
+  "temperature": 0.7
+}

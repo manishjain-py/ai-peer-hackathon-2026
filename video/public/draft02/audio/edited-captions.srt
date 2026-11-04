@@ -1,0 +1,276 @@
+1
+00:00:01,070 --> 00:00:02,238
+A quick question.
+
+2
+00:00:02,470 --> 00:00:03,575
+The right person.
+
+3
+00:00:03,808 --> 00:00:04,825
+The wrong time.
+
+4
+00:00:09,070 --> 00:00:12,875
+When the context lives with one person, everyone else waits.
+
+5
+00:00:19,070 --> 00:00:20,713
+What if the context could stay?
+
+6
+00:00:25,070 --> 00:00:26,213
+Meet AI Peer.
+
+7
+00:00:26,445 --> 00:00:28,350
+A teammate built around your work.
+
+8
+00:00:32,070 --> 00:00:34,945
+Before Manish signs off, his Peer connects the
+
+9
+00:00:34,957 --> 00:00:39,325
+project requirements, his latest handoff, and the release plan.
+
+10
+00:00:42,070 --> 00:00:45,320
+When the requirements change, the new source replaces
+
+11
+00:00:45,332 --> 00:00:46,150
+the old one.
+
+12
+00:00:49,070 --> 00:00:51,445
+Manish chooses what it can share, and which
+
+13
+00:00:51,457 --> 00:00:53,425
+decisions must come back to him.
+
+14
+00:00:57,070 --> 00:00:59,250
+Now it's two a.m. in Bengaluru.
+
+15
+00:00:59,482 --> 00:01:02,075
+But Sarah's afternoon is just getting started.
+
+16
+00:01:04,045 --> 00:01:05,387
+SARAH: Quick question, Manish.
+
+17
+00:01:05,658 --> 00:01:08,083
+SARAH: Do you need daily totals, or the result
+
+18
+00:01:08,095 --> 00:01:09,250
+SARAH: for each dispute?
+
+19
+00:01:12,020 --> 00:01:13,400
+ALEX: It's two a.m. for him.
+
+20
+00:01:13,645 --> 00:01:14,800
+ALEX: We may have to wait.
+
+21
+00:01:19,070 --> 00:01:20,500
+MANISH'S AI PEER: I'm Manish's AI Peer.
+
+22
+00:01:20,795 --> 00:01:21,587
+MANISH'S AI PEER: He's offline.
+
+23
+00:01:21,870 --> 00:01:23,637
+MANISH'S AI PEER: I can share the project context.
+
+24
+00:01:26,070 --> 00:01:28,433
+MANISH'S AI PEER: We need the final won-or-lost result for each
+
+25
+00:01:28,445 --> 00:01:30,350
+MANISH'S AI PEER: dispute, updated hourly.
+
+26
+00:01:30,632 --> 00:01:32,762
+MANISH'S AI PEER: It feeds the reconciliation dashboard.
+
+27
+00:01:33,070 --> 00:01:34,488
+MANISH'S AI PEER: Here's the latest requirement.
+
+28
+00:01:38,058 --> 00:01:39,475
+SARAH: Use Dispute Events.
+
+29
+00:01:39,745 --> 00:01:41,212
+SARAH: It refreshes hourly.
+
+30
+00:01:41,482 --> 00:01:43,300
+SARAH: The daily summary is too late.
+
+31
+00:01:43,570 --> 00:01:45,100
+SARAH: I'll send the field mapping.
+
+32
+00:01:47,595 --> 00:01:48,488
+MANISH'S AI PEER: Thanks, Sarah.
+
+33
+00:01:48,770 --> 00:01:50,750
+MANISH'S AI PEER: I'll include that in Manish's handoff.
+
+34
+00:01:53,570 --> 00:01:54,775
+A useful answer.
+
+35
+00:01:55,008 --> 00:01:57,087
+Without waiting for another working day.
+
+36
+00:02:00,070 --> 00:02:03,108
+Ten minutes later, the same project moves into
+
+37
+00:02:03,120 --> 00:02:04,087
+a Zoom meeting.
+
+38
+00:02:04,320 --> 00:02:06,962
+Manish has asked his Peer to cover the update.
+
+39
+00:02:11,045 --> 00:02:13,250
+ALEX: Hey Manish, where are we on Chargebacks?
+
+40
+00:02:13,482 --> 00:02:15,012
+ALEX: Are we ready for Friday?
+
+41
+00:02:17,558 --> 00:02:19,275
+SARAH: I don't think Manish is here.
+
+42
+00:02:19,545 --> 00:02:21,550
+SARAH: It's past two in the morning for him.
+
+43
+00:02:23,882 --> 00:02:25,912
+MANISH'S AI PEER: Hi, I'm Manish's AI Peer.
+
+44
+00:02:26,208 --> 00:02:27,996
+MANISH'S AI PEER: He couldn't join, so he asked me to
+
+45
+00:02:28,008 --> 00:02:29,025
+MANISH'S AI PEER: cover this update.
+
+46
+00:02:31,145 --> 00:02:31,612
+ALEX: Great.
+
+47
+00:02:31,870 --> 00:02:33,262
+ALEX: What's still blocking us?
+
+48
+00:02:35,182 --> 00:02:36,975
+MANISH'S AI PEER: The dashboard build is complete.
+
+49
+00:02:37,270 --> 00:02:39,633
+MANISH'S AI PEER: Two data checks are still open: the same
+
+50
+00:02:39,645 --> 00:02:42,700
+MANISH'S AI PEER: event arriving twice, and an outcome changing later.
+
+51
+00:02:45,582 --> 00:02:48,612
+MANISH'S AI PEER: Sarah just confirmed the hourly data source in Slack.
+
+52
+00:02:48,895 --> 00:02:50,250
+MANISH'S AI PEER: So that question is answered.
+
+53
+00:02:52,545 --> 00:02:55,200
+SARAH: I can provide those two test examples today.
+
+54
+00:02:57,020 --> 00:02:59,050
+ALEX: Can we confirm Friday, then?
+
+55
+00:03:01,570 --> 00:03:03,062
+MANISH'S AI PEER: That needs Manish's approval.
+
+56
+00:03:03,345 --> 00:03:05,333
+MANISH'S AI PEER: I'll take back the test plan and ask
+
+57
+00:03:05,345 --> 00:03:08,000
+MANISH'S AI PEER: him to confirm the date once validation is complete.
+
+58
+00:03:10,120 --> 00:03:10,825
+ALEX: Perfect.
+
+59
+00:03:11,082 --> 00:03:13,012
+ALEX: We can keep validation moving.
+
+60
+00:03:16,170 --> 00:03:16,875
+Morning.
+
+61
+00:03:17,108 --> 00:03:19,683
+Manish returns to the answer from Slack, the
+
+62
+00:03:19,695 --> 00:03:23,088
+test plan from Zoom, and the sources behind both.
+
+63
+00:03:26,170 --> 00:03:29,112
+One decision still needs him: the launch date.
+
+64
+00:03:29,345 --> 00:03:30,450
+Less catching up.
+
+65
+00:03:30,682 --> 00:03:31,950
+A clear next step.
+
+66
+00:03:36,170 --> 00:03:37,650
+Your work has a timezone.
+
+67
+00:03:37,882 --> 00:03:39,100
+Your Peer doesn't.
+
+68
+00:03:39,332 --> 00:03:40,275
+AI Peer.
+
+69
+00:03:40,508 --> 00:03:42,138
+Keep the context moving.
+

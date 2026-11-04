@@ -1,0 +1,78 @@
+{
+  "sha256": "752f10d615de0436dcc68b963cdb5d245d1585e2e58666e22e51986f80965160",
+  "text": "That's Manish's call. I'll bring him the test plan and the decision.",
+  "words": [
+    {
+      "word": " That's",
+      "start": 0.0,
+      "end": 0.4,
+      "probability": 0.9459084272384644
+    },
+    {
+      "word": " Manish's",
+      "start": 0.4,
+      "end": 0.86,
+      "probability": 0.6270081202189127
+    },
+    {
+      "word": " call.",
+      "start": 0.86,
+      "end": 1.1,
+      "probability": 0.7750938534736633
+    },
+    {
+      "word": " I'll",
+      "start": 1.72,
+      "end": 1.8,
+      "probability": 0.9864145517349243
+    },
+    {
+      "word": " bring",
+      "start": 1.8,
+      "end": 2.0,
+      "probability": 0.9961148500442505
+    },
+    {
+      "word": " him",
+      "start": 2.0,
+      "end": 2.14,
+      "probability": 0.9635637998580933
+    },
+    {
+      "word": " the",
+      "start": 2.14,
+      "end": 2.26,
+      "probability": 0.9826775193214417
+    },
+    {
+      "word": " test",
+      "start": 2.26,
+      "end": 2.42,
+      "probability": 0.9183131456375122
+    },
+    {
+      "word": " plan",
+      "start": 2.42,
+      "end": 2.72,
+      "probability": 0.9972791075706482
+    },
+    {
+      "word": " and",
+      "start": 2.72,
+      "end": 2.96,
+      "probability": 0.9753026366233826
+    },
+    {
+      "word": " the",
+      "start": 2.96,
+      "end": 3.1,
+      "probability": 0.9380374550819397
+    },
+    {
+      "word": " decision.",
+      "start": 3.1,
+      "end": 3.36,
+      "probability": 0.9976465106010437
+    }
+  ]
+}

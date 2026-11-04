@@ -1,0 +1,150 @@
+{
+  "sha256": "6595bbb8f12829057ec0074160919f84609dc814947993908fc4ced960ace55a",
+  "text": "First, premium chargebacks. Deploy the back end before validating the new interface in production. I've linked that to your local work in AirChat. that.",
+  "words": [
+    {
+      "word": " First,",
+      "start": 0.0,
+      "end": 0.32,
+      "probability": 0.9239698648452759
+    },
+    {
+      "word": " premium",
+      "start": 1.38,
+      "end": 1.38,
+      "probability": 0.6909053921699524
+    },
+    {
+      "word": " chargebacks.",
+      "start": 1.38,
+      "end": 2.04,
+      "probability": 0.9317085444927216
+    },
+    {
+      "word": " Deploy",
+      "start": 3.02,
+      "end": 3.3,
+      "probability": 0.9798697233200073
+    },
+    {
+      "word": " the",
+      "start": 3.3,
+      "end": 3.52,
+      "probability": 0.9946159720420837
+    },
+    {
+      "word": " back",
+      "start": 3.52,
+      "end": 3.7,
+      "probability": 0.5529424548149109
+    },
+    {
+      "word": " end",
+      "start": 3.7,
+      "end": 3.94,
+      "probability": 0.9685307145118713
+    },
+    {
+      "word": " before",
+      "start": 3.94,
+      "end": 4.22,
+      "probability": 0.9941662549972534
+    },
+    {
+      "word": " validating",
+      "start": 4.22,
+      "end": 5.02,
+      "probability": 0.9924002289772034
+    },
+    {
+      "word": " the",
+      "start": 5.02,
+      "end": 5.16,
+      "probability": 0.9952414035797119
+    },
+    {
+      "word": " new",
+      "start": 5.16,
+      "end": 5.34,
+      "probability": 0.9986652135848999
+    },
+    {
+      "word": " interface",
+      "start": 5.34,
+      "end": 5.78,
+      "probability": 0.9763651490211487
+    },
+    {
+      "word": " in",
+      "start": 5.78,
+      "end": 6.06,
+      "probability": 0.5436717867851257
+    },
+    {
+      "word": " production.",
+      "start": 6.06,
+      "end": 6.26,
+      "probability": 0.9980200529098511
+    },
+    {
+      "word": " I've",
+      "start": 7.26,
+      "end": 7.38,
+      "probability": 0.9761545360088348
+    },
+    {
+      "word": " linked",
+      "start": 7.38,
+      "end": 7.5,
+      "probability": 0.9880897402763367
+    },
+    {
+      "word": " that",
+      "start": 7.5,
+      "end": 7.78,
+      "probability": 0.9945154786109924
+    },
+    {
+      "word": " to",
+      "start": 7.78,
+      "end": 8.04,
+      "probability": 0.9963549375534058
+    },
+    {
+      "word": " your",
+      "start": 8.04,
+      "end": 8.16,
+      "probability": 0.997058629989624
+    },
+    {
+      "word": " local",
+      "start": 8.16,
+      "end": 8.4,
+      "probability": 0.996525228023529
+    },
+    {
+      "word": " work",
+      "start": 8.4,
+      "end": 8.68,
+      "probability": 0.994899570941925
+    },
+    {
+      "word": " in",
+      "start": 8.68,
+      "end": 8.86,
+      "probability": 0.9452483057975769
+    },
+    {
+      "word": " AirChat.",
+      "start": 8.86,
+      "end": 9.22,
+      "probability": 0.7055701613426208
+    },
+    {
+      "word": " that.",
+      "start": 9.22,
+      "end": 9.28,
+      "probability": 0.14152519404888153
+    }
+  ]
+}

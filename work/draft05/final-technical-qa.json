@@ -1,0 +1,144 @@
+{
+  "status": "PASS",
+  "duration_seconds": 196,
+  "expected_frames": 5880,
+  "script_sha256": "9dc577f8fe36668745f71e459cc329f20248a1653f2cb3a38e4e511e4fdc06ba",
+  "exports": [
+    {
+      "path": "renders/ai-peer-draft-05.mp4",
+      "bytes": 20734356,
+      "sha256": "0b60e963ac6d764f3e9481cfbb312c552dbb8bfa8fc5da203b32e32aff5353fb",
+      "video": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30.0,
+        "metadata_frames": 5880,
+        "decoded_frames": 5880,
+        "duration": 196.0,
+        "pixel_format": "yuvj420p"
+      },
+      "audio": {
+        "codec": "aac",
+        "profile": "LC",
+        "sample_rate": 48000,
+        "channels": 2,
+        "channel_layout": "stereo",
+        "duration": 196.0,
+        "bit_rate": 194751,
+        "integrated_lufs": -16.1,
+        "true_peak_dbfs": -2.3,
+        "loudness_range_lu": 6.5
+      },
+      "full_decode": {
+        "result": "PASS",
+        "actual_video_frames": 5880,
+        "errors": 0,
+        "log": "work/draft05/ai-peer-draft-05-decode-loudness.log"
+      },
+      "subtitle_streams": 0,
+      "no_additional_subtitle_stream": true,
+      "fast_start": true,
+      "top_level_atoms": [
+        {
+          "type": "ftyp",
+          "offset": 0,
+          "bytes": 32
+        },
+        {
+          "type": "moov",
+          "offset": 32,
+          "bytes": 215787
+        },
+        {
+          "type": "free",
+          "offset": 215819,
+          "bytes": 8
+        },
+        {
+          "type": "mdat",
+          "offset": 215827,
+          "bytes": 20518529
+        }
+      ],
+      "captions": {
+        "count": 65,
+        "non_overlapping": true,
+        "within_video": true,
+        "matches_source_bytes": true,
+        "first_start": 0.3,
+        "last_end": 191.96,
+        "sha256": "654b8d4b40391fbcd6de05dd77a0588fdff46f87c149d1bc6a2cecb1d8bec20a"
+      }
+    },
+    {
+      "path": "renders/ai-peer-draft-05-preview.mp4",
+      "bytes": 8783305,
+      "sha256": "905752da3dadff34210c09ebb3daf31e3444659572e73625e481a37e707f076c",
+      "video": {
+        "codec": "h264",
+        "width": 960,
+        "height": 540,
+        "fps": 30.0,
+        "metadata_frames": 5880,
+        "decoded_frames": 5880,
+        "duration": 196.0,
+        "pixel_format": "yuvj420p"
+      },
+      "audio": {
+        "codec": "aac",
+        "profile": "LC",
+        "sample_rate": 48000,
+        "channels": 2,
+        "channel_layout": "stereo",
+        "duration": 196.0,
+        "bit_rate": 194751,
+        "integrated_lufs": -16.1,
+        "true_peak_dbfs": -2.3,
+        "loudness_range_lu": 6.5
+      },
+      "full_decode": {
+        "result": "PASS",
+        "actual_video_frames": 5880,
+        "errors": 0,
+        "log": "work/draft05/ai-peer-draft-05-preview-decode-loudness.log"
+      },
+      "subtitle_streams": 0,
+      "no_additional_subtitle_stream": true,
+      "fast_start": true,
+      "top_level_atoms": [
+        {
+          "type": "ftyp",
+          "offset": 0,
+          "bytes": 32
+        },
+        {
+          "type": "moov",
+          "offset": 32,
+          "bytes": 214691
+        },
+        {
+          "type": "free",
+          "offset": 214723,
+          "bytes": 8
+        },
+        {
+          "type": "mdat",
+          "offset": 214731,
+          "bytes": 8568574
+        }
+      ],
+      "captions": {
+        "count": 65,
+        "non_overlapping": true,
+        "within_video": true,
+        "matches_source_bytes": true,
+        "first_start": 0.3,
+        "last_end": 191.96,
+        "sha256": "654b8d4b40391fbcd6de05dd77a0588fdff46f87c149d1bc6a2cecb1d8bec20a"
+      }
+    }
+  ],
+  "direct_listening_performed": false,
+  "visual_review_scope": "Performed separately by root and independent creative reviewer; this report covers technical export integrity."
+}

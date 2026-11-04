@@ -1,0 +1,30 @@
+{
+  "sha256": "95e02a09d02b4ecf5e005ec86eb18d2c14ae78dac3dfb80957bba1221e1ae2e1",
+  "text": "Your peer is ready.",
+  "words": [
+    {
+      "word": " Your",
+      "start": 0.0,
+      "end": 0.12,
+      "probability": 0.8291066884994507
+    },
+    {
+      "word": " peer",
+      "start": 0.12,
+      "end": 0.34,
+      "probability": 0.8196147680282593
+    },
+    {
+      "word": " is",
+      "start": 0.34,
+      "end": 0.66,
+      "probability": 0.9970537424087524
+    },
+    {
+      "word": " ready.",
+      "start": 0.66,
+      "end": 1.02,
+      "probability": 0.9965533018112183
+    }
+  ]
+}

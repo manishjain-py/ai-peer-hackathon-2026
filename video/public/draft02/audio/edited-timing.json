@@ -1,0 +1,2667 @@
+{
+  "title": "AI Peer — Draft 02 illustrative concept film",
+  "duration": 224.1,
+  "sample_rate": 48000,
+  "bpm": 104,
+  "script_sha256": "f1f317e07179a8b98a38cc62a79279e852fce034c9e646631c4a40b920a6753a",
+  "voices": {
+    "narrator": "en-US-AvaNeural",
+    "sarah": "en-US-EmmaNeural",
+    "alex": "en-US-BrianNeural",
+    "peer": "en-US-AndrewNeural"
+  },
+  "voice_disclosure": "Four standard synthetic voices; no voice cloning or imitation of real people.",
+  "music": "Original oscillator and noise synthesis, composed separately for each story act; no third-party recording or samples.",
+  "score_structure": "Sparse unanswered opening; reveal groove; Slack call-and-response; near-silent Zoom dialogue and approval moment; warm morning felt piano and tonic resolution.",
+  "notes": "Every scripted word preserved. Pitch-preserving atempo is capped at 1.10. No voiced audio is trimmed to fit. SRT timing is based on TTS boundaries, not forced alignment.",
+  "master_gain_db": 1.0,
+  "scenes": [
+    {
+      "id": "opening",
+      "start": 0.0,
+      "end": 24.0
+    },
+    {
+      "id": "context",
+      "start": 24.0,
+      "end": 56.0
+    },
+    {
+      "id": "slack",
+      "start": 56.0,
+      "end": 119.0
+    },
+    {
+      "id": "bridge",
+      "start": 119.0,
+      "end": 130.0
+    },
+    {
+      "id": "zoom",
+      "start": 130.0,
+      "end": 195.1
+    },
+    {
+      "id": "handoff",
+      "start": 195.1,
+      "end": 215.1
+    },
+    {
+      "id": "close",
+      "start": 215.1,
+      "end": 224.1
+    }
+  ],
+  "lines": [
+    {
+      "id": "open1",
+      "start": 1.0,
+      "limit": 7.5,
+      "speaker": "narrator",
+      "text": "A quick question. The right person. The wrong time.",
+      "end": 5.104,
+      "duration": 4.104,
+      "voice": "en-US-AvaNeural",
+      "scene_limit": 7.5,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 4.104,
+      "fit": true,
+      "words": [
+        {
+          "text": "A",
+          "start": 1.1,
+          "end": 1.275
+        },
+        {
+          "text": "quick",
+          "start": 1.2875,
+          "end": 1.5
+        },
+        {
+          "text": "question.",
+          "start": 1.5125,
+          "end": 2.1375
+        },
+        {
+          "text": "The",
+          "start": 2.5,
+          "end": 2.675
+        },
+        {
+          "text": "right",
+          "start": 2.6875,
+          "end": 2.925
+        },
+        {
+          "text": "person.",
+          "start": 2.95,
+          "end": 3.475
+        },
+        {
+          "text": "The",
+          "start": 3.8375,
+          "end": 4.0125
+        },
+        {
+          "text": "wrong",
+          "start": 4.025,
+          "end": 4.275
+        },
+        {
+          "text": "time.",
+          "start": 4.2875,
+          "end": 4.725
+        }
+      ],
+      "source_start": 1,
+      "source_end": 5.104
+    },
+    {
+      "id": "open2",
+      "start": 9.0,
+      "limit": 17.8,
+      "speaker": "narrator",
+      "text": "When the context lives with one person, everyone else waits.",
+      "end": 13.152,
+      "duration": 4.152,
+      "voice": "en-US-AvaNeural",
+      "scene_limit": 17.8,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 4.152,
+      "fit": true,
+      "words": [
+        {
+          "text": "When",
+          "start": 9.1,
+          "end": 9.3
+        },
+        {
+          "text": "the",
+          "start": 9.3125,
+          "end": 9.4
+        },
+        {
+          "text": "context",
+          "start": 9.4125,
+          "end": 10.0125
+        },
+        {
+          "text": "lives",
+          "start": 10.025,
+          "end": 10.35
+        },
+        {
+          "text": "with",
+          "start": 10.3625,
+          "end": 10.5125
+        },
+        {
+          "text": "one",
+          "start": 10.525,
+          "end": 10.7875
+        },
+        {
+          "text": "person,",
+          "start": 10.8,
+          "end": 11.325
+        },
+        {
+          "text": "everyone",
+          "start": 11.625,
+          "end": 12.025
+        },
+        {
+          "text": "else",
+          "start": 12.0375,
+          "end": 12.2625
+        },
+        {
+          "text": "waits.",
+          "start": 12.275,
+          "end": 12.775
+        }
+      ],
+      "source_start": 9,
+      "source_end": 13.152
+    },
+    {
+      "id": "open3",
+      "start": 19.0,
+      "limit": 23.6,
+      "speaker": "narrator",
+      "text": "What if the context could stay?",
+      "end": 20.992,
+      "duration": 1.992,
+      "voice": "en-US-AvaNeural",
+      "scene_limit": 23.6,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 1.992,
+      "fit": true,
+      "words": [
+        {
+          "text": "What",
+          "start": 19.1,
+          "end": 19.3125
+        },
+        {
+          "text": "if",
+          "start": 19.325,
+          "end": 19.4
+        },
+        {
+          "text": "the",
+          "start": 19.4125,
+          "end": 19.4875
+        },
+        {
+          "text": "context",
+          "start": 19.5,
+          "end": 20.025
+        },
+        {
+          "text": "could",
+          "start": 20.0375,
+          "end": 20.1625
+        },
+        {
+          "text": "stay?",
+          "start": 20.175,
+          "end": 20.6125
+        }
+      ],
+      "source_start": 19,
+      "source_end": 20.992
+    },
+    {
+      "id": "context1",
+      "start": 25.0,
+      "limit": 30.5,
+      "speaker": "narrator",
+      "text": "Meet AI Peer. A teammate built around your work.",
+      "end": 28.624,
+      "duration": 3.624,
+      "voice": "en-US-AvaNeural",
+      "scene_limit": 30.5,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 3.624,
+      "fit": true,
+      "words": [
+        {
+          "text": "Meet",
+          "start": 25.1,
+          "end": 25.3875
+        },
+        {
+          "text": "AI",
+          "start": 25.4125,
+          "end": 25.7
+        },
+        {
+          "text": "Peer.",
+          "start": 25.7125,
+          "end": 26.1125
+        },
+        {
+          "text": "A",
+          "start": 26.475,
+          "end": 26.6625
+        },
+        {
+          "text": "teammate",
+          "start": 26.675,
+          "end": 27.1625
+        },
+        {
+          "text": "built",
+          "start": 27.175,
+          "end": 27.4
+        },
+        {
+          "text": "around",
+          "start": 27.425,
+          "end": 27.7125
+        },
+        {
+          "text": "your",
+          "start": 27.725,
+          "end": 27.8375
+        },
+        {
+          "text": "work.",
+          "start": 27.85,
+          "end": 28.25
+        }
+      ],
+      "source_start": 25,
+      "source_end": 28.624
+    },
+    {
+      "id": "context2",
+      "start": 32.0,
+      "limit": 41.0,
+      "speaker": "narrator",
+      "text": "Before Manish signs off, his Peer connects the project requirements, his latest handoff, and the release plan.",
+      "end": 39.608,
+      "duration": 7.608,
+      "voice": "en-US-AvaNeural",
+      "scene_limit": 41.0,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 7.608,
+      "fit": true,
+      "words": [
+        {
+          "text": "Before",
+          "start": 32.1,
+          "end": 32.5
+        },
+        {
+          "text": "Manish",
+          "start": 32.5125,
+          "end": 32.8625
+        },
+        {
+          "text": "signs",
+          "start": 32.875,
+          "end": 33.1875
+        },
+        {
+          "text": "off,",
+          "start": 33.2,
+          "end": 33.575
+        },
+        {
+          "text": "his",
+          "start": 33.95,
+          "end": 34.1125
+        },
+        {
+          "text": "Peer",
+          "start": 34.125,
+          "end": 34.4375
+        },
+        {
+          "text": "connects",
+          "start": 34.45,
+          "end": 34.85
+        },
+        {
+          "text": "the",
+          "start": 34.8625,
+          "end": 34.975
+        },
+        {
+          "text": "project",
+          "start": 34.9875,
+          "end": 35.4875
+        },
+        {
+          "text": "requirements,",
+          "start": 35.5,
+          "end": 36.2125
+        },
+        {
+          "text": "his",
+          "start": 36.5375,
+          "end": 36.7
+        },
+        {
+          "text": "latest",
+          "start": 36.7125,
+          "end": 37.1
+        },
+        {
+          "text": "handoff,",
+          "start": 37.1125,
+          "end": 37.725
+        },
+        {
+          "text": "and",
+          "start": 37.925,
+          "end": 38.15
+        },
+        {
+          "text": "the",
+          "start": 38.225,
+          "end": 38.3125
+        },
+        {
+          "text": "release",
+          "start": 38.325,
+          "end": 38.7
+        },
+        {
+          "text": "plan.",
+          "start": 38.7125,
+          "end": 39.225
+        }
+      ],
+      "source_start": 32,
+      "source_end": 39.608
+    },
+    {
+      "id": "context3",
+      "start": 42.0,
+      "limit": 48.0,
+      "speaker": "narrator",
+      "text": "When the requirements change, the new source replaces the old one.",
+      "end": 46.416,
+      "duration": 4.416,
+      "voice": "en-US-AvaNeural",
+      "scene_limit": 48.0,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 4.416,
+      "fit": true,
+      "words": [
+        {
+          "text": "When",
+          "start": 42.1,
+          "end": 42.3125
+        },
+        {
+          "text": "the",
+          "start": 42.325,
+          "end": 42.3875
+        },
+        {
+          "text": "requirements",
+          "start": 42.4,
+          "end": 43.075
+        },
+        {
+          "text": "change,",
+          "start": 43.0875,
+          "end": 43.575
+        },
+        {
+          "text": "the",
+          "start": 43.8875,
+          "end": 43.9875
+        },
+        {
+          "text": "new",
+          "start": 44.0,
+          "end": 44.2625
+        },
+        {
+          "text": "source",
+          "start": 44.275,
+          "end": 44.6875
+        },
+        {
+          "text": "replaces",
+          "start": 44.7,
+          "end": 45.35
+        },
+        {
+          "text": "the",
+          "start": 45.3625,
+          "end": 45.4625
+        },
+        {
+          "text": "old",
+          "start": 45.475,
+          "end": 45.6875
+        },
+        {
+          "text": "one.",
+          "start": 45.7,
+          "end": 46.05
+        }
+      ],
+      "source_start": 42,
+      "source_end": 46.416
+    },
+    {
+      "id": "context4",
+      "start": 49.0,
+      "limit": 55.7,
+      "speaker": "narrator",
+      "text": "Manish chooses what it can share, and which decisions must come back to him.",
+      "end": 53.704,
+      "duration": 4.704,
+      "voice": "en-US-AvaNeural",
+      "scene_limit": 55.7,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 4.704,
+      "fit": true,
+      "words": [
+        {
+          "text": "Manish",
+          "start": 49.1,
+          "end": 49.5375
+        },
+        {
+          "text": "chooses",
+          "start": 49.55,
+          "end": 49.95
+        },
+        {
+          "text": "what",
+          "start": 49.9625,
+          "end": 50.1
+        },
+        {
+          "text": "it",
+          "start": 50.1125,
+          "end": 50.1875
+        },
+        {
+          "text": "can",
+          "start": 50.2,
+          "end": 50.325
+        },
+        {
+          "text": "share,",
+          "start": 50.3375,
+          "end": 50.775
+        },
+        {
+          "text": "and",
+          "start": 51.0625,
+          "end": 51.2375
+        },
+        {
+          "text": "which",
+          "start": 51.25,
+          "end": 51.475
+        },
+        {
+          "text": "decisions",
+          "start": 51.4875,
+          "end": 52.1
+        },
+        {
+          "text": "must",
+          "start": 52.1125,
+          "end": 52.4375
+        },
+        {
+          "text": "come",
+          "start": 52.45,
+          "end": 52.65
+        },
+        {
+          "text": "back",
+          "start": 52.6625,
+          "end": 52.9
+        },
+        {
+          "text": "to",
+          "start": 52.9125,
+          "end": 52.9875
+        },
+        {
+          "text": "him.",
+          "start": 53.0,
+          "end": 53.325
+        }
+      ],
+      "source_start": 49,
+      "source_end": 53.704
+    },
+    {
+      "id": "slack1",
+      "start": 57.0,
+      "limit": 62.5,
+      "speaker": "narrator",
+      "text": "Now it's two a.m. in Bengaluru. But Sarah's afternoon is just getting started.",
+      "end": 62.352,
+      "duration": 5.352,
+      "voice": "en-US-AvaNeural",
+      "scene_limit": 62.5,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 5.352,
+      "fit": true,
+      "words": [
+        {
+          "text": "Now",
+          "start": 57.1,
+          "end": 57.45
+        },
+        {
+          "text": "it's",
+          "start": 57.4625,
+          "end": 57.65
+        },
+        {
+          "text": "two",
+          "start": 57.6625,
+          "end": 57.9125
+        },
+        {
+          "text": "a.m.",
+          "start": 57.925,
+          "end": 58.2375
+        },
+        {
+          "text": "in",
+          "start": 58.25,
+          "end": 58.375
+        },
+        {
+          "text": "Bengaluru.",
+          "start": 58.3875,
+          "end": 59.15
+        },
+        {
+          "text": "But",
+          "start": 59.5125,
+          "end": 59.7625
+        },
+        {
+          "text": "Sarah's",
+          "start": 59.775,
+          "end": 60.1875
+        },
+        {
+          "text": "afternoon",
+          "start": 60.2,
+          "end": 60.7125
+        },
+        {
+          "text": "is",
+          "start": 60.7375,
+          "end": 60.9125
+        },
+        {
+          "text": "just",
+          "start": 60.925,
+          "end": 61.225
+        },
+        {
+          "text": "getting",
+          "start": 61.2375,
+          "end": 61.45
+        },
+        {
+          "text": "started.",
+          "start": 61.4625,
+          "end": 61.975
+        }
+      ],
+      "source_start": 57,
+      "source_end": 62.352
+    },
+    {
+      "id": "slack2",
+      "start": 64.0,
+      "limit": 70.5,
+      "speaker": "sarah",
+      "text": "Quick question, Manish. Do you need daily totals, or the result for each dispute?",
+      "end": 69.52,
+      "duration": 5.52,
+      "voice": "en-US-EmmaNeural",
+      "scene_limit": 70.5,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 5.52,
+      "fit": true,
+      "words": [
+        {
+          "text": "Quick",
+          "start": 64.075,
+          "end": 64.2375
+        },
+        {
+          "text": "question,",
+          "start": 64.25,
+          "end": 64.725
+        },
+        {
+          "text": "Manish.",
+          "start": 64.75,
+          "end": 65.2875
+        },
+        {
+          "text": "Do",
+          "start": 65.6875,
+          "end": 65.7625
+        },
+        {
+          "text": "you",
+          "start": 65.775,
+          "end": 65.9
+        },
+        {
+          "text": "need",
+          "start": 65.9125,
+          "end": 66.125
+        },
+        {
+          "text": "daily",
+          "start": 66.1375,
+          "end": 66.4375
+        },
+        {
+          "text": "totals,",
+          "start": 66.45,
+          "end": 67.0
+        },
+        {
+          "text": "or",
+          "start": 67.4375,
+          "end": 67.5875
+        },
+        {
+          "text": "the",
+          "start": 67.6,
+          "end": 67.7
+        },
+        {
+          "text": "result",
+          "start": 67.7125,
+          "end": 68.1125
+        },
+        {
+          "text": "for",
+          "start": 68.125,
+          "end": 68.2875
+        },
+        {
+          "text": "each",
+          "start": 68.3,
+          "end": 68.5125
+        },
+        {
+          "text": "dispute?",
+          "start": 68.525,
+          "end": 69.15
+        }
+      ],
+      "source_start": 64,
+      "source_end": 69.52
+    },
+    {
+      "id": "slack3",
+      "start": 72.0,
+      "limit": 76.8,
+      "speaker": "alex",
+      "text": "It's two a.m. for him. We may have to wait.",
+      "end": 75.072,
+      "duration": 3.072,
+      "voice": "en-US-BrianNeural",
+      "scene_limit": 76.8,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 3.072,
+      "fit": true,
+      "words": [
+        {
+          "text": "It's",
+          "start": 72.05,
+          "end": 72.2
+        },
+        {
+          "text": "two",
+          "start": 72.2125,
+          "end": 72.45
+        },
+        {
+          "text": "a.m.",
+          "start": 72.4625,
+          "end": 72.7875
+        },
+        {
+          "text": "for",
+          "start": 72.8,
+          "end": 72.95
+        },
+        {
+          "text": "him.",
+          "start": 72.9625,
+          "end": 73.3
+        },
+        {
+          "text": "We",
+          "start": 73.675,
+          "end": 73.7625
+        },
+        {
+          "text": "may",
+          "start": 73.775,
+          "end": 73.9375
+        },
+        {
+          "text": "have",
+          "start": 73.95,
+          "end": 74.1375
+        },
+        {
+          "text": "to",
+          "start": 74.15,
+          "end": 74.275
+        },
+        {
+          "text": "wait.",
+          "start": 74.2875,
+          "end": 74.7
+        }
+      ],
+      "source_start": 72,
+      "source_end": 75.072
+    },
+    {
+      "id": "slack4",
+      "start": 79.0,
+      "limit": 85.0,
+      "speaker": "peer",
+      "text": "I'm Manish's AI Peer. He's offline. I can share the project context.",
+      "end": 83.92,
+      "duration": 4.92,
+      "voice": "en-US-AndrewNeural",
+      "scene_limit": 85.0,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 4.92,
+      "fit": true,
+      "words": [
+        {
+          "text": "I'm",
+          "start": 79.1,
+          "end": 79.2
+        },
+        {
+          "text": "Manish's",
+          "start": 79.2125,
+          "end": 79.675
+        },
+        {
+          "text": "AI",
+          "start": 79.6875,
+          "end": 79.975
+        },
+        {
+          "text": "Peer.",
+          "start": 79.9875,
+          "end": 80.4
+        },
+        {
+          "text": "He's",
+          "start": 80.825,
+          "end": 80.9625
+        },
+        {
+          "text": "offline.",
+          "start": 80.975,
+          "end": 81.4875
+        },
+        {
+          "text": "I",
+          "start": 81.9,
+          "end": 81.9875
+        },
+        {
+          "text": "can",
+          "start": 82.0,
+          "end": 82.1
+        },
+        {
+          "text": "share",
+          "start": 82.1125,
+          "end": 82.325
+        },
+        {
+          "text": "the",
+          "start": 82.3375,
+          "end": 82.4125
+        },
+        {
+          "text": "project",
+          "start": 82.425,
+          "end": 82.85
+        },
+        {
+          "text": "context.",
+          "start": 82.8625,
+          "end": 83.5375
+        }
+      ],
+      "source_start": 79,
+      "source_end": 83.92
+    },
+    {
+      "id": "slack5",
+      "start": 86.0,
+      "limit": 96.7,
+      "speaker": "peer",
+      "text": "We need the final won-or-lost result for each dispute, updated hourly. It feeds the reconciliation dashboard. Here's the latest requirement.",
+      "end": 94.76,
+      "duration": 8.76,
+      "voice": "en-US-AndrewNeural",
+      "scene_limit": 96.7,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 8.76,
+      "fit": true,
+      "words": [
+        {
+          "text": "We",
+          "start": 86.1,
+          "end": 86.1875
+        },
+        {
+          "text": "need",
+          "start": 86.2,
+          "end": 86.3625
+        },
+        {
+          "text": "the",
+          "start": 86.375,
+          "end": 86.4625
+        },
+        {
+          "text": "final",
+          "start": 86.475,
+          "end": 86.9375
+        },
+        {
+          "text": "won-or-lost",
+          "start": 86.95,
+          "end": 87.6375
+        },
+        {
+          "text": "result",
+          "start": 87.65,
+          "end": 88.0125
+        },
+        {
+          "text": "for",
+          "start": 88.025,
+          "end": 88.2
+        },
+        {
+          "text": "each",
+          "start": 88.3,
+          "end": 88.4625
+        },
+        {
+          "text": "dispute,",
+          "start": 88.475,
+          "end": 88.975
+        },
+        {
+          "text": "updated",
+          "start": 89.35,
+          "end": 89.7875
+        },
+        {
+          "text": "hourly.",
+          "start": 89.8,
+          "end": 90.25
+        },
+        {
+          "text": "It",
+          "start": 90.6625,
+          "end": 90.775
+        },
+        {
+          "text": "feeds",
+          "start": 90.7875,
+          "end": 91.125
+        },
+        {
+          "text": "the",
+          "start": 91.1375,
+          "end": 91.2375
+        },
+        {
+          "text": "reconciliation",
+          "start": 91.25,
+          "end": 92.075
+        },
+        {
+          "text": "dashboard.",
+          "start": 92.0875,
+          "end": 92.6625
+        },
+        {
+          "text": "Here's",
+          "start": 93.1,
+          "end": 93.275
+        },
+        {
+          "text": "the",
+          "start": 93.2875,
+          "end": 93.4125
+        },
+        {
+          "text": "latest",
+          "start": 93.425,
+          "end": 93.75
+        },
+        {
+          "text": "requirement.",
+          "start": 93.7625,
+          "end": 94.3875
+        }
+      ],
+      "source_start": 86,
+      "source_end": 94.76
+    },
+    {
+      "id": "slack6",
+      "start": 98.0,
+      "limit": 106.0,
+      "speaker": "sarah",
+      "text": "Use Dispute Events. It refreshes hourly. The daily summary is too late. I'll send the field mapping.",
+      "end": 105.368,
+      "duration": 7.368,
+      "voice": "en-US-EmmaNeural",
+      "scene_limit": 106.0,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 7.368,
+      "fit": true,
+      "words": [
+        {
+          "text": "Use",
+          "start": 98.0875,
+          "end": 98.3375
+        },
+        {
+          "text": "Dispute",
+          "start": 98.35,
+          "end": 98.8
+        },
+        {
+          "text": "Events.",
+          "start": 98.8125,
+          "end": 99.375
+        },
+        {
+          "text": "It",
+          "start": 99.775,
+          "end": 99.8875
+        },
+        {
+          "text": "refreshes",
+          "start": 99.9,
+          "end": 100.5375
+        },
+        {
+          "text": "hourly.",
+          "start": 100.55,
+          "end": 101.1125
+        },
+        {
+          "text": "The",
+          "start": 101.5125,
+          "end": 101.6
+        },
+        {
+          "text": "daily",
+          "start": 101.6125,
+          "end": 101.9375
+        },
+        {
+          "text": "summary",
+          "start": 101.95,
+          "end": 102.3875
+        },
+        {
+          "text": "is",
+          "start": 102.4,
+          "end": 102.5375
+        },
+        {
+          "text": "too",
+          "start": 102.55,
+          "end": 102.7375
+        },
+        {
+          "text": "late.",
+          "start": 102.75,
+          "end": 103.2
+        },
+        {
+          "text": "I'll",
+          "start": 103.6,
+          "end": 103.7
+        },
+        {
+          "text": "send",
+          "start": 103.7125,
+          "end": 103.9875
+        },
+        {
+          "text": "the",
+          "start": 104.0,
+          "end": 104.075
+        },
+        {
+          "text": "field",
+          "start": 104.0875,
+          "end": 104.425
+        },
+        {
+          "text": "mapping.",
+          "start": 104.4375,
+          "end": 105.0
+        }
+      ],
+      "source_start": 98,
+      "source_end": 105.368
+    },
+    {
+      "id": "slack7",
+      "start": 107.5,
+      "limit": 112.5,
+      "speaker": "peer",
+      "text": "Thanks, Sarah. I'll include that in Manish's handoff.",
+      "end": 111.028,
+      "duration": 3.528,
+      "voice": "en-US-AndrewNeural",
+      "scene_limit": 112.5,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 3.528,
+      "fit": true,
+      "words": [
+        {
+          "text": "Thanks,",
+          "start": 107.625,
+          "end": 107.925
+        },
+        {
+          "text": "Sarah.",
+          "start": 108.05,
+          "end": 108.3875
+        },
+        {
+          "text": "I'll",
+          "start": 108.8,
+          "end": 108.95
+        },
+        {
+          "text": "include",
+          "start": 108.9625,
+          "end": 109.35
+        },
+        {
+          "text": "that",
+          "start": 109.3625,
+          "end": 109.4875
+        },
+        {
+          "text": "in",
+          "start": 109.5,
+          "end": 109.575
+        },
+        {
+          "text": "Manish's",
+          "start": 109.5875,
+          "end": 110.025
+        },
+        {
+          "text": "handoff.",
+          "start": 110.0375,
+          "end": 110.65
+        }
+      ],
+      "source_start": 107.5,
+      "source_end": 111.028
+    },
+    {
+      "id": "slack8",
+      "start": 113.5,
+      "limit": 118.4,
+      "speaker": "narrator",
+      "text": "A useful answer. Without waiting for another working day.",
+      "end": 117.364,
+      "duration": 3.864,
+      "voice": "en-US-AvaNeural",
+      "scene_limit": 118.4,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 3.864,
+      "fit": true,
+      "words": [
+        {
+          "text": "A",
+          "start": 113.6,
+          "end": 113.75
+        },
+        {
+          "text": "useful",
+          "start": 113.7625,
+          "end": 114.2125
+        },
+        {
+          "text": "answer.",
+          "start": 114.225,
+          "end": 114.675
+        },
+        {
+          "text": "Without",
+          "start": 115.0375,
+          "end": 115.425
+        },
+        {
+          "text": "waiting",
+          "start": 115.4375,
+          "end": 115.7875
+        },
+        {
+          "text": "for",
+          "start": 115.8,
+          "end": 115.925
+        },
+        {
+          "text": "another",
+          "start": 115.9375,
+          "end": 116.275
+        },
+        {
+          "text": "working",
+          "start": 116.2875,
+          "end": 116.5875
+        },
+        {
+          "text": "day.",
+          "start": 116.6,
+          "end": 116.9875
+        }
+      ],
+      "source_start": 113.5,
+      "source_end": 117.364
+    },
+    {
+      "id": "bridge1",
+      "start": 120.0,
+      "limit": 128.8,
+      "speaker": "narrator",
+      "text": "Ten minutes later, the same project moves into a Zoom meeting. Manish has asked his Peer to cover the update.",
+      "end": 127.224,
+      "duration": 7.224,
+      "voice": "en-US-AvaNeural",
+      "scene_limit": 128.8,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 7.224,
+      "fit": true,
+      "words": [
+        {
+          "text": "Ten",
+          "start": 120.1,
+          "end": 120.3875
+        },
+        {
+          "text": "minutes",
+          "start": 120.4,
+          "end": 120.6625
+        },
+        {
+          "text": "later,",
+          "start": 120.675,
+          "end": 121.075
+        },
+        {
+          "text": "the",
+          "start": 121.4,
+          "end": 121.5
+        },
+        {
+          "text": "same",
+          "start": 121.5125,
+          "end": 121.8875
+        },
+        {
+          "text": "project",
+          "start": 121.9,
+          "end": 122.5
+        },
+        {
+          "text": "moves",
+          "start": 122.5125,
+          "end": 122.8875
+        },
+        {
+          "text": "into",
+          "start": 122.9,
+          "end": 123.1375
+        },
+        {
+          "text": "a",
+          "start": 123.15,
+          "end": 123.225
+        },
+        {
+          "text": "Zoom",
+          "start": 123.2375,
+          "end": 123.55
+        },
+        {
+          "text": "meeting.",
+          "start": 123.5625,
+          "end": 123.9875
+        },
+        {
+          "text": "Manish",
+          "start": 124.35,
+          "end": 124.825
+        },
+        {
+          "text": "has",
+          "start": 124.8375,
+          "end": 125.075
+        },
+        {
+          "text": "asked",
+          "start": 125.1,
+          "end": 125.4
+        },
+        {
+          "text": "his",
+          "start": 125.4125,
+          "end": 125.5625
+        },
+        {
+          "text": "Peer",
+          "start": 125.575,
+          "end": 125.8125
+        },
+        {
+          "text": "to",
+          "start": 125.825,
+          "end": 125.9125
+        },
+        {
+          "text": "cover",
+          "start": 125.925,
+          "end": 126.225
+        },
+        {
+          "text": "the",
+          "start": 126.2375,
+          "end": 126.3375
+        },
+        {
+          "text": "update.",
+          "start": 126.35,
+          "end": 126.8625
+        }
+      ],
+      "source_start": 120,
+      "source_end": 127.224
+    },
+    {
+      "id": "zoom1",
+      "start": 131.0,
+      "limit": 136.5,
+      "speaker": "alex",
+      "text": "Hey Manish, where are we on Chargebacks? Are we ready for Friday?",
+      "end": 135.296,
+      "duration": 4.296,
+      "voice": "en-US-BrianNeural",
+      "scene_limit": 136.5,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 4.296,
+      "fit": true,
+      "words": [
+        {
+          "text": "Hey",
+          "start": 131.075,
+          "end": 131.1875
+        },
+        {
+          "text": "Manish,",
+          "start": 131.2,
+          "end": 131.6625
+        },
+        {
+          "text": "where",
+          "start": 131.6875,
+          "end": 131.925
+        },
+        {
+          "text": "are",
+          "start": 131.9375,
+          "end": 132.0375
+        },
+        {
+          "text": "we",
+          "start": 132.05,
+          "end": 132.2
+        },
+        {
+          "text": "on",
+          "start": 132.2125,
+          "end": 132.3625
+        },
+        {
+          "text": "Chargebacks?",
+          "start": 132.375,
+          "end": 133.15
+        },
+        {
+          "text": "Are",
+          "start": 133.5125,
+          "end": 133.6375
+        },
+        {
+          "text": "we",
+          "start": 133.65,
+          "end": 133.8
+        },
+        {
+          "text": "ready",
+          "start": 133.8125,
+          "end": 134.1375
+        },
+        {
+          "text": "for",
+          "start": 134.15,
+          "end": 134.3375
+        },
+        {
+          "text": "Friday?",
+          "start": 134.35,
+          "end": 134.9125
+        }
+      ],
+      "source_start": 131,
+      "source_end": 135.296
+    },
+    {
+      "id": "zoom2",
+      "start": 137.5,
+      "limit": 142.5,
+      "speaker": "sarah",
+      "text": "I don't think Manish is here. It's past two in the morning for him.",
+      "end": 141.82,
+      "duration": 4.32,
+      "voice": "en-US-EmmaNeural",
+      "scene_limit": 142.5,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 4.32,
+      "fit": true,
+      "words": [
+        {
+          "text": "I",
+          "start": 137.5875,
+          "end": 137.6375
+        },
+        {
+          "text": "don't",
+          "start": 137.65,
+          "end": 137.8625
+        },
+        {
+          "text": "think",
+          "start": 137.875,
+          "end": 138.075
+        },
+        {
+          "text": "Manish",
+          "start": 138.0875,
+          "end": 138.5
+        },
+        {
+          "text": "is",
+          "start": 138.5125,
+          "end": 138.6625
+        },
+        {
+          "text": "here.",
+          "start": 138.675,
+          "end": 139.175
+        },
+        {
+          "text": "It's",
+          "start": 139.575,
+          "end": 139.7375
+        },
+        {
+          "text": "past",
+          "start": 139.75,
+          "end": 140.125
+        },
+        {
+          "text": "two",
+          "start": 140.1375,
+          "end": 140.3125
+        },
+        {
+          "text": "in",
+          "start": 140.325,
+          "end": 140.4125
+        },
+        {
+          "text": "the",
+          "start": 140.425,
+          "end": 140.5
+        },
+        {
+          "text": "morning",
+          "start": 140.5125,
+          "end": 140.9125
+        },
+        {
+          "text": "for",
+          "start": 140.925,
+          "end": 141.0875
+        },
+        {
+          "text": "him.",
+          "start": 141.1,
+          "end": 141.45
+        }
+      ],
+      "source_start": 139,
+      "source_end": 143.32
+    },
+    {
+      "id": "zoom3",
+      "start": 143.8,
+      "limit": 150.1,
+      "speaker": "peer",
+      "text": "Hi, I'm Manish's AI Peer. He couldn't join, so he asked me to cover this update.",
+      "end": 149.296,
+      "duration": 5.496,
+      "voice": "en-US-AndrewNeural",
+      "scene_limit": 150.1,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 5.496,
+      "fit": true,
+      "words": [
+        {
+          "text": "Hi,",
+          "start": 143.9125,
+          "end": 144.15
+        },
+        {
+          "text": "I'm",
+          "start": 144.5375,
+          "end": 144.6625
+        },
+        {
+          "text": "Manish's",
+          "start": 144.675,
+          "end": 145.1
+        },
+        {
+          "text": "AI",
+          "start": 145.1125,
+          "end": 145.4
+        },
+        {
+          "text": "Peer.",
+          "start": 145.4125,
+          "end": 145.8125
+        },
+        {
+          "text": "He",
+          "start": 146.2375,
+          "end": 146.3125
+        },
+        {
+          "text": "couldn't",
+          "start": 146.325,
+          "end": 146.575
+        },
+        {
+          "text": "join,",
+          "start": 146.5875,
+          "end": 146.925
+        },
+        {
+          "text": "so",
+          "start": 147.3,
+          "end": 147.4
+        },
+        {
+          "text": "he",
+          "start": 147.4125,
+          "end": 147.5625
+        },
+        {
+          "text": "asked",
+          "start": 147.575,
+          "end": 147.85
+        },
+        {
+          "text": "me",
+          "start": 147.8625,
+          "end": 147.9375
+        },
+        {
+          "text": "to",
+          "start": 147.95,
+          "end": 148.025
+        },
+        {
+          "text": "cover",
+          "start": 148.0375,
+          "end": 148.2875
+        },
+        {
+          "text": "this",
+          "start": 148.3,
+          "end": 148.475
+        },
+        {
+          "text": "update.",
+          "start": 148.4875,
+          "end": 148.925
+        }
+      ],
+      "source_start": 147,
+      "source_end": 152.496
+    },
+    {
+      "id": "zoom4",
+      "start": 151.1,
+      "limit": 153.9,
+      "speaker": "alex",
+      "text": "Great. What's still blocking us?",
+      "end": 153.524,
+      "duration": 2.424,
+      "voice": "en-US-BrianNeural",
+      "scene_limit": 153.9,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 2.424,
+      "fit": true,
+      "words": [
+        {
+          "text": "Great.",
+          "start": 151.175,
+          "end": 151.5125
+        },
+        {
+          "text": "What's",
+          "start": 151.9,
+          "end": 152.05
+        },
+        {
+          "text": "still",
+          "start": 152.0625,
+          "end": 152.325
+        },
+        {
+          "text": "blocking",
+          "start": 152.3375,
+          "end": 152.8
+        },
+        {
+          "text": "us?",
+          "start": 152.8125,
+          "end": 153.1625
+        }
+      ],
+      "source_start": 157,
+      "source_end": 159.424
+    },
+    {
+      "id": "zoom5",
+      "start": 155.1,
+      "limit": 164.5,
+      "speaker": "peer",
+      "text": "The dashboard build is complete. Two data checks are still open: the same event arriving twice, and an outcome changing later.",
+      "end": 162.972,
+      "duration": 7.872,
+      "voice": "en-US-AndrewNeural",
+      "scene_limit": 164.5,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 7.872,
+      "fit": true,
+      "words": [
+        {
+          "text": "The",
+          "start": 155.2125,
+          "end": 155.275
+        },
+        {
+          "text": "dashboard",
+          "start": 155.2875,
+          "end": 155.7875
+        },
+        {
+          "text": "build",
+          "start": 155.8,
+          "end": 156.1
+        },
+        {
+          "text": "is",
+          "start": 156.25,
+          "end": 156.3375
+        },
+        {
+          "text": "complete.",
+          "start": 156.35,
+          "end": 156.875
+        },
+        {
+          "text": "Two",
+          "start": 157.3,
+          "end": 157.4375
+        },
+        {
+          "text": "data",
+          "start": 157.45,
+          "end": 157.6875
+        },
+        {
+          "text": "checks",
+          "start": 157.7,
+          "end": 158.075
+        },
+        {
+          "text": "are",
+          "start": 158.0875,
+          "end": 158.25
+        },
+        {
+          "text": "still",
+          "start": 158.2625,
+          "end": 158.6
+        },
+        {
+          "text": "open:",
+          "start": 158.6125,
+          "end": 158.8875
+        },
+        {
+          "text": "the",
+          "start": 159.2625,
+          "end": 159.3375
+        },
+        {
+          "text": "same",
+          "start": 159.35,
+          "end": 159.6625
+        },
+        {
+          "text": "event",
+          "start": 159.675,
+          "end": 159.9375
+        },
+        {
+          "text": "arriving",
+          "start": 159.95,
+          "end": 160.375
+        },
+        {
+          "text": "twice,",
+          "start": 160.3875,
+          "end": 160.95
+        },
+        {
+          "text": "and",
+          "start": 161.2,
+          "end": 161.2875
+        },
+        {
+          "text": "an",
+          "start": 161.3,
+          "end": 161.3875
+        },
+        {
+          "text": "outcome",
+          "start": 161.4,
+          "end": 161.8125
+        },
+        {
+          "text": "changing",
+          "start": 161.825,
+          "end": 162.225
+        },
+        {
+          "text": "later.",
+          "start": 162.2375,
+          "end": 162.6
+        }
+      ],
+      "source_start": 161,
+      "source_end": 168.872
+    },
+    {
+      "id": "zoom6",
+      "start": 165.5,
+      "limit": 171.5,
+      "speaker": "peer",
+      "text": "Sarah just confirmed the hourly data source in Slack. So that question is answered.",
+      "end": 170.516,
+      "duration": 5.016,
+      "voice": "en-US-AndrewNeural",
+      "scene_limit": 171.5,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 5.016,
+      "fit": true,
+      "words": [
+        {
+          "text": "Sarah",
+          "start": 165.6125,
+          "end": 165.875
+        },
+        {
+          "text": "just",
+          "start": 165.8875,
+          "end": 166.1375
+        },
+        {
+          "text": "confirmed",
+          "start": 166.15,
+          "end": 166.65
+        },
+        {
+          "text": "the",
+          "start": 166.6625,
+          "end": 166.7625
+        },
+        {
+          "text": "hourly",
+          "start": 166.8625,
+          "end": 167.275
+        },
+        {
+          "text": "data",
+          "start": 167.2875,
+          "end": 167.5625
+        },
+        {
+          "text": "source",
+          "start": 167.575,
+          "end": 167.925
+        },
+        {
+          "text": "in",
+          "start": 167.9375,
+          "end": 168.025
+        },
+        {
+          "text": "Slack.",
+          "start": 168.0375,
+          "end": 168.5125
+        },
+        {
+          "text": "So",
+          "start": 168.925,
+          "end": 169.025
+        },
+        {
+          "text": "that",
+          "start": 169.0375,
+          "end": 169.2
+        },
+        {
+          "text": "question",
+          "start": 169.2125,
+          "end": 169.575
+        },
+        {
+          "text": "is",
+          "start": 169.5875,
+          "end": 169.7
+        },
+        {
+          "text": "answered.",
+          "start": 169.7125,
+          "end": 170.15
+        }
+      ],
+      "source_start": 175,
+      "source_end": 180.016
+    },
+    {
+      "id": "zoom7",
+      "start": 172.5,
+      "limit": 176.2,
+      "speaker": "sarah",
+      "text": "I can provide those two test examples today.",
+      "end": 175.476,
+      "duration": 2.976,
+      "voice": "en-US-EmmaNeural",
+      "scene_limit": 176.2,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 2.976,
+      "fit": true,
+      "words": [
+        {
+          "text": "I",
+          "start": 172.575,
+          "end": 172.65
+        },
+        {
+          "text": "can",
+          "start": 172.6625,
+          "end": 172.8125
+        },
+        {
+          "text": "provide",
+          "start": 172.825,
+          "end": 173.25
+        },
+        {
+          "text": "those",
+          "start": 173.2625,
+          "end": 173.4875
+        },
+        {
+          "text": "two",
+          "start": 173.5,
+          "end": 173.6875
+        },
+        {
+          "text": "test",
+          "start": 173.7,
+          "end": 174.0375
+        },
+        {
+          "text": "examples",
+          "start": 174.05,
+          "end": 174.5875
+        },
+        {
+          "text": "today.",
+          "start": 174.6,
+          "end": 175.1
+        }
+      ],
+      "source_start": 184,
+      "source_end": 186.976
+    },
+    {
+      "id": "zoom8",
+      "start": 177.0,
+      "limit": 180.1,
+      "speaker": "alex",
+      "text": "Can we confirm Friday, then?",
+      "end": 179.328,
+      "duration": 2.328,
+      "voice": "en-US-BrianNeural",
+      "scene_limit": 180.1,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 2.328,
+      "fit": true,
+      "words": [
+        {
+          "text": "Can",
+          "start": 177.05,
+          "end": 177.2
+        },
+        {
+          "text": "we",
+          "start": 177.2125,
+          "end": 177.3375
+        },
+        {
+          "text": "confirm",
+          "start": 177.35,
+          "end": 177.8125
+        },
+        {
+          "text": "Friday,",
+          "start": 177.825,
+          "end": 178.4125
+        },
+        {
+          "text": "then?",
+          "start": 178.6125,
+          "end": 178.95
+        }
+      ],
+      "source_start": 190,
+      "source_end": 192.328
+    },
+    {
+      "id": "zoom9",
+      "start": 181.5,
+      "limit": 189.3,
+      "speaker": "peer",
+      "text": "That needs Manish's approval. I'll take back the test plan and ask him to confirm the date once validation is complete.",
+      "end": 188.268,
+      "duration": 6.768,
+      "voice": "en-US-AndrewNeural",
+      "scene_limit": 189.3,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 6.768,
+      "fit": true,
+      "words": [
+        {
+          "text": "That",
+          "start": 181.6,
+          "end": 181.725
+        },
+        {
+          "text": "needs",
+          "start": 181.7375,
+          "end": 181.9875
+        },
+        {
+          "text": "Manish's",
+          "start": 182.0,
+          "end": 182.45
+        },
+        {
+          "text": "approval.",
+          "start": 182.4625,
+          "end": 182.9625
+        },
+        {
+          "text": "I'll",
+          "start": 183.375,
+          "end": 183.475
+        },
+        {
+          "text": "take",
+          "start": 183.4875,
+          "end": 183.7
+        },
+        {
+          "text": "back",
+          "start": 183.7125,
+          "end": 183.9625
+        },
+        {
+          "text": "the",
+          "start": 183.975,
+          "end": 184.0625
+        },
+        {
+          "text": "test",
+          "start": 184.075,
+          "end": 184.375
+        },
+        {
+          "text": "plan",
+          "start": 184.3875,
+          "end": 184.775
+        },
+        {
+          "text": "and",
+          "start": 184.95,
+          "end": 185.075
+        },
+        {
+          "text": "ask",
+          "start": 185.0875,
+          "end": 185.3625
+        },
+        {
+          "text": "him",
+          "start": 185.375,
+          "end": 185.4625
+        },
+        {
+          "text": "to",
+          "start": 185.475,
+          "end": 185.575
+        },
+        {
+          "text": "confirm",
+          "start": 185.5875,
+          "end": 185.9875
+        },
+        {
+          "text": "the",
+          "start": 186.0,
+          "end": 186.0875
+        },
+        {
+          "text": "date",
+          "start": 186.1,
+          "end": 186.3875
+        },
+        {
+          "text": "once",
+          "start": 186.4,
+          "end": 186.65
+        },
+        {
+          "text": "validation",
+          "start": 186.6625,
+          "end": 187.2625
+        },
+        {
+          "text": "is",
+          "start": 187.275,
+          "end": 187.375
+        },
+        {
+          "text": "complete.",
+          "start": 187.3875,
+          "end": 187.9
+        }
+      ],
+      "source_start": 194.5,
+      "source_end": 201.268
+    },
+    {
+      "id": "zoom10",
+      "start": 190.1,
+      "limit": 194.6,
+      "speaker": "alex",
+      "text": "Perfect. We can keep validation moving.",
+      "end": 193.292,
+      "duration": 3.192,
+      "voice": "en-US-BrianNeural",
+      "scene_limit": 194.6,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 3.192,
+      "fit": true,
+      "words": [
+        {
+          "text": "Perfect.",
+          "start": 190.15,
+          "end": 190.725
+        },
+        {
+          "text": "We",
+          "start": 191.1125,
+          "end": 191.1875
+        },
+        {
+          "text": "can",
+          "start": 191.2,
+          "end": 191.3875
+        },
+        {
+          "text": "keep",
+          "start": 191.4,
+          "end": 191.675
+        },
+        {
+          "text": "validation",
+          "start": 191.6875,
+          "end": 192.4
+        },
+        {
+          "text": "moving.",
+          "start": 192.4125,
+          "end": 192.9125
+        }
+      ],
+      "source_start": 206,
+      "source_end": 209.192
+    },
+    {
+      "id": "handoff1",
+      "start": 196.1,
+      "limit": 204.1,
+      "speaker": "narrator",
+      "text": "Morning. Manish returns to the answer from Slack, the test plan from Zoom, and the sources behind both.",
+      "end": 203.348,
+      "duration": 7.248,
+      "voice": "en-US-AvaNeural",
+      "scene_limit": 204.1,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 7.248,
+      "fit": true,
+      "words": [
+        {
+          "text": "Morning.",
+          "start": 196.2,
+          "end": 196.775
+        },
+        {
+          "text": "Manish",
+          "start": 197.1375,
+          "end": 197.5625
+        },
+        {
+          "text": "returns",
+          "start": 197.575,
+          "end": 198.025
+        },
+        {
+          "text": "to",
+          "start": 198.0375,
+          "end": 198.125
+        },
+        {
+          "text": "the",
+          "start": 198.1375,
+          "end": 198.2375
+        },
+        {
+          "text": "answer",
+          "start": 198.25,
+          "end": 198.6125
+        },
+        {
+          "text": "from",
+          "start": 198.625,
+          "end": 198.8
+        },
+        {
+          "text": "Slack,",
+          "start": 198.8125,
+          "end": 199.3
+        },
+        {
+          "text": "the",
+          "start": 199.625,
+          "end": 199.7125
+        },
+        {
+          "text": "test",
+          "start": 199.725,
+          "end": 200.075
+        },
+        {
+          "text": "plan",
+          "start": 200.0875,
+          "end": 200.325
+        },
+        {
+          "text": "from",
+          "start": 200.3375,
+          "end": 200.5
+        },
+        {
+          "text": "Zoom,",
+          "start": 200.5125,
+          "end": 200.9
+        },
+        {
+          "text": "and",
+          "start": 201.225,
+          "end": 201.3125
+        },
+        {
+          "text": "the",
+          "start": 201.325,
+          "end": 201.4125
+        },
+        {
+          "text": "sources",
+          "start": 201.425,
+          "end": 201.975
+        },
+        {
+          "text": "behind",
+          "start": 201.9875,
+          "end": 202.4875
+        },
+        {
+          "text": "both.",
+          "start": 202.5,
+          "end": 202.9875
+        }
+      ],
+      "source_start": 212,
+      "source_end": 219.248
+    },
+    {
+      "id": "handoff2",
+      "start": 206.1,
+      "limit": 213.6,
+      "speaker": "narrator",
+      "text": "One decision still needs him: the launch date. Less catching up. A clear next step.",
+      "end": 212.22,
+      "duration": 6.12,
+      "voice": "en-US-AvaNeural",
+      "scene_limit": 213.6,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 6.12,
+      "fit": true,
+      "words": [
+        {
+          "text": "One",
+          "start": 206.2,
+          "end": 206.4875
+        },
+        {
+          "text": "decision",
+          "start": 206.5,
+          "end": 207.075
+        },
+        {
+          "text": "still",
+          "start": 207.1,
+          "end": 207.3875
+        },
+        {
+          "text": "needs",
+          "start": 207.4,
+          "end": 207.6125
+        },
+        {
+          "text": "him:",
+          "start": 207.625,
+          "end": 207.8875
+        },
+        {
+          "text": "the",
+          "start": 208.225,
+          "end": 208.3125
+        },
+        {
+          "text": "launch",
+          "start": 208.325,
+          "end": 208.6375
+        },
+        {
+          "text": "date.",
+          "start": 208.65,
+          "end": 209.0125
+        },
+        {
+          "text": "Less",
+          "start": 209.375,
+          "end": 209.7
+        },
+        {
+          "text": "catching",
+          "start": 209.7125,
+          "end": 210.0625
+        },
+        {
+          "text": "up.",
+          "start": 210.075,
+          "end": 210.35
+        },
+        {
+          "text": "A",
+          "start": 210.7125,
+          "end": 210.8875
+        },
+        {
+          "text": "clear",
+          "start": 210.9,
+          "end": 211.2375
+        },
+        {
+          "text": "next",
+          "start": 211.25,
+          "end": 211.4625
+        },
+        {
+          "text": "step.",
+          "start": 211.475,
+          "end": 211.85
+        }
+      ],
+      "source_start": 222,
+      "source_end": 228.12
+    },
+    {
+      "id": "close1",
+      "start": 216.1,
+      "limit": 223.1,
+      "speaker": "narrator",
+      "text": "Your work has a timezone. Your Peer doesn't. AI Peer. Keep the context moving.",
+      "end": 222.412,
+      "duration": 6.312,
+      "voice": "en-US-AvaNeural",
+      "scene_limit": 223.1,
+      "tts_rate": "+0%",
+      "time_stretch": 1.0,
+      "original_duration": 6.312,
+      "fit": true,
+      "words": [
+        {
+          "text": "Your",
+          "start": 216.2,
+          "end": 216.4375
+        },
+        {
+          "text": "work",
+          "start": 216.45,
+          "end": 216.675
+        },
+        {
+          "text": "has",
+          "start": 216.6875,
+          "end": 216.85
+        },
+        {
+          "text": "a",
+          "start": 216.8625,
+          "end": 216.9125
+        },
+        {
+          "text": "timezone.",
+          "start": 216.925,
+          "end": 217.55
+        },
+        {
+          "text": "Your",
+          "start": 217.9125,
+          "end": 218.15
+        },
+        {
+          "text": "Peer",
+          "start": 218.1625,
+          "end": 218.4625
+        },
+        {
+          "text": "doesn't.",
+          "start": 218.475,
+          "end": 219.0
+        },
+        {
+          "text": "AI",
+          "start": 219.3625,
+          "end": 219.7375
+        },
+        {
+          "text": "Peer.",
+          "start": 219.75,
+          "end": 220.175
+        },
+        {
+          "text": "Keep",
+          "start": 220.5375,
+          "end": 220.8
+        },
+        {
+          "text": "the",
+          "start": 220.8125,
+          "end": 220.9125
+        },
+        {
+          "text": "context",
+          "start": 220.925,
+          "end": 221.5
+        },
+        {
+          "text": "moving.",
+          "start": 221.5125,
+          "end": 222.0375
+        }
+      ],
+      "source_start": 232,
+      "source_end": 238.312
+    }
+  ],
+  "effects": [
+    {
+      "time": 0.0,
+      "kind": "clock"
+    },
+    {
+      "time": 8.4,
+      "kind": "clock"
+    },
+    {
+      "time": 18.0,
+      "kind": "drop"
+    },
+    {
+      "time": 24.0,
+      "kind": "reveal"
+    },
+    {
+      "time": 34.0,
+      "kind": "connect"
+    },
+    {
+      "time": 37.0,
+      "kind": "connect"
+    },
+    {
+      "time": 44.0,
+      "kind": "connect"
+    },
+    {
+      "time": 49.0,
+      "kind": "soft"
+    },
+    {
+      "time": 56.0,
+      "kind": "transition"
+    },
+    {
+      "time": 63.5,
+      "kind": "message"
+    },
+    {
+      "time": 71.5,
+      "kind": "message"
+    },
+    {
+      "time": 78.5,
+      "kind": "message"
+    },
+    {
+      "time": 97.5,
+      "kind": "message"
+    },
+    {
+      "time": 107.0,
+      "kind": "message"
+    },
+    {
+      "time": 112.8,
+      "kind": "success"
+    },
+    {
+      "time": 119.0,
+      "kind": "transition"
+    },
+    {
+      "time": 129.5,
+      "kind": "join"
+    },
+    {
+      "time": 143.3,
+      "kind": "soft"
+    },
+    {
+      "time": 165.0,
+      "kind": "connect"
+    },
+    {
+      "time": 194.9,
+      "kind": "transition"
+    },
+    {
+      "time": 200.1,
+      "kind": "connect"
+    },
+    {
+      "time": 205.1,
+      "kind": "connect"
+    },
+    {
+      "time": 215.1,
+      "kind": "reveal"
+    }
+  ],
+  "stats": {
+    "narration": {
+      "duration": 224.1,
+      "sample_rate": 48000,
+      "channels": 2,
+      "peak_dbfs": -3.923,
+      "rms_dbfs": -20.754,
+      "clipped_samples": 0,
+      "frames": 10756800,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    },
+    "music": {
+      "duration": 224.1,
+      "sample_rate": 48000,
+      "channels": 2,
+      "peak_dbfs": -15.269,
+      "rms_dbfs": -37.829,
+      "clipped_samples": 0,
+      "frames": 10756800,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    },
+    "effects": {
+      "duration": 224.1,
+      "sample_rate": 48000,
+      "channels": 2,
+      "peak_dbfs": -22.161,
+      "rms_dbfs": -51.316,
+      "clipped_samples": 0,
+      "frames": 10756800,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    },
+    "mixed": {
+      "duration": 224.1,
+      "sample_rate": 48000,
+      "channels": 2,
+      "peak_dbfs": -3.722,
+      "rms_dbfs": -20.664,
+      "clipped_samples": 0,
+      "frames": 10756800,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    },
+    "music-unducked": {
+      "duration": 224.1,
+      "sample_rate": 48000,
+      "channels": 2,
+      "peak_dbfs": -9.458,
+      "rms_dbfs": -27.568,
+      "clipped_samples": 0,
+      "frames": 10756800,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "source_duration": 240,
+  "edit_sha256": "3edc43158f3e7958017e51541641b628429f27791384dd8065c55aa2c87335ae",
+  "edit": {
+    "sourceDuration": 240,
+    "duration": 224.1,
+    "cuts": [
+      [
+        136.5,
+        138
+      ],
+      [
+        144,
+        145.7
+      ],
+      [
+        153.3,
+        156
+      ],
+      [
+        170.4,
+        174
+      ],
+      [
+        181,
+        183
+      ],
+      [
+        187.7,
+        189.2
+      ],
+      [
+        202.3,
+        205.2
+      ]
+    ],
+    "reason": "Shorten silent gaps between Zoom dialogue turns while keeping the absence pause, evidence holds and every spoken word."
+  },
+  "edit_note": "Seven speech-free cuts; 12ms fade-out and fade-in at each join without changing duration. Source masters preserved."
+}

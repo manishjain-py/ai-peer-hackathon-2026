@@ -1,0 +1,774 @@
+AI Peer
+An always-on AI teammate that understands your work, stays current, and can collaborate on your behalf
+1. Overview
+The idea is to give every employee an AI-powered Peer — a personal work agent that deeply understands who they are, what they work on, the systems and projects they own, the people they collaborate with, and the current state of their work.
+The Peer is not just a chatbot that can search company information.
+It is a continuously learning, always-available AI teammate that represents an employee when they are unavailable and can help continue work on their behalf.
+At a high level:
+It learns you → understands your work → stays up to date → helps you work → represents you when needed.
+For example, if someone messages an engineer at 2 AM asking for urgent context about a project, the engineer's Peer may be able to respond with the latest known information instead of forcing the other person to wait until the engineer wakes up.
+Similarly, if an engineer cannot attend a meeting, their Peer could potentially attend, understand the conversation, answer questions related to that engineer's work, capture decisions, and relay everything back.
+The long-term vision is simple:
+Every employee gets an intelligent digital peer that understands their work almost as deeply as they do.
+
+2. Problem Statement
+Modern engineering organizations generate a huge amount of knowledge every day.
+That knowledge is distributed across many different systems:
+Slack
+Google Docs
+Google Drive
+Gmail
+Zoom meetings
+project trackers
+internal documentation
+code repositories
+service ownership systems
+dashboards
+incident systems
+design documents
+company directories
+team discussions
+historical decisions
+A large portion of important context ultimately lives with individual employees.
+This creates several problems.
+2.1 Knowledge is fragmented
+Understanding even a single project may require looking through:
+multiple documents
+Slack threads
+meeting notes
+code
+dashboards
+historical conversations
+tickets
+previous decisions
+Employees repeatedly spend time reconstructing context.
+
+2.2 Knowledge often exists in people's heads
+An engineer may know:
+why a particular architecture decision was made
+which service owns a particular field
+which approach was previously rejected
+who to contact
+what the current project status is
+what blockers exist
+But that knowledge may not be documented clearly anywhere.
+As a result, the employee themselves becomes part of the dependency graph.
+
+2.3 Work stops when people become unavailable
+Employees may be:
+sleeping
+on vacation
+in another meeting
+offline
+traveling
+working in another timezone
+Even simple questions can become blockers because someone needs information from one particular person.
+
+2.4 Cross-time-zone collaboration introduces large delays
+This is especially relevant for globally distributed teams.
+Consider an India team working with a U.S. team.
+An India engineer asks:
+"What is the right way to fetch this data?"
+Several hours later, during U.S. working hours, the owning team responds:
+"What exactly is your use case?"
+At this point, the India engineer may already be asleep.
+The response waits until the next morning in India.
+The India engineer responds.
+By that time, the U.S. team may be offline again.
+A simple clarification can therefore take one or multiple days.
+The actual technical work may only require 10 minutes, but timezone round-trips dominate the timeline.
+
+3. The Idea
+Give every employee the ability to create their own AI Peer.
+The employee might simply click:
+Create My Peer
+From there, the system begins learning about them automatically.
+The goal is not to ask the employee to manually explain everything they work on.
+Instead, the Peer discovers this information from existing company systems.
+
+4. Building the Employee's Peer
+Step 1 — Understand who the employee is
+The Peer starts with the company's employee directory/profile system.
+For Airbnb, this could start with OneAirbnb.
+From the profile it learns things such as:
+employee name
+role
+organization
+manager
+team
+location/timezone
+immediate collaborators
+areas of responsibility
+This provides the initial seed for discovery.
+
+Step 2 — Discover the employee's work context
+Using the initial profile, the Peer begins identifying relevant sources.
+For example:
+Slack
+It could discover:
+team channels
+project channels
+frequently used channels
+important discussions
+people the employee works with
+decisions made in conversations
+Google Drive / Google Docs
+It could identify:
+design documents
+project plans
+requirement documents
+launch documents
+one-pagers
+operational documentation
+meeting notes
+Gmail
+Where appropriate and permitted, it could understand important project discussions and decisions that happened through email.
+Code repositories
+For engineers, the Peer could learn:
+repositories they contribute to
+services their team owns
+code areas they frequently modify
+service architecture
+APIs
+dependencies
+ownership boundaries
+Zoom / meetings
+It could understand:
+meetings related to active projects
+recurring team meetings
+decisions discussed verbally
+follow-up actions
+project status
+Internal systems
+The Peer could additionally connect to systems containing:
+service ownership
+incidents
+dashboards
+project tracking
+operational metrics
+runbooks
+internal documentation
+
+5. Personal Work Knowledge Graph
+The information discovered by the Peer can be represented as a continuously evolving personal knowledge graph.
+For example:
+Employee
+↓
+Risk Partner Systems
+↓
+Tower → Atrium Migration
+↓
+PROSS
+↓
+Requirement
+↓
+Data dependency
+↓
+Owning team
+↓
+Design document
+↓
+Slack discussion
+↓
+Latest implementation decision
+The Peer should understand relationships between:
+people
+teams
+projects
+services
+documents
+decisions
+conversations
+code
+dependencies
+incidents
+tasks
+This is much more powerful than simply storing documents in a vector database.
+The Peer understands how different pieces of company knowledge connect to the employee.
+
+6. Staying Up to Date
+The Peer should not be a one-time snapshot.
+Its knowledge should continuously evolve.
+When something changes:
+a document is updated
+a new Slack discussion occurs
+a design decision changes
+a PR is merged
+a project status changes
+a meeting happens
+a new incident occurs
+…the Peer updates its understanding.
+An important principle is:
+The Peer should know the source of every important fact.
+Instead of simply remembering:
+"Project X launches on September 30."
+It should understand:
+where that information came from
+when it was last updated
+whether newer information exists
+how confident it is
+This allows the Peer to remain grounded in actual company sources of truth.
+
+7. From AI Assistant to AI Peer
+Most enterprise AI tools today are reactive.
+The user asks:
+"What is the latest status of Project X?"
+The AI searches for information and answers.
+AI Peer goes one step further.
+The Peer can participate in work.
+It can potentially:
+respond
+clarify
+summarize
+follow up
+attend
+capture
+coordinate
+investigate
+write
+code
+retrieve information
+continue conversations
+This changes the interaction from:
+Human → AI → Information
+to:
+Human ↔ AI Peer ↔ Organization
+
+8. Key Use Cases
+Use Case 1 — Answering while the employee is offline
+Imagine someone messages Khaled late at night:
+"Hey Khaled, sorry for the late message. Do you know what happened with the latest rollout? We need this urgently."
+Khaled is asleep.
+Instead of waiting several hours, Khaled's Peer responds:
+"Khaled is currently offline. Based on the latest project information I have, the rollout completed for X, while Y is still blocked on Z. The latest update came from [source]. I'll make sure Khaled sees this conversation when he's back online."
+The person asking the question immediately gets useful information.
+When Khaled returns, he sees:
+what was asked
+what his Peer replied
+what sources it used
+He can correct or add additional context if necessary.
+
+9. Use Case 2 — Eliminating Cross-Time-Zone Round Trips
+This may be one of the highest-value use cases.
+Imagine an India engineer asks a U.S. team:
+"What is the recommended way to retrieve this field?"
+Several hours later the U.S. team replies:
+"What is your use case?"
+Normally, the India engineer is asleep.
+The conversation stops.
+The next morning the engineer explains the use case.
+The U.S. team may not see that response until their next working day.
+A simple clarification can therefore delay a project by 24–48 hours.
+With AI Peer:
+The U.S. engineer asks:
+"What is your use case?"
+The Peer already understands the project and requirement.
+It responds:
+"Manish is currently offline. The use case is part of the Premium Chargebacks work. We need this field to determine X before Y. The requirement comes from [document/source]. Based on the current implementation, we are evaluating whether your dataset is the authoritative source."
+The U.S. engineer now has enough context to respond:
+"Got it. In that case, use Dataset B and fetch field C using API D."
+When Manish wakes up, the dependency may already be resolved.
+Before
+Question
+→ wait
+→ clarification
+→ timezone gap
+→ explanation
+→ timezone gap
+→ answer
+Potentially 1–2 days
+With AI Peer
+Question
+→ clarification
+→ Peer responds
+→ answer
+Potentially resolved during the same U.S. workday
+This introduces an interesting concept:
+AI Peer compresses collaboration latency.
+Your working day may end.
+Your work does not necessarily need to stop.
+
+10. Use Case 3 — AI Peer Attending a Meeting
+Imagine Khaled cannot attend an important Zoom meeting.
+His AI Peer joins the meeting instead.
+At the beginning, it could clearly identify itself:
+"Hi, I'm Khaled's AI Peer. Khaled couldn't join today. I'll follow the discussion, capture relevant decisions, and help with questions related to his work where I have enough context."
+During the meeting someone asks:
+"Do we know where Khaled's team is with the migration?"
+Someone responds:
+"Khaled isn't here today."
+Then the Peer speaks:
+"I can help with that. Based on the latest project update, development is complete for X, Y is currently in validation, and the remaining dependency is Z. The latest update was from yesterday. I'll also share this discussion with Khaled and flag anything that needs his confirmation."
+This could be a very powerful hackathon demo moment.
+The AI is no longer only answering questions in a chat interface.
+It is participating as a teammate.
+
+11. Use Case 4 — Meeting Handoffs
+The Peer could automatically provide the employee with a useful summary afterward:
+Meeting you missed
+Important decisions
+Team A will use API X.
+Launch moved to October 5.
+Questions directed at you
+Can your team confirm whether field Y is available?
+What I answered
+I shared the latest implementation status from the project document.
+Things requiring your review
+Team B requested confirmation on the rollout date.
+Instead of watching a 45-minute recording, the employee gets the exact information they need.
+
+12. Use Case 5 — Project Questions
+Someone could ask the Peer:
+"Why did Manish's team choose approach A instead of approach B?"
+The Peer could reconstruct:
+original requirement
+design discussion
+rejected alternatives
+Slack discussion
+design document
+code implementation
+and explain the reasoning.
+This prevents historical context from disappearing as projects evolve.
+
+13. Use Case 6 — Engineering and Coding
+Because the Peer understands:
+the engineer's services
+project context
+architecture
+historical decisions
+coding patterns
+current tasks
+it could also assist with engineering work.
+Examples:
+explain a service
+investigate an issue
+propose code changes
+identify ownership
+create implementation plans
+review PRs
+find similar previous work
+identify relevant dashboards
+trace dependencies
+Eventually the Peer could coordinate with coding agents to perform implementation tasks.
+
+14. Use Case 7 — Onboarding
+A new engineer joining a team could interact with existing team members' Peers.
+Instead of repeatedly asking:
+"Who owns this?"
+or
+"Why does this service work this way?"
+they could ask:
+"Explain the payments architecture from Manish's team's perspective."
+or:
+"What should I understand before modifying this service?"
+This could significantly accelerate onboarding.
+
+15. Use Case 8 — Vacation / PTO Coverage
+Before going on leave, employees often create handoff documents.
+But these documents immediately become stale.
+An AI Peer already understands:
+active projects
+open issues
+current status
+collaborators
+dependencies
+During PTO, teammates could interact with the Peer for routine questions.
+Only genuinely important decisions would require interrupting the employee.
+
+16. Transparency
+The Peer should never secretly impersonate the employee.
+It should clearly state that it is the employee's AI Peer.
+For example:
+"Manish is currently offline. I'm his AI Peer."
+This is important for:
+trust
+accountability
+expectations
+safety
+The AI should help represent the employee without pretending to literally be them.
+
+17. Confidence and Escalation
+The Peer should not answer everything.
+It could internally classify responses based on confidence.
+High confidence
+The information exists clearly in an authoritative source.
+The Peer may respond automatically.
+Medium confidence
+The Peer responds but explains uncertainty:
+"Based on the latest information I can find..."
+Low confidence
+The Peer does not guess.
+Instead:
+"I don't have enough confidence to answer this on Manish's behalf. I'll flag it for him."
+This becomes critical for real-world usage.
+
+18. Source Grounding
+Whenever possible, important answers should be connected to their evidence.
+For example:
+Current launch date: September 30
+Source: Launch Plan
+Last updated: September 17
+This gives users confidence and makes errors easier to catch.
+
+19. Permissions and Boundaries
+Different types of actions should have different permission levels.
+A possible model:
+Level 1 — Observe
+Read information and build context.
+Level 2 — Assist
+Answer the employee's own questions.
+Level 3 — Recommend
+Draft responses or suggest actions.
+Level 4 — Represent
+Respond to other employees on the employee's behalf.
+Level 5 — Act
+Perform actions such as:
+update documents
+create tasks
+execute workflows
+potentially make code changes
+Employees could explicitly control how autonomous their Peer is.
+
+20. Possible Employee Controls
+The Peer could expose controls such as:
+My Peer can automatically:
+Answer project-status questions ✅
+Explain technical architecture ✅
+Respond when I'm offline ✅
+Join meetings on my behalf ✅
+Make decisions ❌
+Merge code ❌
+Approve launches ❌
+This makes autonomy configurable rather than all-or-nothing.
+
+21. Personal Activity Feed
+A useful UI could show everything the Peer has done.
+While you were offline
+2:14 AM
+Answered Sarah's question about PROSS launch status.
+3:05 AM
+U.S. Data Platform team requested clarification on the data use case.
+3:06 AM
+Explained the requirement using the Premium Chargebacks design document.
+3:22 AM
+Data Platform recommended using Dataset B.
+6:45 AM
+Your Peer attended the Risk Platform sync and captured two action items.
+This could be a powerful product surface.
+
+22. Knowledge Discovery
+One interesting technical challenge is determining:
+What information actually belongs to this employee's Peer?
+We cannot simply ingest the entire company.
+The discovery process could start from the employee and expand outward.
+For example:
+Employee
+→ team
+→ projects
+→ repositories
+→ documents
+→ channels
+→ collaborators
+→ related systems
+The Peer could continuously score information based on relevance.
+This creates a personalized subset of organizational knowledge.
+
+23. Knowledge Graph Example
+A simplified graph might contain:
+Manish
+works_on → Premium Chargebacks
+member_of → Risk Partner Systems
+collaborates_with → Data Platform
+owns_service → Service A
+authored → Design Document B
+participates_in → Slack Channel C
+implemented → Feature D
+Premium Chargebacks
+depends_on → Dataset X
+owned_by → Data Platform
+documented_in → Design Doc Y
+discussed_in → Slack Thread Z
+This allows the Peer to reason across different information sources.
+
+24. Continuous Learning
+The system could continuously learn from employee behavior.
+For example:
+If the employee repeatedly:
+edits certain repositories
+participates in certain channels
+attends certain meetings
+collaborates with certain people
+the Peer can infer increasing relevance.
+Over time, the Peer becomes increasingly personalized.
+
+25. Potential Architecture
+For the hackathon, the implementation does not need to solve every enterprise-scale problem.
+A simplified architecture could be:
+Identity / Profile Layer
+OneAirbnb profile
+↓
+Source Connectors
+Slack
+Google Drive
+Docs
+Gmail
+Zoom
+GitHub / internal code systems
+↓
+Discovery Engine
+Determines which information is relevant to the employee.
+↓
+Knowledge Layer
+Personal knowledge graph + searchable semantic memory
+↓
+Source Grounding
+Stores links to original source-of-truth information.
+↓
+AI Peer Agent
+Reasons over the employee's knowledge and decides how to respond.
+↓
+Interaction Surfaces
+Slack
+Zoom
+Web UI
+Developer tools
+
+26. Hackathon Scope
+The full vision is very large.
+For a hackathon, the goal should not be to implement everything.
+The goal should be to make the future feel real.
+A strong prototype may focus on only a few things:
+Create My Peer
+Automatically discover a small set of employee context
+Build a simple knowledge graph
+Answer grounded project questions
+Respond in Slack while the employee is unavailable
+Demonstrate cross-time-zone collaboration
+Show an AI Peer participating in a meeting
+That is enough to demonstrate the larger vision.
+
+27. Suggested Demo Story
+Rather than showing disconnected features, the final demo should tell one story.
+Scene 1 — Create My Peer
+Manish clicks:
+Create My Peer
+The system starts discovering:
+OneAirbnb profile
+team
+projects
+Slack channels
+docs
+repositories
+A visual graph starts forming.
+Manish
+→ Risk Partner Systems
+→ Premium Chargebacks
+→ Tower Migration
+→ services
+→ docs
+→ collaborators
+This communicates:
+The AI is learning me.
+
+Scene 2 — Ask My Peer
+Manish asks:
+"What am I currently working on?"
+The Peer gives a surprisingly complete overview.
+Then:
+"What is blocking Premium Chargebacks?"
+The Peer identifies the cross-team data dependency and shows the sources it used.
+This establishes that the Peer genuinely understands the employee's work.
+
+Scene 3 — Manish Goes Offline
+UI shows:
+Manish — Offline
+or:
+Local time: 2:00 AM
+
+Scene 4 — Cross-Time-Zone Dependency
+A U.S. engineer replies to an existing Slack thread:
+"Can you explain the use case? I need more context before recommending the right dataset."
+Normally this conversation would stop.
+Instead:
+Manish's AI Peer
+"Manish is currently offline, but I can provide the project context..."
+It explains the use case.
+The U.S. engineer replies:
+"Got it. In that case, use Dataset B through API C."
+Dependency resolved.
+This is an extremely strong business-value moment.
+
+Scene 5 — Meeting
+The next day, Manish cannot attend a meeting.
+The AI Peer joins.
+Someone asks:
+"Do we know the current status of the migration?"
+The AI Peer speaks:
+"Manish couldn't join today, but based on the latest project information..."
+It provides the answer.
+That is the visual "wow" moment.
+
+Scene 6 — Manish Returns
+The next morning Manish opens the Peer.
+While you were offline:
+Responded to Data Platform
+Resolved dataset dependency
+Attended Risk Platform sync
+Answered one project question
+Captured two action items
+Manish reviews everything.
+End with:
+Your work has a timezone.
+Your Peer doesn't.
+or:
+An AI teammate that knows your work and keeps it moving.
+
+28. Why This Is Different From Enterprise Search
+An obvious question will be:
+"Isn't this just another company knowledge assistant?"
+The difference is important.
+A knowledge assistant knows the company.
+Your Peer knows you.
+A search assistant waits for you to ask questions.
+Your Peer can participate in work.
+A chatbot answers questions.
+Your Peer can maintain continuity when you are unavailable.
+Enterprise search:
+"Find information about Project X."
+AI Peer:
+"I understand why Project X matters to you, what you are responsible for, what changed yesterday, who is waiting on you, and what I can safely do while you're offline."
+That is a fundamentally different product experience.
+
+29. Why the Idea Could Be Powerful
+The value is not simply saving time searching documentation.
+The deeper opportunity is reducing organizational coordination latency.
+In large companies, projects often slow down because people are waiting for:
+context
+clarification
+approvals
+responses
+ownership information
+historical knowledge
+An AI Peer could reduce some of these human waiting periods.
+Potential benefits include:
+faster cross-team collaboration
+fewer timezone delays
+better knowledge continuity
+easier onboarding
+fewer interruptions
+faster incident response
+less repeated explanation
+stronger project handoffs
+reduced dependency on individual availability
+
+30. Important Design Principle
+The goal should not be:
+"Replace the employee."
+The goal should be:
+Extend the employee.
+The employee remains responsible for important decisions.
+The Peer handles:
+context
+continuity
+knowledge
+routine communication
+information retrieval
+and escalates when human judgment is actually required.
+
+31. Possible Names
+Working names:
+AI Peer
+My Peer
+Airbnb Peer
+Clone
+My Clone
+Digital Twin
+Work Twin
+Shadow
+Copilot
+Alter Ego
+For the hackathon, Clone may be provocative and memorable.
+For a real product, Peer may communicate the philosophy better.
+"Clone" implies duplication.
+"Peer" implies collaboration.
+
+32. Potential Taglines
+A few directions:
+Your work doesn't stop when you go offline.
+An AI teammate that knows your work.
+Your knowledge. Your context. Always available.
+One employee. Two timezones.
+Your working day ends. Your Peer keeps things moving.
+Always on. Always informed. Always your Peer.
+Turn employee knowledge into an always-available teammate.
+
+33. Questions to Explore Later
+There are several areas worth refining before the hackathon:
+Product
+Should we call it Peer, Clone, Twin, or something else?
+How does an employee interact with their Peer?
+What does "Create My Peer" onboarding look like?
+What actions should be automatic versus approval-based?
+Knowledge
+How do we determine relevance?
+How is the graph updated?
+How do we handle conflicting information?
+How do we identify authoritative sources?
+Trust
+How should confidence be communicated?
+When should the Peer refuse to answer?
+How can employees review what their Peer did?
+How do we ensure everyone knows they are interacting with AI?
+Security
+What information is private to the employee?
+What information can the Peer share?
+How do existing permissions propagate?
+How do we prevent information leakage across teams?
+Agent capabilities
+Can it reply to Slack?
+Can it attend Zoom?
+Can it write docs?
+Can it modify code?
+Can it create tasks?
+Can multiple employees' Peers communicate directly?
+
+34. Longer-Term Possibility: Peer-to-Peer Collaboration
+A particularly interesting future direction is:
+AI Peers talking directly to other AI Peers.
+Instead of Manish's Peer waiting for someone from another team:
+Manish's Peer could contact the owning engineer's Peer.
+Example:
+"I need the authoritative source for Field X for this use case."
+The other engineer's Peer understands their systems and responds.
+Potentially, many routine cross-team dependencies could be resolved agent-to-agent, while humans remain in control of important decisions.
+This could create an entirely new layer of organizational collaboration.
+
+35. Long-Term Vision
+Imagine every employee in Airbnb having a persistent AI Peer.
+Each Peer understands:
+the employee
+their work
+their history
+their expertise
+their current priorities
+their responsibilities
+These Peers can collaborate with employees and, where appropriate, with one another.
+The organization effectively gains a living intelligence layer that sits on top of its existing systems.
+Today, company knowledge is stored in:
+documents + messages + code + meetings + people's heads.
+With AI Peer, that knowledge becomes accessible through persistent intelligent representatives of the people doing the work.
+
+36. One-Sentence Pitch
+AI Peer gives every employee an always-on AI teammate that deeply understands their work, stays continuously up to date, and can help collaborate on their behalf when they're unavailable.
+
+37. Shorter Hackathon Pitch
+We want to build an AI Peer for every employee. It learns who you are, understands your projects, systems, documents, Slack conversations and current work, and continuously stays up to date. When you're unavailable, your Peer can answer questions, continue cross-team conversations and even represent you in meetings — while remaining grounded in company sources and clearly identifying itself as AI.
+
+38. The Core Idea
+Ultimately, the biggest shift is this:
+Today's AI knows information.
+AI Peer knows your context.
+Today's AI helps when you use it.
+AI Peer helps even when you are not there.
+And that could turn AI from a tool employees use into a teammate employees work alongside.
+

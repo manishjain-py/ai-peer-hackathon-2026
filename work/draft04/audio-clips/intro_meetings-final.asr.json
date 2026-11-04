@@ -1,0 +1,42 @@
+{
+  "sha256": "f517f6998dd661593df54639909747fdb4b9a9187540d29c78c370f827fb7d96",
+  "text": "Three meeting invites. Two after hours.",
+  "words": [
+    {
+      "word": " Three",
+      "start": 0.0,
+      "end": 0.14,
+      "probability": 0.351158082485199
+    },
+    {
+      "word": " meeting",
+      "start": 0.14,
+      "end": 0.4,
+      "probability": 0.9801406264305115
+    },
+    {
+      "word": " invites.",
+      "start": 0.4,
+      "end": 0.76,
+      "probability": 0.9844783544540405
+    },
+    {
+      "word": " Two",
+      "start": 1.56,
+      "end": 1.8,
+      "probability": 0.9568881988525391
+    },
+    {
+      "word": " after",
+      "start": 1.8,
+      "end": 2.32,
+      "probability": 0.9766325950622559
+    },
+    {
+      "word": " hours.",
+      "start": 2.32,
+      "end": 2.78,
+      "probability": 0.9260975122451782
+    }
+  ]
+}

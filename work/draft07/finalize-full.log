@@ -1,0 +1,39 @@
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/Users/manishjain/repos/Hackathon 2026/renders/ai-peer-draft-07-silent.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf61.7.100
+    comment         : Made with Remotion 4.0.526
+  Duration: 00:04:23.00, start: 0.000000, bitrate: 494 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuvj420p(pc, bt470bg/unknown/unknown, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 491 kb/s, 30 fps, 30 tbr, 90k tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      encoder         : Lavc61.19.100 libx264
+    Side data:
+      ICC Profile: (456 bytes)
+[aist#1:0/pcm_s24le @ 0x753014480] Guessed Channel Layout: stereo
+Input #1, wav, from '/Users/manishjain/repos/Hackathon 2026/video/public/draft07/audio/mixed.wav':
+  Duration: 00:04:23.00, bitrate: 2304 kb/s
+  Stream #1:0: Audio: pcm_s24le ([1][0][0][0] / 0x0001), 48000 Hz, stereo, s32 (24 bit), 2304 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+  Stream #1:0 -> #0:1 (pcm_s24le (native) -> aac (native))
+Press [q] to stop, [?] for help
+Output #0, mp4, to '/Users/manishjain/repos/Hackathon 2026/renders/.ai-peer-draft-07-finalizing.mp4':
+  Metadata:
+    title           : AI Peer — Hackathon 2026 — Concept Draft 07
+    comment         : Real context supplied by user; authored dialogue and UI. AI Peer and AirChat plugin integrations are proposed. ElevenLabs synthetic voice performances; original music and effects.
+    encoder         : Lavf62.12.102
+  Stream #0:0: Video: h264 (High) (avc1 / 0x31637661), yuvj420p(pc, bt470bg/unknown/unknown, progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 491 kb/s, 30 fps, 30 tbr, 90k tbn (default)
+    Side data:
+      ICC Profile: (456 bytes)
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 192 kb/s (default)
+    Metadata:
+      encoder         : Lavc62.28.102 aac
+frame=  963 fps=0.0 q=-1.0 size=    3840KiB time=00:00:31.91 bitrate= 985.7kbits/s speed=63.2x elapsed=0:00:00.50    frame= 1900 fps=1881 q=-1.0 size=    6400KiB time=00:01:03.14 bitrate= 830.3kbits/s speed=62.5x elapsed=0:00:01.00    frame= 2683 fps=1772 q=-1.0 size=    8192KiB time=00:01:29.23 bitrate= 752.0kbits/s speed=58.9x elapsed=0:00:01.51    frame= 3460 fps=1717 q=-1.0 size=   10496KiB time=00:01:55.13 bitrate= 746.8kbits/s speed=57.1x elapsed=0:00:02.01    frame= 4219 fps=1674 q=-1.0 size=   12288KiB time=00:02:20.45 bitrate= 716.7kbits/s speed=55.7x elapsed=0:00:02.52    frame= 5026 fps=1661 q=-1.0 size=   14592KiB time=00:02:47.33 bitrate= 714.3kbits/s speed=55.3x elapsed=0:00:03.02    frame= 5813 fps=1647 q=-1.0 size=   16896KiB time=00:03:13.57 bitrate= 715.0kbits/s speed=54.8x elapsed=0:00:03.53    frame= 6645 fps=1647 q=-1.0 size=   18944KiB time=00:03:41.31 bitrate= 701.2kbits/s speed=54.8x elapsed=0:00:04.03    frame= 7323 fps=1613 q=-1.0 size=   20736KiB time=00:04:03.92 bitrate= 696.4kbits/s speed=53.7x elapsed=0:00:04.54    [mp4 @ 0x75301c780] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0x75300ca80] video:15771KiB audio:6157KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 1.288959%
+frame= 7890 fps=1624 q=-1.0 Lsize=   22210KiB time=00:04:22.93 bitrate= 692.0kbits/s speed=54.1x elapsed=0:00:04.85    
+[aac @ 0x753061500] Qavg: 5728.335
+Finalized: /Users/manishjain/repos/Hackathon 2026/renders/ai-peer-draft-07.mp4
+Captions: /Users/manishjain/repos/Hackathon 2026/renders/ai-peer-draft-07.srt
