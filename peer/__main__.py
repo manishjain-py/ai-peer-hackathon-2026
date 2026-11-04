@@ -9,6 +9,7 @@
   port-check                  list adapters, exercise each verb (act in dry run), print a table
   web [--port N]              the activity log page (http://127.0.0.1:8787)
   world manifest|auth|setup   test world in Slack: the scenario app, colleague logins, channels
+  browser login|shot|click    the Peer's own Chrome profile for walk screenshots and clicks
 """
 from __future__ import annotations
 
@@ -33,10 +34,20 @@ def cmd_discover(a) -> None:
     discover(get_settings(), ai=not a.no_ai)
 
 
+def _web_thread(st) -> None:
+    import threading
+    import uvicorn
+    cfg = uvicorn.Config("peer.web.app:app", host=st.get("web.host", "127.0.0.1"), port=int(st.get("web.port", 8787)),
+                         log_level="warning")
+    threading.Thread(target=uvicorn.Server(cfg).run, daemon=True).start()
+
+
 def cmd_watch(a) -> None:
     from .watcher import Watcher
     st = get_settings()
     w = Watcher(st, _slack())
+    _web_thread(st)
+    print(f"Activity page: http://{st.get('web.host', '127.0.0.1')}:{st.get('web.port', 8787)}", flush=True)
     print(f"AI Peer watching for {w.owner['name']} (brain: {st.get('brain.backend')}); "
           f"{len(w.people)} colleagues found in Slack. Ctrl-C to stop.", flush=True)
     try:
@@ -102,6 +113,17 @@ def cmd_world(a) -> None:
         slack_world.world_code(a.url or input("address: "))
 
 
+def cmd_browser(a) -> None:
+    from pathlib import Path
+    from . import browser
+    if a.what == "login":
+        browser.login()
+    elif a.what == "shot":
+        print(browser.shot(a.channel, Path(a.out), thread_ts=a.thread))
+    elif a.what == "click":
+        print("clicked" if browser.click_latest(a.channel, a.label) else "no such button")
+
+
 def cmd_web(a) -> None:
     import uvicorn
     st = get_settings()
@@ -112,6 +134,7 @@ def cmd_web(a) -> None:
 def main(argv: list[str] | None = None) -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s", datefmt="%H:%M:%S")
     logging.getLogger("slack_sdk").setLevel(logging.WARNING)
+    logging.getLogger("httpx").setLevel(logging.WARNING)
     ap = argparse.ArgumentParser(prog="peer", description="AI Peer")
     sub = ap.add_subparsers(dest="cmd", required=True)
     p = sub.add_parser("discover"); p.add_argument("--no-ai", action="store_true"); p.set_defaults(fn=cmd_discover)
@@ -123,6 +146,9 @@ def main(argv: list[str] | None = None) -> None:
     sub.add_parser("status").set_defaults(fn=cmd_status)
     sub.add_parser("port-check").set_defaults(fn=cmd_port_check)
     p = sub.add_parser("web"); p.add_argument("--port", type=int); p.set_defaults(fn=cmd_web)
+    p = sub.add_parser("browser", help="the Peer's own Chrome profile: login | shot | click")
+    p.add_argument("what", choices=["login", "shot", "click"]); p.add_argument("--channel"); p.add_argument("--thread")
+    p.add_argument("--out", default="shot.png"); p.add_argument("--label", default="Send"); p.set_defaults(fn=cmd_browser)
     p = sub.add_parser("world", help="test world in Slack: manifest | auth | setup")
     p.add_argument("what", choices=["manifest", "auth", "setup", "code"]); p.add_argument("url", nargs="?")
     p.set_defaults(fn=cmd_world)
