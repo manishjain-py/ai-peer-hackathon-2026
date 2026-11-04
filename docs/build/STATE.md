@@ -5,7 +5,7 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
-2026-11-04 15:10. WP1 (foundation + S1) is running: `ai-peer-wp1-1` in
+2026-11-04 15:23. WP1 (foundation + S1) is running: `ai-peer-wp1-1` in
 `~/repos/ai-peer-wp1` on `wp1-foundation`.
 
 - Spikes 1a and 1b passed: `claude -p` 2.1.318 with `--setting-sources project`, empty
@@ -16,6 +16,12 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
   a labelled test card with Send / Edit / Skip sits in Manish's DM, the bot replied in
   its thread. Hearing a message and receiving a click remain (a listener runs to
   about 18:00; otherwise folded into the colleague steps).
+- **S1 passes in dry runs** (15:22; fake Slack, real brain, real memory), on Claude
+  and on Codex. Away: a labelled thread answer in 17 to 25 s with sources, dates and
+  certainty, the follow-up, one DM summary updated in place. Online: a draft DM with
+  Send / Edit / Skip, the thread reply after Send. Live Slack pieces work: Socket Mode,
+  owner lookup, presence, `port-check`. Draft [PR #1](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/1).
+  The live walk needs the colleague accounts.
 - First discovery works (15:08): profile + GitHub (read-only) gave 15 project files
   from the trackers in 4 LLM repos, each with an AI "status in brief", plus 5 services
   and 5 people, under `~/.ai-peer/manish/`. S1 can answer from the real repo.
@@ -30,13 +36,13 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
   Zoom with no Zoom app of ours; spike 1d checks that against Zoom's on-behalf-of rule,
   with Manish not in the call. Zoom: his paid Workplace Pro account (personal Gmail).
 - All accounts and `.env` names: [setup/accounts.md](setup/accounts.md).
-- Weekly usage 34% (resets 10 Nov, 04:30 IST).
+- Weekly usage 35% (resets 10 Nov, 04:30 IST). Worker context 30% at 15:22.
 
 | Session | Window | Worktree | Branch / PR | Job |
 |---|---|---|---|---|
 | kickoff, registry name `learnlikemagic-27` | 1661 | `~/repos/ai-peer-hackathon-2026` | `main` | Interview, docs, restructure, Slack, Recall, ElevenLabs, GitHub set up; handed off at 46% (about 15:07), closed. The controller owns every ask to Manish |
 | ai-peer-controller-1 | 1715 | `~/repos/ai-peer-hackathon-2026` | `main` (docs only) | Runs the build; https://claude.ai/code/session_01Nfn5h9PisnJvGpbLbRtbiB |
-| ai-peer-wp1-1 | 1725 | `~/repos/ai-peer-wp1` | `wp1-foundation`, no PR yet | WP1 foundation + S1; idle pings off (`CLAUDE_NO_IDLE_PING=1`), asks go through the controller; https://claude.ai/code/session_01Nfn5h8PVD6txxjBUfab4nR |
+| ai-peer-wp1-1 | 1725 | `~/repos/ai-peer-wp1` | `wp1-foundation`, draft PR #1 | WP1 foundation + S1; idle pings off (`CLAUDE_NO_IDLE_PING=1`), asks go through the controller; https://claude.ai/code/session_01Nfn5h8PVD6txxjBUfab4nR |
 
 ## Needs Manish
 
@@ -45,8 +51,10 @@ The controller asks one at a time, in this order.
 1. **Asked 15:20, waiting:** a Zoom test meeting for spike 1d (join before host on, waiting
    room off); the link goes in `~/.ai-peer/.env` as `ZOOM_TEST_MEETING_URL`, not chat
    (anyone with it can join).
-2. Next: the steps for the fake colleagues as real member accounts (his pick A, below);
-   the worker writes them.
+2. Next: the colleague accounts (his pick A, below), about 25 minutes at the Mac, steps in
+   `docs/build/setup/slack-colleagues.md` on the branch; plus, as its last step, one
+   Slack sign-in in the Peer's own Chrome profile (`peer browser login`) so the worker can
+   take screenshots, click Send in the walk and record Checkpoint 1 without his windows.
 3. One command for the Peer's own Codex login (today it uses a copy of his token, good
    until about 7 Nov).
 4. The Google Internal OAuth client (WP3).
