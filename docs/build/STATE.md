@@ -113,8 +113,7 @@ on `wp2-setup-memory`. Live controller: `ai-peer-controller-2`.
 | **ai-peer-controller-2** (live controller) | 2048 (pid 52453) | `~/repos/ai-peer-hackathon-2026` | `main` (docs only) | Runs the build from `handoffs/HANDOFF-2026-11-05-ai-peer-controller-2.md`; https://claude.ai/code/session_01Nfn5h8mSoWxqjYkbP3JnvB |
 | ai-peer-wp1-1 | 1725 (closed 03:01 by controller-2) | `~/repos/ai-peer-wp1` | `wp1-foundation`, draft PR #1 | WP1 foundation + S1. Handed off at 44.2% (2026-11-05 03:02 UTC) to `ai-peer-wp1-2` ([hand-off](handoffs/HANDOFF-2026-11-05-ai-peer-wp1-2.md)); stopped. The Peer it started keeps running (`peer stop`/`peer start`, pid file); https://claude.ai/code/session_01Nfn5h8PVD6txxjBUfab4nR |
 | **ai-peer-wp1-2** | 2049 (pid 54508) | `~/repos/ai-peer-wp1` | `wp1-foundation`, PR #1 merged 15:31 (183fabe); a follow-up PR from the same branch only if the recorder needs code | Started 03:01 by controller-2 from [its hand-off](handoffs/HANDOFF-2026-11-05-ai-peer-wp1-2.md). Done: S1-online live with Manish's tap, the merge. Left, on Manish's "open window": the browser sign-in, the recorded walks, screenshots, Checkpoint 1. Runs the live Peer; leaves the worktree and the Peer in place at the end; idle pings off; context 18% at 15:33; https://claude.ai/code/session_01Nfn5h9oCzikhfgVU9KBwCz |
-| **ai-peer-wp2-1** | (Terminal, started by controller-2) | `~/repos/ai-peer-wp2` | `wp2-setup-memory`, draft [PR #2](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/2) | WP2 (F1 to F7) from [its hand-off](handoffs/HANDOFF-2026-11-05-ai-peer-wp2-1.md). 11:17: all seven walked on test owner `wp2test` (dry runs, page on 8788; evidence `docs/build/evidence/wp2/walks.md` on the branch); live walks wait for PR #1; 4 asks for Manish sent to the controller (Claude hook, scan folders, Codex hook, Slack `reaction_added`); context 33%; https://claude.ai/code/session_01Nfn5h6apXjAgQuN9wUq54K |
-| **ai-peer-wp2-1** | 2129 (pid 43454) | `~/repos/ai-peer-wp2` | `wp2-setup-memory` (from `wp1-foundation` 4fb4869), no PR yet | Started 10:45 by controller-2 from [its brief](handoffs/HANDOFF-2026-11-05-ai-peer-wp2-1.md): F1 to F7, the setup page; pre-merge rules keep it off the live Peer; idle pings off; https://claude.ai/code/session_01Nfn5h6apXjAgQuN9wUq54K |
+| **ai-peer-wp2-1** | 2129 (pid 43454) | `~/repos/ai-peer-wp2` | `wp2-setup-memory`, [PR #2](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/2) **merged 16:2x as 88ac13e** | WP2 done: F1 to F7 walked (evidence `docs/build/evidence/wp2/walks.md`); the away switch walked live 15:39; the live F5 DM check is in Next. **Changed at Manish's "Yes to all" (15:33):** `~/claude-config/settings.json` (what `~/.claude/settings.json` links to) gained `hooks.SessionEnd` running `~/.ai-peer/bin/session-end claude` behind `test -x` (undo: delete the `SessionEnd` key); `~/.codex/hooks.json` gained the same with `codex` (undo: delete its `SessionEnd` key); owner `manish` settings `local.folders: ["~/repos"]` (undo: `[]`); backups in `~/.ai-peer/backups/`. **The live Peer runs from this worktree** (pid 62524, started 16:2x, skill links point here): keep the worktree until the Peer moves. Stopped; https://claude.ai/code/session_01Nfn5h6apXjAgQuN9wUq54K |
 
 ## Needs Manish
 
@@ -161,9 +160,17 @@ Chrome: Manish let the kickoff session do setup steps in his logged-in Chrome. A
    browser sign-in (`peer browser login`, he signs in himself), then `peer scenario s1-online
    --record --auto-click` and `peer scenario s1-away --record`, the screenshots into evidence on
    `main`, and Checkpoint 1 (the two `walk.mp4` and how he tries it) to the controller.
-2. WP2 (`ai-peer-wp2-1`, since 10:45): builds F1 to F7 under its pre-merge rules; at the WP1 merge
-   the controller tells it to merge `origin/main` in. After the merge there is one live Peer
-   (owner `manish`); the controller hands it to one worker at a time for live walks.
+2. WP2 merged (88ac13e). Left: **the live F5 check**, by any session once Manish types (the live
+   Peer runs from `~/repos/ai-peer-wp2`). (a) He types in his Slack DM with the AI Peer, as a new
+   message: `stop telling me about CI failures on drafts`. Pass: within about 30 s a one-line reply
+   ("Got it: I won't tell you about CI failures on draft PRs any more…"); `~/.ai-peer/manish/log.jsonl`
+   gets a `tuned` entry; `rules.md` gets "## From your feedback" with the rule; `tuning.json` a filter
+   `{source: github, kind: ci, conclusion: failure, draft: true}`. (b) In `~/repos/ai-peer-wp2`:
+   `AI_PEER_OWNER=manish .venv/bin/python -m peer sample-heads-up --draft --branch telugu-wp2c-sample`
+   prints `"did": "held_back"`, nothing new in his DM, a `held_back` entry in the log. (c)
+   `AI_PEER_OWNER=manish .venv/bin/python -m peer sample-heads-up` prints `"did": "told"` and a
+   "CI failed on main … (walk sample)" heads-up lands in his DM. (d) Add the result to
+   `docs/build/evidence/wp2/walks.md` on `main`. He may say `undo` in the DM afterwards.
 3. At the WP1 merge: finalise `docs/build/handoffs/DRAFT-ai-peer-wp3-1.md` (re-check its cited
    lines on the new head, a read-only check for stale facts and risks to the live Peer, the same
    pre-merge lessons as WP2's brief), create `~/repos/ai-peer-wp3` (`wp3-google-brief`), spawn.
@@ -280,3 +287,4 @@ What went wrong once, with its mechanism.
 | 2026-11-05 | ai-peer-controller-2 | Took over at 02:58 (context 8.5%); told ai-peer-wp1-1; re-sent the sign-in ask on Attention; closed windows 1715 and 1725 (both idle, no child processes; the Peer detached, still running); started `ai-peer-wp1-2` (window 2049) at 03:01 | Waiting on Manish's "ready"; at 10:45 started `ai-peer-wp2-1` early (window 2129) after a read-only review of its brief |
 | 2026-11-05 | ai-peer-wp1-2 | Read in; made the Peer's browser report the installed Chrome (Slack's 9 Nov cut-off); the headless Slack sign-in met a robot check (no code sent), so it now says so and a person signs in through a window; S1-online live with Manish's own tap on Send (spike 1c complete); evidence; PR #1 body updated, merged with a merge commit | WP1 merged 15:31 (183fabe); the recorded walks, screenshots and Checkpoint 1 wait for "open window" |
 | 2026-11-05 | ai-peer-wp2-1 | Read in; built F1 to F7 on WP1's branch (setup page with live discovery, what I learned with corrections, roles and settings, activity log in the film's look; fresh memory, self-tuning, local work); walked all seven on test owner `wp2test`; draft PR #2 | Live walks wait for PR #1; asks queued with the controller |
+| 2026-11-05 | ai-peer-wp2-1 | After WP1's merge: merged main in, cheap re-walks; installed the F7 hooks and the `~/repos` scan at Manish's word (a real session end landed in the spool); ran the live Peer from its worktree; walked the away switch live; added cost guards (no AI on the poll; nightly only in its window); merged PR #2 (88ac13e) | Live F5 DM check left in Next; stopped |
