@@ -66,6 +66,11 @@ On the merged WP1 foundation, add the `google` adapter (Gmail, Calendar, Drive/D
   force-push), takes the other's layout, and re-runs its walk.
 - For an interface question, message `ai-peer-wp2-1` directly (SendMessage) and mention it in
   your next report to the controller.
+- WP2's interfaces (branch `wp2-setup-memory`, PR #2, from its 11:17 report on 5 Nov): the page
+  frame is `peer/web/layout.py` (`page()`, and a `NAV` list your brief page appends to); discovery
+  steps go in with `register_step(Step("docs", ...), replace="docs")` in `peer/memory/discovery.py`;
+  every push to the owner goes through `peer/notify.py` `tell_owner()`, so the owner's mutes apply.
+  Until PR #2 merges, build against them from its branch; once it merges, merge `origin/main` in.
 
 ## Manish's hands (through the controller, one ask at a time, exact steps)
 
