@@ -13,13 +13,14 @@ from __future__ import annotations
 import json
 import logging
 import re
+from datetime import datetime, timezone
 from pathlib import Path
 from types import SimpleNamespace
 
 from .activity import ActivityLog
 from .adapters.github import GitHubAdapter
-from .memory.discovery import (Ctx, copy_tracker, step_profile, summarize_project, today, write_project_note,
-                               write_repo_note)
+from .memory.discovery import (Ctx, copy_tracker, previous_summary, step_profile, summarize_project, today,
+                               write_project_note, write_repo_note)
 from .memory.facts import split
 from .memory.layout import Memory
 from .settings import Settings
@@ -51,51 +52,48 @@ def _mini_ctx(st: Settings) -> SimpleNamespace:
     return SimpleNamespace(st=st, mem=Memory(st.owner_dir), keywords=set(), projects=[], line=lambda t: log.info(t))
 
 
+def _minutes_since(iso: str | None) -> float:
+    try:
+        return (datetime.now(timezone.utc) - datetime.fromisoformat(str(iso))).total_seconds() / 60
+    except (TypeError, ValueError):
+        return 1e9
+
+
 def update_project(st: Settings, gh: GitHubAdapter, front: dict, commit: dict, pulls: list[dict], ai: bool = True,
-                   why: str = "the tracker changed") -> dict:
+                   why: str = "the tracker changed", force_ai: bool = False) -> dict:
+    """Re-copy the tracker (always, no AI) and re-write the project file. The brain re-writes the status in
+    brief at most every memory.resummarize_minutes (trackers change many times a day); in between, the
+    file says the tracker is newer than its status, so answers read the fresh copy in sources/."""
     ctx = _mini_ctx(st)
     t = {"repo": front["repo"], "path": front["tracker"], "branch": front.get("branch") or "main", "pulls": pulls, "commit": commit}
     proj = copy_tracker(ctx, gh, t)
-    sm, err = summarize_project(st, proj) if ai else (None, None)
-    if ai and not sm:
-        log.warning("summary failed for %s: %s", proj["slug"], err)
-    if not sm:   # keep the previous status in brief rather than dropping it
-        sm = _previous_summary(st, proj["slug"])
-    write_project_note(ctx.mem, proj, sm)
+    prev_sm, prev_front = previous_summary(ctx.mem, proj["slug"])
+    due = _minutes_since(prev_front.get("summary_at") or prev_front.get("updated")) >= float(st.get("memory.resummarize_minutes", 360))
+    sm, fresh_sm = None, False
+    if ai and (force_ai or due or not prev_sm):
+        sm, err = summarize_project(st, proj, effort=st.get("brain.refresh_effort", "high"))
+        fresh_sm = bool(sm)
+        if not sm:
+            log.warning("summary failed for %s: %s", proj["slug"], err)
+    if not sm:
+        sm = prev_sm
+    write_project_note(ctx.mem, proj, sm, fresh_summary=fresh_sm)
     _add_keywords(st, ctx.keywords | {a.lower() for a in (sm or {}).get("aliases", [])})
     ctx.mem.rebuild_index()
     c = commit.get("commit") or {}
     msg = (c.get("message") or "").splitlines()[0][:120]
     url = f"https://github.com/{front['repo']}/commit/{commit.get('sha', '')}"
+    cdate = (c.get("committer") or {}).get("date", "")[:10]
     ActivityLog(st.log_path).add(
         "memory_updated", f"Updated {proj['title']}: {why}", where=f"memory: projects/{proj['slug']}.md", outcome="done",
-        said=(f"New status in brief: {sm.get('one_line')}" if sm else "Re-copied the tracker.") + f"\nCommit: {msg}",
+        said=(f"New status in brief: {sm.get('one_line')}" if fresh_sm and sm else
+              "Re-copied the tracker; the status in brief is re-written at most every "
+              f"{st.get('memory.resummarize_minutes', 360)} min, and answers read the fresh copy meanwhile.") + f"\nCommit: {msg}",
         sources=[{"title": f"{proj['title']} tracker", "url": f"https://github.com/{front['repo']}/blob/{t['branch']}/{front['tracker']}",
-                  "date": (c.get("committer") or {}).get("date", "")[:10]}, {"title": f"commit {commit.get('sha', '')[:7]}", "url": url,
-                                                                            "date": (c.get("committer") or {}).get("date", "")[:10]}],
-        extra={"project": proj["slug"], "commit": commit.get("sha")})
-    return {"project": proj["slug"], "title": proj["title"], "one_line": (sm or {}).get("one_line"), "changed": why == "the tracker changed"}
-
-
-def _previous_summary(st: Settings, slug: str) -> dict | None:
-    p = st.owner_dir / "projects" / f"{slug}.md"
-    if not p.exists():
-        return None
-    _, body = split(p.read_text(errors="replace"))
-    m = re.search(r"## Status in brief \(as of ([^)]*)\)\n\n([\s\S]*?)(?=\n## |\Z)", body)
-    if not m:
-        return None
-    vals = {}
-    for ln in m.group(2).splitlines():
-        mm = re.match(r"- (Driver|Phase|Done|Next|Dates|Ship target|Waiting on the owner|Other names): (.*)", ln)
-        if mm:
-            vals[mm.group(1)] = mm.group(2)
-        elif ln.startswith("- ") and "one_line" not in vals:
-            vals["one_line"] = ln[2:]
-    return {"one_line": vals.get("one_line", ""), "driver": vals.get("Driver", ""), "phase": vals.get("Phase", ""),
-            "done": [vals.get("Done", "")], "next": [vals.get("Next", "")], "dates": [], "ship_target": vals.get("Ship target"),
-            "waiting_on_owner": [vals.get("Waiting on the owner", "")], "aliases": [a.strip() for a in vals.get("Other names", "").split(",") if a.strip() not in ("", "-")],
-            "as_of": m.group(1)}
+                  "date": cdate}, {"title": f"commit {commit.get('sha', '')[:7]}", "url": url, "date": cdate}],
+        extra={"project": proj["slug"], "commit": commit.get("sha"), "resummarized": fresh_sm})
+    return {"project": proj["slug"], "title": proj["title"], "one_line": (sm or {}).get("one_line"),
+            "changed": why == "the tracker changed", "resummarized": fresh_sm}
 
 
 def _add_keywords(st: Settings, words: set[str]) -> None:
@@ -139,7 +137,7 @@ def rewind(st: Settings, slug: str, ai: bool = True) -> dict:
     commits = gh.gh.get(f"/repos/{front['repo']}/commits", params={"path": front["tracker"], "per_page": 2})
     if len(commits) < 2:
         raise RuntimeError("no earlier commit to rewind to")
-    return update_project(st, gh, front, commits[1], gh.pulls(front["repo"], n=15), ai=ai,
+    return update_project(st, gh, front, commits[1], gh.pulls(front["repo"], n=15), ai=ai, force_ai=True,
                           why=f"rewound to the previous tracker commit (walk set-up; newest is {commits[0]['sha'][:7]})")
 
 

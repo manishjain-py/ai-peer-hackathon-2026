@@ -21,6 +21,7 @@ scope: {}                      # F3: plain-English scope per role, from the sett
 
 memory:
   nightly_at: "02:30"           # F6: the nightly re-read, owner's local time
+  resummarize_minutes: 360      # F6: a changed tracker is re-copied at once; the brain re-writes its status at most this often
 
 local:                          # F7: local work
   folders: []                   # folders the hourly scan reads (the owner chooses, e.g. ~/repos); read-only
@@ -34,6 +35,7 @@ brain:
   claude_model: opus            # Opus, not Fable: the weekly Fable allowance is account-wide (it would stop other sessions)
   claude_effort: high           # measured on S1 (dry run, 4 Nov): max 113-139 s per answer breaks the 1-2 min limits; high 21-27 s
   summary_effort: max           # discovery summaries have no time limit: best effort
+  refresh_effort: high          # F6: re-summaries of changed trackers (they change many times a day)
   codex_bin: codex
   codex_model: ""               # empty = the CLI's default for the login (gpt-6-astra on 0.153.4)
   codex_home: ~/.ai-peer/codex-home

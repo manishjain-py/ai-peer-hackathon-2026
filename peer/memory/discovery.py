@@ -322,16 +322,55 @@ def copy_tracker(c: Ctx, gh: GitHubAdapter, t: dict, ref: str | None = None) -> 
     return proj
 
 
-def summarize_project(st: Settings, p: dict) -> tuple[dict | None, str | None]:
+def summarize_project(st: Settings, p: dict, effort: str | None = None) -> tuple[dict | None, str | None]:
     req = {"playbook": "summarize_tracker", "path": p["source_rel"], "project": p["title"], "repo": p["repo"]}
     res = run_agent("summarize_tracker " + json.dumps(req, ensure_ascii=False), SUMMARIZE_TRACKER,
-                    label=f"summarize:{p['slug']}", effort=st.get("brain.summary_effort"), timeout=600)
+                    label=f"summarize:{p['slug']}", effort=effort or st.get("brain.summary_effort"), timeout=600)
     return res.output, res.error
 
 
-def write_project_note(mem: Memory, p: dict, sm: dict | None) -> set[str]:
-    """The project's memory file: status in brief (from the brain), related PRs, sources. Returns aliases."""
+def previous_summary(mem: Memory, slug_: str) -> tuple[dict | None, dict]:
+    """The status in brief already in a project file (so a run without the brain keeps it), and its front matter."""
+    path = mem.root / "projects" / f"{slug_}.md"
+    if not path.exists():
+        return None, {}
+    front = mem.read_front(path)
+    body = path.read_text(errors="replace")
+    m = re.search(r"## Status in brief \(as of ([^)]*)\)\n\n([\s\S]*?)(?=\n## |\Z)", body)
+    if not m:
+        return None, front
+    vals: dict = {}
+    for ln in m.group(2).splitlines():
+        ln = re.sub(r"\s*\(corrected by [^)]*\)\s*$", "", ln)
+        mm = re.match(r"- (Driver|Phase|Done|Next|Dates|Ship target|Waiting on the owner|Other names): (.*)", ln)
+        if mm:
+            vals[mm.group(1)] = mm.group(2)
+        elif ln.startswith("- ") and "one_line" not in vals and not ln.startswith("- Newer than this status"):
+            vals["one_line"] = ln[2:]
+    split_ = lambda v: [x.strip() for x in (v or "").split(";") if x.strip()]  # noqa: E731
+    dates = [{"what": a.strip(), "date": b.strip()} for a, _, b in (d.rpartition(":") for d in split_(vals.get("Dates")))
+             if a and vals.get("Dates") != "none recorded"]
+    ship = vals.get("Ship target")
+    return ({"one_line": vals.get("one_line", ""), "driver": vals.get("Driver", ""), "phase": vals.get("Phase", ""),
+             "done": split_(vals.get("Done")), "next": split_(vals.get("Next")), "dates": dates,
+             "ship_target": None if not ship or ship.startswith("none recorded") else ship,
+             "waiting_on_owner": [] if vals.get("Waiting on the owner") == "nothing recorded" else split_(vals.get("Waiting on the owner")),
+             "aliases": [a.strip() for a in (vals.get("Other names") or "").split(",") if a.strip() not in ("", "-")],
+             "as_of": m.group(1)}, front)
+
+
+def write_project_note(mem: Memory, p: dict, sm: dict | None, fresh_summary: bool = True) -> set[str]:
+    """The project's memory file: status in brief (from the brain), related PRs, sources. Returns aliases.
+    fresh_summary=False: `sm` is the previous status (the brain did not run); the file then says the
+    tracker is newer than its status, so the brain reads the fresh copy in sources/."""
     c = p["commit"] or {}
+    prev_front = mem.read_front(mem.root / "projects" / f"{p['slug']}.md") if (mem.root / "projects" / f"{p['slug']}.md").exists() else {}
+    if sm and fresh_summary:
+        summary_meta = {"summary_at": now_iso(), "summary_commit": c.get("sha") or ""}
+    else:
+        summary_meta = {"summary_at": prev_front.get("summary_at") or prev_front.get("updated") or "",
+                        "summary_commit": prev_front.get("summary_commit") or prev_front.get("tracker_commit") or ""}
+    stale = bool(sm) and bool(c.get("sha")) and summary_meta["summary_commit"] and not str(c.get("sha")).startswith(summary_meta["summary_commit"][:10])
     cmsg = ((c.get("commit") or {}).get("message") or "").splitlines()[0][:100] if c else ""
     tracker_url = f"https://github.com/{p['repo']}/blob/{p['branch']}/{p['path']}"
     terms = {p["slug"].replace("-", " ")} | {a.lower() for a in (sm or {}).get("aliases", [])}
@@ -340,8 +379,12 @@ def write_project_note(mem: Memory, p: dict, sm: dict | None) -> set[str]:
              f"- Repo: `{p['repo']}`; tracker: [{p['path']}]({tracker_url})",
              f"- Tracker last changed: {p['cdate'][:16].replace('T', ' ')} UTC (commit {(c.get('sha') or '')[:10]}: {cmsg})", ""]
     if sm:
-        lines += [f"## Status in brief (as of {sm.get('as_of')})", "",
-                  f"- {sm.get('one_line')}",
+        lines += [f"## Status in brief (as of {sm.get('as_of')})", ""]
+        if stale:
+            lines += [f"- Newer than this status: the tracker changed at {p['cdate'][:16].replace('T', ' ')} UTC (commit "
+                      f"{(c.get('sha') or '')[:7]}). Its copy in `{p['source_rel']}` is current: read it for anything newer than "
+                      f"{sm.get('as_of')}, and prefer it where they differ."]
+        lines += [f"- {sm.get('one_line')}",
                   f"- Driver: {sm.get('driver')}",
                   f"- Phase: {sm.get('phase')}",
                   "- Done: " + "; ".join(sm.get("done", [])),
@@ -363,7 +406,7 @@ def write_project_note(mem: Memory, p: dict, sm: dict | None) -> set[str]:
                    summary=(sm or {}).get("one_line", f"tracker in {p['repo']}")[:140],
                    sources=[{"title": f"{p['title']} tracker", "url": tracker_url, "date": p["cdate"][:10]}],
                    meta={"repo": p["repo"], "tracker": p["path"], "branch": p["branch"],
-                         "tracker_commit": c.get("sha") or "", "tracker_date": p["cdate"],
+                         "tracker_commit": c.get("sha") or "", "tracker_date": p["cdate"], **summary_meta,
                          "aliases": (sm or {}).get("aliases", [])})
     return {a.lower() for a in (sm or {}).get("aliases", [])}
 
@@ -382,7 +425,11 @@ def step_projects(c: Ctx) -> str:
                 else:
                     c.line(f"{p['title']}: the brain could not read it ({(err or '')[:80]})")
     for p in c.projects:
-        c.keywords.update(write_project_note(c.mem, p, c.summaries.get(p["slug"])))
+        sm = c.summaries.get(p["slug"])
+        fresh_sm = sm is not None
+        if sm is None:   # no brain (or it failed): keep the status the memory already had
+            sm = previous_summary(c.mem, p["slug"])[0]
+        c.keywords.update(write_project_note(c.mem, p, sm, fresh_summary=fresh_sm))
     return f"{len(c.projects)} projects, {len(c.summaries)} with a status in brief"
 
 
