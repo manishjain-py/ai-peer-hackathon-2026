@@ -89,6 +89,16 @@ class SlackAdapter(Adapter):
         return client
 
     def normalize(self, ev: dict) -> Event | None:
+        if ev.get("type") == "reaction_added":   # WP2 F5 (needs the reaction_added bot event)
+            item = ev.get("item") or {}
+            if item.get("type") != "message" or not ev.get("user") or ev["user"] == self.bot_user_id:
+                return None
+            ch, ts = item["channel"], item["ts"]
+            return Event(id=f"slack:reaction:{ch}:{ts}:{ev['user']}:{ev.get('reaction')}", source="slack", kind="reaction",
+                         at=ts_to_iso(ev.get("event_ts") or ts), actor=ev["user"], ref=f"slack:msg:{ch}:{ts}", thread_ref=None,
+                         text=f":{ev.get('reaction')}:", url=self.permalink(ch, ts),
+                         extra={"channel": ch, "ts": ts, "reaction": ev.get("reaction"), "item_user": ev.get("item_user"),
+                                "channel_name": "DM" if ch.startswith("D") else self.channel_name(ch)})
         if ev.get("type") not in ("message", "app_mention"):
             return None
         if ev.get("subtype") in SKIP_SUBTYPES:

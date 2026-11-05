@@ -106,6 +106,10 @@ class Watcher:
             return  # never store or think about people outside the test world (e.g. real members)
         if not self.store.add_event(e):
             return  # duplicate (message + app_mention arrive twice)
+        if e.kind == "reaction":   # WP2 F5: the owner's 🔕/👎 on a Peer DM means "less of this"
+            if e.actor == self.owner_chat_id:
+                self.owner_reaction(e)
+            return
         if e.kind == "dm":
             if e.actor == self.owner_chat_id:
                 self.owner_command(e)
@@ -228,6 +232,11 @@ class Watcher:
             return {"did": "failed", "error": res.error}
         out = self.executor.handle_answer(e, res.output, pres, peer_in)
         self.store.set_event_status(e.id, "handled")
+        try:   # WP2 F6: the thread becomes a memory file
+            from .fresh import note_thread
+            note_thread(self.st, e, res.output, out)
+        except Exception:  # noqa: BLE001
+            log.exception("thread note failed")
         log.info("handled %s in %.0fs via %s: %s", e.id, time.time() - t0, res.backend, out.get("did"))
         out.update(backend=res.backend, brain_s=round(res.duration_s, 1), result=res.output)
         return out
@@ -250,11 +259,51 @@ class Watcher:
             roles = ", ".join(k.replace("_", " ") for k, v in (self.st.get("roles") or {}).items() if v)
             reply = (f"You are *{p['status']}* ({p['reason']}; {p['local_time']} in {p['where']}). Roles on: {roles}. "
                      f"Brain: {self.st.get('brain.backend')}.\nSay *away*, *back* or *online*.")
+        elif text in ("undo", "undo that", "undo the last rule"):
+            from .tuning import undo
+            r = undo(self.st, who=self.owner["first"])
+            reply = f"Undone: {r}" if r else "There's no rule of yours to undo."
+        if reply is None and text:   # WP2 F5: anything else may be feedback ("less of this")
+            if self.synchronous:
+                self.tune(e)
+            else:
+                self.pool.submit(self.tune, e)
+            return
         if reply:
             self.activity.add("owner_instruction", f"{self.owner['first']} said “{text}”", who_asked=self.owner["first"],
                               where="DM", said=reply, outcome="done", ref=e.id)
             self.chat.act("post_reply", e.extra["channel"], {"channel": e.extra["channel"], "thread_ts": None, "text": reply},
                           f"cmd:{e.id}", dry_run=self.dry_run)
+
+    # -- WP2 F5: self-tuning from the owner's DM -------------------------------------------------------
+    def tune(self, e: Event, about: dict | None = None, said: str | None = None) -> dict:
+        from .tuning import apply_feedback
+        text = said or re.sub(r"<@[A-Z0-9]+>", "", e.text or "").strip()
+        if about is None:
+            th = e.extra.get("thread_ts")
+            about = (self.store.get_kv(f"dm_item:{th}") if th else None) or self.store.get_kv("last_told_item")
+        out = apply_feedback(self.st, text, about, self.owner["first"], via="DM")
+        reply = out.get("confirm") or ("Noted." if out.get("is_feedback") else
+                                       "I take instructions here: *away*, *back*, *online*, *status*, or tell me what to do less or more of.")
+        self.chat.act("post_reply", e.extra["channel"], {"channel": e.extra["channel"], "thread_ts": e.extra.get("thread_ts"),
+                                                         "text": reply}, f"tune:{e.id}", dry_run=self.dry_run)
+        if not out.get("is_feedback"):
+            self.activity.add("owner_instruction", f"{self.owner['first']} said “{text[:80]}”", who_asked=self.owner["first"],
+                              where="DM", said=reply, outcome="done", ref=e.id)
+        return out
+
+    def owner_reaction(self, e: Event) -> None:
+        from .tuning import NEGATIVE_REACTIONS
+        if e.extra.get("reaction") not in NEGATIVE_REACTIONS or not str(e.extra.get("channel", "")).startswith("D"):
+            return
+        item = self.store.get_kv(f"dm_item:{e.extra.get('ts')}")
+        if not item:
+            return
+        e.extra["thread_ts"] = e.extra.get("ts")   # confirm in the thread of the DM reacted to
+        if self.synchronous:
+            self.tune(e, about=item, said=f"less of this (reacted :{e.extra.get('reaction')}:)")
+        else:
+            self.pool.submit(self.tune, e, item, f"less of this (reacted :{e.extra.get('reaction')}:)")
 
     # -- run ----------------------------------------------------------------------------------
     def join_world_channels(self) -> list[str]:
@@ -279,6 +328,8 @@ class Watcher:
         log.info("owner %s; %d colleagues in Slack; joined %s; presence %s", self.owner_chat_id, len(self.people),
                  joined or "nothing new", self.presence.state(fresh=True))
         self.chat.listen(self.on_event, self.executor.on_interactive)
+        from .jobs import Jobs   # WP2: GitHub poll (F5/F6), local work (F7), nightly re-read (F6)
+        Jobs(self).start()
         self.activity.add("started", "The Peer started watching", outcome="done",
                           extra={"backend": self.st.get("brain.backend"), "colleagues": len(self.people)})
         while True:

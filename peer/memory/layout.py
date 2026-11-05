@@ -17,7 +17,7 @@ import yaml
 from ..events import now_iso
 from ..settings import PKG
 
-DIRS = ["projects", "services", "people", "threads", "decisions", "meetings", "local", "sources"]
+DIRS = ["projects", "services", "channels", "people", "threads", "decisions", "meetings", "local", "sources"]
 SKILL_SRC = PKG / "brain" / "skills" / "peer-brain"
 
 DEFAULT_RULES = """# Rules: how {name} wants the Peer to behave
@@ -30,6 +30,26 @@ Plain English. The owner edits this (or tells the Peer in a DM); self-tuning (F5
 - Always say how sure you are and the date of what you know; link the sources.
 - Keep replies short and friendly. No headings in Slack.
 """
+
+
+def apply_corrections(body: str, corrections: list[dict]) -> str:
+    """Re-apply the owner's corrections: a corrected line is replaced; the rest are listed at the end."""
+    if not corrections:
+        return body
+    lines = body.splitlines()
+    for c in corrections:
+        was, now = (c.get("was") or "").strip(), (c.get("now") or "").strip()
+        mark = f"(corrected by {c.get('by', 'the owner')} on {c.get('date', '')})"
+        for i, ln in enumerate(lines):
+            if ln.strip() == was:
+                lines[i] = ln[:len(ln) - len(ln.lstrip())] + (f"{now} {mark}" if now else f"- (removed: {was.lstrip('- ')}) {mark}")
+                break
+    text = "\n".join(lines)
+    text = re.sub(r"\n## Corrections from the owner\n[\s\S]*$", "", text)
+    text += "\n\n## Corrections from the owner\n\nThe owner's own words; they win over every other source.\n\n"
+    text += "\n".join(f"- {c.get('date', '')}: \"{(c.get('was') or '').lstrip('- ')}\" is now \"{(c.get('now') or 'removed').lstrip('- ')}\""
+                      for c in corrections)
+    return text
 
 
 def slug(text: str) -> str:
@@ -70,6 +90,12 @@ class Memory:
         path.parent.mkdir(parents=True, exist_ok=True)
         front = {"title": title, "kind": kind, "summary": summary, "updated": now_iso(),
                  "sources": sources or [], **(meta or {})}
+        # The owner's corrections (F2) survive every rewrite (discovery, freshness): kept in the front
+        # matter and re-applied to the body, so the brain always reads the corrected fact.
+        old = self.read_front(path) if path.exists() else {}
+        if old.get("corrections") and "corrections" not in (meta or {}):
+            front["corrections"] = old["corrections"]
+        body = apply_corrections(body, front.get("corrections") or [])
         path.write_text("---\n" + yaml.safe_dump(front, sort_keys=False, allow_unicode=True) + "---\n\n" + body.strip() + "\n")
         return path
 

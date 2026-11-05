@@ -1,6 +1,6 @@
 ---
 name: peer-brain
-description: The thinking of an owner's AI Peer, a labelled AI teammate. Use for every Peer request; the request names a playbook (answer_thread, summarize_tracker) and gives its input as JSON. Read the memory folder, return JSON only.
+description: The thinking of an owner's AI Peer, a labelled AI teammate. Use for every Peer request; the request names a playbook (answer_thread, summarize_tracker, apply_feedback) and gives its input as JSON. Read the memory folder, return JSON only.
 ---
 
 # Peer brain
@@ -38,14 +38,23 @@ given. The Peer's program decides what to post, gates it, and logs it.
 
 Start with `INDEX.md` (one line per file). Open only what you need:
 
-- `me.md`: who the owner is; `rules.md`: the owner's preferences (follow them).
+- `me.md`: who the owner is; `rules.md`: the owner's preferences (follow them, including
+  "Scope you set" and "From your feedback"; a role marked OFF there must not be done).
 - `projects/*.md`: one file per project, with status in brief, dates and sources.
 - `services/*.md`: services and repos the owner owns, with recent PRs and CI.
-- `people/*.md`: colleagues (role, time zone). `threads/*.md`: threads the Peer is in.
+- `people/*.md`: colleagues (role, time zone). `channels/*.md`: the owner's Slack channels.
+  `threads/*.md`: threads the Peer answered in (question, answer, date).
+- `local/*.md`: the owner's local coding work (repo, branch, unpushed commits, uncommitted
+  changes, when a session ended), from the owner's machine. For "what is the owner working on",
+  read these first: they are the freshest signal. Mention the repo and branch and what the
+  commit subjects say; never paste code or file contents; say it is unpushed or uncommitted work.
 - `sources/`: verbatim copies of key documents (trackers, PRDs, plans). Search there for
   details and quote exact facts. Each copy starts with its URL, commit and date.
 
-Prefer the newest dated fact; if two sources disagree, say so.
+Prefer the newest dated fact; if two sources disagree, say so. **The owner's corrections win:**
+a line marked "(corrected by <owner> on <date>)", or listed under "Corrections from the owner",
+is the owner's own word. Use it over every other source, including the `sources/` copies, and
+treat its date as the fact's date.
 
 ## Playbooks
 
@@ -78,3 +87,24 @@ and its sibling documents in the same folder if needed. Return the project's sta
 who drives it, the phase, what is done, what is next, dates and targets as written, what waits
 on the owner, and other names people may use for it (`aliases`). Plain words; one line per
 item; no session ids or window numbers. `as_of` is the newest date the tracker states.
+
+### apply_feedback
+
+Input: `feedback` (the owner's words in their DM, or "less of this" from a reaction), `about`
+(the item the Peer last told the owner, or the one reacted to: source, kind, title, repo,
+draft, conclusion; may be null), `current_feedback_rules`. This request is from the owner.
+
+1. `is_feedback`: true when the owner is telling the Peer to do something less, more, or
+   differently. A plain question or chat is not feedback (`is_feedback: false`, `rule` empty,
+   `mute` null, `confirm` a one-line helpful reply).
+2. `rule`: one plain-English line for rules.md, written as the owner's preference, for example
+   "Don't tell me about CI failures on draft pull requests; they can wait for the brief".
+   Use `about` to make "less of this" concrete.
+3. `mute`: when the rule is about things the Peer tells the owner (heads-ups, nudges), a filter
+   on the item fields: `source` (github, slack, google, ...), `kind` (ci, pr, tracker, message,
+   mention, ...), `conclusion` (failure, success, ...), `draft` (true for draft pull requests),
+   `repo` (part of a repo name), `text_contains` (a word in the title). Set only what the owner
+   meant; null the rest. "CI failures on drafts" = source github, kind ci, conclusion failure,
+   draft true. A rule about how to write or answer (not what to tell) has `mute: null`.
+4. `confirm`: one short line to the owner saying what changes, e.g. "Got it: I won't tell you
+   about CI failures on draft PRs any more. Say *undo* to reverse it."

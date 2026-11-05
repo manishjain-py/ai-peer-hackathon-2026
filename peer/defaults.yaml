@@ -10,12 +10,21 @@ presence:
   away_status_words: [vacation, holiday, ooo, "out of office", away, sick, leave, offline, travelling, traveling]
   away_status_emoji: [":palm_tree:", ":airplane:", ":face_with_thermometer:", ":sleeping:", ":no_entry:", ":house_with_garden:"]
 
-roles:                          # F3 switches
+roles:                          # F3 switches (the settings page; a role turned off stops that behaviour)
   watch_my_work: true
   stand_in_when_away: true
   find_opportunities: true
   cover_meetings: true
   daily_brief: true
+
+scope: {}                      # F3: plain-English scope per role, from the settings page (mirrored into rules.md)
+
+memory:
+  nightly_at: "02:30"           # F6: the nightly re-read, owner's local time
+
+local:                          # F7: local work
+  folders: []                   # folders the hourly scan reads (the owner chooses, e.g. ~/repos); read-only
+  scan_minutes: 60
 
 brain:
   backend: claude               # claude | codex   (F8: one setting)

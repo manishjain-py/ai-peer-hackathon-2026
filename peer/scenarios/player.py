@@ -87,6 +87,13 @@ def dry_run(st: Settings, name: str) -> Path:
                 for a in fake.acts[n0:]:
                     walk.note(f"Peer act: {a['action']}", after_s=round(time.time() - t0, 1),
                               text=(a["payload"].get("text") or "")[:1500], has_buttons=bool(a["payload"].get("blocks")))
+            if any(k in step for k in ("dm", "github", "set", "refresh", "local", "reaction")):
+                n0 = len(fake.acts)
+                t0 = time.time()
+                _wp2_step(st, w, fake, walk, step)
+                for a in fake.acts[n0:]:
+                    walk.note(f"Peer act: {a['action']}", after_s=round(time.time() - t0, 1),
+                              text=(a["payload"].get("text") or "")[:1500])
             if "click" in step:
                 drafts = w.store.actions_by_status("pending_approval")
                 if not drafts:
@@ -104,6 +111,45 @@ def dry_run(st: Settings, name: str) -> Path:
     finally:
         st.set("presence.manual", prev)
         type(st).db_path, type(st).log_path = orig_db, orig_log
+
+
+def _wp2_step(st: Settings, w, fake, walk: Walk, step: dict) -> None:
+    """WP2 dry-run steps: the owner's DM or reaction (F5), a GitHub event (F5), a setting (F3),
+    a freshness check (F6), a local scan (F7)."""
+    from ..events import Event
+    if "set" in step:
+        for k, v in step["set"].items():
+            st.set(k, v)
+            walk.note(f"setting {k} = {v}")
+    if "dm" in step:
+        e = fake.inject(channel="DOWNER", user="UOWNER", text=step["dm"], kind="dm",
+                        thread_ts=fake.acts[-1]["ts"] if step.get("in_thread") and fake.acts else None)
+        walk.note("owner DMs the Peer", text=step["dm"])
+        w.on_event(e)
+    if "reaction" in step:
+        dms = [a for a in fake.acts if a["action"] == "dm"]
+        ts = dms[-1]["ts"] if dms else "0"
+        e = Event(id=f"fake:reaction:{ts}:{step['reaction']}", source="fake", kind="reaction", at=now_iso(), actor="UOWNER",
+                  ref=f"fake:msg:DOWNER:{ts}", thread_ref=None, text=f":{step['reaction']}:", url=None,
+                  extra={"channel": "DOWNER", "ts": ts, "reaction": step["reaction"], "channel_name": "DM"})
+        walk.note(f"owner reacts :{step['reaction']}: to the Peer's last DM")
+        w.on_event(e)
+    if "github" in step:
+        from ..jobs import Jobs
+        g = step["github"]
+        item = {"source": "github", "kind": g.get("kind", "ci"), "conclusion": g.get("conclusion", "failure"),
+                "repo": g.get("repo", ""), "branch": g.get("branch", ""), "draft": bool(g.get("draft")),
+                "title": g["title"], "text": g.get("text", g["title"]), "url": g.get("url", ""),
+                "ref": f"fake:github:{g['title']}:{time.time():.3f}", "at": now_iso()}
+        r = Jobs(w).push(item, g.get("why", "A CI run failed on your repo."))
+        walk.note(f"GitHub event: {g['title']}", result=r.get("did"), rule=r.get("rule"))
+    if "refresh" in step:
+        from .. import fresh
+        r = fresh.check_trackers(st, only=step["refresh"] if step["refresh"] not in (True, "all") else None)
+        walk.note("freshness check", updated=[(u["title"], u.get("one_line")) for u in r])
+    if "local" in step:
+        from .. import localwork
+        walk.note("local scan", **localwork.scan(st, why="scan in a walk"))
 
 
 # -- live --------------------------------------------------------------------------------------------
