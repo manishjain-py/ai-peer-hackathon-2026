@@ -1,0 +1,71 @@
+{
+ "cwd": "<spike folder>/home",
+ "tools": [
+  "Glob",
+  "Grep",
+  "Read",
+  "Skill",
+  "StructuredOutput"
+ ],
+ "mcp_servers": [],
+ "model": "claude-opus-5-5",
+ "permissionMode": "dontAsk",
+ "apiKeySource": "none",
+ "claude_code_version": "2.1.318",
+ "skills": [
+  "peer-spike",
+  "deep-research",
+  "design",
+  "design-sync",
+  "dataviz",
+  "update-config",
+  "verify",
+  "debug",
+  "code-review",
+  "simplify",
+  "batch",
+  "fewer-permission-prompts",
+  "doctor",
+  "loop",
+  "schedule",
+  "claude-api",
+  "workflow-authoring",
+  "run",
+  "run-skill-generator",
+  "plugin-authoring"
+ ],
+ "plugins": [
+  {
+   "name": "cc-plugin-agents-md",
+   "path": "builtin",
+   "source": "cc-plugin-agents-md@builtin"
+  },
+  {
+   "name": "cc-plugin-telemetry",
+   "path": "builtin",
+   "source": "cc-plugin-telemetry@builtin"
+  },
+  {
+   "name": "cc-plugin-privacy",
+   "path": "builtin",
+   "source": "cc-plugin-privacy@builtin"
+  },
+  {
+   "name": "cc-plugin-plugin-authoring",
+   "path": "builtin",
+   "source": "cc-plugin-plugin-authoring@builtin"
+  }
+ ],
+ "memory_paths": {
+  "auto": "<auto memory on in this run; off with --settings {\"autoMemoryEnabled\":false}>"
+ },
+ "result_structured_output": {
+  "answer": "Manish is driving Telugu, and its P1 (PRD, DESIGN, PLAN) merged in PR #705 on 2026-11-04.",
+  "sources": [
+   "- Telugu is driven by Manish (as of 2026-11-04, docs/feature-development/telugu/STATE.md).",
+   "- Telugu P1 (PRD, DESIGN, PLAN) merged in PR #705 on 2026-11-04."
+  ],
+  "skill_marker": "PEER-SPIKE-SKILL-RAN"
+ },
+ "result_duration_api_ms": 4354
+}

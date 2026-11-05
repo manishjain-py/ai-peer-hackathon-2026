@@ -1,0 +1,13 @@
+# S1 Slack cover, owner away (PRD S1). The Peer replies in the thread by itself within about
+# two minutes: who it is, that the owner is offline and the local time, the answer with sources
+# and dates; it handles the follow-up; the owner finds it in his DM.
+name: s1-away
+title: "S1 Slack cover: Manish away"
+presence: away
+channel: schools
+steps:
+  - post: {as: lakshmi, text: "Hi team, quick one: who is driving Telugu, and is it shipping this month? Two Telugu-medium schools in Hyderabad asked me today."}
+    expect: {thread_reply: true, within_s: 180}
+  - post: {as: lakshmi, in_thread: true, text: "Thanks, that helps! Will it cover Practice and Revise too, or only Learn at first? And will it be on the iPhone app?"}
+    expect: {thread_reply: true, within_s: 180}
+  - expect: {owner_dm: true, within_s: 30}
