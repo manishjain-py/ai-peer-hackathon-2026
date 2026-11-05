@@ -60,6 +60,67 @@ _Everything I said is in the thread and the activity log. Reply here to tell me 
 
 The brain log (`~/.ai-peer/manish/brain-runs.jsonl`) shows `backend: codex` for both answers (28.8 s, 24.5 s).
 
+## Walk 3: S1-online on Claude (15:26 UTC), Manish's own tap on Send: PASSED
+
+Run by `ai-peer-wp1-2` with `peer scenario s1-online` (no browser): the scene sets the Peer's presence to
+online; Manish, on his phone, tapped **Send** on the draft card in his own Slack. Walk file
+`~/.ai-peer/manish/walks/s1-online-20261105T152902Z.json`.
+
+- **Ananya Rao posts in #content** (15:26:45, t=1.6 s): “Does anyone know who's driving Telugu and whether it ships this month? I need to plan the Telugu content reviews.”
+- **PASS owner_dm** with Send / Edit / Skip, 36.7 s after the post (the brain drafted it in 27 s). The card in Manish's DM:
+
+```text
+:speech_balloon: *Ananya Rao* (Content Lead) asked in *#content* (open the thread):
+>Does anyone know who's driving Telugu and whether it ships this month? I need to plan the Telugu content reviews.
+
+*Why it matters:* Ananya, the Content Lead, needs to know when to plan the Telugu content reviews. Only Manish can give a timeline.
+
+*Draft reply* (certainty high, as of 5 Nov 2026):
+*Manish is driving Telugu.* AI coding sessions are doing the build work.
+
+Where it stands, per the Telugu tracker (5 Nov):
+• *Done:* the plan (merged 4 Nov) and a guard that stops Telugu from being published by mistake
+• *Now:* early backend steps. The database change has Manish's yes to merge. Students see nothing new yet
+• *Content work comes later:* WP6 (Telugu's writing rules), then WP7 (the first Telugu chapters), then WP8 (the launch to children)
+
+*The tracker has no ship date.* An early estimate from 4 Nov, made before the plan was written, said about 2 to 3 weeks to a pilot on web and Android. That was a rough guess, not a target. Manish will confirm the timing and when the Telugu content reviews should start.
+
+Sources: Telugu learning language tracker (STATE.md) (5 Nov 2026) · Telugu brief (BRIEF-2026-11-04.md) (4 Nov 2026)
+
+:raised_hand: *Needs you:* Ananya is asking if Telugu ships this month. The tracker has no ship date, only the early 2 to 3 week pilot estimate. Tell her when the content reviews (WP6 writing rules, WP7 first chapters) are likely to need her.
+
+[Send]  [Edit]  [Skip]
+```
+
+- **Manish taps Send** on his phone. **PASS thread_reply** at 15:28:59, 100.5 s after the card (his tap time
+  included). In Ananya's thread, as the Peer:
+
+```text
+:robot_face: *Manish's AI Peer* here, an AI assistant. Manish reviewed this answer:
+
+*Manish is driving Telugu.* AI coding sessions are doing the build work.
+
+Where it stands, per the Telugu tracker (5 Nov):
+• *Done:* the plan (merged 4 Nov) and a guard that stops Telugu from being published by mistake
+• *Now:* early backend steps. The database change has Manish's yes to merge. Students see nothing new yet
+• *Content work comes later:* WP6 (Telugu's writing rules), then WP7 (the first Telugu chapters), then WP8 (the launch to children)
+
+*The tracker has no ship date.* An early estimate from 4 Nov, made before the plan was written, said about 2 to 3 weeks to a pilot on web and Android. That was a rough guess, not a target. Manish will confirm the timing and when the Telugu content reviews should start.
+
+_Sources: <https://github.com/manishjain-py/learnlikemagic/blob/main/docs/feature-development/telugu/STATE.md|Telugu learning language tracker (STATE.md)> (5 Nov 2026) · <https://github.com/manishjain-py/learnlikemagic/blob/main/docs/feature-development/telugu/BRIEF-2026-11-04.md|Telugu brief (BRIEF-2026-11-04.md)> (4 Nov 2026). Certainty: high, as of 5 Nov 2026._
+```
+
+- The card then updates in place: the buttons give way to “:white_check_mark: Sent in the thread: open it”, so
+  it cannot be sent twice. The thread holds exactly Ananya's question and the Peer's reply.
+- This is also the last piece of spike 1c: the Peer received a person's click over Socket Mode.
+
+Activity log (live, trimmed to the fields above):
+
+```json
+{"at": "2026-11-05T15:27:19+00:00", "kind": "drafted_for_owner", "summary": "Drafted a reply to Ananya Rao in #content for Manish to approve", "who_asked": "Ananya Rao", "where": "#content", "outcome": "pending_approval", "needs_review": true, "sources": ["Telugu learning language tracker (STATE.md), 2026-11-05", "Telugu brief (BRIEF-2026-11-04.md), 2026-11-04"]}
+{"at": "2026-11-05T15:28:59+00:00", "kind": "sent_after_approval", "summary": "Posted the reply Manish approved in #content", "who_asked": "Ananya Rao", "where": "#content", "outcome": "done", "needs_review": false, "sources": ["Telugu learning language tracker (STATE.md), 2026-11-05", "Telugu brief (BRIEF-2026-11-04.md), 2026-11-04"]}
+```
+
 ## What failed first, and the fix
 
 The first live try (02:46) got no reply: a colleague's post sent through the LLM Scenario app carries the
@@ -78,7 +139,8 @@ bot users are still skipped).
 
 ## Not yet
 
-- S1-online live (draft DM with Send / Edit / Skip, then the thread reply after Send).
-- Screenshots and the Checkpoint 1 video: they need the Peer's own browser profile signed in to Slack
-  (`peer browser login-headless`, the code relayed by the controller), then
-  `peer scenario s1-online --record --auto-click` and `peer scenario s1-away --record`.
+- Screenshots and the Checkpoint 1 videos: they need the Peer's own browser profile signed in to Slack.
+  The headless sign-in (`peer browser login-headless`, 15:17 UTC) met Slack's robot check (reCAPTCHA)
+  after the email, so no code was mailed; Manish signs in himself in a window
+  (`peer browser login`), then `peer scenario s1-online --record --auto-click` and
+  `peer scenario s1-away --record`.
