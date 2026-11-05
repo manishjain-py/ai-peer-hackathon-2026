@@ -72,7 +72,8 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 | Session | Window | Worktree | Branch / PR | Job |
 |---|---|---|---|---|
 | kickoff, registry name `learnlikemagic-27` | 1661 | `~/repos/ai-peer-hackathon-2026` | `main` | Interview, docs, restructure, Slack, Recall, ElevenLabs, GitHub set up; handed off at 46% (about 15:07); its window stays open until Manish closes it (it told him he may). The controller owns every ask to Manish |
-| ai-peer-controller-1 | 1715 | `~/repos/ai-peer-hackathon-2026` | `main` (docs only) | Runs the build; https://claude.ai/code/session_01Nfn5h9PisnJvGpbLbRtbiB |
+| ai-peer-controller-1 | 1715 | `~/repos/ai-peer-hackathon-2026` | `main` (docs only) | Handed off at 42% (02:57 on 5 Nov) to ai-peer-controller-2; stops; https://claude.ai/code/session_01Nfn5h9PisnJvGpbLbRtbiB |
+| **ai-peer-controller-2** (live controller) | (spawning) | `~/repos/ai-peer-hackathon-2026` | `main` (docs only) | Runs the build from `handoffs/HANDOFF-2026-11-05-ai-peer-controller-2.md` |
 | ai-peer-wp1-1 | 1725 | `~/repos/ai-peer-wp1` | `wp1-foundation`, draft PR #1 | WP1 foundation + S1; idle pings off (`CLAUDE_NO_IDLE_PING=1`), asks go through the controller; https://claude.ai/code/session_01Nfn5h8PVD6txxjBUfab4nR |
 
 ## Needs Manish
@@ -157,6 +158,20 @@ Answers to the Airbnb asks land here, with date and source.
 
 What went wrong once, with its mechanism.
 
+- Chrome's View > Developer > "Allow JavaScript from Apple Events" is per profile and ignores
+  every scripted change (a System Events click, opened menus, the keyboard), on and off; only
+  a person's click works. His Work profile had it off; Default and Profile 2 had it on.
+- Chrome window ids exceed AppleScript's integer range, so `window id <n>` from an argument
+  fails: match `(id of w) as text` instead.
+- Slack's join form ignores a JS click; `form.requestSubmit()` works, sometimes only on a retry
+  a few seconds after load. Slack confirmation codes are XXX-XXX letters and digits.
+- Gmail treats all of an account's aliases as "you": a `to:<alias>` search matches every
+  alias's mail, so read each message's own To.
+- Slack's manifest editor is CodeMirror: `insertText` lands at the cursor among the template;
+  a real Cmd+A, Cmd+V replaces it; verify from lines outside `.CodeMirror-measure`.
+- Browser automation in the controller cost about 20% of its 1M context (the colleague
+  setup): give such jobs to a sub-agent or a fresh session.
+
 - Driving Chrome by AppleScript (`execute javascript`, bridge in the LLM repo's
   `.claude/skills/ship-chapter-monitor/scripts/eval.applescript`): the script runs in an
   isolated world, so page JS objects are invisible; text inputs need
@@ -174,3 +189,4 @@ What went wrong once, with its mechanism.
 |---|---|---|---|
 | 2026-11-04 | kickoff | Read the film repo and film; three research passes; 14-question interview; restructure; docs | D1 to D16 locked; docs on `main` |
 | 2026-11-04 | ai-peer-controller-1 | Read the brief; created the WP1 worktree; started `ai-peer-wp1-1` (window 1725, max effort, remote control, no trust dialog) | WP1 running |
+| 2026-11-05 | ai-peer-controller-1 | Relayed WP1's asks (colleagues: A; the Zoom test meeting); did the colleague setup in Manish's Chrome at his word; watched spikes 1c and 1d pass; drafted the WP2 and WP3 briefs; handed off at 42% | Live S1 walks running; asks queued in "Needs Manish" |
