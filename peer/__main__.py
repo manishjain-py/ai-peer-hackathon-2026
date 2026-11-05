@@ -11,6 +11,10 @@
   web [--port N]              the activity log page (http://127.0.0.1:8787)
   world manifest|auth|setup   test world in Slack: the scenario app, colleague logins, channels
   browser login|shot|click    the Peer's own Chrome profile for walk screenshots and clicks
+  refresh [--nightly] [--rewind SLUG]   fresh memory (F6): check trackers now, or the nightly re-read
+  local scan|ingest|install|hook-config  local work (F7): scan chosen folders, read hook records, set up the hook
+  tune "<feedback>"           self-tuning (F5): apply owner feedback as if said in the DM
+  jobs --once                 one pass of the background jobs (GitHub poll, local work)
 """
 from __future__ import annotations
 
@@ -181,6 +185,70 @@ def cmd_web(a) -> None:
                 log_level="warning")
 
 
+def cmd_refresh(a) -> None:
+    from . import fresh
+    st = get_settings()
+    if a.rewind:
+        print(json.dumps(fresh.rewind(st, a.rewind, ai=not a.no_ai), ensure_ascii=False))
+    elif a.nightly:
+        print(json.dumps(fresh.nightly(st, ai=not a.no_ai), ensure_ascii=False))
+    else:
+        print(json.dumps(fresh.check_trackers(st, ai=not a.no_ai, only=a.only), ensure_ascii=False))
+
+
+def cmd_local(a) -> None:
+    from . import localwork
+    st = get_settings()
+    if a.what == "scan":
+        print(json.dumps(localwork.scan(st, why="scan on request"), ensure_ascii=False))
+    elif a.what == "ingest":
+        print(json.dumps(localwork.ingest_spool(st), ensure_ascii=False, default=str))
+    elif a.what == "install":
+        print(f"hook script: {localwork.install_hook_script()}")
+    elif a.what == "hook-config":
+        print("Claude Code (~/.claude/settings.json), merge into \"hooks\":")
+        print(json.dumps(localwork.claude_settings_snippet(), indent=2))
+        print("Command for Codex's SessionEnd hook:", localwork.HOOK_COMMAND.format(tool="codex"))
+
+
+def cmd_tune(a) -> None:
+    from .tuning import apply_feedback
+    st = get_settings()
+    from .notify import Store
+    about = Store(st.db_path).get_kv("last_told_item")
+    out = apply_feedback(st, " ".join(a.text), about, "the owner", via="command line")
+    print(json.dumps(out, ensure_ascii=False))
+
+
+def cmd_jobs(a) -> None:
+    from .adapters.fake import FakeAdapter
+    from .jobs import Jobs
+    from .watcher import Watcher
+    st = get_settings()
+    w = Watcher(st, FakeAdapter(), dry_run=True, synchronous=True)   # no Slack connection: pushes go nowhere
+    j = Jobs(w)
+    print(json.dumps(j.poll_github(), ensure_ascii=False))
+
+
+def cmd_sample_heads_up(a) -> None:
+    """Walk helper (F5, live): push one labelled sample CI failure to the owner through the same door as
+    the Peer's poll (notify.tell_owner: the owner's mutes apply). Web API only, no Socket Mode."""
+    import time
+    from .notify import tell_owner
+    from .store import Store
+    st = get_settings()
+    chat = _slack()
+    profile = json.loads(st.profile_path().read_text())
+    owner = chat.lookup_email(profile["slack_email"])["id"]
+    repo = (profile.get("owns", {}).get("repos") or [{"repo": "your/repo"}])[0]["repo"]
+    branch = a.branch or ("walk-sample-draft" if a.draft else "main")
+    item = {"source": "github", "kind": "ci", "conclusion": "failure", "repo": repo, "branch": branch, "draft": a.draft,
+            "title": f"CI failed on {branch} in {repo.split('/')[-1]}" + (" (draft PR" if a.draft else " (") + ", walk sample)",
+            "text": "walk sample", "url": "", "ref": f"sample:ci:{branch}:{time.time():.0f}", "at": ""}
+    print(json.dumps(tell_owner(st, chat, owner, item, "A sample CI failure for a walk (not a real run).",
+                                store=Store(st.db_path)), ensure_ascii=False))
+
+
 def main(argv: list[str] | None = None) -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s", datefmt="%H:%M:%S")
     logging.getLogger("slack_sdk").setLevel(logging.WARNING)
@@ -207,6 +275,13 @@ def main(argv: list[str] | None = None) -> None:
     p = sub.add_parser("world", help="test world in Slack: manifest | auth | setup")
     p.add_argument("what", choices=["manifest", "auth", "setup", "code"]); p.add_argument("url", nargs="?")
     p.set_defaults(fn=cmd_world)
+    p = sub.add_parser("refresh"); p.add_argument("--nightly", action="store_true"); p.add_argument("--rewind")
+    p.add_argument("--only"); p.add_argument("--no-ai", action="store_true"); p.set_defaults(fn=cmd_refresh)
+    p = sub.add_parser("local"); p.add_argument("what", choices=["scan", "ingest", "install", "hook-config"]); p.set_defaults(fn=cmd_local)
+    p = sub.add_parser("tune"); p.add_argument("text", nargs="+"); p.set_defaults(fn=cmd_tune)
+    p = sub.add_parser("jobs"); p.add_argument("--once", action="store_true"); p.set_defaults(fn=cmd_jobs)
+    p = sub.add_parser("sample-heads-up", help="walk helper: one labelled sample CI failure to the owner (mutes apply)")
+    p.add_argument("--draft", action="store_true"); p.add_argument("--branch"); p.set_defaults(fn=cmd_sample_heads_up)
     a = ap.parse_args(argv)
     a.fn(a)
 

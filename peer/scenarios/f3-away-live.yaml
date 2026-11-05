@@ -1,0 +1,9 @@
+# F3 live walk: the away switch on the settings page (the same switch as WP1's presence). The walk
+# keeps the switch as the owner set it on the page; a colleague asks; the Peer stands in.
+name: f3-away-live
+title: "F3: the away switch on live presence"
+presence: keep
+channel: schools
+steps:
+  - post: {as: lakshmi, text: "Hi! Is the Telugu work still on track for the pilot schools? Just checking before my call tomorrow."}
+    expect: {thread_reply: true, within_s: 180}

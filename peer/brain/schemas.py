@@ -52,3 +52,29 @@ SUMMARIZE_TRACKER = {
                  "waiting_on_owner", "aliases", "as_of"],
     "additionalProperties": False,
 }
+
+# WP2 (F5): the owner's feedback ("less of this") -> a rule for rules.md and, when it is about
+# things the Peer tells the owner, a mute filter the program checks (no AI per event).
+APPLY_FEEDBACK = {
+    "type": "object",
+    "properties": {
+        "is_feedback": {"type": "boolean"},
+        "rule": {"type": "string"},
+        "mute": {
+            "type": ["object", "null"],
+            "properties": {
+                "source": {"type": ["string", "null"]},
+                "kind": {"type": ["string", "null"]},
+                "conclusion": {"type": ["string", "null"]},
+                "draft": {"type": ["boolean", "null"]},
+                "repo": {"type": ["string", "null"]},
+                "text_contains": {"type": ["string", "null"]},
+            },
+            "required": ["source", "kind", "conclusion", "draft", "repo", "text_contains"],
+            "additionalProperties": False,
+        },
+        "confirm": {"type": "string"},
+    },
+    "required": ["is_feedback", "rule", "mute", "confirm"],
+    "additionalProperties": False,
+}

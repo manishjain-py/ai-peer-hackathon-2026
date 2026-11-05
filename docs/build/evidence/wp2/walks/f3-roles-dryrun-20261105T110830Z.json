@@ -1,0 +1,64 @@
+{
+ "scenario": {
+  "name": "f3-roles",
+  "title": "F3: roles switch behaviour on and off",
+  "presence": "away",
+  "channel": "schools",
+  "steps": [
+   {
+    "post": {
+     "as": "lakshmi",
+     "text": "Is Telugu going to be on the iPhone app too, or only the web app at first?"
+    },
+    "expect": {
+     "thread_reply": true,
+     "within_s": 180
+    }
+   }
+  ]
+ },
+ "log": [
+  {
+   "t": 0.0,
+   "at": "2026-11-05T11:08:11+00:00",
+   "what": "start (dry run)",
+   "presence": {
+    "local_time": "4:38 PM",
+    "where": "India",
+    "tz": "Asia/Kolkata",
+    "status": "away",
+    "reason": "manual switch: away"
+   }
+  },
+  {
+   "t": 0.0,
+   "at": "2026-11-05T11:08:11+00:00",
+   "what": "Lakshmi Reddy posts in #schools",
+   "text": "Is Telugu going to be on the iPhone app too, or only the web app at first?"
+  },
+  {
+   "t": 19.4,
+   "at": "2026-11-05T11:08:30+00:00",
+   "what": "Peer act: react",
+   "after_s": 19.4,
+   "text": "",
+   "has_buttons": false
+  },
+  {
+   "t": 19.4,
+   "at": "2026-11-05T11:08:30+00:00",
+   "what": "Peer act: post_reply",
+   "after_s": 19.4,
+   "text": ":robot_face: Hi Lakshmi, I'm *Manish's AI Peer*, an AI assistant that covers for Manish. Manish is offline right now (it's 4:38 PM in India), so here is what Manish's work records say:\n\nGood question, Lakshmi. *It isn't decided yet.* \"Which apps first\" is still an open call for Manish in the Telugu design, and he hasn't been asked it yet.\n\nWhat the records show:\n• The plan includes iPhone work (WP5a/5b: TestFlight first, then the App Store), after the web and Android packages (WP4a/4b).\n• The design suggests *web and Android first if the pilot phones are Android, with iPhone right after through TestFlight*. The other options are all three at once, or iPhone too through TestFlight.\n• Launching without iPhone needs Manish's explicit OK.\n• No dates are set yet. The build is at the profile-settings stage (WP2b).\n\nIf you know which phones the pilot schools use, that would help Manish decide. He'll confirm.\n\n_Sources: <https://github.com/manishjain-py/learnlikemagic/blob/main/docs/feature-development/telugu/STATE.md|Telugu learning language tracker (STATE.md)> (5 Nov 2026) · <https://github.com/manishjain-py/learnlikemagic/blob/main/docs/feature-development/telugu/DESIGN.md|Telugu DESIGN.md (§0.2, which apps first)> (4 Nov 2026) · <https://github.com/manishjain-py/learnlikemagic/blob/main/docs/feature-development/telugu/PRD.md|Telugu PRD.md (R28)> (4 Nov 2026) · <https://github.com/manishjain-py/learnlikemagic/blob/main/docs/feature-development/telugu/IMPLEMENTATION-PLAN.md|Telugu ",
+   "has_buttons": false
+  },
+  {
+   "t": 19.4,
+   "at": "2026-11-05T11:08:30+00:00",
+   "what": "Peer act: dm",
+   "after_s": 19.4,
+   "text": ":robot_face: *While you were away* I covered a thread in *#schools* (<https://fake.slack/schools/1793876910.613564|open it>):\n• 4:38 PM: *Lakshmi Reddy* asked “Is Telugu going to be on the iPhone app too, or only the web app at first?” → I answered (certainty high).\n   :raised_hand: *Needs you:* Decide \"which apps first\" for Telugu (web+Android first vs all three; leaving iPhone out needs your parity ruling). Lakshmi may know the pilot schools' phones, which the design says should drive it.\n_Everything I said is in the thread and the activity log. Reply here to tell me what to do differently._",
+   "has_buttons": false
+  }
+ ]
+}

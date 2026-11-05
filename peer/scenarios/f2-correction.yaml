@@ -1,0 +1,9 @@
+# F2 walk: a correction on the "What I learned" page changes the memory file, and the next answer
+# uses it. Run once before the correction and once after (dry run: fake Slack, real brain).
+name: f2-correction
+title: "F2: the next answer uses the owner's correction"
+presence: away
+channel: schools
+steps:
+  - post: {as: lakshmi, text: "Quick one: who is driving the Telugu work day to day? I want to loop the right person into a school call next week."}
+    expect: {thread_reply: true, within_s: 180}

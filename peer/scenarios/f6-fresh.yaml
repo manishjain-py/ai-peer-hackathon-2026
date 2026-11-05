@@ -1,0 +1,10 @@
+# F6 walk: a tracker change in an LLM repo shows up in the Peer's next answer. Set-up: `peer refresh
+# --rewind teacher-feedback-qa` puts the memory back one tracker commit; ask; `peer refresh` finds the
+# newer commit and updates the project file; ask again. Dry run: fake Slack, real brain, real GitHub.
+name: f6-fresh
+title: "F6: a tracker change reaches the next answer"
+presence: away
+channel: engineering
+steps:
+  - post: {as: rohan, text: "Quick check on teacher feedback QA: where is it right now, and did the latest full quality gate pass?"}
+    expect: {thread_reply: true, within_s: 180}
