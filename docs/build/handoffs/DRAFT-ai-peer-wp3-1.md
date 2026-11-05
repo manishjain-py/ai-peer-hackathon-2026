@@ -74,9 +74,10 @@ On the merged WP1 foundation, add the `google` adapter (Gmail, Calendar, Drive/D
 
 ## Manish's hands (through the controller, one ask at a time, exact steps)
 
-- The Google Internal OAuth client: you write the numbered steps (project in the
-  learnlikemagic.com organisation, consent screen "Internal", the Gmail, Calendar, Drive and
-  Docs APIs, a Desktop client, where its file goes, then the one login).
+- The Google Internal OAuth client: the controller wrote his steps in
+  `docs/build/setup/google.md` (project `ai-peer` in the learnlikemagic.com organisation, the four
+  APIs, audience Internal, a Desktop client; the file lands at `~/.ai-peer/google-client.json`).
+  Check them against what your spike needs before he starts; then you run the one login.
 - Anything the alias spike needs from him (for example "send mail as" in Gmail settings).
 
 ## Proof (D13)

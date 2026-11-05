@@ -137,7 +137,8 @@ The controller asks one at a time, in this order.
    (`reactions:read` is granted already, so no reinstall). Or he lets the controller do it.
 4. The Peer's own Codex login, before 8 Nov 02:25 UTC (its copy of his login ends 9 Nov 02:25 and
    the runner refuses it in the last 24 h): `! CODEX_HOME=~/.ai-peer/codex-home codex login`.
-5. The Google Internal OAuth client (WP3 writes the steps when it starts).
+5. The Google Internal OAuth client, at the Mac, about 5 minutes: steps in
+   [setup/google.md](setup/google.md) (written by the controller, so he can do it before WP3 starts).
 6. The Airbnb asks in PLAN, this week.
 7. His other Mac's copy (`~/repos/Hackathon 2026`, per the `$ai-peer` skill) predates
    the `film/` move: push anything unpushed there, then pull.
