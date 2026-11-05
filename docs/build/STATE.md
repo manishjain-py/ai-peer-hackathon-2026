@@ -5,7 +5,7 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
-2026-11-05 17:57. **WP1 and WP2 merged; WP3 running** (`ai-peer-wp3-1`, started 16:34). 15:32: **WP1 merged** ([PR #1](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/1),
+2026-11-05 18:53. **WP1 and WP2 merged; WP3 running** (`ai-peer-wp3-1`, started 16:34). 15:32: **WP1 merged** ([PR #1](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/1),
 merge commit 183fabe, 15:31:54): S1 passes live, away on Claude and Codex, online with Manish's
 own tap on Send. Left for `ai-peer-wp1-2` (`~/repos/ai-peer-wp1`):
 the Peer's browser sign-in at the Mac (Manish's "open window"), the two recorded walks, the
@@ -91,9 +91,9 @@ on `wp2-setup-memory`. Live controller: `ai-peer-controller-2`.
   On "open window" it goes to `ai-peer-wp1-2` to record S1; WP3's live S2 walk asks for it later. F7 is live: the session-end hook is in `~/claude-config/settings.json` (synced) and
   `~/.codex/hooks.json` (backups in `~/.ai-peer/backups/`; both checked to parse), and the hourly
   scan reads `~/repos`.
-- Still running: the controller's watcher (background task of `ai-peer-controller-2`,
-  `watch2.zsh`, re-armed 16:34 on 5 Nov for `ai-peer-wp1-2` and `ai-peer-wp3-1`; ends with that
-  session). It wakes the controller when a `.env` key name appears, a PR changes, a worker passes
+- Still running: nothing of the controller's. From 18:53 on 5 Nov its watcher is stopped: nothing is in
+  flight (both workers idle, waiting on Manish at the Mac), so it wakes on his or a worker's
+  message. Before that: `watch2.zsh` for `ai-peer-wp1-2` and `ai-peer-wp3-1`. It wakes the controller when a `.env` key name appears, a PR changes, a worker passes
   45% context or exits, else after 55 minutes. The live Peer (pid in `~/.ai-peer/manish/watch.pid`, detached,
   page http://127.0.0.1:8787) is the WP1 worker's. Earlier note, from before 02:58: the worker's two
   waiters run until about 18:05 on 5 Nov: spike 1d starts by itself 60 s after
