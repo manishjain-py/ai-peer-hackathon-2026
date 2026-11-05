@@ -62,10 +62,38 @@ codex exec "\$peer-brain …" --output-schema <file> --sandbox read-only --ephem
   to run Codex on the copy within 24 h of expiry, and the Peer gets its own login
   (`CODEX_HOME=~/.ai-peer/codex-home codex login`, Manish's hands) before then.
 
-## 1c Slack Socket Mode: pending
+## 1c Slack Socket Mode: partly passed (15:02); the rest folds into the live walk
 
-Slack app set up by the kickoff session with Manish (`docs/build/setup/slack.md` on `main`).
+- The kickoff session set up the Slack app with Manish (`docs/build/setup/slack.md`). The bot
+  user is "Manish's AI Peer" (`@manishs_ai_peer`).
+- Socket Mode connected at 15:02:46 UTC. The bot DMed Manish a labelled test card with
+  Send / Edit / Skip, and replied in that card's thread as "Manish's AI Peer". The listener
+  heard its own posts as `message.im` events (Socket Mode delivers events).
+- Hearing a person's message and receiving a person's click: no reply or click came in the
+  listener's 3 hours (Manish was away). Both are part of the live S1 walk (a colleague's post;
+  Send on the draft).
 
-## 1d Recall bot on Zoom: pending
+## 1d Recall bot on Zoom, Manish absent: PASSED (2026-11-05 01:55 to 01:59 UTC)
 
-Needs the Zoom app and the Recall account. Manish's Zoom is a paid Workplace Pro account.
+The meeting was on Manish's own Zoom (paid Workplace Pro), "AI Peer test", with the passcode in
+the link. Manish was not in the call. Recall (Tokyo region) used its default Zoom bot: no Zoom app
+of ours, no OAuth. Two bots, about 1.5 minutes each, about $0.05 in all.
+
+| Step | Result |
+|---|---|
+| "Manish's AI Peer" bot joins | `in_call_not_recording` 16 s after create, then `in_call_recording` 11 s later, **with no host in the call** |
+| Second bot "Ananya Rao (test)" joins and plays its line (MP3, `automatic_audio_output`) | recording at the same moment |
+| Peer bot plays its intro (automatic) and an update (`POST /bot/{id}/output_audio/`, 200) | played |
+| Transcript (`recallai_streaming`, read after the call from `media_shortcuts.transcript`) | arrived 8 s after the bots left |
+| Peer bot's transcript | Ananya Rao (test): "Hi, this is Ananya. Quick question for the pier. Who is driving the Telugu build and when does it ship?" |
+| Run 2: the colleague bot's transcript (proves the Peer is heard) | Manish's AI Peer: "Manish's AI peer and AI assistant. Manish can't join this meeting. So I'm here to take notes and share his update. Here is Manish's update. The Telugu planning documents are merged and the first build step is in review." |
+
+What WP4 needs to know:
+- "Peer" comes back as "pier": the addressed-detection must accept homophones.
+- The first second of an MP3 is clipped ("Hi everyone, I'm" was lost): pad clips with about 1 s
+  of silence.
+- `output_audio` needs `automatic_audio_output` set when the bot is created.
+- The real-time path (`realtime_endpoints`, `transcript.data`) needs a public URL (the
+  `cloudflared` tunnel) and is not tested here.
+- The voices came from Manish's ElevenLabs library. It holds a voice cloned from Manish ("Manish
+  Jain"). The Peer must never use it: the Peer speaks as its own labelled identity (D9).
