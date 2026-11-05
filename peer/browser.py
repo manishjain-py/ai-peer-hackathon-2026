@@ -188,3 +188,58 @@ class SlackRecorder:
                             "-movflags", "+faststart", str(mp4)], check=False)
             return str(mp4) if mp4.exists() else video
         return video
+
+
+def login_headless(email: str, code_file: Path, timeout_s: int = 900, shots: Path | None = None) -> bool:
+    """Sign the Peer's profile in to Slack with no window: enter the email, wait for the code
+    Slack mails to it (a helper writes just the code to code_file), type it in."""
+    import re
+    from playwright.sync_api import sync_playwright
+    code_file = Path(code_file)
+    code_file.unlink(missing_ok=True)
+    with sync_playwright() as p:
+        ctx = _context(p, headless=True)
+        page = ctx.pages[0] if ctx.pages else ctx.new_page()
+        page.goto("https://learnlikemagic.slack.com/")
+        page.wait_for_selector("[data-qa=email_field]", timeout=30000)
+        page.fill("[data-qa=email_field]", email)
+        page.click("[data-qa=submit_button]")
+        time.sleep(4)
+        if shots:
+            page.screenshot(path=str(shots / "login-1-code-page.png"))
+        print(f"Code requested for {email}; waiting for {code_file}", flush=True)
+        deadline = time.time() + timeout_s
+        code = None
+        while time.time() < deadline and not code:
+            if code_file.exists():
+                raw = re.sub(r"[^A-Za-z0-9]", "", code_file.read_text())
+                if len(raw) == 6:
+                    code = raw.upper()
+            time.sleep(2)
+        if not code:
+            ctx.close()
+            print("No code arrived.")
+            return False
+        boxes = page.locator("input[aria-label*='digit' i], input[maxlength='1'], [data-qa*='confirmation_code'] input")
+        if boxes.count():
+            boxes.first.click()
+        page.keyboard.type(code, delay=120)
+        ok = False
+        for _ in range(40):
+            if "app.slack.com/client" in page.url:
+                ok = True
+                break
+            link = page.locator("text=/use Slack in your browser|open this link in your browser/i")
+            if link.count():
+                link.first.click()
+            time.sleep(1.5)
+        if not ok:
+            page.goto(client_url())
+            time.sleep(6)
+            ok = "app.slack.com/client" in page.url
+        if shots:
+            page.screenshot(path=str(shots / "login-2-after-code.png"))
+        code_file.unlink(missing_ok=True)
+        ctx.close()
+        print("Signed in." if ok else f"Not signed in (ended on {page.url[:80]}).")
+        return ok

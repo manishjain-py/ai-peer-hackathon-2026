@@ -160,6 +160,12 @@ def cmd_browser(a) -> None:
     from . import browser
     if a.what == "login":
         browser.login()
+    elif a.what == "login-headless":
+        st = get_settings()
+        email = json.loads(st.profile_path().read_text())["slack_email"]
+        shots = st.owner_dir / "walks"
+        shots.mkdir(exist_ok=True)
+        browser.login_headless(email, st.owner_dir.parent / "slack-login-code.txt", shots=shots)
     elif a.what == "shot":
         print(browser.shot(a.channel, Path(a.out), thread_ts=a.thread))
     elif a.what == "click":
@@ -194,7 +200,7 @@ def main(argv: list[str] | None = None) -> None:
     sub.add_parser("port-check").set_defaults(fn=cmd_port_check)
     p = sub.add_parser("web"); p.add_argument("--port", type=int); p.set_defaults(fn=cmd_web)
     p = sub.add_parser("browser", help="the Peer's own Chrome profile: login | shot | click")
-    p.add_argument("what", choices=["login", "shot", "click"]); p.add_argument("--channel"); p.add_argument("--thread")
+    p.add_argument("what", choices=["login", "login-headless", "shot", "click"]); p.add_argument("--channel"); p.add_argument("--thread")
     p.add_argument("--out", default="shot.png"); p.add_argument("--label", default="Send"); p.set_defaults(fn=cmd_browser)
     p = sub.add_parser("world", help="test world in Slack: manifest | auth | setup")
     p.add_argument("what", choices=["manifest", "auth", "setup", "code"]); p.add_argument("url", nargs="?")
