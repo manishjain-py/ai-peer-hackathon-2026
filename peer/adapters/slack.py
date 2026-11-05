@@ -93,8 +93,12 @@ class SlackAdapter(Adapter):
             return None
         if ev.get("subtype") in SKIP_SUBTYPES:
             return None
-        if ev.get("bot_id") or ev.get("user") in (None, self.bot_user_id):
-            return None  # never react to bots, including itself
+        uid = ev.get("user")
+        if not uid or uid == self.bot_user_id or (self.bot_id and ev.get("bot_id") == self.bot_id):
+            return None  # never react to itself or to bot-only posts
+        if self.user_info(uid).get("is_bot"):
+            return None  # a bot user. (A person's post sent through an app carries that app's bot_id:
+            #              it is still the person's message.)
         channel, ts = ev["channel"], ev["ts"]
         thread_ts = ev.get("thread_ts")
         ctype = ev.get("channel_type") or ("im" if channel.startswith("D") else "channel")
