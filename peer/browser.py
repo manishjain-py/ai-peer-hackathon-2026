@@ -52,23 +52,47 @@ def client_url(channel: str | None = None, thread_ts: str | None = None) -> str:
     return url
 
 
-def login(timeout_s: int = 600) -> bool:
+def _open_in_browser(page) -> None:
+    """Slack's 'launch the app?' page: stay in the browser."""
+    try:
+        link = page.locator("text=/use Slack in your browser|open this link in your browser/i")
+        if link.count():
+            link.first.click()
+    except Exception:  # noqa: BLE001
+        pass
+
+
+def login(timeout_s: int = 900, shots: Path | None = None) -> bool:
+    """A Chrome window on the Peer's own profile; the owner signs in himself (email, Slack's
+    robot check if it shows one, the emailed code). It closes by itself once he is in."""
     from playwright.sync_api import sync_playwright
     with sync_playwright() as p:
         ctx = _context(p, headless=False)
         page = ctx.pages[0] if ctx.pages else ctx.new_page()
         page.goto("https://learnlikemagic.slack.com/")
+        page.bring_to_front()
         print("Sign in to Slack in the window that opened (as yourself). It closes by itself when done.", flush=True)
         deadline = time.time() + timeout_s
         ok = False
-        while time.time() < deadline:
-            if "app.slack.com/client" in page.url:
-                ok = True
-                time.sleep(3)
-                break
+        while time.time() < deadline and not ok:
+            for pg in list(ctx.pages):
+                try:
+                    if "app.slack.com/client" in pg.url:
+                        page, ok = pg, True
+                        break
+                    _open_in_browser(pg)
+                except Exception:  # noqa: BLE001
+                    pass
             time.sleep(1)
+        if ok:
+            time.sleep(6)
+        if shots:
+            try:
+                page.screenshot(path=str(shots / "login-2-after-code.png"))
+            except Exception:  # noqa: BLE001
+                pass
         ctx.close()
-        print("Signed in: the Peer can take screenshots now." if ok else "Not signed in (timed out).")
+        print("Signed in: the Peer can take screenshots now." if ok else "Not signed in (timed out).", flush=True)
         return ok
 
 
@@ -216,9 +240,25 @@ def login_headless(email: str, code_file: Path, timeout_s: int = 900, shots: Pat
         page.wait_for_selector("[data-qa=email_field]", timeout=30000)
         page.fill("[data-qa=email_field]", email)
         page.click("[data-qa=submit_button]")
-        time.sleep(4)
+        # Slack shows either its code page or, to some browsers, a robot check (reCAPTCHA): then
+        # no code is mailed, and a person must sign in through `peer browser login`.
+        state = None
+        for _ in range(20):
+            time.sleep(1)
+            robot = page.locator("iframe[title='reCAPTCHA']")
+            if robot.count() and robot.first.is_visible():
+                state = "robot check"
+                break
+            if page.locator("text=/check your email|sent a .*code|enter the code/i").count():
+                state = "code page"
+                break
         if shots:
             page.screenshot(path=str(shots / "login-1-code-page.png"))
+        if state != "code page":
+            ctx.close()
+            print(f"No code was sent: Slack showed {state or 'no code page'}. "
+                  "Sign in through `peer browser login` (a window you sign in to yourself).", flush=True)
+            return False
         print(f"Code requested for {email}; waiting for {code_file}", flush=True)
         deadline = time.time() + timeout_s
         code = None
