@@ -1,0 +1,53 @@
+{
+ "scenario": {
+  "name": "f3-away-live",
+  "title": "F3: the away switch on live presence",
+  "presence": "keep",
+  "channel": "schools",
+  "steps": [
+   {
+    "post": {
+     "as": "lakshmi",
+     "text": "Hi! Is the Telugu work still on track for the pilot schools? Just checking before my call tomorrow."
+    },
+    "expect": {
+     "thread_reply": true,
+     "within_s": 180
+    }
+   }
+  ]
+ },
+ "log": [
+  {
+   "t": 1.3,
+   "at": "2026-11-05T15:39:17+00:00",
+   "what": "start (live)",
+   "presence": "kept: away",
+   "channel": "schools"
+  },
+  {
+   "t": 1.7,
+   "at": "2026-11-05T15:39:17+00:00",
+   "what": "Lakshmi Reddy posts in #schools",
+   "ts": "1793893157.513299",
+   "text": "Hi! Is the Telugu work still on track for the pilot schools? Just checking before my call tomorrow."
+  },
+  {
+   "t": 42.3,
+   "at": "2026-11-05T15:39:58+00:00",
+   "what": "PASS thread_reply",
+   "after_s": 40.6,
+   "ts": "1793893195.674389",
+   "text": ":robot_face: Hi Lakshmi, I'm *Manish's AI Peer*, an AI assistant that covers for Manish. Manish is offline right now (it's 9:09 PM in India), so here is what Manish's work records say:\n\nHi Lakshmi! The Telugu work is *moving steadily, but it's still in the early build steps*, per the Telugu tracker (last updated 5 Nov, 01:49 UTC):\n• *Done:* the plan (4 Nov), a guard that stops Telugu being published by mistake, and a check that keeps the two code repos in step. Manish also approved the database step to merge.\n• *Next:* the language list and the \"Help language\" setting, then serving content per language. After that come the apps and the first Telugu chapters.\n• *Students see nothing new yet.* Telugu stays hidden until the launch step.\n\n*No pilot date is recorded.* An early estimate from 4 Nov, made before the plan was written, said about 2 to 3 weeks to a pilot on web and Android. That's not a commitment. Manish will confirm the timing before your call.\n\n_Sources: <https://github.com/manishjain-py/learnlikemagic/blob/main/docs/feature-development/telugu/STATE.md|Telugu learning language tracker (STATE.md)> (5 Nov 2026) · <https://github.com/manishjain-py/learnlikemagic/pull/708|PR #708: WP2a, the help-language column and the language-access table> (5 Nov 2026) · <https://github.com/manishjain-py/learnlikemagic/pull/705|PR #705: PRD, design and plan for Telugu> (4 Nov 2026). Certainty: medium, as of 5 Nov 2026. I can't make commitments on Manish's behalf; this thread will be waiting when Manish is back._"
+  },
+  {
+   "t": 42.6,
+   "at": "2026-11-05T15:39:58+00:00",
+   "what": "done",
+   "thread": "https://learnlikemagic.slack.com/archives/C0CEWETSYHK/p1793893157513299?thread_ts=1793893157.513299&cid=C0CEWETSYHK",
+   "root_ts": "1793893157.513299",
+   "channel_id": "C0CEWETSYHK",
+   "dm": "D0CEQ3D0GN9"
+  }
+ ]
+}

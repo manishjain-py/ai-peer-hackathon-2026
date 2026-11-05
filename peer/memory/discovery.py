@@ -370,7 +370,16 @@ def write_project_note(mem: Memory, p: dict, sm: dict | None, fresh_summary: boo
     else:
         summary_meta = {"summary_at": prev_front.get("summary_at") or prev_front.get("updated") or "",
                         "summary_commit": prev_front.get("summary_commit") or prev_front.get("tracker_commit") or ""}
-    stale = bool(sm) and bool(c.get("sha")) and summary_meta["summary_commit"] and not str(c.get("sha")).startswith(summary_meta["summary_commit"][:10])
+    stale = False
+    if sm and not (sm and fresh_summary):
+        if summary_meta["summary_commit"] and c.get("sha"):
+            stale = not str(c.get("sha")).startswith(summary_meta["summary_commit"][:10])
+        else:   # older memory without a summary commit: compare dates
+            try:
+                stale = datetime.fromisoformat(str(summary_meta["summary_at"]).replace("Z", "+00:00")) < \
+                    datetime.fromisoformat(str(p["cdate"]).replace("Z", "+00:00"))
+            except ValueError:
+                stale = True
     cmsg = ((c.get("commit") or {}).get("message") or "").splitlines()[0][:100] if c else ""
     tracker_url = f"https://github.com/{p['repo']}/blob/{p['branch']}/{p['path']}"
     terms = {p["slug"].replace("-", " ")} | {a.lower() for a in (sm or {}).get("aliases", [])}

@@ -136,3 +136,44 @@ updates, local work) and `f4-2-activity-walks.png` (`/activity?dry=1`, the dry-r
 "Needs your review" first (an open draft and answers that flag something for Manish), then the
 history with filters; every entry has who asked, the question, what the Peer said or did, its
 sources with dates and the outcome.
+
+## After WP1's merge (5 Nov, 15:31 onwards)
+
+`origin/main` (183fabe) merged into `wp2-setup-memory` with no conflicts (WP1's later changes were
+only the browser sign-in). Cheap re-walks on the test owner, all pass: F1 (discovery with no AI on
+a scratch owner), F3 (Watch my work off: no action), F5 (dry run, same result), F6 through the
+new no-AI poll path (below).
+
+**Cost guard (F6).** The LLM trackers change many times an hour. The 15-minute poll now never
+calls the AI: a changed tracker is re-copied into `sources/` at once and its project file says
+"Newer than this status: … read the copy"; the nightly pass re-summarises only stale trackers, at
+effort high (`brain.refresh_effort`), at most every `memory.resummarize_minutes` (360). Re-walk
+(15:37): memory one commit behind (teacher-feedback-qa 9e0bbcd), answer had no word of the build
+being at rest; the poll's path (re-copy, no AI) took 918f428 ("The build is at rest at a clean
+point since 14:03 UTC"); the next answer said it was at rest. Older memory with no summary commit
+is flagged by date (summary older than the tracker's commit).
+
+**F7 hooks installed, at Manish's "Yes to all" (15:33, relayed by `ai-peer-controller-2`):**
+
+| File | Change | Undo |
+|---|---|---|
+| `~/claude-config/settings.json` (what `~/.claude/settings.json` links to; syncs to his Macs) | added `hooks.SessionEnd`: `test -x "$HOME/.ai-peer/bin/session-end" && "$HOME/.ai-peer/bin/session-end" claude \|\| true`, timeout 5 | delete the `SessionEnd` key |
+| `~/.codex/hooks.json` | added `hooks.SessionEnd` with the same command, `codex` | delete the `SessionEnd` key |
+| `~/.ai-peer/manish/settings.yaml` | `local.folders: ["~/repos"]` (hourly, read-only) | set it to `[]` |
+
+Each file was backed up first (`~/.ai-peer/backups/`), changed by one addition (the diff removes
+or changes no line), written atomically, and parsed with `python3 -m json.tool`. Proof: a headless
+`claude -p` with his user settings ended at 15:35:14 and its record landed in
+`~/.ai-peer/spool/session-end/` (`SessionEnd`, reason `other`, its folder). Codex: proven at his
+next interactive Codex session (exec does not fire session hooks).
+
+**The live Peer from this worktree (15:38).** WP1's Peer (pid 50926) stopped through its pid
+file; no other `peer watch` running; the skill links re-pointed to this worktree; started as
+owner `manish` (pid 52690). Its first jobs: the `~/repos` scan wrote 8 `local/` notes; the poll
+re-copied 11 changed trackers (no AI).
+
+**F3 live, the away switch (15:39):** flipped "I'm away" on the live page
+(`live-1-away-on.png`; activity "Manish set the away switch to away", 15:39:14); Lakshmi asked in
+#schools through the scenario script; the Peer answered in the thread 40.6 s later as the labelled
+Peer ("Manish is offline right now (it's 9:09 PM in India)…"), presence reason "manual switch:
+away"; switched back off (`live-2-away-off.png`). **Pass.**
