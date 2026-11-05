@@ -5,7 +5,7 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
-2026-11-05 08:37. WP1 (foundation + S1) is running: `ai-peer-wp1-1` in
+2026-11-05 09:33. WP1 (foundation + S1) is running: `ai-peer-wp1-1` in
 `~/repos/ai-peer-wp1` on `wp1-foundation`. S1-away passes live; S1-online and the evidence
 wait on the Peer's Slack sign-in (Manish's "ready"). Live controller: `ai-peer-controller-2`.
 
@@ -77,7 +77,7 @@ wait on the Peer's Slack sign-in (Manish's "ready"). Live controller: `ai-peer-c
 - **Weekly usage 55% at 07:41 on 5 Nov** (54% at 02:59; 51% at 01:48; 35% at 15:22 on 4 Nov):
   1 point in the 4.7 h since 02:59, while this build waited and the Learn Like Magic
   sessions ran. The reset is 10 Nov, 04:30 IST; per D14 Codex is the backup builder at about 95%.
-  `ai-peer-wp1-2` read in, context 10% at 08:37, waiting for "go login" (it also fixed the Peer
+  `ai-peer-wp1-2` read in, context 10% at 09:33, waiting for "go login" (it also fixed the Peer
   browser's old Chrome version, which Slack would stop supporting on 9 Nov).
 
 | Session | Window | Worktree | Branch / PR | Job |
