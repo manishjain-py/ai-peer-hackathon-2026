@@ -61,13 +61,12 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 The controller asks one at a time, in this order.
 
-1. **Asked 15:20 on 4 Nov (Telegram 15:23), steps resent 01:50 on 5 Nov, waiting:** a Zoom test meeting for spike 1d (join before host on, waiting
-   room off); the link goes in `~/.ai-peer/.env` as `ZOOM_TEST_MEETING_URL`, not chat
-   (anyone with it can join).
-2. Next: the colleague accounts (his pick A, below), about 25 minutes at the Mac, steps in
-   `docs/build/setup/slack-colleagues.md` on the branch; plus, as its last step, one
-   Slack sign-in in the Peer's own Chrome profile (`peer browser login`) so the worker can
-   take screenshots, click Send in the walk and record Checkpoint 1 without his windows.
+1. **Sent 01:54 on 5 Nov, waiting:** the colleague accounts (his pick A), about 25 minutes at
+   the Mac, steps in `docs/build/setup/slack-colleagues.md` on the branch; its last step is
+   one Slack sign-in in the Peer's own Chrome profile (`peer browser login`) for screenshots,
+   the walk's Send click and the Checkpoint 1 recording.
+2. Done 01:54 on 5 Nov: the Zoom test meeting "AI Peer test" (he made it; the controller
+   wrote its link to `.env` at his request, value never echoed). Spike 1d starts by itself.
 3. One command for the Peer's own Codex login (today it uses a copy of his token, good
    until about 7 Nov).
 4. The Google Internal OAuth client (WP3).
@@ -118,6 +117,7 @@ authority does not carry over; ask him before any session reuses it for a new st
 |---|---|---|
 | 15:20 | Fake colleagues: A) real member accounts (recommended) or B) one scenario bot | "A (real accounts, recommended) - sure" |
 | 11-05 01:50 | (after the morning catch-up) Say "go" and I resend the Zoom steps | "go" |
+| 11-05 01:54 | (Zoom steps; he sent a screenshot of the saved meeting and its invite link) | "can you do step 5 yourself." |
 
 ## Airbnb notes
 
