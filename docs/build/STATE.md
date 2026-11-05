@@ -5,7 +5,7 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
-2026-11-05 12:01. WP1 (foundation + S1) is running: `ai-peer-wp1-2` in `~/repos/ai-peer-wp1` on
+2026-11-05 12:56. WP1 (foundation + S1) is running: `ai-peer-wp1-2` in `~/repos/ai-peer-wp1` on
 `wp1-foundation`. S1-away passes live; S1-online and the evidence wait on the Peer's Slack
 sign-in (Manish's "ready"). **WP2 started early** (10:45): `ai-peer-wp2-1` in `~/repos/ai-peer-wp2`
 on `wp2-setup-memory`. Live controller: `ai-peer-controller-2`.
@@ -87,7 +87,7 @@ on `wp2-setup-memory`. Live controller: `ai-peer-controller-2`.
 - **Weekly usage 59% at 11:18 on 5 Nov** (55% at 07:41; 54% at 02:59; 35% at 15:22 on 4 Nov):
   about 4 points from WP2's 35-minute build and its brief's review; about 1 point in the 4.7 h
   before, while the build waited. The reset is 10 Nov, 04:30 IST; per D14 Codex is the backup builder at about 95%.
-  `ai-peer-wp1-2` read in, context 10% at 12:01, waiting for "go login" (it also fixed the Peer
+  `ai-peer-wp1-2` read in, context 10% at 12:56, waiting for "go login" (it also fixed the Peer
   browser's old Chrome version, which Slack would stop supporting on 9 Nov).
 
 | Session | Window | Worktree | Branch / PR | Job |
@@ -104,7 +104,7 @@ on `wp2-setup-memory`. Live controller: `ai-peer-controller-2`.
 
 The controller asks one at a time, in this order.
 
-1. **Waiting, the build's only blocker (asked 02:47 on 5 Nov; again 02:59, and a reminder at 04:53, by ai-peer-controller-2 on Attention):**
+1. **Waiting, the build's only blocker (asked 02:47 on 5 Nov; again 02:59, and reminders at 04:53 and 12:56, by ai-peer-controller-2 on Attention):**
    step 5, the Peer's own Slack sign-in. The worker types
    manish@learnlikemagic.com on Slack's sign-in page; Manish reads the code Slack mails to
    manish@ (no Chrome profile the controller can drive has that inbox) and it goes into
