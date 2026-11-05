@@ -114,3 +114,25 @@ none of five variants fired it: `-c hooks.SessionEnd=...` with and without `bypa
 and `features.hooks`, and a `hooks.json` in a private `CODEX_HOME`. Exec may not run session
 hooks; Manish's interactive Codex already runs his `~/.codex/hooks.json` hooks. (A `codex exec`
 in a fresh `CODEX_HOME` hangs unless stdin is `/dev/null`.)
+
+Walk (11:14 to 11:16), test owner's chosen folder `~/repos/ai-peer-wp2` only (this worktree; the
+scan of `~/repos` waits for Manish's word). A headless Claude Code session ended inside the
+worktree (the hook given with `--settings`), and a local commit was made and not pushed. `peer
+local scan` wrote `local/ai-peer-hackathon-2026.md` (`walks/f7-local-note.md`): branch
+`wp2-setup-memory`, 1 unpushed commit with its subject, the Claude Code session that ended at
+16:44 IST. Kabir asks in #product (dry run) "What is Manish working on today?":
+
+> … • Local work: 1 unpushed commit on branch `wp2-setup-memory` in the ai-peer-hackathon-2026
+> repo ("wp2: walks F1, F2, F3, F5 (dry run), F6 pass…"). That coding session ended at 4:44 PM.
+
+The answer also lists the Telugu and Teacher Feedback QA work from the trackers, with sources.
+**Pass** for the hook path and the scan. Not yet live: the hook in Manish's global Claude Code
+and Codex settings (his OK first), and the hourly scan of the folders he chooses.
+
+## F4 activity log (11:16)
+
+`f4-1-activity.png` (the test owner's own log: setup, the correction, setting changes, memory
+updates, local work) and `f4-2-activity-walks.png` (`/activity?dry=1`, the dry-run walks' log):
+"Needs your review" first (an open draft and answers that flag something for Manish), then the
+history with filters; every entry has who asked, the question, what the Peer said or did, its
+sources with dates and the outcome.

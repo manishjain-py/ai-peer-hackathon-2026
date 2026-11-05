@@ -397,9 +397,10 @@ details{margin-top:8px}summary{cursor:pointer;color:var(--green);font-size:14px;
 """
 
 
-def _entries() -> list[dict]:
+def _entries(dry: int = 0) -> list[dict]:
     st = get_settings()
-    entries = ActivityLog(st.log_path).entries(limit=2000)
+    path = st.owner_dir / "dryrun" / "log.jsonl" if dry else st.log_path   # dry=1: the dry-run walks' own log
+    entries = ActivityLog(path).entries(limit=2000)
     closed = {e["ref"] for e in entries if e["kind"] in ("sent_after_approval", "skipped_by_owner", "resolved") and e.get("ref")}
     for e in entries:
         e["open"] = e.get("outcome") == "pending_approval" and e.get("ref") not in closed
@@ -412,10 +413,10 @@ def api_activity():
 
 
 @app.get("/activity", response_class=HTMLResponse)
-def activity(all: int = 0, f: str = ""):
+def activity(all: int = 0, f: str = "", dry: int = 0):
     p = profile()
     tz = p.get("tz", "UTC")
-    entries = [e for e in _entries() if all or e["kind"] not in ("noticed", "started")]
+    entries = [e for e in _entries(dry) if all or e["kind"] not in ("noticed", "started")]
     entries.reverse()
     review = [e for e in entries if e["open"] or (e.get("needs_review") and e["kind"] != "drafted_for_owner")]
     kinds = FILTERS.get(f, FILTERS[""])[1]
@@ -437,9 +438,10 @@ def activity(all: int = 0, f: str = ""):
                 f'<div class="meta">Asked by {E(e.get("who_asked") or "the Peer itself")} · {E(e.get("where") or "-")}{link}</div>'
                 f'{question}{needs}{said}{("<ul class=srcs>" + srcs + "</ul>") if srcs else ""}</div>')
 
-    chips = "".join(f'<a href="?f={k}" class="{"on" if k == f else ""}">{E(v[0])}</a>' for k, v in FILTERS.items() if k != "review")
+    chips = "".join(f'<a href="?f={k}{"&dry=1" if dry else ""}" class="{"on" if k == f else ""}">{E(v[0])}</a>' for k, v in FILTERS.items() if k != "review")
     body = (f'<div class="label">Activity</div><h1>Everything your Peer did.</h1><p class="lead">Each action: who asked, what it said or did, '
-            f'its sources and the outcome. Items that need you come first. <a href="?all=1">Show background events too</a>.</p>')
+            f'its sources and the outcome. Items that need you come first. <a href="?all=1">Show background events too</a>.'
+            + (' <span class="pill amber">Dry-run walks (fake Slack)</span>' if dry else '') + '</p>')
     body += '<h2>Needs your review</h2>' + ("".join(card(e) for e in review) or '<div class="card muted">Nothing waits on you.</div>')
     body += f'<h2>History</h2><div class="filters">{chips}</div>' + ("".join(card(e) for e in rest) or '<div class="card muted">Nothing here yet.</div>')
     return page("Activity", f"<style>{ACT_CSS}</style>" + body, active="/activity", refresh=20)

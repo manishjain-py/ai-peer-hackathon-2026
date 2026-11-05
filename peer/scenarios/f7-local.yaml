@@ -1,0 +1,9 @@
+# F7 walk: "What is Manish working on?" mentions today's unpushed branch, from local/ (the
+# session-end hook and the scan of the chosen folders). Dry run: fake Slack, real brain.
+name: f7-local
+title: "F7: local work reaches the answer"
+presence: away
+channel: product
+steps:
+  - post: {as: kabir, text: "What is Manish working on today? I want to know before I send him the new picker designs."}
+    expect: {thread_reply: true, within_s: 180}
