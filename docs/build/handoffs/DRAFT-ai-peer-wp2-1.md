@@ -2,8 +2,9 @@
 
 # Hand-off: ai-peer-wp2-1 (WP2 setup, memory and local work)
 
-For: `ai-peer-wp2-1`, Claude Opus 5.5 (1M), max effort. Written {DATE} by `ai-peer-controller-1`,
-which started it. Dated, never edited after it is written. The living state is
+For: `ai-peer-wp2-1`, Claude Opus 5.5 (1M), max effort. Written {DATE} by `ai-peer-controller-2`,
+which started it. Controller: `ai-peer-controller-2` (window 2048), unless STATE names a newer one;
+reach it with SendMessage. Dated, never edited after it is written. The living state is
 `docs/build/STATE.md` on `origin/main`.
 
 ## Manish's standing instruction (quoted from the brief)
@@ -108,8 +109,13 @@ the walk evidence, what is not verified. Merge when the walks pass. Update STATE
   Manish's live memory under `~/.ai-peer/manish/` or `~/.ai-peer/.env`.
 - The Peer is read-only on LLM code and never touches LLM production.
 - Brain runs already block Manish's global config (WP1 spikes): use WP1's `run_agent`.
+- **Discovery is costly:** WP1's first discovery at max effort used about 15 points of the
+  account's weekly usage. Run the F1 walks on a small test owner at `summary_effort: high`; re-run
+  Manish's own discovery only when needed. Brain answers run at effort high (max took 113 to
+  139 s per answer, too slow for live replies).
 - Your idle pings to Telegram are off: anything for Manish goes through the controller.
-- Manish let only the kickoff session drive his Chrome; ask through the controller before any
-  new use. The Peer's own Chrome profile (`peer browser`) is fine for screenshots.
+- Manish let the kickoff session, and the controller for the colleague setup only, drive his
+  logged-in Chrome; any other use needs his word, asked through the controller. The Peer's own
+  browser profile (`peer browser`, signed in to Slack as manish@ by WP1) is fine for screenshots.
 - This Mac also runs Learn Like Magic sessions: never `pkill` by pattern, never touch their
   windows or worktrees.
