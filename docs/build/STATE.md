@@ -5,8 +5,9 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
-2026-11-04 18:03. WP1 (foundation + S1) is running: `ai-peer-wp1-1` in
-`~/repos/ai-peer-wp1` on `wp1-foundation`.
+2026-11-05 02:59. WP1 (foundation + S1) is running: `ai-peer-wp1-1` in
+`~/repos/ai-peer-wp1` on `wp1-foundation`. S1-away passes live; S1-online and the evidence
+wait on the Peer's Slack sign-in (Manish's "ready"). Live controller: `ai-peer-controller-2`.
 
 - Spikes 1a and 1b passed: `claude -p` 2.1.318 with `--setting-sources project`, empty
   MCP and a read-only tool list loads none of Manish's global config; `codex exec`
@@ -64,30 +65,35 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
   Zoom with no Zoom app of ours; spike 1d checks that against Zoom's on-behalf-of rule,
   with Manish not in the call. Zoom: his paid Workplace Pro account (personal Gmail).
 - All accounts and `.env` names: [setup/accounts.md](setup/accounts.md).
-- Still running: the controller's watcher (background task of `ai-peer-controller-1`,
-  started 16:12; ends with that session). It wakes the controller when a `.env` key name
-  appears, a PR changes, the worker passes 45% context or exits, else hourly. The worker's two
+- Still running: the controller's watcher (background task of `ai-peer-controller-2`,
+  re-armed 03:01 on 5 Nov for `ai-peer-wp1-2`; ends with that session). It wakes the
+  controller when a `.env` key name appears, a PR changes, the worker passes 45% context or
+  exits, else after 55 minutes. The live Peer (pid in `~/.ai-peer/manish/watch.pid`, detached,
+  page http://127.0.0.1:8787) is the WP1 worker's. Earlier note, from before 02:58: the worker's two
   waiters run until about 18:05 on 5 Nov: spike 1d starts by itself 60 s after
   `ZOOM_TEST_MEETING_URL` appears in `.env`; the colleague sign-in helper starts when
   `SLACK_SCENARIO_CLIENT_ID` and `_SECRET` appear (it writes
-  `~/.ai-peer/world-auth-link.txt` for his step 4). Controller context 17.5% at 16:12.
-- **Weekly usage 51% at 01:48 on 5 Nov** (35% at 15:22 on 4 Nov): about 1.5 points an hour,
-  almost all from the Learn Like Magic sessions on this account while this build sat idle.
-  At that pace 95% comes around 07:00 UTC on 6 Nov; the reset is 10 Nov, 04:29 IST. Told
-  Manish 01:50 on 5 Nov; per D14 Codex is the backup builder. Worker context 37% at 18:03 (idle, waiting on the setup steps).
+  `~/.ai-peer/world-auth-link.txt` for his step 4). Controller-2 context 8.5% at 02:59.
+- **Weekly usage 54% at 02:59 on 5 Nov** (51% at 01:48; 35% at 15:22 on 4 Nov): about 1.5
+  points an hour, almost all from the Learn Like Magic sessions on this account. At that pace
+  95% comes around 06:00 to 07:00 UTC on 6 Nov; the reset is 10 Nov, 04:30 IST. Told Manish
+  01:50 on 5 Nov; per D14 Codex is the backup builder. Worker context 44.4% at 02:58 (told by
+  controller-2 to hand off at its next clean step once past 45%).
 
 | Session | Window | Worktree | Branch / PR | Job |
 |---|---|---|---|---|
 | kickoff, registry name `learnlikemagic-27` | 1661 | `~/repos/ai-peer-hackathon-2026` | `main` | Interview, docs, restructure, Slack, Recall, ElevenLabs, GitHub set up; handed off at 46% (about 15:07); its window stays open until Manish closes it (it told him he may). The controller owns every ask to Manish |
-| ai-peer-controller-1 | 1715 | `~/repos/ai-peer-hackathon-2026` | `main` (docs only) | Handed off at 42% (02:57 on 5 Nov) to ai-peer-controller-2; stops; https://claude.ai/code/session_01Nfn5h9PisnJvGpbLbRtbiB |
-| **ai-peer-controller-2** (live controller) | 2048 (pid 52453) | `~/repos/ai-peer-hackathon-2026` | `main` (docs only) | Runs the build from `handoffs/HANDOFF-2026-11-05-ai-peer-controller-2.md`; https://claude.ai/code/session_01Nfn5h8mSoWxqjYkbP3JnvB. Close controller-1's window 1715 once you have taken over |
-| ai-peer-wp1-1 | 1725 | `~/repos/ai-peer-wp1` | `wp1-foundation`, draft PR #1 | WP1 foundation + S1. Handed off at 44.2% (2026-11-05 03:02 UTC) to `ai-peer-wp1-2` ([hand-off](handoffs/HANDOFF-2026-11-05-ai-peer-wp1-2.md)); stopped. The Peer it started keeps running (`peer stop`/`peer start`, pid file); https://claude.ai/code/session_01Nfn5h8PVD6txxjBUfab4nR |
+| ai-peer-controller-1 | 1715 (closed 03:01 by controller-2) | `~/repos/ai-peer-hackathon-2026` | `main` (docs only) | Handed off at 42% (02:57 on 5 Nov) to ai-peer-controller-2; stopped; https://claude.ai/code/session_01Nfn5h9PisnJvGpbLbRtbiB |
+| **ai-peer-controller-2** (live controller) | 2048 (pid 52453) | `~/repos/ai-peer-hackathon-2026` | `main` (docs only) | Runs the build from `handoffs/HANDOFF-2026-11-05-ai-peer-controller-2.md`; https://claude.ai/code/session_01Nfn5h8mSoWxqjYkbP3JnvB |
+| ai-peer-wp1-1 | 1725 (closed 03:01 by controller-2) | `~/repos/ai-peer-wp1` | `wp1-foundation`, draft PR #1 | WP1 foundation + S1. Handed off at 44.2% (2026-11-05 03:02 UTC) to `ai-peer-wp1-2` ([hand-off](handoffs/HANDOFF-2026-11-05-ai-peer-wp1-2.md)); stopped. The Peer it started keeps running (`peer stop`/`peer start`, pid file); https://claude.ai/code/session_01Nfn5h8PVD6txxjBUfab4nR |
+| **ai-peer-wp1-2** | 2049 (pid 54508) | `~/repos/ai-peer-wp1` | `wp1-foundation`, draft PR #1 | Started 03:01 by controller-2 from [its hand-off](handoffs/HANDOFF-2026-11-05-ai-peer-wp1-2.md): the Peer's Slack sign-in (on "go login"), S1-online, screenshots and video, Checkpoint 1, the merge; idle pings off; https://claude.ai/code/session_01Nfn5h9oCzikhfgVU9KBwCz |
 
 ## Needs Manish
 
 The controller asks one at a time, in this order.
 
-1. **Waiting (asked 02:47 on 5 Nov):** step 5, the Peer's own Slack sign-in. The worker types
+1. **Waiting (asked 02:47 on 5 Nov; again 02:59 by ai-peer-controller-2 on Attention):**
+   step 5, the Peer's own Slack sign-in. The worker types
    manish@learnlikemagic.com on Slack's sign-in page; Manish reads the code Slack mails to
    manish@ (no Chrome profile the controller can drive has that inbox) and it goes into
    `~/.ai-peer/slack-login-code.txt`. The controller sends the worker "go login" when he is
@@ -198,3 +204,4 @@ What went wrong once, with its mechanism.
 | 2026-11-04 | ai-peer-controller-1 | Read the brief; created the WP1 worktree; started `ai-peer-wp1-1` (window 1725, max effort, remote control, no trust dialog) | WP1 running |
 | 2026-11-05 | ai-peer-controller-1 | Relayed WP1's asks (colleagues: A; the Zoom test meeting); did the colleague setup in Manish's Chrome at his word; watched spikes 1c and 1d pass; drafted the WP2 and WP3 briefs; handed off at 42% | Live S1 walks running; asks queued in "Needs Manish" |
 | 2026-11-05 | ai-peer-wp1-1 | Spikes 1a, 1b, 1d passed (1c all but the click); built `peer/` (adapters, store, memory and discovery, brain on Claude and Codex, executor, watcher, presence, scenarios, page, CLI); S1 dry runs; colleague tooling and channels; S1-away live on Claude and Codex; handed off at 44.2% | Draft PR #1; S1-online, screenshots, Checkpoint 1 and the merge go to `ai-peer-wp1-2` |
+| 2026-11-05 | ai-peer-controller-2 | Took over at 02:58 (context 8.5%); told ai-peer-wp1-1; re-sent the sign-in ask on Attention; closed windows 1715 and 1725 (both idle, no child processes; the Peer detached, still running); started `ai-peer-wp1-2` (window 2049) at 03:01 | Waiting on Manish's "ready" |
