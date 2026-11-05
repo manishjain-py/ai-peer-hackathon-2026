@@ -12,8 +12,20 @@ from pathlib import Path
 
 from .settings import get_settings, secret
 
+def _chrome_major() -> str:
+    """The installed Chrome's major version: a stale one in the UA makes Slack warn, then
+    (from 9 Nov 2026) refuse the browser."""
+    try:
+        import plistlib
+        with open("/Applications/Google Chrome.app/Contents/Info.plist", "rb") as f:
+            return str(plistlib.load(f)["CFBundleShortVersionString"]).split(".")[0]
+    except Exception:  # noqa: BLE001
+        return "156"
+
+
+# headless Chrome says "HeadlessChrome" in its UA; send the normal one instead
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) "
-      "Chrome/142.0.0.0 Safari/537.36")
+      f"Chrome/{_chrome_major()}.0.0.0 Safari/537.36")
 
 
 def profile_dir() -> Path:
