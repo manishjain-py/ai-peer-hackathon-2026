@@ -91,15 +91,11 @@ on `wp2-setup-memory`. Live controller: `ai-peer-controller-2`.
   On "open window" it goes to `ai-peer-wp1-2` to record S1; WP3's live S2 walk asks for it later. F7 is live: the session-end hook is in `~/claude-config/settings.json` (synced) and
   `~/.codex/hooks.json` (backups in `~/.ai-peer/backups/`; both checked to parse), and the hourly
   scan reads `~/repos`.
-- Still running: nothing of the controller's. From 18:53 on 5 Nov its watcher is stopped: nothing is in
-  flight (both workers idle, waiting on Manish at the Mac), so it wakes on his or a worker's
-  message. Before that: `watch2.zsh` for `ai-peer-wp1-2` and `ai-peer-wp3-1`. It wakes the controller when a `.env` key name appears, a PR changes, a worker passes
-  45% context or exits, else after 55 minutes. The live Peer (pid in `~/.ai-peer/manish/watch.pid`, detached,
-  page http://127.0.0.1:8787) is the WP1 worker's. Earlier note, from before 02:58: the worker's two
-  waiters run until about 18:05 on 5 Nov: spike 1d starts by itself 60 s after
-  `ZOOM_TEST_MEETING_URL` appears in `.env`; the colleague sign-in helper starts when
-  `SLACK_SCENARIO_CLIENT_ID` and `_SECRET` appear (it writes
-  `~/.ai-peer/world-auth-link.txt` for his step 4). Controller-2 context 8.5% at 02:59.
+- Still running: nothing of the controller's. From 18:53 on 5 Nov its watcher (`watch2.zsh`) is
+  stopped: nothing is in flight (both workers idle, waiting on Manish at the Mac), so the controller
+  wakes on his or a worker's message; it re-arms the watcher when work resumes. The live Peer is
+  the only process running (see "The live Peer" above). The WP1 worker's earlier waiters have ended.
+  Controller-2 context about 36% at 18:53.
 - **Weekly usage 72% at 17:57 on 5 Nov** (70% at 17:01; 68% at 16:33; 64% at 16:16; 59% at 11:18; 55% at 07:41; 54% at 02:59):
   about 9 points since 11:18, from WP2's live walks, WP1's walks and two brief reviews (about
   200k tokens each); about 1 point in the 4.7 h before 07:41, while the build waited. A busy
