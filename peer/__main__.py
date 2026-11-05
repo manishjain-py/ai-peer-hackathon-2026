@@ -159,7 +159,9 @@ def cmd_browser(a) -> None:
     from pathlib import Path
     from . import browser
     if a.what == "login":
-        browser.login()
+        shots = get_settings().owner_dir / "walks"
+        shots.mkdir(exist_ok=True)
+        browser.login(shots=shots)
     elif a.what == "login-headless":
         st = get_settings()
         email = json.loads(st.profile_path().read_text())["slack_email"]
