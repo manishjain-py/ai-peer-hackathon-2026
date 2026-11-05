@@ -16,6 +16,12 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
   a labelled test card with Send / Edit / Skip sits in Manish's DM, the bot replied in
   its thread. Hearing a message and receiving a click fold into the live walk (the
   listener ended 18:02 with no reply).
+- **Spike 1d passed** (01:55 to 01:59 UTC on 5 Nov; evidence `docs/build/evidence/wp1/spikes.md`
+  on the branch, 4777515, read by the controller): on Manish's own Zoom with him **not** in
+  the call, Recall's default bot joined and recorded (no host, no Zoom app of ours, no OAuth),
+  played its MP3 on demand, and the transcript arrived 8 s after it left; a second bot heard
+  the Peer word for word. About $0.05. D8's Zoom path stands for S3; PLAN's Zoom Meeting SDK
+  app is not needed.
 - **S1 passes in dry runs** (15:22; fake Slack, real brain, real memory), on Claude
   and on Codex. Away: a labelled thread answer in 17 to 25 s with sources, dates and
   certainty, the follow-up, one DM summary updated in place. Online: a draft DM with
@@ -91,6 +97,12 @@ authority does not carry over; ask him before any session reuses it for a new st
    `StoryScenes.tsx` and `film/video/src/draft05/PersonalBrief.tsx` (the film's screens say
    "OneAirbnb" and "AirChat": not in build files).
 
+For WP4 (from spike 1d): "Peer" transcribes as "pier", so addressed-detection accepts
+homophones; pad each clip with about 1 s of silence (the first second is clipped);
+`output_audio` needs `automatic_audio_output` set when the bot is created; the real-time path
+(`realtime_endpoints`) needs the `cloudflared` tunnel and is untested. The test meeting "AI Peer
+test" stays for WP4 unless Manish deletes it.
+
 ## Checkpoints (D15)
 
 | # | Scene | Status |
@@ -110,6 +122,8 @@ authority does not carry over; ask him before any session reuses it for a new st
   message, DM, mention or reply to her: the Peer engages only with Manish and the
   invented colleagues (hard block in code), and the scene channels are created without
   her.
+- **Never Manish's cloned voice.** His ElevenLabs library holds a voice cloned from him
+  ("Manish Jain"). The Peer never uses it: it speaks only as its own labelled identity (D9).
 
 ## Manish's answers
 
