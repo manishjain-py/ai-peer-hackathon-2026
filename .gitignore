@@ -17,6 +17,9 @@ venv/
 .env.*
 !.env.example
 !.env.sample
+*token*.json
+client_secret*.json
+google-client.json
 
 # Keep film/work/ audio selections, alignments, provenance, QA and delivery records.
 # Keep every draft, including intermediate picture and review stills.

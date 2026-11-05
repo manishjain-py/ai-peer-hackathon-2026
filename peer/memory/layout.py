@@ -17,7 +17,7 @@ import yaml
 from ..events import now_iso
 from ..settings import PKG
 
-DIRS = ["projects", "services", "channels", "people", "threads", "decisions", "meetings", "local", "sources"]
+DIRS = ["projects", "services", "channels", "people", "threads", "decisions", "meetings", "local", "docs", "sources"]   # docs: WP3
 SKILL_SRC = PKG / "brain" / "skills" / "peer-brain"
 
 DEFAULT_RULES = """# Rules: how {name} wants the Peer to behave

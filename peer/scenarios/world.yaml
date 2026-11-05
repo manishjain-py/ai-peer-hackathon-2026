@@ -7,6 +7,9 @@ company: Learn Like Magic
 workspace: learnlikemagic
 owner: manish
 
+mail:                           # WP3: the colleagues' addresses are aliases of this mailbox (kept apart from the owner's)
+  seed_account: admin@learnlikemagic.com   # its own Google login, gmail.send only, for the scenario script
+
 channels:
   - name: general
     purpose: Company-wide news and questions.

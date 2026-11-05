@@ -605,3 +605,6 @@ def _safe(st: Settings, ai: bool) -> None:
         discover(st, progress=None, ai=ai)
     except Exception:  # noqa: BLE001
         pass
+
+
+from . import google_steps  # noqa: E402,F401  (WP3: the Docs and Calendar steps, through register_step)

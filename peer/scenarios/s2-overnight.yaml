@@ -1,0 +1,116 @@
+# S2 daily brief and heads-ups (PRD S2): an overnight of mail, invites and company news from the
+# invented colleagues (aliases of the seed account, to the owner only), plus the real GitHub
+# activity the Peer already reads. One item is urgent: it must arrive as a heads-up at once, not
+# in the brief. One event does not fit the owner's interests: the brief should leave it out.
+# kinds: waiting (asks the owner something), urgent, announcement (company news), event (an
+# event or opportunity by mail); invites are calendar invitations (.ics).
+name: s2-overnight
+title: "S2 daily brief: an overnight of mail, invites and company news"
+presence: away
+mail:
+  - as: ananya
+    kind: waiting
+    subject: "Telugu Class 6 science: OK to start the teacher review on Monday?"
+    body: |
+      Hi Manish,
+
+      The Telugu Class 6 science chapters are translated. I'd like to start the review on Monday
+      with two teachers from Lakshmi's pilot schools, three chapters each.
+
+      Two things I need from you:
+      1. Are you fine with teachers (not our team) doing the first review?
+      2. Should they review in the app, or on the sheet export?
+
+      Thanks,
+      Ananya
+  - as: lakshmi
+    kind: waiting
+    subject: "Two Hyderabad schools want a Telugu pilot in December"
+    body: |
+      Hi Manish,
+
+      Both Telugu-medium schools I met this week want to pilot Learn Like Magic with Class 6 in
+      December. They asked me for a start date and whether Practice works in Telugu by then.
+
+      Can you tell me what I can promise them? I'll reply to the principals once I hear from you.
+
+      Lakshmi
+  - as: david
+    kind: waiting
+    subject: "Intro: an edtech fund partner would like 20 minutes next week"
+    body: |
+      Manish,
+
+      A partner at an edtech-focused fund saw the Telugu work and asked for a short call next week.
+      No deck needed. Could you send me two or three times that work for you (US mornings are
+      easiest for them)?
+
+      David
+  - as: rohan
+    kind: urgent
+    subject: "Urgent: App Store rejected iOS 2.4, can you answer the reviewer today?"
+    body: |
+      Manish, Apple rejected build 2.4 overnight: they want the account deletion flow shown inside
+      the app before they approve it. The release is blocked until we reply.
+
+      Can you answer the reviewer today, or should I? I need your call before 2 PM.
+
+      Rohan
+  - as: ananya
+    kind: announcement
+    subject: "[Learn Like Magic] Content style guide v3 is live"
+    body: |
+      Hi all,
+
+      Version 3 of the content style guide is live. What changed: shorter Explain cards (at most
+      60 words), one worked example per Practice set, and Telugu and Hindi glossary terms now come
+      from the shared glossary sheet. The content factory prompts should follow v3 from next week.
+
+      Ananya
+  - as: kabir
+    kind: announcement
+    subject: "[Learn Like Magic] Design reviews move to Thursdays, 4 PM IST"
+    body: |
+      Hi everyone,
+
+      From next week, design reviews move to Thursdays at 4 PM IST so David can join from the US.
+      Bring anything that changes what students see.
+
+      Kabir
+  - as: david
+    kind: event
+    subject: "Event: AI tutors in Indian classrooms, online meetup on 20 Nov"
+    body: |
+      Manish, this looks like your kind of conversation: an online meetup on AI tutors and coding
+      agents in Indian classrooms, 20 Nov, 7 PM IST. They are looking for two short talks (10 minutes)
+      on teaching in Indian languages. Speaker slots close on 12 Nov.
+
+      David
+  - as: lakshmi
+    kind: event
+    subject: "Event: Telangana school leaders' meet, Hyderabad, 3 Dec"
+    body: |
+      Manish, the Telangana school leaders' meet is on 3 Dec in Hyderabad. About 150 principals,
+      many from Telugu-medium schools. There is a small demo area if we want a table.
+
+      Lakshmi
+  - as: kabir
+    kind: event
+    subject: "Webinar: Instagram ads for D2C fashion brands"
+    body: |
+      Sharing in case it's useful: a free webinar on Instagram ads for D2C fashion brands, Friday 5 PM.
+
+      Kabir
+invites:
+  - as: kabir
+    summary: "Language picker: design review"
+    in_days: 1
+    at: "11:00"
+    minutes: 30
+    description: "Walk through the new language picker (Hindi, Telugu) before it ships in the student app."
+  - as: david
+    summary: "Advisor check-in: the growth plan for schools"
+    in_days: 2
+    at: "21:30"
+    minutes: 30
+    description: "Monthly check-in. Agenda: the school pilot funnel and what to measure in December."

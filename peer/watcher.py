@@ -258,11 +258,18 @@ class Watcher:
             p = self.presence.state(fresh=True)
             roles = ", ".join(k.replace("_", " ") for k, v in (self.st.get("roles") or {}).items() if v)
             reply = (f"You are *{p['status']}* ({p['reason']}; {p['local_time']} in {p['where']}). Roles on: {roles}. "
-                     f"Brain: {self.st.get('brain.backend')}.\nSay *away*, *back* or *online*.")
+                     f"Brain: {self.st.get('brain.backend')}.\nSay *away*, *back*, *online* or *brief me*.")
         elif text in ("undo", "undo that", "undo the last rule"):
             from .tuning import undo
             r = undo(self.st, who=self.owner["first"])
             reply = f"Undone: {r}" if r else "There's no rule of yours to undo."
+        if reply is None and text.rstrip("?") in ("brief me", "brief", "my brief", "daily brief", "morning brief", "brief me now"):
+            from .brief import brief_me   # WP3 S2: the brief on request, matched before F5's feedback fallthrough
+            if self.synchronous:
+                brief_me(self, e)
+            else:
+                self.pool.submit(brief_me, self, e)
+            return
         if reply is None and text:   # WP2 F5: anything else may be feedback ("less of this")
             if self.synchronous:
                 self.tune(e)
@@ -284,7 +291,7 @@ class Watcher:
             about = (self.store.get_kv(f"dm_item:{th}") if th else None) or self.store.get_kv("last_told_item")
         out = apply_feedback(self.st, text, about, self.owner["first"], via="DM")
         reply = out.get("confirm") or ("Noted." if out.get("is_feedback") else
-                                       "I take instructions here: *away*, *back*, *online*, *status*, or tell me what to do less or more of.")
+                                       "I take instructions here: *away*, *back*, *online*, *status*, *brief me*, or tell me what to do less or more of.")
         self.chat.act("post_reply", e.extra["channel"], {"channel": e.extra["channel"], "thread_ts": e.extra.get("thread_ts"),
                                                          "text": reply}, f"tune:{e.id}", dry_run=self.dry_run)
         if not out.get("is_feedback"):

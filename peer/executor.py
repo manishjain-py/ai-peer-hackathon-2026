@@ -203,6 +203,10 @@ class Executor:
         if payload.get("type") == "block_actions":
             act = (payload.get("actions") or [{}])[0]
             key, aid = act.get("value"), act.get("action_id")
+            if str(aid or "").startswith("brief_"):   # WP3 S2: the brief's buttons (Draft reply, Accept, Send email, Discard)
+                from .brief import on_click
+                threading.Thread(target=on_click, args=(self, payload), daemon=True).start()
+                return None
             pending = self.store.action(key) if key else None
             if not pending or pending["status"] != "pending_approval":
                 return None

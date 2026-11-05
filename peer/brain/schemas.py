@@ -78,3 +78,45 @@ APPLY_FEEDBACK = {
     "required": ["is_feedback", "rule", "mute", "confirm"],
     "additionalProperties": False,
 }
+
+# WP3 (S2): the daily brief. The program gathers the candidates (plain code, no AI per event) and
+# renders the brief; the brain picks what matters, says why in one line, and proposes one action per
+# item from the actions the program offers for it.
+BUILD_BRIEF = {
+    "type": "object",
+    "properties": {
+        "headline": {"type": "string"},
+        "items": {"type": "array", "maxItems": 14, "items": {
+            "type": "object",
+            "properties": {
+                "id": {"type": "string"},
+                "title": {"type": "string"},
+                "why": {"type": "string"},
+                "action": {"type": "string", "enum": ["open", "draft_reply", "accept_invite"]},
+            },
+            "required": ["id", "title", "why", "action"],
+            "additionalProperties": False}},
+        "left_out": {"type": "array", "items": {
+            "type": "object",
+            "properties": {"id": {"type": "string"}, "reason": {"type": "string"}},
+            "required": ["id", "reason"],
+            "additionalProperties": False}},
+    },
+    "required": ["headline", "items", "left_out"],
+    "additionalProperties": False,
+}
+
+# WP3 (S2): a reply the owner asked for ("Draft reply"); it becomes a Gmail draft the owner reads
+# before a second tap sends it.
+DRAFT_EMAIL = {
+    "type": "object",
+    "properties": {
+        "body": {"type": "string"},
+        "certainty": {"type": "string", "enum": ["high", "medium", "low"]},
+        "as_of": {"type": "string"},
+        "sources": {"type": "array", "items": SOURCE, "maxItems": 3},
+        "owner_note": {"type": "string"},
+    },
+    "required": ["body", "certainty", "as_of", "sources", "owner_note"],
+    "additionalProperties": False,
+}

@@ -1,0 +1,22 @@
+# S2 walk, dry run (PRD S2): fake Slack, fake Google, the real brain. The script seeds an overnight
+# (s2-overnight.yaml); the Peer's poll tells the owner about the urgent one at once; "brief me" in
+# the DM builds the brief (DM + page, /brief?dry=1); the owner taps Draft reply, Send email and
+# Accept on seeded items; then a real (not seeded) mail shows the hard block refusing a draft.
+name: s2-brief
+title: "S2 daily brief and heads-ups (dry run)"
+presence: away
+google: fake
+channel: general
+steps:
+  - seed: s2-overnight
+  - poll: google
+  - brief: {via: dm}
+  - brief_click: {action: draft_reply, from: ananya}
+  - brief_click: {action: send_email, from: ananya}
+  - brief_click: {action: accept_invite, from: kabir}
+  - set: {google.show_real_items: true}
+  - real_mail: {from: "someone@example.org", name: "A real sender (stand-in)", subject: "Re: your talk next month, can you confirm?"}
+  - poll: google
+  - brief: {ai: false, why: "check the hard block"}
+  - brief_click: {action: draft_reply, real: true}
+  - set: {google.show_real_items: false}

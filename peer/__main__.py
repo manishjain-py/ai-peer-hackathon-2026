@@ -15,6 +15,9 @@
   local scan|ingest|install|hook-config  local work (F7): scan chosen folders, read hook records, set up the hook
   tune "<feedback>"           self-tuning (F5): apply owner feedback as if said in the DM
   jobs --once                 one pass of the background jobs (GitHub poll, local work)
+  google login peer|seed      WP3: sign in to Google (a consent page on this Mac); status | spike | poll
+  seed <scenario>|clean       WP3: the S2 overnight from the colleague aliases (to the owner only); clean removes it
+  brief [--dry-run] [--no-ai] [--post]   WP3 (S2): build the brief now (page); --post also DMs it (live owner only)
 """
 from __future__ import annotations
 
@@ -249,6 +252,72 @@ def cmd_sample_heads_up(a) -> None:
                                 store=Store(st.db_path)), ensure_ascii=False))
 
 
+def _live_owner(st) -> bool:
+    from .settings import DEFAULTS_FILE
+    return st.owner == yaml.safe_load(DEFAULTS_FILE.read_text())["owner"]["id"]
+
+
+def cmd_google(a) -> None:
+    from .adapters import google as G
+    st = get_settings()
+    if a.what == "login":
+        from .seeds import seed_account
+        if a.account in ("peer", "owner"):
+            email, scopes = G.owner_email(st), G.PEER_SCOPES
+        elif a.account == "seed":
+            email, scopes = seed_account(), G.SEED_SCOPES
+        else:
+            raise SystemExit("peer google login peer|seed")
+        print(json.dumps(G.login(email, scopes, open_browser=not a.no_open), indent=1))
+    elif a.what == "status":
+        from .seeds import seed_account
+        print(json.dumps({"client_file": G.CLIENT_FILE.exists(), "peer_login": G.token_path(G.owner_email(st)).exists(),
+                          "seed_login": G.token_path(seed_account()).exists(), "seeds_in_ledger": len(G.ledger()["by_token"]),
+                          "show_real_items": st.get("google.show_real_items"), "act_on_real_items": st.get("google.act_on_real_items")},
+                         indent=1))
+    elif a.what == "spike":
+        from .google_spike import run
+        print(json.dumps(run(st, sends=not a.no_send), indent=1))
+    elif a.what == "poll":   # counts only, its own cursor: never tells anyone, never moves the Peer's cursor
+        from .store import Store
+        store = Store(st.db_path)
+        g = G.GoogleAdapter(st=st)
+        evs, nxt = g.sense(store.cursor("google:cli"))
+        store.set_cursor("google:cli", nxt)
+        print(json.dumps({"events": len(evs), "seeded": sum(1 for e in evs if e.extra.get("seeded")),
+                          "kinds": sorted({e.kind for e in evs})}, indent=1))
+
+
+def cmd_seed(a) -> None:
+    from . import seeds
+    st = get_settings()
+    if a.name == "clean":
+        print(json.dumps(seeds.clean(st), indent=1))
+    else:
+        print(json.dumps(seeds.play(st, a.name, only=a.only), indent=1, ensure_ascii=False))
+
+
+def cmd_brief(a) -> None:
+    from types import SimpleNamespace
+    from . import brief as B
+    from .activity import ActivityLog
+    from .store import Store
+    st = get_settings()
+    if a.post and (a.dry_run or not _live_owner(st)):
+        raise SystemExit("refused: --post is for the live owner only (no Slack posts from a test owner or a dry run)")
+    db, logp = B._paths(st, a.dry_run)
+    p = B.profile(st)
+    ctx = SimpleNamespace(st=st, store=Store(db), activity=ActivityLog(logp), dry_run=a.dry_run, chat=None, owner_chat_id=None,
+                          owner={"first": p.get("preferred_name") or p["name"].split()[0], "name": p["name"]})
+    if a.post:
+        ctx.chat = _slack()
+        ctx.owner_chat_id = ctx.chat.lookup_email(p["slack_email"])["id"]
+    b = B.run_brief(ctx, why="command", ai=not a.no_ai, post=a.post)
+    print(json.dumps({"id": b.get("id"), "headline": b.get("headline"), "counts": b.get("counts"), "dm": b.get("dm"),
+                      "backend": b.get("backend"), "brain_s": b.get("brain_s"), "error": b.get("error"),
+                      "page": B.page_url(st, a.dry_run)}, indent=1, ensure_ascii=False))
+
+
 def main(argv: list[str] | None = None) -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s", datefmt="%H:%M:%S")
     logging.getLogger("slack_sdk").setLevel(logging.WARNING)
@@ -282,6 +351,14 @@ def main(argv: list[str] | None = None) -> None:
     p = sub.add_parser("jobs"); p.add_argument("--once", action="store_true"); p.set_defaults(fn=cmd_jobs)
     p = sub.add_parser("sample-heads-up", help="walk helper: one labelled sample CI failure to the owner (mutes apply)")
     p.add_argument("--draft", action="store_true"); p.add_argument("--branch"); p.set_defaults(fn=cmd_sample_heads_up)
+    p = sub.add_parser("google", help="WP3: Google login | status | spike | poll")
+    p.add_argument("what", choices=["login", "status", "spike", "poll"]); p.add_argument("account", nargs="?")
+    p.add_argument("--no-open", action="store_true"); p.add_argument("--no-send", action="store_true"); p.set_defaults(fn=cmd_google)
+    p = sub.add_parser("seed", help="WP3: seed the S2 overnight (or: clean)"); p.add_argument("name"); p.add_argument("--only")
+    p.set_defaults(fn=cmd_seed)
+    p = sub.add_parser("brief", help="WP3 (S2): build the brief now")
+    p.add_argument("--dry-run", action="store_true"); p.add_argument("--no-ai", action="store_true"); p.add_argument("--post", action="store_true")
+    p.set_defaults(fn=cmd_brief)
     a = ap.parse_args(argv)
     a.fn(a)
 
