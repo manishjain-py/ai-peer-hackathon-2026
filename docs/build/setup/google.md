@@ -38,5 +38,9 @@ Use Chrome signed in to any learnlikemagic.com account (manish@ or admin@). Not 
    - **admin@learnlikemagic.com**, for the test script only: send the seeded test mail from the
      colleague addresses to manish@ (`gmail.send`).
 
+   Both sign-ins also ask `openid email`, so each page lists one more line, "See your primary
+   Google Account email address": the script checks which account signed in (admin@'s
+   `gmail.send` alone cannot read its own address). Added by `ai-peer-wp3-1`, 5 Nov.
+
 If "Internal" is greyed out, the project is not in the learnlikemagic.com organisation:
 make a new one in step 1 with the organisation set.
