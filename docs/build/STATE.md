@@ -22,6 +22,12 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
   played its MP3 on demand, and the transcript arrived 8 s after it left; a second bot heard
   the Peer word for word. About $0.05. D8's Zoom path stands for S3; PLAN's Zoom Meeting SDK
   app is not needed.
+- **Colleague accounts done** (02:47 on 5 Nov, by the controller in Manish's Chrome at his
+  request): aliases ananya@, kabir@, lakshmi@, david@, rohan@learnlikemagic.com on the
+  **admin@learnlikemagic.com** user (the colleagues' mailbox, kept apart from manish@, the
+  Peer's inbox); test app "LLM Scenario" (A0CEL8M225D) with its client id and secret in
+  `.env`; the five invited, signed up as Ananya Rao, Kabir Mehta, Lakshmi Reddy, David Okafor
+  and Rohan Gupta, and each authorised it (`SLACK_AS_<NAME>` in `.env`).
 - **S1 passes in dry runs** (15:22; fake Slack, real brain, real memory), on Claude
   and on Codex. Away: a labelled thread answer in 17 to 25 s with sources, dates and
   certainty, the follow-up, one DM summary updated in place. Online: a draft DM with
@@ -67,10 +73,12 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 The controller asks one at a time, in this order.
 
-1. **Sent 01:54 on 5 Nov, waiting:** the colleague accounts (his pick A), about 25 minutes at
-   the Mac, steps in `docs/build/setup/slack-colleagues.md` on the branch; its last step is
-   one Slack sign-in in the Peer's own Chrome profile (`peer browser login`) for screenshots,
-   the walk's Send click and the Checkpoint 1 recording.
+1. **Waiting (asked 02:47 on 5 Nov):** step 5, the Peer's own Slack sign-in. The worker types
+   manish@learnlikemagic.com on Slack's sign-in page; Manish reads the code Slack mails to
+   manish@ (no Chrome profile the controller can drive has that inbox) and it goes into
+   `~/.ai-peer/slack-login-code.txt`. The controller sends the worker "go login" when he is
+   ready. Then, when convenient: untick View > Developer > "Allow JavaScript from Apple
+   Events" in his Work Chrome window (Chrome ignores scripted changes to it, both ways).
 2. Done 01:54 on 5 Nov: the Zoom test meeting "AI Peer test" (he made it; the controller
    wrote its link to `.env` at his request, value never echoed). Spike 1d starts by itself.
 3. One command for the Peer's own Codex login (today it uses a copy of his token, good
