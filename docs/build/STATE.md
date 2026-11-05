@@ -186,6 +186,7 @@ test" stays for WP4 unless Manish deletes it.
 | 11-05 01:50 | (after the morning catch-up) Say "go" and I resend the Zoom steps | "go" |
 | 11-05 01:54 | (Zoom steps; he sent a screenshot of the saved meeting and its invite link) | "can you do step 5 yourself." |
 | 11-05 02:05 | (colleague steps; screenshot of the Google Admin console signed in as admin@learnlikemagic.com) | "can you do all the other steps needed yourself. i logged into the google admin account in browser - you can use that. i authorise you." |
+| 11-05 15:17 | (to ai-peer-controller-2, after "Anything needs me?": the Peer's Slack sign-in, step 5) | "Ready" |
 
 ## Airbnb notes
 
