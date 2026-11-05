@@ -12,7 +12,7 @@ from __future__ import annotations
 import logging
 import threading
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
 from .adapters.github import GitHubAdapter
@@ -74,7 +74,12 @@ class Jobs:
         tz = ZoneInfo(self.w.profile.get("tz", "UTC"))
         now = datetime.now(tz)
         at = str(self.st.get("memory.nightly_at", "02:30"))
-        if now.strftime("%H:%M") < at:
+        try:
+            h, m = (int(x) for x in at.split(":"))
+        except ValueError:
+            return False
+        start = now.replace(hour=h, minute=m, second=0, microsecond=0)
+        if not (start <= now < start + timedelta(hours=3)):   # only in the night window: a daytime start never runs it
             return False
         day = now.strftime("%Y-%m-%d")
         if self.w.store.get_kv("job:nightly_day") == day:
