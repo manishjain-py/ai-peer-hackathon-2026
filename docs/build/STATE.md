@@ -39,6 +39,12 @@ on `wp2-setup-memory`. Live controller: `ai-peer-controller-2`.
   Peer's inbox); test app "LLM Scenario" (A0CEL8M225D) with its client id and secret in
   `.env`; the five invited, signed up as Ananya Rao, Kabir Mehta, Lakshmi Reddy, David Okafor
   and Rohan Gupta, and each authorised it (`SLACK_AS_<NAME>` in `.env`).
+- **S1-online passes live** (15:26 to 15:29 on 5 Nov, checked by the controller in the Peer's
+  log): Ananya asked in #content; the draft card with Send / Edit / Skip reached Manish's DM 36.7 s
+  later; **he tapped Send on his phone** at 15:28:59 and the Peer posted the reply in her thread,
+  labelled, with sources and certainty (`drafted_for_owner`, then `sent_after_approval`). Spike
+  1c is fully passed. Both S1 walks now pass live, so PR #1 merges (merge commit); the
+  screenshots, the two videos and Checkpoint 1 wait for the browser sign-in at the Mac.
 - **S1-away passes live** (worker's report, 02:58 on 5 Nov) in #schools from the scenario
   script: on Claude (02:54) the Peer answered Lakshmi in the thread in 40 s (who it is,
   "Manish is offline (8:24 AM in India)", the answer from today's real tracker with sources
