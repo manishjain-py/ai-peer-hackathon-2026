@@ -123,12 +123,12 @@ def _card(b: dict, it: dict, n: int, accent: str) -> str:
 
 
 @app.get("/brief", response_class=HTMLResponse)
-def brief_page(dry: int = 0):
+def brief_page(dry: int = 0, id: str = ""):   # noqa: A002  (?id=<brief id>: an earlier brief)
     st = get_settings()
     p = B.profile(st)
     tz = p.get("tz", "UTC")
     now = datetime.now(ZoneInfo(tz))
-    b = B.load_brief(st, dry=bool(dry))
+    b = B.load_brief(st, id or None, dry=bool(dry)) if not id or id.startswith("b") and id[1:].replace("T", "").replace("Z", "").isdigit() else None
     top = (f'<div class="bf-top"><span>{icon("home", 18)} Your space <span style="color:#b4bfb5">/</span> <b>For you</b></span>'
            f'<span>{icon("clock", 18)} {now.strftime("%-I:%M %p")} · {E(p.get("location", tz))}</span></div>')
     now_btn = f'<button class="btn ghost" id="bfnow" onclick="bfNow({int(bool(dry))})">Brief me now</button>'

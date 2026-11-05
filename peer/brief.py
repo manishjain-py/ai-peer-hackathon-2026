@@ -332,12 +332,26 @@ def _action(kind: str, c: dict) -> dict:
 
 
 def _fallback_why(c: dict) -> str:
-    return {"email": f"{c.get('from')} is waiting on your answer.",
-            "invite": f"{c.get('from')} invited you for {c.get('when')}.",
-            "ci": "Your main branch is red; fixes and releases wait on it.",
-            "pr": "Open and waiting on your review or merge."}.get(c["kind"]) or (
-        "Company news from " + str(c.get("from")) if c["section"] == "news" else
-        "An event that may fit your interests." if c["section"] == "events" else (c.get("snippet") or c.get("title") or "")[:140])
+    """Plain reasons when the brain is not used (or failed): one per kind, never raw message text."""
+    if c["section"] == "away":
+        return {"told_owner": "It couldn't wait, so I told you at once.",
+                "drafted_for_owner": "A reply I drafted is waiting for your Send, Edit or Skip.",
+                "answered_in_thread": "I answered for you while you were away; check what I said.",
+                "answered_follow_up": "I answered a follow-up for you; check what I said.",
+                "email_drafted": "Your draft is in Gmail, waiting for your OK.", "email_sent": "Sent after your OK.",
+                "invite_accepted": "Accepted after your OK.", "held_back": "Held back, per your rule.",
+                "failed": "Something I tried did not work; see the activity log."}.get(c["kind"], "Happened while you were away.")
+    if c["kind"] == "invite":
+        return f"{c.get('from')} invited you for {c.get('when')}."
+    if c["section"] == "events":
+        return f"{c.get('from')} shared an event; open it to see if it fits."
+    if c["kind"] == "ci":
+        return "Your main branch is red; fixes and releases wait on it."
+    if c["kind"] == "pr":
+        return "Open and waiting on your review or merge."
+    if c["section"] == "news":
+        return f"Company news from {c.get('from')}."
+    return f"{c.get('from')} is waiting on your answer."
 
 
 def greeting(local: datetime, first: str) -> str:
