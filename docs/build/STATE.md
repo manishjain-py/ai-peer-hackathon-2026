@@ -81,8 +81,9 @@ The controller asks one at a time, in this order.
    the `film/` move: push anything unpushed there, then pull.
 7. Optional housekeeping: delete the unused Recall key "ai-peer" in the Recall dashboard.
 
-Chrome: Manish let the kickoff session do setup steps in his logged-in Chrome. That
-authority does not carry over; ask him before any session reuses it for a new step.
+Chrome: Manish let the kickoff session do setup steps in his logged-in Chrome. At 02:05 on
+5 Nov he authorised the controller to do the remaining colleague setup steps the same way
+(quote in "Manish's answers"). Any other new use still needs his word.
 
 ## Next
 
@@ -132,6 +133,7 @@ test" stays for WP4 unless Manish deletes it.
 | 15:20 | Fake colleagues: A) real member accounts (recommended) or B) one scenario bot | "A (real accounts, recommended) - sure" |
 | 11-05 01:50 | (after the morning catch-up) Say "go" and I resend the Zoom steps | "go" |
 | 11-05 01:54 | (Zoom steps; he sent a screenshot of the saved meeting and its invite link) | "can you do step 5 yourself." |
+| 11-05 02:05 | (colleague steps; screenshot of the Google Admin console signed in as admin@learnlikemagic.com) | "can you do all the other steps needed yourself. i logged into the google admin account in browser - you can use that. i authorise you." |
 
 ## Airbnb notes
 
