@@ -1,0 +1,12 @@
+# F5 walk: the owner says "stop telling me about CI failures on drafts" in the DM; the Peer edits
+# rules.md, confirms in one line, and the next such event is not pushed (a CI failure on main
+# still is). Dry run: fake Slack and sample GitHub events (labelled), real brain.
+name: f5-tuning
+title: "F5: self-tuning from the owner's DM"
+presence: online
+channel: engineering
+steps:
+  - github: {title: "CI failed on telugu-wp2b in learnlikemagic (draft PR, walk sample)", repo: manishjain-py/learnlikemagic, branch: telugu-wp2b, draft: true, conclusion: failure}
+  - dm: "stop telling me about CI failures on drafts"
+  - github: {title: "CI failed on telugu-wp2c in learnlikemagic (draft PR, walk sample)", repo: manishjain-py/learnlikemagic, branch: telugu-wp2c, draft: true, conclusion: failure}
+  - github: {title: "CI failed on main in learnlikemagic (walk sample)", repo: manishjain-py/learnlikemagic, branch: main, draft: false, conclusion: failure}

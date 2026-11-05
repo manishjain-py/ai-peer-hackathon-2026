@@ -1,0 +1,64 @@
+{
+ "scenario": {
+  "name": "f2-correction",
+  "title": "F2: the next answer uses the owner's correction",
+  "presence": "away",
+  "channel": "schools",
+  "steps": [
+   {
+    "post": {
+     "as": "lakshmi",
+     "text": "Quick one: who is driving the Telugu work day to day? I want to loop the right person into a school call next week."
+    },
+    "expect": {
+     "thread_reply": true,
+     "within_s": 180
+    }
+   }
+  ]
+ },
+ "log": [
+  {
+   "t": 0.0,
+   "at": "2026-11-05T11:06:55+00:00",
+   "what": "start (dry run)",
+   "presence": {
+    "local_time": "4:36 PM",
+    "where": "India",
+    "tz": "Asia/Kolkata",
+    "status": "away",
+    "reason": "manual switch: away"
+   }
+  },
+  {
+   "t": 0.0,
+   "at": "2026-11-05T11:06:55+00:00",
+   "what": "Lakshmi Reddy posts in #schools",
+   "text": "Quick one: who is driving the Telugu work day to day? I want to loop the right person into a school call next week."
+  },
+  {
+   "t": 17.4,
+   "at": "2026-11-05T11:07:12+00:00",
+   "what": "Peer act: react",
+   "after_s": 17.4,
+   "text": "",
+   "has_buttons": false
+  },
+  {
+   "t": 17.4,
+   "at": "2026-11-05T11:07:12+00:00",
+   "what": "Peer act: post_reply",
+   "after_s": 17.4,
+   "text": ":robot_face: Hi Lakshmi, I'm *Manish's AI Peer*, an AI assistant that covers for Manish. Manish is offline right now (it's 4:36 PM in India), so here is what Manish's work records say:\n\n*Manish is driving the Telugu work day to day.* Manish makes the decisions and approves every merge. The building is done by AI coding sessions, one per work package, so there's no other engineer to bring in. For a school call, Manish is the right person.\n\nWhere things stand, per the Telugu tracker (5 Nov):\n• *Phase: Build.* Planning is done, and the first groundwork packages are merged.\n• Next up is the profile's language settings, which are in a draft PR.\n• *No ship date is recorded yet.*\n• Which classes get the pilot is still an open question for Manish.\n\nI can't confirm Manish for next week's call. Manish will reply about availability when back.\n\n_Sources: <https://github.com/manishjain-py/learnlikemagic/blob/main/docs/feature-development/telugu/STATE.md|Telugu learning language tracker (STATE.md)> (5 Nov 2026). Certainty: high, as of 5 Nov 2026. I can't make commitments on Manish's behalf; this thread will be waiting when Manish is back._",
+   "has_buttons": false
+  },
+  {
+   "t": 17.4,
+   "at": "2026-11-05T11:07:12+00:00",
+   "what": "Peer act: dm",
+   "after_s": 17.4,
+   "text": ":robot_face: *While you were away* I covered a thread in *#schools* (<https://fake.slack/schools/1793876832.434894|open it>):\n• 4:36 PM: *Lakshmi Reddy* asked “Quick one: who is driving the Telugu work day to day? I want to loop the right person into a school call next week.” → I answered (certainty high).\n   :raised_hand: *Needs you:* Lakshmi wants you on a school call about Telugu next week. Please confirm whether you can join. The pilot classes question (DESIGN §0.2) may come up.\n_Everything I said is in the thread and the activity log. Reply here to tell me what to do differently._",
+   "has_buttons": false
+  }
+ ]
+}

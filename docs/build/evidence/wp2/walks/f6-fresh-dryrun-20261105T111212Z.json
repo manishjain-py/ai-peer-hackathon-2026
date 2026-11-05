@@ -1,0 +1,64 @@
+{
+ "scenario": {
+  "name": "f6-fresh",
+  "title": "F6: a tracker change reaches the next answer",
+  "presence": "away",
+  "channel": "engineering",
+  "steps": [
+   {
+    "post": {
+     "as": "rohan",
+     "text": "Quick check on teacher feedback QA: where is it right now, and did the latest full quality gate pass?"
+    },
+    "expect": {
+     "thread_reply": true,
+     "within_s": 180
+    }
+   }
+  ]
+ },
+ "log": [
+  {
+   "t": 0.0,
+   "at": "2026-11-05T11:11:47+00:00",
+   "what": "start (dry run)",
+   "presence": {
+    "local_time": "4:41 PM",
+    "where": "India",
+    "tz": "Asia/Kolkata",
+    "status": "away",
+    "reason": "manual switch: away"
+   }
+  },
+  {
+   "t": 0.0,
+   "at": "2026-11-05T11:11:47+00:00",
+   "what": "Rohan Gupta posts in #engineering",
+   "text": "Quick check on teacher feedback QA: where is it right now, and did the latest full quality gate pass?"
+  },
+  {
+   "t": 25.5,
+   "at": "2026-11-05T11:12:12+00:00",
+   "what": "Peer act: react",
+   "after_s": 25.5,
+   "text": "",
+   "has_buttons": false
+  },
+  {
+   "t": 25.5,
+   "at": "2026-11-05T11:12:12+00:00",
+   "what": "Peer act: post_reply",
+   "after_s": 25.5,
+   "text": ":robot_face: Hi Rohan, I'm *Manish's AI Peer*, an AI assistant that covers for Manish. Manish is offline right now (it's 4:41 PM in India), so here is what Manish's work records say:\n\nHere's where it stands, per the tracker (updated 10:15 UTC today):\n\n• *Build phase: P1 to P5 are merged, and P6 is on its last steps.* P6 is draft PR #704. Its live proof finished today: all ten cases plus case 11, the first real check-in fix, applied and undone cleanly.\n• *Gate: yes, the latest full gate passed.* `make quality-full` passed on P6's head `a406689a1` (score 88.13). That isn't the final head, though. A small fix from Codex's review has been added on top since then.\n• *Still to do on P6:* a reader checks that fix, then main gets merged in, one push, the final gate with reviews, the PR body, mark ready, merge. P7 (the watch and a dress rehearsal) and P8 (launch) come after.\n\nEarlier today I said the gate hadn't run yet. That was based on an older version of the tracker. The pass came after that.\n\n_Sources: <https://github.com/manishjain-py/learnlikemagic/blob/main/docs/feature-development/teacher-feedback-qa/STATE.md|Teacher Feedback QA tracker (STATE.md)> (5 Nov 2026) · <https://github.com/manishjain-py/learnlikemagic/pull/704|PR #704: P6 the factory's QA modes> (5 Nov 2026). Certainty: high, as of 5 Nov 2026. I can't make commitments on Manish's behalf; this thread will be waiting when Manish is back._",
+   "has_buttons": false
+  },
+  {
+   "t": 25.5,
+   "at": "2026-11-05T11:12:12+00:00",
+   "what": "Peer act: dm",
+   "after_s": 25.5,
+   "text": ":robot_face: *While you were away* I covered a thread in *#engineering* (<https://fake.slack/engineering/1793877132.636109|open it>):\n• 4:41 PM: *Rohan Gupta* asked “Quick check on teacher feedback QA: where is it right now, and did the latest full quality gate pass?” → I answered (certainty high).\n_Everything I said is in the thread and the activity log. Reply here to tell me what to do differently._",
+   "has_buttons": false
+  }
+ ]
+}

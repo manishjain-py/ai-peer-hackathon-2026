@@ -1,0 +1,10 @@
+# F3 walk: a role turned off on the settings page stops that behaviour in the next walk.
+# Run with "Stand in when I'm away" on (the Peer answers in the thread), then off (it only drafts
+# for the owner), then "Watch my work" off (it does nothing). Dry run: fake Slack, real brain.
+name: f3-roles
+title: "F3: roles switch behaviour on and off"
+presence: away
+channel: schools
+steps:
+  - post: {as: lakshmi, text: "Is Telugu going to be on the iPhone app too, or only the web app at first?"}
+    expect: {thread_reply: true, within_s: 180}

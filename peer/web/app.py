@@ -374,7 +374,7 @@ async def api_settings(req: Request):
         value = str(value)[:300]
     st = get_settings()
     st.set(key, value)
-    if key.startswith("scope."):
+    if key.startswith(("scope.", "roles.")):
         from ..tuning import sync_scope
         sync_scope(st)
     label = {"presence.manual": "the away switch", "brain.backend": "the brain"}.get(key, key.split(".", 1)[1].replace("_", " "))
