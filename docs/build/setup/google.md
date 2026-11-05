@@ -19,7 +19,8 @@ Use Chrome signed in to any learnlikemagic.com account (manish@ or admin@). Not 
    - https://console.cloud.google.com/apis/library/docs.googleapis.com
 3. Open https://console.cloud.google.com/auth/overview (called "Google Auth Platform"; older
    screens say "OAuth consent screen") and click **Get started**:
-   - App name `AI Peer`, user support email: his learnlikemagic.com address
+   - App name `AI Peer`, user support email: the signed-in account's address (the list offers
+     only that one)
    - Audience: **Internal**
    - Contact email: the same address. Agree, then **Create**.
 4. Open https://console.cloud.google.com/auth/clients and click **Create client**:
@@ -29,9 +30,13 @@ Use Chrome signed in to any learnlikemagic.com account (manish@ or admin@). Not 
 5. Move the downloaded file to `~/.ai-peer/google-client.json`, for example in Terminal:
    `mv ~/Downloads/client_secret_*.json ~/.ai-peer/google-client.json`
    Never paste its contents into a chat, git or Telegram.
-6. Tell the controller "Google client done". WP3 then runs the one sign-in as
-   manish@learnlikemagic.com in a browser window on the Mac (a Google consent page for
-   "AI Peer"; he clicks Allow).
+6. Tell the controller "Google client done". WP3 then runs two sign-ins on this client, each a
+   Google consent page for "AI Peer" in a browser window on the Mac; check the account shown
+   before clicking Allow:
+   - **manish@learnlikemagic.com**, for the Peer: read mail, make drafts, answer invites, read
+     Docs (`gmail.readonly`, `gmail.compose`, `calendar.events`, `drive.readonly`).
+   - **admin@learnlikemagic.com**, for the test script only: send the seeded test mail from the
+     colleague addresses to manish@ (`gmail.send`).
 
 If "Internal" is greyed out, the project is not in the learnlikemagic.com organisation:
 make a new one in step 1 with the organisation set.
