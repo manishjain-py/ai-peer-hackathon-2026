@@ -19,8 +19,8 @@ from types import SimpleNamespace
 
 from .activity import ActivityLog
 from .adapters.github import GitHubAdapter
-from .memory.discovery import (Ctx, copy_tracker, previous_summary, step_profile, summarize_project, today,
-                               write_project_note, write_repo_note)
+from .memory.discovery import (Ctx, copy_tracker, previous_summary, step_profile, summarize_project, summary_is_stale,
+                               today, write_project_note, write_repo_note)
 from .memory.facts import split
 from .memory.layout import Memory
 from .settings import Settings
@@ -70,8 +70,9 @@ def update_project(st: Settings, gh: GitHubAdapter, front: dict, commit: dict, p
     prev_sm, prev_front = previous_summary(ctx.mem, proj["slug"])
     due = _minutes_since(prev_front.get("summary_at") or prev_front.get("updated")) >= float(st.get("memory.resummarize_minutes", 360))
     sha = commit.get("sha") or ""
-    summary_commit = prev_front.get("summary_commit") or ""
-    stale = (why == "the tracker changed") if not summary_commit else not sha.startswith(summary_commit[:10])
+    cdate = ((commit.get("commit") or {}).get("committer") or {}).get("date", "")
+    stale = summary_is_stale({"summary_at": prev_front.get("summary_at") or prev_front.get("updated") or "",
+                              "summary_commit": prev_front.get("summary_commit") or ""}, sha, cdate)
     sm, fresh_sm = None, False
     if ai and (force_ai or not prev_sm or (stale and due)):
         sm, err = summarize_project(st, proj, effort=st.get("brain.refresh_effort", "high"))

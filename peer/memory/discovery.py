@@ -359,6 +359,17 @@ def previous_summary(mem: Memory, slug_: str) -> tuple[dict | None, dict]:
              "as_of": m.group(1)}, front)
 
 
+def summary_is_stale(meta: dict, sha: str, cdate: str) -> bool:
+    """Is a project's status in brief older than its tracker? By commit when known, else by date."""
+    if meta.get("summary_commit") and sha:
+        return not sha.startswith(str(meta["summary_commit"])[:10])
+    try:
+        return datetime.fromisoformat(str(meta.get("summary_at")).replace("Z", "+00:00")) < \
+            datetime.fromisoformat(str(cdate).replace("Z", "+00:00"))
+    except ValueError:
+        return True
+
+
 def write_project_note(mem: Memory, p: dict, sm: dict | None, fresh_summary: bool = True) -> set[str]:
     """The project's memory file: status in brief (from the brain), related PRs, sources. Returns aliases.
     fresh_summary=False: `sm` is the previous status (the brain did not run); the file then says the
@@ -367,19 +378,10 @@ def write_project_note(mem: Memory, p: dict, sm: dict | None, fresh_summary: boo
     prev_front = mem.read_front(mem.root / "projects" / f"{p['slug']}.md") if (mem.root / "projects" / f"{p['slug']}.md").exists() else {}
     if sm and fresh_summary:
         summary_meta = {"summary_at": now_iso(), "summary_commit": c.get("sha") or ""}
-    else:
+    else:   # the status was written earlier: keep when, and for which commit (never claim the new one)
         summary_meta = {"summary_at": prev_front.get("summary_at") or prev_front.get("updated") or "",
-                        "summary_commit": prev_front.get("summary_commit") or prev_front.get("tracker_commit") or ""}
-    stale = False
-    if sm and not (sm and fresh_summary):
-        if summary_meta["summary_commit"] and c.get("sha"):
-            stale = not str(c.get("sha")).startswith(summary_meta["summary_commit"][:10])
-        else:   # older memory without a summary commit: compare dates
-            try:
-                stale = datetime.fromisoformat(str(summary_meta["summary_at"]).replace("Z", "+00:00")) < \
-                    datetime.fromisoformat(str(p["cdate"]).replace("Z", "+00:00"))
-            except ValueError:
-                stale = True
+                        "summary_commit": prev_front.get("summary_commit") or ""}
+    stale = bool(sm) and not fresh_summary and summary_is_stale(summary_meta, c.get("sha") or "", p["cdate"])
     cmsg = ((c.get("commit") or {}).get("message") or "").splitlines()[0][:100] if c else ""
     tracker_url = f"https://github.com/{p['repo']}/blob/{p['branch']}/{p['path']}"
     terms = {p["slug"].replace("-", " ")} | {a.lower() for a in (sm or {}).get("aliases", [])}
