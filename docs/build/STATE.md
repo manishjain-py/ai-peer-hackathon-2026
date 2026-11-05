@@ -117,7 +117,7 @@ The controller asks one at a time, in this order.
    `~/.ai-peer/slack-login-code.txt`. The controller sends the worker "go login" when he is
    ready. Then, when convenient: untick View > Developer > "Allow JavaScript from Apple
    Events" in his Work Chrome window (Chrome ignores scripted changes to it, both ways).
-2. **F7 local work** (from `ai-peer-wp2-1`, 11:17), one yes or no for three small changes;
+2. **Done 15:33: "Yes to all"** (relayed to `ai-peer-wp2-1`, which makes the edits). **F7 local work** (from `ai-peer-wp2-1`, 11:17), one yes or no for three small changes;
    recommend yes to all three. (a) Claude Code: add to `~/.claude/settings.json` (a link into
    `~/claude-config`, so it syncs to his other Macs), under "hooks":
    `"SessionEnd": [{"hooks": [{"type": "command", "command": "test -x \"$HOME/.ai-peer/bin/session-end\" && \"$HOME/.ai-peer/bin/session-end\" claude || true", "timeout": 5}]}]`.
@@ -194,6 +194,7 @@ test" stays for WP4 unless Manish deletes it.
 | 11-05 02:05 | (colleague steps; screenshot of the Google Admin console signed in as admin@learnlikemagic.com) | "can you do all the other steps needed yourself. i logged into the google admin account in browser - you can use that. i authorise you." |
 | 11-05 15:17 | (to ai-peer-controller-2, after "Anything needs me?": the Peer's Slack sign-in, step 5) | "Ready" |
 | 11-05 15:26 | (Slack's "I'm not a robot" check stopped the headless sign-in; a person must do it, so the sign-in waits for him at the Mac, "open window"; meanwhile the S1-online walk with his own tap on Send) | "Online walk" |
+| 11-05 15:33 | (WP2's three F7 changes: the Claude Code session-end hook in his synced settings, the same hook in Codex, the hourly read-only scan of `~/repos`; recommended yes to all) | "Yes to all" |
 
 ## Airbnb notes
 
