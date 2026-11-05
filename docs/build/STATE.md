@@ -28,6 +28,12 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
   Peer's inbox); test app "LLM Scenario" (A0CEL8M225D) with its client id and secret in
   `.env`; the five invited, signed up as Ananya Rao, Kabir Mehta, Lakshmi Reddy, David Okafor
   and Rohan Gupta, and each authorised it (`SLACK_AS_<NAME>` in `.env`).
+- **Live S1 started** (02:46 on 5 Nov): channels #product, #content, #schools and
+  #engineering hold exactly the five colleagues, Manish and the Peer (preethi in none,
+  checked). The Peer runs live (pid in `~/.ai-peer/manish/watch.pid`; the worker's process).
+  The first live S1-away walk failed: posts through LLM Scenario carry the app's `bot_id`
+  and the filter dropped them as bot messages; fixed (a post is a person's when its user is a
+  real member), restarted 02:53, rerun under way at 02:54.
 - **S1 passes in dry runs** (15:22; fake Slack, real brain, real memory), on Claude
   and on Codex. Away: a labelled thread answer in 17 to 25 s with sources, dates and
   certainty, the follow-up, one DM summary updated in place. Online: a draft DM with
