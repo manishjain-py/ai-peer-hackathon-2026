@@ -12,6 +12,10 @@ uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -r requi
 .venv/bin/python -m peer watch             # the Peer on Slack + the page at http://127.0.0.1:8787
 ```
 
+Setup from the page: open http://127.0.0.1:8787/setup and click "Create my AI Peer" (a test owner:
+`AI_PEER_OWNER=<id> .venv/bin/python -m peer web --port 8788`). More: `peer refresh [--nightly]`, `peer local
+scan|install|hook-config`, `peer tune "<feedback>"`, `peer scenario f2-correction|f3-roles|f5-tuning|f6-fresh|f7-local --dry-run`.
+
 Secrets: `~/.ai-peer/.env` only. Runtime data (memory, events, log): `~/.ai-peer/<owner>/`.
 
 ## Try S1 (Slack cover)
@@ -36,4 +40,8 @@ Secrets: `~/.ai-peer/.env` only. Runtime data (memory, events, log): `~/.ai-peer
 | `presence.py` | Manual switch, Slack status and presence, working hours. |
 | `memory/` | Layout and the first discovery. |
 | `scenarios/` | The test world (`world.yaml`), scenes, the player, the colleague setup. |
-| `web/` | The activity log page. |
+| `web/` | The owner's page in the film's look: `/setup` (one-click setup, F1), `/learned` (what it learned, with corrections, F2), `/settings` (roles, scope, the away switch, F3), `/activity` (F4). `layout.py`: the frame and nav other packages add to. |
+| `memory/discovery.py` | Discovery as steps (profile, team, GitHub, projects, Slack, people, docs, calendar) with live progress; `register_step()` for new sources. `memory/facts.py`: facts with source and date, corrections. |
+| `fresh.py`, `jobs.py` | Fresh memory (F6): tracker changes re-copied on the 15-minute poll (no AI), nightly re-read; the background jobs inside the Peer. |
+| `tuning.py`, `notify.py` | Self-tuning (F5): owner feedback becomes a rule in `rules.md` plus a mute; every push to the owner goes through `notify.tell_owner()`. |
+| `localwork.py`, `local_hook.sh` | Local work (F7): session-end hooks spool to `~/.ai-peer/spool/`; the hourly read-only scan of `local.folders`. |
