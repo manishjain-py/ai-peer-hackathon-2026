@@ -84,6 +84,13 @@ on `wp2-setup-memory`. Live controller: `ai-peer-controller-2`.
   Zoom with no Zoom app of ours; spike 1d checks that against Zoom's on-behalf-of rule,
   with Manish not in the call. Zoom: his paid Workplace Pro account (personal Gmail).
 - All accounts and `.env` names: [setup/accounts.md](setup/accounts.md).
+- **The live Peer** (owner `manish`) runs from `~/repos/ai-peer-wp2` since about 16:00 on 5 Nov (pid
+  in `~/.ai-peer/manish/watch.pid`, the only `peer watch`; checked 16:03), held by `ai-peer-wp2-1`
+  for its live walks; WP1's process was stopped through its pid file. On "open window" the
+  controller hands it back to `ai-peer-wp1-2`, which restarts it from `~/repos/ai-peer-wp1` to
+  record S1. F7 is live: the session-end hook is in `~/claude-config/settings.json` (synced) and
+  `~/.codex/hooks.json` (backups in `~/.ai-peer/backups/`; both checked to parse), and the hourly
+  scan reads `~/repos`.
 - Still running: the controller's watcher (background task of `ai-peer-controller-2`,
   `watch2.zsh`, re-armed 10:45 on 5 Nov for `ai-peer-wp1-2` and `ai-peer-wp2-1`; ends with that
   session). It wakes the controller when a `.env` key name appears, a PR changes, a worker passes
