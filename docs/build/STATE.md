@@ -104,7 +104,7 @@ on `wp2-setup-memory`. Live controller: `ai-peer-controller-2`.
 
 The controller asks one at a time, in this order.
 
-1. **Waiting, the build's only blocker (asked 02:47 on 5 Nov; again 02:59, and reminders at 04:53 and 12:56, by ai-peer-controller-2 on Attention):**
+1. **Changed 15:26: the headless sign-in hit Slack's "I'm not a robot" check (no code sent); a person must do it, so it waits for Manish at the Mac ("open window": a Chrome window in the Peer's own profile, he types the email, ticks the box, types the code). Meanwhile S1-online runs live with his own tap on Send.** Earlier: waiting, the build's only blocker (asked 02:47 on 5 Nov; again 02:59, and reminders at 04:53 and 12:56, by ai-peer-controller-2 on Attention):**
    step 5, the Peer's own Slack sign-in. The worker types
    manish@learnlikemagic.com on Slack's sign-in page; Manish reads the code Slack mails to
    manish@ (no Chrome profile the controller can drive has that inbox) and it goes into
@@ -187,6 +187,7 @@ test" stays for WP4 unless Manish deletes it.
 | 11-05 01:54 | (Zoom steps; he sent a screenshot of the saved meeting and its invite link) | "can you do step 5 yourself." |
 | 11-05 02:05 | (colleague steps; screenshot of the Google Admin console signed in as admin@learnlikemagic.com) | "can you do all the other steps needed yourself. i logged into the google admin account in browser - you can use that. i authorise you." |
 | 11-05 15:17 | (to ai-peer-controller-2, after "Anything needs me?": the Peer's Slack sign-in, step 5) | "Ready" |
+| 11-05 15:26 | (Slack's "I'm not a robot" check stopped the headless sign-in; a person must do it, so the sign-in waits for him at the Mac, "open window"; meanwhile the S1-online walk with his own tap on Send) | "Online walk" |
 
 ## Airbnb notes
 
