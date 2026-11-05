@@ -105,7 +105,7 @@ class Jobs:
                 told += r.get("did") == "told"
         if new:
             refresh_repos(self.st)
-        updated = check_trackers(self.st)
+        updated = check_trackers(self.st, ai=False)   # no AI on the poll: re-copy and flag; the nightly pass re-summarises
         return {"events": len(new), "told": told, "trackers_updated": len(updated)}
 
     def push(self, item: dict, why: str) -> dict:

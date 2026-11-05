@@ -183,8 +183,9 @@ def live(st: Settings, name: str, click_timeout_s: int = 900, record: bool = Fal
         return WebClient(token=tok), {"username": c["name"], "icon_url": c.get("icon_url")}
 
     prev = st.get("presence.manual")
-    st.set("presence.manual", sc.get("presence", "auto"))
-    walk.note("start (live)", presence=sc.get("presence"), channel=sc["channel"])
+    if sc.get("presence") != "keep":   # "keep": the walk uses the switch as the owner left it (WP2's away-switch walk)
+        st.set("presence.manual", sc.get("presence", "auto"))
+    walk.note("start (live)", presence=sc.get("presence") if sc.get("presence") != "keep" else f"kept: {prev}", channel=sc["channel"])
     wdir = st.owner_dir / "walks" / f"{sc['name']}-{datetime.now(timezone.utc):%Y%m%dT%H%M%SZ}"
     rec = None
     shots = 0

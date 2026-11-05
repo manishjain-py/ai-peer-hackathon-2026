@@ -69,8 +69,11 @@ def update_project(st: Settings, gh: GitHubAdapter, front: dict, commit: dict, p
     proj = copy_tracker(ctx, gh, t)
     prev_sm, prev_front = previous_summary(ctx.mem, proj["slug"])
     due = _minutes_since(prev_front.get("summary_at") or prev_front.get("updated")) >= float(st.get("memory.resummarize_minutes", 360))
+    sha = commit.get("sha") or ""
+    summary_commit = prev_front.get("summary_commit") or ""
+    stale = (why == "the tracker changed") if not summary_commit else not sha.startswith(summary_commit[:10])
     sm, fresh_sm = None, False
-    if ai and (force_ai or due or not prev_sm):
+    if ai and (force_ai or not prev_sm or (stale and due)):
         sm, err = summarize_project(st, proj, effort=st.get("brain.refresh_effort", "high"))
         fresh_sm = bool(sm)
         if not sm:

@@ -230,6 +230,25 @@ def cmd_jobs(a) -> None:
     print(json.dumps(j.poll_github(), ensure_ascii=False))
 
 
+def cmd_sample_heads_up(a) -> None:
+    """Walk helper (F5, live): push one labelled sample CI failure to the owner through the same door as
+    the Peer's poll (notify.tell_owner: the owner's mutes apply). Web API only, no Socket Mode."""
+    import time
+    from .notify import tell_owner
+    from .store import Store
+    st = get_settings()
+    chat = _slack()
+    profile = json.loads(st.profile_path().read_text())
+    owner = chat.lookup_email(profile["slack_email"])["id"]
+    repo = (profile.get("owns", {}).get("repos") or [{"repo": "your/repo"}])[0]["repo"]
+    branch = a.branch or ("walk-sample-draft" if a.draft else "main")
+    item = {"source": "github", "kind": "ci", "conclusion": "failure", "repo": repo, "branch": branch, "draft": a.draft,
+            "title": f"CI failed on {branch} in {repo.split('/')[-1]}" + (" (draft PR" if a.draft else " (") + ", walk sample)",
+            "text": "walk sample", "url": "", "ref": f"sample:ci:{branch}:{time.time():.0f}", "at": ""}
+    print(json.dumps(tell_owner(st, chat, owner, item, "A sample CI failure for a walk (not a real run).",
+                                store=Store(st.db_path)), ensure_ascii=False))
+
+
 def main(argv: list[str] | None = None) -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s", datefmt="%H:%M:%S")
     logging.getLogger("slack_sdk").setLevel(logging.WARNING)
@@ -261,6 +280,8 @@ def main(argv: list[str] | None = None) -> None:
     p = sub.add_parser("local"); p.add_argument("what", choices=["scan", "ingest", "install", "hook-config"]); p.set_defaults(fn=cmd_local)
     p = sub.add_parser("tune"); p.add_argument("text", nargs="+"); p.set_defaults(fn=cmd_tune)
     p = sub.add_parser("jobs"); p.add_argument("--once", action="store_true"); p.set_defaults(fn=cmd_jobs)
+    p = sub.add_parser("sample-heads-up", help="walk helper: one labelled sample CI failure to the owner (mutes apply)")
+    p.add_argument("--draft", action="store_true"); p.add_argument("--branch"); p.set_defaults(fn=cmd_sample_heads_up)
     a = ap.parse_args(argv)
     a.fn(a)
 
