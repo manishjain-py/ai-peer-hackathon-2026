@@ -97,6 +97,7 @@ on `wp2-setup-memory`. Live controller: `ai-peer-controller-2`.
 | **ai-peer-controller-2** (live controller) | 2048 (pid 52453) | `~/repos/ai-peer-hackathon-2026` | `main` (docs only) | Runs the build from `handoffs/HANDOFF-2026-11-05-ai-peer-controller-2.md`; https://claude.ai/code/session_01Nfn5h8mSoWxqjYkbP3JnvB |
 | ai-peer-wp1-1 | 1725 (closed 03:01 by controller-2) | `~/repos/ai-peer-wp1` | `wp1-foundation`, draft PR #1 | WP1 foundation + S1. Handed off at 44.2% (2026-11-05 03:02 UTC) to `ai-peer-wp1-2` ([hand-off](handoffs/HANDOFF-2026-11-05-ai-peer-wp1-2.md)); stopped. The Peer it started keeps running (`peer stop`/`peer start`, pid file); https://claude.ai/code/session_01Nfn5h8PVD6txxjBUfab4nR |
 | **ai-peer-wp1-2** | 2049 (pid 54508) | `~/repos/ai-peer-wp1` | `wp1-foundation`, draft PR #1 | Started 03:01 by controller-2 from [its hand-off](handoffs/HANDOFF-2026-11-05-ai-peer-wp1-2.md): the Peer's Slack sign-in (on "go login"), S1-online, screenshots and video, Checkpoint 1, the merge; idle pings off; https://claude.ai/code/session_01Nfn5h9oCzikhfgVU9KBwCz |
+| **ai-peer-wp2-1** | (Terminal, started by controller-2) | `~/repos/ai-peer-wp2` | `wp2-setup-memory`, draft [PR #2](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/2) | WP2 (F1 to F7) from [its hand-off](handoffs/HANDOFF-2026-11-05-ai-peer-wp2-1.md). 11:17: all seven walked on test owner `wp2test` (dry runs, page on 8788; evidence `docs/build/evidence/wp2/walks.md` on the branch); live walks wait for PR #1; 4 asks for Manish sent to the controller (Claude hook, scan folders, Codex hook, Slack `reaction_added`); context 33%; https://claude.ai/code/session_01Nfn5h6apXjAgQuN9wUq54K |
 | **ai-peer-wp2-1** | 2129 (pid 43454) | `~/repos/ai-peer-wp2` | `wp2-setup-memory` (from `wp1-foundation` 4fb4869), no PR yet | Started 10:45 by controller-2 from [its brief](handoffs/HANDOFF-2026-11-05-ai-peer-wp2-1.md): F1 to F7, the setup page; pre-merge rules keep it off the live Peer; idle pings off; https://claude.ai/code/session_01Nfn5h6apXjAgQuN9wUq54K |
 
 ## Needs Manish
@@ -214,6 +215,8 @@ What went wrong once, with its mechanism.
   hand, at 15:23). Every ask to Manish goes to the Attention group explicitly
   (`tg-attention.sh`); the hook's pings are only a bonus.
 
+- Hooks can be tested without touching global settings: `claude -p ... --setting-sources project --settings '{"hooks":{"SessionEnd":[...]}}'` fires the SessionEnd hook (2.1.318; payload has session_id, transcript_path, cwd, reason). Codex 0.153.4 has a SessionEnd event, but `codex exec` fired no hook in five variants (`-c hooks.*`, `features.hooks`, `bypass_hook_trust`, a private `CODEX_HOME/hooks.json`); a `codex exec` in a fresh `CODEX_HOME` hangs until stdin is `/dev/null`. (ai-peer-wp2-1, 5 Nov)
+
 ## Session log
 
 | Date | Session | What happened | Outcome |
@@ -223,3 +226,4 @@ What went wrong once, with its mechanism.
 | 2026-11-05 | ai-peer-controller-1 | Relayed WP1's asks (colleagues: A; the Zoom test meeting); did the colleague setup in Manish's Chrome at his word; watched spikes 1c and 1d pass; drafted the WP2 and WP3 briefs; handed off at 42% | Live S1 walks running; asks queued in "Needs Manish" |
 | 2026-11-05 | ai-peer-wp1-1 | Spikes 1a, 1b, 1d passed (1c all but the click); built `peer/` (adapters, store, memory and discovery, brain on Claude and Codex, executor, watcher, presence, scenarios, page, CLI); S1 dry runs; colleague tooling and channels; S1-away live on Claude and Codex; handed off at 44.2% | Draft PR #1; S1-online, screenshots, Checkpoint 1 and the merge go to `ai-peer-wp1-2` |
 | 2026-11-05 | ai-peer-controller-2 | Took over at 02:58 (context 8.5%); told ai-peer-wp1-1; re-sent the sign-in ask on Attention; closed windows 1715 and 1725 (both idle, no child processes; the Peer detached, still running); started `ai-peer-wp1-2` (window 2049) at 03:01 | Waiting on Manish's "ready"; at 10:45 started `ai-peer-wp2-1` early (window 2129) after a read-only review of its brief |
+| 2026-11-05 | ai-peer-wp2-1 | Read in; built F1 to F7 on WP1's branch (setup page with live discovery, what I learned with corrections, roles and settings, activity log in the film's look; fresh memory, self-tuning, local work); walked all seven on test owner `wp2test`; draft PR #2 | Live walks wait for PR #1; asks queued with the controller |
