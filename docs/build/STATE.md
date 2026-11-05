@@ -28,6 +28,13 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
   Peer's inbox); test app "LLM Scenario" (A0CEL8M225D) with its client id and secret in
   `.env`; the five invited, signed up as Ananya Rao, Kabir Mehta, Lakshmi Reddy, David Okafor
   and Rohan Gupta, and each authorised it (`SLACK_AS_<NAME>` in `.env`).
+- **S1-away passes live** (worker's report, 02:58 on 5 Nov) in #schools from the scenario
+  script: on Claude (02:54) the Peer answered Lakshmi in the thread in 40 s (who it is,
+  "Manish is offline (8:24 AM in India)", the answer from today's real tracker with sources
+  PR #708, PR #705, certainty and date, no commitments), her follow-up in 37 s, and one
+  "While you were away" DM updated in place; on Codex (02:56, one setting) the same walk in
+  37 s and 34 s, so **F8 is done**; spike 1c is complete. Left in WP1: S1-online (draft DM and
+  the Send click) and the screenshots and video, which wait on the Peer's browser sign-in.
 - **Live S1 started** (02:46 on 5 Nov): channels #product, #content, #schools and
   #engineering hold exactly the five colleagues, Manish and the Peer (preethi in none,
   checked). The Peer runs live (pid in `~/.ai-peer/manish/watch.pid`; the worker's process).
@@ -73,7 +80,7 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 |---|---|---|---|---|
 | kickoff, registry name `learnlikemagic-27` | 1661 | `~/repos/ai-peer-hackathon-2026` | `main` | Interview, docs, restructure, Slack, Recall, ElevenLabs, GitHub set up; handed off at 46% (about 15:07); its window stays open until Manish closes it (it told him he may). The controller owns every ask to Manish |
 | ai-peer-controller-1 | 1715 | `~/repos/ai-peer-hackathon-2026` | `main` (docs only) | Handed off at 42% (02:57 on 5 Nov) to ai-peer-controller-2; stops; https://claude.ai/code/session_01Nfn5h9PisnJvGpbLbRtbiB |
-| **ai-peer-controller-2** (live controller) | (spawning) | `~/repos/ai-peer-hackathon-2026` | `main` (docs only) | Runs the build from `handoffs/HANDOFF-2026-11-05-ai-peer-controller-2.md` |
+| **ai-peer-controller-2** (live controller) | 2048 (pid 52453) | `~/repos/ai-peer-hackathon-2026` | `main` (docs only) | Runs the build from `handoffs/HANDOFF-2026-11-05-ai-peer-controller-2.md`; https://claude.ai/code/session_01Nfn5h8mSoWxqjYkbP3JnvB. Close controller-1's window 1715 once you have taken over |
 | ai-peer-wp1-1 | 1725 | `~/repos/ai-peer-wp1` | `wp1-foundation`, draft PR #1 | WP1 foundation + S1; idle pings off (`CLAUDE_NO_IDLE_PING=1`), asks go through the controller; https://claude.ai/code/session_01Nfn5h8PVD6txxjBUfab4nR |
 
 ## Needs Manish
