@@ -93,7 +93,7 @@ wait on the Peer's Slack sign-in (Manish's "ready"). Live controller: `ai-peer-c
 
 The controller asks one at a time, in this order.
 
-1. **Waiting (asked 02:47 on 5 Nov; again 02:59 by ai-peer-controller-2 on Attention):**
+1. **Waiting, the build's only blocker (asked 02:47 on 5 Nov; again 02:59, and a reminder at 04:53, by ai-peer-controller-2 on Attention):**
    step 5, the Peer's own Slack sign-in. The worker types
    manish@learnlikemagic.com on Slack's sign-in page; Manish reads the code Slack mails to
    manish@ (no Chrome profile the controller can drive has that inbox) and it goes into
