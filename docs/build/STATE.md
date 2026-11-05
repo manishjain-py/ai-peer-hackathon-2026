@@ -5,7 +5,7 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
-2026-11-05 16:34. **WP1 and WP2 merged; WP3 running** (`ai-peer-wp3-1`, started 16:34). 15:32: **WP1 merged** ([PR #1](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/1),
+2026-11-05 17:57. **WP1 and WP2 merged; WP3 running** (`ai-peer-wp3-1`, started 16:34). 15:32: **WP1 merged** ([PR #1](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/1),
 merge commit 183fabe, 15:31:54): S1 passes live, away on Claude and Codex, online with Manish's
 own tap on Send. Left for `ai-peer-wp1-2` (`~/repos/ai-peer-wp1`):
 the Peer's browser sign-in at the Mac (Manish's "open window"), the two recorded walks, the
@@ -100,7 +100,7 @@ on `wp2-setup-memory`. Live controller: `ai-peer-controller-2`.
   `ZOOM_TEST_MEETING_URL` appears in `.env`; the colleague sign-in helper starts when
   `SLACK_SCENARIO_CLIENT_ID` and `_SECRET` appear (it writes
   `~/.ai-peer/world-auth-link.txt` for his step 4). Controller-2 context 8.5% at 02:59.
-- **Weekly usage 70% at 17:01 on 5 Nov** (68% at 16:33; 64% at 16:16; 59% at 11:18; 55% at 07:41; 54% at 02:59):
+- **Weekly usage 72% at 17:57 on 5 Nov** (70% at 17:01; 68% at 16:33; 64% at 16:16; 59% at 11:18; 55% at 07:41; 54% at 02:59):
   about 9 points since 11:18, from WP2's live walks, WP1's walks and two brief reviews (about
   200k tokens each); about 1 point in the 4.7 h before 07:41, while the build waited. A busy
   worker uses about 7 points an hour, so 95% could come within hours of WP3's busiest work. The reset is 10 Nov, 04:30 IST; per D14 Codex is the backup builder at about 95%.
