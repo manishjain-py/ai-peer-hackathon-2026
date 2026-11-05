@@ -5,7 +5,7 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
-2026-11-05 02:59. WP1 (foundation + S1) is running: `ai-peer-wp1-1` in
+2026-11-05 03:57. WP1 (foundation + S1) is running: `ai-peer-wp1-1` in
 `~/repos/ai-peer-wp1` on `wp1-foundation`. S1-away passes live; S1-online and the evidence
 wait on the Peer's Slack sign-in (Manish's "ready"). Live controller: `ai-peer-controller-2`.
 
@@ -74,11 +74,12 @@ wait on the Peer's Slack sign-in (Manish's "ready"). Live controller: `ai-peer-c
   `ZOOM_TEST_MEETING_URL` appears in `.env`; the colleague sign-in helper starts when
   `SLACK_SCENARIO_CLIENT_ID` and `_SECRET` appear (it writes
   `~/.ai-peer/world-auth-link.txt` for his step 4). Controller-2 context 8.5% at 02:59.
-- **Weekly usage 54% at 02:59 on 5 Nov** (51% at 01:48; 35% at 15:22 on 4 Nov): about 1.5
+- **Weekly usage 55% at 03:57 on 5 Nov** (54% at 02:59; 51% at 01:48; 35% at 15:22 on 4 Nov): about 1.5
   points an hour, almost all from the Learn Like Magic sessions on this account. At that pace
   95% comes around 06:00 to 07:00 UTC on 6 Nov; the reset is 10 Nov, 04:30 IST. Told Manish
-  01:50 on 5 Nov; per D14 Codex is the backup builder. Worker context 44.4% at 02:58 (told by
-  controller-2 to hand off at its next clean step once past 45%).
+  01:50 on 5 Nov; per D14 Codex is the backup builder. `ai-peer-wp1-2` read in, context 10% at 03:57,
+  waiting for "go login" (it also fixed the Peer browser's old Chrome version, which Slack
+  would stop supporting on 9 Nov).
 
 | Session | Window | Worktree | Branch / PR | Job |
 |---|---|---|---|---|
