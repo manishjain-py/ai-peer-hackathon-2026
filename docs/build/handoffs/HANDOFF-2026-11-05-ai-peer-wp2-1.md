@@ -1,8 +1,6 @@
-<!-- DRAFT by ai-peer-controller-1, 2026-11-05. Not a hand-off yet: at the WP1 merge the live controller re-checks every cited line on the new head, has a read-only check for stale facts, sets {DATE}, saves it as HANDOFF-<date>-ai-peer-wp2-1.md and deletes this draft. -->
-
 # Hand-off: ai-peer-wp2-1 (WP2 setup, memory and local work)
 
-For: `ai-peer-wp2-1`, Claude Opus 5.5 (1M), max effort. Written {DATE} by `ai-peer-controller-2`,
+For: `ai-peer-wp2-1`, Claude Opus 5.5 (1M), max effort. Written 2026-11-05 10:31 UTC by `ai-peer-controller-2`,
 which started it. Controller: `ai-peer-controller-2` (window 2048), unless STATE names a newer one;
 reach it with SendMessage. Dated, never edited after it is written. The living state is
 `docs/build/STATE.md` on `origin/main`.
@@ -19,12 +17,17 @@ unit tests.
 
 ## The job
 
-On the merged WP1 foundation, make the owner's side work end to end: one-click setup with
+On WP1's foundation (branch `wp1-foundation` at 4fb4869; [PR #1](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/1)
+is not merged yet: its last walk waits on Manish's Slack sign-in), make the owner's side work end to end: one-click setup with
 live discovery (F1), "what I learned" with corrections (F2), roles and settings (F3), the
 activity log page (F4), self-tuning (F5), fresh memory (F6) and local work (F7), in the
-concept film's look. `ai-peer-wp3-1` (Google + S2 daily brief) runs at the same time.
+concept film's look. `ai-peer-wp3-1` (Google + S2 daily brief) starts when WP1 merges (at most 2
+workers, D13); until then the other worker is `ai-peer-wp1-2`, finishing WP1.
 
 ## Read first, in order (only these)
+
+Read every doc under `docs/build/` from `origin/main` (`git show origin/main:<path>`): your
+branch's copies are older. The code is your branch's.
 
 1. `AGENTS.md` (root).
 2. `docs/build/STATE.md` on `origin/main`.
@@ -35,12 +38,15 @@ concept film's look. `ai-peer-wp3-1` (Google + S2 daily brief) runs at the same 
 7. For the look, only: `film/video/src/draft02/Shared.tsx` (colours, logo),
    `film/video/src/draft07/SetupScene.tsx` (start, progress, learning panel, switches,
    ready), `film/video/src/draft05/PersonalBrief.tsx` (an app page with a sidebar),
+   `film/video/src/draft07/StoryScenes.tsx` (the card style),
    `film/work/draft04/creative-direction.md` (wording).
 
 ## Working copy
 
-- Worktree `~/repos/ai-peer-wp2`, branch `wp2-setup-memory` from `origin/main` (the
-  controller creates it). Python 3.12 venv at `~/repos/ai-peer-wp2/.venv` (gitignored), set up
+- Worktree `~/repos/ai-peer-wp2`, branch `wp2-setup-memory`, created by the controller from
+  `origin/wp1-foundation` at 4fb4869, upstream unset (push with `git push -u origin
+  wp2-setup-memory`). When PR #1 merges (the controller tells you), run `git fetch origin &&
+  git merge origin/main`, re-run what you have already walked, and push. Python 3.12 venv at `~/repos/ai-peer-wp2/.venv` (gitignored), set up
   as `peer/README.md` says.
 - Runtime data `~/.ai-peer/<owner>/`; secrets `~/.ai-peer/.env` only, never in git, chat or
   Telegram; never echo a value.
@@ -55,17 +61,58 @@ concept film's look. `ai-peer-wp3-1` (Google + S2 daily brief) runs at the same 
 | F4 activity log | Grow WP1's minimal page: every action with who asked, what the Peer said or did, sources, outcome; "needs your review" items first. |
 | F5 self-tuning | In his DM, "less of this" or a reaction: the Peer edits `rules.md` and confirms in one line. After "stop telling me about CI failures on drafts", the next such event is not pushed. |
 | F6 fresh memory | New events update the affected memory files; a nightly pass re-reads key docs; facts keep source and date. A tracker change in an LLM repo shows up in the next answer (the change is Manish's or an existing recent one; the Peer only reads). |
-| F7 local work | A Claude Code session-end hook, the Codex equivalent (spike first: which Codex hook or `notify` setting fires at the end, on codex-cli 0.153.4) and an hourly scan of chosen folders: repo, branch, unpushed changes and a short summary, never code, into memory `local/`. "What is Manish working on?" mentions today's unpushed branch. |
+| F7 local work | A Claude Code session-end hook, the Codex equivalent (spike first: which Codex hook or `notify` setting fires at the end, on codex-cli 0.153.4) and an hourly scan of chosen folders: repo, branch, unpushed changes and a short summary, never code, into memory `local/` (before the merge, the test owner's). "What is Manish working on?" mentions today's unpushed branch. |
 | Look | The film's: paper `#f6f4ee`, ink `#152b31`, muted `#617272`, mint `#b7f4cf`, green `#167353`, lines `#d7dfd9`; cards `#fffef9` with border `#d7e2d7`, radius 20; Manrope; small uppercase green labels. Copy short, warm, to "you" ("You choose the access. You keep the decisions."); it always says it is AI. The film's React code (fixed 1920x1080 frames, inline styles, timeline animation) is a reference for the look, not code to reuse. |
 
+## While WP1 is still running (until PR #1 merges)
+
+- **Every `peer` command names your test owner, in the same command:**
+  `AI_PEER_OWNER=<test id> .venv/bin/python -m peer <cmd>` (an `export` does not survive between
+  shell calls). Without it a command acts on owner `manish`: the live Peer re-reads
+  `~/.ai-peer/manish/settings.yaml` at once (one `set`, `away` or page switch flips WP1's walk),
+  and memory set-up re-points the live Peer's brain skill links
+  (`~/.ai-peer/manish/.claude/skills/peer-brain`, `.agents/skills/peer-brain`, now into
+  `~/repos/ai-peer-wp1`) at your worktree (`install_skill` in `peer/memory/layout.py`).
+- The live Peer belongs to `ai-peer-wp1-2` (pid in `~/.ai-peer/manish/watch.pid`, page
+  http://127.0.0.1:8787). Never run `peer start`, `peer stop`, `peer watch`, a live
+  `peer scenario` or `peer browser`, nor anything else that opens a Slack Socket Mode connection
+  with the AI Peer app: a second connection splits Slack's events and breaks WP1's walks. The
+  browser profile `~/.ai-peer/browser/manish` is WP1's (its sign-in and recorded walks); for page
+  screenshots use a throwaway headless browser context of your own.
+- **No Slack writes before the merge:** no `join_public_channels()` (it joins every public
+  channel, #general included, where the real member preethi is), no posts with the
+  `SLACK_AS_<NAME>` tokens, no `peer world setup`. Listing channels and members is fine. Discovery
+  stores only the owner and the test world's colleagues, never other members (WP1's watcher drops
+  them the same way).
+- **A small test owner:** a new owner copies the defaults, which point at Manish's profile
+  (4 repos, 15 trackers). Write a one-repo profile for the test owner, then
+  `AI_PEER_OWNER=<test id> .venv/bin/python -m peer set owner.profile <path>` and
+  `... set brain.summary_effort high` (the full key: a bare `summary_effort` is read by nothing).
+- Run your page with `AI_PEER_OWNER=<test id> .venv/bin/python -m peer web --port 8788` (8787
+  is the live Peer's).
+- `peer scenario <name> --dry-run` under the test owner (fake Slack) is safe and is how you walk
+  F2, F3, F6 and F7's "next answer" before the merge; under `manish` it flips presence.
+- Walks that need live Slack events (F5's "less of this" in his DM, the away switch on live
+  presence) wait for the merge: build them now, walk them after.
+
+## After the merge: one live Peer
+
+There is one live Peer, on owner `manish`, and only the controller decides who runs it. When a
+walk needs it, ask the controller; it tells you when the Peer is yours (you may then stop it and
+start it from your worktree) and you tell it when you are done. It runs from a worktree's code
+and skill links, so a worktree it runs from is never removed.
+
 ## Working beside WP3
+
+WP3 starts when WP1 merges; these rules hold from then.
 
 - You own `peer/web/` (layout, look, pages), the discovery framework in `peer/memory/`, roles
   and settings, tuning and local work. WP3 owns `peer/adapters/google.py`, the brief, its seeds
   and its page, and adds the Google discovery step to your framework.
 - Shared files (`peer/settings.py`, `peer/defaults.yaml`, `peer/__main__.py`,
   `peer/executor.py`, `peer/watcher.py`, `peer/web/app.py`): small, additive changes only.
-  Whoever merges second rebases on `main`, takes the other's layout, and re-runs its walks.
+  Whoever merges second merges `origin/main` into its branch (no rebase, no force-push), takes
+  the other's layout, and re-runs its walks.
 - For an interface question, message `ai-peer-wp3-1` directly (SendMessage) and mention it in
   your next report to the controller.
 
@@ -75,7 +122,14 @@ concept film's look. `ai-peer-wp3-1` (Google + S2 daily brief) runs at the same 
   through `~/claude-config`, so the hook must exit 0 and do nothing where its script is
   missing, and must never slow or break a session; Codex's `~/.codex/config.toml` likewise.
   Write the exact change and the undo, and ask him before you make it.
+- **Codex's `notify` is taken:** `~/.codex/config.toml` already has a `notify = [...]` line
+  (Codex Computer Use's client). Never replace it or add a second one (invalid TOML: Codex
+  would not start). Spike Codex's `session_end` hook (`hooks.json`) with `codex exec -c`
+  overrides first, then ask.
 - Which folders the hourly scan reads (recommend `~/repos`, read-only, summaries only).
+  `~/repos` holds live Learn Like Magic worktrees: read with `git --no-optional-locks` (no
+  `index.lock`), never fetch, never write. Run the hourly scan and the nightly pass inside the
+  Peer, not as a launchd or cron job (a global change) unless Manish agrees.
 
 ## Proof (D13)
 
@@ -86,8 +140,11 @@ controller the setup page is ready for Checkpoint 2 (with WP3's S2).
 ## PR and merge
 
 One PR `wp2: setup, memory and local work` into `main`, opened as a draft early: what works,
-the walk evidence, what is not verified. Merge when the walks pass. Update STATE on `main`
-(fetch first; your branch's copy is older): your package line, lessons, session log.
+the walk evidence, what is not verified. Until PR #1 merges, your PR also lists WP1's commits;
+that is expected. Merge only after PR #1 has merged and you have merged `origin/main` in. Merge when the walks pass. Update STATE on `main`
+from a throwaway worktree (`git worktree add --detach <scratch dir> origin/main`, edit, commit,
+`git push origin HEAD:main`, `git worktree remove <scratch dir>`), never from the controller's
+checkout: your session row, lessons, session log.
 
 ## Stop rules
 
@@ -103,8 +160,9 @@ the walk evidence, what is not verified. Merge when the walks pass. Update STATE
 
 - **A real person is in the test Slack:** `preethi`. Never message, mention or DM her; tests
   run only in channels she is not in (STATE "Settled").
-- **No Airbnb-internal names in build files** (AGENTS.md): the film's setup screens say
-  "OneAirbnb" and "AirChat"; the product says "company directory" and Learn Like Magic.
+- **No Airbnb-internal names in build files** (AGENTS.md): copy no names, repos, teams or
+  projects from the film's screens (they hold Airbnb-internal ones, such as "OneAirbnb",
+  "AirChat" and project names); the product says "company directory" and Learn Like Magic.
 - F1's "empty folder" walk runs on a separate test owner or after a backup: never wipe
   Manish's live memory under `~/.ai-peer/manish/` or `~/.ai-peer/.env`.
 - The Peer is read-only on LLM code and never touches LLM production.
@@ -116,6 +174,6 @@ the walk evidence, what is not verified. Merge when the walks pass. Update STATE
 - Your idle pings to Telegram are off: anything for Manish goes through the controller.
 - Manish let the kickoff session, and the controller for the colleague setup only, drive his
   logged-in Chrome; any other use needs his word, asked through the controller. The Peer's own
-  browser profile (`peer browser`, signed in to Slack as manish@ by WP1) is fine for screenshots.
+  browser profile is WP1's until the merge (see above).
 - This Mac also runs Learn Like Magic sessions: never `pkill` by pattern, never touch their
   windows or worktrees.

@@ -62,8 +62,8 @@ On the merged WP1 foundation, add the `google` adapter (Gmail, Calendar, Drive/D
   (layout and look), the discovery framework, roles and settings; you add the Google step and
   your page with small, additive changes to shared files (`peer/settings.py`,
   `peer/defaults.yaml`, `peer/__main__.py`, `peer/executor.py`, `peer/watcher.py`,
-  `peer/web/app.py`). Whoever merges second rebases on `main`, takes the other's layout, and
-  re-runs its walk.
+  `peer/web/app.py`). Whoever merges second merges `origin/main` into its branch (no rebase, no
+  force-push), takes the other's layout, and re-runs its walk.
 - For an interface question, message `ai-peer-wp2-1` directly (SendMessage) and mention it in
   your next report to the controller.
 
