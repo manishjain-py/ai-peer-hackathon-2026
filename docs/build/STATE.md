@@ -46,7 +46,10 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
   `ZOOM_TEST_MEETING_URL` appears in `.env`; the colleague sign-in helper starts when
   `SLACK_SCENARIO_CLIENT_ID` and `_SECRET` appear (it writes
   `~/.ai-peer/world-auth-link.txt` for his step 4). Controller context 17.5% at 16:12.
-- Weekly usage 35% (resets 10 Nov, 04:30 IST). Worker context 37% at 18:03 (idle, waiting on the setup steps).
+- **Weekly usage 51% at 01:48 on 5 Nov** (35% at 15:22 on 4 Nov): about 1.5 points an hour,
+  almost all from the Learn Like Magic sessions on this account while this build sat idle.
+  At that pace 95% comes around 07:00 UTC on 6 Nov; the reset is 10 Nov, 04:29 IST. Told
+  Manish 01:50 on 5 Nov; per D14 Codex is the backup builder. Worker context 37% at 18:03 (idle, waiting on the setup steps).
 
 | Session | Window | Worktree | Branch / PR | Job |
 |---|---|---|---|---|
@@ -58,7 +61,7 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 The controller asks one at a time, in this order.
 
-1. **Asked 15:20 (Telegram 15:23), waiting:** a Zoom test meeting for spike 1d (join before host on, waiting
+1. **Asked 15:20 on 4 Nov (Telegram 15:23), steps resent 01:50 on 5 Nov, waiting:** a Zoom test meeting for spike 1d (join before host on, waiting
    room off); the link goes in `~/.ai-peer/.env` as `ZOOM_TEST_MEETING_URL`, not chat
    (anyone with it can join).
 2. Next: the colleague accounts (his pick A, below), about 25 minutes at the Mac, steps in
@@ -114,6 +117,7 @@ authority does not carry over; ask him before any session reuses it for a new st
 | Time (UTC) | Question | His words, verbatim |
 |---|---|---|
 | 15:20 | Fake colleagues: A) real member accounts (recommended) or B) one scenario bot | "A (real accounts, recommended) - sure" |
+| 11-05 01:50 | (after the morning catch-up) Say "go" and I resend the Zoom steps | "go" |
 
 ## Airbnb notes
 
