@@ -5,7 +5,7 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
-2026-11-05 10:45. WP1 (foundation + S1) is running: `ai-peer-wp1-2` in `~/repos/ai-peer-wp1` on
+2026-11-05 11:18. WP1 (foundation + S1) is running: `ai-peer-wp1-2` in `~/repos/ai-peer-wp1` on
 `wp1-foundation`. S1-away passes live; S1-online and the evidence wait on the Peer's Slack
 sign-in (Manish's "ready"). **WP2 started early** (10:45): `ai-peer-wp2-1` in `~/repos/ai-peer-wp2`
 on `wp2-setup-memory`. Live controller: `ai-peer-controller-2`.
@@ -84,9 +84,9 @@ on `wp2-setup-memory`. Live controller: `ai-peer-controller-2`.
   `ZOOM_TEST_MEETING_URL` appears in `.env`; the colleague sign-in helper starts when
   `SLACK_SCENARIO_CLIENT_ID` and `_SECRET` appear (it writes
   `~/.ai-peer/world-auth-link.txt` for his step 4). Controller-2 context 8.5% at 02:59.
-- **Weekly usage 55% at 07:41 on 5 Nov** (54% at 02:59; 51% at 01:48; 35% at 15:22 on 4 Nov):
-  1 point in the 4.7 h since 02:59, while this build waited and the Learn Like Magic
-  sessions ran. The reset is 10 Nov, 04:30 IST; per D14 Codex is the backup builder at about 95%.
+- **Weekly usage 59% at 11:18 on 5 Nov** (55% at 07:41; 54% at 02:59; 35% at 15:22 on 4 Nov):
+  about 4 points from WP2's 35-minute build and its brief's review; about 1 point in the 4.7 h
+  before, while the build waited. The reset is 10 Nov, 04:30 IST; per D14 Codex is the backup builder at about 95%.
   `ai-peer-wp1-2` read in, context 10% at 09:33, waiting for "go login" (it also fixed the Peer
   browser's old Chrome version, which Slack would stop supporting on 9 Nov).
 
@@ -111,15 +111,28 @@ The controller asks one at a time, in this order.
    `~/.ai-peer/slack-login-code.txt`. The controller sends the worker "go login" when he is
    ready. Then, when convenient: untick View > Developer > "Allow JavaScript from Apple
    Events" in his Work Chrome window (Chrome ignores scripted changes to it, both ways).
-2. Done 01:54 on 5 Nov: the Zoom test meeting "AI Peer test" (he made it; the controller
-   wrote its link to `.env` at his request, value never echoed). Spike 1d starts by itself.
-3. One command for the Peer's own Codex login (today it uses a copy of his token, good
-   until about 7 Nov).
-4. The Google Internal OAuth client (WP3).
-5. The Airbnb asks in PLAN, this week.
-6. His other Mac's copy (`~/repos/Hackathon 2026`, per the `$ai-peer` skill) predates
+2. **F7 local work** (from `ai-peer-wp2-1`, 11:17), one yes or no for three small changes;
+   recommend yes to all three. (a) Claude Code: add to `~/.claude/settings.json` (a link into
+   `~/claude-config`, so it syncs to his other Macs), under "hooks":
+   `"SessionEnd": [{"hooks": [{"type": "command", "command": "test -x \"$HOME/.ai-peer/bin/session-end\" && \"$HOME/.ai-peer/bin/session-end\" claude || true", "timeout": 5}]}]`.
+   It saves only the session's folder, id and end reason to `~/.ai-peer/spool/`, exits at once,
+   and does nothing on a Mac without the script. Undo: delete that key. (b) Codex: the same entry
+   with `codex` in `~/.codex/hooks.json` (unproven: `codex exec` never fires it; his next
+   interactive Codex session will tell; Codex may ask him once to trust it). Undo: delete it.
+   (c) The hourly scan reads `~/repos`: read-only (`git --no-optional-locks`, never fetch or
+   write), summaries only (repo, branch, unpushed commit subjects, number of changed files),
+   inside the Peer, not cron or launchd. WP2 makes the edits on his yes and checks that a
+   session end lands in the spool.
+3. Optional, F5's reaction path (the typed "less of this" works without it): api.slack.com >
+   AI Peer app > Event Subscriptions > Subscribe to bot events > add `reaction_added` > Save
+   (`reactions:read` is granted already, so no reinstall). Or he lets the controller do it.
+4. The Peer's own Codex login, before 8 Nov 02:25 UTC (its copy of his login ends 9 Nov 02:25 and
+   the runner refuses it in the last 24 h): `! CODEX_HOME=~/.ai-peer/codex-home codex login`.
+5. The Google Internal OAuth client (WP3 writes the steps when it starts).
+6. The Airbnb asks in PLAN, this week.
+7. His other Mac's copy (`~/repos/Hackathon 2026`, per the `$ai-peer` skill) predates
    the `film/` move: push anything unpushed there, then pull.
-7. Optional housekeeping: delete the unused Recall key "ai-peer" in the Recall dashboard.
+8. Optional housekeeping: delete the unused Recall key "ai-peer" in the Recall dashboard.
 
 Chrome: Manish let the kickoff session do setup steps in his logged-in Chrome. At 02:05 on
 5 Nov he authorised the controller to do the remaining colleague setup steps the same way
