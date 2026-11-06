@@ -151,19 +151,20 @@ needs Manish at the Mac: "open window", then the Google client ([setup/google.md
   Zoom with no Zoom app of ours; spike 1d checks that against Zoom's on-behalf-of rule,
   with Manish not in the call. Zoom: his paid Workplace Pro account (personal Gmail).
 - All accounts and `.env` names: [setup/accounts.md](setup/accounts.md).
-- **The live Peer** (owner `manish`) **runs from `~/repos/ai-peer-wp4` since 21:21:24 on 6 Nov** (pid 18558
-  in `~/.ai-peer/manish/watch.pid`, the only `peer watch`; `wp4-meeting` at b29068e, which is WP4 plus main;
-  both brain skill links point into `~/repos/ai-peer-wp4`; the page answers; checked by the controller
-  21:21). `ai-peer-wp4-2` holds it for the live S3 walk and gives it back by 02:00 UTC. Keep
+- **The live Peer** (owner `manish`) **runs from `~/repos/ai-peer-wp4` since 21:21:24 on 6 Nov**, restarted
+  21:45:27 on the CLAUDE.md fix (pid 10924 in `~/.ai-peer/manish/watch.pid`, the only `peer watch`;
+  `wp4-meeting` at 2aec10e, which is WP4 plus main plus the fix; both brain skill links point into
+  `~/repos/ai-peer-wp4`; the page answers; checked by the controller 21:45). The first run there was pid 18558
+  (21:21:24 to 21:45:23). `ai-peer-wp4-2` holds it until its merge and gives it back by 02:00 UTC. Keep
   `~/repos/ai-peer-wp4` while the Peer runs from it. Before that it ran from `~/repos/ai-peer-wp2` (pid 62524,
   16:18 on 5 Nov to 21:21:16 on 6 Nov, on main's code of 5 Nov); the controller hands it out.
   On "open window" it goes to `ai-peer-wp1-2` to record S1; WP3's live S2 walk asks for it later. F7 is live: the session-end hook is in `~/claude-config/settings.json` (synced) and
   `~/.codex/hooks.json` (backups in `~/.ai-peer/backups/`; both checked to parse), and the hourly
   scan reads `~/repos`.
-- Still running (21:22 on 6 Nov): the live Peer (pid 18558, above), `ai-peer-wp4-2` (pid 15886) and
-  `ai-peer-controller-4`'s watcher `docs/build/tools/watch2.zsh` (pid 18899, no AI; it tracks `ai-peer-wp3-2`
-  pid 53664, `ai-peer-wp4-2` pid 15886 and the Peer pid 18558; exits with one line on a change or after 55
-  minutes; the controller re-arms it; stop: `kill 18899`).
+- Still running (21:46 on 6 Nov): the live Peer (pid 10924, above), `ai-peer-wp4-2` (pid 15886) and
+  `ai-peer-controller-4`'s watcher `docs/build/tools/watch2.zsh` (pid 11708, no AI; it tracks `ai-peer-wp3-2`
+  pid 53664, `ai-peer-wp4-2` pid 15886 and the Peer pid 10924; exits with one line on a change or after 55
+  minutes; the controller re-arms it; stop: `kill 11708`).
   At 20:47 `ai-peer-controller-3` had stopped its own watcher at the hand-off.
   Before that (18:55): the live Peer and `ai-peer-controller-3`'s watcher
   `watch2.zsh` (pid 74123, no AI, in the controller's scratchpad; it exits with one line on a change:
