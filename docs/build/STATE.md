@@ -315,8 +315,11 @@ Chrome: Manish let the kickoff session do setup steps in his logged-in Chrome. A
 3c. **WP5's rest, planned 22:16 on 6 Nov by `ai-peer-controller-4`** (a read-only map of the code at 37cb0c4; the
    two new findings checked by the controller in the code): two packages. (1) **`ai-peer-wp5-2`**, the adapter
    contract everywhere and the guide finished (D2's deliverable), starts right after PR #3 merges, in
-   `~/repos/ai-peer-wp5b` on `wp5-contract`; its brief is under read-only review and goes to `main` before the
-   spawn. It covers: the docs pass after the merges (first, straight to `main`); one registry so the runtime
+   `~/repos/ai-peer-wp5b` on `wp5-contract`; its brief is on `main`:
+   [HANDOFF-2026-11-06-ai-peer-wp5-2.md](handoffs/HANDOFF-2026-11-06-ai-peer-wp5-2.md) (22:35; a read-only review's 13 findings,
+   the worst checked in the code, folded: the hand-over rehearsal must never write the real `~/.ai-peer`, port-check
+   must never open Socket Mode or join channels, an allow-list of `peer` commands). Before the spawn the controller
+   checks the brief's lines against PR #3's merge (`git diff 37cb0c4 <merge>`). It covers: the docs pass after the merges (first, straight to `main`); one registry so the runtime
    builds every adapter from settings (about 25 direct builds today, about 7 of them missing from the guide's
    "What a port also edits today"); role methods for the raw Slack and GitHub calls; settings instead of code
    edits (`github.api_base`, the trial's people file, a settings-added brain backend); and **a privacy flaw found
