@@ -75,6 +75,12 @@ class GitHubAdapter(Adapter):
         self.repos = repos
         self.gh = ReadOnlyGitHub(_token())
 
+    @classmethod
+    def from_settings(cls, st) -> "GitHubAdapter":
+        import json
+        profile = json.loads(st.profile_path().read_text())
+        return cls([r["repo"] for r in profile.get("owns", {}).get("repos", [])])
+
     # helpers used by discovery -------------------------------------------------
     def repo(self, repo: str) -> dict:
         return self.gh.get(f"/repos/{repo}")

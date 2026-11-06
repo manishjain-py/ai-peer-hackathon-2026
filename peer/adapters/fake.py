@@ -65,6 +65,10 @@ class FakeAdapter(Adapter):
         channel = payload.get("channel") or target
         return {"ok": True, "channel": channel, "ts": ts, "permalink": f"https://fake.slack/{channel}/{ts}"}
 
+    def dry_run_sample(self) -> dict:
+        return {"action": "post_reply", "target": "C0PORTCHECK",
+                "payload": {"channel": "C0PORTCHECK", "thread_ts": "1700000000.000100", "text": "port-check (dry run)"}}
+
     # chat helpers the executor and presence use --------------------------------
     def user_info(self, user_id: str) -> dict:
         return self.users.get(user_id, {"id": user_id, "name": user_id, "tz": "UTC"})
