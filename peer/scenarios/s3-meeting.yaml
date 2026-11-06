@@ -1,0 +1,28 @@
+# S3 attend a meeting (PRD S3). The owner hands the Peer the test meeting (seeded); the Peer drafts his update
+# and he approves it with one tap. A second Recall bot, named as a scripted test bot, opens the meeting and
+# speaks as the invented colleagues (world.yaml): it asks for Manish's update (the Peer plays the approved clip),
+# asks a scripted question (a live answer with its sources and date) and one unscripted question chosen at walk
+# time (`--question`; a live answer, or "I'll flag that for Manish"), talks through a decision, and leaves.
+# After it leaves, the brief lands in the DM and on the page. `after:` waits for that entry in the Peer's
+# activity log (then for its clip to finish); `none` just pauses.
+name: s3-meeting
+title: "S3 attend a meeting: the weekly product sync"
+meeting: {title: "Weekly product sync", at: "+6m", minutes: 15}   # live: time for the draft (about 40 s) and his tap
+colleague_bot: "Learn Like Magic team (scripted test bot)"
+steps:
+  - say: {as: ananya, text: "Hi everyone, Ananya here. Let's start the weekly product sync."}
+    after: meeting_joined
+  - say: {as: ananya, text: "Is Manish here today? What's his update this week?"}
+    after: none
+  - say: {as: david, text: "David here. I have a question for Manish's assistant. Who is driving the Telugu build, and when does it ship?"}
+    after: meeting_update_played
+  - say: {as: kabir, text: "Kabir here. Another question for Manish's assistant. {unscripted}"}
+    after: meeting_answered
+  - say: {as: ananya, text: "Okay, let's decide. We move the Hyderabad pilot review to next Thursday, and Lakshmi owns the school list. Everyone agree?"}
+    after: meeting_answered
+  - say: {as: david, text: "Agreed. And one more for Manish's assistant. Please ask Manish to confirm the Telugu ship date by Friday."}
+    after: none
+  - say: {as: ananya, text: "Great, thanks everyone. See you next week."}
+    after: meeting_answered
+  - leave: true
+    after: none

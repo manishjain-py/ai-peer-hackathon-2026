@@ -78,3 +78,32 @@ APPLY_FEEDBACK = {
     "required": ["is_feedback", "rule", "mute", "confirm"],
     "additionalProperties": False,
 }
+
+# WP4 (S3): the owner's update for a meeting the Peer covers, and the brief after it.
+MEETING_UPDATE = {
+    "type": "object",
+    "properties": {
+        "update": {"type": "string"},
+        "chat_line": {"type": "string"},
+        "as_of": {"type": "string"},
+        "sources": {"type": "array", "items": SOURCE, "maxItems": 4},
+    },
+    "required": ["update", "chat_line", "as_of", "sources"],
+    "additionalProperties": False,
+}
+
+_ITEM = {"type": "object", "properties": {"what": {"type": "string"}, "who": {"type": "string"}, "when": {"type": "string"}},
+         "required": ["what", "who", "when"], "additionalProperties": False}
+
+MEETING_BRIEF = {
+    "type": "object",
+    "properties": {
+        "summary": {"type": "string"},
+        "decisions": {"type": "array", "items": _ITEM},
+        "questions_for_owner": {"type": "array", "items": _ITEM},
+        "peer_said": {"type": "array", "items": {"type": "string"}},
+        "follow_ups": {"type": "array", "items": _ITEM},
+    },
+    "required": ["summary", "decisions", "questions_for_owner", "peer_said", "follow_ups"],
+    "additionalProperties": False,
+}

@@ -203,6 +203,9 @@ class Executor:
         if payload.get("type") == "block_actions":
             act = (payload.get("actions") or [{}])[0]
             key, aid = act.get("value"), act.get("action_id")
+            if str(aid).startswith("peer_mtg_"):   # WP4 (S3): the meeting update card (Approve update / Edit / Skip)
+                from .meetings.cover import on_click
+                return on_click(self, payload)
             pending = self.store.action(key) if key else None
             if not pending or pending["status"] != "pending_approval":
                 return None
@@ -219,6 +222,9 @@ class Executor:
             if aid in ("peer_send", "peer_skip"):
                 threading.Thread(target=self._finish, args=(key, aid, None), daemon=True).start()
             return None
+        if payload.get("type") == "view_submission" and (payload.get("view") or {}).get("callback_id") == "peer_mtg_edit":
+            from .meetings.cover import on_click   # WP4 (S3): the edited update
+            return on_click(self, payload)
         if payload.get("type") == "view_submission" and (payload.get("view") or {}).get("callback_id") == "peer_edit":
             key = payload["view"].get("private_metadata")
             text = payload["view"]["state"]["values"]["draft"]["text"]["value"]

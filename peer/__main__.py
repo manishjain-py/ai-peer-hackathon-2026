@@ -15,6 +15,7 @@
   local scan|ingest|install|hook-config  local work (F7): scan chosen folders, read hook records, set up the hook
   tune "<feedback>"           self-tuning (F5): apply owner feedback as if said in the DM
   jobs --once                 one pass of the background jobs (GitHub poll, local work)
+  meeting cover|list|draft|approve|run|clean|voices   S3 (WP4): meetings the Peer covers (see `peer meeting -h`)
 """
 from __future__ import annotations
 
@@ -105,6 +106,12 @@ def cmd_stop(a) -> None:
 def cmd_scenario(a) -> None:
     from .scenarios import player
     st = get_settings()
+    if a.name.startswith("s3-"):   # WP4: the meeting scene (colleague bot on Recall)
+        from .meetings import walk
+        path = (walk.dry_walk(st, a.name, a.question) if a.dry_run else
+                walk.live_walk(st, a.name, a.question, auto_click=a.auto_click))
+        print(f"walk saved: {path}")
+        return
     path = player.dry_run(st, a.name) if a.dry_run else player.live(st, a.name, record=a.record, auto_click=a.auto_click)
     print(f"walk saved: {path}")
 
@@ -250,6 +257,48 @@ def cmd_sample_heads_up(a) -> None:
                                 store=Store(st.db_path)), ensure_ascii=False))
 
 
+def cmd_meeting(a) -> None:
+    """WP4 (S3). The link is a secret: commands take `test` for the test meeting and never print a link."""
+    from .meetings import cover, store as mstore
+    st = get_settings()
+    if a.what == "cover":
+        r = cover.request(st, a.link or "test", at=a.at, title=a.title, end=a.end, minutes=a.minutes, seeded=a.seeded)
+        print(json.dumps({k: r[k] for k in r if k != "meeting"} | ({"meeting": {k: r["meeting"][k] for k in
+              ("id", "title", "start", "end", "label", "status")}} if r.get("meeting") else {}), ensure_ascii=False))
+    elif a.what == "list":
+        for m in mstore.all_meetings(st):
+            print(f"{m['id']}  {m['status']:<9} {m['start']}  {m['title']} ({m['label']})")
+    elif a.what == "draft":
+        from .adapters.fake import FakeAdapter
+        r = cover.draft_update(st, a.id)
+        chat = FakeAdapter() if a.dry_run else _slack()
+        owner = "UOWNER" if a.dry_run else chat.lookup_email(json.loads(st.profile_path().read_text())["slack_email"])["id"]
+        print(json.dumps({"draft": r.get("ok"), "card": cover.send_card(st, chat, owner, a.id, dry_run=a.dry_run)}))
+    elif a.what == "approve":
+        print(json.dumps(cover.approve(st, a.id, a.text, by="command line")))
+    elif a.what == "run":
+        from .adapters.fake import FakeAdapter
+        from .meetings.live import MeetingSession
+        chat = FakeAdapter() if a.dry_run else _slack()
+        owner = "UOWNER" if a.dry_run else chat.lookup_email(json.loads(st.profile_path().read_text())["slack_email"])["id"]
+        print(json.dumps(MeetingSession(st, a.id, chat=chat, owner_chat_id=owner, dry_run=a.dry_run).run(), default=str)[:2000])
+    elif a.what == "clean":
+        from .adapters.meetings import MeetingsAdapter
+        rec = MeetingsAdapter(st)
+        for b in rec.list_bots():
+            if b["status"] not in ("done", "fatal", "call_ended", "recording_done", "analysis_done"):
+                r = rec.remove_scheduled(b["id"]) if b["status"] in (None, "ready", "scheduled") else rec.leave(b["id"])
+                print(f"{b['id']} {b['bot_name']} {b['status']}: {r}")
+        print("every bot is out of the call")
+    elif a.what == "voices":
+        from .adapters.voice import VoiceAdapter
+        v = VoiceAdapter(st, engine="elevenlabs")
+        q = v.quota()
+        print(f"ElevenLabs: {q['used']} of {q['limit']} used; WP4 ledger {v.ledger()['spent']} of {st.get('voice.elevenlabs_budget_chars')}")
+        for role in (st.get("voice.voices") or {}):
+            print(role, v.check_voice(v.voice_id(role)))
+
+
 def main(argv: list[str] | None = None) -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s", datefmt="%H:%M:%S")
     logging.getLogger("slack_sdk").setLevel(logging.WARNING)
@@ -263,7 +312,15 @@ def main(argv: list[str] | None = None) -> None:
     p = sub.add_parser("scenario"); p.add_argument("name"); p.add_argument("--dry-run", action="store_true")
     p.add_argument("--record", action="store_true", help="screenshots + video through the Peer's browser profile")
     p.add_argument("--auto-click", action="store_true", help="click the owner's buttons through that profile")
+    p.add_argument("--question", help="S3: the unscripted question, chosen at walk time")
     p.set_defaults(fn=cmd_scenario)
+    p = sub.add_parser("meeting", help="S3: meetings the Peer covers")
+    p.add_argument("what", choices=["cover", "list", "draft", "approve", "run", "clean", "voices"])
+    p.add_argument("id", nargs="?", help="a meeting id (draft, approve, run)")
+    p.add_argument("--link", help="cover: `test` (the test meeting) or a Zoom link; real ones stay blocked")
+    p.add_argument("--at", default="+3m"); p.add_argument("--end"); p.add_argument("--minutes", type=int, default=30)
+    p.add_argument("--title", default="Meeting"); p.add_argument("--seeded", action="store_true")
+    p.add_argument("--text"); p.add_argument("--dry-run", action="store_true"); p.set_defaults(fn=cmd_meeting)
     for mode in ("away", "online", "auto"):
         sub.add_parser(mode).set_defaults(fn=cmd_presence(mode))
     p = sub.add_parser("set"); p.add_argument("key"); p.add_argument("value"); p.set_defaults(fn=cmd_set)

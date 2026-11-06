@@ -78,3 +78,29 @@ github:
 web:
   host: 127.0.0.1
   port: 8787
+
+meetings:                       # S3 (WP4): attend a meeting for the owner; all of it is gated on roles.cover_meetings
+  join_real_meetings: false     # HARD BLOCK: until the owner lifts it in his own words, a bot joins only the test meeting
+                                # (the Zoom meeting id in ZOOM_TEST_MEETING_URL); his real calendar has real people in it
+  bot_name: "{first}'s AI Peer"
+  colleague_bot_name: "{name} (scripted test bot)"
+  live_model: opus              # the warm session (D7); never Fable
+  live_effort: medium           # spike, 6 Nov: the spoken answer ready in about 2 to 4 s at low/medium, up to 9 s at high
+  listener_port: 8795           # the webhook listener only; the tunnel points here and nowhere else
+  max_minutes: 10               # a bot leaves after this long recording (in_call_recording_timeout)
+  offer_cover: true             # the Peer may offer "Cover for me" in the DM for a meeting it sees; it joins only what he hands it
+
+voice:
+  engine: local                 # local (the Mac's say voices + ffmpeg) | elevenlabs (the walk's clips and fixed lines only)
+  pad_ms: 1000                  # silence in front of every clip (spike 1d: Recall loses the first second)
+  elevenlabs_budget_chars: 20000   # WP4's whole budget on a key shared with a live product; the ledger is in ~/.ai-peer/voice-cache/
+  elevenlabs_model: eleven_multilingual_v2       # prepared clips: the intro, the holding line, the update, the colleagues
+  elevenlabs_live_model: eleven_flash_v2_5       # live answers: the fast model
+  voices:                       # one setting per voice, so the owner can choose by ear; stock (premade) voices only, never his own
+    peer: {local: Samantha, elevenlabs: XrExE9yKIg1WjnnlVkGX}       # Matilda (premade, American)
+    holding: {local: Samantha, elevenlabs: XrExE9yKIg1WjnnlVkGX}    # the Peer's own voice
+    ananya: {local: Tara, elevenlabs: pFZP5JQG7iQjIQuC4Bku}         # Lily (premade, British)
+    kabir: {local: Rishi, elevenlabs: iP95p4xoKVk53GoZ742B}         # Chris (premade, American)
+    lakshmi: {local: Tara, elevenlabs: Xb7hH8MSUJpSbSDYk0k2}        # Alice (premade, British)
+    david: {local: "Reed (English (US))", elevenlabs: cjVigY5qzO86Huf0OWal}   # Eric (premade, American)
+    rohan: {local: Rishi, elevenlabs: bIHbv24MWmeRgasZH58o}         # Will (premade, American)
