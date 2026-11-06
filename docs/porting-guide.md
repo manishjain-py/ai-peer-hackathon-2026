@@ -76,20 +76,25 @@ One adapter per system, the same four verbs (`peer/adapters/base.py`, class `Ada
 `invite`, ...), `at` (ISO 8601, UTC), `actor` (that system's id of who did it: a chat user id, a
 code-host login, an email), `ref` (what `get()` takes to fetch it again), `thread_ref` (the
 conversation it belongs to, or `None`), `text`, `url` (or `None`), `extra` (a dict: channel, ts,
-names, anything the runtime needs). Use `peer.events.now_iso()` for "now". Refs follow
-`<adapter>:<kind>:<id>`; each adapter parses its own refs in `get()`.
+names, anything the runtime needs). Use `peer.events.now_iso()` for "now" (it gives
+`2026-11-06T20:34:20+00:00`). Refs follow `<adapter>:<kind>:<id>`; each adapter parses its own refs
+in `get()` and returns `{}` for a ref that is not its own. `sense` drops the Peer's own posts and other
+bots' posts itself (the watcher does not know the bot's id); the watcher then drops every person the
+real-person block does not admit.
 
 **Capabilities:** `capabilities` is a `frozenset` of `"sense"`, `"search"`, `"get"` and
 `"act:<action>"`, one per action offered (`act:post_reply`, `act:dm`, ...). `offers(action)` reads it.
 The executor refuses an action the adapter does not declare.
 
 **`NotOffered`** (`peer.adapters.base`): the base class raises it for any verb you do not
-implement. Do not declare a verb you do not offer.
+implement. Do not declare a verb you do not offer: `port-check` shows an undeclared verb as n/a, and a
+declared verb that raises `NotOffered` as a FAIL.
 
 **`Blocked`** (`peer.adapters.base`): raise it when a hard block in your adapter refuses an act.
 Run the block **before** the dry-run return, so `port-check` proves the block holds (it shows
-"blocked (ok)"). An adapter that has its own exception class lists its name under `blocked_by:`
-in its `adapters:` entry instead.
+"blocked (ok)"). The base `Blocked` needs nothing in settings. An adapter that raises its own exception class lists
+the class name under `blocked_by:` in its `adapters:` entry (google's entry names its own class, also
+called `Blocked`, written on PR #3 before the base had one).
 
 **`dry_run`:** with `dry_run=True`, validate the action, run the hard blocks (read-only lookups
 are fine), and return `{"ok": True, "dry_run": True, ...}` before any write, post, send, join or
@@ -99,7 +104,7 @@ spend. Read your own `act()` and check this line by line; `port-check` calls it.
 
 | Method | Default | Override when |
 |---|---|---|
-| `from_settings(cls, st)` (classmethod) | `cls()` | The constructor needs arguments. `st` is the owner's `Settings` (`st.get("dotted.key", default)`, `st.profile_path()`, `st.owner_dir`). Secrets: `peer.settings.secret("NAME")`. |
+| `from_settings(cls, st)` (classmethod) | `cls()` | The constructor needs arguments. `st` is the owner's `Settings`: `st.get("dotted.key", default)`; `st.owner_dir` (a `Path`, `~/.ai-peer/<owner>`); `st.profile_path()` (relative to the repo root); `st.path("dotted.key")` (expands `~`; a relative value stays relative to the working folder, so resolve it yourself). The home folder is `peer.settings.PEER_HOME` (a `Path`, from `AI_PEER_HOME`). Secrets: `peer.settings.secret("NAME")`. |
 | `check(self)` | `{"ok": True, "detail": ""}` | Always: one cheap, read-only call that proves the login works. Never put a secret in `detail`. |
 | `dry_run_sample(self)` | `None` | The adapter declares any `act:`: return the one act `port-check` runs in dry run, `{"action": ..., "target": ..., "payload": {...}}`. Fixed, not picked from the capabilities set (a set's order changes from run to run). |
 
@@ -117,8 +122,10 @@ discovery and the watcher, read with `Store.person_by(field, value)`. A new syst
    `secret("<NAME>")` (never a literal, never printed); paths and options from settings
    (`st.get("<name>.<option>")`), with defaults in a `<name>:` block in `peer/defaults.yaml`.
 3. Add `from_settings`, `check` and (if it acts) `dry_run_sample`.
-4. List it under `adapters:` in `peer/defaults.yaml` (or in the owner's `settings.yaml`):
-   `<name>: {module: peer.adapters.<name>, class: <ClassName>, query: <a word your data contains>}`.
+4. List it under `adapters:`: `<name>: {module: peer.adapters.<name>, class: <ClassName>, query: <a word
+   your data contains>}`. In `peer/defaults.yaml` it is listed for every owner (the merge is deep, so it
+   reaches owners whose `settings.yaml` already exists); in one owner's `settings.yaml`, for that owner
+   only (the place for a trial adapter).
 5. Run `AI_PEER_HOME=<home> AI_PEER_OWNER=<owner> .venv/bin/python -m peer port-check --adapter <name>`
    until every cell is ok, n/a or blocked (ok), and the exit code is 0.
 
@@ -161,7 +168,10 @@ class ExampleChatAdapter(Adapter):
         return []                     # [{"ref": ..., "snippet": ..., "url": ...}]
 
     def get(self, ref):
-        _, kind, rest = ref.split(":", 2)
+        parts = ref.split(":", 2)
+        if len(parts) != 3 or parts[0] != self.name:
+            return {}                 # not one of this adapter's refs
+        _, kind, rest = parts
         return {}                     # the full item for this ref
 
     def act(self, action, target, payload, idempotency_key, dry_run=False):
@@ -181,6 +191,43 @@ class ExampleChatAdapter(Adapter):
                 "payload": {"channel": "general", "thread_ts": None, "text": "port-check"}}
 ```
 
+### A chat adapter for this runtime
+
+`port-check` runs only the adapter's own sample, so it cannot tell you whether a chat adapter takes
+what the runtime sends. The watcher, the executor and `notify.py` send these acts and read these
+replies:
+
+| Action | target | payload | The runtime reads back |
+|---|---|---|---|
+| `post_reply` | the channel id | `{channel, thread_ts, text}`; `thread_ts` is the thread's root ts, or `None` for a plain post (the replies in the owner's DM) | `permalink` |
+| `dm` | the owner's chat user id | `{text}`, plus `blocks` for the draft card | `channel` and `ts` (kept for `update_message`) |
+| `update_message` | the channel id | `{channel, ts, text}`, plus `blocks` when the card changes | `ok` |
+| `react` | the channel id | `{channel, ts, name}` (`name: eyes` when it starts on an answer) | `ok` |
+| `open_modal` | `""` | `{trigger_id, view}` (the Edit box) | `ok` |
+
+`blocks` and `view` are Slack Block Kit JSON: a chat system without them takes `text`, and the
+executor's cards need rebuilding ([What a port also edits today](#what-a-port-also-edits-today)). The Slack adapter also declares
+`post_message`; the runtime does not send it today.
+
+Events from a chat adapter: `kind` is `dm` (a DM to the bot: the owner's commands come this way),
+`mention` (the bot is mentioned), `message`, or `reaction`; `actor` is the chat user id; `extra` holds
+`channel`, `ts`, `thread_ts` (or `None`), `channel_name`, `user` and `user_name` (a reaction adds
+`reaction`). The reaction path tells a DM by Slack's channel id prefix `D`.
+
+Methods the runtime calls besides the four verbs: `lookup_email(email)` returns `{"id": <chat user
+id>, ...}` or `None`; `user_info(id)` returns `{name, real_name, title, tz, is_bot}`;
+`get_presence(id)` returns `"active"` or `"away"`; `get_status(id)` returns `{text, emoji}`; and
+`listen(on_event, on_interactive)` starts live delivery: it calls `on_event(event)` for each new
+event and `on_interactive(payload)` for each button click, in Slack's interactive payload shape
+(`type: block_actions`, `user.id`, `actions[0].action_id` and `value`, `trigger_id`; `type:
+view_submission` for the Edit box).
+
+**The real-person block depends on `lookup_email`.** The watcher finds the owner (by the profile's
+`slack_email`, else `email`) and each colleague in `peer/scenarios/world.yaml` (by `email`) through
+`lookup_email`, and admits an event only when its `actor` is one of those ids. So `actor` must be the
+same id `lookup_email` returns. A chat adapter without `lookup_email` admits no one, not even the
+owner: the block fails closed.
+
 ## 4. port-check
 
 ```bash
@@ -198,10 +245,11 @@ It reads the `adapters:` block of the owner's settings. Per adapter: it imports 
 | sense | `sense(None)` | a list of `Event` with `id, source, kind, at, ref` and a string `text`; a string or `None` cursor |
 | search | `search(<query>)` | a list of dicts, each with a string `ref` |
 | get | `get(<ref>)` on the first search hit, else the first sensed event | a dict (`(empty)` if `{}`) |
-| act | `act(**sample, dry_run=True)` | `{"ok": true}`, or a hard block refused it: **blocked (ok)** |
+| act | `act(action, target, payload, "port-check:<name>:<action>", dry_run=True)` from the sample | `{"ok": true}`, or a hard block refused it: **blocked (ok)** |
 
 Each cell: `ok`, `n/a` (the verb is not declared, or there was nothing to get or act on),
-`blocked (ok)`, or `FAIL`, with the seconds it took; the reasons print under the table. A verb
+`blocked (ok)`, or `FAIL`, with the seconds it took. An empty list is ok (`0 ev`, `0 hits`); get is
+`n/a (nothing to get)` when neither search nor sense gave a ref; the reasons print under the table. A verb
 that is declared but raises `NotOffered` is a FAIL; an adapter that acts but has no sample is a
 FAIL. The exit code is 1 on any FAIL. An entry with `pending: "PR #n"` whose module is not there
 yet shows "not on main yet"; `enabled: false` shows "off".
@@ -212,8 +260,10 @@ first name); `sample` (the dry-run act when the class has no `dry_run_sample()`:
 matching hit of a fixed search); `blocked_by` (exception class names that mean a hard block
 refused); `pending`; `enabled`.
 
-`port-check` writes nothing anywhere: sense, search and get are read-only by contract; act runs in
-dry run only. On Slack it polls history over the Web API and never opens a Socket Mode
+`port-check` writes nothing to any system: sense, search and get are read-only by contract; act runs in
+dry run only; it prints counts and checks, never an item's content. Locally, like any command, it makes
+the owner's folder and `settings.yaml` on a new owner, and Python writes `__pycache__/` folders
+(`PYTHONDONTWRITEBYTECODE=1` avoids them). On Slack it polls history over the Web API and never opens a Socket Mode
 connection (a second connection would split a running Peer's events). Local work is not in the
 table (its intake deletes shared spool files; its scan writes memory).
 
@@ -235,8 +285,8 @@ Put `AI_PEER_HOME` and `AI_PEER_OWNER` on every command line (`AI_PEER_OWNER=tes
 -m peer ...`): an `export` may not survive between an agent's shell calls, and the wrong owner
 means the wrong memory and settings. Use a test owner for every trial.
 
-**Trap:** after you edit `peer/defaults.yaml`, an existing owner gets the keys that are new, but
-keeps their old value of any key already in their copy. Change it with `peer set`, or edit (or
+**Trap:** the merge is deep (key by key at every level). After you edit `peer/defaults.yaml`, an
+existing owner gets the keys that are new, but keeps their old value of any key already in their copy. Change it with `peer set`, or edit (or
 delete and re-make) the owner's `settings.yaml`.
 
 Secret names this build uses (names only; values only ever in `.env`): `SLACK_BOT_TOKEN` (the
