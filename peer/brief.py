@@ -30,7 +30,7 @@ from typing import Any
 from zoneinfo import ZoneInfo
 
 from .activity import ActivityLog
-from .adapters.google import Blocked, FakeGoogleAdapter, GoogleAdapter, connected, owner_email
+from .adapters.google import Blocked, FakeGoogleAdapter, GoogleAdapter, connected, ledger, owner_email
 from .brain.runner import run_agent
 from .brain.schemas import BUILD_BRIEF, DRAFT_EMAIL
 from .events import Event, now_iso
@@ -258,12 +258,15 @@ def gather(st: Settings, store: Store, log_path: Path, since: str, dry: bool) ->
     rows = store.conn().execute("SELECT * FROM events WHERE source='google' AND at>=? ORDER BY at",
                                 (min(since, email_floor),)).fetchall()
     latest_invite: dict[str, Event] = {}
+    removed = ledger()["removed"]   # seeds closed by `peer seed clean` leave the brief
     for r in rows:
         e = Store._row_event(r)
         if e.extra.get("hidden") or not visible(st, e):
             counts["hidden_real"] += 1
             continue
         x = e.extra
+        if x.get("seed") and x["seed"] in removed:
+            continue
         if e.kind == "email":
             if store.action(f"tell:{e.ref}") or store.get_kv(f"replied:{e.ref}") or _invite_mail(x):
                 continue   # told at once as a heads-up, answered, or an invitation's email (its invite card stands for it)
