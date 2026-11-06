@@ -172,10 +172,10 @@ needs Manish at the Mac: "open window", then the Google client ([setup/google.md
   On "open window" it goes to `ai-peer-wp1-2` to record S1; WP3's live S2 walk asks for it later. F7 is live: the session-end hook is in `~/claude-config/settings.json` (synced) and
   `~/.codex/hooks.json` (backups in `~/.ai-peer/backups/`; both checked to parse), and the hourly
   scan reads `~/repos`.
-- Still running (21:51 on 6 Nov): the live Peer (pid 10924, above), `ai-peer-wp3-2` (pid 53664) and
-  `ai-peer-controller-4`'s watcher `docs/build/tools/watch2.zsh` (pid 23847, no AI; it tracks `ai-peer-wp3-2`
-  pid 53664 and the Peer pid 10924; exits with one line on a change or after 55 minutes; the controller
-  re-arms it; stop: `kill 23847`). `ai-peer-wp4-2` closed 21:51.
+- Still running (22:37 on 6 Nov): the live Peer (pid 10924, above), `ai-peer-wp3-2` (pid 53664) and
+  `ai-peer-controller-4`'s watcher `docs/build/tools/watch2.zsh` (pid 31191, no AI, `MAX=12600`: it runs until about
+  02:10 UTC unless something changes; it tracks `ai-peer-wp3-2` pid 53664 and the Peer pid 10924; stop:
+  `kill 31191`), plus the controller's own wake-up at 02:20 UTC for Manish's morning. `ai-peer-wp4-2` closed 21:51.
   At 20:47 `ai-peer-controller-3` had stopped its own watcher at the hand-off.
   Before that (18:55): the live Peer and `ai-peer-controller-3`'s watcher
   `watch2.zsh` (pid 74123, no AI, in the controller's scratchpad; it exits with one line on a change:
