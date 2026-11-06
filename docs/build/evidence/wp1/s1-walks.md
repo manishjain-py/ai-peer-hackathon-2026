@@ -121,6 +121,74 @@ Activity log (live, trimmed to the fields above):
 {"at": "2026-11-05T15:28:59+00:00", "kind": "sent_after_approval", "summary": "Posted the reply Manish approved in #content", "who_asked": "Ananya Rao", "where": "#content", "outcome": "done", "needs_review": false, "sources": ["Telugu learning language tracker (STATE.md), 2026-11-05", "Telugu brief (BRIEF-2026-11-04.md), 2026-11-04"]}
 ```
 
+## The Peer's browser sign-in (6 Nov, 18:06 to 18:18 UTC)
+
+Manish signed the Peer's own Chrome profile in to Slack at the Mac with `peer browser login` (email, the
+robot check with a picture puzzle, the emailed code). The first window (18:06) did not come up on his
+screen (CGWindowList: no window of it on screen), and when it did, a Google search typed into it met
+Google's "unusual traffic" puzzle. At 18:15 it was reopened on the Slack page with 30 minutes to finish
+instead of 15. That window came up in front, and he was in at 18:18:19 (“Signed in: the Peer can take
+screenshots now.”).
+
+## Walk 4: S1-online recorded (18:18 UTC on 6 Nov), Send clicked in the Peer's browser: PASSED
+
+Run by `ai-peer-wp1-3` with `peer scenario s1-online --record --auto-click`, a minute after Manish signed the
+Peer's own browser profile in to Slack at the Mac (`peer browser login`, done 18:18:19). The live Peer runs
+main's code. Walk file `~/.ai-peer/manish/walks/s1-online-20261106T181954Z.json`; screenshots and video in
+`~/.ai-peer/manish/walks/s1-online-20261106T181840Z/`.
+
+- **Ananya Rao posts in #content** (18:18:45, t=6.4 s): “Does anyone know who's driving Telugu and whether it ships this month? I need to plan the Telugu content reviews.”
+- **PASS owner_dm** with `"buttons": true`, 37.1 s after the post (limit 120 s; the brain drafted it in 29 s).
+- **owner's Send clicked in the Peer's browser profile**, `"ok": true` (18:19:32).
+- **PASS thread_reply** 3.3 s after the click (limit 300 s): “:robot_face: *Manish's AI Peer* here, an AI
+  assistant. Manish reviewed this answer: …”, with sources and certainty. It quotes the Telugu tracker as
+  changed at 18:15 UTC that day: fresh memory (F6) at work.
+- The card then reads “:white_check_mark: Sent in the thread: open it.” (`04-owner-dm-end.png` in the walk folder).
+- **video** `walk.mp4` (77 s, 1280×860), then **done**.
+
+![The draft card in Manish's DM with the AI Peer: why it matters, the draft, sources, Needs you, Send / Edit / Skip](s1-online-1-draft-card.png)
+
+![#content after Send: Ananya's question and, in her thread, the Peer's labelled reply](s1-online-2-reply-after-send.png)
+
+**Badge check** (avoiding the badge is why Manish chose real accounts): Ananya's post shows as “Ananya” with
+her own avatar, with no “APP” badge and no “via LLM Scenario”. Only the Peer's own messages carry Slack's
+“APP” badge, which fits its label as an AI.
+
+## Walk 5: S1-away recorded (18:20 UTC on 6 Nov): PASSED
+
+Run by `ai-peer-wp1-3` with `peer scenario s1-away --record`, right after walk 4, on Claude. Walk file
+`~/.ai-peer/manish/walks/s1-away-20261106T182225Z.json`; screenshots and video in
+`~/.ai-peer/manish/walks/s1-away-20261106T182028Z/`.
+
+- **Lakshmi Reddy posts in #schools** (18:20:33, t=6.4 s): “Hi team, quick one: who is driving Telugu, and is it shipping this month? Two Telugu-medium schools in Hyderabad asked me today.”
+- **PASS thread_reply** 37.1 s after the post (limit 180 s). Opens: “:robot_face: Hi Lakshmi, I'm *Manish's AI
+  Peer*, an AI assistant that covers for Manish. Manish is offline right now (it's 11:50 PM in India), so here
+  is what Manish's work records say: …”. It promises no ship date, gives sources with dates and certainty
+  high, and ends “I can't make commitments on Manish's behalf”.
+- **Lakshmi Reddy posts in the thread** (18:21:16, t=49.7 s): “Thanks, that helps! Will it cover Practice and Revise too, or only Learn at first? And will it be on the iPhone app?”
+- **PASS thread_reply** 40.1 s after the follow-up (limit 180 s). Opens: “*Practice and Revise:* yes, they're in
+  the plan. …”; on the iPhone, which apps come first “*hasn't been decided yet*”.
+- **PASS owner_dm** 3.4 s after the second answer (limit 30 s): one “While you were away” DM with both
+  questions, each with a “Needs you” line. It also notes that Ananya asked the same question in #content
+  that day (walk 4).
+- **video** `walk.mp4` (124 s, 1280×860), then **done**.
+
+![#schools: Lakshmi's question (3 replies) and, in her thread, the Peer's labelled answer while Manish is away](s1-away-1-thread.png)
+
+![Manish's DM with the AI Peer: the "While you were away" summary, under walk 4's sent card](s1-away-2-dm-summary.png)
+
+**Badge check:** Lakshmi's posts show as “Lakshmi” with her own avatar, with no “APP” badge and no “via LLM
+Scenario”.
+
+Activity log for walks 4 and 5 (live, trimmed):
+
+```json
+{"at": "2026-11-06T18:19:20+00:00", "kind": "drafted_for_owner", "summary": "Drafted a reply to Ananya Rao in #content for Manish to approve", "who_asked": "Ananya Rao", "where": "#content", "outcome": "pending_approval", "needs_review": true}
+{"at": "2026-11-06T18:19:32+00:00", "kind": "sent_after_approval", "summary": "Posted the reply Manish approved in #content", "who_asked": "Ananya Rao", "where": "#content", "outcome": "done", "needs_review": false}
+{"at": "2026-11-06T18:21:09+00:00", "kind": "answered_in_thread", "summary": "Answered Lakshmi Reddy in #schools while Manish was away", "who_asked": "Lakshmi Reddy", "where": "#schools", "outcome": "done", "needs_review": true}
+{"at": "2026-11-06T18:21:54+00:00", "kind": "answered_follow_up", "summary": "Answered a follow-up from Lakshmi Reddy in #schools", "who_asked": "Lakshmi Reddy", "where": "#schools", "outcome": "done", "needs_review": true}
+```
+
 ## What failed first, and the fix
 
 The first live try (02:46) got no reply: a colleague's post sent through the LLM Scenario app carries the
@@ -139,8 +207,9 @@ bot users are still skipped).
 
 ## Not yet
 
-- Screenshots and the Checkpoint 1 videos: they need the Peer's own browser profile signed in to Slack.
-  The headless sign-in (`peer browser login-headless`, 15:17 UTC) met Slack's robot check (reCAPTCHA)
-  after the email, so no code was mailed; Manish signs in himself in a window
-  (`peer browser login`), then `peer scenario s1-online --record --auto-click` and
-  `peer scenario s1-away --record`.
+- Nothing left in S1. The Peer's own browser profile is signed in to Slack (6 Nov, 18:18 UTC), so either
+  walk can be recorded again at any time (`peer scenario s1-online --record --auto-click`,
+  `peer scenario s1-away --record`). The two videos stay in `~/.ai-peer/manish/walks/` (walks 4 and 5); they
+  go to Manish with Checkpoint 1.
+- Earlier: the headless sign-in (`peer browser login-headless`, 15:17 UTC on 5 Nov) met Slack's robot check
+  (reCAPTCHA) after the email, so no code was mailed; a person signs in through the window.
