@@ -228,6 +228,7 @@ test" stays for WP4 unless Manish deletes it.
 | 11-05 15:26 | (Slack's "I'm not a robot" check stopped the headless sign-in; a person must do it, so the sign-in waits for him at the Mac, "open window"; meanwhile the S1-online walk with his own tap on Send) | "Online walk" |
 | 11-05 15:33 | (WP2's three F7 changes: the Claude Code session-end hook in his synced settings, the same hook in Codex, the hourly read-only scan of `~/repos`; recommended yes to all) | "Yes to all" |
 | 11-06 about 17:20 | (to ai-peer-controller-2; usage read 94% at 17:22) | "I think the usage now is above 90%, so we might have to switch the subscription and continue working in a new session with the different subscription. So as we generally do, please prepare that handoff and give me the steps that I need to do, like generally how you give me that one command that I need to run after switching the subscription, that reliably carries over the ownership to that new session in the different subscription." |
+| 11-06 18:06 | (to ai-peer-controller-3, typed in its session, after the 18:03 Attention ask for the Peer's Slack sign-in; relayed to `ai-peer-wp1-3` at once) | "open window" |
 
 ## Airbnb notes
 
