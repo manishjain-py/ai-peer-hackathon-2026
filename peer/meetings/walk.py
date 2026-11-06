@@ -225,6 +225,8 @@ def live_walk(st: Settings, name: str = "s3-meeting", question: str | None = Non
         time.sleep(3)
     m = mstore.get(st, mid)
     walk.note("update", status=m["status"], text=(m["data"].get("update") or {}).get("update"))
+    start = datetime.fromisoformat(m["start"]).timestamp()
+    time.sleep(max(0.0, start - 100 - time.time()))   # the colleague opens the meeting just before the Peer's tick joins
     scene = play_scene(st, walk, mid, sc, question, watch)   # the running Peer joins on its own at the start time
     for _ in range(200):
         if mstore.get(st, mid)["status"] in ("briefed", "failed", "ended"):

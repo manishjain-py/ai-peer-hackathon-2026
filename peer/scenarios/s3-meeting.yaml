@@ -7,7 +7,7 @@
 # activity log (then for its clip to finish); `none` just pauses.
 name: s3-meeting
 title: "S3 attend a meeting: the weekly product sync"
-meeting: {title: "Weekly product sync", at: "+2m", minutes: 15}
+meeting: {title: "Weekly product sync", at: "+6m", minutes: 15}   # live: time for the draft (about 40 s) and his tap
 colleague_bot: "Learn Like Magic team (scripted test bot)"
 steps:
   - say: {as: ananya, text: "Hi everyone, Ananya here. Let's start the weekly product sync."}
