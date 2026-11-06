@@ -5,6 +5,11 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
+2026-11-06 21:54. **`ai-peer-wp3-2` merged main (PR #5) into PR #3** at 37cb0c4 (the 7 additive conflicts, both
+sides kept; checked by the controller: PR #5 is in the branch, `schemas.py` parses, PR #3 mergeable and clean). Its
+checks and WP4's pass; `port-check` on `wp3test`: meetings and voice no FAIL, google FAILs "not signed in" (expected
+until the login). Context 28.7%. It waits, idle, for the Google client.
+
 2026-11-06 21:51. **WP4 done: PR #5 merged at 21:47:00 as 8ba2691** (checked by the controller), after the live
 S3 walk and the CLAUDE.md fix (51e260c). `ai-peer-wp4-2` gave the Peer back at 21:50 (pid 10924, from
 `~/repos/ai-peer-wp4` at 2aec10e; `voice.engine` back to `local`; no meeting open, no bot in a call) and was closed
@@ -273,7 +278,7 @@ Chrome: Manish let the kickoff session do setup steps in his logged-in Chrome. A
    ([setup/google.md](setup/google.md), about 5 minutes) and two consent clicks (manish@, admin@).
    Its live S2 walk needs the live Peer from the controller, after `ai-peer-wp1-3`'s recordings
    (done 18:22 on 6 Nov: the Peer is free; the controller hands it over once the Google client,
-   the logins and the spike pass). **Changed 21:18 on 6 Nov: WP4 merges first (PR #5, tonight).** Then
+   the logins and the spike pass). **Changed 21:18 on 6 Nov: WP4 merges first (PR #5, tonight).** (Done 21:54: merged at 37cb0c4, checks pass.) Then
    `ai-peer-wp3-2` merges `origin/main` into PR #3 before its walk (a merge commit; a trial merge of
    acc1d9b and 9c79a37 conflicts in 7 files, all additive: keep both sides). Three need care (the
    review's notes): `peer/brain/schemas.py` (both append at the end and share the closing lines: close
