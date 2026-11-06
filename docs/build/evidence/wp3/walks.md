@@ -55,7 +55,7 @@ Found and fixed after this walk: the draft's quote marks were escaped in Slack (
 the no-AI fallback reasons used raw message text; `brief.max_items` raised from 10 to 12 so real
 GitHub items are not squeezed out.
 
-Found by reading, before the live walk (`ai-peer-wp3-2`, 6 Nov 18:20): Gmail delivers each emailed
+Found by reading, before the live walk (`ai-peer-wp3-2`, 6 Nov about 18:06 UTC): Gmail delivers each emailed
 invitation (.ics) to the inbox as well as adding the event, with the same seed, so the brief would
 have listed each invite twice, once as "Email still waiting on you" with Draft reply (the
 never-drop rule keeps seeded mail). The fake Google never sent that email, so the dry walk could
@@ -63,3 +63,7 @@ not show it. Fixed: an invitation's own email is skipped for heads-ups and the b
 card with Accept stands for it); the dry run's fake now delivers that email too. A no-AI dry check
 passes: 13 items polled (9 mails, 2 invitation emails, 2 invites), 1 heads-up (Rohan), each invite
 once, with Accept.
+
+Also before the live walk: seeds closed by `peer seed clean` now leave later briefs (stored events
+keep their seed token, so the next morning brief would have listed cleaned mail and invites).
+No-AI dry check passes (13 seeds closed, no Google items left in the brief).
