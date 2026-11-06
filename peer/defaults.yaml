@@ -14,10 +14,9 @@ adapters:                       # what `peer port-check` checks (WP5; docs/porti
   slack: {module: peer.adapters.slack, class: SlackAdapter, query: Telugu}
   github: {module: peer.adapters.github, class: GitHubAdapter, query: Telugu}
   fake: {module: peer.adapters.fake, class: FakeAdapter}
-  google:                       # Gmail, Calendar, Drive/Docs: on PR #3 until it merges
+  google:                       # Gmail, Calendar, Drive/Docs (WP3); needs `peer google login peer` first
     module: peer.adapters.google
     class: GoogleAdapter
-    pending: "PR #3"
     query: Telugu
     blocked_by: [Blocked]       # google.act_on_real_items off: act only on seeded test items
     sample: {action: draft_reply, target_from_search: "in:inbox", target_prefix: "google:mail:", payload: {body: "port-check (dry run)"}}

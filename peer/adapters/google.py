@@ -40,7 +40,7 @@ import httpx
 
 from ..events import Event, now_iso
 from ..settings import PEER_HOME, get_settings
-from .base import Adapter, NotOffered
+from .base import Adapter, Blocked, NotOffered  # Blocked: the hard block's refusal (port-check: "blocked")
 
 CLIENT_FILE = PEER_HOME / "google-client.json"
 SEED_LEDGER = PEER_HOME / "google-seeds.jsonl"
@@ -65,10 +65,6 @@ class GoogleError(Exception):
     def __init__(self, status: int, msg: str):
         super().__init__(f"google {status}: {msg}")
         self.status = status
-
-
-class Blocked(Exception):
-    """The hard block refused an act on a real (not seeded) item."""
 
 
 def b64url(b: bytes) -> str:
@@ -379,6 +375,11 @@ class GoogleAdapter(Adapter):
         self.st = st or get_settings()
         self.email = (email or owner_email(self.st)).lower()
         self.api = GoogleAPI(self.email)
+
+    @classmethod
+    def from_settings(cls, st) -> "GoogleAdapter":
+        """port-check: the owner's Peer login (`peer google login peer` first)."""
+        return cls(st=st)
 
     # -- sense -------------------------------------------------------------------------------------
     def sense(self, cursor: str | None) -> tuple[list[Event], str | None]:
