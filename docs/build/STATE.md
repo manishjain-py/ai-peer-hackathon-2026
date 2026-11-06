@@ -5,7 +5,14 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
-2026-11-06 18:05. **On the new subscription** (weekly 33% at 17:56, Fable 0%, resets 11 Nov 12:30 IST).
+2026-11-06 18:25. **The Peer's Slack sign-in passed at 18:18** (Manish at the Mac), so the recorded S1
+walks run now (`ai-peer-wp1-3`). **Manish is asleep until his morning** (18:20: "please continue whatever
+work you can in the meantime"). Overnight: `ai-peer-wp1-3` finishes the recordings, evidence and
+Checkpoint 1; the controller writes WP4's brief, has it reviewed, and starts `ai-peer-wp4-1` once
+`ai-peer-wp1-3` closes (D13: two workers); `ai-peer-wp3-2` stays idle until the Google client. His
+morning list is "Needs Manish" item 0.
+
+Earlier, 18:05. **On the new subscription** (weekly 33% at 17:56, Fable 0%, resets 11 Nov 12:30 IST).
 Live controller: `ai-peer-controller-3` (window 2408), since 17:56. It closed the old account's idle
 worker windows (2049, 2216) and at 18:00 started `ai-peer-wp1-3` (window 2442: the Peer's Slack
 sign-in, the two recorded S1 walks, Checkpoint 1; ready 18:05, waiting for Manish's "open window",
@@ -129,8 +136,16 @@ needs Manish at the Mac: "open window", then the Google client ([setup/google.md
 
 The controller asks one at a time, in this order.
 
-0. **Done 17:56 on 6 Nov:** the subscription switch; `ai-peer-controller-3` runs on the new account.
-1. **Asked again 18:03 on 6 Nov (Attention, by ai-peer-controller-3): "open window" for `ai-peer-wp1-3`, which is ready.** **Changed 15:26: the headless sign-in hit Slack's "I'm not a robot" check (no code sent); a person must do it, so it waits for Manish at the Mac ("open window": a Chrome window in the Peer's own profile, he types the email, ticks the box, types the code). Meanwhile S1-online runs live with his own tap on Send.** Earlier: waiting, the build's only blocker (asked 02:47 on 5 Nov; again 02:59, and reminders at 04:53 and 12:56, by ai-peer-controller-2 on Attention):**
+0. **His morning (7 Nov), in order, one at a time:** (a) the Google client, [setup/google.md](setup/google.md)
+   steps 1 to 5 in his Work Chrome (asked 18:18 on 6 Nov; he types "downloaded" and the controller
+   moves the file to `~/.ai-peer/google-client.json`); (b) "go login" for `ai-peer-wp3-2`: two Google
+   consent pages (manish@, then admin@); (c) **the Peer's own Codex login, deadline 8 Nov 02:25 UTC**
+   (item 4); (d) from his phone, the live F5 check ("Next" item 2); (e) untick "Allow JavaScript
+   from Apple Events" in his Work Chrome. Done 17:56 on 6 Nov: the subscription switch. (The recorded
+   S1-online walk passed 18:18 to 18:20 with the scripted Send click, so no tap is needed.)
+1. **Done 18:18 on 6 Nov: the Peer's Slack sign-in** (his "open window" at 18:06; the first window opened
+   hidden off screen, so `ai-peer-wp1-3` reopened it in front at 18:15; he signed in with Slack's emailed
+   sign-in link; `login-2-after-code.png` shows the client as manish). Asked again 18:03 on 6 Nov. **Changed 15:26: the headless sign-in hit Slack's "I'm not a robot" check (no code sent); a person must do it, so it waits for Manish at the Mac ("open window": a Chrome window in the Peer's own profile, he types the email, ticks the box, types the code). Meanwhile S1-online runs live with his own tap on Send.** Earlier: waiting, the build's only blocker (asked 02:47 on 5 Nov; again 02:59, and reminders at 04:53 and 12:56, by ai-peer-controller-2 on Attention):**
    step 5, the Peer's own Slack sign-in. The worker types
    manish@learnlikemagic.com on Slack's sign-in page; Manish reads the code Slack mails to
    manish@ (no Chrome profile the controller can drive has that inbox) and it goes into
@@ -229,6 +244,7 @@ test" stays for WP4 unless Manish deletes it.
 | 11-05 15:33 | (WP2's three F7 changes: the Claude Code session-end hook in his synced settings, the same hook in Codex, the hourly read-only scan of `~/repos`; recommended yes to all) | "Yes to all" |
 | 11-06 about 17:20 | (to ai-peer-controller-2; usage read 94% at 17:22) | "I think the usage now is above 90%, so we might have to switch the subscription and continue working in a new session with the different subscription. So as we generally do, please prepare that handoff and give me the steps that I need to do, like generally how you give me that one command that I need to run after switching the subscription, that reliably carries over the ownership to that new session in the different subscription." |
 | 11-06 18:06 | (to ai-peer-controller-3, typed in its session, after the 18:03 Attention ask for the Peer's Slack sign-in; relayed to `ai-peer-wp1-3` at once) | "open window" |
+| 11-06 18:20 | (to ai-peer-controller-3, after the sign-in passed and the Google client steps were sent) | "going to sleep now. will check back in the morning. please continue whatever work you can in the meantime" |
 
 ## Airbnb notes
 
