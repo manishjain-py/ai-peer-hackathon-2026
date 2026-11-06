@@ -5,12 +5,37 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
-2026-11-05 15:32. **WP1 merged** ([PR #1](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/1),
-merge commit 183fabe, 15:31:54): S1 passes live, away on Claude and Codex, online with Manish's
-own tap on Send. Left for `ai-peer-wp1-2` (`~/repos/ai-peer-wp1`, which the live Peer runs from):
-the Peer's browser sign-in at the Mac (Manish's "open window"), the two recorded walks, the
-screenshots and Checkpoint 1. **WP2 started early** (10:45): `ai-peer-wp2-1` in `~/repos/ai-peer-wp2`
-on `wp2-setup-memory`. Live controller: `ai-peer-controller-2`.
+2026-11-06 20:40. **WP5's first part merged** ([PR #6](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/6), merge commit b877a87, 20:39): `port-check` (0 FAIL on
+directory, slack, github and fake; google, meetings and voice "not on main yet" until PRs #3 and #5 merge),
+[the porting guide](../porting-guide.md), the porting walk passed (a fresh sub-agent ported a toy "teamchat"
+adapter from the guide alone; its 11 gaps folded into the guide) and [the demo script](../../demo/script.md)
+(S1 final; S2 and S3 until their live walks). Evidence: [evidence/wp5/](evidence/wp5/). `ai-peer-wp5-1`
+stopped (context 36%, weekly 42% at 20:40).
+
+Earlier, 20:11. **WP4's dry S3 walk passed** (19:42 to 19:47; `ai-peer-wp4-1` handed off at 42% and was closed 19:52; `ai-peer-wp4-2` starts when the live Peer is free after WP3's S2 walk). **WP5 started 20:10**: `ai-peer-wp5-1` (window 2607), the porting guide, `port-check`, the porting walk and a demo script, stopping tonight at 60% weekly usage. 19:17: **WP4's spike passed** (19:15: on the test meeting the holding line is heard 3.1 to 3.9 s and the live answer 7.3 to 8.1 s after a question; draft [PR #5](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/5); `ai-peer-wp4-1` now builds before, during and after). 18:55: **WP1 complete and Checkpoint 1 sent** (18:26:57, Telegram Attention, both recorded
+walks' videos; `ai-peer-wp1-3` closed 18:29). **WP4 started 18:52**: `ai-peer-wp4-1` (window 2595) in
+`~/repos/ai-peer-wp4` on `wp4-meeting`, from [its brief](handoffs/HANDOFF-2026-11-06-ai-peer-wp4-1.md)
+(a read-only review found 18 issues, all folded; the worst: Recall's default transcription delays live
+events 3 to 10 minutes, and the ElevenLabs key is Learn Like Magic's live one). It works alone tonight:
+spike, build, dry walk on test owner `wp4test`. **Manish is asleep until his morning** (18:20: "please
+continue whatever work you can in the meantime"); `ai-peer-wp3-2` stays idle until his Google client.
+His morning list is "Needs Manish" item 0.
+
+Earlier, 18:25. **The Peer's Slack sign-in passed at 18:18** (Manish at the Mac); the recorded S1 walks
+4 and 5 passed 18:18 to 18:22.
+
+Earlier, 18:05. **On the new subscription** (weekly 33% at 17:56, Fable 0%, resets 11 Nov 12:30 IST).
+Live controller: `ai-peer-controller-3` (window 2408), since 17:56. It closed the old account's idle
+worker windows (2049, 2216) and at 18:00 started `ai-peer-wp1-3` (window 2442: the Peer's Slack
+sign-in, the two recorded S1 walks, Checkpoint 1; ready 18:05, waiting for Manish's "open window",
+asked on Attention 18:03) and `ai-peer-wp3-2` (window 2445: the Google client, the two logins, the
+spike, the live S2 walk, the merge of draft PR #3). **WP1 and WP2 merged** ([PR #1](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/1)
+183fabe, [PR #2](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/2) 88ac13e); **WP3**'s dry S2 walk passed. Next
+needs Manish at the Mac: "open window", then the Google client ([setup/google.md](setup/google.md)).
+
+- **Subscription switch** (6 Nov, 17:22 to 17:56): the old account reached 94% weekly usage;
+  `ai-peer-controller-2` and both workers handed off (the three `HANDOFF-2026-11-06-*` files);
+  Manish switched this Mac's Claude login and launched `ai-peer-controller-3`.
 
 - **WP2 started before the WP1 merge** (controller-2's call, 10:31 to 10:45): WP1's code is built and
   S1-away passes live; only its last walk and the merge wait on Manish's sign-in code (asked
@@ -57,7 +82,7 @@ on `wp2-setup-memory`. Live controller: `ai-peer-controller-2`.
   the Send click) and the screenshots and video, which wait on the Peer's browser sign-in.
 - **Live S1 started** (02:46 on 5 Nov): channels #product, #content, #schools and
   #engineering hold exactly the five colleagues, Manish and the Peer (preethi in none,
-  checked). The Peer runs live (pid in `~/.ai-peer/manish/watch.pid`; the worker's process).
+  checked). The Peer runs live (pid in `~/.ai-peer/manish/watch.pid`; where it runs from: "The live Peer" below).
   The first live S1-away walk failed: posts through LLM Scenario carry the app's `bot_id`
   and the filter dropped them as bot messages; fixed (a post is a person's when its user is a
   real member), restarted 02:53, rerun under way at 02:54.
@@ -85,24 +110,25 @@ on `wp2-setup-memory`. Live controller: `ai-peer-controller-2`.
   with Manish not in the call. Zoom: his paid Workplace Pro account (personal Gmail).
 - All accounts and `.env` names: [setup/accounts.md](setup/accounts.md).
 - **The live Peer** (owner `manish`) runs from `~/repos/ai-peer-wp2` since about 16:00 on 5 Nov (pid
-  in `~/.ai-peer/manish/watch.pid`, the only `peer watch`; checked 16:03), held by `ai-peer-wp2-1`
-  for its live walks; WP1's process was stopped through its pid file. On "open window" the
-  controller hands it back to `ai-peer-wp1-2`, which restarts it from `~/repos/ai-peer-wp1` to
-  record S1. F7 is live: the session-end hook is in `~/claude-config/settings.json` (synced) and
+  in `~/.ai-peer/manish/watch.pid`, the only `peer watch`; pid 62524 since 16:18, detached; checked
+  16:21), on main's code (WP2's branch is merged). Nobody holds it since `ai-peer-wp2-1` closed
+  (16:21); the controller hands it out. Keep `~/repos/ai-peer-wp2` while the Peer runs from it.
+  On "open window" it goes to `ai-peer-wp1-2` to record S1; WP3's live S2 walk asks for it later. F7 is live: the session-end hook is in `~/claude-config/settings.json` (synced) and
   `~/.codex/hooks.json` (backups in `~/.ai-peer/backups/`; both checked to parse), and the hourly
   scan reads `~/repos`.
-- Still running: the controller's watcher (background task of `ai-peer-controller-2`,
-  `watch2.zsh`, re-armed 10:45 on 5 Nov for `ai-peer-wp1-2` and `ai-peer-wp2-1`; ends with that
-  session). It wakes the controller when a `.env` key name appears, a PR changes, a worker passes
-  45% context or exits, else after 55 minutes. The live Peer (pid in `~/.ai-peer/manish/watch.pid`, detached,
-  page http://127.0.0.1:8787) is the WP1 worker's. Earlier note, from before 02:58: the worker's two
-  waiters run until about 18:05 on 5 Nov: spike 1d starts by itself 60 s after
-  `ZOOM_TEST_MEETING_URL` appears in `.env`; the colleague sign-in helper starts when
-  `SLACK_SCENARIO_CLIENT_ID` and `_SECRET` appear (it writes
-  `~/.ai-peer/world-auth-link.txt` for his step 4). Controller-2 context 8.5% at 02:59.
-- **Weekly usage 59% at 11:18 on 5 Nov** (55% at 07:41; 54% at 02:59; 35% at 15:22 on 4 Nov):
-  about 4 points from WP2's 35-minute build and its brief's review; about 1 point in the 4.7 h
-  before, while the build waited. The reset is 10 Nov, 04:30 IST; per D14 Codex is the backup builder at about 95%.
+- Still running (18:55 on 6 Nov): the live Peer (above) and `ai-peer-controller-3`'s watcher
+  `watch2.zsh` (pid 74123, no AI, in the controller's scratchpad; it exits with one line on a change:
+  a worker or the Peer gone, a worker at 45% context, the PR list, the `.env` key names, the Google
+  client file, or after 55 minutes; the controller re-arms it; stop: `kill 74123`). It tracks
+  `ai-peer-wp5-1` (pid 71998), `ai-peer-wp3-2` (pid 53664) and the Peer (pid 62524). Worktrees:
+  `~/repos/ai-peer-wp1` (done), `~/repos/ai-peer-wp2` (the Peer runs from it), `~/repos/ai-peer-wp3`,
+  `~/repos/ai-peer-wp4`. Controller-3 context 8% at 17:57, 27% at 18:28.
+- **New account, from 17:56 on 6 Nov: weekly 33% (all models) and Fable 0% at 17:56; resets 11 Nov
+  12:30 IST.** At 93% start nothing that cannot finish cleanly; at 95% hand off.
+- **Old account: weekly usage 94% at 17:22 on 6 Nov** (72% at 17:57 on 5 Nov; 70% at 17:01; 68% at 16:33; 64% at 16:16; 59% at 11:18; 55% at 07:41; 54% at 02:59):
+  about 9 points since 11:18, from WP2's live walks, WP1's walks and two brief reviews (about
+  200k tokens each); about 1 point in the 4.7 h before 07:41, while the build waited. A busy
+  worker uses about 7 points an hour, so 95% could come within hours of WP3's busiest work. The reset is 10 Nov, 04:30 IST; per D14 Codex is the backup builder at about 95%.
   `ai-peer-wp1-2` read in, context 10% at 14:47, waiting for "go login" (it also fixed the Peer
   browser's old Chrome version, which Slack would stop supporting on 9 Nov).
 
@@ -110,16 +136,32 @@ on `wp2-setup-memory`. Live controller: `ai-peer-controller-2`.
 |---|---|---|---|---|
 | kickoff, registry name `learnlikemagic-27` | 1661 | `~/repos/ai-peer-hackathon-2026` | `main` | Interview, docs, restructure, Slack, Recall, ElevenLabs, GitHub set up; handed off at 46% (about 15:07); its window stays open until Manish closes it (it told him he may). The controller owns every ask to Manish |
 | ai-peer-controller-1 | 1715 (closed 03:01 by controller-2) | `~/repos/ai-peer-hackathon-2026` | `main` (docs only) | Handed off at 42% (02:57 on 5 Nov) to ai-peer-controller-2; stopped; https://claude.ai/code/session_01Nfn5h9PisnJvGpbLbRtbiB |
-| **ai-peer-controller-2** (live controller) | 2048 (pid 52453) | `~/repos/ai-peer-hackathon-2026` | `main` (docs only) | Runs the build from `handoffs/HANDOFF-2026-11-05-ai-peer-controller-2.md`; https://claude.ai/code/session_01Nfn5h8mSoWxqjYkbP3JnvB |
+| ai-peer-controller-2 | 2048 (gone by 17:57 on 6 Nov, before controller-3's checks; pid 52453 gone) | `~/repos/ai-peer-hackathon-2026` | `main` (docs only) | Handed off at 94% weekly usage (6 Nov) to ai-peer-controller-3; stopped; https://claude.ai/code/session_01Nfn5h8mSoWxqjYkbP3JnvB |
+| **ai-peer-controller-3** (live controller) | 2408 (pid 51569) | `~/repos/ai-peer-hackathon-2026` | `main` (docs only) | Live since 17:56 on 6 Nov, on the new subscription, from [its hand-off](handoffs/HANDOFF-2026-11-06-ai-peer-controller-3.md); https://claude.ai/code/session_01NAqLMnV6cKswAd8t7TNx8g |
+| ai-peer-wp1-3 | 2442 (closed 18:29 on 6 Nov by controller-3: idle, only a caffeinate helper left) | `~/repos/ai-peer-wp1` | `wp1-login-window`, [PR #4](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/4) merged 18:26 (006b4b6) | **WP1 complete.** Started 18:00 on 6 Nov ([hand-off](handoffs/HANDOFF-2026-11-06-ai-peer-wp1-3.md)). The Peer's Slack sign-in passed 18:18; recorded walks 4 (S1-online, Send clicked in the Peer's browser) and 5 (S1-away) passed 18:18 to 18:22; evidence on `main` (3358906); Checkpoint 1 to the controller 18:25; the live Peer released at 18:25 (never restarted; presence back on auto). PR #4: `peer browser login` waits 30 minutes. Worktree kept; spawned no successor; stopped; https://claude.ai/code/session_01NAqLMnsPK5F9m9cVsQKQHv |
+| **ai-peer-wp3-2** | 2445 (pid 53664) | `~/repos/ai-peer-wp3` | `wp3-google-brief`, draft [PR #3](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/3) | Started 18:00 on 6 Nov ([hand-off](handoffs/HANDOFF-2026-11-06-ai-peer-wp3-2.md)): the Google client (Manish), the two logins, the spike, then the live S2 walk once the controller says "the Peer is yours", then the merge; https://claude.ai/code/session_01NAqLMjvu4kLmGgH7L1kkkA |
+| ai-peer-wp4-1 | 2595 (closed 19:52 on 6 Nov by controller-3: idle, no child processes, no tunnel or listener, its sub-agent done) | `~/repos/ai-peer-wp4` | `wp4-meeting` at 9c79a37, draft [PR #5](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/5) | Started 18:52 on 6 Nov ([brief](handoffs/HANDOFF-2026-11-06-ai-peer-wp4-1.md)): WP4, the `meetings` adapter on Recall.ai and S3. Spike first (low-latency live transcript through a `cloudflared` tunnel, a warm session, speech, the whole loop), then the build and a dry walk on test owner `wp4test`; its live walk waits for the live Peer after WP3. Never the cloned voice; joins only the test meeting; Learn Like Magic's ElevenLabs key capped at 20,000 characters; Recall spend stops at about $3; https://claude.ai/code/session_01NAqLMmLGX1pk6L2qLS3zAy **Spike passed 19:15 on 6 Nov** ([evidence](https://github.com/manishjain-py/ai-peer-hackathon-2026/blob/wp4-meeting/docs/build/evidence/wp4/spike.md) on the branch, b17d4f8): on the test meeting with two bots and local voices, from the end of a question the holding line is heard after 3.1 to 3.9 s and the live answer after 7.3 to 8.1 s (final transcript line 0.8 to 1.1 s after the last word; warm Opus session at effort medium: spoken answer ready in 2 to 4 s). `cloudflared` 2026.10.7 installed (`brew install cloudflared`). Recall: 565 bot-seconds (about $0.10) for the spike; 832 this week in all. ElevenLabs: 0 characters spent (account 16.6% used). Context 30% at 19:15; weekly 38% at 18:53 **S3 dry walk passed 19:42 to 19:47** ([evidence](https://github.com/manishjain-py/ai-peer-hackathon-2026/blob/wp4-meeting/docs/build/evidence/wp4/s3-walks.md) on the branch): the update card and tap, the Peer's intro, the update on request, two live answers (one unscripted) with certainty, dates and flags, the decision as notes, the brief in the (fake) DM and on the new Meetings page, every step logged. ElevenLabs checked for the live walk (stock voices; 1,100 of 20,000 characters). Recall about 1,930 bot-seconds in all for WP4 (about $0.35). **Handed off 19:55 at 42% context** to `ai-peer-wp4-2`, not spawned: [hand-off](handoffs/HANDOFF-2026-11-06-ai-peer-wp4-2.md) (the live walk on the live Peer with ElevenLabs voices, which needs the controller's slot and Manish's tap, then the merge). Nothing of its own running; stopped |
+| **ai-peer-wp4-2** | (not started) | `~/repos/ai-peer-wp4` | `wp4-meeting`, draft [PR #5](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/5) | Its [hand-off](handoffs/HANDOFF-2026-11-06-ai-peer-wp4-2.md) is on main: the live S3 walk and the merge. The controller starts it when the live Peer is free, after WP3's S2 walk (the walk restarts the Peer from `~/repos/ai-peer-wp4` and needs Manish's tap on "Approve update", or the controller's OK for `--auto-click`) |
+| ai-peer-wp5-1 | 2607 (pid 71998) | `~/repos/ai-peer-wp5` | `wp5-porting`, [PR #6](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/6) merged 20:39 (b877a87) | **WP5's first part done.** Started 20:10 on 6 Nov ([brief](handoffs/HANDOFF-2026-11-06-ai-peer-wp5-1.md)). `port-check` with an `adapters:` list in settings (0 FAIL at 20:25 on test owner `wp5test`; its FAIL paths proven on broken adapters), [the porting guide](../porting-guide.md), the porting walk passed 20:24 to 20:35 (11 gaps folded), [the demo script](../../demo/script.md); evidence in [evidence/wp5/](evidence/wp5/). Context 36%, weekly 42% at 20:40. Nothing of its own running (test owner `~/.ai-peer/wp5test/` kept); worktree kept; spawned no successor; stopped; https://claude.ai/code/session_01NAqLMiWg1M3rHNkMHb3SMa |
 | ai-peer-wp1-1 | 1725 (closed 03:01 by controller-2) | `~/repos/ai-peer-wp1` | `wp1-foundation`, draft PR #1 | WP1 foundation + S1. Handed off at 44.2% (2026-11-05 03:02 UTC) to `ai-peer-wp1-2` ([hand-off](handoffs/HANDOFF-2026-11-05-ai-peer-wp1-2.md)); stopped. The Peer it started keeps running (`peer stop`/`peer start`, pid file); https://claude.ai/code/session_01Nfn5h8PVD6txxjBUfab4nR |
-| **ai-peer-wp1-2** | 2049 (pid 54508) | `~/repos/ai-peer-wp1` | `wp1-foundation`, PR #1 merged 15:31 (183fabe); a follow-up PR from the same branch only if the recorder needs code | Started 03:01 by controller-2 from [its hand-off](handoffs/HANDOFF-2026-11-05-ai-peer-wp1-2.md). Done: S1-online live with Manish's tap, the merge. Left, on Manish's "open window": the browser sign-in, the recorded walks, screenshots, Checkpoint 1. Runs the live Peer; leaves the worktree and the Peer in place at the end; idle pings off; context 18% at 15:33; https://claude.ai/code/session_01Nfn5h9oCzikhfgVU9KBwCz |
-| **ai-peer-wp2-1** | 2129 (pid 43454) | `~/repos/ai-peer-wp2` | `wp2-setup-memory`, [PR #2](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/2) **merged 16:19 as 88ac13e** | WP2 done: F1 to F7 walked (evidence `docs/build/evidence/wp2/walks.md`); the away switch walked live 15:39; the live F5 DM check is in Next. **Changed at Manish's "Yes to all" (15:33):** `~/claude-config/settings.json` (what `~/.claude/settings.json` links to) gained `hooks.SessionEnd` running `~/.ai-peer/bin/session-end claude` behind `test -x` (undo: delete the `SessionEnd` key); `~/.codex/hooks.json` gained the same with `codex` (undo: delete its `SessionEnd` key); owner `manish` settings `local.folders: ["~/repos"]` (undo: `[]`); backups in `~/.ai-peer/backups/`. **The live Peer runs from this worktree** (pid 62524, started 16:18, skill links point here): keep the worktree until the Peer moves. Stopped; https://claude.ai/code/session_01Nfn5h6apXjAgQuN9wUq54K |
+| ai-peer-wp1-2 | 2049 (closed 17:57 on 6 Nov by controller-3: idle, no child processes) | `~/repos/ai-peer-wp1` | `wp1-foundation`, PR #1 merged 15:31 (183fabe) | Done: S1-online live with Manish's tap, the merge, a recorder smoke test. Handed off at 19.3% (2026-11-06 17:25 UTC, weekly usage 94% on the old account) to `ai-peer-wp1-3` on the new account ([hand-off](handoffs/HANDOFF-2026-11-06-ai-peer-wp1-3.md): the "open window" sign-in, the two recorded walks, evidence, Checkpoint 1); spawned no successor; stopped; https://claude.ai/code/session_01Nfn5h9oCzikhfgVU9KBwCz |
+| ai-peer-wp2-1 | 2129 (closed 16:21 by controller-2: idle, nothing running; the live Peer kept running) | `~/repos/ai-peer-wp2` | `wp2-setup-memory`, [PR #2](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/2) **merged 16:19 as 88ac13e** | WP2 done: F1 to F7 walked (evidence `docs/build/evidence/wp2/walks.md`); the away switch walked live 15:39; the live F5 DM check is in Next. **Changed at Manish's "Yes to all" (15:33):** `~/claude-config/settings.json` (what `~/.claude/settings.json` links to) gained `hooks.SessionEnd` running `~/.ai-peer/bin/session-end claude` behind `test -x` (undo: delete the `SessionEnd` key); `~/.codex/hooks.json` gained the same with `codex` (undo: delete its `SessionEnd` key); owner `manish` settings `local.folders: ["~/repos"]` (undo: `[]`); backups in `~/.ai-peer/backups/`. **The live Peer runs from this worktree** (pid 62524, started 16:18, skill links point here): keep the worktree until the Peer moves. Stopped; https://claude.ai/code/session_01Nfn5h6apXjAgQuN9wUq54K |
+| ai-peer-wp3-1 | 2216 (closed 17:57 on 6 Nov by controller-3: idle, no child processes) | `~/repos/ai-peer-wp3` | `wp3-google-brief` at 79ee537, **draft [PR #3](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/3)** | S2 dry walk passed 17:00 on 5 Nov (evidence `docs/build/evidence/wp3/walks.md` on the branch). **Handed off 17:27 on 6 Nov** at the controller's request (the old account's weekly usage 94%; context 39%) to `ai-peer-wp3-2`, not spawned: [hand-off](handoffs/HANDOFF-2026-11-06-ai-peer-wp3-2.md) (the Google client, the two logins, the spike, the live S2 walk, merge). Defaults kept: `google.act_on_real_items` and `google.show_real_items` off, the seed ledger, `peer seed clean`. Nothing of its own running; https://claude.ai/code/session_01Nfn5h7CXNKkUk7N614bzgr |
 
 ## Needs Manish
 
 The controller asks one at a time, in this order.
 
-1. **Changed 15:26: the headless sign-in hit Slack's "I'm not a robot" check (no code sent); a person must do it, so it waits for Manish at the Mac ("open window": a Chrome window in the Peer's own profile, he types the email, ticks the box, types the code). Meanwhile S1-online runs live with his own tap on Send.** Earlier: waiting, the build's only blocker (asked 02:47 on 5 Nov; again 02:59, and reminders at 04:53 and 12:56, by ai-peer-controller-2 on Attention):**
+0. **His morning (7 Nov), in order, one at a time:** (a) the Google client, [setup/google.md](setup/google.md)
+   steps 1 to 5 in his Work Chrome (asked 18:18 on 6 Nov; he types "downloaded" and the controller
+   moves the file to `~/.ai-peer/google-client.json`); (b) "go login" for `ai-peer-wp3-2`: two Google
+   consent pages (manish@, then admin@); (c) **the Peer's own Codex login, deadline 8 Nov 02:25 UTC**
+   (item 4); (d) from his phone, the live F5 check ("Next" item 2); (e) untick "Allow JavaScript
+   from Apple Events" in his Work Chrome. Done 17:56 on 6 Nov: the subscription switch. (The recorded
+   S1-online walk passed 18:18 to 18:20 with the scripted Send click, so no tap is needed.)
+1. **Done 18:18 on 6 Nov: the Peer's Slack sign-in** (his "open window" at 18:06; the first window opened
+   hidden off screen, so `ai-peer-wp1-3` reopened it in front at 18:15; he signed in with Slack's emailed
+   sign-in link; `login-2-after-code.png` shows the client as manish). Asked again 18:03 on 6 Nov. **Changed 15:26: the headless sign-in hit Slack's "I'm not a robot" check (no code sent); a person must do it, so it waits for Manish at the Mac ("open window": a Chrome window in the Peer's own profile, he types the email, ticks the box, types the code). Meanwhile S1-online runs live with his own tap on Send.** Earlier: waiting, the build's only blocker (asked 02:47 on 5 Nov; again 02:59, and reminders at 04:53 and 12:56, by ai-peer-controller-2 on Attention):**
    step 5, the Peer's own Slack sign-in. The worker types
    manish@learnlikemagic.com on Slack's sign-in page; Manish reads the code Slack mails to
    manish@ (no Chrome profile the controller can drive has that inbox) and it goes into
@@ -149,6 +191,7 @@ The controller asks one at a time, in this order.
 7. His other Mac's copy (`~/repos/Hackathon 2026`, per the `$ai-peer` skill) predates
    the `film/` move: push anything unpushed there, then pull.
 8. Optional housekeeping: delete the unused Recall key "ai-peer" in the Recall dashboard.
+9. Optional: the Peer uses Learn Like Magic's own ElevenLabs key (`docs/build/setup/accounts.md`), shared with its live product. WP4 caps itself at 20,000 characters, one request at a time, no voice changes. A separate ElevenLabs key for the Peer would keep them apart (his money and his account; recommend: only if the demo needs much more speech).
 
 Chrome: Manish let the kickoff session do setup steps in his logged-in Chrome. At 02:05 on
 5 Nov he authorised the controller to do the remaining colleague setup steps the same way
@@ -156,10 +199,8 @@ Chrome: Manish let the kickoff session do setup steps in his logged-in Chrome. A
 
 ## Next
 
-1. WP1 (`ai-peer-wp1-2`): merged 15:31 (183fabe). On Manish's "open window" at the Mac: the
-   browser sign-in (`peer browser login`, he signs in himself), then `peer scenario s1-online
-   --record --auto-click` and `peer scenario s1-away --record`, the screenshots into evidence on
-   `main`, and Checkpoint 1 (the two `walk.mp4` and how he tries it) to the controller.
+1. WP1: **complete** (`ai-peer-wp1-3`, 6 Nov): the Peer's Slack sign-in (18:18), recorded walks 4 and 5
+   ([evidence](evidence/wp1/s1-walks.md)), Checkpoint 1 sent to the controller at 18:25. Nothing left.
 2. WP2 merged (88ac13e). Left: **the live F5 check**, by any session once Manish types (the live
    Peer runs from `~/repos/ai-peer-wp2`). (a) He types in his Slack DM with the AI Peer, as a new
    message: `stop telling me about CI failures on drafts`. Pass: within about 30 s a one-line reply
@@ -171,10 +212,26 @@ Chrome: Manish let the kickoff session do setup steps in his logged-in Chrome. A
    `AI_PEER_OWNER=manish .venv/bin/python -m peer sample-heads-up` prints `"did": "told"` and a
    "CI failed on main … (walk sample)" heads-up lands in his DM. (d) Add the result to
    `docs/build/evidence/wp2/walks.md` on `main`. He may say `undo` in the DM afterwards.
-3. At the WP1 merge: finalise `docs/build/handoffs/DRAFT-ai-peer-wp3-1.md` (re-check its cited
-   lines on the new head, a read-only check for stale facts and risks to the live Peer, the same
-   pre-merge lessons as WP2's brief), create `~/repos/ai-peer-wp3` (`wp3-google-brief`), spawn.
-   Never remove `~/repos/ai-peer-wp1` while the live Peer runs from it.
+3. WP3 (`ai-peer-wp3-2`, since 18:00 on 6 Nov): spike first; needs Manish at the Mac for the Google client
+   ([setup/google.md](setup/google.md), about 5 minutes) and two consent clicks (manish@, admin@).
+   Its live S2 walk needs the live Peer from the controller, after `ai-peer-wp1-3`'s recordings
+   (done 18:22 on 6 Nov: the Peer is free; the controller hands it over once the Google client,
+   the logins and the spike pass).
+3b. WP4: the dry S3 walk passed (19:42 to 19:47 on 6 Nov). Its live walk and the merge of PR #5 go to
+   `ai-peer-wp4-2` ([hand-off](handoffs/HANDOFF-2026-11-06-ai-peer-wp4-2.md)), started when the live Peer is free after
+   WP3's S2 walk and merge; then Checkpoint 3. WP5's first part merged 20:39 (PR #6). **After PRs #3 and
+   #5 merge** (a later session, docs only, straight to `main`): re-run `port-check` on a test owner for
+   `google`, `meetings` and `voice` (their `adapters:` entries and dry-run samples were written from reading
+   the PRs; google's sample tries `draft_reply` in dry run on the newest inbox mail, so it needs the Google
+   login), then drop "until it merges" in the guide's google, meetings and voice parts and update the demo
+   script's S2 and S3 from their live walks. A later code step: route the runtime spots that still pick
+   adapters or call Slack and GitHub methods directly through the contract (the guide's "What a port also
+   edits today" lists each). Optional: PR #3 and #5's adapters raise `peer.adapters.base.Blocked` and add
+   `dry_run_sample()`; then their `sample:` and `blocked_by:` entries can go. Left in WP5: the web page
+   polish, the 15 Nov rehearsals with the backup recordings (`demo/recordings/`), the film opener cut, the
+   hand-over to the Airbnb laptop (the guide's last section).
+4. Manish's next Mac sitting, in order: the Google client (5 minutes), the two Google consents, the
+   Peer's Codex login (before 8 Nov 02:25). Done: "open window" (the Slack sign-in, 18:18 on 6 Nov).
 
 For WP4 (from spike 1d): "Peer" transcribes as "pier", so addressed-detection accepts
 homophones; pad each clip with about 1 s of silence (the first second is clipped);
@@ -186,7 +243,7 @@ test" stays for WP4 unless Manish deletes it.
 
 | # | Scene | Status |
 |---|---|---|
-| 1 | S1 Slack cover | Walks pass live (away on Claude and Codex, 02:54 and 02:56; online with Manish's tap, 15:26 to 15:29 on 5 Nov); PR #1 merged 15:31. The checkpoint message (two walk videos, how to try it) waits for the browser sign-in at the Mac |
+| 1 | S1 Slack cover | **Done 18:25 on 6 Nov**: the checkpoint message (the two recorded walks' videos, how to try it) went to the controller for Manish's Telegram; **sent to him at 18:26:57** (Attention group, the text and both videos, by controller-3). Recorded walks 4 (online, Send clicked in the Peer's browser, 18:18 to 18:20) and 5 (away, 18:20 to 18:22) passed ([evidence](evidence/wp1/s1-walks.md)). Earlier: away on Claude and Codex (02:54, 02:56 on 5 Nov), online with Manish's tap (15:26 to 15:29); PR #1 merged 15:31 on 5 Nov |
 | 2 | S2 daily brief + setup page | not started |
 | 3 | S3 meeting | not started |
 
@@ -215,6 +272,9 @@ test" stays for WP4 unless Manish deletes it.
 | 11-05 15:17 | (to ai-peer-controller-2, after "Anything needs me?": the Peer's Slack sign-in, step 5) | "Ready" |
 | 11-05 15:26 | (Slack's "I'm not a robot" check stopped the headless sign-in; a person must do it, so the sign-in waits for him at the Mac, "open window"; meanwhile the S1-online walk with his own tap on Send) | "Online walk" |
 | 11-05 15:33 | (WP2's three F7 changes: the Claude Code session-end hook in his synced settings, the same hook in Codex, the hourly read-only scan of `~/repos`; recommended yes to all) | "Yes to all" |
+| 11-06 about 17:20 | (to ai-peer-controller-2; usage read 94% at 17:22) | "I think the usage now is above 90%, so we might have to switch the subscription and continue working in a new session with the different subscription. So as we generally do, please prepare that handoff and give me the steps that I need to do, like generally how you give me that one command that I need to run after switching the subscription, that reliably carries over the ownership to that new session in the different subscription." |
+| 11-06 18:06 | (to ai-peer-controller-3, typed in its session, after the 18:03 Attention ask for the Peer's Slack sign-in; relayed to `ai-peer-wp1-3` at once) | "open window" |
+| 11-06 18:20 | (to ai-peer-controller-3, after the sign-in passed and the Google client steps were sent) | "going to sleep now. will check back in the morning. please continue whatever work you can in the meantime" |
 
 ## Airbnb notes
 
@@ -273,8 +333,25 @@ What went wrong once, with its mechanism.
   - The Peer's browser sets its own UA (headless Chrome says "HeadlessChrome"). A stale Chrome
     version in it (142, with 156 installed) made Slack warn it stops supporting that browser on
     9 Nov 2026; the UA now takes the installed version.
+  - (`ai-peer-wp1-3`, 6 Nov) The first `peer browser login` window (18:06) was not on Manish's screen at
+    18:12 (CGWindowList: none of its windows on screen). At 18:14 it was in front, but on Google's
+    "unusual traffic" puzzle after a "slack login" search typed into its address bar (Google flags the
+    automated Chrome too). Reopened at 18:15, it came up in front, and he was in by 18:18. So check the
+    window yourself, read-only, before saying "window up": CGWindowList for the Chrome pid (`onscreen`),
+    and `screencapture -l <window id>` shows the page he sees without touching the profile. Tell him it
+    is its own Chrome window and to type only into the Slack page. It now waits 30 minutes (PR #4):
+    15 ran short with the steps relayed through the controller.
 
 - Hooks can be tested without touching global settings: `claude -p ... --setting-sources project --settings '{"hooks":{"SessionEnd":[...]}}'` fires the SessionEnd hook (2.1.318; payload has session_id, transcript_path, cwd, reason). Codex 0.153.4 has a SessionEnd event, but `codex exec` fired no hook in five variants (`-c hooks.*`, `features.hooks`, `bypass_hook_trust`, a private `CODEX_HOME/hooks.json`); a `codex exec` in a fresh `CODEX_HOME` hangs until stdin is `/dev/null`. (ai-peer-wp2-1, 5 Nov)
+- (`ai-peer-wp4-1`, 6 Nov) Spoken "Peer" is not a reliable word to spot in Recall's low-latency transcript: it came back as "pier", as "here" at the start of a line, as "ipa" for "AI Peer", and once vanished. A second `output_audio` clip sent while one plays is mixed on top of it (not queued or refused); a `DELETE` on it cuts within about 1 s. Evidence: `docs/build/evidence/wp4/spike.md` on `wp4-meeting`.
+- (`ai-peer-wp4-1`, 6 Nov) A Recall bot records only after another participant joins (`start_recording_on` defaults to `participant_join`): a bot alone in the call sits in `in_call_not_recording` and leaves on `noone_joined_timeout`. Set `start_recording_on: call_join`. Its silence rule (`silence_detection`) counts only the others' speech.
+- (`ai-peer-wp5-1`, 6 Nov) An owner's `settings.yaml` is a full copy of `peer/defaults.yaml`, made by that owner's
+  first command, and merged deep with the live file winning key by key: a new default reaches existing owners, a
+  changed one never does. Change it with `peer set` or in the owner's file.
+- (`ai-peer-wp5-1`, 6 Nov) A passing check is not a complete guide: the porting walk's toy adapter passed `port-check`
+  on its first run, yet the fresh sub-agent listed 11 gaps; the biggest, `port-check` runs only the adapter's own
+  sample, so it cannot see whether a chat adapter takes what the executor sends. Walk a guide with a stranger on a
+  plain `git archive` export and ask for its gaps, not only a pass.
 
 ## Session log
 
@@ -284,7 +361,15 @@ What went wrong once, with its mechanism.
 | 2026-11-04 | ai-peer-controller-1 | Read the brief; created the WP1 worktree; started `ai-peer-wp1-1` (window 1725, max effort, remote control, no trust dialog) | WP1 running |
 | 2026-11-05 | ai-peer-controller-1 | Relayed WP1's asks (colleagues: A; the Zoom test meeting); did the colleague setup in Manish's Chrome at his word; watched spikes 1c and 1d pass; drafted the WP2 and WP3 briefs; handed off at 42% | Live S1 walks running; asks queued in "Needs Manish" |
 | 2026-11-05 | ai-peer-wp1-1 | Spikes 1a, 1b, 1d passed (1c all but the click); built `peer/` (adapters, store, memory and discovery, brain on Claude and Codex, executor, watcher, presence, scenarios, page, CLI); S1 dry runs; colleague tooling and channels; S1-away live on Claude and Codex; handed off at 44.2% | Draft PR #1; S1-online, screenshots, Checkpoint 1 and the merge go to `ai-peer-wp1-2` |
-| 2026-11-05 | ai-peer-controller-2 | Took over at 02:58 (context 8.5%); told ai-peer-wp1-1; re-sent the sign-in ask on Attention; closed windows 1715 and 1725 (both idle, no child processes; the Peer detached, still running); started `ai-peer-wp1-2` (window 2049) at 03:01 | Waiting on Manish's "ready"; at 10:45 started `ai-peer-wp2-1` early (window 2129) after a read-only review of its brief |
+| 2026-11-05 | ai-peer-controller-2 | Took over at 02:58 (context 8.5%); told ai-peer-wp1-1; re-sent the sign-in ask on Attention; closed windows 1715 and 1725 (both idle, no child processes; the Peer detached, still running); started `ai-peer-wp1-2` (window 2049) at 03:01 | Waiting on Manish's "ready"; at 10:45 started `ai-peer-wp2-1` early (window 2129) after a read-only review of its brief; relayed "Ready", the robot check, "Online walk" and "Yes to all"; WP1 merged 15:31, WP2 merged 16:19 and closed; started `ai-peer-wp3-1` at 16:34 after a review of its brief |
+| 2026-11-06 | ai-peer-controller-2 | Usage read 94% at 17:22 (old account); at Manish's word both workers handed off (`HANDOFF-2026-11-06-ai-peer-wp1-3.md`, `HANDOFF-2026-11-06-ai-peer-wp3-2.md`) and it wrote `HANDOFF-2026-11-06-ai-peer-controller-3.md` with the launch line; handed off at 37.5% context, 17:26 | Manish switches the subscription and starts ai-peer-controller-3 |
 | 2026-11-05 | ai-peer-wp1-2 | Read in; made the Peer's browser report the installed Chrome (Slack's 9 Nov cut-off); the headless Slack sign-in met a robot check (no code sent), so it now says so and a person signs in through a window; S1-online live with Manish's own tap on Send (spike 1c complete); evidence; PR #1 body updated, merged with a merge commit | WP1 merged 15:31 (183fabe); the recorded walks, screenshots and Checkpoint 1 wait for "open window" |
 | 2026-11-05 | ai-peer-wp2-1 | Read in; built F1 to F7 on WP1's branch (setup page with live discovery, what I learned with corrections, roles and settings, activity log in the film's look; fresh memory, self-tuning, local work); walked all seven on test owner `wp2test`; draft PR #2 | Live walks wait for PR #1; asks queued with the controller |
 | 2026-11-05 | ai-peer-wp2-1 | After WP1's merge: merged main in, cheap re-walks; installed the F7 hooks and the `~/repos` scan at Manish's word (a real session end landed in the spool); ran the live Peer from its worktree; walked the away switch live; added cost guards (no AI on the poll; nightly only in its window); merged PR #2 (88ac13e) | Live F5 DM check left in Next; stopped |
+| 2026-11-05/06 | ai-peer-wp3-1 | Read in; Google setup steps checked (step 6 gained `openid email`); built the google adapter, seeds, S2 brief (DM + `/brief`), heads-ups, Draft reply / Send email / Accept behind a hard block, the morning schedule and "brief me", the Docs and Calendar steps; the S2 dry walk passed; draft PR #3 | Handed off 17:27 on 6 Nov (account switch) to `ai-peer-wp3-2`: the Google client, logins, spike and live walk wait on Manish at the Mac |
+| 2026-11-06 | ai-peer-wp1-2 | Checked the walk recorder (video, screenshots, mp4) in a throwaway profile; handed off at 19.3% on the controller's word (weekly usage 94%) | [HANDOFF-2026-11-06-ai-peer-wp1-3.md](handoffs/HANDOFF-2026-11-06-ai-peer-wp1-3.md); no successor spawned |
+| 2026-11-06 | ai-peer-controller-3 | Took over at 17:56 on the new subscription (weekly 33%, context 8%); window 2048 was already gone; closed 2049 and 2216 (idle, no child processes, hand-offs pushed); started `ai-peer-wp1-3` (2442) and `ai-peer-wp3-2` (2445) at 18:00 in their worktrees (no trust dialog); re-armed the watcher; asked Manish for "open window" on Attention (18:03) | Both workers live; then: relayed "open window" (18:06) and found the hidden sign-in window with `ai-peer-wp1-3` (sign-in 18:18); sent Checkpoint 1 (18:26:57); closed `ai-peer-wp1-3` (18:29); wrote WP4's brief, had it reviewed (18 findings, all folded), started `ai-peer-wp4-1` (window 2595, 18:52); closed it after its dry walk and hand-off (19:52); wrote WP5's brief, had it reviewed (8 findings, all folded), started `ai-peer-wp5-1` (window 2607, 20:10); `ai-peer-wp4-2` waits for the live Peer |
+| 2026-11-06 | ai-peer-wp1-3 | Read in (context 9%); took over the live Peer (no restart) and fast-forwarded to main; on "open window" (18:06) opened the sign-in window, which was off his screen and then on a Google puzzle, so reopened it in front with 30 minutes (18:15); Manish signed in 18:18; recorded walks 4 (S1-online, Send clicked in the Peer's browser) and 5 (S1-away) passed 18:18 to 18:22; evidence on `main`; Checkpoint 1 to the controller 18:25; PR #4 (the login waits 30 minutes) merged | WP1 complete; worktree kept; the live Peer released to the controller |
+| 2026-11-06 | ai-peer-wp4-1 | Read in (context 14%); venv, `cloudflared`; test owner `wp4test`; the spike on the test meeting (three short meetings, two bots, local voices): real-time transcript, the warm session, speech, the whole loop; draft PR #5 | Spike passed 19:15: the answer is heard 7.3 to 8.1 s after a question; the build goes on |
+| 2026-11-06 | ai-peer-wp4-1 | Built S3 on the spike: the update card (Approve update / Edit / Skip), the meeting session, the brief, the colleague bot and walk, the Meetings page and calendar link (a sub-agent); two dry runs failed and were fixed (recording on call join; the assistant rule); dry walk 3 passed 19:47; ElevenLabs checked | Handed off 19:55 at 42% to `ai-peer-wp4-2` for the live walk and the merge |
+| 2026-11-06 | ai-peer-wp5-1 | Read in (context 21%); venv; test owner `wp5test`; `port-check` with an `adapters:` list in settings, its FAIL paths proven on broken adapters; the porting guide; the porting walk (a fresh sub-agent on an export of the branch, the toy "teamchat" from the guide alone) passed, its 11 gaps folded; the demo script; PR #6 merged 20:39 (b877a87) | WP5's first part done; stopped at context 36%, weekly 42% |

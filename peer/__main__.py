@@ -7,7 +7,7 @@
   away | online | auto        the manual "I'm away" switch (auto = Slack presence + hours)
   set <key> <value>           change a setting, e.g. `set brain.backend codex`
   status                      presence, roles, backend, adapters
-  port-check                  list adapters, exercise each verb (act in dry run), print a table
+  port-check [--adapter X]    check each listed adapter's verbs (act in dry run); exit 1 on a FAIL
   web [--port N]              the activity log page (http://127.0.0.1:8787)
   world manifest|auth|setup   test world in Slack: the scenario app, colleague logins, channels
   browser login|shot|click    the Peer's own Chrome profile for walk screenshots and clicks
@@ -146,8 +146,9 @@ def cmd_status(a) -> None:
 
 
 def cmd_port_check(a) -> None:
-    from .portcheck import port_check
-    port_check(get_settings())
+    from .portcheck import any_fail, port_check
+    if any_fail(port_check(get_settings(), only=a.adapter)):
+        sys.exit(1)
 
 
 def cmd_world(a) -> None:
@@ -336,7 +337,8 @@ def main(argv: list[str] | None = None) -> None:
         sub.add_parser(mode).set_defaults(fn=cmd_presence(mode))
     p = sub.add_parser("set"); p.add_argument("key"); p.add_argument("value"); p.set_defaults(fn=cmd_set)
     sub.add_parser("status").set_defaults(fn=cmd_status)
-    sub.add_parser("port-check").set_defaults(fn=cmd_port_check)
+    p = sub.add_parser("port-check", help="check the listed adapters (settings `adapters:`), act in dry run")
+    p.add_argument("--adapter", help="check only this one"); p.set_defaults(fn=cmd_port_check)
     p = sub.add_parser("web"); p.add_argument("--port", type=int); p.set_defaults(fn=cmd_web)
     p = sub.add_parser("browser", help="the Peer's own Chrome profile: login | shot | click")
     p.add_argument("what", choices=["login", "login-headless", "shot", "click"]); p.add_argument("--channel"); p.add_argument("--thread")

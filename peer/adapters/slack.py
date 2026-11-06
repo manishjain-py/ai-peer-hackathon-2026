@@ -58,6 +58,15 @@ class SlackAdapter(Adapter):
         self._lock = threading.Lock()
         self.socket: SocketModeClient | None = None
 
+    @classmethod
+    def from_settings(cls, st) -> "SlackAdapter":
+        return cls(watch_channels=st.get("slack.watch_channels") or None)
+
+    def dry_run_sample(self) -> dict:
+        """port-check: a thread reply in dry run (act returns before any Slack call)."""
+        return {"action": "post_reply", "target": "C0PORTCHECK",
+                "payload": {"channel": "C0PORTCHECK", "thread_ts": "1700000000.000100", "text": "port-check (dry run)"}}
+
     # -- live sensing (Socket Mode) ----------------------------------------------
     def listen(self, on_event: Callable[[Event], None], on_interactive: Callable[[dict], dict | None]) -> SocketModeClient:
         if not self.app_token:
