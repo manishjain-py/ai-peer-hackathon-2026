@@ -21,6 +21,11 @@ class DirectoryAdapter(Adapter):
         self.profile_path = Path(profile_path)
         self.extra_people = extra_people or []
 
+    @classmethod
+    def from_settings(cls, st) -> "DirectoryAdapter":
+        from ..memory.discovery import load_world   # the test world's invented colleagues
+        return cls(st.profile_path(), load_world().get("colleagues", []))
+
     def profile(self) -> dict:
         return json.loads(self.profile_path.read_text())
 
