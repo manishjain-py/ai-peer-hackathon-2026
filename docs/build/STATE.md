@@ -5,6 +5,22 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
+2026-11-06 21:37. **WP4's live S3 walk passed on its first attempt** (21:23 to 21:33, meeting m2db7aebe on the
+test meeting, ElevenLabs stock voices; the tap was the scripted `--auto-click`; `ai-peer-wp4-2`'s report, its
+evidence to follow on the branch): the update card reached Manish's DM 21:24:50 (approved 21:25:07); the Peer
+joined 21:29:08, played the 41 s update 1.0 s after the ask, answered 3 questions live (21.1, 11.7 and 7.1 s
+after each question, a holding line after about 1 s), noted the decision, flagged 2 items, left 21:33:10; the
+brief reached his DM 21:33:33. Recall 562 bot-seconds (about $0.50 this week in all). The mixed recording, for
+Checkpoint 3, is `~/.ai-peer/manish/meeting-runs/m2db7aebe/recording.mp4` (out of git); the controller sends it
+when Manish wakes. **Found in the walk: the Peer's brain loads Manish's global `~/.claude/CLAUDE.md`** despite
+`--setting-sources project` (its canary on claude 2.1.318, with the Peer's exact flags: his CLAUDE.md, the TLDR
+rule, his name); the 3 live answers ended in a "## TLDR" that landed in the sources' date field on the activity
+page (nothing extra was spoken; S1's Slack answers in the log are clean). Fix, approved by the controller: one
+commit on PR #5 adds `CLAUDE_CODE_DISABLE_CLAUDE_MDS=1` to the brain's env (`peer/brain/runner.py`,
+`peer/brain/warm.py`; PR #3 touches neither; the Peer has no CLAUDE.md of its own), a restart, a canary through
+the Peer's code; then the merge. Undo: revert that commit and restart. The shared lesson
+`howto_isolate_headless_claude_and_codex_runs.md` gets corrected (it said those flags block his CLAUDE.md).
+
 2026-11-06 21:18. **WP4's live S3 walk runs tonight, before WP3's** (`ai-peer-controller-4`'s call, under
 Manish's "please continue whatever work you can in the meantime"): WP3 cannot move until his Google client in
 the morning and the live Peer sat idle, so `ai-peer-wp4-2` (window 2610, pid 15886) started 21:17 with the Peer.
@@ -293,7 +309,7 @@ test" stays for WP4 unless Manish deletes it.
 |---|---|---|
 | 1 | S1 Slack cover | **Done 18:25 on 6 Nov**: the checkpoint message (the two recorded walks' videos, how to try it) went to the controller for Manish's Telegram; **sent to him at 18:26:57** (Attention group, the text and both videos, by controller-3). Recorded walks 4 (online, Send clicked in the Peer's browser, 18:18 to 18:20) and 5 (away, 18:20 to 18:22) passed ([evidence](evidence/wp1/s1-walks.md)). Earlier: away on Claude and Codex (02:54, 02:56 on 5 Nov), online with Manish's tap (15:26 to 15:29); PR #1 merged 15:31 on 5 Nov |
 | 2 | S2 daily brief + setup page | not started |
-| 3 | S3 meeting | not started |
+| 3 | S3 meeting | **Live walk passed 21:23 to 21:33 on 6 Nov** (`ai-peer-wp4-2`, `--auto-click`, ElevenLabs voices); the checkpoint (the mixed recording `~/.ai-peer/manish/meeting-runs/m2db7aebe/recording.mp4` and how to try it) goes to Manish's Telegram Attention when he wakes (about 02:30 UTC on 7 Nov), so it does not wake him |
 
 ## Settled, do not re-open
 
