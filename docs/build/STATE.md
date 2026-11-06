@@ -312,7 +312,7 @@ Chrome: Manish let the kickoff session do setup steps in his logged-in Chrome. A
    `dry_run_sample()`; then their `sample:` and `blocked_by:` entries can go. Left in WP5: the web page
    polish, the 15 Nov rehearsals with the backup recordings (`demo/recordings/`), the film opener cut, the
    hand-over to the Airbnb laptop (the guide's last section).
-3c. **WP5's rest, planned 22:20 on 6 Nov by `ai-peer-controller-4`** (a read-only map of the code at 37cb0c4; the
+3c. **WP5's rest, planned 22:16 on 6 Nov by `ai-peer-controller-4`** (a read-only map of the code at 37cb0c4; the
    two new findings checked by the controller in the code): two packages. (1) **`ai-peer-wp5-2`**, the adapter
    contract everywhere and the guide finished (D2's deliverable), starts right after PR #3 merges, in
    `~/repos/ai-peer-wp5b` on `wp5-contract`; its brief is under read-only review and goes to `main` before the
