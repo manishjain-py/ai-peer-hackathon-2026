@@ -62,9 +62,10 @@ def _open_in_browser(page) -> None:
         pass
 
 
-def login(timeout_s: int = 900, shots: Path | None = None) -> bool:
+def login(timeout_s: int = 1800, shots: Path | None = None) -> bool:
     """A Chrome window on the Peer's own profile; the owner signs in himself (email, Slack's
-    robot check if it shows one, the emailed code). It closes by itself once he is in."""
+    robot check if it shows one, the emailed code). It closes by itself once he is in.
+    30 minutes: on 6 Nov 15 ran short while the steps were relayed and the window looked for."""
     from playwright.sync_api import sync_playwright
     with sync_playwright() as p:
         ctx = _context(p, headless=False)
@@ -72,6 +73,8 @@ def login(timeout_s: int = 900, shots: Path | None = None) -> bool:
         page.goto("https://learnlikemagic.slack.com/")
         page.bring_to_front()
         print("Sign in to Slack in the window that opened (as yourself). It closes by itself when done.", flush=True)
+        print("It is its own Chrome window, with the bar \"Chrome is being controlled by automated test software\". "
+              f"Type only into the Slack page, not the address bar. It waits {timeout_s // 60} minutes.", flush=True)
         deadline = time.time() + timeout_s
         ok = False
         while time.time() < deadline and not ok:
