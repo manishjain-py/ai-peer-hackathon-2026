@@ -49,6 +49,7 @@ URGENT = re.compile(r"\b(urgent|asap|immediately|right away|blocker|blocking|blo
                     r"before \d{1,2}(:\d{2})?\s?(am|pm))\b", re.I)
 BREAKING = re.compile(r"\b(outage|is down|went down|broken|failing|failed|rejected|crash(ed|ing)?)\b", re.I)
 EVENTISH = re.compile(r"\b(event|meetup|webinar|conference|summit|workshop|call for (speakers|papers)|hackathon)\b", re.I)
+INVITE_MAIL = re.compile(r"^(updated )?invitation\b", re.I)   # Gmail also delivers each invitation as an email
 BUTTONS = {"draft_reply": ("brief_draft", "Draft reply"), "accept_invite": ("brief_accept", "Accept")}
 CLICKS = {"brief_draft": "draft_reply", "brief_accept": "accept_invite", "brief_send": "send_email", "brief_discard": "discard_draft"}
 
@@ -123,8 +124,8 @@ def _local(iso: str | None, tz: str, fmt: str = "%a %-d %b, %-I:%M %p") -> str:
 def urgency(e: Event, owner: str) -> str | None:
     x = e.extra
     if e.kind == "email":
-        if x.get("bulk") or x.get("seed_kind") in ("announcement", "event"):
-            return None
+        if x.get("bulk") or x.get("seed_kind") in ("announcement", "event") or _invite_mail(x):
+            return None   # an invitation's own email: its calendar item is checked below
         text = e.text or ""
         direct = owner in (x.get("to") or [])
         if direct and "?" in text and URGENT.search(text):
@@ -139,6 +140,11 @@ def urgency(e: Event, owner: str) -> str | None:
         except ValueError:
             pass
     return None
+
+
+def _invite_mail(x: dict) -> bool:
+    """The email Gmail delivers with a calendar invitation: the calendar item (Accept) stands for it."""
+    return x.get("seed_kind") == "invite" or (not x.get("seed_kind") and bool(INVITE_MAIL.match(x.get("subject") or "")))
 
 
 def poll_google(ctx) -> dict:
@@ -259,8 +265,8 @@ def gather(st: Settings, store: Store, log_path: Path, since: str, dry: bool) ->
             continue
         x = e.extra
         if e.kind == "email":
-            if store.action(f"tell:{e.ref}") or store.get_kv(f"replied:{e.ref}"):
-                continue   # told at once as a heads-up, or answered
+            if store.action(f"tell:{e.ref}") or store.get_kv(f"replied:{e.ref}") or _invite_mail(x):
+                continue   # told at once as a heads-up, answered, or an invitation's email (its invite card stands for it)
             kind = x.get("seed_kind")
             if kind == "announcement" or (not kind and x.get("bulk") and not EVENTISH.search(x.get("subject", ""))):
                 if e.at >= since:

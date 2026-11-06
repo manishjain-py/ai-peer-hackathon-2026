@@ -73,6 +73,13 @@ def mail_mime(sender: dict, owner: str, owner_name: str, subject: str, body: str
     return msg
 
 
+def invite_text(sender: dict, summary: str, start: datetime, description: str, tz: str) -> tuple[str, str]:
+    """The invitation email's subject and text (Gmail delivers it to the inbox as well as adding the event)."""
+    when = start.astimezone(ZoneInfo(tz)).strftime("%a %-d %b, %-I:%M %p")
+    return (f"Invitation: {summary} @ {when}",
+            f"{sender['name']} invited you to \"{summary}\" on {when} ({tz}).\n\n{description}\n")
+
+
 def invite_mime(sender: dict, owner: str, owner_name: str, summary: str, start: datetime, end: datetime,
                 description: str, uid: str, token: str, tz: str) -> EmailMessage:
     now = datetime.now(timezone.utc)
@@ -83,9 +90,7 @@ def invite_mime(sender: dict, owner: str, owner_name: str, summary: str, start: 
              f"ATTENDEE;CN={owner_name};ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:{owner}",
              "SEQUENCE:0", "STATUS:CONFIRMED", "TRANSP:OPAQUE", "END:VEVENT", "END:VCALENDAR"]
     ics = "\r\n".join(_fold(x) for x in lines) + "\r\n"
-    when = start.astimezone(ZoneInfo(tz)).strftime("%a %-d %b, %-I:%M %p")
-    msg = mail_mime(sender, owner, owner_name, f"Invitation: {summary} @ {when}",
-                    f"{sender['name']} invited you to \"{summary}\" on {when} ({tz}).\n\n{description}\n", token)
+    msg = mail_mime(sender, owner, owner_name, *invite_text(sender, summary, start, description, tz), token)
     msg.add_alternative(ics, subtype="calendar", params={"method": "REQUEST"})
     msg.add_attachment(ics.encode(), maintype="application", subtype="ics", filename="invite.ics")
     return msg
@@ -121,6 +126,9 @@ def play(st: Settings, name: str = "s2-overnight", fake=None, only: str | None =
             if fake:
                 e = fake.inject_invite(who["email"], who["name"], it["summary"], start.isoformat(), end.isoformat(),
                                        it.get("description", ""))
+                # as in Gmail: the invitation also arrives as an email, with the same seed
+                fake.inject_mail(who["email"], who["name"], *invite_text(who, it["summary"], start, it.get("description", ""), tz),
+                                 seed_kind="invite")
                 out.append({"type": "invite", "as": it["as"], "summary": it["summary"], "ref": e.ref})
                 continue
             msg = invite_mime(who, owner, owner_name, it["summary"], start, end, it.get("description", ""), uid, token, tz)
