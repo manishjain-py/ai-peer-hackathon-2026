@@ -45,3 +45,28 @@ def tell_owner(st: Settings, chat, owner_chat_id: str | None, item: dict, why: s
     act.add("told_owner", f"Told you: {item.get('title')}", where="DM", said=text, outcome="dry_run" if dry_run else "done",
             sources=src, ref=key, url=item.get("url"), extra={"item": item})
     return {"did": "told", "ts": r.get("ts")}
+
+
+# -- WP4 (S3): the meetings door: the update card and the meeting brief, gated on "Cover meetings" ---------------
+MEETING_BUTTONS = (("peer_mtg_approve", "Approve update", "primary"), ("peer_mtg_edit", "Edit", None), ("peer_mtg_skip", "Skip", None))
+
+
+def send_meeting_dm(st: Settings, chat, owner_chat_id: str | None, text: str, blocks: list | None, key: str, *,
+                    kind: str, summary: str, dry_run: bool = False, store: Store | None = None, sources: list | None = None,
+                    needs_review: bool = False, meeting_id: str | None = None, said: str | None = None) -> dict:
+    """One door for every meeting DM (the update card with Approve update / Edit / Skip, the "Cover for me" offer,
+    the brief): the Cover meetings role, idempotency, the log. Mutes are for heads-ups, so they do not apply here."""
+    store = store or Store(st.db_path)
+    act = ActivityLog(st.log_path)
+    if not st.get("roles.cover_meetings", True):
+        act.add("held_back", f"Held back: {summary} (Cover meetings is off)", where="DM", outcome="skipped", ref=key)
+        return {"did": "held_back", "why": "cover_meetings off"}
+    done = store.action(key)
+    if done:
+        return {"did": "already_sent", **(done.get("result") or {})}
+    payload = {"text": text, **({"blocks": blocks} if blocks else {})}
+    r = chat.act("dm", owner_chat_id, payload, key, dry_run=dry_run) if chat else {"ok": True, "dry_run": True}
+    store.put_action(key, "dm", owner_chat_id or "", {"text": text, "meeting_id": meeting_id}, "done", result=r)
+    act.add(kind, summary, where="DM", said=said or text, outcome="pending_approval" if needs_review else ("dry_run" if dry_run else "done"),
+            sources=sources or [], ref=key, extra={"meeting_id": meeting_id})
+    return {"did": "sent", "channel": r.get("channel"), "ts": r.get("ts")}

@@ -44,6 +44,15 @@ FILTERS = {
     "memory": ("Memory", {"memory_updated", "nightly", "local_work", "setup"}),
     "told": ("Told you or held back", {"told_owner", "held_back"}),
 }
+# WP4 (S3): meetings
+KIND_LABEL.update({
+    "meeting_requested": "Will cover a meeting", "meeting_update_drafted": "Your meeting update",
+    "meeting_update_approved": "You approved the update", "meeting_update_skipped": "You skipped the update",
+    "meeting_joining": "Joining a meeting", "meeting_joined": "Joined a meeting", "meeting_update_played": "Played your update",
+    "meeting_update_missing": "No update to play", "meeting_answered": "Answered in a meeting", "meeting_flagged": "Flagged for you",
+    "meeting_left": "Left the meeting", "meeting_brief_sent": "Meeting brief", "meeting_offered": "Offered to cover a meeting",
+    "meeting_offer_declined": "You declined the offer", "refused": "Refused"})
+FILTERS["meetings"] = ("Meetings", {k for k in KIND_LABEL if k.startswith("meeting_")})
 
 ROLES = [
     ("watch_my_work", "Watch my work", "Reads the Slack channels you're in and your repos (read-only), and brings you what matters.",
@@ -445,3 +454,12 @@ def activity(all: int = 0, f: str = "", dry: int = 0):
     body += '<h2>Needs your review</h2>' + ("".join(card(e) for e in review) or '<div class="card muted">Nothing waits on you.</div>')
     body += f'<h2>History</h2><div class="filters">{chips}</div>' + ("".join(card(e) for e in rest) or '<div class="card muted">Nothing here yet.</div>')
     return page("Activity", f"<style>{ACT_CSS}</style>" + body, active="/activity", refresh=20)
+
+
+# == S3 meetings (WP4): importing the page adds "Meetings" to the sidebar (NAV) =================================
+from . import meetings_page  # noqa: E402
+
+
+@app.get("/meetings", response_class=HTMLResponse)
+def meetings():
+    return meetings_page.render()

@@ -263,6 +263,9 @@ class Watcher:
             from .tuning import undo
             r = undo(self.st, who=self.owner["first"])
             reply = f"Undone: {r}" if r else "There's no rule of yours to undo."
+        if reply is None and text.startswith("cover") and "meeting" in text:   # WP4 (S3): "cover meeting <link> at 20:30"
+            from .meetings.cover import from_dm
+            reply = from_dm(self.st, re.sub(r"<@[A-Z0-9]+>", "", e.text or "").strip())
         if reply is None and text:   # WP2 F5: anything else may be feedback ("less of this")
             if self.synchronous:
                 self.tune(e)

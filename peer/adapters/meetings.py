@@ -149,7 +149,9 @@ class MeetingsAdapter(Adapter):
         if not ok:
             raise MeetingRefused(why)
         max_s = 60 * int(max_minutes or self.st.get("meetings.max_minutes", 10))
-        rc: dict[str, Any] = {"include_bot_in_recording": {"audio": include_bot_audio}}
+        # Record from the bot's own join: the default (participant_join) leaves a bot that is alone in the call
+        # (the colleague bot opening the meeting) not recording, and it times out ("no one joined").
+        rc: dict[str, Any] = {"include_bot_in_recording": {"audio": include_bot_audio}, "start_recording_on": "call_join"}
         if transcript:
             rc["transcript"] = {"provider": {"recallai_streaming": {"mode": "prioritize_low_latency", "language_code": "en"}}}
         if realtime_url:
@@ -163,7 +165,7 @@ class MeetingsAdapter(Adapter):
             "automatic_leave": {"waiting_room_timeout": 60, "noone_joined_timeout": 120,
                                 "everyone_left_timeout": {"timeout": 5}, "in_call_not_recording_timeout": 120,
                                 "in_call_recording_timeout": max_s, "recording_permission_denied_timeout": 30,
-                                "silence_detection": {"timeout": 240, "activate_after": 60}},
+                                "silence_detection": {"timeout": 420, "activate_after": 120}},
             "metadata": {k: str(v)[:500] for k, v in (metadata or {}).items()},
         }
         if join_at:

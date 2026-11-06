@@ -59,6 +59,7 @@ def question_text(speaker: str, words: str, maybe: bool = False) -> str:
 def parse_answer(text: str) -> dict:
     """The line format above -> {say, certainty, as_of, flag, sources}. Lenient: a bare answer is all SAY."""
     out: dict[str, Any] = {"say": "", "certainty": "low", "as_of": "", "flag": False, "sources": []}
+    text = re.sub(r"^\s*```\w*\s*$", "", text or "", flags=re.M)   # the brain sometimes fences its reply
     fields = {"SAY", "CERTAINTY", "AS_OF", "FLAG", "SOURCES"}
     cur = None
     buf: dict[str, list[str]] = {}

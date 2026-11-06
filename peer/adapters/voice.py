@@ -92,18 +92,23 @@ class VoiceAdapter(Adapter):
         return {"ok": engines.get(self.engine, False), "detail": f"engine {self.engine}; available: {engines}"}
 
     # -- rendering ------------------------------------------------------------------------------------
-    def cache_path(self, text: str, role: str, engine: str | None = None) -> Path:
+    def model(self, live: bool = False) -> str:
+        return str(self.st.get("voice.elevenlabs_live_model" if live else "voice.elevenlabs_model", "eleven_multilingual_v2"))
+
+    def cache_path(self, text: str, role: str, engine: str | None = None, live: bool = False) -> Path:
         engine = engine or self.engine
         vid = self.voice_id(role, engine)
-        h = hashlib.sha256(f"{engine}|{vid}|{self.st.get('voice.pad_ms', 1000)}|{text}".encode()).hexdigest()[:20]
+        model = self.model(live) if engine == "elevenlabs" else "say"
+        h = hashlib.sha256(f"{engine}|{vid}|{model}|{self.st.get('voice.pad_ms', 1000)}|{text}".encode()).hexdigest()[:20]
         return CACHE / engine / f"{h}.mp3"
 
-    def render(self, text: str, role: str = "peer", *, dry_run: bool = False, engine: str | None = None) -> Path:
+    def render(self, text: str, role: str = "peer", *, dry_run: bool = False, engine: str | None = None,
+               live: bool = False) -> Path:
         engine = engine or self.engine
         text = " ".join((text or "").split())
         if not text:
             raise VoiceRefused("nothing to say")
-        out = self.cache_path(text, role, engine)
+        out = self.cache_path(text, role, engine, live)
         if out.exists() and out.stat().st_size > 0:
             return out
         if dry_run and engine == "elevenlabs":
@@ -114,7 +119,7 @@ class VoiceAdapter(Adapter):
         if engine == "local":
             self._render_local(text, self.voice_id(role, "local"), out, pad)
         elif engine == "elevenlabs":
-            self._render_elevenlabs(text, self.voice_id(role, "elevenlabs"), out, pad, role)
+            self._render_elevenlabs(text, self.voice_id(role, "elevenlabs"), out, pad, role, self.model(live))
         else:
             raise VoiceRefused(f"unknown voice engine {engine}")
         log.info("rendered %d chars (%s, %s) in %.2fs", len(text), engine, role, time.time() - t0)
@@ -162,7 +167,7 @@ class VoiceAdapter(Adapter):
             return json.loads(LEDGER.read_text())
         return {"spent": 0, "requests": []}
 
-    def _render_elevenlabs(self, text: str, voice_id: str, out: Path, pad: int, role: str) -> None:
+    def _render_elevenlabs(self, text: str, voice_id: str, out: Path, pad: int, role: str, model: str) -> None:
         budget = int(self.st.get("voice.elevenlabs_budget_chars", 20000))
         self.check_voice(voice_id)
         CACHE.mkdir(parents=True, exist_ok=True)
@@ -174,7 +179,7 @@ class VoiceAdapter(Adapter):
             q = self.quota()
             if q["limit"] and (q["limit"] - q["used"]) < 0.2 * q["limit"]:
                 raise VoiceRefused(f"ElevenLabs account has under 20% left ({q['used']} of {q['limit']})")
-            body = {"text": text, "model_id": self.st.get("voice.elevenlabs_model", "eleven_multilingual_v2")}
+            body = {"text": text, "model_id": model}
             t0 = time.time()
             with self._el() as c:
                 r = c.post(f"/v1/text-to-speech/{voice_id}", params={"output_format": "mp3_44100_64"}, json=body,
@@ -183,7 +188,8 @@ class VoiceAdapter(Adapter):
                 raise VoiceRefused(f"ElevenLabs HTTP {r.status_code}: {r.text[:160]}")
             led["spent"] += len(text)
             led["requests"].append({"at": now_iso(), "chars": len(text), "role": role, "voice": voice_id,
-                                    "s": round(time.time() - t0, 2), "account_used_before": q["used"], "limit": q["limit"]})
+                                    "s": round(time.time() - t0, 2), "model": model, "account_used_before": q["used"],
+                                    "limit": q["limit"]})
             LEDGER.write_text(json.dumps(led, indent=1))
         with tempfile.TemporaryDirectory(prefix="peer-el-") as d:
             raw = Path(d) / "el.mp3"

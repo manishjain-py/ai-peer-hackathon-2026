@@ -42,6 +42,7 @@ def classify(text: str, owner_first: str = "Manish", topics: list[str] | None = 
     o = owner_pattern(owner_first)
     t = re.sub(NOT_PEER, " ", t)
     named_peer = (re.search(rf"\b(?:ai |a i |the )?{PEER}\b", t) or re.search(rf"\b{o}'?s? (?:ai|a i|assistant|bot)\b", t)
+                  or re.search(r"\b(?:\w+'s|\w+s|the|your|our|ai|a i) (?:ai |a i )?assistant\b", t)
                   or re.search(MISHEARD_START, t))
     update_ask = (
         re.search(rf"\b{o}'?s (?:update|status|news|part|section|turn)\b", t)
