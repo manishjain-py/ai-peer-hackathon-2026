@@ -5,6 +5,34 @@ owner:
   id: manish                    # folder name under ~/.ai-peer/
   profile: peer/world/profiles/manish.json   # the directory adapter's record (repo-relative)
 
+adapters:                       # what `peer port-check` checks (WP5; docs/porting-guide.md). A port adds or swaps entries.
+  # Each entry: module + class (a subclass of peer.adapters.base.Adapter); optional query (port-check's search
+  # word), sample (the dry-run act, when the class has no dry_run_sample()), blocked_by (its exception names that
+  # mean "a hard block refused"), pending (shown as "not on main yet" until that PR merges), enabled: false.
+  # The runtime still builds its own adapters (porting guide: "What a port also edits today").
+  directory: {module: peer.adapters.directory, class: DirectoryAdapter, query: Telugu}
+  slack: {module: peer.adapters.slack, class: SlackAdapter, query: Telugu}
+  github: {module: peer.adapters.github, class: GitHubAdapter, query: Telugu}
+  fake: {module: peer.adapters.fake, class: FakeAdapter}
+  google:                       # Gmail, Calendar, Drive/Docs: on PR #3 until it merges
+    module: peer.adapters.google
+    class: GoogleAdapter
+    pending: "PR #3"
+    query: Telugu
+    blocked_by: [Blocked]       # google.act_on_real_items off: act only on seeded test items
+    sample: {action: draft_reply, target_from_search: "in:inbox", target_prefix: "google:mail:", payload: {body: "port-check (dry run)"}}
+  meetings:                     # Recall.ai meeting bot on Zoom: on PR #5 until it merges
+    module: peer.adapters.meetings
+    class: MeetingsAdapter
+    pending: "PR #5"
+    blocked_by: [MeetingRefused]   # meetings.join_real_meetings off: only the test meeting
+    sample: {action: join, target: "", payload: {meeting_url: "https://zoom.us/j/99999999999", bot_name: "port-check"}}
+  voice:                        # text to speech for the meeting bot: on PR #5 until it merges
+    module: peer.adapters.voice
+    class: VoiceAdapter
+    pending: "PR #5"
+    sample: {action: render, target: peer, payload: {text: "port-check."}}
+
 presence:
   manual: auto                  # auto | away | online   (the "I'm away" switch)
   away_status_words: [vacation, holiday, ooo, "out of office", away, sick, leave, offline, travelling, traveling]
