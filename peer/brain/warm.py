@@ -118,7 +118,8 @@ class WarmSession:
         if self.effort:
             cmd += ["--effort", str(self.effort)]
         env = {k: v for k, v in os.environ.items() if k not in ("ANTHROPIC_API_KEY", "CLAUDECODE")}
-        env.update({"CLAUDE_NO_IDLE_PING": "1", "DISABLE_AUTOUPDATER": "1"})
+        # keeps the owner's ~/.claude/CLAUDE.md out (see runner.py); without it the answers grew a "## TLDR"
+        env.update({"CLAUDE_NO_IDLE_PING": "1", "DISABLE_AUTOUPDATER": "1", "CLAUDE_CODE_DISABLE_CLAUDE_MDS": "1"})
         self.proc = subprocess.Popen(cmd, cwd=self.st.owner_dir, env=env, stdin=subprocess.PIPE,
                                      stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, bufsize=1)
         threading.Thread(target=self._read_out, daemon=True, name="warm-out").start()
