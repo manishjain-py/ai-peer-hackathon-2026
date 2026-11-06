@@ -57,6 +57,8 @@ class Jobs:
     def tick(self) -> None:
         from . import localwork
         self._safe("spool", lambda: localwork.ingest_spool(self.st))
+        from .meetings.cover import tick as meetings_tick   # WP4 (S3): draft the update; join on time
+        self._safe("meetings", lambda: meetings_tick(self.w))
         if self.st.get("local.folders") and localwork.due(self.st):
             self._safe("local scan", lambda: localwork.scan(self.st))
         if self._due("github_poll", 60 * float(self.st.get("github.poll_minutes", 15))):

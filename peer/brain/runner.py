@@ -112,7 +112,8 @@ def _run_claude(prompt: str, schema: dict, timeout: int, effort: str | None = No
     if effort:
         cmd += ["--effort", str(effort)]
     env = {k: v for k, v in os.environ.items() if k not in ("ANTHROPIC_API_KEY", "CLAUDECODE")}
-    env.update({"CLAUDE_NO_IDLE_PING": "1", "DISABLE_AUTOUPDATER": "1"})
+    # --setting-sources project no longer keeps out the owner's ~/.claude/CLAUDE.md (canary, 7 Nov): this does.
+    env.update({"CLAUDE_NO_IDLE_PING": "1", "DISABLE_AUTOUPDATER": "1", "CLAUDE_CODE_DISABLE_CLAUDE_MDS": "1"})
     t0 = time.time()
     try:
         proc = subprocess.run(cmd, cwd=st.owner_dir, env=env, stdin=subprocess.DEVNULL,
