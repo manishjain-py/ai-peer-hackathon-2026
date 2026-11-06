@@ -312,6 +312,27 @@ Chrome: Manish let the kickoff session do setup steps in his logged-in Chrome. A
    `dry_run_sample()`; then their `sample:` and `blocked_by:` entries can go. Left in WP5: the web page
    polish, the 15 Nov rehearsals with the backup recordings (`demo/recordings/`), the film opener cut, the
    hand-over to the Airbnb laptop (the guide's last section).
+3c. **WP5's rest, planned 22:20 on 6 Nov by `ai-peer-controller-4`** (a read-only map of the code at 37cb0c4; the
+   two new findings checked by the controller in the code): two packages. (1) **`ai-peer-wp5-2`**, the adapter
+   contract everywhere and the guide finished (D2's deliverable), starts right after PR #3 merges, in
+   `~/repos/ai-peer-wp5b` on `wp5-contract`; its brief is under read-only review and goes to `main` before the
+   spawn. It covers: the docs pass after the merges (first, straight to `main`); one registry so the runtime
+   builds every adapter from settings (about 25 direct builds today, about 7 of them missing from the guide's
+   "What a port also edits today"); role methods for the raw Slack and GitHub calls; settings instead of code
+   edits (`github.api_base`, the trial's people file, a settings-added brain backend); and **a privacy flaw found
+   in the map: a failing backend other than claude falls back to Manish's personal Claude login
+   (`peer/brain/runner.py`, `brain.fallback` on by default), and S3's live answers always use the Claude warm
+   session whatever `brain.backend` says**, against DESIGN §6. (2) **A demo package** (name and brief later)
+   starts when `ai-peer-wp3-2` closes: the live-answer speed (the meeting fact pack is cut at 24,000 characters,
+   `peer/meetings/factpack.py`, while the 15 project notes hold about 140 KB, so the projects asked about drop
+   out and the warm session reads files; the first live answer took 21 s), the presence and test-meeting-memory
+   follow-ups, the demo script from the live walks, web page polish, backup recording tooling, film opener drafts.
+   Its live steps wait for `ai-peer-wp5-2`'s merge; its first live step moves the Peer to a dedicated worktree,
+   `~/repos/ai-peer-live` (detached at `main`, never edited), so it stops moving between worker worktrees. The
+   controller's calls (routine): the card format is written down, not moved; a worker asks the controller at 80%
+   weekly usage. For Manish later: which film opener cut and where it may live (the film holds company context,
+   and AGENTS.md keeps such details out of new build files); the extra (upstream-break warning) only if both
+   packages merge by about 12 Nov with weekly usage under about 75%, and then only with his word.
 4. Manish's next Mac sitting, in order: the Google client (5 minutes), the two Google consents, the
    Peer's Codex login (before 8 Nov 02:25). Done: "open window" (the Slack sign-in, 18:18 on 6 Nov).
 
