@@ -5,7 +5,7 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
-2026-11-06 18:55. **WP1 complete and Checkpoint 1 sent** (18:26:57, Telegram Attention, both recorded
+2026-11-06 19:17. **WP4's spike passed** (19:15: on the test meeting the holding line is heard 3.1 to 3.9 s and the live answer 7.3 to 8.1 s after a question; draft [PR #5](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/5); `ai-peer-wp4-1` now builds before, during and after). 18:55: **WP1 complete and Checkpoint 1 sent** (18:26:57, Telegram Attention, both recorded
 walks' videos; `ai-peer-wp1-3` closed 18:29). **WP4 started 18:52**: `ai-peer-wp4-1` (window 2595) in
 `~/repos/ai-peer-wp4` on `wp4-meeting`, from [its brief](handoffs/HANDOFF-2026-11-06-ai-peer-wp4-1.md)
 (a read-only review found 18 issues, all folded; the worst: Recall's default transcription delays live
@@ -110,9 +110,9 @@ needs Manish at the Mac: "open window", then the Google client ([setup/google.md
   `~/.codex/hooks.json` (backups in `~/.ai-peer/backups/`; both checked to parse), and the hourly
   scan reads `~/repos`.
 - Still running (18:55 on 6 Nov): the live Peer (above) and `ai-peer-controller-3`'s watcher
-  `watch2.zsh` (pid 75864, no AI, in the controller's scratchpad; it exits with one line on a change:
+  `watch2.zsh` (pid 86505, no AI, in the controller's scratchpad; it exits with one line on a change:
   a worker or the Peer gone, a worker at 45% context, the PR list, the `.env` key names, the Google
-  client file, or after 55 minutes; the controller re-arms it; stop: `kill 75864`). It tracks
+  client file, or after 55 minutes; the controller re-arms it; stop: `kill 86505`). It tracks
   `ai-peer-wp4-1` (pid 74844), `ai-peer-wp3-2` (pid 53664) and the Peer (pid 62524). Worktrees:
   `~/repos/ai-peer-wp1` (done), `~/repos/ai-peer-wp2` (the Peer runs from it), `~/repos/ai-peer-wp3`,
   `~/repos/ai-peer-wp4`. Controller-3 context 8% at 17:57, 27% at 18:28.
