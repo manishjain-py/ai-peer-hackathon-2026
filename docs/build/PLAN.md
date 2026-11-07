@@ -115,3 +115,4 @@ the film opener; two full rehearsals before 16 Nov. Its live steps wait for WP7.
 5. Data: company data only through AirChat (or the company's harness), never his personal Claude; confirm.
 6. Code transfer: is a zip of this repo fine on the Airbnb laptop, and where may the repo live (a remote)?
 7. Hackathon format: slot length, live or recorded, judging criteria.
+8. Mail and calendar: which may an internal tool read, and through which API (DESIGN D5)?

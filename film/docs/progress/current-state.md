@@ -83,7 +83,7 @@ Both files fully decoded: 263 seconds, 7,890 frames, zero errors. AAC measures â
 Reviews were sampled visual checks and technical decoding. **Direct audio listening
 was unavailable**; recognition/timing/level checks do not establish subjective taste.
 
-Telegram confirmed delivery: message **4920**, 22,743,114 bytes.
+Telegram confirmed delivery: 22,743,114 bytes.
 [Receipt](../../work/draft07/telegram-delivery.json). App file-opening was queued.
 Next: Manish reviews Draft 07. No work remains to render or deliver this version.
 

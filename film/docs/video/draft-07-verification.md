@@ -37,6 +37,6 @@ All older drafts remain intact. The photographic employee and generic Zoom
 participants are fictional; project context retains the user-supplied dates.
 The call, notes, actions and integrations remain simulated.
 
-Telegram delivery confirmed: message **4920**,22,743,114 bytes.
+Telegram delivery confirmed: 22,743,114 bytes.
 [Receipt](../../work/draft07/telegram-delivery.json). The app file-opening request
 returned queued. Nothing was publicly published.

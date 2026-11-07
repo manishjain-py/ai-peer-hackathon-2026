@@ -249,7 +249,7 @@ publication or live system action is part of this documentation pass.
 - Both exports decoded in full: 240 seconds, 7,200 frames, no errors, faststart;
   stereo AAC at −16.0 LUFS / −2.7 dBTP. No direct audio listening was available.
 - Sent the verified [1080p film](../../renders/ai-peer-draft-06.mp4) privately to
-  Telegram: message **4911**, 23,378,607 bytes, [confirmed receipt](../../work/draft06/telegram-delivery.json).
+  Telegram: 23,378,607 bytes, [confirmed receipt](../../work/draft06/telegram-delivery.json).
   The app's file-opening request was queued. No public publication.
 - Updated storyboard, audio/verification notes, decision 0006, product use cases,
   knowledge/freshness, overview/scope, build routes and current state. Earlier

@@ -50,7 +50,7 @@ was not available and is explicitly excluded from this verification.
 
 ## Delivery
 
-Telegram confirmed the requested video delivery: message **4857**, file size
+Telegram confirmed the requested video delivery: file size
 15,372,513 bytes. The [receipt](../../work/draft03/telegram-delivery.json) is retained.
 Only the completed film was sent; nothing was publicly published.
 

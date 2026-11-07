@@ -51,7 +51,7 @@ Full-file size: 20,734,356 bytes. SHA-256:
 
 ## Delivery
 
-Telegram confirmed the private video delivery: message **4908**, 20,734,356 bytes.
+Telegram confirmed the private video delivery: 20,734,356 bytes.
 [Receipt](../../work/draft05/telegram-delivery.json). No public publication occurred.
 
 ## Limits and evidence

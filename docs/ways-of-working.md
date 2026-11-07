@@ -88,7 +88,8 @@ per session: date, name, what happened, outcome).
 - **Measure, never by feel**: right after the reading phase, then at every milestone (after each commit or
   proof step). Section 13 says how.
 - At 45 to 50%: finish the current step (work committed and pushed), write
-  `docs/build/handoffs/HANDOFF-YYYY-MM-DD-<session>.md` (template in section 12), commit it, update STATE,
+  `docs/build/handoffs/HANDOFF-YYYY-MM-DD-<successor>.md` (named after the session it starts, so no file is
+  ever overwritten; template in section 12), commit it, update STATE,
   start the successor (or give Manish its one-line launch prompt), and stop.
 - Also hand off when a usage limit nears (section 8) or the day ends.
 - **The stranger test:** someone holding only the repo and the hand-off carries on. It names the branch, PR,
@@ -184,7 +185,7 @@ Worktree `<path>`, branch `<branch>` from `<sha>`. It needs: <venv, env files, t
 - <Trap>: <the mechanism>; <what to do>.
 ```
 
-**Hand-off** (a session to its successor):
+**Hand-off** (a session to its successor; file `HANDOFF-YYYY-MM-DD-<successor>.md`):
 
 ```markdown
 # Hand-off: <from session> to <successor>, <YYYY-MM-DD HH:MM> UTC

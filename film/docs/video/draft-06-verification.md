@@ -77,6 +77,5 @@ are separate from simulated dialogue, invitations, announcements, interfaces and
 outcomes. No live product or AirChat integration was built, no company message
 was sent and no calendar invitation was actually answered.
 
-Private Telegram delivery succeeded under the existing review workflow: message
-**4911**, 23,378,607 bytes. [Confirmed receipt](../../work/draft06/telegram-delivery.json).
+Private Telegram delivery succeeded under the existing review workflow: 23,378,607 bytes. [Confirmed receipt](../../work/draft06/telegram-delivery.json).
 There was no public publication. The app file-opening request returned queued.

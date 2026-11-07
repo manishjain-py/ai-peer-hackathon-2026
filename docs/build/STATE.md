@@ -22,6 +22,12 @@ Live sessions: none yet. The first one adds a row.
 
 Still running: nothing.
 
+## This laptop's tools
+
+What the coding agent here can and cannot do (sub-agents, starting sessions, messages between sessions, a
+context meter, a usage readout, its limits), and which fallbacks from ways-of-working section 13 are in use.
+The first session fills it.
+
 ## Packages
 
 - WP0 to WP4: done on the first laptop ([PLAN](PLAN.md), "Done on the first laptop"). WP3's live S2 walk and
@@ -46,8 +52,10 @@ The controller asks one at a time, in this order, each in plain words with a rec
    one-command-per-run mode (like `claude -p`) on a harness allowed to see company data (DESIGN §6; WP8).
 3. **The Airbnb asks** in [PLAN](PLAN.md) (AirChat headless and plugins; an always-on host; a Slack app; a
    meeting bot on Zoom; data only through the company's harness; where the repo may live; the hackathon
-   format). Answers go to "Airbnb notes" below.
+   format; which mail and calendar the Peer may read). Answers go to "Airbnb notes" below.
 4. **Access for WP9**, one system at a time, as each package's spike needs it.
+5. **What replaces the decisions marked "revisit on the new Mac"** (DESIGN D4 the test world, D5 mail and
+   calendar, D8 meetings, D14 the agent account): one at a time, as the Airbnb answers arrive.
 
 ## Next
 

@@ -36,7 +36,9 @@ hackathon (16 to 20 Nov 2026).
 - **Not done:** **S2 daily brief**'s live walk (built, dry walk passed; it needed a mail login never made); the
   fix of a **privacy flaw** (section 5); the adapter contract everywhere; the demo polish and recordings.
 - **7 Nov: Manish moved the project here** (DESIGN D17). This copy is sanitized: the old test company, every
-  account, token, id and personal detail stayed behind. The test world is now **Fernway**, a fictional company
+  account, token, id and personal detail stayed behind (one exception: the kept film render still shows Manish's
+  full name, his city and a few colleagues' first names; its captions and source are sanitized; see
+  `film/README.md`). The test world is now **Fernway**, a fictional company
   (`peer/scenarios/world.yaml`, `peer/world/profiles/`); its repos do not exist, so dry runs work but have no
   project facts to answer from. On this laptop come the **Airbnb integrations** Manish named: code through
   Airbnb's GitHub and Sourcegraph MCP, people, teams and ownership through One Airbnb, Airbnb's Zoom and Slack,
@@ -116,7 +118,8 @@ Run every command from the repo root. Never a `peer` command without `AI_PEER_OW
 1. **Check the copy:** `git log --oneline` shows one commit; `git status` is clean. Name yourself
    `ai-peer-controller-5` (the first laptop ran controllers 1 to 4) and add your row to STATE's sessions table.
 2. **Ask Manish, one at a time:** STATE "Needs Manish" 1 (where the repo lives) and 2 (which agent and login
-   build here, and which may run the Peer's brain). Record his words in STATE "Manish's answers".
+   build here, and which may run the Peer's brain). Record his words in STATE "Manish's answers". Both may hang on Airbnb's answers (asks 1, 5 and 6 in PLAN): ask
+   what he already knows; until it is settled, no company data, and no brain run on a login he has not approved.
 3. **The one secret that travelled:** the zip holds `ai-peer-secrets/elevenlabs.env` beside this folder (one
    line, `ELEVENLABS_API_KEY=...`). Move it without printing it:
    `mkdir -p ~/.ai-peer && chmod 700 ~/.ai-peer && cat ../ai-peer-secrets/elevenlabs.env >> ~/.ai-peer/.env && chmod 600 ~/.ai-peer/.env`,
@@ -128,19 +131,29 @@ Run every command from the repo root. Never a `peer` command without `AI_PEER_OW
    `uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -r requirements.txt`.
 5. **The code runs:** with a scratch home outside the repo,
    `PYTHONDONTWRITEBYTECODE=1 AI_PEER_HOME="$PWD/../ai-peer-scratch-home" AI_PEER_OWNER=setuptest .venv/bin/python -c "import importlib, pkgutil, peer; mods=[m.name for m in pkgutil.walk_packages(peer.__path__, 'peer.')]; [importlib.import_module(m) for m in mods]; print(len(mods), 'modules ok')"`,
-   then the same prefix with `-m peer port-check --adapter fake` (exit 0) and `-m peer discover --no-ai`
-   (the fictional profile: its GitHub step records an error, the rest completes).
+   (prints `54 modules ok`), then the same prefix with `-m peer set brain.fallback false` (first, on every new
+   owner), `-m peer port-check --adapter fake` (exit 0) and `-m peer discover --no-ai` (the fictional profile:
+   its GitHub step records an error, the rest completes with 4 topic words). `AI_PEER_HOME` also moves where
+   secrets are read (`$AI_PEER_HOME/.env`, then the process environment), but the code host is still reached
+   through the machine's `gh` login if one exists: where that login must not be used, put
+   `GITHUB_TOKEN=invalid-for-a-dry-run` in the scratch home's `.env` first.
 6. **What your tool can do:** sub-agents, starting other sessions, messages between sessions, a context
    meter, a usage readout. Write in STATE which ways-of-working fallbacks (section 13) you use.
 7. **The Airbnb asks:** STATE "Needs Manish" 3 ([PLAN](docs/build/PLAN.md), "Airbnb asks"); answers go to
    STATE "Airbnb notes". They decide WP8 and WP9.
-8. **One dry walk on a brain, once a harness allowed on this laptop exists** (step 2's answer): on the test
-   owner, `set brain.fallback false`, `set brain.summary_effort high`, then `scenario s1-away --dry-run`
+8. **One dry walk on a brain, once a harness allowed on this laptop exists** (step 2's answer): with step 5's
+   prefix, `set brain.backend <claude or codex, whichever step 2 allowed>`, `set brain.claude_bin claude` (or the
+   approved binary's path: the default is a pinned copy under `~/.ai-peer/bin/` that this laptop lacks, and a
+   missing file silently falls back to whatever `claude` is on PATH), `set brain.summary_effort high`,
+   `discover --no-ai`, then `scenario s1-away --dry-run`
    (fake Slack, the real brain, the fictional world: the answers flag the questions for Manish, since the
    fictional repos hold no facts; a pass is a thread reply for each colleague post and one DM to the owner).
    Dry runs of `s1-online`, `s2-brief` and the `f*` scenes also need only a brain; `s3-meeting` needs a meeting
    bot account and a test meeting; `f6-fresh` needs a real code host.
-9. **Update STATE** ("Where we are", your session row, the answers), commit, and go on to "Next": WP7.
+9. **Update STATE** ("Where we are", your session row, the answers, "This laptop's tools"), commit. Then "Next":
+   as the controller, turn WP7's plan into a worker's brief, have a reviewer check it, and start the worker (or,
+   if your tool cannot start sessions, give Manish the worker's one-line kickoff). The controller writes no
+   product code.
 
 ## 7. What comes next
 
@@ -164,10 +177,12 @@ him to paste a secret into a chat: secrets go straight into `~/.ai-peer/.env`.
 ## 9. How to hand off
 
 - Measure your context right after reading and at every milestone: your tool's meter, or (Claude Code) the
-  last `usage` record in your session transcript: input + cache read + cache creation, over the window
-  ([ways of working](docs/ways-of-working.md) sections 7 and 13).
+  last `usage` record in your session transcript (`~/.claude/projects/<the start folder, each / and . as
+  ->/<session id>.jsonl`): input + cache read + cache creation, over the window size (1M tokens on the first
+  laptop's model; check yours) ([ways of working](docs/ways-of-working.md) sections 7 and 13).
 - **At 45 to 50%:** finish the current step, commit (and push), write
-  `docs/build/handoffs/HANDOFF-<YYYY-MM-DD>-<your session name>.md` from the template in ways-of-working
+  `docs/build/handoffs/HANDOFF-<YYYY-MM-DD>-<the successor's session name>.md` (named after the session it
+  starts, so it never overwrites a brief) from the template in ways-of-working
   section 12, update STATE, give Manish (or start) the successor's one-line kickoff, and stop.
 - **Usage:** at 93% of the weekly limit start nothing that cannot finish cleanly; at about 95% every session
   finishes its step, hands off and stops.

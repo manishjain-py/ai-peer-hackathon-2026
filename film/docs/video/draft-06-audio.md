@@ -39,9 +39,7 @@ See [speech with timing](https://elevenlabs.io/docs/api-reference/text-to-speech
 The existing ElevenLabs credential was read in memory from an environment file
 outside this project; in this copy the builder reads `ELEVENLABS_API_KEY` from the
 environment or `~/.ai-peer/.env`. Its value is never copied into this project or printed.
-Read-only account checks confirmed an active subscription with sufficient
-remaining generation allowance. Only filtered non-secret account/catalog
-metadata is retained in `work/draft06/audio-catalog/`.
+Only filtered non-secret catalog metadata was kept, in `work/draft06/audio-catalog/` (not in this copy).
 
 Each generated clip is cached by its exact request. Script timing changes reuse
 the same performance. Requests, selected audio and timing responses are retained

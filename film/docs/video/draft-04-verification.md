@@ -44,8 +44,7 @@ audio listening was not available and is excluded from these checks.
 
 ## Delivery
 
-Telegram confirmed delivery of the completed 1080p film: message **4870**,
-18,812,060 bytes. [Receipt](../../work/draft04/telegram-delivery.json). This continues
+Telegram confirmed delivery of the completed 1080p film: 18,812,060 bytes. [Receipt](../../work/draft04/telegram-delivery.json). This continues
 the user-authorized private delivery workflow; nothing was publicly published.
 
 ## Evidence and limits
