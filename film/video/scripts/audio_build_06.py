@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Draft06: all-new ElevenLabs speech, supplied timing, original 124 BPM score.
 
-The key is read in memory from Like Magic's existing environment file. It is
+The key comes from ELEVENLABS_API_KEY in the environment, else from an
+ELEVENLABS_API_KEY=... line in ~/.ai-peer/.env. It is read in memory only and is
 never printed, copied, or written into this project. No time stretching is used.
 """
 from __future__ import annotations
@@ -28,7 +29,7 @@ ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "video/public/draft06/audio"
 WORK = ROOT / "work/draft06/audio-clips"
 QA = ROOT / "work/draft06/audio-qa"
-KEY_FILE = Path("/Users/manishjain/repos/learnlikemagic/llm-backend/.env")
+KEY_FILE = Path.home() / ".ai-peer" / ".env"
 SR, BPM = 48000, 124
 MODEL = "eleven_multilingual_v2"
 FORMAT = "pcm_44100"
@@ -50,13 +51,15 @@ def read_key():
     value = os.environ.get("ELEVENLABS_API_KEY")
     if value:
         return value
-    for line in KEY_FILE.read_text().splitlines():
+    lines = KEY_FILE.read_text().splitlines() if KEY_FILE.is_file() else []
+    for line in lines:
         match = re.match(r"^\s*(?:export\s+)?ELEVENLABS_API_KEY\s*=\s*(.*)$", line)
         if match:
             value = match[1].strip().strip("\"'")
             if value:
                 return value
-    raise RuntimeError("The existing ElevenLabs credential was not available; no secret values logged.")
+    raise RuntimeError("No ElevenLabs credential: set ELEVENLABS_API_KEY or add it to ~/.ai-peer/.env; "
+                       "no secret values logged.")
 
 
 def sha(path):
@@ -64,8 +67,8 @@ def sha(path):
 
 
 def label(row):
-    return {"narrator": "", "peer": "MANISH'S AI PEER: ", "alex": "NEEL: ",
-            "sarah": "CHARAN: " if row["id"].startswith("zoom_") else "DATA ENGINEER: "}[row["speaker"]]
+    return {"narrator": "", "peer": "MANISH'S AI PEER: ", "alex": "NOAH: ",
+            "sarah": "CARLOS: " if row["id"].startswith("zoom_") else "DATA ENGINEER: "}[row["speaker"]]
 
 
 def write_captions(timeline):

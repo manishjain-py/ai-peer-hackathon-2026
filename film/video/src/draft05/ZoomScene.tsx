@@ -87,7 +87,7 @@ const SharedEvidence:React.FC<{t:number;share:number}>=({t,share})=>{
     <div style={{marginTop:12,fontSize:26,color:'#56636A'}}>A newly populated D-REX → DCQ case is still unverified.</div>
     <div style={{marginTop:16}}><Source label="Slack example-case request" meta="Simulated conversation" slack/></div>
    </div>
-   <div style={{marginTop:17,fontSize:26,fontWeight:600,color:'#386C55',opacity:ownerReveal*(1-approval),display:'flex',alignItems:'center',gap:10}}><Icon name="people" size={24}/>Charan offered to coordinate the example case.</div>
+   <div style={{marginTop:17,fontSize:26,fontWeight:600,color:'#386C55',opacity:ownerReveal*(1-approval),display:'flex',alignItems:'center',gap:10}}><Icon name="people" size={24}/>Carlos offered to coordinate the example case.</div>
   </div>
   <div style={{position:'absolute',left:32,right:32,top:257,bottom:20,border:'1px solid #E8C17D',borderRadius:16,background:'#FFF8E9',boxShadow:'0 -20px 70px #E8ECEEA0',opacity:approval,transform:`translateY(${90*(1-approval)}px)`,padding:'28px 34px',boxSizing:'border-box'}}>
    <div style={{display:'flex',gap:12,alignItems:'center',color:'#9B6B1B',fontSize:18,fontWeight:800,letterSpacing:1.3}}><Icon name="shield" size={24}/> A DECISION FOR MANISH</div>
@@ -113,9 +113,9 @@ export const ZoomScene:React.FC<{t:number;speaker?:Speaker|null;timingLines?:Tim
    <div style={{height:39,display:'flex',alignItems:'center',justifyContent:'space-between',padding:'0 21px',color:'#CED2D8',fontSize:16}}><div style={{display:'flex',gap:11,alignItems:'center'}}><Icon name="shield" size={19} color="#65D39A"/><span>Premium chargebacks sync</span><span style={{color:'#777D85',marginLeft:13}}>{elapsedLabel}</span></div><div style={{display:'flex',gap:8,alignItems:'center',border:'1px solid #4B4D54',padding:'4px 9px',borderRadius:5}}><Icon name="grid" size={14}/><span>View</span></div></div>
    <div style={{position:'absolute',left:585,top:42,height:29,display:'flex',alignItems:'center',padding:'0 19px',borderRadius:'0 0 5px 5px',background:'#277544',color:'#FFF',fontSize:15,opacity:share,zIndex:6}}>You are viewing Manish’s AI Peer’s screen<span style={{marginLeft:27,paddingLeft:16,borderLeft:'1px solid #FFFFFF40'}}>View options⌄</span></div>
    <SharedEvidence t={t} share={share}/>
-   <Participant id="sarah" name="Charan Batchu" index={0} t={t} active={active==='sarah'} share={share}/>
-   <Participant id="alex" name="Neel Jain" index={1} t={t} active={active==='alex'} share={share}/>
-   <Participant id="maya" name="Ansh Sharma" index={2} t={t} active={active==='maya'} share={share}/>
+   <Participant id="sarah" name="Carlos Baker" index={0} t={t} active={active==='sarah'} share={share}/>
+   <Participant id="alex" name="Noah James" index={1} t={t} active={active==='alex'} share={share}/>
+   <Participant id="maya" name="Adam Stone" index={2} t={t} active={active==='maya'} share={share}/>
    <Participant id="peer" name="Manish’s AI Peer" index={3} t={t} active={active==='peer'} share={share}/>
    <Toolbar/>
   </div>

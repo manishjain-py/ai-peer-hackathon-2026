@@ -2,6 +2,8 @@
 
 Read ../docs/video/README.md for build commands and ../docs/progress/current-state.md for the latest verified export.
 
+This copy has no audio files (every mixed.wav and stem), no Draft 07 opening photos, no Draft 02 webcam image and no ../work/ folder; they stayed in the original repository (no Git LFS here). Bring them back before any render or audio rebuild. Text inputs (script, timing, captions, review JSON) are present.
+
 - Draft 07 lives in src/draft07/ with 263 seconds, seated photographic opening and rebuilt cross-team Zoom. Use its own script/timing and audio/mixed.wav only;32 voices reused and 9 new ElevenLabs lines.
 - Draft 06 lives in src/draft06/ with a 240-second timeline, four use-case chapters and all-new ElevenLabs speech. Use public/draft06/audio/mixed.wav only; source/word timing is in its script and audio/timing JSON. Render stills and encoded review before delivery.
 - Draft 05 lives in src/draft05/ with a 196-second timeline. It removes Sourcegraph, uses dated user-provided RPS context, and shows the proposed AirChat local-work plugin. Use only public/draft05/audio/mixed.wav and script/timing data.

@@ -100,7 +100,7 @@ MANISH'S AI PEER: Weather Protection still needs product identity and policy res
 
 26
 00:01:20,030 --> 00:01:23,360
-MANISH'S AI PEER: Charan's integration work depends on those answers.
+MANISH'S AI PEER: Carlos's integration work depends on those answers.
 
 27
 00:01:24,190 --> 00:01:25,700
@@ -136,11 +136,11 @@ D-REX PARTNER: or disputed amounts by product?
 
 35
 00:01:54,170 --> 00:01:55,290
-NEEL: Manish is offline.
+NOAH: Manish is offline.
 
 36
 00:01:55,780 --> 00:01:56,530
-NEEL: It's two a.m.
+NOAH: It's two a.m.
 
 37
 00:01:57,236 --> 00:01:58,936
@@ -180,7 +180,7 @@ Next, a project sync he's delegated to his Peer.
 
 46
 00:02:22,300 --> 00:02:26,460
-NEEL: Manish's Peer, where are we on premium chargebacks?
+NOAH: Manish's Peer, where are we on premium chargebacks?
 
 47
 00:02:27,128 --> 00:02:28,808
@@ -200,11 +200,11 @@ MANISH'S AI PEER: Then we need to validate with a fresh dispute case.
 
 51
 00:02:38,459 --> 00:02:40,379
-CHARAN: I'll help coordinate the example case.
+CARLOS: I'll help coordinate the example case.
 
 52
 00:02:41,098 --> 00:02:42,618
-NEEL: Can we commit to a launch date?
+NOAH: Can we commit to a launch date?
 
 53
 00:02:43,046 --> 00:02:43,706

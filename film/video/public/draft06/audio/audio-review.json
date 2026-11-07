@@ -41,7 +41,7 @@
     "model": "Whisper small.en",
     "lines_reviewed": 39,
     "path": "../../../../work/draft06/audio-qa/asr-small.json",
-    "observations": "Selected narrator wording and core scenario dialogue recovered. Ordinary name/term normalization remains: Peer/Pier, Yash/Yasha, Airversary/anniversary, Boris Cherny/Chirny, marked read/red. Small.en omitted the beginning of zoom_source; a separate base.en check recovered the deploy-backend-first phrase with backend rendered back and."
+    "observations": "Selected narrator wording and core scenario dialogue recovered. Ordinary name/term normalization remains: Peer/Pier, the colleague's first name, Airversary/anniversary, the speaker's name, marked read/red. Small.en omitted the beginning of zoom_source; a separate base.en check recovered the deploy-backend-first phrase with backend rendered back and."
   },
   "music_effect_sync_seconds": [
     24,
@@ -53,7 +53,6 @@
   ],
   "generation_receipts": {
     "unique_cached_generations": 65,
-    "reported_character_units": 2436,
     "note": "Includes superseded narrator candidate performances and selected comparison clips; no cash charge estimate."
   },
   "direct_listening_performed": false,

@@ -1,44 +1,47 @@
 # Repository and restoration
 
-Source control was introduced on **4 November 2026** at Manish's request.
-The [private GitHub repository](https://github.com/manishjain-py/ai-peer-hackathon-2026)
-uses `main`. The initial import completed successfully, including all 1,666 unique
-LFS objects; remote download availability was verified. See
-[current state](../progress/current-state.md) for the latest synchronization status
-and [import evidence](../../work/repository-import-2026-11-04/) for checks. The dated
-1 November handoff describes the pre-Git folder.
+Source control was introduced on **4 November 2026** at Manish's request. The film
+project was imported into a private GitHub repository on `main`, with all 1,666
+unique media objects (about 3.7 GB) in Git LFS; remote download availability was
+verified. See [current state](../progress/current-state.md) for the latest status.
+The dated 1 November handoff describes the pre-Git folder.
 
-## What is preserved
+## What this copy holds
 
-Git tracks project documentation, the unedited source material, every draft's
+This is a hand-off copy of the AI Peer repository, with the film under `film/`.
+It uses **no Git LFS**. It keeps the documentation, the references, the original
+idea, every draft's source and scripts, the text inputs under `video/public/`
+(scripts, timing, captions, review notes) and one render:
+`renders/ai-peer-draft-07.mp4` (Draft 07, 4:23) with its captions
+`renders/ai-peer-draft-07.srt`.
+
+Every other render, preview and silent picture, the stills, all audio (mixed WAVs
+and stems), the Draft 07 opening photos, the Draft 02 webcam image, the `work/`
+folder (selected clips, alignment caches, provenance, manifests, QA reports and
+delivery receipts) and the user-supplied work-profile file stayed in the original
+repository. Older docs still link to them as history. Draft 07 depends on older
+source modules and on Draft 06 selected audio, so re-rendering a draft or
+rebuilding its audio needs those files from the original repository first.
+
+## What the original repository preserves
+
+There, Git tracks project documentation, the source material, every draft's
 source and scripts, public assets, completed exports, intermediate pictures,
-review stills, and retained `work/` production files. In particular, Draft 07
-depends on older source modules and Draft 06 selected audio. Keep selected WAVs,
-alignment JSON, provenance, manifests, QA reports and Telegram receipts.
+review stills and the retained `work/` production files, with binary media in
+Git LFS. A checkout without LFS content is not a complete production checkout.
+The source manifest covers only 15 frozen Draft 07 inputs; it is not the full
+dependency inventory.
 
-Binary media uses [Git LFS attributes](../../.gitattributes), keeping full media
-content in LFS and small pointers in Git. A source checkout without LFS content
-is not a complete production checkout. The source manifest covers only 15 frozen
-Draft 07 inputs; it is not the full dependency inventory.
+Ignore rules exclude installed `video/node_modules`, Remotion/build caches, Python
+bytecode, the audio virtual environment, downloaded model caches and local
+credentials. A repository is not a machine backup, and a clean clone still
+requires runtime installation.
 
-The [ignore rules](../../.gitignore) exclude installed `video/node_modules`,
-Remotion/build caches, root `.cache`, Python bytecode, the existing audio virtual
-environment, downloaded model caches and machine-local environment credentials.
-Those local files are retained on this Mac. The repository does not replace a
-machine backup, and a clean clone still requires runtime installation.
+## Set up on another machine
 
-## Restore on another machine
-
-Install Git and Git LFS, authenticate to the private repository, then run:
+From `film/`:
 
 ```sh
-git clone https://github.com/manishjain-py/ai-peer-hackathon-2026.git
-cd ai-peer-hackathon-2026
-git lfs install --local
-git lfs pull
-git switch main
-git pull --ff-only
-git lfs fsck
 npm --prefix video ci
 npm --prefix video run typecheck
 ```
@@ -48,18 +51,21 @@ render scripts use Google Chrome's macOS application path. Check the
 [production guide](../video/README.md) before adapting another machine. There is
 no need to rebuild a delivered film merely to restore or resume the project.
 
-Existing mixed WAVs are sufficient for ordinary visual work. For authorized
-audio work, the original environment is Python 3.12 at
-`work/draft03/audio-venv/bin/python`. Its installed package snapshot is retained
-with the [repository-import evidence](../../work/repository-import-2026-11-04/).
-This is a record of the original Mac environment, not a tested cross-platform
-lockfile. Some packages/models require platform-specific installation. Older
-local-voice drafts also need their separately downloadable model caches.
+For authorized audio work, the original environment was Python 3.12 at
+`work/draft03/audio-venv/bin/python` in the original repository, whose import
+evidence keeps its package snapshot. Pinned requirements are in
+`video/scripts/audio-requirements.txt` and `audio-requirements-03.txt`. This is a
+record of the original Mac environment, not a tested cross-platform lockfile.
+Some packages/models require platform-specific installation. Older local-voice
+drafts also need their separately downloadable model caches.
 
-Provide any ElevenLabs credential separately through the environment. Do not
-commit tokens or copy the external Like Magic `.env`. Telegram helpers likewise
-use machine-local credentials. A different machine needs its own credentials
-and local helper setup; repository access does not provide live company access.
+## Credentials
+
+The ElevenLabs builders (`audio_build_06.py`, `audio_build_07.py`) read
+`ELEVENLABS_API_KEY` from the environment, or else from an `ELEVENLABS_API_KEY=...`
+line in `~/.ai-peer/.env`. They hold the key in memory only and never print it.
+Do not commit tokens. A different machine needs its own credentials; repository
+access does not provide live company access.
 
 ## Continue work
 

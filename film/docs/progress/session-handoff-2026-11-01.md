@@ -6,14 +6,14 @@ or regenerated for this handoff. Its files and recorded source hashes still matc
 
 ## 1. Take over from this point
 
-Project root: `/Users/manishjain/repos/Hackathon 2026`.
-This directory is **not a Git repository**. Do not assume branches, PRs or commits
-exist for this initiative. Preserve the full directory, not only the newest files.
+At the time of this handoff the project folder was **not a Git repository**;
+source control came on 4 November (see
+[decision 0008](../decisions/0008-private-github-and-media-preservation.md)).
+Preserve the full project, not only the newest files.
 
-Use the `ai-peer` skill: canonical `.agents/skills/ai-peer/SKILL.md`, discoverable
-at `/Users/manishjain/.codex/skills/ai-peer/SKILL.md`. Start with `AGENTS.md` and
-[the current state](current-state.md), then load the relevant routed documents.
-This handoff summarizes history; current user instructions take precedence.
+Start with `AGENTS.md` and [the current state](current-state.md), then load the
+relevant routed documents (the `$ai-peer` skill does this). This handoff
+summarizes history; current user instructions take precedence.
 
 **The current deliverable is complete.** Draft 07 is delivered and awaits Manish's
 review. There is no pending render, upload, approved Draft 08, or live-product
@@ -23,14 +23,10 @@ No explicit acceptance of Draft 07's creative result has been received yet.
 
 Operating preferences:
 
-- Use clear, simple language. End replies with `## TLDR`, except replies already
-  one or two lines. Be autonomous within the authorized scope; avoid repeated
-  confirmations and do not ask Manish to repeat settled choices.
-- Standing permission from the latest instructions: use the **notify** skill at
-  the start and end of each session. Telegram start summary = planned work; end
-  summary = completed work and next steps. Report any send failure in chat.
-- Private delivery of revised completed films to Manish on Telegram is the
-  established workflow. Public publishing needs separate explicit instruction.
+- Use clear, simple language. Be autonomous within the authorized scope; avoid
+  repeated confirmations and do not ask Manish to repeat settled choices.
+- Private delivery of revised completed films to Manish is the established
+  workflow. Public publishing needs separate explicit instruction.
 - Keep old drafts, original user source and professional context intact. Record
   significant choices, update current state, append dated history, check links
   and inspect actual outputs before handing off.
@@ -69,20 +65,21 @@ human control over consequential decisions, and a correction/audit trail.
 
 ## 3. Verified deliverables
 
-All paths below are relative to the project root unless explicitly absolute.
+All paths below are relative to `film/`. This copy keeps only the final film and
+its captions; the preview, older drafts and `work/` stayed in the original repository.
 
 - **Final film:** [renders/ai-peer-draft-07.mp4](../../renders/ai-peer-draft-07.mp4).
   **4:23 / 263.000 s**, 1920×1080, 30 fps, 7,890 frames, H.264, stereo AAC 48 kHz.
   **22,743,114 bytes**.
-- **Preview:** [renders/ai-peer-draft-07-preview.mp4](../../renders/ai-peer-draft-07-preview.mp4),
+- **Preview:** `renders/ai-peer-draft-07-preview.mp4` (original repository only),
   960×540, same duration; 10,484,008 bytes.
 - **Captions:** [renders/ai-peer-draft-07.srt](../../renders/ai-peer-draft-07.srt)
   and preview SRT; **85 cues**. Captions are visible in the picture. There is no
   additional embedded subtitle stream that would duplicate them.
-- **Telegram delivery:** confirmed message **4920**, chat **7727757663**;
-  [receipt](../../work/draft07/telegram-delivery.json). Do not resend by default.
+- **Delivery:** sent privately to Manish on Telegram and confirmed; the receipt
+  is in the original repository's `work/draft07/`. Do not resend by default.
 - App file opening returned **queued**; do not claim it was visibly opened.
-- Drafts 01–06 remain in `renders/`. Nothing was publicly hosted.
+- Drafts 01–06 remain in the original repository's `renders/`. Nothing was publicly hosted.
 
 Final MP4 SHA-256:
 `bf51906c77713c0a6d7b72702d6414372bd09709d2441110d4353d25e4738cf5`
@@ -114,7 +111,7 @@ Those September usage-limit incidents are history, not a claim about today's quo
 | 1:04–1:36 | Chapter 01, BOBO: company launch → relevance to chargebacks → possible missing payments-risk involvement → product-owner contact. |
 | 1:36–2:16 | Chapter 02, Slack: US data owner asks why cancellation-window data is needed while Manish sleeps; Peer explains the dispute-agent need; owner offers purchased-item expiry guidance. |
 | 2:16–3:09 | Chapter 03, cross-team Zoom: generic Maya/Product, Alex/D-REX and Jordan/Case Platform. Missing RPS representation → identified Peer steps in for Manish because it is late → draft status → specific fresh-case question → partner updates → captured owners/next steps. Launch stays with Manish. |
-| 3:09–4:09 | Chapter 04, missed notifications: Gmail mark-all-read; Yash's Airversary/Vijay appreciation message; relevant Boris Cherny invitation with Accept/Decline/Ignore and a visible acceptance; Cassette dependency alert; personal daily brief. |
+| 3:09–4:09 | Chapter 04, missed notifications: Gmail mark-all-read; Yuri's Airversary/Vince appreciation message; relevant fireside invitation (speaker Blake Carter) with Accept/Decline/Ignore and a visible acceptance; Cassette dependency alert; personal daily brief. |
 | 4:09–4:23 | A few examples, countless possibilities. Closing line: **“More room for your best work.”** |
 
 Exact line/scene times live in `video/public/draft07/script.json`. Spoken timing
@@ -160,15 +157,15 @@ not a likeness of Manish or genuine recorded footage.
 ## 6. Real context versus authored examples
 
 Preserve [the complete original idea](../../source-material/ai-peer-original.txt)
-without edits. The professional input was
-`/Users/manishjain/Downloads/manish-jain-and-risk-partner-systems.md`; its unedited
-project copy is [here](../../source-material/manish-jain-and-risk-partner-systems-2026-09-19.md).
+without edits (this copy only swapped the example engineer's name for an invented
+one). The professional input was a work-profile file the user supplied
+(not kept in this copy).
 It contains **19 September 2026 work facts and August 2026 profile data**. It is
 now November; no private source was refreshed. Do not narratively turn those
 snapshots into current November facts or follow their private links without a task.
 
-Manish is described as Airbnb Senior Software Engineer, Payments, Bangalore,
-Risk Partner Systems (RPS, team 4982). Ownership is scoped: Pennyworth service,
+Manish is described as Airbnb Senior Software Engineer, Payments, Risk Partner
+Systems (RPS). Ownership is scoped: Pennyworth service,
 nova-disputes package, Compass risktooling actions. Pineapple and Treehouse are
 workspaces. Do not claim ownership of all Atrium/Nova, Compass, UDS, Cassette,
 Steward or other shared platforms. Source ownership files are `OWNERS`.
@@ -191,9 +188,10 @@ Scenario boundaries:
 - The US-team Synthetic Cancellation clarification delay is user-reported real.
   Peer participation is hypothetical. Cancellation timing helps assess a dispute;
   it does not alone determine legitimacy. The data reply is illustrative guidance.
-- Yash's five-year Airversary, Vijay's appreciation email and an Airbnb fireside
-  invitation are illustrative. Boris **Cherny** spelling/Claude Code role was
-  checked against Anthropic; that does not verify an actual Airbnb event.
+- Yuri's five-year Airversary, Vince's appreciation email and an Airbnb fireside
+  invitation are illustrative (invented names in this copy; the delivered render
+  shows the original names). The real speaker's name and role were checked against
+  a public source; that does not verify an actual Airbnb event.
 - Cassette's dependency relationship is supplied context. The specific maintenance,
   tagging and impact are simulated. The survey reminder was an alternative idea,
   not an outstanding missing requirement.
@@ -218,19 +216,21 @@ Main source files:
 - `ZoomScene.tsx`: generic cross-team call, speech-linked notes, handoff.
 - `SetupScene.tsx`, `StoryScenes.tsx`, `Shared.tsx`: retained setup and other chapters.
 - `video/public/draft07/opening/`: three PNGs. Prompts/provenance and proof material
-  are in `work/draft07/opening/`.
-- `video/public/draft07/audio/`: final mix, stems, actual timing, captions and QA.
+  are in `work/draft07/opening/` (both in the original repository only).
+- `video/public/draft07/audio/`: final mix, stems, actual timing, captions and QA
+  (this copy keeps the timing, captions and QA text, not the mix or stems).
 - `video/scripts/render-07.mjs`, `finalize-07.sh`, `audio_build_07.py`.
 - `work/draft07/`: source manifest, review records, encoded samples, QA checker,
   combined/full/preview audits, upload helper and delivery receipt.
 
 The stack is Remotion 4.0.526, React 19.3.0, TypeScript 7.0.2 and bundled Manrope.
 The renderer uses `/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`.
-Node/npm, FFmpeg and `video/node_modules` are present. The audio interpreter is
-`work/draft03/audio-venv/bin/python` (Python 3.12). Always run from the declared root:
+Node/npm, FFmpeg and `video/node_modules` were present on the production machine.
+The audio interpreter was `work/draft03/audio-venv/bin/python` (Python 3.12).
+Always run from `film/`:
 
 ```sh
-cd '/Users/manishjain/repos/Hackathon 2026'
+cd film
 npm --prefix video run typecheck
 npm --prefix video run stills:07
 npm --prefix video run preview:07
@@ -260,10 +260,10 @@ speech to fit. For authorized audio rebuilding, use the versioned builder with
 `--asr`. **Do not casually run `--provisional` on delivered timing: it overwrites
 actual timing with estimates.** Visual-only changes usually need no new speech.
 
-The ElevenLabs builder reads `ELEVENLABS_API_KEY` from the environment or
-`/Users/manishjain/repos/learnlikemagic/llm-backend/.env`. Never print/copy/commit
-secrets or log headers. Preserve cached request/audio/alignment files and inspect
-uncertain pending requests before retrying paid generation.
+The ElevenLabs builder reads `ELEVENLABS_API_KEY` from the environment or, in
+this copy, from an `ELEVENLABS_API_KEY=...` line in `~/.ai-peer/.env`. Never
+print/copy/commit secrets or log headers. Preserve cached request/audio/alignment
+files and inspect uncertain pending requests before retrying paid generation.
 
 The 15-file manifest is **not a standalone dependency bundle**. Draft 07 imports
 older shared code; audio imports earlier audio modules and reuses Draft 06 selected
@@ -271,21 +271,13 @@ WAVs. The composition index imports all versions. Keep `work/draft06/audio-clips
 prior timing, older source modules, assets and the audio environment. Do not delete
 `work/` as disposable scratch without auditing dependencies.
 
-## 8. Telegram and continuation
+## 8. Delivery and continuation
 
-Notify skill: `/Users/manishjain/.agents/skills/notify/SKILL.md`.
-Actual tested helper:
-`/Users/manishjain/.agents/skills/notify/scripts/tg-notify.sh`.
-The skill text contains stale `~/.Codex` examples; the helper defaults to the
-machine-local `~/.claude/channels/telegram/.env`. Keep the token private.
-Both start and end summaries succeeded for this handoff session.
-
-For private video delivery, `work/draft07/send_video_telegram.py` is the established
-helper, run with the audio Python environment. It reads the credential in memory,
-limits upload size, checks the successful receipt and skips duplicate delivery.
-For a future draft, use a new filename/helper/receipt path and correct duration;
-do not overwrite the delivered film or reuse its receipt. Confirm `ok:true` before
-claiming delivery. Do not publish the private work-context video publicly by default.
+Films were delivered privately on Telegram through a helper in the original
+repository's `work/draft07/`. For a future draft, use a new filename and receipt
+path and the correct duration; do not overwrite the delivered film or reuse its
+receipt. Confirm delivery before claiming it. Do not publish the private
+work-context video publicly by default.
 
 The cosmetic `finalize-07.sh --help` usage line still says `finalize-06.sh`; actual
 07 paths/behavior are correct. This was left unchanged to preserve the frozen

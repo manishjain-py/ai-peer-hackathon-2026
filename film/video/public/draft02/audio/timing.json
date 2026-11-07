@@ -557,7 +557,7 @@
       "start": 57,
       "limit": 62.5,
       "speaker": "narrator",
-      "text": "Now it's two a.m. in Bengaluru. But Sarah's afternoon is just getting started.",
+      "text": "Now it's two a.m. in India. But Sarah's afternoon is just getting started.",
       "end": 62.352,
       "duration": 5.352,
       "voice": "en-US-AvaNeural",
@@ -593,7 +593,7 @@
           "end": 58.375
         },
         {
-          "text": "Bengaluru.",
+          "text": "India.",
           "start": 58.3875,
           "end": 59.15
         },

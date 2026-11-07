@@ -74,8 +74,8 @@ period; they no longer block implementation.
 - Manish did not like the current voices: some sound artificial, and some have
   excessive excitement for the situation. Replace them with more natural,
   human-like performances using **ElevenLabs** when this round is incorporated.
-- He expects an ElevenLabs API key to already be stored on this machine, used
-  by the **Like Magic** repository for audio generation. When implementation is
+- He expects an ElevenLabs API key to already be stored on his machine, used
+  by another of his repositories for audio generation. When implementation is
   authorized, inspect that repository's existing audio setup to locate and reuse
   the credential securely. Its presence and location have not been checked yet.
 - Choose voices deliberately for each use: clear explanatory narration,
@@ -102,8 +102,9 @@ period; they no longer block implementation.
 
 ### Airversary appreciation
 
-- Illustrative reminder: Yash's **five-year Airversary** is coming up. Vijay
+- Illustrative reminder: Yuri's **five-year Airversary** is coming up. Vince
   shared a group appreciation message where Manish can add his appreciation.
+  (Invented names in this copy; the feedback named real colleagues.)
 - Show a compact **Gmail-branded widget** with a short summary, preview of the
   original email/message and a direct link to add appreciation.
 - “Airversary” is the Airbnb work-anniversary term supplied by Manish. The
@@ -111,9 +112,10 @@ period; they no longer block implementation.
 
 ### A relevant fireside chat that slipped through
 
-- Illustrative event: a fireside chat for Airbnb with the creator of Claude Code.
-  Manish supplied the speaker name as “Boris Jerny”; check the exact spelling
-  when incorporating rather than silently treating the transcript as verified.
+- Illustrative event: a fireside chat for Airbnb with a well-known AI-tools leader.
+  Manish supplied the speaker's name from a voice transcript; check the exact
+  spelling when incorporating rather than silently treating the transcript as
+  verified. (This copy uses the invented name Blake Carter.)
 - Peer explains the personal relevance: because of Manish's interest in AI,
   this looks like something he would enjoy. It notices that the invitation has
   neither been accepted nor rejected, and asks whether he may have missed it.

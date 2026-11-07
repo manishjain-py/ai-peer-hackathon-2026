@@ -14,9 +14,9 @@ Research only; I did not watch or listen to the films. Parent is inspecting medi
 
 BUCK's primary case study is unusually specific: https://buck.co/work/notion-ai
 
-Roman Muradov designed the character; BUCK and Notion's internal creative team evolved it into interactive animation. BUCK says it started each character performance in cel animation to retain a handmade feel, then used **Rive's State Machine** so expressions could move and mix seamlessly among user interaction states with optimized file size. Examples include thinking eyebrows and a face briefly falling apart for an error. This confirms the **product character animation** process, not the full film's compositing software.
+A separate illustrator designed the character; BUCK and Notion's internal creative team evolved it into interactive animation. BUCK says it started each character performance in cel animation to retain a handmade feel, then used **Rive's State Machine** so expressions could move and mix seamlessly among user interaction states with optimized file size. Examples include thinking eyebrows and a face briefly falling apart for an error. This confirms the **product character animation** process, not the full film's compositing software.
 
-Animator's corroborating portfolio: https://emanuelecolombo.it/notion — Emanuele Colombo says he collaborated with BUCK's design team in spring 2024 to develop the assistant's personality and reactions.
+Animator's corroborating portfolio (a personal site, not linked here): the animator says he collaborated with BUCK's design team in spring 2024 to develop the assistant's personality and reactions.
 
 No reliable primary evidence found identifying the full 57-second film's editor/compositor, specific music track, or software such as After Effects. Present any such pipeline as a reconstruction recommendation, not a confirmed historical fact.
 
@@ -37,7 +37,7 @@ The case-study HTML directly references https://vimeo.com/818757417 . Vimeo oEmb
 
 ### Avoid this false attribution
 
-https://vimeo.com/1051207888 (Jeff Moberg, `Slack - Canvas`) has detailed named animation/programming/sound credits, but is **15 seconds**, uploaded January 28, 2025. Do not attach those credits to the user's 87-second reference. Likewise a Faisal Karkoh Vimeo reupload of Notion is not evidence that he produced it.
+An individual's Vimeo upload titled `Slack - Canvas` has detailed named animation/programming/sound credits, but is **15 seconds**, uploaded January 28, 2025. Do not attach those credits to the user's 87-second reference. Likewise another individual's Vimeo reupload of Notion is not evidence that the uploader produced it.
 
 ## Research method and confidence
 

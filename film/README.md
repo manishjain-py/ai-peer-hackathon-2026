@@ -13,9 +13,8 @@ collaboration continue within delegated limits.
 [Draft 07](renders/ai-peer-draft-07.mp4) is complete: a **4:23, 1080p concept film**
 with ElevenLabs speech, original music and visible captions. It was delivered
 privately on **19 September 2026**; the **1 November audit** verified unchanged
-media hashes and production-manifest files. A [smaller preview](renders/ai-peer-draft-07-preview.mp4)
-and [caption sidecar](renders/ai-peer-draft-07.srt) are available. Drafts 01–06
-remain preserved. Manish's creative acceptance or targeted feedback is pending;
+media hashes and production-manifest files. Its [caption sidecar](renders/ai-peer-draft-07.srt)
+sits beside it. Manish's creative acceptance or targeted feedback is pending;
 no further render, delivery, revision or prototype work is currently required.
 
 No live AI Peer product or enterprise integration is implemented. Supplied
@@ -24,23 +23,43 @@ interface states and AI actions are authored scenarios. See
 [current state](docs/progress/current-state.md) for verification details and
 the [ownership handoff](docs/progress/session-handoff-2026-11-01.md) for context.
 
-Source control lives in the private
-[AI Peer GitHub repository](https://github.com/manishjain-py/ai-peer-hackathon-2026)
-on `main`. Media uses Git LFS. Follow the
-[repository and restoration guide](docs/technical/repository.md) when cloning
-or moving to another machine; the dated handoff predates Git setup.
+## What this copy holds
+
+This folder is part of a hand-off copy of the AI Peer repository. It uses **no
+Git LFS** and keeps only the latest render: [Draft 07](renders/ai-peer-draft-07.mp4)
+(4:23) and its captions, [ai-peer-draft-07.srt](renders/ai-peer-draft-07.srt).
+It also keeps every document, the references, the original idea, the Remotion
+project (`video/src/`, `video/scripts/`, package files) and the text inputs under
+`video/public/` (scripts, timing, captions, review notes).
+
+Every other render, preview and silent picture, the stills, all audio (mixes and
+stems), the Draft 07 opening photos, the Draft 02 webcam image, the `work/`
+folder (selected clips, alignment caches, QA and delivery records) and the
+user-supplied work-profile file — about 3.7 GB — stayed in the original repository.
+Docs still mention them as history; those links do not resolve here. You can read
+everything, inspect the source and run the typecheck, but re-rendering a draft or
+rebuilding its audio needs the audio and stills from the original repository.
+
+Real people's names were removed from this copy's text. Manish appears by first
+name only and his city is shown as "India". Drafts 05–07 named real colleagues
+and a public figure; invented names now stand in for them: Noah James, Carlos
+Baker and Adam Stone (Drafts 05–06 meeting and Slack), Yuri and Vince (the
+Airversary email) and Blake Carter (the fireside speaker). The Draft 07 render
+file itself is unchanged, so its picture and voice still carry the original
+names (and Manish's surname and city) and differ from this copy's captions,
+scripts and source.
 
 ## Resume with the AI Peer skill
 
-In a new local Codex session, type `$ai-peer` for a short catch-up, or add your task:
+In a new session in this repository, type `$ai-peer` (Codex) or `/ai-peer`
+(Claude Code) for a short catch-up, or add your task:
 
 > $ai-peer Make the opening of the demo video more energetic.
 
-The [project skill](.agents/skills/ai-peer/SKILL.md) reads the root instructions and
-latest saved state, then loads the documents needed for your request. On this Mac,
-`~/.codex/skills/ai-peer` links to this project skill so it can be discovered from
-other workspaces too. If the skill does not appear in a new session, restart Codex.
-If the project folder moves again, update that global link.
+The repository's [project skill](../.agents/skills/ai-peer/SKILL.md) (Claude Code
+reaches it through `.claude/skills/ai-peer`) reads the root instructions and the
+latest saved state, then loads the documents needed for your request. For film
+work it starts from [AGENTS.md](AGENTS.md) and [current state](docs/progress/current-state.md).
 
 ## Start by what you need
 
@@ -48,7 +67,7 @@ If the project folder moves again, update that global link.
 |---|---|
 | Resume work in a new session | [AGENTS.md](AGENTS.md), then [current state](docs/progress/current-state.md) |
 | Understand the idea quickly | [Product overview](docs/idea/overview.md) |
-| Explore the full original vision | [Unedited source](source-material/ai-peer-original.txt) |
+| Explore the full original vision | [Original idea](source-material/ai-peer-original.txt) |
 | Understand demo scenarios and boundaries | [Use cases](docs/idea/use-cases.md), [hackathon scope](docs/idea/hackathon-scope.md) |
 | Understand the proposed system | [Architecture](docs/technical/architecture.md) |
 | Work on the film | [Video documentation](docs/video/), [video source](video/), [renders](renders/) |
@@ -59,17 +78,19 @@ If the project folder moves again, update that global link.
 
 ```text
 AGENTS.md                 Compact instructions and selective reading routes
-source-material/          Complete original user idea, preserved unchanged
+source-material/          Complete original user idea (one name swapped in this copy)
 docs/idea/                Product vision, scenarios, knowledge, trust, scope
 docs/technical/           Proposed architecture and implementation status
 docs/video/               Film-specific planning and production instructions
 docs/decisions/           Accepted working choices and open questions
 docs/progress/            Current handoff and append-only session history
 references/               Notion/Slack study and reusable production recipe
-video/                    Editable film source, assets, and build files
-renders/                  Reviewable video exports
-work/                     Production evidence, reusable audio and intermediate files
+video/                    Editable film source, text inputs and build files
+renders/                  Draft 07 render and its captions (this copy)
 ```
+
+`work/` (production evidence, reusable audio and intermediate files) exists only
+in the original repository.
 
 The visual direction combines the Slack Canvas reference's connected narrative
 with the Notion AI reference's clear typography and focused motion. Draft 07
@@ -77,10 +98,10 @@ connects a seated photographic opening and personal setup to BOBO awareness,
 cross-time-zone Slack clarification, a generic cross-team Zoom exchange, missed
 notifications and a personal daily brief. The employee retains important decisions.
 
-Preserve the complete workspace. Draft 07 depends on earlier shared source and
-selected audio under `work/`; the production manifest is not a portable dependency
-bundle. Build instructions are for an authorized revision or rebuild, not a
-required step when resuming the project.
+Draft 07 depends on earlier shared source and on selected audio under `work/`
+in the original repository; the production manifest is not a portable dependency
+bundle, and this copy cannot rebuild Draft 07 by itself. Build instructions are
+for an authorized revision or rebuild, not a required step when resuming the project.
 
 The broader product is intentionally documented separately from the video.
 A rendered concept scene is not proof that the depicted feature exists.

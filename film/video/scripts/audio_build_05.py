@@ -235,8 +235,8 @@ def write_captions(timeline):
     by_id = {r["id"]: r for r in timeline}
     for cue in cues:
         row = by_id[cue["script_id"]]
-        labels = {"narrator": "", "alex": "NEEL: ", "peer": "MANISH'S AI PEER: ",
-                  "sarah": "CHARAN: " if row["id"].startswith("zoom_") else "D-REX PARTNER: "}
+        labels = {"narrator": "", "alex": "NOAH: ", "peer": "MANISH'S AI PEER: ",
+                  "sarah": "CARLOS: " if row["id"].startswith("zoom_") else "D-REX PARTNER: "}
         cue["text"] = labels[row["speaker"]] + cue["plain_text"]
     blocks = [f"{i + 1}\n{common.srt_stamp(c['start'])} --> {common.srt_stamp(c['end'])}\n{c['text']}\n"
               for i, c in enumerate(cues)]
@@ -292,7 +292,7 @@ def main():
         "voice_engine": [base.MODEL, base.DESIGN_MODEL],
         "voice_disclosure": "Stock synthetic male speakers and text-designed fictional presenter/colleague voices. No recordings, real-person imitation or real voice cloning. The authored colleague voice is male in Draft 05.",
         "music": "Original 124 BPM electro-pop score synthesized from oscillators and filtered noise. No third-party recordings or samples.",
-        "notes": "Exact selected Draft 04 and Draft 03 performances reused for unchanged lines. The narrator, Ryan and Aiden are retained. The sarah role key now uses a newly authored generic male colleague for the simulated partner/Charan lines. ASR-assisted word alignment, not direct listening.",
+        "notes": "Exact selected Draft 04 and Draft 03 performances reused for unchanged lines. The narrator, Ryan and Aiden are retained. The sarah role key now uses a newly authored generic male colleague for the simulated partner/Carlos lines. ASR-assisted word alignment, not direct listening.",
         "reused_line_ids": sorted(reusable), "new_line_ids": [r["id"] for r in records],
         "master_gain_db": round(20 * math.log10(master_gain), 4),
         "master_gain_linear": master_gain,

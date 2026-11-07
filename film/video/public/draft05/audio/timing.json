@@ -17,7 +17,7 @@
   ],
   "voice_disclosure": "Stock synthetic male speakers and text-designed fictional presenter/colleague voices. No recordings, real-person imitation or real voice cloning. The authored colleague voice is male in Draft 05.",
   "music": "Original 124 BPM electro-pop score synthesized from oscillators and filtered noise. No third-party recordings or samples.",
-  "notes": "Exact selected Draft 04 and Draft 03 performances reused for unchanged lines. The narrator, Ryan and Aiden are retained. The sarah role key now uses a newly authored generic male colleague for the simulated partner/Charan lines. ASR-assisted word alignment, not direct listening.",
+  "notes": "Exact selected Draft 04 and Draft 03 performances reused for unchanged lines. The narrator, Ryan and Aiden are retained. The sarah role key now uses a newly authored generic male colleague for the simulated partner/Carlos lines. ASR-assisted word alignment, not direct listening.",
   "reused_line_ids": [
     "brief_intro",
     "brief_payoff",
@@ -1282,14 +1282,14 @@
       "start": 76.6,
       "limit": 86.1,
       "speaker": "peer",
-      "text": "Weather Protection still needs product identity and policy results. Charan's integration work depends on those answers. I've drafted a question for the owners.",
+      "text": "Weather Protection still needs product identity and policy results. Carlos's integration work depends on those answers. I've drafted a question for the owners.",
       "seed": 47,
-      "direction": "Speak naturally in fluent American English. A helpful male colleague giving a concise update on a video call. Calm, warm, practical and confident. Brisk, connected, conversational phrasing with varied natural inflection and short pauses. No robot voice, no announcer voice, no dramatic emphasis. Pronounce the name Charan as chuh-run, in two clear syllables.",
+      "direction": "Speak naturally in fluent American English. A helpful male colleague giving a concise update on a video call. Calm, warm, practical and confident. Brisk, connected, conversational phrasing with varied natural inflection and short pauses. No robot voice, no announcer voice, no dramatic emphasis. Pronounce the name Carlos clearly, in two syllables.",
       "source_path": "work/draft05/audio-clips/brief_event-667499223625013f.wav",
       "source_duration": 9.28,
       "voice": "Aiden",
       "voice_engine": "mlx-community/Qwen3-TTS-12Hz-1.7B-CustomVoice-4bit",
-      "spoken_text": "Weather Protection still needs product identity and policy results. Charan's integration work depends on those answers. I've drafted a question for the owners.",
+      "spoken_text": "Weather Protection still needs product identity and policy results. Carlos's integration work depends on those answers. I've drafted a question for the owners.",
       "end": 85.876,
       "duration": 9.276,
       "original_duration": 9.276041666666666,
@@ -1347,7 +1347,7 @@
           "end": 80.06
         },
         {
-          "text": "Charan's",
+          "text": "Carlos's",
           "start": 80.06,
           "end": 80.98
         },

@@ -77,9 +77,10 @@ Cancellation clarification across time zones, delegated Zoom context and missed
 notifications recovered with source previews and useful actions. A daily brief
 brings people, opportunities and service dependencies together.
 
-Professional names and work context come from Manish's supplied file and
-reported experiences. Invitations, messages, interface states and AI actions
-are authored scenarios; they do not imply connected internal systems.
+Project and system names and work context come from a work-profile file Manish
+supplied (not kept in this copy) and his reported experiences. People's names in
+this copy are invented stand-ins. Invitations, messages, interface states and AI
+actions are authored scenarios; they do not imply connected internal systems.
 
 ## Read next
 

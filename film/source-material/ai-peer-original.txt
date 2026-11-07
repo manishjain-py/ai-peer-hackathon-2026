@@ -236,13 +236,13 @@ Human ↔ AI Peer ↔ Organization
 
 8. Key Use Cases
 Use Case 1 — Answering while the employee is offline
-Imagine someone messages Khaled late at night:
-"Hey Khaled, sorry for the late message. Do you know what happened with the latest rollout? We need this urgently."
-Khaled is asleep.
-Instead of waiting several hours, Khaled's Peer responds:
-"Khaled is currently offline. Based on the latest project information I have, the rollout completed for X, while Y is still blocked on Z. The latest update came from [source]. I'll make sure Khaled sees this conversation when he's back online."
+Imagine someone messages Kevin late at night:
+"Hey Kevin, sorry for the late message. Do you know what happened with the latest rollout? We need this urgently."
+Kevin is asleep.
+Instead of waiting several hours, Kevin's Peer responds:
+"Kevin is currently offline. Based on the latest project information I have, the rollout completed for X, while Y is still blocked on Z. The latest update came from [source]. I'll make sure Kevin sees this conversation when he's back online."
 The person asking the question immediately gets useful information.
-When Khaled returns, he sees:
+When Kevin returns, he sees:
 what was asked
 what his Peer replied
 what sources it used
@@ -289,16 +289,16 @@ Your working day may end.
 Your work does not necessarily need to stop.
 
 10. Use Case 3 — AI Peer Attending a Meeting
-Imagine Khaled cannot attend an important Zoom meeting.
+Imagine Kevin cannot attend an important Zoom meeting.
 His AI Peer joins the meeting instead.
 At the beginning, it could clearly identify itself:
-"Hi, I'm Khaled's AI Peer. Khaled couldn't join today. I'll follow the discussion, capture relevant decisions, and help with questions related to his work where I have enough context."
+"Hi, I'm Kevin's AI Peer. Kevin couldn't join today. I'll follow the discussion, capture relevant decisions, and help with questions related to his work where I have enough context."
 During the meeting someone asks:
-"Do we know where Khaled's team is with the migration?"
+"Do we know where Kevin's team is with the migration?"
 Someone responds:
-"Khaled isn't here today."
+"Kevin isn't here today."
 Then the Peer speaks:
-"I can help with that. Based on the latest project update, development is complete for X, Y is currently in validation, and the remaining dependency is Z. The latest update was from yesterday. I'll also share this discussion with Khaled and flag anything that needs his confirmation."
+"I can help with that. Based on the latest project update, development is complete for X, Y is currently in validation, and the remaining dependency is Z. The latest update was from yesterday. I'll also share this discussion with Kevin and flag anything that needs his confirmation."
 This could be a very powerful hackathon demo moment.
 The AI is no longer only answering questions in a chat interface.
 It is participating as a teammate.

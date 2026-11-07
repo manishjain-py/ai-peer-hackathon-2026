@@ -21,7 +21,7 @@
     "model": "Whisper small.en",
     "count": 20,
     "path": "../../../../work/draft05/audio-qa/asr-small-new.json",
-    "observations": "All 20 new performances reviewed using small.en recognition. The selected Slack Peer retake recovers the full intended final phrase; small.en does not repeat the extra tail phrases seen in base.en. ASR spelling/tokenization remains uncertain for Charan (Tran/Trans), Manish/Manish’s Peer, Payments ML, and backend (backing). Captions preserve the locked script; these checks do not establish pronunciation or naturalness."
+    "observations": "All 20 new performances reviewed using small.en recognition. The selected Slack Peer retake recovers the full intended final phrase; small.en does not repeat the extra tail phrases seen in base.en. ASR spelling/tokenization remains uncertain for the colleague's first name, Manish/Manish’s Peer, Payments ML, and backend (backing). Captions preserve the locked script; these checks do not establish pronunciation or naturalness."
   },
   "direct_listening_performed": false,
   "limitation": "ASR and numerical checks do not establish voice naturalness or subjective music balance. Direct listening was not performed.",
@@ -32,7 +32,7 @@
     },
     "brief_event": {
       "seed": 47,
-      "reason": "Already-generated take with explicit Charan pronunciation direction and correctly recognized Weather Protection phrase; proper-name ASR uncertainty remains."
+      "reason": "Already-generated take with explicit pronunciation direction for the colleague's name and correctly recognized Weather Protection phrase; proper-name ASR uncertainty remains."
     }
   },
   "full_mix_recognition_note": "tiny.en is a supporting content check only; omissions and shifted segment times mean its transcript is not used for caption alignment. Captions use per-line recognition anchors."

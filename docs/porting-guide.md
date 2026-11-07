@@ -278,6 +278,7 @@ cannot.
 |---|---|---|
 | Defaults | `peer/defaults.yaml` (in the repo) | Every key with its default and a comment. |
 | The owner's live settings | `~/.ai-peer/<owner>/settings.yaml` | Made as a **full copy** of `defaults.yaml` the first time any command runs for that owner, then merged over the defaults key by key: the live file wins. The running Peer re-reads it when it changes. |
+| The Peer's Slack sign-in window | `slack.workspace_url` | Required for `peer browser login` (e.g. `https://<workspace>.slack.com/`); empty stops it, since its sign-in check treats any `app.slack.com/client` page as signed in. |
 | Change one setting | `AI_PEER_OWNER=<owner> .venv/bin/python -m peer set <dotted.key> <value>` | The value is YAML: `true`, `42`, `[a, b]`, `{k: v}`. |
 | Secrets | `~/.ai-peer/.env` only | `KEY=VALUE` lines (an `export ` prefix and quotes are fine; no shell expansion). Read with `peer.settings.secret("KEY")`, which falls back to the process environment; `secret("KEY", required=True)` raises "KEY is missing". Never in git, chat, logs or settings files. |
 | Where everything lives | `AI_PEER_HOME` (default `~/.ai-peer`) | The `.env`, every owner folder, `bin/`, the spool. |
@@ -406,7 +407,7 @@ passed `port-check` and its first trials. A port keeps every one on until then.
 | Real mail and invites | `google.act_on_real_items: false` | `peer/adapters/google.py` `guard()` | Draft, send, discard and accept only on seeded test items (a token the seed script wrote in a mail header or an invite's id). A scripted click counts as the owner's tap, so this is what keeps a test off real mail. | `peer set google.act_on_real_items true` |
 | Seeded-only view | `google.show_real_items: false` | `peer/brief.py`, `peer/memory/google_steps.py`, and `peer/meetings/calendar.py` | Real mail, docs and events are counted, never named, copied into memory or shown | `peer set google.show_real_items true` |
 | Real meetings | `meetings.join_real_meetings: false` | `peer/adapters/meetings.py` `allowed()` | A bot joins only the test meeting (the meeting id in `ZOOM_TEST_MEETING_URL`) | `peer set meetings.join_real_meetings true` |
-| The owner's voice | none (in code) | `peer/adapters/voice.py` `check_voice()` | Stock (`premade`) voices only, never one whose name holds the owner's name (`manish` in code plus `voice.refuse_names_with`); a character budget (`voice.elevenlabs_budget_chars`) and no request when the account has under 20% left | Not by a setting: a code change, on the owner's words. At a port, set `voice.refuse_names_with` to the new owner's names |
+| The owner's voice | none (in code) | `peer/adapters/voice.py` `check_voice()` | Stock (`premade`) voices only, never one whose name holds the owner's name (each word of the profile's `name` and `preferred_name`, plus `voice.refuse_names_with`; an unreadable profile still leaves stock voices only); a character budget (`voice.elevenlabs_budget_chars`) and no request when the account has under 20% left | Not by a setting: a code change, on the owner's words. At a port, the new owner's profile names are refused by themselves; add any other name (a nickname) to `voice.refuse_names_with` |
 
 Also in code, never lifted: the GitHub client can only GET (`ReadOnlyGitHub` in
 `peer/adapters/github.py`); a brain run has read-only tools and only returns JSON; the executor

@@ -13,11 +13,12 @@ The selected cast is:
 |---|---|---|
 | Narrator | Sarah | Clear, warm American English; restrained explanation |
 | Manish's AI Peer | Aarav J | Relaxed Indian English; practical, conversational replies |
-| Neel / team colleague | Karthik | Balanced Indian English; ordinary workplace questions |
-| Data owner / Charan | Chris | Direct American English; grounded conversational replies |
+| Noah / team colleague | Karthik | Balanced Indian English; ordinary workplace questions |
+| Data owner / Carlos | Chris | Direct American English; grounded conversational replies |
 
 These are licensed catalog performances. They are not imitations or recordings
-of Manish, Neel, Charan or other people depicted in the authored scenarios.
+of Manish, his colleagues or other people depicted in the authored scenarios.
+Noah and Carlos are this copy's invented stand-ins for real colleagues' names.
 The internal `alex` and `sarah` keys remain script roles, not the displayed names.
 
 The starting engine is **Eleven Multilingual v2**. ElevenLabs describes it as
@@ -35,8 +36,9 @@ See [speech with timing](https://elevenlabs.io/docs/api-reference/text-to-speech
 
 ## Credential and request handling
 
-The existing ElevenLabs credential is read in memory from Like Magic's external
-environment file. Its value is never copied into this project or printed.
+The existing ElevenLabs credential was read in memory from an environment file
+outside this project; in this copy the builder reads `ELEVENLABS_API_KEY` from the
+environment or `~/.ai-peer/.env`. Its value is never copied into this project or printed.
 Read-only account checks confirmed an active subscription with sufficient
 remaining generation allowance. Only filtered non-secret account/catalog
 metadata is retained in `work/draft06/audio-catalog/`.
@@ -78,7 +80,7 @@ and colleague voices remain Aarav J, Karthik and Chris.
 
 The finished soundtrack is **240 seconds (4:00)**. Every one of its **39 spoken
 lines** is a new ElevenLabs performance at **native speed 1.00x**: 26 narrator
-lines, eight Peer replies, three data-owner/Charan lines and two Neel lines.
+lines, eight Peer replies, three data-owner/Carlos lines and two Noah lines.
 No previous Qwen or Edge speech remains. Server-supplied character timestamps
 map to every exact scripted word, with a 1.0 alignment match for all lines.
 There are **79 non-overlapping caption cues**, preserving the complete script.
@@ -102,8 +104,8 @@ ducking, while the invitation response has room to breathe.
 
 Small.en recognition was inspected for all 39 selected lines. It recovers the
 important narrator product names and the scenario wording. Remaining recognition
-normalization includes Peer/Pier, Yash/Yasha, Airversary/anniversary and the spelling
-of Boris Cherny. Small.en omitted the opening of the backend-first Zoom line;
+normalization includes Peer/Pier, a colleague's first name, Airversary/anniversary
+and the spelling of the fireside speaker's name. Small.en omitted the opening of the backend-first Zoom line;
 a separate base.en check recovered that instruction, with “backend” transcribed
 as “back and.” These are documented recognition limitations. **Direct listening
 was not performed.**

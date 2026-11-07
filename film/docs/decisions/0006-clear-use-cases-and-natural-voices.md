@@ -16,7 +16,7 @@ clear Peer identity. End with “More room for your best work” and acknowledge
 broader possibilities after demonstrating specific examples.
 
 Replace all previous speech with carefully cast ElevenLabs performances using
-the user's existing local Like Magic credential, without exposing or copying it.
+an ElevenLabs credential the user already had locally, without exposing or copying it.
 Select restrained narration and conversational Peer/team voices. Keep native
 speech speed and adjust timing instead of speeding up clips. Preserve the
 original upbeat musical palette.

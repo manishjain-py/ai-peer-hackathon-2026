@@ -9,7 +9,7 @@ outside the performed checks.
 - TypeScript passes. Drafts 01–04 remain unchanged and registered.
 - Real-context facts are mapped to the user-supplied file, with snapshot dates,
   scoped ownership, merged/draft distinctions and unverified production-case status.
-- The provided file is preserved unchanged in source-material.
+- The provided file was preserved unchanged in source-material (not kept in this copy).
 - Independent script review covered all 35 lines. Follow-up corrections qualified
   production validation and explicitly identified the Payments ML work as a pilot.
 - All 34 integrated 1920×1080 stills were independently reviewed for factual accuracy,
@@ -63,7 +63,7 @@ Telegram confirmed the private video delivery: message **4908**, 20,734,356 byte
 
 Direct listening was not performed; the session does not support audio input.
 ASR and numerical checks do not establish subjective voice quality. Proper-name
-recognition, particularly Charan, remains imperfect in ASR and is documented.
+recognition, particularly of the colleague's name, remains imperfect in ASR and is documented.
 Temporal frame sampling is not uninterrupted full-speed viewing.
 
 Real work context is supplied and dated. Conversations, UI and local sessions

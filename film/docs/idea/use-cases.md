@@ -18,8 +18,8 @@ The earlier Draft 03 examples remain preserved in that film's storyboard.
 | Personal use case | Intended contribution | Draft 07 example |
 |---|---|---|
 | Missed cross-team involvement | Relate company work to the employee's responsibilities and identify an owner to contact | BOBO launch may affect chargebacks; payments-risk involvement needs checking |
-| Missed personal milestone | Recover a relevant message with its source and action link | Yash's illustrative Airversary appreciation email from Vijay |
-| Relevant event invitation | Explain interest fit, show response state, offer clear choices | Illustrative Boris Cherny fireside chat; Manish chooses Accept |
+| Missed personal milestone | Recover a relevant message with its source and action link | Yuri's illustrative Airversary appreciation email from Vince |
+| Relevant event invitation | Explain interest fit, show response state, offer clear choices | Illustrative fireside chat (speaker Blake Carter); Manish chooses Accept |
 | Shared dependency awareness | Connect an overlooked platform update to downstream work | Cassette maintenance may affect chargeback review and dispute classification queues |
 | Daily prioritization | Bring relevant people, opportunities and service changes together | A brief with source previews, actions and saved collaboration guidance |
 

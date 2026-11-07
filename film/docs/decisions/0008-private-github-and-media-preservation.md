@@ -6,12 +6,12 @@ Date: **2026-11-04**.
 
 Manish requested that all local changes be pushed to GitHub, incorporated into
 `main`, with the local checkout on the latest `main` and documentation current.
-The project had no Git history or remote. The connected personal GitHub account
-had no matching AI Peer/Hackathon repository.
+The project had no Git history or remote. The connected GitHub account had no
+matching AI Peer/Hackathon repository.
 
 ## Decision
 
-- Create the private repository `manishjain-py/ai-peer-hackathon-2026`, initialize
+- Create a private GitHub repository for the project, initialize
   this existing directory on `main`, and import its complete project content.
   There are no earlier branches or pull requests to merge.
 - Use Git LFS for binary media, including all previous drafts and retained review
@@ -35,3 +35,11 @@ The actual import outcome and checks belong in
 [current state](../progress/current-state.md) and the
 [session log](../progress/session-log.md). See the
 [repository guide](../technical/repository.md) for contents and restoration.
+
+## This copy
+
+A later hand-off copy (7 November 2026) uses no Git LFS. It keeps only the latest
+render, `renders/ai-peer-draft-07.mp4`, and its captions; every other render,
+still, audio file and the `work/` folder (about 3.7 GB) stayed in the original
+repository, so re-rendering needs the audio and stills from there. See
+[what this copy holds](../../README.md#what-this-copy-holds).

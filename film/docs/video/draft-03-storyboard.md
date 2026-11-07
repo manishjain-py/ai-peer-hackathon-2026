@@ -13,7 +13,7 @@ the employee and the people collaborating with them. All content is illustrative
 | 0:18–0:28 | Source fragments resolve into a decisive AI Peer reveal | A personal teammate can know what matters to you and share your context with your team |
 | 0:28–0:40 | Approved email, Slack, documents and events connect to owned services, open questions and saved interests | Personal understanding and boundaries give relevance a basis |
 | 0:40–1:20 | Hero personal brief with three evidence → relevance → next-action demonstrations | The Peer helps Manish stay current, prepare and discover useful opportunities |
-| 1:20–1:26 | Bengaluru 2 a.m. and San Francisco afternoon | The colleague's working day continues after Manish goes offline |
+| 1:20–1:26 | India 2 a.m. and San Francisco afternoon | The colleague's working day continues after Manish goes offline |
 | 1:26–1:51 | Tight Slack exchange: requirement → source recommendation → mapping attachment | The Peer provides useful context and brings back new information |
 | 1:51–1:57 | A field-mapping chip moves into a delegated meeting | One understanding follows the work across tools |
 | 1:57–2:18.5 | Zoom participants directly address Manish's Peer | It provides supported status and preserves the launch decision for Manish |

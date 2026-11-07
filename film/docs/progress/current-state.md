@@ -1,6 +1,8 @@
 # Current state
 
-Updated: **2026-11-04 — private GitHub import complete; documentation refreshed**.
+Updated: **2026-11-07 — hand-off copy: real names and personal details removed;
+media limited to the Draft 07 render and its captions** (previous update:
+2026-11-04, private GitHub import and documentation refresh).
 
 Production/delivery date: **2026-09-19**. A read-only audit on 1 November verified
 actual MP4 metadata, both media hashes, exact caption sidecars, actual timing and
@@ -10,19 +12,22 @@ facts still have their September/August source dates; no live company refresh oc
 
 ## Repository state
 
-The complete project import is on `main` in the private
-[GitHub repository](https://github.com/manishjain-py/ai-peer-hackathon-2026).
-The local checkout uses `main`, tracking `origin/main`. There were no preexisting
-branches or pull requests to merge. Git LFS preserves media;
-selected audio, alignment caches, earlier drafts, QA and delivery records in
-`work/` are included. Installed dependencies, model/build caches and credentials
-remain local. See the [repository guide](../technical/repository.md).
+**This copy** is a hand-off copy of the AI Peer repository. It uses no Git LFS
+and keeps only the [Draft 07 render](../../renders/ai-peer-draft-07.mp4) and its
+[captions](../../renders/ai-peer-draft-07.srt). Every other render, still, audio
+file, the `work/` folder and the user-supplied work-profile file (about 3.7 GB)
+stayed in the original repository; re-rendering needs the audio and stills from
+there. Real people's names in this copy's text are invented stand-ins, and the
+render file is unchanged. See [what this copy holds](../../README.md#what-this-copy-holds).
 
-GitHub confirmed all 1,666 unique LFS objects (3,734,757,297 bytes) are available
-for download. Local LFS integrity, TypeScript and documentation-link checks pass.
-The final/preview MP4s, both SRTs and all 15 frozen production inputs still match
-their recorded hashes. See the [import verification](../../work/repository-import-2026-11-04/).
-No rendering, full decoding or direct listening was repeated for this import.
+History: on 4 November the complete project was imported to `main` in a private
+GitHub repository, with Git LFS preserving media, selected audio, alignment
+caches, earlier drafts, QA and delivery records in `work/`. GitHub confirmed all
+1,666 unique LFS objects (3,734,757,297 bytes) available for download. Local LFS
+integrity, TypeScript and documentation-link checks passed, and the final/preview
+MP4s, both SRTs and all 15 frozen production inputs matched their recorded hashes.
+No rendering, full decoding or direct listening was repeated for that import.
+See the [repository guide](../technical/repository.md).
 
 The 1 November handoff's “not a Git repository” statement describes that earlier
 snapshot. Draft 07 remains delivered and awaits explicit creative acceptance;
@@ -32,12 +37,13 @@ this source-control work does not authorize a new film or live integrations.
 
 - [Draft 07 film](../../renders/ai-peer-draft-07.mp4): **4:23**, 1920×1080, 30 fps,
   H.264/stereo AAC, visible captions; 22,743,114 bytes.
-- [Smaller preview](../../renders/ai-peer-draft-07-preview.mp4) and
-  [separate captions](../../renders/ai-peer-draft-07.srt).
+- [Separate captions](../../renders/ai-peer-draft-07.srt). The smaller preview
+  stayed in the original repository.
 - [Storyboard](../video/draft-07-storyboard.md), [audio](../video/draft-07-audio.md),
   [verification](../video/draft-07-verification.md), [build commands](../video/README.md).
-- Source: `video/src/draft07/`; script, audio and generated opening PNGs in
-  `video/public/draft07/`. Earlier drafts 01–06 and original source remain intact.
+- Source: `video/src/draft07/`; script, timing and captions in `video/public/draft07/`
+  (its audio and generated opening PNGs stayed in the original repository). Earlier
+  drafts' source and the original idea remain.
 
 ## Latest user feedback incorporated
 

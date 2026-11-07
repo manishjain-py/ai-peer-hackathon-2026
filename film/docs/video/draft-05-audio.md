@@ -10,9 +10,9 @@ The earlier draft soundtracks remain preserved.
 Unchanged copy reuses the exact selected Draft 04 or Draft 03 performance,
 matched by line ID, script text, speaker and any explicit direction/seed.
 Changed lines retain the local Qwen3 narrator, Ryan and Aiden. The simulated
-partner/Charan dialogue uses a newly authored generic male VoiceDesign
+partner/Carlos dialogue uses a newly authored generic male VoiceDesign
 performance, replacing the earlier Sarah voice. It is not an imitation of
-Charan or any real colleague. The internal `sarah` role key is retained only for
+any real colleague. The internal `sarah` role key is retained only for
 compatibility with the existing script and UI timing.
 See [Draft 03 audio](draft-03-audio.md) for the voice models, cast, provenance
 and synthetic-voice disclosure.
@@ -63,7 +63,7 @@ performances and 15 exact selected performances** from Draft 04/03. Every line
 fits at **1.00x**. Slack and Zoom are placed around the actual clip durations;
 each Zoom turn has a **350ms** endpoint gap. Separate captions retain every
 scripted word in **65 non-overlapping cues**, with the current speaker labels:
-Neel, D-REX partner, Charan, and Manish's AI Peer.
+Noah, D-REX partner, Carlos, and Manish's AI Peer (invented names in this copy).
 
 The stereo 48 kHz / 24-bit WAV mix measures **−16.0 LUFS / −2.3 dBTP**, with a
 6.5 LU loudness range. All five WAVs contain exactly 9,408,000 frames, begin and
@@ -80,9 +80,10 @@ and the master gain.
 Two same-copy alternate sets were generated for the Weather Protection and Slack
 Peer lines. The selected Slack take improves recognition of the full explanation
 of disputed amounts. The selected Weather Protection take includes explicit
-Charan pronunciation direction. Small.en recovers the new setup and project
-status wording and does not reproduce base.en's occasional extra tail phrases.
-Recognition remains uncertain on proper names such as Charan and Manish, and on
+pronunciation direction for the colleague's name. Small.en recovers the new setup
+and project status wording and does not reproduce base.en's occasional extra tail
+phrases. Recognition remains uncertain on proper names such as the colleague's
+name and Manish, and on
 “backend” versus “backing.” This is documented rather than treated as listening
 approval. The full-mix tiny.en transcript has omissions and shifted segment times;
 it supplies a supporting content check only and is not used for caption alignment.

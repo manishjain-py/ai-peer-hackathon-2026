@@ -112,6 +112,6 @@ To apply the current edit to existing source masters without resynthesizing or r
 python video/scripts/audio_build_02.py --edit-only
 ```
 
-This build used the existing environment at `/Users/manishjain/Documents/Codex/2026-09-18/do-a-deep-analysis-of-this/work/audio-venv/bin/python`. Cached clips live in `work/draft02/audio-clips/`; ASR transcripts, loudness logs, and fitting details live in `work/draft02/audio-qa/`. The source request text, voice, and rate are checked against the cache before reuse.
+This build used the existing Draft 01 audio environment (a local Python virtual environment, not part of this repository). Cached clips live in `work/draft02/audio-clips/`; ASR transcripts, loudness logs, and fitting details live in `work/draft02/audio-qa/`. The source request text, voice, and rate are checked against the cache before reuse.
 
 The inspected `audio-review.json` records the script hash it reviewed. If the script changes, repeat the comparison and update that review alongside a new build.

@@ -8,8 +8,9 @@ Manish requested removal of Sourcegraph, addition of an AI Peer plugin for
 AirChat that can keep track of local work in progress and uncommitted changes,
 and use of the real professional names/examples in his supplied profile.
 
-The original supplied [profile](../../source-material/manish-jain-and-risk-partner-systems-2026-09-19.md)
-is preserved unchanged. It describes actual work context as of its source dates.
+The original supplied profile, a work-profile file the user supplied (not kept in
+this copy), was preserved unchanged. It describes actual work context as of its
+source dates.
 It is not a fresh audit of live PRs, deployment flags or directory data.
 
 ## Decision
@@ -38,8 +39,9 @@ backend deployment before production UI validation; a fresh populated dispute
 case still unverified. Manish retains the launch decision.
 
 The brief now prepares the next deployment/validation step, WP owner alignment,
-and a CBQ pilot discussion based on Manish's earlier prototype. Neel and Charan
-appear in authored conversations, with generic synthetic voices and camera-off
+and a CBQ pilot discussion based on Manish's earlier prototype. Two real
+teammates appear by first name in authored conversations (this copy's text uses
+the invented names Noah and Carlos), with generic synthetic voices and camera-off
 initials; those are not recordings, quotes or likenesses of the actual people.
 A D-REX partner is a role rather than an invented named employee.
 

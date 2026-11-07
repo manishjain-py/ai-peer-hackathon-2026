@@ -33,7 +33,8 @@ opportunities, and help colleagues obtain useful context across time zones.
 
 ## Source of truth
 - Preserve [the complete original idea](source-material/ai-peer-original.txt).
-  Do not rewrite, shorten, or replace it. Put interpretation in docs/idea/.
+  Do not rewrite, shorten, or replace it (this copy only replaced the example
+  engineer's name with an invented one). Put interpretation in docs/idea/.
 - The original source is a vision, not evidence of implemented capability.
 - Product, technical, and narrative docs are working interpretations.
   Record meaningful changes in docs/decisions/ and docs/progress/.
@@ -41,9 +42,11 @@ opportunities, and help colleagues obtain useful context across time zones.
 
 ## Status and claims
 - Read current-state.md for the film’s latest verified status. The live product is not implemented.
-- Draft 07 uses the supplied professional context file and user-reported experiences.
-  Preserve its dated/scoped facts separately from authored dialogue, local-work
-  examples and UI. Real names do not establish real conversations or live access.
+- Draft 07 uses facts from a work-profile file the user supplied (not kept in this
+  copy) and user-reported experiences. Preserve its dated/scoped facts separately
+  from authored dialogue, local-work examples and UI. Real project and system names
+  do not establish real conversations or live access. People's names in this
+  copy's text are invented stand-ins ([README](README.md#what-this-copy-holds)).
 - Do not imply Slack replies, meeting attendance, continuous learning, source
   access, code changes, or other integrations already work.
 - Keep vision, proposed prototype, rendered demo, and implemented behavior distinct.
@@ -64,19 +67,22 @@ opportunities, and help colleagues obtain useful context across time zones.
 - docs/idea/: product vision and intended behavior.
 - docs/technical/: proposed architecture and implementation evidence.
 - docs/video/ and video/: film planning, source, assets, and build instructions.
-- renders/: reviewable video exports; work/: retained production dependencies,
-  intermediate files, review evidence and delivery records.
-- references/: original style research; source-material/: unedited user source.
+- renders/: reviewable video exports (this copy keeps Draft 07 only); work/:
+  production dependencies, intermediate files, review evidence and delivery
+  records (in the original repository only).
+- references/: original style research; source-material/: the user's original idea.
 - Use relative links in project documentation so this folder remains portable.
 - Do not publish externally without explicit user instruction.
 
 ## Source control
-- Private repository: `manishjain-py/ai-peer-hackathon-2026`; default branch `main`.
+- This folder lives in the AI Peer repository (default branch `main`). This copy
+  uses no Git LFS and keeps only the Draft 07 render and its captions; every other
+  render, still, audio file and the `work/` folder (about 3.7 GB) stayed in the
+  original repository. Re-rendering or rebuilding audio needs those files.
 - Source control was introduced on 4 November 2026; older handoffs describe the
-  pre-Git workspace. Follow current state for the latest synchronization status.
-- Media is stored with Git LFS. Keep earlier drafts and required `work/` assets
-  tracked; ignore only installed dependencies, caches and local credentials.
-- See [repository and restoration guide](docs/technical/repository.md).
+  pre-Git workspace. Never commit secrets; ignore installed dependencies and caches.
+- See the [repository guide](docs/technical/repository.md) and
+  [what this copy holds](README.md#what-this-copy-holds).
 
 ## Before handoff
 - Update current-state.md with what exists, what was verified, and the next step.

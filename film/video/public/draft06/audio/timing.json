@@ -3168,7 +3168,7 @@
       "start": 176.0,
       "limit": 187.6,
       "speaker": "peer",
-      "text": "Yash's five-year Airversary is coming up. Vijay shared an appreciation board. Here's his email, and the link to add your message.",
+      "text": "Yuri's five-year Airversary is coming up. Vince shared an appreciation board. Here's his email, and the link to add your message.",
       "source_path": "work/draft06/audio-clips/missed_airversary-e24d06caed91b0cd352b.wav",
       "alignment_path": "work/draft06/audio-clips/missed_airversary-e24d06caed91b0cd352b.alignment.json",
       "source_sha256": "541d60cf4f21a412e0f7f7504c1762b82fe72c2047ff14ffc52ec045d35ecb90",
@@ -3177,7 +3177,7 @@
       "voice_id": "jpdt2U2ncF4tVZvy35oY",
       "voice_engine": "eleven_multilingual_v2",
       "request": {
-        "text": "Yash's five-year Airversary is coming up. Vijay shared an appreciation board. Here's his email, and the link to add your message.",
+        "text": "Yuri's five-year Airversary is coming up. Vince shared an appreciation board. Here's his email, and the link to add your message.",
         "model_id": "eleven_multilingual_v2",
         "voice_settings": {
           "stability": 0.55,
@@ -3187,7 +3187,7 @@
           "use_speaker_boost": true
         },
         "seed": 19092026,
-        "next_text": "You follow AI closely. This fireside chat with Boris Cherny looks relevant. Your invitation is still unanswered. Would you like me to accept it?"
+        "next_text": "You follow AI closely. This fireside chat with Blake Carter looks relevant. Your invitation is still unanswered. Would you like me to accept it?"
       },
       "end": 184.2663,
       "duration": 8.2663,
@@ -3200,7 +3200,7 @@
       ],
       "words": [
         {
-          "text": "Yash's",
+          "text": "Yuri's",
           "start": 176.0,
           "end": 176.522
         },
@@ -3230,7 +3230,7 @@
           "end": 178.368
         },
         {
-          "text": "Vijay",
+          "text": "Vince",
           "start": 178.694,
           "end": 179.123
         },
@@ -3315,7 +3315,7 @@
       "start": 188.0,
       "limit": 201.7,
       "speaker": "peer",
-      "text": "You follow AI closely. This fireside chat with Boris Cherny looks relevant. Your invitation is still unanswered. Would you like me to accept it?",
+      "text": "You follow AI closely. This fireside chat with Blake Carter looks relevant. Your invitation is still unanswered. Would you like me to accept it?",
       "source_path": "work/draft06/audio-clips/missed_fireside-209020c59bf6dab5041e.wav",
       "alignment_path": "work/draft06/audio-clips/missed_fireside-209020c59bf6dab5041e.alignment.json",
       "source_sha256": "6bf988d0f2c46b1feecbebde894026d7b281fcfd3e401e382926c20b37388d52",
@@ -3324,7 +3324,7 @@
       "voice_id": "jpdt2U2ncF4tVZvy35oY",
       "voice_engine": "eleven_multilingual_v2",
       "request": {
-        "text": "You follow AI closely. This fireside chat with Boris Cherny looks relevant. Your invitation is still unanswered. Would you like me to accept it?",
+        "text": "You follow AI closely. This fireside chat with Blake Carter looks relevant. Your invitation is still unanswered. Would you like me to accept it?",
         "model_id": "eleven_multilingual_v2",
         "voice_settings": {
           "stability": 0.55,
@@ -3334,7 +3334,7 @@
           "use_speaker_boost": true
         },
         "seed": 19092026,
-        "previous_text": "Yash's five-year Airversary is coming up. Vijay shared an appreciation board. Here's his email, and the link to add your message."
+        "previous_text": "Yuri's five-year Airversary is coming up. Vince shared an appreciation board. Here's his email, and the link to add your message."
       },
       "end": 197.4737,
       "duration": 9.4738,
@@ -3387,12 +3387,12 @@
           "end": 191.402
         },
         {
-          "text": "Boris",
+          "text": "Blake",
           "start": 191.448,
           "end": 191.75
         },
         {
-          "text": "Cherny",
+          "text": "Carter",
           "start": 191.831,
           "end": 192.296
         },

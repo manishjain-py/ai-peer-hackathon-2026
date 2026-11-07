@@ -33,7 +33,7 @@ The full-screen title is **“Cover the cross-team sync.”** Its supporting lin
 | 3:00.65–3:09 | Peer saves owners/next steps for Manish and retains launch review with him | Representation includes listening and bringing a useful handoff back. |
 
 Maya, Alex and Jordan are generic fictional participants. Their role labels are
-Product, D-REX and Case Platform. Real names Neel Jain, Charan Batchu and Ansh Sharma
+Product, D-REX and Case Platform. The real colleagues' names used in Drafts 05–06
 are removed from this meeting and its captions. Real project/system names remain.
 
 The screen share moves through RPS update, question, partner updates and handoff.

@@ -11,7 +11,7 @@ The story follows Manish and one cross-time-zone dependency. The Peer learns his
 | 17–31 | Create your Peer | Profile expands into projects, conversations, documents and code. |
 | 31–42 | It understands your work | A blocker question resolves to requirement, dependency, owning team and source. |
 | 42–52 | It stays current | Updated source replaces older knowledge with visible provenance. |
-| 52–60 | Manish goes offline | Bengaluru 02:00 AM / San Francisco 01:30 PM (illustrative September PDT pairing). |
+| 52–60 | Manish goes offline | India 02:00 AM / San Francisco 01:30 PM (illustrative September PDT pairing). |
 | 60–76 | The Peer supplies context | Clearly labelled AI replies to the team's clarification, with sources. |
 | 76–87 | The team can answer | A fictional authoritative dataset/API recommendation advances the dependency. |
 | 87–104 | The Peer joins a meeting | Self-identification, grounded status, launch confirmation left to Manish. |

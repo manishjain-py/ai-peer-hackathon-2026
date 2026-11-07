@@ -52,8 +52,8 @@ publication or live system action is part of this documentation pass.
 
 ## 2026-09-18 — Project relocated
 
-- Moved the complete canonical project from `~/Documents/Codex/Hackathon 2026`
-  to `~/repos/Hackathon 2026` at the user's request.
+- Moved the complete canonical project from a Codex working folder to the user's
+  repositories folder at the user's request.
 - Updated the originating conversation's handoff document to the new location.
 - Verified original idea, final video and animation source hashes were unchanged.
 - Relative documentation links still resolve from the new root.
@@ -61,8 +61,8 @@ publication or live system action is part of this documentation pass.
 
 ## 2026-09-18 — AI Peer resume skill
 
-- Created the project-owned `$ai-peer` skill with a global discovery link at
-  `~/.codex/skills/ai-peer`.
+- Created the project-owned `$ai-peer` skill with a global discovery link in the
+  local Codex skills folder.
 - The skill resolves the canonical project root, reads current state and follows
   task-specific documentation routes. It keeps changing status in the project docs.
 - A bare invocation provides a short orientation; an invocation with a task
@@ -170,7 +170,8 @@ publication or live system action is part of this documentation pass.
 
 ## 2026-09-19 — Draft 05: real RPS context and AirChat local work
 
-- Read and preserved Manish’s supplied professional-context file without edits.
+- Read and preserved Manish’s supplied professional-context file without edits
+  (not kept in the later hand-off copy).
   Used its real team, tools, scoped ownership and dated project facts; did not
   refresh the private systems linked by that file or expose contact details in the film.
 - Removed Sourcegraph from Draft 05. GitHub represents versioned code/reviews;
@@ -216,11 +217,11 @@ publication or live system action is part of this documentation pass.
   “expire at” field/order-service answer remains illustrative. Still capture only.
 - Saved feedback point 3: replace artificial or overly excited voices with
   carefully selected ElevenLabs voices suited to narration and workplace roles.
-  Manish expects a local key used by Like Magic. No credential lookup, voice
+  Manish expects a local key used by another of his projects. No credential lookup, voice
   selection, API call or audio generation started; awaiting incorporation.
 - Saved feedback point 4: recover important notifications missed during inbox
-  cleanup or in Slack. Captured Yash's example five-year Airversary and Vijay's
-  appreciation message, a relevant Claude Code creator fireside-chat invitation
+  cleanup or in Slack. Captured Yuri's example five-year Airversary and Vince's
+  appreciation message, a relevant fireside-chat invitation with an AI-tools speaker
   with accept/decline/ignore actions, and Cassette changes or downtime potentially
   affecting chargeback review and dispute classification queues. Also recorded
   the survey reminder, Gmail source-preview widget, direct links and proposed
@@ -233,11 +234,11 @@ publication or live system action is part of this documentation pass.
 - Created a separate 240-second Draft 06 with four full-screen use-case chapters:
   BOBO awareness, Synthetic Cancellation clarification across time zones,
   delegated Zoom context, and missed notifications with clear source/action UI.
-- Added Gmail cleanup, Yash/Vijay Airversary appreciation, illustrative Boris
-  Cherny fireside RSVP choices with a visible click/confirmation, and Cassette
+- Added Gmail cleanup, Yuri/Vince Airversary appreciation, illustrative fireside
+  RSVP choices (speaker Blake Carter) with a visible click/confirmation, and Cassette
   dependency awareness. Preserved GitHub/AirChat setup and human launch control.
-- Replaced all 39 voice lines with ElevenLabs performances using the existing
-  Like Magic credential securely. Compared narrator candidates for word clarity;
+- Replaced all 39 voice lines with ElevenLabs performances using an existing
+  local ElevenLabs credential securely. Compared narrator candidates for word clarity;
   selected Sarah, Aarav J, Chris and Karthik. All speech is at native speed.
   Retained the original 124 BPM score, 79 aligned cues and separate stems.
 - Independent script review corrected purchased-item expiry wording. Visual
@@ -290,7 +291,7 @@ publication or live system action is part of this documentation pass.
 - Corrected stale audio-audit pending wording and historical README labels;
   reconciled first-draft open questions with settled preferences. Left the cosmetic
   finalizer help typo untouched so the production source manifest remains intact.
-- Both start and end Telegram summaries succeeded using notify. Changed-document
+- Start and end session summaries reached Manish. Changed-document
   links passed; the final film and all 15 frozen production files remain unchanged.
 
 ## 2026-11-04 — Private GitHub import and documentation refresh
@@ -298,7 +299,7 @@ publication or live system action is part of this documentation pass.
 - Manish requested all local project changes on GitHub `main`, a current local
   `main` checkout, and refreshed documentation. The directory had no Git history
   and no matching repository was found in his connected GitHub account.
-- Created private `manishjain-py/ai-peer-hackathon-2026`, initialized local `main`,
+- Created a private GitHub repository, initialized local `main`,
   configured Git LFS and pushed the complete project import (`108fc83`). GitHub's
   default branch is `main`; local `main` tracks `origin/main`. The fetched remote
   commit matches the local import. No earlier branches or pull requests existed.
@@ -323,3 +324,19 @@ publication or live system action is part of this documentation pass.
   production/delivery records are tracked. Local LFS integrity passed. Installed
   dependencies/caches remain local. Current docs and verification evidence were
   committed as the final synchronization follow-up.
+
+## 2026-11-07 — Sanitized hand-off copy
+
+- Prepared `film/` for a hand-off copy of the AI Peer repository. The copy uses no
+  Git LFS and keeps only the Draft 07 render and its captions; every other render,
+  still, audio file, the `work/` folder and the user-supplied work-profile file
+  (about 3.7 GB) stayed in the original repository.
+- Removed real people's names from the text. Manish appears by first name only and
+  his city is shown as "India". Invented names stand in for real colleagues and a
+  public figure in Drafts 05–07 (source, scripts, captions, timing, docs) and for
+  the example engineer in the original idea. The render file itself is unchanged.
+- Removed machine paths, account links and the old credential location. The
+  ElevenLabs builders read `ELEVENLABS_API_KEY` from the environment or
+  `~/.ai-peer/.env`.
+- No story, scene order or timing changed; nothing was rendered, run or sent.
+  Recorded script and audio hashes describe the original text, not these edits.

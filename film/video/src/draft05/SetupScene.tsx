@@ -15,7 +15,7 @@ function Chrome({title,children,brand='#48697e',note='ILLUSTRATIVE SETUP'}:{titl
 function Profile({t}:{t:number}){return <Chrome title="OneAirbnb / People" brand="#bf4a54" note="PROFILE: AUG 2026 · ILLUSTRATIVE UI">
   <div style={{padding:'22px 30px',borderBottom:'1px solid #eee',display:'flex',alignItems:'center',gap:28}}><span style={{fontSize:30,color:'#cd535d',fontWeight:800}}>OneAirbnb</span><span style={{fontSize:17,color:'#5e6e73'}}>People　 Teams　 Projects</span><div style={{fontSize:17,marginLeft:'auto',padding:'10px 14px',background:'#f5f5f5',borderRadius:8,color:'#858e91'}}>Search people and teams</div></div>
   <div style={{padding:'27px 31px'}}>
-    <div style={{display:'flex',gap:23,alignItems:'center'}}><Person name="Manish" size={83}/><div><div style={{fontSize:35,fontWeight:800}}>Manish Jain</div><div style={{fontSize:23,color:C.muted,marginTop:5}}>Senior Software Engineer · Payments</div></div><div style={{marginLeft:'auto',...enter(t,.3)}}><SourcePill>Profile selected</SourcePill></div></div>
+    <div style={{display:'flex',gap:23,alignItems:'center'}}><Person name="Manish" size={83}/><div><div style={{fontSize:35,fontWeight:800}}>Manish</div><div style={{fontSize:23,color:C.muted,marginTop:5}}>Senior Software Engineer · Payments</div></div><div style={{marginLeft:'auto',...enter(t,.3)}}><SourcePill>Profile selected</SourcePill></div></div>
     <div style={{display:'flex',gap:17,marginTop:27}}>{[{label:'TEAM',value:'Risk Partner Systems',d:.7},{label:'CURRENT PROJECT',value:'Premium chargebacks',d:1.4}].map(x=><div key={x.label} style={{flex:1,minWidth:0,padding:22,border:'1px solid #d6e4da',borderRadius:11,background:'#f2f7f1',...enter(t,x.d,12)}}><div style={{fontSize:16,color:C.green,fontWeight:750,letterSpacing:1}}>{x.label}</div><div style={{fontSize:28,fontWeight:750,marginTop:9,whiteSpace:'nowrap'}}>{x.value}</div></div>)}</div>
     <div style={{borderTop:'1px solid #e5ebe5',paddingTop:20,marginTop:24,...enter(t,2)}}><div style={{fontSize:19,color:'#5b7b69',fontWeight:700}}>WHAT YOUR TEAM BUILDS</div><div style={{fontSize:27,marginTop:9}}>Tools for Payments Risk investigations</div><div style={{fontSize:22,color:C.muted,marginTop:9}}>Atrium investigation UI · Case routing · Risk workflows</div></div>
     <div style={{marginTop:21,...enter(t,3)}}><SourcePill>Current work: SC / CFAR policy results</SourcePill></div>
@@ -67,7 +67,7 @@ function Permissions({t}:{t:number}){const slack=ease(t,.55,.3),zoom=ease(t,1.6,
 function Understanding({t}:{t:number}){
   const local=t>AIRCHAT_AT+8.55;
   const rows=[
-    {label:'YOU',value:'Manish Jain',detail:'Senior Software Engineer · Payments',at:4.5},
+    {label:'YOU',value:'Manish',detail:'Senior Software Engineer · Payments',at:4.5},
     {label:'YOUR TEAM',value:'Risk Partner Systems',detail:'Payments Risk investigation tools',at:5.2},
     {label:'CURRENT PROJECT',value:'Premium chargebacks',detail:'SC / CFAR policy results',at:6.1},
     {label:local?'VERSIONED + LOCAL WORK':'YOUR VERSIONED WORK',value:local?'GitHub + AirChat':'Pineapple + Treehouse',detail:local?'Reviews, current task and uncommitted changes':'Code, reviews and scoped ownership',at:11.7},

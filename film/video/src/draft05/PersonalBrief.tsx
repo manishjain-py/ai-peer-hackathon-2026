@@ -51,13 +51,13 @@ const items:Item[] = [
     "source": "Project handoff",
     "sourceTime": "19 Sep 2026",
     "subject": "WP owner alignment",
-    "author": "Charan · WP integration assignment",
+    "author": "Carlos · WP integration assignment",
     "before": "WP identity and outcomes need follow-up.",
     "highlight": "Confirm the Weather Protection subtype.",
     "after": "Ask the owners for authoritative data.",
     "chip": "Weather Protection · owner alignment",
     "whyTitle": "Unblock the right integration.",
-    "why": "Charan’s WP integration needs product-owner answers.",
+    "why": "Carlos’s WP integration needs product-owner answers.",
     "anchor": "Insurance / Weather Protection",
     "artifactTitle": "Question prepared",
     "artifact": "“Which source confirms WP identity and policy outcomes?”",
@@ -165,7 +165,7 @@ export function PersonalBrief({t}:{t:number}){
     <div style={{position:'absolute',width:850,height:850,borderRadius:'50%',background:'radial-gradient(circle,#d5e7cd80,transparent 68%)',right:-270,top:-340}}/>
     <div style={{position:'absolute',left:89,top:78,width:1742,height:861,borderRadius:27,background:'#f9faf6',border:'1px solid #cfdbcf',boxShadow:'0 28px 75px #253b3522',overflow:'hidden',transform:`translateY(${15*(1-ease(t,0,.65))}px) scale(${.988+.012*ease(t,0,.65)})`,opacity:f}}>
       <Sidebar t={t}/>
-      <div style={{position:'absolute',left:305,top:35,right:50,display:'flex',justifyContent:'space-between',alignItems:'center',borderBottom:`1px solid ${border}`,paddingBottom:21}}><div style={{display:'flex',alignItems:'center',gap:10,fontSize:20,color:muted}}><Icon type="home" size={22}/> Your space <span style={{color:'#b4bfb5'}}> / </span><span style={{color:ink,fontWeight:750}}>For you</span></div><div style={{fontSize:18,color:muted,display:'flex',alignItems:'center',gap:8}}><Icon type="clock" size={21}/> 9:00 AM · Bangalore</div></div>
+      <div style={{position:'absolute',left:305,top:35,right:50,display:'flex',justifyContent:'space-between',alignItems:'center',borderBottom:`1px solid ${border}`,paddingBottom:21}}><div style={{display:'flex',alignItems:'center',gap:10,fontSize:20,color:muted}}><Icon type="home" size={22}/> Your space <span style={{color:'#b4bfb5'}}> / </span><span style={{color:ink,fontWeight:750}}>For you</span></div><div style={{fontSize:18,color:muted,display:'flex',alignItems:'center',gap:8}}><Icon type="clock" size={21}/> 9:00 AM · India</div></div>
       <div style={{position:'absolute',left:305,top:116,right:50}}><div style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}><div style={{fontSize:44,fontWeight:800,letterSpacing:-1.7}}>{final?'A clear next move.':'Good morning, Manish.'}</div><Pill bg="#e8eee3" size={18}><span style={{width:7,height:7,borderRadius:4,background:'#6d9866'}}/> New since your last check</Pill></div><div style={{fontSize:26,color:muted,marginTop:10}}>{final?'Relevant changes. Useful opportunities. Ready for you.':'Three things worth your time.'}</div></div>
       {opening&&<div style={{opacity:fadeOut(t,5)}}><Overview t={t}/></div>}
       {!opening&&!final&&<div style={{opacity:fadeOut(t,end)}}><Focus key={index} item={items[index]} index={index} t={t-start}/></div>}
@@ -177,7 +177,7 @@ export function PersonalBrief({t}:{t:number}){
 export function UpdatedBrief({t}:{t:number}) {
   const rows=[
     {title:'Product context clarified',body:'D-REX partner confirmed the product-level requirement.',source:'D-REX · Scenario',icon:'message',color:'#397e58',pale:'#e8f2e4'},
-    {title:'Example case offered',body:'Charan offered to help coordinate a validation case.',source:'Charan · Scenario',icon:'file',color:'#4e6dab',pale:'#edf1fb'},
+    {title:'Example case offered',body:'Carlos offered to help coordinate a validation case.',source:'Carlos · Scenario',icon:'file',color:'#4e6dab',pale:'#edf1fb'},
     {title:'One decision needs you',body:'Confirm deployment and validation, then decide on launch.',source:'Manish · decision pending',icon:'arrow',color:'#97652c',pale:'#fff1dc'},
     {title:'CBQ pilot brief',body:'Your earlier automation work is ready to discuss.',source:'Saved for later',icon:'file',color:'#82518a',pale:'#f4ebf7'},
   ];

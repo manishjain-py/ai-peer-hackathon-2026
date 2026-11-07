@@ -69,7 +69,7 @@ Validation here was numerical and ASR-based. **Direct listening was not performe
 
 ## Rebuilding
 
-Runtime: Python 3.12, FFmpeg, and the packages pinned in `video/scripts/audio-requirements.txt`. The working environment used for this build is `/Users/manishjain/Documents/Codex/2026-09-18/do-a-deep-analysis-of-this/work/audio-venv/`.
+Runtime: Python 3.12, FFmpeg, and the packages pinned in `video/scripts/audio-requirements.txt`. The working environment used for this build was a local Python virtual environment in the original working folder (not part of this repository).
 
 From the project root, with those dependencies available:
 

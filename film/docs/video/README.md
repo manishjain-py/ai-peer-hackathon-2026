@@ -7,7 +7,9 @@ delivered on **19 September 2026**. The **1 November audit** verified unchanged
 media and production-manifest hashes. Creative acceptance or targeted feedback
 remains pending; no new render or delivery is needed to resume this project.
 The commands below rebuild existing versions. Use new versioned paths for an
-authorized revision and preserve every delivered draft.
+authorized revision and preserve every delivered draft. This copy has no audio,
+stills or `work/` folder (see [what this copy holds](../../README.md#what-this-copy-holds));
+restore them from the original repository before rendering.
 
 ## Draft 07
 
@@ -165,7 +167,7 @@ Draft 01 remains preserved below.
 
 ## Rebuild Draft 01 (historical)
 
-Requirements: Node.js, npm, FFmpeg, and a compatible Chromium browser. The render script uses Google Chrome on this Mac if available. Dependencies are pinned in package-lock.json. Manrope is bundled locally from the open font package; no remote fonts are fetched during rendering.
+Requirements: Node.js, npm, FFmpeg, and a compatible Chromium browser. The render script uses Google Chrome on macOS if available. Dependencies are pinned in package-lock.json. Manrope is bundled locally from the open font package; no remote fonts are fetched during rendering.
 
 From the project root:
 

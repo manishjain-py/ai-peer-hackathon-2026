@@ -116,7 +116,7 @@ export const ZoomScene:React.FC<{t:number;speaker?:Speaker|null}>=({t,speaker})=
    <Participant id="alex" name="Alex Morgan" index={1} t={t} active={active==='alex'} share={share}/>
    <Participant id="maya" name="Maya Patel" index={2} t={t} active={active==='maya'} share={share}/>
    <Participant id="peer" name="Manish’s AI Peer" index={3} t={t} active={active==='peer'} share={share}/>
-   <div style={{position:'absolute',left:50,top:103,zIndex:8,background:'#F6F8FC',color:'#344559',borderRadius:10,padding:'18px 24px',boxShadow:'0 8px 32px #0005',fontSize:19,opacity:absent,transform:`translateY(${14*(1-absent)}px)`,display:'flex',gap:12,alignItems:'center'}}><Icon name="clock" size={25} color="#6F82A0"/><div><div style={{fontWeight:700}}>Manish is not in this meeting</div><div style={{fontSize:16,marginTop:5,color:'#778397'}}>Bengaluru · 2:10 AM</div></div></div>
+   <div style={{position:'absolute',left:50,top:103,zIndex:8,background:'#F6F8FC',color:'#344559',borderRadius:10,padding:'18px 24px',boxShadow:'0 8px 32px #0005',fontSize:19,opacity:absent,transform:`translateY(${14*(1-absent)}px)`,display:'flex',gap:12,alignItems:'center'}}><Icon name="clock" size={25} color="#6F82A0"/><div><div style={{fontWeight:700}}>Manish is not in this meeting</div><div style={{fontSize:16,marginTop:5,color:'#778397'}}>India · 2:10 AM</div></div></div>
    <Toolbar/>
   </div>
  </AbsoluteFill>;

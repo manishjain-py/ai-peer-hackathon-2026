@@ -22,7 +22,7 @@ Previous exports and their source remain preserved.
 | 2:20–2:46 | Zoom: directly ask Manish's Peer; merged contract versus draft implementation; deployment then fresh-case validation; launch retained for Manish | Supported context is shared transparently; the employee keeps consequential decisions. |
 | 2:46–2:50 | Full-screen title 04: Catch what slipped through | Introduce missed-notification recovery. |
 | 2:50–2:56 | Gmail: 150 messages marked read | Read state does not prove an item was handled. |
-| 2:56–3:08 | Yash's five-year Airversary; Vijay's email preview and appreciation link | Personal relationships matter alongside project tasks. |
+| 2:56–3:08 | Yuri's five-year Airversary; Vince's email preview and appreciation link | Personal relationships matter alongside project tasks. |
 | 3:08–3:25 | Relevant fireside invitation; accept/decline/ignore; visible Accept click and confirmation | Explain relevance, let Manish choose, then carry out the selected action. |
 | 3:25–3:40.4 | Cassette announcement; affected chargeback review and dispute classification queues; tag and source thread | Connect overlooked platform news to Manish's downstream responsibilities. |
 | 3:40.4–3:46 | Daily brief: people, opportunities, services, saved partner guidance and review | Bring the useful parts of the day together. |
@@ -30,8 +30,9 @@ Previous exports and their source remain preserved.
 
 ## Factual and scenario boundaries
 
-The real professional context remains the [supplied file](../../source-material/manish-jain-and-risk-partner-systems-2026-09-19.md),
-with its recorded dates. BOBO and the cross-time-zone delay are additional
+The real professional context remains a work-profile file the user supplied (not
+kept in this copy), with its recorded dates. People's names in this copy's text
+are invented stand-ins; the delivered film used real names. BOBO and the cross-time-zone delay are additional
 user-reported experiences. Their AI Peer interventions are hypothetical.
 
 - BOBO's owner is identified by role; no named contact is invented. Missing
@@ -42,12 +43,12 @@ user-reported experiences. Their AI Peer interventions are hypothetical.
   investigators assess a chargeback; it does not alone decide its legitimacy.
 - Zoom retains dated merged/draft/deployment/validation distinctions. The launch
   decision remains with Manish. A proposed coordination offer is not completed testing.
-- Yash's milestone, Vijay's appreciation message, the fireside invitation and
+- Yuri's milestone, Vince's appreciation message, the fireside invitation and
   Cassette's maintenance announcement are illustrative events supplied as scenario
   ideas. No real invitation was answered and no Slack message was sent.
-- **Boris Cherny** is the verified spelling; Anthropic identifies him with Claude
-  Code in its [official webinar page](https://www.anthropic.com/webinars/claude-code-for-financial-services-boris-cherny).
-  This does not establish that the proposed Airbnb event exists.
+- The fireside speaker was a real public figure whose name and role were checked
+  against an official public page; this copy's text uses the invented name Blake
+  Carter. This does not establish that the proposed Airbnb event exists.
 - Cassette is a shared dependency, not a platform wholly owned by RPS. Queue names
   follow Manish's latest “chargeback review” and “dispute classification” wording;
   this is not a relabeling of the separate Payments ML-led CBQ pilot.
