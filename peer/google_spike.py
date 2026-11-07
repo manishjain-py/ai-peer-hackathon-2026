@@ -25,7 +25,7 @@ def _wait(fn, wait_s: int, every: int = 5):
     return None
 
 
-def run(st: Settings, alias: str = "ananya", inviter: str = "kabir", wait_s: int = 150, sends: bool = True) -> dict:
+def run(st: Settings, alias: str = "alex", inviter: str = "taylor", wait_s: int = 150, sends: bool = True) -> dict:
     out: dict = {"at": now_iso()}
     owner = owner_email(st)
     g = GoogleAdapter(st=st)
@@ -56,13 +56,13 @@ def run(st: Settings, alias: str = "ananya", inviter: str = "kabir", wait_s: int
     if not sends:
         return out
     people = seeds.colleagues()
-    e = seeds.send_one(st, alias, "AI Peer test: alias check", "A test mail from the AI Peer's scenario script "
+    e = seeds.send_one(st, alias, "AI Peer spike: alias check", "A test mail from the AI Peer's scenario script "
                        "(a seeded test item). You can delete it.")
     out["alias_sent_id"] = e.get("sent_id")
     mid = (e.get("message_id") or "").strip("<>")
 
     def find() -> str | None:
-        for q in (f"rfc822msgid:{mid}", 'subject:"AI Peer test: alias check" newer_than:1d'):
+        for q in (f"rfc822msgid:{mid}", 'subject:"AI Peer spike: alias check" newer_than:1d'):
             r = g.api.call("GET", f"{GMAIL}/messages", params={"q": q, "maxResults": 1}).get("messages", [])
             if r:
                 return r[0]["id"]
@@ -75,7 +75,7 @@ def run(st: Settings, alias: str = "ananya", inviter: str = "kabir", wait_s: int
         out["alias_from_kept"] = ev.extra["from"] == people[alias]["email"].lower()
         out["alias_from_if_rewritten"] = None if out["alias_from_kept"] else ev.extra["from"]
         out["alias_mail_recognised_as_seeded"] = ev.extra["seeded"]
-    e2 = seeds.send_one(st, inviter, "AI Peer test: invite check", "A test invitation from the AI Peer's scenario script "
+    e2 = seeds.send_one(st, inviter, "AI Peer spike: invite check", "A test invitation from the AI Peer's scenario script "
                         "(a seeded test item).", invite={"in_days": 3, "at": "12:00", "minutes": 15})
     uid = e2["ical_uid"]
     out["invite_sent_id"] = e2.get("sent_id")

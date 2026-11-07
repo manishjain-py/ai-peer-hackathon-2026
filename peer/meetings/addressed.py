@@ -6,7 +6,7 @@ homophones, and the scene's lines address the Peer the way people do ("a questio
 assistant"). Four answers:
 - "update":   someone asks for the owner or the owner's update ("is Manish here", "Manish's update",
               "over to Manish") -> play the approved clip.
-- "question": a line put to the Peer ("Peer, who is driving Telugu?", "Manish's assistant, ...")
+- "question": a line put to the Peer ("Peer, who is driving offline mode?", "Manish's assistant, ...")
               -> the holding line at once, then a live answer.
 - "maybe":    a question about the owner or the owner's work that names no one -> the warm session
               decides (it replies PASS when the line is not for the Peer): the cheap brain call.

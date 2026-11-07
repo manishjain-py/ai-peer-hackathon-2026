@@ -3,7 +3,7 @@
 name: f7-local
 title: "F7: local work reaches the answer"
 presence: away
-channel: product
+channel: design
 steps:
-  - post: {as: kabir, text: "What is Manish working on today? I want to know before I send him the new picker designs."}
+  - post: {as: taylor, text: "What is Manish working on today? I want to know before I send him the new sync settings designs."}
     expect: {thread_reply: true, within_s: 180}

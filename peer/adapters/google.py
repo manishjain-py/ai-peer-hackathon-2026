@@ -4,7 +4,7 @@ Login (DESIGN D5): an **Internal** OAuth client (Desktop app) of the owner's Wor
 ~/.ai-peer/google-client.json (docs/build/setup/google.md). One login per account, each a Google
 consent page in a browser on this Mac (login_hint), then a check of who signed in:
 - the Peer, the owner's account: gmail.readonly, gmail.compose, calendar.events, drive.readonly
-- the test world's seed account (admin@): gmail.send only, for the scenario script (peer/seeds.py)
+- the test world's seed account (`mail.seed_account`): gmail.send only, for the scenario script (peer/seeds.py)
 Both also ask `openid email` (the account check). Never full-mail or admin scopes.
 Tokens: ~/.ai-peer/google-token-<account>.json (chmod 600), never in a repo or an owner folder.
 

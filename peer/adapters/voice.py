@@ -3,13 +3,14 @@
 Two engines, every voice id in settings (`voice.voices.<role>.<engine>`, roles: peer, holding,
 and one per colleague), so the owner can choose by ear:
 - `local`: the Mac's `say` voices, converted with ffmpeg. Free; every spike and development clip.
-- `elevenlabs`: the walk's clips and the Peer's fixed lines only. The key is shared with a live
-  product, so: stock voices only (category `premade`, checked by id against the voices API), never
-  a voice whose name contains the owner's name (a professional clone is labelled `professional`, not
-  `cloned`), one request at a time, the account's quota read first (`/v1/user/subscription`), a
-  character budget for this package (`voice.elevenlabs_budget_chars`, 20,000) kept in a ledger, and
-  no request when the account has under 20% of its limit left. It never adds, edits or deletes a voice
-  or changes a setting: it only reads the voice list and the quota, and renders speech.
+- `elevenlabs`: the walk's clips and the Peer's fixed lines only. The key may be shared with other
+  work, so: stock voices only (category `premade`, checked by id against the voices API), never
+  a voice whose name contains the owner's name (the words of the profile's `name` and `preferred_name`,
+  plus `voice.refuse_names_with`; a professional clone is labelled `professional`, not `cloned`), one
+  request at a time, the account's quota read first (`/v1/user/subscription`), a character budget
+  (`voice.elevenlabs_budget_chars`, 20,000) kept in a ledger, and no request when the account has under
+  20% of its limit left. It never adds, edits or deletes a voice or changes a setting: it only reads the
+  voice list and the quota, and renders speech.
 Every clip is cached by engine, voice and text, and starts with about 1 s of silence (spike 1d: Recall
 clips the first second).
 """
@@ -136,6 +137,19 @@ class VoiceAdapter(Adapter):
         key = secret("ELEVENLABS_API_KEY", required=True)
         return httpx.Client(base_url=EL_BASE, headers={"xi-api-key": key}, timeout=60)
 
+    def refused_name_words(self) -> set[str]:
+        """Words a voice's name must not hold: each word of the owner's `name` and `preferred_name` (the profile)
+        plus `voice.refuse_names_with`. An unreadable profile leaves only the settings words, and check_voice()
+        still refuses every voice that is not a stock (premade) one: it fails closed."""
+        words = {w.strip().lower() for w in str(self.st.get("voice.refuse_names_with") or "").split(",") if w.strip()}
+        try:
+            p = json.loads(self.st.profile_path().read_text())
+            names = f"{p.get('name') or ''} {p.get('preferred_name') or ''}"
+            words |= {w for w in (x.strip(".,;:()'\"").lower() for x in names.split()) if len(w) > 1}
+        except Exception as e:  # noqa: BLE001
+            log.warning("voice check: the owner's profile could not be read (%s); stock voices only still applies", e)
+        return words
+
     def check_voice(self, voice_id: str) -> dict:
         """Refuse anything but a stock voice, and any voice named after the owner (the clone)."""
         if voice_id in self._checked:
@@ -146,7 +160,7 @@ class VoiceAdapter(Adapter):
             raise VoiceRefused(f"voice {voice_id}: HTTP {r.status_code}")
         v = r.json()
         name, category = str(v.get("name") or ""), str(v.get("category") or "")
-        owner_names = {"manish"} | {w.lower() for w in str(self.st.get("voice.refuse_names_with") or "").split(",") if w.strip()}
+        owner_names = self.refused_name_words()
         if any(n in name.lower() for n in owner_names):
             raise VoiceRefused(f"voice '{name}' carries the owner's name: never the owner's voice")
         if category != "premade":

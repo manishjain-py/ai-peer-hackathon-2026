@@ -8,45 +8,45 @@ name: s2-overnight
 title: "S2 daily brief: an overnight of mail, invites and company news"
 presence: away
 mail:
-  - as: ananya
+  - as: alex
     kind: waiting
-    subject: "Telugu Class 6 science: OK to start the teacher review on Monday?"
+    subject: "Offline mode beta: OK to start the partner review on Monday?"
     body: |
       Hi Manish,
 
-      The Telugu Class 6 science chapters are translated. I'd like to start the review on Monday
-      with two teachers from Lakshmi's pilot schools, three chapters each.
+      The offline mode beta build is ready. I'd like to start the review on Monday
+      with two people from Sam's partner pilots, three flows each.
 
       Two things I need from you:
-      1. Are you fine with teachers (not our team) doing the first review?
+      1. Are you fine with partners (not our team) doing the first review?
       2. Should they review in the app, or on the sheet export?
 
       Thanks,
-      Ananya
-  - as: lakshmi
+      Alex
+  - as: sam
     kind: waiting
-    subject: "Two Hyderabad schools want a Telugu pilot in December"
+    subject: "Two partner teams want an offline mode pilot in December"
     body: |
       Hi Manish,
 
-      Both Telugu-medium schools I met this week want to pilot Learn Like Magic with Class 6 in
-      December. They asked me for a start date and whether Practice works in Telugu by then.
+      Both partner teams I met this week want to pilot Fernway Notes with offline mode in
+      December. They asked me for a start date and whether search works offline by then.
 
-      Can you tell me what I can promise them? I'll reply to the principals once I hear from you.
+      Can you tell me what I can promise them? I'll reply to their leads once I hear from you.
 
-      Lakshmi
-  - as: david
+      Sam
+  - as: jordan
     kind: waiting
-    subject: "Intro: an edtech fund partner would like 20 minutes next week"
+    subject: "Intro: a productivity software fund partner would like 20 minutes next week"
     body: |
       Manish,
 
-      A partner at an edtech-focused fund saw the Telugu work and asked for a short call next week.
+      A partner at a fund that backs productivity software saw the offline mode work and asked for a short call next week.
       No deck needed. Could you send me two or three times that work for you (US mornings are
       easiest for them)?
 
-      David
-  - as: rohan
+      Jordan
+  - as: riley
     kind: urgent
     subject: "Urgent: App Store rejected iOS 2.4, can you answer the reviewer today?"
     body: |
@@ -55,62 +55,62 @@ mail:
 
       Can you answer the reviewer today, or should I? I need your call before 2 PM.
 
-      Rohan
-  - as: ananya
+      Riley
+  - as: alex
     kind: announcement
-    subject: "[Learn Like Magic] Content style guide v3 is live"
+    subject: "[Fernway] Writing style guide v3 is live"
     body: |
       Hi all,
 
-      Version 3 of the content style guide is live. What changed: shorter Explain cards (at most
-      60 words), one worked example per Practice set, and Telugu and Hindi glossary terms now come
-      from the shared glossary sheet. The content factory prompts should follow v3 from next week.
+      Version 3 of the writing style guide is live. What changed: shorter in-app tips (at most
+      60 words), one worked example per help article, and product terms now come
+      from the shared glossary sheet. Release notes and help articles should follow v3 from next week.
 
-      Ananya
-  - as: kabir
+      Alex
+  - as: taylor
     kind: announcement
-    subject: "[Learn Like Magic] Design reviews move to Thursdays, 4 PM IST"
+    subject: "[Fernway] Design reviews move to Thursdays, 4 PM IST"
     body: |
       Hi everyone,
 
-      From next week, design reviews move to Thursdays at 4 PM IST so David can join from the US.
-      Bring anything that changes what students see.
+      From next week, design reviews move to Thursdays at 4 PM IST so Jordan can join from the US.
+      Bring anything that changes what users see.
 
-      Kabir
-  - as: david
+      Taylor
+  - as: jordan
     kind: event
-    subject: "Event: AI tutors in Indian classrooms, online meetup on 20 Nov"
+    subject: "Event: AI assistants at work, online meetup on 20 Nov"
     body: |
-      Manish, this looks like your kind of conversation: an online meetup on AI tutors and coding
-      agents in Indian classrooms, 20 Nov, 7 PM IST. They are looking for two short talks (10 minutes)
-      on teaching in Indian languages. Speaker slots close on 12 Nov.
+      Manish, this looks like your kind of conversation: an online meetup on AI assistants and coding
+      agents at work, 20 Nov, 7 PM IST. They are looking for two short talks (10 minutes)
+      on building AI teammates. Speaker slots close on 12 Nov.
 
-      David
-  - as: lakshmi
+      Jordan
+  - as: sam
     kind: event
-    subject: "Event: Telangana school leaders' meet, Hyderabad, 3 Dec"
+    subject: "Event: a regional meetup of team leads, Mumbai, 3 Dec"
     body: |
-      Manish, the Telangana school leaders' meet is on 3 Dec in Hyderabad. About 150 principals,
-      many from Telugu-medium schools. There is a small demo area if we want a table.
+      Manish, the regional meetup of team leads is on 3 Dec in Mumbai. About 150 team leads,
+      many from teams that work offline in the field. There is a small demo area if we want a table.
 
-      Lakshmi
-  - as: kabir
+      Sam
+  - as: taylor
     kind: event
     subject: "Webinar: Instagram ads for D2C fashion brands"
     body: |
       Sharing in case it's useful: a free webinar on Instagram ads for D2C fashion brands, Friday 5 PM.
 
-      Kabir
+      Taylor
 invites:
-  - as: kabir
-    summary: "Language picker: design review"
+  - as: taylor
+    summary: "Sync settings: design review"
     in_days: 1
     at: "11:00"
     minutes: 30
-    description: "Walk through the new language picker (Hindi, Telugu) before it ships in the student app."
-  - as: david
-    summary: "Advisor check-in: the growth plan for schools"
+    description: "Walk through the new sync settings screen before it ships in the web and iOS apps."
+  - as: jordan
+    summary: "Advisor check-in: the growth plan for partners"
     in_days: 2
     at: "21:30"
     minutes: 30
-    description: "Monthly check-in. Agenda: the school pilot funnel and what to measure in December."
+    description: "Monthly check-in. Agenda: the partner pilot funnel and what to measure in December."

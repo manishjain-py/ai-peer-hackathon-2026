@@ -4,7 +4,7 @@
 name: f3-roles
 title: "F3: roles switch behaviour on and off"
 presence: away
-channel: schools
+channel: partners
 steps:
-  - post: {as: lakshmi, text: "Is Telugu going to be on the iPhone app too, or only the web app at first?"}
+  - post: {as: sam, text: "Is offline mode going to be on the iPhone app too, or only the web app at first?"}
     expect: {thread_reply: true, within_s: 180}

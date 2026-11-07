@@ -3,10 +3,10 @@
 A personal AI teammate that watches its owner's work sources, brings what matters, and
 covers for the owner when away, always labelled as AI. Design: `docs/build/DESIGN.md`.
 
-## Run it (this Mac)
+## Run it
 
 ```bash
-cd ~/repos/ai-peer-wp1            # or the main checkout after merge
+cd <the repo root>
 uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -r requirements.txt
 .venv/bin/python -m peer discover          # memory from the profile + GitHub (about 3 min)
 .venv/bin/python -m peer watch             # the Peer on Slack + the page at http://127.0.0.1:8787
@@ -18,10 +18,13 @@ scan|install|hook-config`, `peer tune "<feedback>"`, `peer scenario f2-correctio
 
 Secrets: `~/.ai-peer/.env` only. Runtime data (memory, events, log): `~/.ai-peer/<owner>/`.
 
+The default profile (`world/profiles/manish.json`) and the test world (`scenarios/world.yaml`) are
+fictional (Fernway, `example.com`): until you write a real profile, discovery's GitHub step records an error.
+
 ## Try S1 (Slack cover)
 
 - Away: in Slack, DM the AI Peer `away` (or run `peer away`), then a colleague asks in a
-  channel about your work ("who is driving Telugu, and is it shipping this month?"). Within
+  channel about your work ("who is driving offline mode, and is it shipping this month?"). Within
   about two minutes the Peer answers in the thread, with sources and dates, and tells you in
   your DM. DM `back` when you return.
 - Online: DM `online` (or `peer online`). The Peer DMs you a draft with Send / Edit / Skip;

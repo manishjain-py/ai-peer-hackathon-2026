@@ -1,7 +1,7 @@
 """The calendar link (S3, WP4): a meeting on the owner's calendar that he cannot make -> a "Cover for me" offer
 in his DM -> one tap -> a cover request, the same request as the CLI and the DM line (cover.request).
 
-Events arrive in the shape of WP3's make_calendar_event (peer/adapters/google.py on its branch): source
+Events arrive in the shape of WP3's make_calendar_event (peer/adapters/google.py): source
 "google", kind "invite" or "event", ref "google:event:<id>", extra {summary, start, end, organizer,
 organizer_name, response, ical_uid, event_id, location, description (its first 600 characters), seeded,
 seed}. This module reads only that shape: it never calls the Calendar API, and covering a meeting never
@@ -206,7 +206,7 @@ def on_offer_click(ex, payload: dict) -> None:
 
 
 def make_test_event(title: str, start_iso: str, end_iso: str, zoom_url: str, *, seeded: bool = True, kind: str = "invite",
-                    organizer: str = "ananya@learnlikemagic.com", event_id: str | None = None) -> Event:
+                    organizer: str = "alex@example.com", event_id: str | None = None) -> Event:
     """A calendar event in WP3's shape (make_calendar_event) for walks and tests, with the Zoom link first in the
     description (WP3 keeps only its first 600 characters). Nothing is sent or stored."""
     eid = event_id or "wp4" + uuid.uuid4().hex[:12]

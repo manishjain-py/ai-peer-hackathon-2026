@@ -12,7 +12,7 @@ Hard blocks, in code and on by default:
   ZOOM_TEST_MEETING_URL); "seeded" is only a flag the test code sets and proves nothing.
 - The meeting link is a secret: Recall's replies carry the meeting id and passcode, so this module
   never returns, logs or stores a raw reply. Callers get `safe_bot()` and redacted errors only; logs
-  and pages show the meeting's label ("AI Peer test (Zoom)").
+  and pages show the meeting's label ("the test meeting (Zoom)").
 - API calls go only to RECALL_BASE_URL; every bot gets automatic_leave limits (Recall's defaults keep
   two bots in a call together for an hour or more).
 """
@@ -34,7 +34,7 @@ from .base import Adapter
 
 log = logging.getLogger("peer.meetings")
 
-TEST_LABEL = "AI Peer test (Zoom)"
+TEST_LABEL = "the test meeting (Zoom)"
 ACTS = ("join", "speak", "stop_speaking", "chat", "leave")
 SILENT_MP3_SECONDS = 1
 

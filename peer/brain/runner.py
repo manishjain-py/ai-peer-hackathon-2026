@@ -1,8 +1,8 @@
 """run_agent(prompt, schema): one short, fresh brain run on Claude Code or Codex (DESIGN §3, D6).
 
 The run reads the memory folder with file tools only and returns JSON. It never posts or
-sends anything: the executor does, after the approval gate. Flags come from spikes 1a/1b
-(docs/build/evidence/wp1/spikes.md): nothing of the owner's global config leaks in.
+sends anything: the executor does, after the approval gate. Flags come from spikes 1a/1b:
+nothing of the owner's global config leaks in.
 """
 from __future__ import annotations
 

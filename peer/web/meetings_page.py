@@ -3,7 +3,7 @@ the brief after each one. Read-only, in the film's look (layout.py's frame and C
 
 app.py serves it at GET /meetings; importing this module adds "Meetings" to the sidebar (NAV, additive).
 The Zoom link never reaches the page: the store's all_meetings() leaves it out, cards show the meeting's
-label ("AI Peer test (Zoom)"), and a Zoom link inside any text is replaced. Local file paths (the clip, the
+label ("the test meeting (Zoom)"), and a Zoom link inside any text is replaced. Local file paths (the clip, the
 recording) are never shown either: only whether the recording was kept.
 """
 from __future__ import annotations

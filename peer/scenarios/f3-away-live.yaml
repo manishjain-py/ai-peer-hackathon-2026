@@ -3,7 +3,7 @@
 name: f3-away-live
 title: "F3: the away switch on live presence"
 presence: keep
-channel: schools
+channel: partners
 steps:
-  - post: {as: lakshmi, text: "Hi! Is the Telugu work still on track for the pilot schools? Just checking before my call tomorrow."}
+  - post: {as: sam, text: "Hi! Is the offline mode work still on track for the partner pilots? Just checking before my call tomorrow."}
     expect: {thread_reply: true, within_s: 180}

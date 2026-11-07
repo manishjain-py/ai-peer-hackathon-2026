@@ -1,11 +1,11 @@
 """Test-world setup in Slack (not part of the product): the invented colleagues.
 
-Option A (real member accounts): each colleague authorizes the test-only "LLM Scenario" app
+Option A (real member accounts): each colleague authorizes the test-only "Peer Scenario (test)" app
 once, so the scenario script can post as them. `peer world-auth` runs a one-page HTTPS
 callback on localhost (self-signed: click through the browser warning, or paste the URL),
 stores SLACK_AS_<ID> in ~/.ai-peer/.env, never printing it. `peer world-setup` then creates
 the world's channels as a colleague, adds the colleagues, the owner and the Peer bot, and
-sets each colleague's title. No real member (e.g. preethi) is ever added or messaged.
+sets each colleague's title. No real member is ever added or messaged.
 """
 from __future__ import annotations
 
@@ -27,8 +27,8 @@ REDIRECT = "https://localhost:8765/slack/oauth/callback"
 USER_SCOPES = "chat:write,channels:write,channels:read,users.profile:write,users:read,users:read.email"
 
 MANIFEST = f"""display_information:
-  name: LLM Scenario
-  description: Test only. Lets the AI Peer's scenario script post as the invented Learn Like Magic colleagues.
+  name: Peer Scenario (test)
+  description: Test only. Lets the AI Peer's scenario script post as the invented Fernway colleagues.
   background_color: "#6b746f"
 oauth_config:
   redirect_urls:

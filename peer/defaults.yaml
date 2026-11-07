@@ -10,26 +10,24 @@ adapters:                       # what `peer port-check` checks (WP5; docs/porti
   # word), sample (the dry-run act, when the class has no dry_run_sample()), blocked_by (its exception names that
   # mean "a hard block refused"), pending (shown as "not on main yet" until that PR merges), enabled: false.
   # The runtime still builds its own adapters (porting guide: "What a port also edits today").
-  directory: {module: peer.adapters.directory, class: DirectoryAdapter, query: Telugu}
-  slack: {module: peer.adapters.slack, class: SlackAdapter, query: Telugu}
-  github: {module: peer.adapters.github, class: GitHubAdapter, query: Telugu}
+  directory: {module: peer.adapters.directory, class: DirectoryAdapter, query: offline}
+  slack: {module: peer.adapters.slack, class: SlackAdapter, query: offline}
+  github: {module: peer.adapters.github, class: GitHubAdapter, query: offline}
   fake: {module: peer.adapters.fake, class: FakeAdapter}
   google:                       # Gmail, Calendar, Drive/Docs (WP3); needs `peer google login peer` first
     module: peer.adapters.google
     class: GoogleAdapter
-    query: Telugu
+    query: offline
     blocked_by: [Blocked]       # google.act_on_real_items off: act only on seeded test items
     sample: {action: draft_reply, target_from_search: "in:inbox", target_prefix: "google:mail:", payload: {body: "port-check (dry run)"}}
-  meetings:                     # Recall.ai meeting bot on Zoom: on PR #5 until it merges
+  meetings:                     # Recall.ai meeting bot on Zoom
     module: peer.adapters.meetings
     class: MeetingsAdapter
-    pending: "PR #5"
     blocked_by: [MeetingRefused]   # meetings.join_real_meetings off: only the test meeting
     sample: {action: join, target: "", payload: {meeting_url: "https://zoom.us/j/99999999999", bot_name: "port-check"}}
-  voice:                        # text to speech for the meeting bot: on PR #5 until it merges
+  voice:                        # text to speech for the meeting bot
     module: peer.adapters.voice
     class: VoiceAdapter
-    pending: "PR #5"
     sample: {action: render, target: peer, payload: {text: "port-check."}}
 
 presence:
@@ -51,7 +49,7 @@ memory:
   resummarize_minutes: 360      # F6: a changed tracker is re-copied at once; the brain re-writes its status at most this often
 
 local:                          # F7: local work
-  folders: []                   # folders the hourly scan reads (the owner chooses, e.g. ~/repos); read-only
+  folders: []                   # folders the hourly scan reads (the owner chooses, e.g. ~/code); read-only
   scan_minutes: 60
 
 brain:
@@ -70,6 +68,7 @@ brain:
 slack:
   debounce_s: 6                 # wait this long for more messages in a thread before thinking
   watch_channels: []            # empty = every channel the bot is in
+  workspace_url: ""             # where `peer browser login` signs in: set it to your workspace, e.g. https://<workspace>.slack.com/ (required; empty stops the login)
 
 github:
   poll_minutes: 15
@@ -105,14 +104,15 @@ meetings:                       # S3 (WP4): attend a meeting for the owner; all 
 voice:
   engine: local                 # local (the Mac's say voices + ffmpeg) | elevenlabs (the walk's clips and fixed lines only)
   pad_ms: 1000                  # silence in front of every clip (spike 1d: Recall loses the first second)
-  elevenlabs_budget_chars: 20000   # WP4's whole budget on a key shared with a live product; the ledger is in ~/.ai-peer/voice-cache/
+  elevenlabs_budget_chars: 20000   # the character budget for ElevenLabs clips; the ledger is in ~/.ai-peer/voice-cache/
   elevenlabs_model: eleven_multilingual_v2       # prepared clips: the intro, the holding line, the update, the colleagues
   elevenlabs_live_model: eleven_flash_v2_5       # live answers: the fast model
+  refuse_names_with: ""         # extra words (comma-separated) a voice's name must not hold; the owner's names are always refused
   voices:                       # one setting per voice, so the owner can choose by ear; stock (premade) voices only, never his own
     peer: {local: Samantha, elevenlabs: XrExE9yKIg1WjnnlVkGX}       # Matilda (premade, American)
     holding: {local: Samantha, elevenlabs: XrExE9yKIg1WjnnlVkGX}    # the Peer's own voice
-    ananya: {local: Tara, elevenlabs: pFZP5JQG7iQjIQuC4Bku}         # Lily (premade, British)
-    kabir: {local: Rishi, elevenlabs: iP95p4xoKVk53GoZ742B}         # Chris (premade, American)
-    lakshmi: {local: Tara, elevenlabs: Xb7hH8MSUJpSbSDYk0k2}        # Alice (premade, British)
-    david: {local: "Reed (English (US))", elevenlabs: cjVigY5qzO86Huf0OWal}   # Eric (premade, American)
-    rohan: {local: Rishi, elevenlabs: bIHbv24MWmeRgasZH58o}         # Will (premade, American)
+    alex: {local: Tara, elevenlabs: pFZP5JQG7iQjIQuC4Bku}           # Lily (premade, British)
+    taylor: {local: Rishi, elevenlabs: iP95p4xoKVk53GoZ742B}        # Chris (premade, American)
+    sam: {local: Tara, elevenlabs: Xb7hH8MSUJpSbSDYk0k2}            # Alice (premade, British)
+    jordan: {local: "Reed (English (US))", elevenlabs: cjVigY5qzO86Huf0OWal}   # Eric (premade, American)
+    riley: {local: Rishi, elevenlabs: bIHbv24MWmeRgasZH58o}         # Will (premade, American)

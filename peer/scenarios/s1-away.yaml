@@ -4,10 +4,10 @@
 name: s1-away
 title: "S1 Slack cover: Manish away"
 presence: away
-channel: schools
+channel: partners
 steps:
-  - post: {as: lakshmi, text: "Hi team, quick one: who is driving Telugu, and is it shipping this month? Two Telugu-medium schools in Hyderabad asked me today."}
+  - post: {as: sam, text: "Hi team, quick one: who is driving offline mode, and is it shipping this month? Two partner teams asked me today."}
     expect: {thread_reply: true, within_s: 180}
-  - post: {as: lakshmi, in_thread: true, text: "Thanks, that helps! Will it cover Practice and Revise too, or only Learn at first? And will it be on the iPhone app?"}
+  - post: {as: sam, in_thread: true, text: "Thanks, that helps! Will it cover search and sharing too, or only editing at first? And will it be on the iPhone app?"}
     expect: {thread_reply: true, within_s: 180}
   - expect: {owner_dm: true, within_s: 30}

@@ -1,60 +1,61 @@
-# The test world (DESIGN D4): Learn Like Magic as the company. The owner's real repos are what
-# he owns; these colleagues are invented and played by the scenario script. Their Slack
-# accounts use the email aliases below; the script posts as them with their user tokens
-# (SLACK_AS_<ID> in ~/.ai-peer/.env), or, without one, through the scenario bot.
+# The test world (DESIGN D4): Fernway, a fictional company that makes Fernway Notes, a note-taking app.
+# The company, its people and their example.com addresses are invented; the owner's profile says what he
+# owns. These colleagues are played by the scenario script. Their Slack accounts use the email aliases
+# below; the script posts as them with their user tokens (SLACK_AS_<ID> in ~/.ai-peer/.env), or, without
+# one, through the scenario bot.
 
-company: Learn Like Magic
-workspace: learnlikemagic
+company: Fernway
+workspace: fernway
 owner: manish
 
 mail:                           # WP3: the colleagues' addresses are aliases of this mailbox (kept apart from the owner's)
-  seed_account: admin@learnlikemagic.com   # its own Google login, gmail.send only, for the scenario script
+  seed_account: seed@example.com   # its own Google login, gmail.send only, for the scenario script
 
 channels:
   - name: general
     purpose: Company-wide news and questions.
   - name: product
     purpose: Product questions, plans and launches.
-  - name: content
-    purpose: Curriculum and content work, Hindi and Telugu, the content factories.
-  - name: schools
-    purpose: School partnerships, pilots and what schools ask for.
+  - name: design
+    purpose: Design reviews and the app's look.
+  - name: partners
+    purpose: Partner teams, pilots and what partners ask for.
   - name: engineering
     purpose: Engineering, releases and CI.
 
 colleagues:
-  - person_id: ananya
-    name: Ananya Rao
-    title: Content Lead
+  - person_id: alex
+    name: Alex Rivera
+    title: Product Lead
     tz: Asia/Kolkata
     city: Bengaluru
-    email: ananya@learnlikemagic.com
-    about: Leads curriculum content and the Hindi and Telugu content reviews.
-  - person_id: kabir
-    name: Kabir Mehta
-    title: UX Designer
-    tz: Asia/Kolkata
-    city: Mumbai
-    email: kabir@learnlikemagic.com
-    about: Designs the student app and the language picker.
-  - person_id: lakshmi
-    name: Lakshmi Reddy
-    title: School Partnerships Lead
-    tz: Asia/Kolkata
-    city: Hyderabad
-    email: lakshmi@learnlikemagic.com
-    about: Runs the school pilots; Telugu-medium schools in Hyderabad are her main pipeline.
-  - person_id: david
-    name: David Okafor
-    title: Advisor (product and growth)
-    tz: America/Los_Angeles
-    city: San Francisco
-    email: david@learnlikemagic.com
-    about: US-based advisor; joins the weekly product sync.
-  - person_id: rohan
-    name: Rohan Gupta
-    title: iOS Engineer (contract)
+    email: alex@example.com
+    about: Leads the product plan and the offline-mode launch notes.
+  - person_id: taylor
+    name: Taylor Brooks
+    title: Design Lead
     tz: Asia/Kolkata
     city: Pune
-    email: rohan@learnlikemagic.com
+    email: taylor@example.com
+    about: Designs the web and iOS apps and the sync settings screen.
+  - person_id: sam
+    name: Sam Moreno
+    title: Partnerships Lead
+    tz: Asia/Kolkata
+    city: Mumbai
+    email: sam@example.com
+    about: Runs the partner pilots; partner teams that need offline mode are the main pipeline.
+  - person_id: jordan
+    name: Jordan Ellis
+    title: Advisor (US)
+    tz: America/Los_Angeles
+    city: San Francisco
+    email: jordan@example.com
+    about: US-based advisor; joins the weekly product sync.
+  - person_id: riley
+    name: Riley Chen
+    title: iOS Engineer
+    tz: Asia/Kolkata
+    city: Bengaluru
+    email: riley@example.com
     about: Works on the iOS app releases.

@@ -3,9 +3,9 @@
 name: s1-online
 title: "S1 Slack cover: Manish online"
 presence: online
-channel: content
+channel: product
 steps:
-  - post: {as: ananya, text: "Does anyone know who's driving Telugu and whether it ships this month? I need to plan the Telugu content reviews."}
+  - post: {as: alex, text: "Does anyone know who's driving offline mode and whether it ships this month? I need to plan the offline-mode launch notes."}
     expect: {owner_dm_buttons: true, within_s: 120}
   - click: {button: send}
     expect: {thread_reply: true, within_s: 300}

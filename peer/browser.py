@@ -42,6 +42,17 @@ def _context(p, headless: bool = True, video_dir: Path | None = None, size=(1280
     return p.chromium.launch_persistent_context(**kw)
 
 
+def workspace_url() -> str:
+    """Where the Peer's profile signs in to Slack (setting slack.workspace_url, e.g. https://<workspace>.slack.com/).
+
+    Required: the sign-in check below treats any app.slack.com/client page as signed in, so a generic default
+    could report "signed in" before Slack redirects to its sign-in page."""
+    url = str(get_settings().get("slack.workspace_url") or "").strip()
+    if not url:
+        raise SystemExit("set slack.workspace_url first, e.g. `peer set slack.workspace_url https://<workspace>.slack.com/`")
+    return url
+
+
 def client_url(channel: str | None = None, thread_ts: str | None = None) -> str:
     team = secret("SLACK_TEAM_ID") or ""
     url = f"https://app.slack.com/client/{team}"
@@ -70,7 +81,7 @@ def login(timeout_s: int = 1800, shots: Path | None = None) -> bool:
     with sync_playwright() as p:
         ctx = _context(p, headless=False)
         page = ctx.pages[0] if ctx.pages else ctx.new_page()
-        page.goto("https://learnlikemagic.slack.com/")
+        page.goto(workspace_url())
         page.bring_to_front()
         print("Sign in to Slack in the window that opened (as yourself). It closes by itself when done.", flush=True)
         print("It is its own Chrome window, with the bar \"Chrome is being controlled by automated test software\". "
@@ -239,7 +250,7 @@ def login_headless(email: str, code_file: Path, timeout_s: int = 900, shots: Pat
     with sync_playwright() as p:
         ctx = _context(p, headless=True)
         page = ctx.pages[0] if ctx.pages else ctx.new_page()
-        page.goto("https://learnlikemagic.slack.com/")
+        page.goto(workspace_url())
         page.wait_for_selector("[data-qa=email_field]", timeout=30000)
         page.fill("[data-qa=email_field]", email)
         page.click("[data-qa=submit_button]")

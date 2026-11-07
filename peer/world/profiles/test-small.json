@@ -1,13 +1,13 @@
 {
   "person_id": "manish",
-  "name": "Manish Jain",
+  "name": "Manish",
   "preferred_name": "Manish",
-  "title": "Founder and engineer",
-  "company": "Learn Like Magic",
-  "team": "Founding team",
-  "email": "manish@learnlikemagic.com",
-  "slack_email": "manish@learnlikemagic.com",
-  "github": "manishjain-py",
+  "title": "Engineering Lead",
+  "company": "Fernway",
+  "team": "Notes app",
+  "email": "manish@example.com",
+  "slack_email": "manish@example.com",
+  "github": "manish-fernway-example",
   "tz": "Asia/Kolkata",
   "location": "India",
   "working_hours": {
@@ -22,56 +22,56 @@
       "Sat"
     ]
   },
-  "about": "Builds Learn Like Magic end to end: the learning app for Indian school students (backend, frontend, admin, iOS) and the content factories that turn school textbooks into app content.",
+  "about": "Leads engineering for Fernway Notes, a note-taking app, end to end: the API backend, the web app, the iOS app, the sync service and the admin tool.",
   "owns": {
     "repos": [
       {
-        "repo": "manishjain-py/learnlikemagic",
-        "what": "The Learn Like Magic product: llm-backend, llm-frontend, llm-admin, the iOS app, and the in-repo content factory. Feature trackers live in docs/feature-development/<feature>/STATE.md.",
+        "repo": "fernway-example/notes",
+        "what": "The Fernway Notes monorepo: api/, web/, admin/, ios/ and sync/. Project trackers live in docs/projects/<project>/STATE.md.",
         "trackers": [
-          "docs/feature-development/*/STATE.md"
+          "docs/projects/*/STATE.md"
         ]
       }
     ],
     "services": [
       {
-        "name": "llm-backend",
-        "repo": "manishjain-py/learnlikemagic",
-        "path": "llm-backend",
-        "what": "The app's backend API: stores and serves the content and learner progress."
+        "name": "notes-api",
+        "repo": "fernway-example/notes",
+        "path": "api",
+        "what": "The app's backend API: stores and serves notes, notebooks and accounts."
       },
       {
-        "name": "llm-frontend",
-        "repo": "manishjain-py/learnlikemagic",
-        "path": "llm-frontend",
-        "what": "The student web app (Learn, Practice, Revise)."
+        "name": "notes-web",
+        "repo": "fernway-example/notes",
+        "path": "web",
+        "what": "The web app (editing, search, sharing)."
       },
       {
-        "name": "llm-admin",
-        "repo": "manishjain-py/learnlikemagic",
-        "path": "llm-admin",
-        "what": "The admin app for content and operations."
+        "name": "notes-admin",
+        "repo": "fernway-example/notes",
+        "path": "admin",
+        "what": "The admin tool for support and operations."
       },
       {
         "name": "ios",
-        "repo": "manishjain-py/learnlikemagic",
+        "repo": "fernway-example/notes",
         "path": "ios",
-        "what": "The Learn Like Magic iOS app."
+        "what": "The Fernway Notes iOS app."
       },
       {
-        "name": "llm-content-factory",
-        "repo": "manishjain-py/learnlikemagic",
-        "path": "llm-content-factory",
-        "what": "The in-repo content factory workflows (TOC, guidelines, Explain, Practice, Visuals, Revise, Translate)."
+        "name": "notes-sync",
+        "repo": "fernway-example/notes",
+        "path": "sync",
+        "what": "The sync service: keeps notes in step across devices, and offline mode."
       }
     ]
   },
   "interests": [
     "AI agents and coding agents",
-    "Indian-language learning (Hindi, Telugu)",
-    "school partnerships and pilots",
-    "content quality and evaluation",
-    "edtech in India"
+    "offline-first apps and sync",
+    "partner pilots and what partners ask for",
+    "app quality and testing",
+    "note-taking and productivity tools"
   ],
-  "_note": "WP2 test owner: Manish with one repo (3 trackers), so setup walks are quick and cheap."
+  "_note": "WP2 test owner: Manish with one repo, so setup walks are quick and cheap. Fictional test profile: Fernway and its repo (fernway-example/notes) are invented, so GitHub discovery records an error for it until a real profile is written."
 }

@@ -57,7 +57,7 @@ def dry_run(st: Settings, name: str) -> Path:
     world = load_world()
     fake = FakeAdapter()
     fake.owner_id = "UOWNER"
-    fake.users["UOWNER"] = {"id": "UOWNER", "name": "Manish", "real_name": "Manish Jain", "tz": "Asia/Kolkata"}
+    fake.users["UOWNER"] = {"id": "UOWNER", "name": "Manish", "real_name": "Manish", "tz": "Asia/Kolkata"}
     for c in world["colleagues"]:
         fake.users[f"U{c['person_id'].upper()}"] = {"id": f"U{c['person_id'].upper()}", "person_id": c["person_id"],
                                                     "name": c["name"], "real_name": c["name"], "tz": c["tz"]}

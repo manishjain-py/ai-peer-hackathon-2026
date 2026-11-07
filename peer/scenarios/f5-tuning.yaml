@@ -6,7 +6,7 @@ title: "F5: self-tuning from the owner's DM"
 presence: online
 channel: engineering
 steps:
-  - github: {title: "CI failed on telugu-wp2b in learnlikemagic (draft PR, walk sample)", repo: manishjain-py/learnlikemagic, branch: telugu-wp2b, draft: true, conclusion: failure}
+  - github: {title: "CI failed on offline-wp2b in notes (draft PR, walk sample)", repo: fernway-example/notes, branch: offline-wp2b, draft: true, conclusion: failure}
   - dm: "stop telling me about CI failures on drafts"
-  - github: {title: "CI failed on telugu-wp2c in learnlikemagic (draft PR, walk sample)", repo: manishjain-py/learnlikemagic, branch: telugu-wp2c, draft: true, conclusion: failure}
-  - github: {title: "CI failed on main in learnlikemagic (walk sample)", repo: manishjain-py/learnlikemagic, branch: main, draft: false, conclusion: failure}
+  - github: {title: "CI failed on offline-wp2c in notes (draft PR, walk sample)", repo: fernway-example/notes, branch: offline-wp2c, draft: true, conclusion: failure}
+  - github: {title: "CI failed on main in notes (walk sample)", repo: fernway-example/notes, branch: main, draft: false, conclusion: failure}

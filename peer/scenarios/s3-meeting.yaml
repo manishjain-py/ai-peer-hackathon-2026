@@ -8,21 +8,21 @@
 name: s3-meeting
 title: "S3 attend a meeting: the weekly product sync"
 meeting: {title: "Weekly product sync", at: "+6m", minutes: 15}   # live: time for the draft (about 40 s) and his tap
-colleague_bot: "Learn Like Magic team (scripted test bot)"
+colleague_bot: "Fernway team (scripted test bot)"
 steps:
-  - say: {as: ananya, text: "Hi everyone, Ananya here. Let's start the weekly product sync."}
+  - say: {as: alex, text: "Hi everyone, Alex here. Let's start the weekly product sync."}
     after: meeting_joined
-  - say: {as: ananya, text: "Is Manish here today? What's his update this week?"}
+  - say: {as: alex, text: "Is Manish here today? What's his update this week?"}
     after: none
-  - say: {as: david, text: "David here. I have a question for Manish's assistant. Who is driving the Telugu build, and when does it ship?"}
+  - say: {as: jordan, text: "Jordan here. I have a question for Manish's assistant. Who is driving the offline mode build, and when does it ship?"}
     after: meeting_update_played
-  - say: {as: kabir, text: "Kabir here. Another question for Manish's assistant. {unscripted}"}
+  - say: {as: taylor, text: "Taylor here. Another question for Manish's assistant. {unscripted}"}
     after: meeting_answered
-  - say: {as: ananya, text: "Okay, let's decide. We move the Hyderabad pilot review to next Thursday, and Lakshmi owns the school list. Everyone agree?"}
+  - say: {as: alex, text: "Okay, let's decide. We move the partner pilot review to next Thursday, and Sam owns the partner list. Everyone agree?"}
     after: meeting_answered
-  - say: {as: david, text: "Agreed. And one more for Manish's assistant. Please ask Manish to confirm the Telugu ship date by Friday."}
+  - say: {as: jordan, text: "Agreed. And one more for Manish's assistant. Please ask Manish to confirm the offline mode ship date by Friday."}
     after: none
-  - say: {as: ananya, text: "Great, thanks everyone. See you next week."}
+  - say: {as: alex, text: "Great, thanks everyone. See you next week."}
     after: meeting_answered
   - leave: true
     after: none

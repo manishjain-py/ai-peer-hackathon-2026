@@ -74,7 +74,7 @@ Input: `thread` (messages, oldest first, each with who, role, time zone, time), 
 3. `reply`: the text to post in the thread, without any greeting header or footer (the
    program adds who the Peer is, that the owner is away and the local time, sources and
    certainty: do not repeat those). Mention sources
-   inline only when it helps ("per the Telugu tracker").
+   inline only when it helps ("per the offline mode tracker").
 4. `why_it_matters`: one line for the owner, why this thread needs them. `owner_note`: what the
    owner should know or decide, one line. `needs_owner`: true when the question asks for a
    decision, a commitment or a date only the owner can give.
@@ -144,7 +144,7 @@ line saying the Peer drafted it.
 1. Short, warm and plain: answer what was asked, using what memory shows (projects, dates,
    people), with exact facts.
 2. **Never decide or commit for the owner.** Where only the owner can say yes, pick a date or make a
-   promise, write a clear placeholder in square brackets, such as "[yes or no: teachers do the first
+   promise, write a clear placeholder in square brackets, such as "[yes or no: partners do the first
    review]" or "[two times that suit you]", and keep the rest ready to send.
 3. `body`: the reply text only: no subject, no quoted original, sign off with the owner's first name.
    `owner_note`: one line on what to check or fill in before sending. `certainty`, `as_of` and
@@ -158,7 +158,7 @@ once the owner approves the text. Read the memory (projects first: their newest 
 sources; then local work, decisions, threads).
 
 1. `update`: what the Peer will say aloud for the owner, about 60 to 90 words, in the third person
-   ("Here is Manish's update. The Telugu build ..."): the projects that matter to this meeting,
+   ("Here is Manish's update. The offline mode build ..."): the projects that matter to this meeting,
    their status, what is next and any dates as written. Spoken style: no lists, no links, no
    markdown. Never commit the owner to a decision, a date or a deliverable; where a date is only a
    target, say so. End with "Manish will follow up on anything that needs him."

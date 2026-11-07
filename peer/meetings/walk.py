@@ -18,7 +18,7 @@ import yaml
 from ..adapters.meetings import MeetingsAdapter
 from ..adapters.voice import VoiceAdapter, duration_s
 from ..events import now_iso
-from ..settings import PKG, Settings, secret
+from ..settings import DEFAULTS_FILE, PKG, Settings, secret
 from . import store as mstore
 from .live import OUTPUT_LATENCY_S
 
@@ -143,7 +143,7 @@ def dry_walk(st: Settings, name: str = "s3-meeting", question: str | None = None
     from . import cover
     from .live import MeetingSession
 
-    if st.owner == "manish":
+    if st.owner == yaml.safe_load(DEFAULTS_FILE.read_text())["owner"]["id"]:   # the default (live) owner: never its data
         raise SystemExit("the dry walk runs on a test owner (AI_PEER_OWNER=wp4test)")
     if not question:
         raise SystemExit("pass the unscripted question chosen at walk time: --question \"...\"")
@@ -151,7 +151,7 @@ def dry_walk(st: Settings, name: str = "s3-meeting", question: str | None = None
     walk = Walk(st, name)
     fake = FakeAdapter()
     fake.owner_id = "UOWNER"
-    fake.users["UOWNER"] = {"id": "UOWNER", "name": "Manish", "real_name": "Manish Jain", "tz": "Asia/Kolkata"}
+    fake.users["UOWNER"] = {"id": "UOWNER", "name": "Manish", "real_name": "Manish", "tz": "Asia/Kolkata"}
     for c in load_world()["colleagues"]:
         fake.users[f"U{c['person_id'].upper()}"] = {"id": f"U{c['person_id'].upper()}", "person_id": c["person_id"],
                                                     "name": c["name"], "real_name": c["name"], "tz": c["tz"]}
@@ -193,7 +193,7 @@ def dry_walk(st: Settings, name: str = "s3-meeting", question: str | None = None
                       "peer_log": sess.peer_log, "lines": sess.lines, "fake_acts": fake.acts, "result": result}, "-dryrun")
 
 
-# -- the live walk: the running Peer (owner manish) covers it; only the colleague bot is ours ------------------------------
+# -- the live walk: the running Peer (the default owner) covers it; only the colleague bot is ours ------------------------------
 def live_walk(st: Settings, name: str = "s3-meeting", question: str | None = None, auto_click: bool = False,
               approve_timeout_s: int = 900) -> Path:
     if not question:

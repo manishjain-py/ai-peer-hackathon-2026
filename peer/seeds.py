@@ -1,7 +1,7 @@
 """The S2 scenario script's seeds (test world only, DESIGN D4).
 
 An overnight of mail, invites and company news from the invented colleagues, sent by the seed
-account (world.yaml `mail.seed_account`, admin@: the colleagues' mailbox, its own Google login with
+account (world.yaml `mail.seed_account`: the colleagues' mailbox, its own Google login with
 gmail.send only) from their aliases, **to the owner's address only**: every recipient is checked
 before a send. Each seed carries a random token (the X-AI-Peer-Seed header, or the invite's UID)
 recorded in ~/.ai-peer/google-seeds.jsonl. That ledger labels what was seeded and is the list the

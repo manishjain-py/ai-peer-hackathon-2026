@@ -11,11 +11,11 @@ steps:
   - seed: s2-overnight
   - poll: google
   - brief: {via: dm}
-  - brief_click: {action: draft_reply, from: ananya}
-  - brief_click: {action: send_email, from: ananya}
-  - brief_click: {action: accept_invite, from: kabir}
+  - brief_click: {action: draft_reply, from: alex}
+  - brief_click: {action: send_email, from: alex}
+  - brief_click: {action: accept_invite, from: taylor}
   - set: {google.show_real_items: true}
-  - real_mail: {from: "someone@example.org", name: "A real sender (stand-in)", subject: "Re: your talk next month, can you confirm?"}
+  - real_mail: {from: "someone@example.com", name: "A real sender (stand-in)", subject: "Re: your talk next month, can you confirm?"}
   - poll: google
   - brief: {ai: false, why: "check the hard block"}
   - brief_click: {action: draft_reply, real: true}
