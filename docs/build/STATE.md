@@ -5,6 +5,23 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
+2026-11-07 07:09. **The build on this Mac is closed; it continues on Manish's Airbnb Mac from the hand-off package.**
+`ai-peer-handoff-1` built it (07:07) and was closed at 07:09: `~/Desktop/ai-peer-handoff-2026-11-07.zip` (46,447,904
+bytes, 817 entries), holding `ai-peer/` (a fresh repo, 254 files, one commit 85c84d4 by "AI Peer
+<ai-peer@example.com>", no remote, no LFS; `START-HERE.md`, `docs/ways-of-working.md`, `docs/lessons.md`, a reset
+STATE, DESIGN with D17, PLAN from here, the next packages WP7 (the privacy flaw first) and WP10 (demo), the porting
+guide with "The Airbnb port"; a fictional test world, Fernway; the latest film render only) and
+`ai-peer-secrets/elevenlabs.env` (his ElevenLabs key, one line, mode 600, outside git). The sanitizing branch
+`handoff-airbnb` is pushed here as a record (8257c8a), not merged. The worker's proofs: a leak scan with zero real hits,
+54 modules import, `port-check` (fake, directory) exit 0, dry S1-away and S2 passed on the fictional world, a
+stranger walk (11 gaps folded). **The controller's own checks:** the zip tests clean; the git metadata names nobody;
+a second leak scan with a wider term list (the old company, its people and projects, every id, email, chat and
+session link, his handles and paths) found only generic hits; the key file is one line matching `.env`. Kept on
+purpose: the film render shows Manish's full name, his city and a few first names (his own film, to his own
+laptop). The zip is not sent through chat or Telegram (it holds a key): Manish moves it from this Mac's Desktop.
+The one-line prompt: `Read START-HERE.md in this folder in full and follow it: it holds the whole AI Peer project,
+how we work, what is done and what comes next.` This repo stays as the archive of this Mac's work.
+
 2026-11-07 06:24. **Wrap-up under way.** PR #3 merged at 06:22:14 as 65e7739 by `ai-peer-wp3-2` (dry S2 walk passed;
 the live walk on real Google was never run here and moves to the new Mac); `ai-peer-wp3-2` closed 06:23. **The live
 Peer is stopped** (06:23, `peer stop`; pid 10924 gone; undo: `cd ~/repos/ai-peer-wp4 && AI_PEER_OWNER=manish
@@ -208,9 +225,12 @@ needs Manish at the Mac: "open window", then the Google client ([setup/google.md
   On "open window" it goes to `ai-peer-wp1-2` to record S1; WP3's live S2 walk asks for it later. F7 is live: the session-end hook is in `~/claude-config/settings.json` (synced) and
   `~/.codex/hooks.json` (backups in `~/.ai-peer/backups/`; both checked to parse), and the hourly
   scan reads `~/repos`.
-- Still running (06:24 on 7 Nov): `ai-peer-handoff-1` (pid 68567) and `ai-peer-controller-4`'s watcher
-  `docs/build/tools/watch2.zsh` (pid 69936, no AI; it tracks `ai-peer-handoff-1`; stop: `kill 69936`). The live Peer is
-  stopped (06:23 on 7 Nov). `ai-peer-wp3-2` closed 06:23 on 7 Nov; `ai-peer-wp4-2` closed 21:51 on 6 Nov.
+- Still running (07:09 on 7 Nov): nothing of the build. The live Peer stopped 06:23; every worker closed
+  (`ai-peer-handoff-1` 07:09). Left on this Mac, for Manish to clean when he wants: the worktrees
+  `~/repos/ai-peer-wp1` to `wp5` and `~/repos/ai-peer-handoff`; `~/.ai-peer/` (runtime data, memory, tokens, `.env`);
+  the F7 session-end hooks in `~/claude-config/settings.json` and `~/.codex/hooks.json` (no-ops without the Peer's
+  script; backups in `~/.ai-peer/backups/`); the test company's accounts (Slack app and colleague accounts, the
+  Recall key, the test Zoom meeting).
   At 20:47 `ai-peer-controller-3` had stopped its own watcher at the hand-off.
   Before that (18:55): the live Peer and `ai-peer-controller-3`'s watcher
   `watch2.zsh` (pid 74123, no AI, in the controller's scratchpad; it exits with one line on a change:
@@ -244,6 +264,7 @@ needs Manish at the Mac: "open window", then the Google client ([setup/google.md
 | ai-peer-wp1-2 | 2049 (closed 17:57 on 6 Nov by controller-3: idle, no child processes) | `~/repos/ai-peer-wp1` | `wp1-foundation`, PR #1 merged 15:31 (183fabe) | Done: S1-online live with Manish's tap, the merge, a recorder smoke test. Handed off at 19.3% (2026-11-06 17:25 UTC, weekly usage 94% on the old account) to `ai-peer-wp1-3` on the new account ([hand-off](handoffs/HANDOFF-2026-11-06-ai-peer-wp1-3.md): the "open window" sign-in, the two recorded walks, evidence, Checkpoint 1); spawned no successor; stopped; https://claude.ai/code/session_01Nfn5h9oCzikhfgVU9KBwCz |
 | ai-peer-wp2-1 | 2129 (closed 16:21 by controller-2: idle, nothing running; the live Peer kept running) | `~/repos/ai-peer-wp2` | `wp2-setup-memory`, [PR #2](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/2) **merged 16:19 as 88ac13e** | WP2 done: F1 to F7 walked (evidence `docs/build/evidence/wp2/walks.md`); the away switch walked live 15:39; the live F5 DM check is in Next. **Changed at Manish's "Yes to all" (15:33):** `~/claude-config/settings.json` (what `~/.claude/settings.json` links to) gained `hooks.SessionEnd` running `~/.ai-peer/bin/session-end claude` behind `test -x` (undo: delete the `SessionEnd` key); `~/.codex/hooks.json` gained the same with `codex` (undo: delete its `SessionEnd` key); owner `manish` settings `local.folders: ["~/repos"]` (undo: `[]`); backups in `~/.ai-peer/backups/`. **The live Peer runs from this worktree** (pid 62524, started 16:18, skill links point here): keep the worktree until the Peer moves. Stopped; https://claude.ai/code/session_01Nfn5h6apXjAgQuN9wUq54K |
 | ai-peer-wp3-1 | 2216 (closed 17:57 on 6 Nov by controller-3: idle, no child processes) | `~/repos/ai-peer-wp3` | `wp3-google-brief` at 79ee537, **draft [PR #3](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/3)** | S2 dry walk passed 17:00 on 5 Nov (evidence `docs/build/evidence/wp3/walks.md` on the branch). **Handed off 17:27 on 6 Nov** at the controller's request (the old account's weekly usage 94%; context 39%) to `ai-peer-wp3-2`, not spawned: [hand-off](handoffs/HANDOFF-2026-11-06-ai-peer-wp3-2.md) (the Google client, the two logins, the spike, the live S2 walk, merge). Defaults kept: `google.act_on_real_items` and `google.show_real_items` off, the seed ledger, `peer seed clean`. Nothing of its own running; https://claude.ai/code/session_01Nfn5h7CXNKkUk7N614bzgr |
+| ai-peer-handoff-1 | 2708 (pid 68567; closed 07:09 on 7 Nov by ai-peer-controller-4: idle, its sub-agent done) | `~/repos/ai-peer-handoff` | `handoff-airbnb` at 8257c8a (a record; never merged) | Started 06:23 on 7 Nov from [its brief](handoffs/HANDOFF-2026-11-07-ai-peer-handoff-1.md): the sanitized hand-off package for Manish's Airbnb Mac; done 07:07 (`~/Desktop/ai-peer-handoff-2026-11-07.zip`); context 44%, weekly 73% at 07:07; https://claude.ai/code/session_01NAqLMirZLucr74bontKDuE |
 
 ## Needs Manish
 
@@ -539,3 +560,5 @@ What went wrong once, with its mechanism.
 | 2026-11-06 | ai-peer-controller-4 | Took over at 20:49 (context 10%, weekly 42%); closed window 2408 (idle); told `ai-peer-wp3-2`; re-armed the watcher; moved WP4's live walk ahead of WP3's (WP3 waits for the Google client); a read-only review of the plan found 9 points, each checked in the code and folded into a kickoff (saved as `KICKOFF-2026-11-06-ai-peer-wp4-2.md`); started `ai-peer-wp4-2` (window 2610) at 21:17 | WP4's live walk under way; WP3 merges main after PR #5 |
 | 2026-11-06 | ai-peer-wp4-2 | Merged main (PR #6) into PR #5, port-check meetings and voice 0 FAIL; restarted the live Peer from `~/repos/ai-peer-wp4` (skill links re-pointed); live S3 walk 1 passed 21:23 to 21:33 (scripted tap, ElevenLabs voices); found the brain loading Manish's global CLAUDE.md, fixed it (51e260c) and restarted on it (pid 10924); `voice.engine` back to local; merged PR #5 (8ba2691, 21:47) | The live Peer (pid 10924) runs from `~/repos/ai-peer-wp4`; Checkpoint 3's recording to the controller |
 | 2026-11-06/07 | ai-peer-wp3-2 | Read in (context 16%); checked what it could without Manish (no Google client; the live Peer untouched); found and fixed two live-only bugs by reading (the invite listed twice; cleaned seeds in later briefs); merged `main` into PR #3 twice (PRs #4 and #6, then #5), cheap checks and port-check after each; at Manish's change of plan, merged PR #3 (65e7739) without the live walk | WP3's code on `main`; the Google steps and the live S2 walk are next steps on the new Mac |
+| 2026-11-07 | ai-peer-handoff-1 | Read in; sanitized a copy of main on `handoff-airbnb` (the fictional world Fernway; every company, account and personal detail out); wrote START-HERE, the ways of working, the lessons, a reset STATE, PLAN from here and the next packages; built a fresh one-commit repo and the zip; leak scan, code checks, dry S1 and S2, a stranger walk (11 gaps folded) | The hand-off package done 07:07; closed 07:09 |
+| 2026-11-07 | ai-peer-controller-4 | Overnight: ran WP4's live walk before WP3's (passed, PR #5 merged); planned WP5's rest and wrote `ai-peer-wp5-2`'s brief (13 review findings folded); sent Checkpoint 3 (02:21) and the Google ask. At Manish's change of plan (06:21): had PR #3 merged, closed `ai-peer-wp3-2`, stopped the live Peer, started `ai-peer-handoff-1`, checked its package and gave Manish the zip and the one-line prompt | The build on this Mac closed; it continues on his Airbnb Mac |
