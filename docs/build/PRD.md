@@ -1,21 +1,24 @@
 # AI Peer: what it must do
 
-The generic AI Peer, working end to end on Manish's accounts with Learn Like Magic as
-the company (DESIGN D4), plus a porting guide, by 15 Nov 2026. How: [DESIGN](DESIGN.md).
+The generic AI Peer, working end to end in a test world (the fictional company Fernway, on
+test accounts; DESIGN D4), plus a porting guide, by 15 Nov 2026. How: [DESIGN](DESIGN.md).
 Each scene and feature is done when its **walk** passes: the scenario script plays it
 and a person sees the Peer behave as written (D13).
 
 ## The world it runs in
 
-- **Owner:** Manish, founder and engineer of Learn Like Magic, India time (IST).
-- **What he owns:** the LLM repos (backend, frontend, admin, iOS, content factories,
-  content lab) with their docs, trackers, PRs and CI, read through GitHub, read-only.
-- **Colleagues:** 4 to 6 fake teammates in a new "Learn Like Magic" Slack workspace (for
-  example a content lead, a UX designer, a school partner, a US-based advisor), played
-  by the scenario script; their mail and invites come from addresses the script controls.
-- **Accounts:** Slack (new workspace + one app), Google Workspace manish@learnlikemagic.com
-  (Gmail, Calendar, Drive/Docs), GitHub (read-only token), personal Zoom + Recall.ai,
-  ElevenLabs (voices for fake colleagues and the holding line).
+- **Owner:** Manish, Engineering Lead at Fernway (team "Notes app"), India time (IST).
+- **What he owns:** the Fernway Notes repos (API backend, web app, admin tool, iOS app,
+  sync service) with their docs, trackers, PRs and CI, read through GitHub, read-only.
+  The test world's repos do not exist; at a real company these are its own repos.
+- **Colleagues:** 4 to 6 fake teammates in a test Slack workspace (for example a product
+  lead, a design lead, a partnerships lead, a US-based advisor), played by the scenario
+  script; their mail and invites come from addresses the script controls.
+- **Accounts (the kinds needed):** a Slack workspace and one app (plus a test-only
+  scenario app for the colleagues); a mail and calendar account (Google Workspace: Gmail,
+  Calendar, Drive/Docs); a code-host token (GitHub, read-only); a meeting-bot service
+  (Recall.ai) with a Zoom account that hosts the scene meetings; a voice service
+  (ElevenLabs: voices for fake colleagues and the holding line).
 
 ## Features that come with every scene
 
@@ -26,7 +29,7 @@ and a person sees the Peer behave as written (D13).
 | F3 | **Roles and settings.** Switches: Watch my work, Stand in when I'm away, Find opportunities, Cover meetings, Daily brief; scope in plain English; the away switch. | Turning a role off stops that behaviour in the next walk. |
 | F4 | **Activity log.** Every action: who asked, what the Peer said or did, sources, outcome; "needs your review" items first. | Every scene's actions appear with sources. |
 | F5 | **Self-tuning.** Manish says "less of this" or reacts in his DM; the Peer edits `rules.md` and confirms in one line. | After "stop telling me about CI failures on drafts", the next such event is not pushed. |
-| F6 | **Fresh memory.** New events update the affected memory files; a nightly pass re-reads key docs; facts carry source and date. | A tracker change in an LLM repo shows up in the Peer's next answer. |
+| F6 | **Fresh memory.** New events update the affected memory files; a nightly pass re-reads key docs; facts carry source and date. | A tracker change in one of his repos shows up in the Peer's next answer. |
 | F7 | **Local work.** Session-end hooks (Claude Code, Codex) and an hourly scan of chosen folders record repo, branch, unpushed changes and a short summary. | "What is Manish working on?" mentions today's unpushed branch. |
 | F8 | **Swappable brain.** One setting runs the brain on Claude Code or Codex. | S1 passes on both backends. |
 
@@ -34,14 +37,15 @@ and a person sees the Peer behave as written (D13).
 
 ### S1 Slack cover (first)
 
-- A fake colleague asks in a channel about an LLM project, without tagging Manish
-  (for example "who is driving Telugu, and is it shipping this month?").
+- A fake colleague asks in a channel about one of Manish's projects, without tagging
+  him (for example "who is driving offline mode, and is it shipping this month?").
 - **Manish online:** within about a minute the Peer DMs him: why this thread matters,
   a draft reply, Send / Edit / Skip. Send posts it in the thread as "Manish's AI Peer".
 - **Manish away:** within about two minutes it replies in the thread itself: who it is,
   that Manish is offline (and his local time), the answer with sources and dates. It
   handles follow-up questions in that thread. Manish finds it in his DM and the brief.
-- Walk: both variants from the scenario script; replies grounded in the real LLM repo.
+- Walk: both variants from the scenario script; replies grounded in his own work
+  records (repos and memory).
 
 ### S2 Daily brief and heads-ups (second)
 
@@ -58,8 +62,9 @@ and a person sees the Peer behave as written (D13).
 
 ### S3 Attend a meeting (third)
 
-- A Zoom meeting on Manish's calendar, hosted on his personal Zoom, at a time he cannot
-  make (for example 2 AM IST); he marks "cover for me", or the Peer offers to.
+- A Zoom meeting on Manish's calendar, hosted on a Zoom account he controls (D8), at a
+  time he cannot make (for example 2 AM IST); he marks "cover for me", or the Peer
+  offers to.
 - **Before:** the Peer drafts his update; he approves it in his DM with one tap.
 - **During:** the bot joins as "Manish's AI Peer" and introduces itself; plays the
   approved update when someone asks for Manish; answers other questions live (holding
@@ -73,14 +78,14 @@ and a person sees the Peer behave as written (D13).
 ## Porting deliverable
 
 - `docs/porting-guide.md`, written for an AI coding agent on a company machine: the
-  adapter contract, the personal adapters as worked examples, a checklist per system,
-  the Airbnb notes in DESIGN §6.
+  adapter contract, the test world's adapters as worked examples, a checklist per
+  system, the Airbnb notes in DESIGN §6.
 - `port-check`: lists the adapters, exercises each verb (act in dry-run), prints a table.
 
 ## Demo deliverable (D16)
 
 Live demo of S1 to S3; a backup screen recording of each scene; a short opener cut
-from the concept film. Rehearsed twice on 15 Nov.
+from the concept film. Rehearsed twice before the hackathon.
 
 ## Not in scope
 
