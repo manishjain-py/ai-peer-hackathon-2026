@@ -222,7 +222,7 @@ needs Manish at the Mac: "open window", then the Google client ([setup/google.md
 The controller asks one at a time, in this order.
 
 0. **His morning (7 Nov), in order, one at a time:** (a) the Google client, [setup/google.md](setup/google.md)
-   steps 1 to 5 in his Work Chrome (asked 18:18 on 6 Nov; he types "downloaded" and the controller
+   steps 1 to 5 in his Work Chrome (asked 18:18 on 6 Nov, **again 02:21:17 on 7 Nov on Attention**, answer in `ai-peer-controller-4`; he types "downloaded" and the controller
    moves the file to `~/.ai-peer/google-client.json`); (b) "go login" for `ai-peer-wp3-2`: two Google
    consent pages (manish@, then admin@); (c) **the Peer's own Codex login, deadline 8 Nov 02:25 UTC**
    (item 4); (d) from his phone, the live F5 check ("Next" item 2); (e) untick "Allow JavaScript
@@ -358,7 +358,7 @@ test" stays for WP4 unless Manish deletes it.
 |---|---|---|
 | 1 | S1 Slack cover | **Done 18:25 on 6 Nov**: the checkpoint message (the two recorded walks' videos, how to try it) went to the controller for Manish's Telegram; **sent to him at 18:26:57** (Attention group, the text and both videos, by controller-3). Recorded walks 4 (online, Send clicked in the Peer's browser, 18:18 to 18:20) and 5 (away, 18:20 to 18:22) passed ([evidence](evidence/wp1/s1-walks.md)). Earlier: away on Claude and Codex (02:54, 02:56 on 5 Nov), online with Manish's tap (15:26 to 15:29); PR #1 merged 15:31 on 5 Nov |
 | 2 | S2 daily brief + setup page | not started |
-| 3 | S3 meeting | **Live walk passed 21:23 to 21:33 on 6 Nov** (`ai-peer-wp4-2`, `--auto-click`, ElevenLabs voices); the checkpoint (the mixed recording `~/.ai-peer/manish/meeting-runs/m2db7aebe/recording.mp4` and how to try it) goes to Manish's Telegram Attention when he wakes (about 02:30 UTC on 7 Nov), so it does not wake him |
+| 3 | S3 meeting | **Live walk passed 21:23 to 21:33 on 6 Nov** (`ai-peer-wp4-2`, `--auto-click`, ElevenLabs voices); **Checkpoint 3 sent 02:21:05 on 7 Nov** (Telegram Attention, message 20178: the mixed recording `~/.ai-peer/manish/meeting-runs/m2db7aebe/recording.mp4`, 4 min, with what it shows and how to try it: "try S3" to the controller once the Peer is free); PR #5 merged 21:47 (8ba2691) |
 
 ## Settled, do not re-open
 
