@@ -203,6 +203,10 @@ class Executor:
         if payload.get("type") == "block_actions":
             act = (payload.get("actions") or [{}])[0]
             key, aid = act.get("value"), act.get("action_id")
+            if str(aid or "").startswith("brief_"):   # WP3 S2: the brief's buttons (Draft reply, Accept, Send email, Discard)
+                from .brief import on_click
+                threading.Thread(target=on_click, args=(self, payload), daemon=True).start()
+                return None
             if str(aid).startswith("peer_mtg_"):   # WP4 (S3): the meeting update card (Approve update / Edit / Skip)
                 from .meetings.cover import on_click
                 return on_click(self, payload)

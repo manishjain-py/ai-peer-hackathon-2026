@@ -47,6 +47,26 @@ def tell_owner(st: Settings, chat, owner_chat_id: str | None, item: dict, why: s
     return {"did": "told", "ts": r.get("ts")}
 
 
+def send_brief(st: Settings, chat, owner_chat_id: str | None, text: str, blocks: list, key: str, *, dry_run: bool = False,
+               store: Store | None = None, summary: str = "Sent your brief", sources: list | None = None,
+               url: str | None = None) -> dict:
+    """WP3 (S2): the daily brief goes through this door too: the Daily brief role, idempotency, the log.
+    (Mutes are for heads-ups; a muted kind of item still belongs in the brief, as F5's rules say.)"""
+    store = store or Store(st.db_path)
+    act = ActivityLog(st.log_path)
+    if not st.get("roles.daily_brief", True):
+        act.add("held_back", "Held back your brief (Daily brief is off)", where="DM", outcome="skipped", ref=key)
+        return {"did": "held_back", "why": "daily_brief off"}
+    done = store.action(key)
+    if done:
+        return {"did": "already_sent", **(done.get("result") or {})}
+    r = chat.act("dm", owner_chat_id, {"text": text, "blocks": blocks}, key, dry_run=dry_run) if chat else {"ok": True, "dry_run": True}
+    store.put_action(key, "dm", owner_chat_id or "", {"text": text}, "done", result=r)
+    act.add("brief_sent", summary, where="DM", said=text, outcome="dry_run" if dry_run else "done", sources=sources or [],
+            ref=key, url=url)
+    return {"did": "sent", "channel": r.get("channel"), "ts": r.get("ts")}
+
+
 # -- WP4 (S3): the meetings door: the update card and the meeting brief, gated on "Cover meetings" ---------------
 MEETING_BUTTONS = (("peer_mtg_approve", "Approve update", "primary"), ("peer_mtg_edit", "Edit", None), ("peer_mtg_skip", "Skip", None))
 

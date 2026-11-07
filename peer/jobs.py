@@ -6,6 +6,8 @@
   told to the owner through notify.tell_owner (the owner's mutes apply, F5); PR and CI changes
   re-write the repo notes and a tracker commit updates its project (F6)
 - once a night at memory.nightly_at (owner's local time): the nightly re-read (F6)
+- every google.poll_minutes (2): Gmail and Calendar; an urgent item is a heads-up at once (WP3)
+- each working morning at brief.at (owner's local time): the daily brief (WP3, S2)
 """
 from __future__ import annotations
 
@@ -61,6 +63,12 @@ class Jobs:
             self._safe("local scan", lambda: localwork.scan(self.st))
         if self._due("github_poll", 60 * float(self.st.get("github.poll_minutes", 15))):
             self._safe("github", self.poll_github)
+        if self._due("google_poll", 60 * float(self.st.get("google.poll_minutes", 2))):   # WP3: Gmail + Calendar, no AI
+            from .brief import poll_google
+            self._safe("google", lambda: poll_google(self.w))
+        from .brief import brief_due, run_brief   # WP3 S2: the morning brief at brief.at
+        if brief_due(self.w):
+            self._safe("brief", lambda: run_brief(self.w, why="morning"))
         if self._nightly_due():
             from .fresh import nightly
             self._safe("nightly", lambda: nightly(self.st))

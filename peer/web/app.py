@@ -102,6 +102,8 @@ def _has_memory() -> bool:
 
 @app.get("/")
 def root():
+    if (get_settings().owner_dir / "briefs" / "latest.json").exists():   # WP3: the brief is home once there is one
+        return RedirectResponse("/brief")
     return RedirectResponse("/learned" if _has_memory() else "/setup")
 
 
@@ -455,6 +457,8 @@ def activity(all: int = 0, f: str = "", dry: int = 0):
     body += f'<h2>History</h2><div class="filters">{chips}</div>' + ("".join(card(e) for e in rest) or '<div class="card muted">Nothing here yet.</div>')
     return page("Activity", f"<style>{ACT_CSS}</style>" + body, active="/activity", refresh=20)
 
+
+from . import brief_page  # noqa: E402,F401  (WP3: the brief page, /brief)
 
 # == S3 meetings (WP4): importing the page adds "Meetings" to the sidebar (NAV) =================================
 from . import meetings_page  # noqa: E402

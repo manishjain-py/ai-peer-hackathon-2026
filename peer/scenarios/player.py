@@ -71,6 +71,9 @@ def dry_run(st: Settings, name: str) -> Path:
     try:
         st.set("presence.manual", sc.get("presence", "auto"))
         w = Watcher(st, fake, dry_run=True, synchronous=True)
+        if sc.get("google") == "fake":   # WP3 S2: a fake Google (mail, invites) for the dry run
+            from ..brief import dry_google
+            dry_google(st, fresh=True)
         walk.note("start (dry run)", presence=w.presence.state(fresh=True))
         root_ts = None
         for step in sc["steps"]:
@@ -94,6 +97,17 @@ def dry_run(st: Settings, name: str) -> Path:
                 for a in fake.acts[n0:]:
                     walk.note(f"Peer act: {a['action']}", after_s=round(time.time() - t0, 1),
                               text=(a["payload"].get("text") or "")[:1500])
+            if any(k in step for k in ("seed", "poll", "brief", "brief_click", "real_mail")):   # WP3 S2
+                from ..brief import dry_step
+                n0 = len(fake.acts)
+                t0 = time.time()
+                dry_step(st, w, fake, walk, step)
+                for a in fake.acts[n0:]:
+                    blocks = a["payload"].get("blocks") or []
+                    walk.note(f"Peer act: {a['action']}", after_s=round(time.time() - t0, 1),
+                              text=(a["payload"].get("text") or "")[:600], has_buttons=any(
+                                  b.get("accessory") or b.get("type") == "actions" for b in blocks),
+                              blocks_text=[(b.get("text") or {}).get("text") for b in blocks if b.get("text")][:24])
             if "click" in step:
                 drafts = w.store.actions_by_status("pending_approval")
                 if not drafts:
@@ -111,6 +125,8 @@ def dry_run(st: Settings, name: str) -> Path:
     finally:
         st.set("presence.manual", prev)
         type(st).db_path, type(st).log_path = orig_db, orig_log
+        from ..brief import end_dry_google
+        end_dry_google()
 
 
 def _wp2_step(st: Settings, w, fake, walk: Walk, step: dict) -> None:

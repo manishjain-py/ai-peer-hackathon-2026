@@ -14,10 +14,9 @@ adapters:                       # what `peer port-check` checks (WP5; docs/porti
   slack: {module: peer.adapters.slack, class: SlackAdapter, query: Telugu}
   github: {module: peer.adapters.github, class: GitHubAdapter, query: Telugu}
   fake: {module: peer.adapters.fake, class: FakeAdapter}
-  google:                       # Gmail, Calendar, Drive/Docs: on PR #3 until it merges
+  google:                       # Gmail, Calendar, Drive/Docs (WP3); needs `peer google login peer` first
     module: peer.adapters.google
     class: GoogleAdapter
-    pending: "PR #3"
     query: Telugu
     blocked_by: [Blocked]       # google.act_on_real_items off: act only on seeded test items
     sample: {action: draft_reply, target_from_search: "in:inbox", target_prefix: "google:mail:", payload: {body: "port-check (dry run)"}}
@@ -74,6 +73,19 @@ slack:
 
 github:
   poll_minutes: 15
+
+google:                         # WP3: Gmail, Calendar, Drive/Docs (docs/build/setup/google.md); no AI on the poll
+  poll_minutes: 2
+  show_real_items: false        # seeded-only view: until the owner turns this on, only seeded test items are used or
+                                #   shown (brief, heads-ups, memory, setup lines); real ones are only counted
+  act_on_real_items: false      # hard block: drafts, sends and invite answers only on seeded test items until lifted
+
+brief:                          # S2: the daily brief (role "Daily brief"); also on "brief me" in the DM
+  at: "09:00"                   # every working morning, owner's local time
+  lookback_hours: 18            # "while you were away" when there is no earlier brief
+  email_days: 3                 # mail still waiting on you: how far back
+  max_items: 12
+  effort: ""                    # empty = brain.claude_effort
 
 web:
   host: 127.0.0.1
