@@ -397,6 +397,7 @@ test" stays for WP4 unless Manish deletes it.
 | 11-06 about 17:20 | (to ai-peer-controller-2; usage read 94% at 17:22) | "I think the usage now is above 90%, so we might have to switch the subscription and continue working in a new session with the different subscription. So as we generally do, please prepare that handoff and give me the steps that I need to do, like generally how you give me that one command that I need to run after switching the subscription, that reliably carries over the ownership to that new session in the different subscription." |
 | 11-06 18:06 | (to ai-peer-controller-3, typed in its session, after the 18:03 Attention ask for the Peer's Slack sign-in; relayed to `ai-peer-wp1-3` at once) | "open window" |
 | 11-06 18:20 | (to ai-peer-controller-3, after the sign-in passed and the Google client steps were sent) | "going to sleep now. will check back in the morning. please continue whatever work you can in the meantime" |
+| 11-07 06:04 | (to ai-peer-controller-4, typed in its session, after the Google client ask at 02:21 and the reminder at 04:00) | "make the Google client (about 5 minutes) - explain to me in simplified manner" |
 
 ## Airbnb notes
 
