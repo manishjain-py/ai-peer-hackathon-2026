@@ -1,103 +1,117 @@
-# AI Peer: build plan
+# AI Peer: plan from here
 
-Work packages, order, proof. What: [PRD](PRD.md). How: [DESIGN](DESIGN.md).
-Live state: [STATE](STATE.md). Dates are targets; checkpoints come as soon as a scene
+Work packages, order, proof. What: [PRD](PRD.md). How: [DESIGN](DESIGN.md). Live state: [STATE](STATE.md).
+How we work: [ways of working](../ways-of-working.md). Dates are targets; a checkpoint comes as soon as a scene
 works (D15). At most 2 workers at once (D13).
 
 ```
-WP1 foundation + S1 (alone) → WP2 setup and memory ∥ WP3 Google + S2 → WP4 meeting S3 ∥ WP5 porting + demo → rehearsal 15 Nov
+Done on the first laptop (4 to 7 Nov 2026):
+  WP0 kickoff → WP1 foundation + S1 → WP2 setup and memory ∥ WP3 mail + S2 → WP4 meeting S3 ∥ WP5 porting guide
+Next on the Airbnb laptop:
+  WP6 set up → WP7 privacy fix + adapter contract → WP8 brain on the company harness
+             → WP9 Airbnb integrations (a to e) ∥ WP10 demo → rehearsals → hackathon 16 to 20 Nov
 ```
 
 ## Rules for every package
 
-- Own worktree `~/repos/ai-peer-<wp>` from `origin/main`, branch `wp<n>-<slug>`, one PR,
-  merged by the worker when its walk passes. Docs-only updates go straight to `main`.
-- **Check the premise first:** a package that rests on an unproven external fact
-  proves it in a short spike before building on it.
-- Proof = the walk (PRD): the scenario script plays it, the worker watches the Peer's
-  real behaviour (Slack, web page, Zoom) and saves screenshots plus the activity-log
-  excerpt under `docs/build/evidence/<wp>/`. Backup recordings go in `demo/recordings/`.
-- STATE updated at every milestone; hand-off at 45 to 50% context (measured from the
-  session transcript); weekly usage checked at each milestone (D14).
-- Secrets live in `~/.ai-peer/.env`, never in git, chat or Telegram.
+- Own worktree from the latest `main` (for example `../ai-peer-wp7`), branch `wp<n>-<slug>`, one PR if the
+  repo has a remote (a local merge into `main` until it has one), merged by the worker when its walk passes.
+  Docs-only updates go straight to `main`.
+- **Check the premise first:** a package that rests on an unproven outside fact (an API, a login, a flag, a
+  permission) proves it in a short spike before building on it.
+- **No company data before WP7's privacy fix is in** (DESIGN §3, §6), and only through the company's harness
+  and auth after it.
+- Proof = the walk (PRD): the scenario script or Manish plays it, the worker watches the Peer's real
+  behaviour (Slack, web page, meeting) and saves what it saw under `docs/build/evidence/<wp>/`: no secrets,
+  and no more company data than the walk needs. Backup recordings go in `demo/recordings/` (large media
+  stays out of git unless the repo's home allows it).
+- STATE updated at every milestone; hand-off at 45 to 50% context (measured); usage limits checked at each
+  milestone ([ways of working](../ways-of-working.md)).
+- Secrets live in `~/.ai-peer/.env`, never in git, chat or messages.
 
-## WP0 Kickoff (done by the kickoff session)
+## Done on the first laptop
 
-Interview, locked decisions, these docs, the `film/` restructure, the controller start.
+| WP | What | Outcome |
+|---|---|---|
+| WP0 | Kickoff: interview, decisions D1 to D16, the docs, the film moved into `film/` | Done |
+| WP1 | Foundation (`peer/`: adapters, event store, memory and discovery, brain on Claude and Codex, executor, watcher, presence, scenario player, web page, CLI) and **S1 Slack cover** | **Done.** S1 passed in dry runs on Claude and Codex, then live: away (a labelled thread answer in about 40 s with sources, the follow-up, one DM summary) and online (the draft card in the owner's DM about 37 s after the post, Send posts it in the thread). Two recorded walks; checkpoint 1 sent. F8 (Codex as the brain) passed |
+| WP2 | F1 one-click setup with live discovery, F2 what I learned with corrections, F3 roles and settings with the away switch, F4 activity log, F5 self-tuning, F6 fresh memory, F7 local work (session-end hooks and an hourly folder scan) | **Done.** F1 to F7 walked on a test owner; the away switch walked live. Not done: the live F5 check in the owner's DM |
+| WP3 | Mail, calendar and docs (`google` adapter: Gmail, Calendar, Drive/Docs, Internal OAuth, polling), seeded test mail and invites, **S2 daily brief** (DM and page), heads-ups, Draft reply / Send email / Accept behind a hard block, the morning schedule and "brief me" | **Built and merged; S2's dry walk passed** (the brief about 22 s after "brief me"). Not done: the OAuth client, the logins and S2's live walk |
+| WP4 | **S3 attend a meeting**: `meetings` adapter on Recall.ai (join, speak, live transcript through a `cloudflared` tunnel, leave), calendar-driven joins, the approved update, addressed detection, live answers (warm session, fact pack, holding line), the colleague bot, the brief after, the Meetings page; `voice` adapter | **Done.** Spike, dry walk and live walk passed: the Peer joined, played the approved update about 1 s after the ask, answered 3 live questions (heard about 21, 12 and 7 s after each), flagged 2 items, and the brief reached the DM about 23 s after it left. Checkpoint 3 sent |
+| WP5 (part 1) | `port-check` (checks every adapter in settings against the contract), [the porting guide](../porting-guide.md), the porting walk (a fresh agent ported a toy chat adapter from the guide alone; its 11 gaps folded in), [the demo script](../../demo/script.md) draft | **Done.** WP5's rest is split into WP7 (the contract everywhere) and WP10 (the demo) |
 
-## WP1 Foundation + S1 Slack cover (target 8 Nov)
+Also found and fixed on 6 Nov: the brain was loading the owner's global `CLAUDE.md` despite its isolation
+flags; `CLAUDE_CODE_DISABLE_CLAUDE_MDS=1` in the brain's env keeps it out ([lessons](../lessons.md)).
+Checkpoint 2 (S2 plus the setup page) was never sent.
 
-1. **Spikes first:** (a) `claude -p` on this Mac's login runs a project skill and
-   returns schema-valid JSON; pin the version and record the flags that work.
-   (b) `codex exec` does the same (record whether skills load in `exec`).
-   (c) Slack Socket Mode: the bot hears a channel message, replies in the thread as
-   "Manish's AI Peer", DMs Manish with buttons, and the click comes back.
-   (d) **Zoom premise**, as soon as Manish's Zoom app and Recall account exist: a Recall
-   bot joins a meeting on his personal Zoom with join-before-host, plays an MP3, and
-   a transcript arrives. If it fails, stop and ask Manish (Meet is the D8 fallback).
-2. Build: the `peer/` package and settings; event store; adapter contract and the
-   `fake` adapter; `directory` adapter with Manish's LLM profile; `github` adapter
-   (read-only: repos, PRs, issues, CI, tracker and doc files); memory layout and a first
-   discovery from profile + GitHub; `run_agent` with both backends; the `peer-brain`
-   skill (triage, answer, draft); the action executor (approval gate, presence,
-   idempotency, log); the `slack` adapter; presence; scenario script v1 (colleague
-   posts); the activity log (file + a minimal page).
-3. Proof: S1 walk, online and away, on Claude; S1 once on Codex (F8).
-4. **Checkpoint 1** to Manish (D15).
+## Next on the Airbnb laptop
 
-## WP2 Setup, memory and local work (worker A, after WP1)
+### WP6 Set up on the new laptop (the first session, with Manish)
 
-F1 one-click setup with live discovery (profile, GitHub, Docs, Slack channels, people,
-calendar); F2 "what I learned" with corrections; F3 roles and settings with the away
-switch; F4 activity log page; F5 self-tuning; F6 freshness (event updates + nightly
-pass); F7 local work (Claude Code session-end hook, Codex hook, hourly scan). The web
-page takes the concept film's look. Proof: F1 to F7 walks.
+[START-HERE.md](../../START-HERE.md) "First steps" in order: check the copy, decide where the repo lives,
+the Python venv, the ElevenLabs key into `~/.ai-peer/.env`, a test owner, every module imports, `port-check
+--adapter fake`, what the coding agent there can do (sub-agents, sessions, context and usage readings; the
+fallbacks in [ways of working](../ways-of-working.md) cover what it cannot), and the Airbnb asks below.
+Proof: the checks pass and STATE records the answers. No company data yet.
 
-## WP3 Google + S2 daily brief (worker B, after WP1, parallel with WP2)
+### WP7 Privacy fix and the adapter contract everywhere (code)
 
-`google` adapter (Gmail, Calendar, Drive/Docs; Internal OAuth; polling); the script
-seeds mail, invites and announcements; S2 brief in the DM and on the page; heads-ups
-for urgent items; interests in memory. Proof: S2 walk. **Checkpoint 2** (S2 + the
-setup page from WP2).
+Brief: [next/WP7-privacy-and-contract.md](next/WP7-privacy-and-contract.md). **The privacy fix first:** a
+failing backend that is not claude must never fall back to a personal Claude login, and live meeting answers
+must use the configured backend, not always the Claude warm session. Then one registry that builds every
+adapter from settings, role methods for the calls the runtime makes besides the four verbs, settings instead
+of code edits (code-host base URLs, the trial's people file, a brain backend added by settings), and the
+porting guide finished. Proof: `port-check` with role checks, the dry walks, a stub-backend test, a stranger's
+porting walk and a hand-over rehearsal on a clean copy. **Must land before any company data flows.**
 
-## WP4 Meeting S3 (the first free worker; needs spike 1d passed)
+### WP8 The brain on the company harness
 
-`meetings` adapter on Recall.ai (create, join, output audio, real-time transcript
-through a `cloudflared` tunnel, leave); calendar-driven joins; the approved-update flow
-(draft, DM approval, ElevenLabs MP3); detecting when the Peer is addressed; the live
-answer path (warm session, fact pack, holding line); the colleague bot with scripted
-lines; the post-meeting brief. Proof: S3 walk with one unscripted question.
-**Checkpoint 3.**
+A `run_agent` backend for the harness Airbnb approves (AirChat if it has a headless mode, or the company's
+own Claude Code or Codex login), added through WP7's settings hook: one prompt per run, the `peer-brain`
+skill loaded from the owner's folder, read-only tools, JSON out, none of the user's personal setup loaded
+(prove it with a canary), company data only through it. Then the live meeting path for it (a warm mode, or
+fresh runs inside the meeting's time limit). Proof: S1's dry walk on the new backend, the canary, a timed
+live-answer run. Needs the answers to Airbnb asks 1, 2 and 5.
 
-## WP5 Porting + demo (the other worker, parallel with WP4)
+### WP9 The Airbnb integrations (Manish's list, 7 Nov)
 
-`docs/porting-guide.md` and `port-check` (DESIGN §2, §6); demo script; web page polish;
-the extra (upstream-break warning) only if S1 to S3 are done. **15 Nov:** two full
-rehearsals, a backup recording per scene, the film opener cut, the hand-over steps for
-the Airbnb laptop (what to copy; tokens stay behind).
+What Manish named, and nothing more is known yet: each starts with a spike that proves access and the API,
+then an adapter or settings, `port-check`, and a walk on Manish's own work with every hard block on.
+Details: [porting guide, "The Airbnb port"](../porting-guide.md#the-airbnb-port).
 
-## Manish's setup list (his hands, about an hour; WP1 sends exact steps when needed)
+- (a) **Code:** read the code base through Airbnb's GitHub and the Sourcegraph MCP.
+- (b) **People, teams and ownership:** One Airbnb: the employee's details, their team, and the tools and
+  services they own.
+- (c) **Slack:** Airbnb's Slack, the Peer's own labelled app.
+- (d) **Zoom:** Airbnb's Zoom for the meeting bot.
+- (e) **The AirChat plugin:** the Peer inside AirChat (local work, D11; the brain, WP8).
 
-1. **Slack:** a free workspace "Learn Like Magic"; the app from WP1's manifest; the
-   fake colleague accounts (email aliases on learnlikemagic.com work).
-2. **Google:** an Internal OAuth client (Desktop) on learnlikemagic.com with Gmail,
-   Calendar, Drive and Docs APIs; one login.
-3. **GitHub:** a fine-grained read-only token for the LLM repos.
-4. **Zoom:** a Meeting SDK app in his personal Zoom; "join before host" on.
-5. **Recall.ai:** an account (5 free hours), its API key, the Zoom app's credentials added.
-6. **ElevenLabs:** confirm the key from the film work.
-7. Keep this Mac awake and online while the Peer runs.
+Also on the list from the first laptop: S2's live walk against whatever mail and calendar Airbnb allows,
+and the live F5 check.
 
-## Airbnb asks (Manish, start this week; answers go to STATE → Airbnb notes)
+### WP10 Demo package
 
-1. AirChat: a headless mode (one command per run, like `claude -p`)? Skills, hooks or
-   plugins, MCP? Which connectors are already approved (Slack, Google, Sourcegraph or
-   GHE, Zoom, OneAirbnb)?
+Brief: [next/WP10-demo.md](next/WP10-demo.md). The live-answer speed (the meeting fact pack), the presence and
+test-meeting-memory follow-ups, the demo script from the live walks, web page polish, backup recordings,
+the film opener; two full rehearsals before 16 Nov. Its live steps wait for WP7.
+
+## Manish's setup list on the new laptop
+
+1. Unzip the package; move the ElevenLabs key line into `~/.ai-peer/.env` ([START-HERE](../../START-HERE.md)).
+2. Where the repo lives (a remote the company allows, or local only).
+3. The coding agent and its login (the harness for building; WP8's harness for the Peer's brain).
+4. Slack, Zoom, GitHub and Sourcegraph, One Airbnb: the access WP9's spikes need, one at a time as each
+   package asks.
+5. Keep the laptop awake and online while the Peer runs.
+
+## Airbnb asks (Manish; answers go to STATE → Airbnb notes)
+
+1. AirChat: a headless mode (one command per run, like `claude -p`)? Skills, hooks or plugins, MCP? Which
+   connectors are already approved (Slack, Google, Sourcegraph or GHE, Zoom, OneAirbnb)?
 2. AirChat Remote: can it host an always-on process?
 3. Slack: may he create a bot app in Airbnb's workspace for the hackathon, or a sandbox?
-4. Zoom: may a bot join Airbnb meetings (the app must belong to Airbnb's Zoom account),
-   or is there an internal meeting-bot service?
-5. Data: company data only through AirChat, never his personal Claude; confirm.
-6. Code transfer: may he clone his personal GitHub repo on the Airbnb laptop, or bring
-   a zip?
+4. Zoom: may a bot join Airbnb meetings (the app must belong to Airbnb's Zoom account), or is there an
+   internal meeting-bot service?
+5. Data: company data only through AirChat (or the company's harness), never his personal Claude; confirm.
+6. Code transfer: is a zip of this repo fine on the Airbnb laptop, and where may the repo live (a remote)?
 7. Hackathon format: slot length, live or recorded, judging criteria.

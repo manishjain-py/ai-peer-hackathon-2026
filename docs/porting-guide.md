@@ -267,8 +267,10 @@ the owner's folder and `settings.yaml` on a new owner, and Python writes `__pyca
 connection (a second connection would split a running Peer's events). Local work is not in the
 table (its intake deletes shared spool files; its scan writes memory).
 
-The result on this build's own adapters (6 Nov 2026): directory, slack, github and fake all ok
-or n/a, google, meetings and voice "not on main yet" (`docs/build/evidence/wp5/port-check.md`).
+On the first laptop (6 Nov 2026), with its accounts: directory, slack, github and fake all ok or n/a;
+meetings and voice 0 FAIL in their own package's check; google FAILed "not signed in" (its login was never
+made). On a machine without secrets, `fake` and `directory` pass; every adapter that needs a login or a key
+cannot.
 
 ## 5. Settings and secrets
 
@@ -293,9 +295,9 @@ Secret names this build uses (names only; values only ever in `.env`): `SLACK_BO
 labelled bot), `SLACK_APP_TOKEN` (Socket Mode), `SLACK_USER_TOKEN` (search only; the Peer never
 posts as the owner), `GITHUB_TOKEN` (used read-only; falls back to the `gh` CLI's login),
 `RECALL_API_KEY` and `RECALL_BASE_URL` (the meeting bot), `ZOOM_TEST_MEETING_URL` (the one meeting
-a bot may join, PR #5), `ELEVENLABS_API_KEY` (voices, PR #5). The test world only:
+a bot may join), `ELEVENLABS_API_KEY` (voices). The test world only:
 `SLACK_SCENARIO_CLIENT_ID`, `SLACK_SCENARIO_CLIENT_SECRET`, `SLACK_SCENARIO_BOT_TOKEN`,
-`SLACK_TEAM_ID`, `SLACK_AS_<PERSON_ID>` (the invented colleagues' logins). Google (PR #3) keeps
+`SLACK_TEAM_ID`, `SLACK_AS_<PERSON_ID>` (the invented colleagues' logins). Google keeps
 its OAuth client in `~/.ai-peer/google-client.json` and one token per account in
 `~/.ai-peer/google-token-<account>.json` (mode 600), not in `.env`.
 
@@ -311,7 +313,7 @@ It never posts or sends anything; the executor does, after the approval gate. Ea
 | Setting | Meaning |
 |---|---|
 | `brain.backend` | `claude` or `codex` (a key of `BACKENDS` in `runner.py`) |
-| `brain.fallback` | on a failure, try the other backend once |
+| `brain.fallback` | on a failure, try the other backend once. **Today any backend that is not claude falls back to claude** (a personal login): on a company machine set it `false` until WP7 fixes it |
 | `brain.timeout_s` | per run |
 | `brain.claude_bin` | the pinned Claude Code binary (`~/.ai-peer/bin/claude-<version>`); **if the file is missing the runner falls back, without a word, to whatever `claude` is on PATH** |
 | `brain.claude_model`, `brain.claude_effort`, `brain.summary_effort`, `brain.refresh_effort` | model and effort per kind of run (effort is a latency choice: answers at `high`, not `max`) |
@@ -320,7 +322,9 @@ It never posts or sends anything; the executor does, after the approval gate. Ea
 Each backend isolates the run from the user's own setup: Claude runs `claude -p "/peer-brain
 <prompt>"` with `--setting-sources project`, hooks and auto-memory off, no MCP servers, the tools
 `Read,Grep,Glob,Skill`, `--permission-mode dontAsk`, `--json-schema`, `--no-session-persistence`,
-stdin from `/dev/null`; Codex runs `codex exec "$peer-brain <prompt>"` with `--sandbox read-only
+stdin from `/dev/null`, and `CLAUDE_CODE_DISABLE_CLAUDE_MDS=1` in its env (on 6 Nov the flags alone
+stopped keeping the user's global `CLAUDE.md` out; prove the isolation with a canary run and re-run it after
+any change, even on a pinned binary: `docs/lessons.md`); Codex runs `codex exec "$peer-brain <prompt>"` with `--sandbox read-only
 --ephemeral --output-schema`. The skill (`peer/brain/skills/peer-brain/SKILL.md`) is linked into the
 owner's folder at `.claude/skills/peer-brain` and `.agents/skills/peer-brain` by
 `Memory.install_skill()` (`peer/memory/layout.py`); its text never names tools (they differ
@@ -334,17 +338,20 @@ load none of the user's personal setup, and send company data only through the c
 and auth. Prove it with one run before switching the setting. (`runner.py` is outside the
 adapters: this is an expected edit; see the list below.)
 
-The live meeting path (PR #5, `peer/brain/warm.py`, until it merges): one warm Claude process for a
-meeting's length, primed with a compact fact pack, answers one question at a time; with any other
-backend, live answers use fresh runs (slower). A company harness needs its own warm mode for fast
-answers.
+The live meeting path (`peer/brain/warm.py`, used by `peer/meetings/live.py`): one warm Claude process
+for a meeting's length, primed with a compact fact pack, answers one question at a time. **Today it is
+used whatever `brain.backend` says** (an earlier version of this guide claimed fresh runs for other
+backends; no such code exists): with a company harness as the backend, live meeting answers would still go
+through a personal Claude login. WP7 fixes it (`docs/build/next/WP7-privacy-and-contract.md`): the warm
+session only for claude, fresh runs of the `answer_live` playbook otherwise. A company harness needs its own
+warm mode for fast answers.
 
 ## 7. Memory
 
 `~/.ai-peer/<owner>/` (never in git; at a company it holds company data and stays on that
 machine): `INDEX.md` (one line per file), `me.md`, `rules.md` (the owner's preferences in plain
 English; self-tuning edits it), `projects/`, `services/`, `channels/`, `people/`, `threads/`,
-`decisions/`, `meetings/`, `local/`, `sources/` (verbatim copies), `docs/` (PR #3), `log.jsonl`
+`decisions/`, `meetings/`, `local/`, `sources/` (verbatim copies), `docs/`, `log.jsonl`
 (the activity log, append-only), `peer.db` (events, cursors, actions, threads, people, kv),
 `settings.yaml`, `keywords.json`, `brain-runs.jsonl`. Each file has front matter with its
 sources and dates; the owner's corrections survive every rewrite.
@@ -396,10 +403,10 @@ passed `port-check` and its first trials. A port keeps every one on until then.
 | Block | Key | File | What it stops | Lifted by |
 |---|---|---|---|---|
 | Real people in chat | `slack.engage_only_world` (on in code: the default `True` in `engageable()`; not in `defaults.yaml`) and `slack.never_engage` (chat ids always refused) | `peer/watcher.py` | Every event from anyone but the owner and the colleagues listed in `peer/scenarios/world.yaml` (`colleagues:`, matched by email) is dropped before it is stored or thought about. At a company, list there only people who agreed to take part in the trial. | `peer set slack.engage_only_world false`; `never_engage` stays |
-| Real mail and invites | `google.act_on_real_items: false` | `peer/adapters/google.py` `guard()` (PR #3) | Draft, send, discard and accept only on seeded test items (a token the seed script wrote in a mail header or an invite's id). A scripted click counts as the owner's tap, so this is what keeps a test off real mail. | `peer set google.act_on_real_items true` |
-| Seeded-only view | `google.show_real_items: false` | `peer/brief.py`, `peer/memory/google_steps.py`, and PR #5's `peer/meetings/calendar.py` (PR #3) | Real mail, docs and events are counted, never named, copied into memory or shown | `peer set google.show_real_items true` |
-| Real meetings | `meetings.join_real_meetings: false` | `peer/adapters/meetings.py` `allowed()` (PR #5, until it merges) | A bot joins only the test meeting (the meeting id in `ZOOM_TEST_MEETING_URL`) | `peer set meetings.join_real_meetings true` |
-| The owner's voice | none (in code) | `peer/adapters/voice.py` `check_voice()` (PR #5, until it merges) | Stock (`premade`) voices only, never one whose name holds the owner's name (`manish` in code plus `voice.refuse_names_with`); a character budget (`voice.elevenlabs_budget_chars`) and no request when the account has under 20% left | Not by a setting: a code change, on the owner's words. At a port, set `voice.refuse_names_with` to the new owner's names |
+| Real mail and invites | `google.act_on_real_items: false` | `peer/adapters/google.py` `guard()` | Draft, send, discard and accept only on seeded test items (a token the seed script wrote in a mail header or an invite's id). A scripted click counts as the owner's tap, so this is what keeps a test off real mail. | `peer set google.act_on_real_items true` |
+| Seeded-only view | `google.show_real_items: false` | `peer/brief.py`, `peer/memory/google_steps.py`, and `peer/meetings/calendar.py` | Real mail, docs and events are counted, never named, copied into memory or shown | `peer set google.show_real_items true` |
+| Real meetings | `meetings.join_real_meetings: false` | `peer/adapters/meetings.py` `allowed()` | A bot joins only the test meeting (the meeting id in `ZOOM_TEST_MEETING_URL`) | `peer set meetings.join_real_meetings true` |
+| The owner's voice | none (in code) | `peer/adapters/voice.py` `check_voice()` | Stock (`premade`) voices only, never one whose name holds the owner's name (`manish` in code plus `voice.refuse_names_with`); a character budget (`voice.elevenlabs_budget_chars`) and no request when the account has under 20% left | Not by a setting: a code change, on the owner's words. At a port, set `voice.refuse_names_with` to the new owner's names |
 
 Also in code, never lifted: the GitHub client can only GET (`ReadOnlyGitHub` in
 `peer/adapters/github.py`); a brain run has read-only tools and only returns JSON; the executor
@@ -415,29 +422,30 @@ the owner's DM is the only instruction channel (`owner_command` in `peer/watcher
 | slack | `peer/adapters/slack.py` | sense (polling catch-up; the live path is `listen()`, Socket Mode), search (user token), get, act: `post_reply`, `post_message`, `dm`, `update_message`, `react`, `open_modal` | The chat adapter. Bot token posts as the labelled bot; the user token only searches. `dry_run` returns before any call. Helpers outside the verbs (`listen`, `lookup_email`, `user_info`, `get_presence`, `get_status`, `permalink`, `member_channels`) are used by the runtime (next section). |
 | github | `peer/adapters/github.py` | sense (PRs and CI runs of the owner's repos), search (code), get (a file, PR or run); no act | Read-only in code. The API base is `https://api.github.com` in the file: a company GitHub Enterprise needs its own base URL there. Discovery and fresh memory call its helpers (`repo`, `pulls`, `runs`, `list_dir`, `file_text`, `last_commit`). |
 | fake | `peer/adapters/fake.py` | the chat acts, in memory | Dry runs of whole scenes with no accounts (`peer scenario s1-away --dry-run`); a model for a test double of a new chat adapter. |
-| google (PR #3) | `peer/adapters/google.py` | sense (Gmail history + Calendar sync token, polling), search (Gmail + Drive), get (a mail, event, or Doc as markdown), act: `draft_reply`, `send_draft`, `discard_draft`, `accept_invite` | An Internal OAuth client (Desktop app) and one consent per account; tokens per account in `~/.ai-peer/`; never full-mail or admin scopes. The hard block runs first in `act()`, then the dry-run return. A `FakeGoogleAdapter` serves dry runs. Its `adapters:` entry carries a `sample:` (`draft_reply` on the newest inbox mail) and `blocked_by: [Blocked]`. |
-| meetings (PR #5, until it merges) | `peer/adapters/meetings.py` | sense (bot status and transcript lines from the store; live lines arrive by webhook), search (past meeting briefs), get (a brief, transcript or recording), act: `join`, `speak`, `stop_speaking`, `chat`, `leave` | A meeting bot on Zoom through Recall.ai. The meeting link is a secret: the adapter never returns, logs or stores a raw reply. `join` checks the test-meeting block before the dry-run return; `blocked_by: [MeetingRefused]`. The live path needs a public webhook URL (a `cloudflared` quick tunnel here). |
-| voice (PR #5, until it merges) | `peer/adapters/voice.py` | act: `render` (text to a short MP3) | Two engines: the Mac's `say` (free) and ElevenLabs (stock voices only, a budget, one request at a time). A dry run never spends characters. |
+| google | `peer/adapters/google.py` | sense (Gmail history + Calendar sync token, polling), search (Gmail + Drive), get (a mail, event, or Doc as markdown), act: `draft_reply`, `send_draft`, `discard_draft`, `accept_invite` | An Internal OAuth client (Desktop app) and one consent per account; tokens per account in `~/.ai-peer/`; never full-mail or admin scopes. The hard block runs first in `act()`, then the dry-run return. A `FakeGoogleAdapter` serves dry runs. Its `adapters:` entry carries a `sample:` (`draft_reply` on the newest inbox mail) and `blocked_by: [Blocked]`. |
+| meetings | `peer/adapters/meetings.py` | sense (bot status and transcript lines from the store; live lines arrive by webhook), search (past meeting briefs), get (a brief, transcript or recording), act: `join`, `speak`, `stop_speaking`, `chat`, `leave` | A meeting bot on Zoom through Recall.ai. The meeting link is a secret: the adapter never returns, logs or stores a raw reply. `join` checks the test-meeting block before the dry-run return; `blocked_by: [MeetingRefused]`. The live path needs a public webhook URL (a `cloudflared` quick tunnel here). |
+| voice | `peer/adapters/voice.py` | act: `render` (text to a short MP3) | Two engines: the Mac's `say` (free) and ElevenLabs (stock voices only, a budget, one request at a time). A dry run never spends characters. |
 
 ## What a port also edits today
 
 The runtime picks some adapters itself and calls chat or code-host methods outside the four
 verbs. A port to a chat system other than Slack, or a code host other than GitHub, edits these
-spots too; making them go through the contract is a later step, after PRs #3 and #5 merge.
+spots too; WP7 makes them go through the contract (`docs/build/next/WP7-privacy-and-contract.md`).
 
 | File | What is system-specific |
 |---|---|
-| `peer/__main__.py` | `_slack()` builds `SlackAdapter` for `watch`, `status` and `sample-heads-up` (PR #5 also for `meeting draft` and `meeting run`); `cmd_status` and `cmd_sample_heads_up` call `lookup_email` |
+| `peer/__main__.py` | `_slack()` builds `SlackAdapter` for `watch`, `status` and `sample-heads-up` (also `meeting draft` and `meeting run`); `cmd_status` and `cmd_sample_heads_up` call `lookup_email` |
 | `peer/watcher.py` | `Watcher(st, chat)` takes the chat adapter: `lookup_email` (the owner and each colleague), `listen(on_event, on_interactive)` (Socket Mode), `chat.bot.conversations_list` and `conversations_join` (`join_world_channels`), `chat.users` and `chat.inject` (the fake), a `react` with Slack's `eyes` emoji, Slack mention markup (`<@U…>`) in the owner's commands |
 | `peer/presence.py` | `chat.get_status` and `chat.get_presence` (Slack status and presence) |
 | `peer/executor.py` | Slack Block Kit payloads (the draft card and its `peer_send` / `peer_edit` / `peer_skip` buttons, the edit modal for `open_modal`, `update_message`), Slack mrkdwn (`<url|title>`, `*bold*`, emoji codes), Slack's interactive payload shape in `on_interactive`, `chat.user_info`, the mention and broadcast patterns |
-| `peer/notify.py` | `tell_owner` sends a `dm` with Slack mrkdwn (PR #5 adds `send_meeting_dm` with Block Kit) |
+| `peer/notify.py` | `tell_owner` sends a `dm` with Slack mrkdwn (and `send_meeting_dm` with Block Kit) |
 | `peer/jobs.py` | builds `GitHubAdapter(repos)` itself and calls `gh.pulls` |
 | `peer/fresh.py` | builds `GitHubAdapter` in several places and uses its helpers |
 | `peer/memory/discovery.py` | `step_github` builds `GitHubAdapter` and uses its helpers; `step_slack` builds `SlackAdapter` and calls `lookup_email`, `team_url` and `chat.bot.users_conversations`, `conversations_info`, `conversations_members` |
 | `peer/brain/runner.py` | the brain backends (`BACKENDS`); a company harness is added here (section 6) |
-| PR #3 (WP3, Google and the brief) | `peer/brief.py` builds `GoogleAdapter` / `FakeGoogleAdapter` and adds the brief's `brief_*` buttons to the executor; `peer/memory/google_steps.py`, `peer/seeds.py`, `peer/web/brief_page.py` build the Google adapter |
-| PR #5 (until it merges) | `peer/meetings/` (`cover.py`, `live.py`, `walk.py`, `listener.py`, `calendar.py`) build the meetings, voice and chat adapters and add the `peer_mtg_*` buttons; `peer/brain/warm.py` is Claude only |
+| Mail, calendar and the brief (WP3) | `peer/brief.py` builds `GoogleAdapter` / `FakeGoogleAdapter` and adds the brief's `brief_*` buttons to the executor; `peer/memory/google_steps.py`, `peer/seeds.py`, `peer/web/brief_page.py` build the Google adapter |
+| Meetings (WP4) | `peer/meetings/` (`cover.py`, `live.py`, `walk.py`, `listener.py`, `calendar.py`) build the meetings, voice and chat adapters and add the `peer_mtg_*` buttons; `peer/brain/warm.py` is Claude only |
+| Also (found by WP7's map) | `peer/brief.py`'s second Google build and `peer/web/brief_page.py`'s; the directory builds in `peer/watcher.py`, `peer/fresh.py` and `peer/memory/discovery.py`; `load_world()`'s fixed file `peer/scenarios/world.yaml`; the raw commits-of-a-path call in `peer/fresh.py`; `cmd_brief`'s `_slack()` plus `lookup_email` in `peer/__main__.py`; the settings page's backend list in `peer/web/app.py` (claude and codex only) |
 | Test tooling | `peer/scenarios/` (the test world in Slack, colleague logins, the walk player) and `peer/browser.py` (the Peer's own Chrome profile for walk screenshots) are Slack-specific; a port needs them only to re-run this build's walks |
 
 If the company's chat is Slack and its code host is GitHub, none of these change: keep the
@@ -451,12 +459,12 @@ blocks on throughout.
 | System | Here | Replace | Stays | Ask the admins |
 |---|---|---|---|---|
 | Chat | Slack (`slack`), Socket Mode, a labelled bot | If not Slack: a new chat adapter with the same acts, plus the runtime spots above. If Slack: a new app in the company workspace (`docs/build/setup/slack.md`), its tokens in `.env` | The approval gate, the labelled identity, the real-person block, the draft-first flow when the owner is online | May I create a bot app (or use a sandbox)? Socket Mode or a public events URL? Which scopes? Which channels for the trial, with which consenting colleagues? |
-| Mail | Gmail (`google`, PR #3) | The mail half of the adapter, if not Gmail | Drafts only after the owner's tap; sending and invites ask first; the seeded-only view and the real-item block until lifted | Which mail API and auth may an internal tool use? May it read and draft (not send by itself)? |
-| Calendar | Google Calendar (`google`, PR #3) | The calendar half, if not Google | Accepting asks first; meetings it covers come from the calendar | Read events and answer invites through which API? |
-| Docs | Drive and Docs (`google`, PR #3) | search and get for the company's docs | Docs are searched live and copied only as verbatim sources with links and dates | Read-only access to the owner's docs through which API? |
+| Mail | Gmail (`google`) | The mail half of the adapter, if not Gmail | Drafts only after the owner's tap; sending and invites ask first; the seeded-only view and the real-item block until lifted | Which mail API and auth may an internal tool use? May it read and draft (not send by itself)? |
+| Calendar | Google Calendar (`google`) | The calendar half, if not Google | Accepting asks first; meetings it covers come from the calendar | Read events and answer invites through which API? |
+| Docs | Drive and Docs (`google`) | search and get for the company's docs | Docs are searched live and copied only as verbatim sources with links and dates | Read-only access to the owner's docs through which API? |
 | Code host | GitHub (`github`), read-only | The adapter (or only its API base URL, for GitHub Enterprise), plus `jobs.py`, `fresh.py`, `discovery.py` | Read-only in code; trackers and docs read from the owner's repos | A read-only token for the owner's repos (fine-grained if possible) |
-| Meetings | Zoom through Recall.ai (`meetings`, PR #5) | The adapter, if the company has its own meeting-bot service | The test-meeting block until lifted; the bot announces itself; the approved update | May a bot join company meetings, and through which app or service? May a webhook be reached from outside (a tunnel)? |
-| Voice | The Mac's `say`, ElevenLabs (`voice`, PR #5) | The adapter, for the company's approved text-to-speech | Never the owner's voice; a budget | Which text-to-speech service is approved? |
+| Meetings | Zoom through Recall.ai (`meetings`) | The adapter, if the company has its own meeting-bot service | The test-meeting block until lifted; the bot announces itself; the approved update | May a bot join company meetings, and through which app or service? May a webhook be reached from outside (a tunnel)? |
+| Voice | The Mac's `say`, ElevenLabs (`voice`) | The adapter, for the company's approved text-to-speech | Never the owner's voice; a budget | Which text-to-speech service is approved? |
 | People directory | A profile JSON (`directory`) | The adapter, for the company directory, or a hand-written profile file (`owner.profile`) | The profile's fields (below); facts carry their source | Read access to the directory, or write the profile by hand |
 | Local work | Claude Code and Codex session-end hooks, the folder scan | The hook entry in the company's coding tool | The hook script and the scan, read-only, summaries only | May a coding tool run a session-end command? Which folders may be scanned? |
 | Brain harness | `claude -p`, `codex exec` | A new backend in `runner.py` for the company harness | The skill, the schemas, read-only runs, "the AI proposes, the program acts" | Is there a headless mode (one command per run)? Skills? Read-only tools? JSON output? Which data may it see? |
@@ -473,14 +481,35 @@ From DESIGN §6, and only these: AirChat becomes a `run_agent` backend; company 
 through the company's harness and auth, never a personal subscription; the bot's Zoom app must be
 owned by the company's Zoom account; the profile can come from the OneAirbnb page (a small browser
 extension that adds "Create my AI Peer" and reads the page) or a hand-written profile file; a
-Slack app needs workspace approval.
+Slack app needs workspace approval. The next steps at Airbnb: [The Airbnb port](#the-airbnb-port).
+
+## The Airbnb port
+
+Manish's list (7 Nov 2026, DESIGN D17), the next steps on his Airbnb laptop. Nothing beyond his words is
+known yet. Each target starts with a spike that proves access and the API (who may use it, how an internal
+tool signs in, what it returns), then follows this guide: an adapter or settings, `port-check`, and a walk on
+his own work with every hard block on. **No company data before WP7's privacy fix**, and then only through the
+company's harness and auth.
+
+| Target | His words | Where it plugs in | The spike's first question |
+|---|---|---|---|
+| Code | "how it will read the code base using the Airbnb-specific GitHub and Sourcegraph MCP" | The code role: the `github` adapter with the company's GitHub base URL (WP7 makes it a setting), and code search through the Sourcegraph MCP | Which GitHub host and read-only token may an internal tool use? How does a process with no person at the keyboard reach the Sourcegraph MCP? |
+| People, teams, ownership | "the One Airbnb, where it can read about or understand the employee details or their team and the tools and services that they own" | The `directory` adapter, or a profile file written from it (section 11's fields: `team`, `owns.repos`, `owns.services`, `teammates`) | Is there an API or MCP for One Airbnb, or only its page (DESIGN §6: a small browser extension is one way)? |
+| Slack | "Airbnb-specific Zoom, Slack account" | The `slack` adapter: a new app in the company workspace (`docs/build/setup/slack.md`), its tokens in `.env`, the trial's consenting colleagues in the world file | May the Peer have its own labelled bot app with Socket Mode, in which channels, with which colleagues? |
+| Zoom | "Airbnb-specific Zoom" | The `meetings` adapter (Recall.ai today), or a new adapter for an internal meeting-bot service | May a bot join company meetings, through an app owned by the company's Zoom account or an internal service? |
+| AirChat plugin | "and also AirChat plugin" | The brain (`run_agent` backend, section 6; WP8) and the local-work hook (section 8, D11) | Does AirChat have a one-command-per-run mode, skills or plugins, and a hook at session end? |
+
+The order follows the access Manish gets; the brain on the company harness (WP8) comes before any target that
+brings company data in.
 
 ## 13. Moving to another laptop
 
-**Copy:** the repo (a clone or an archive, as the company allows). Nothing else.
+**Copy:** the repo (a clone or an archive, as the company allows). Nothing else. (The move to the Airbnb
+laptop on 7 Nov 2026 did this: a fresh copy of the repo with one commit, plus, at Manish's word, his
+ElevenLabs key carried separately.)
 
 **Stays behind, always:** everything under `~/.ai-peer/`: `.env` (every token and key), the Google
-client and token files (PR #3), `codex-home/` (the Peer's Codex login), `browser/` (the Peer's own
+client and token files, `codex-home/` (the Peer's Codex login), `browser/` (the Peer's own
 Chrome profile, signed in to chat), and every owner folder (memory, events, the activity log: the
 owner's data). Never copy them to another machine, and never commit them.
 
@@ -495,7 +524,7 @@ with the repo):
   `CODEX_HOME=~/.ai-peer/codex-home codex login`; never a copied `auth.json`.
 - The session-end hook script `~/.ai-peer/bin/session-end` (`peer local install`) and the hook
   entries in each coding tool (`peer local hook-config`).
-- The Google client file `~/.ai-peer/google-client.json` (PR #3): a new Internal OAuth client at the
+- The Google client file `~/.ai-peer/google-client.json`: a new Internal OAuth client at the
   new company (or its own mail adapter's login), then one consent per account.
 - The owner's profile file, and `owner.profile` pointing at it.
 
