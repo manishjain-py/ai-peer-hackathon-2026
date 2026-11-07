@@ -5,6 +5,15 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
+2026-11-07 04:00. **No answer from Manish yet** to the Google client ask (02:21:17); a reminder went to Attention
+at 04:00:02 with the reason. **Weekly usage 58% at 03:59** (52% at 02:07: about 3 points an hour from Learn Like
+Magic, the build idle). At that pace 95% comes about 15:30 UTC today, sooner with WP3's live walk. **The
+controller's plan (routine; told to Manish, who may say otherwise):** finish WP3's live walk and merge first; start
+nothing new past about 85%; at about 93% hand off, and the AI Peer pauses until the old account resets (9 Nov
+23:00 UTC), when Manish switches this Mac's login back (as on 6 Nov); 15 Nov still holds (5 days of work left
+fit 10 to 14 Nov). Undo: if Manish slows Learn Like Magic instead, the build goes on. A no-AI loop watches
+`~/Downloads` for the client file (until about 06:03), so the controller moves it the moment it lands.
+
 2026-11-07 02:08. **A quiet night:** nothing changed from 22:36 to 02:06 (the watcher); `ai-peer-wp3-2` idle with
 PR #3 at 37cb0c4; the live Peer up (pid 10924, page answers; no brain run since 21:43, only local-work scans and
 memory copies). **Weekly usage 52% at 02:07** (47% at 22:35): with the build idle, Learn Like Magic's sessions used
