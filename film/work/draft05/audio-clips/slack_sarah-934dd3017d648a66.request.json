@@ -1,8 +1,0 @@
-{
-  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-4bit",
-  "speaker": "Authored American English male colleague",
-  "text": "For premium chargebacks, do analysts need booking totals, or disputed amounts by product?",
-  "instruct": "A native American English male voice in his thirties. Warm middle register, lightly textured natural timbre. A relaxed colleague on a live work video call. Casual, friendly and direct, brisk conversational pace with connected phrases and very short pauses. Natural question intonation and varied inflection. No announcer voice and no dramatic emphasis. Ask a question contrasting two options. Clearly stress OR between the options, with a questioning rise.",
-  "seed": 21,
-  "temperature": 0.7
-}

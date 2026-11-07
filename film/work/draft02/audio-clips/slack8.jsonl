@@ -1,9 +1,0 @@
-{"type": "WordBoundary", "offset": 1000000, "duration": 1500000, "text": "A"}
-{"type": "WordBoundary", "offset": 2625000, "duration": 4500000, "text": "useful"}
-{"type": "WordBoundary", "offset": 7250000, "duration": 4500000, "text": "answer"}
-{"type": "WordBoundary", "offset": 15375000, "duration": 3875000, "text": "Without"}
-{"type": "WordBoundary", "offset": 19375000, "duration": 3500000, "text": "waiting"}
-{"type": "WordBoundary", "offset": 23000000, "duration": 1250000, "text": "for"}
-{"type": "WordBoundary", "offset": 24375000, "duration": 3375000, "text": "another"}
-{"type": "WordBoundary", "offset": 27875000, "duration": 3000000, "text": "working"}
-{"type": "WordBoundary", "offset": 31000000, "duration": 3875000, "text": "day"}

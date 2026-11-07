@@ -1,8 +1,0 @@
-{
-  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-CustomVoice-4bit",
-  "speaker": "Aiden",
-  "text": "First, premium chargebacks. Deploy the backend before validating the new interface in production. I've linked that to your local work in AirChat.",
-  "instruct": "Speak naturally in fluent American English. A helpful male colleague giving a concise update on a video call. Calm, warm, practical and confident. Brisk, connected, conversational phrasing with varied natural inflection and short pauses. No robot voice, no announcer voice, no dramatic emphasis. Pronounce AirChat as air chat.",
-  "seed": 43,
-  "temperature": 0.7
-}

@@ -1,8 +1,0 @@
-{
-  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-CustomVoice-4bit",
-  "speaker": "Serena",
-  "text": "AI Peer. Your work. A step ahead.",
-  "instruct": "Speak in fluent English with a clear natural American accent. Warm, bright, confident female presenter. Energetic and brisk, with connected phrases and a smile in the voice. A premium product film, never a slow corporate explainer. Short purposeful pauses only.",
-  "seed": 43,
-  "temperature": 0.7
-}

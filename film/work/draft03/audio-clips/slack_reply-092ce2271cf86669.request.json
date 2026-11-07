@@ -1,8 +1,0 @@
-{
-  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-4bit",
-  "speaker": "Authored American English colleague",
-  "text": "Use Dispute Events. It updates hourly. I'll send the new field mapping.",
-  "instruct": "A female native American English speaker in her thirties with a lower middle register, warm slightly textured voice. Conversational office video call, casual and direct. Natural question intonation, quick connected phrasing with short pauses.",
-  "seed": 43,
-  "temperature": 0.7
-}

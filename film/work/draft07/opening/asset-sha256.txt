@@ -1,3 +1,0 @@
-c52fb6110308e7751e6a0894118cc9792047a8646b28deb87652c32a58a7bcf2  video/public/draft07/opening/employee-concerned.png
-4ed6d0ff7961fef973f89c582206a4ba797933d6b53cd163e8b7a2420dd1adac  video/public/draft07/opening/employee-happy.png
-0c98d690bc178f880a4cfe30fc805cbae347fefdbf12bf05d75e0297f32c1d7c  video/public/draft07/opening/employee-neutral.png
