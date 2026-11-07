@@ -5,6 +5,15 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
+2026-11-07 06:21. **Change of plan from Manish (his words in "Manish's answers", 06:21): wrap up and move the project to
+his Airbnb Mac; no more work on this Mac.** The Airbnb integrations (code through GitHub and Sourcegraph MCP, people
+and ownership through One Airbnb, Zoom, Slack, the AirChat plugin) happen there. The controller prepares one
+sanitized hand-off package: a zip with a fresh repo (no Learn Like Magic, no account details, no personal data; his
+ElevenLabs key may go along), the ways of working and every fact needed inside the repo, a start file, and a one-line
+prompt for the new Mac's coding session. Cancelled here: the Google client and logins, WP3's live S2 walk,
+`ai-peer-wp5-2` and the demo package (they become next steps in the package). `ai-peer-wp3-2` merges PR #3 (dry S2
+walk passed; its live walk is a next step there).
+
 2026-11-07 04:00. **No answer from Manish yet** to the Google client ask (02:21:17); a reminder went to Attention
 at 04:00:02 with the reason. **Weekly usage 58% at 03:59** (52% at 02:07: about 3 points an hour from Learn Like
 Magic, the build idle). At that pace 95% comes about 15:30 UTC today, sooner with WP3's live walk. **The
@@ -398,6 +407,7 @@ test" stays for WP4 unless Manish deletes it.
 | 11-06 18:06 | (to ai-peer-controller-3, typed in its session, after the 18:03 Attention ask for the Peer's Slack sign-in; relayed to `ai-peer-wp1-3` at once) | "open window" |
 | 11-06 18:20 | (to ai-peer-controller-3, after the sign-in passed and the Google client steps were sent) | "going to sleep now. will check back in the morning. please continue whatever work you can in the meantime" |
 | 11-07 06:04 | (to ai-peer-controller-4, typed in its session, after the Google client ask at 02:21 and the reminder at 04:00) | "make the Google client (about 5 minutes) - explain to me in simplified manner" |
+| 11-07 06:21 | (to ai-peer-controller-4, pasted in its session, instead of the Google client) | "Now what I want to do is, wherever we are, whatever we have done so far, I would like to wrap things up, and I would like to now move this project over to an Airbnb laptop. We are handing it off from my personal laptop to an Airbnb laptop, where we will do all the Airbnb-specific integrations and also make any further enhancements into this initiative. Airbnb integrations like how it will read the code base using the Airbnb-specific GitHub and Sourcegraph MCP, or the One Airbnb, where it can read about or understand the employee details or their team and the tools and services that they own. Airbnb-specific Zoom, Slack account and also AirChat plugin. All those integrations will be done by the Airbnb Mac. Let's get this repo ready for that handoff and moving it over to that other Mac. We'll not continue any further work on this Mac. And also remove any mentions of Learn Like Magic, any internal account details that we have, any sensitive information like that, remove everything. Okay to use my eleven labs api key though. And still, let's treat the repo as the source of truth around what ways of working we have on the controller session or the worker session, forty-five to fifty percent of context window handoff, everything. It should be present within the repo itself. Initiatives, context, what is done so far, what are the next steps, what are the learnings, et cetera, everything. And also clear instructions should be there on how the coding agent who is working on it should go about reading and understanding everything. And once all this is done, give me the final repo as a zip file, which I can just take to my Airbnb Mac and unzip, and that one handoff line, which might be pointing to a file which has clear instructions on how to start working on this. Maybe put everything in that file and give me that one-liner that I can just directly paste in the new AirChat coding session in the Airbnb-specific Mac. Is the ask clear?" |
 
 ## Airbnb notes
 
