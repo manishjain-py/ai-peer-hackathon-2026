@@ -5,6 +5,13 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
+2026-11-07 02:08. **A quiet night:** nothing changed from 22:36 to 02:06 (the watcher); `ai-peer-wp3-2` idle with
+PR #3 at 37cb0c4; the live Peer up (pid 10924, page answers; no brain run since 21:43, only local-work scans and
+memory copies). **Weekly usage 52% at 02:07** (47% at 22:35): with the build idle, Learn Like Magic's sessions used
+about 1.4 points an hour overnight. At that rate plus the build's day (WP3's live walk, `ai-peer-wp5-2`, the demo
+package), 95% could come within about a day, well before the old account's reset (9 Nov 23:00 UTC): for Manish
+after his first morning step. The controller sends Checkpoint 3 at 02:20, then the Google client ask.
+
 2026-11-06 21:54. **`ai-peer-wp3-2` merged main (PR #5) into PR #3** at 37cb0c4 (the 7 additive conflicts, both
 sides kept; checked by the controller: PR #5 is in the branch, `schemas.py` parses, PR #3 mergeable and clean). Its
 checks and WP4's pass; `port-check` on `wp3test`: meetings and voice no FAIL, google FAILs "not signed in" (expected
@@ -172,10 +179,10 @@ needs Manish at the Mac: "open window", then the Google client ([setup/google.md
   On "open window" it goes to `ai-peer-wp1-2` to record S1; WP3's live S2 walk asks for it later. F7 is live: the session-end hook is in `~/claude-config/settings.json` (synced) and
   `~/.codex/hooks.json` (backups in `~/.ai-peer/backups/`; both checked to parse), and the hourly
   scan reads `~/repos`.
-- Still running (22:37 on 6 Nov): the live Peer (pid 10924, above), `ai-peer-wp3-2` (pid 53664) and
-  `ai-peer-controller-4`'s watcher `docs/build/tools/watch2.zsh` (pid 31191, no AI, `MAX=12600`: it runs until about
-  02:10 UTC unless something changes; it tracks `ai-peer-wp3-2` pid 53664 and the Peer pid 10924; stop:
-  `kill 31191`), plus the controller's own wake-up at 02:20 UTC for Manish's morning. `ai-peer-wp4-2` closed 21:51.
+- Still running (02:08 on 7 Nov): the live Peer (pid 10924, above), `ai-peer-wp3-2` (pid 53664) and
+  `ai-peer-controller-4`'s watcher `docs/build/tools/watch2.zsh` (pid 99649, no AI; it tracks `ai-peer-wp3-2` pid
+  53664 and the Peer pid 10924; exits with one line on a change or after 55 minutes; the controller re-arms it;
+  stop: `kill 99649`). `ai-peer-wp4-2` closed 21:51 on 6 Nov.
   At 20:47 `ai-peer-controller-3` had stopped its own watcher at the hand-off.
   Before that (18:55): the live Peer and `ai-peer-controller-3`'s watcher
   `watch2.zsh` (pid 74123, no AI, in the controller's scratchpad; it exits with one line on a change:
