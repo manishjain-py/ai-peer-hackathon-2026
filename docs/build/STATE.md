@@ -5,6 +5,17 @@ hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [
 
 ## Where we are
 
+2026-11-07 06:24. **Wrap-up under way.** PR #3 merged at 06:22:14 as 65e7739 by `ai-peer-wp3-2` (dry S2 walk passed;
+the live walk on real Google was never run here and moves to the new Mac); `ai-peer-wp3-2` closed 06:23. **The live
+Peer is stopped** (06:23, `peer stop`; pid 10924 gone; undo: `cd ~/repos/ai-peer-wp4 && AI_PEER_OWNER=manish
+.venv/bin/python -m peer start`). **`ai-peer-handoff-1`** (window 2708, pid 68567,
+https://claude.ai/code/session_01NAqLMirZLucr74bontKDuE) started 06:23 in `~/repos/ai-peer-handoff` on `handoff-airbnb`
+(from main at 22920c5) from [its brief](handoffs/HANDOFF-2026-11-07-ai-peer-handoff-1.md): the sanitized package (a
+fresh one-commit repo, `START-HERE.md`, the ways of working and lessons inside the repo, his ElevenLabs key in a
+separate file, the latest film render only), zipped at `~/Desktop/ai-peer-handoff-2026-11-07.zip`. Instead of a
+review before the spawn, the brief's own proofs (a leak scan, the code checks, a stranger walk) and the
+controller's read-only leak review of the output check it, since the risk sits in the output.
+
 2026-11-07 06:21. **Change of plan from Manish (his words in "Manish's answers", 06:21): wrap up and move the project to
 his Airbnb Mac; no more work on this Mac.** The Airbnb integrations (code through GitHub and Sourcegraph MCP, people
 and ownership through One Airbnb, Zoom, Slack, the AirChat plugin) happen there. The controller prepares one
@@ -197,10 +208,9 @@ needs Manish at the Mac: "open window", then the Google client ([setup/google.md
   On "open window" it goes to `ai-peer-wp1-2` to record S1; WP3's live S2 walk asks for it later. F7 is live: the session-end hook is in `~/claude-config/settings.json` (synced) and
   `~/.codex/hooks.json` (backups in `~/.ai-peer/backups/`; both checked to parse), and the hourly
   scan reads `~/repos`.
-- Still running (02:08 on 7 Nov): the live Peer (pid 10924, above), `ai-peer-wp3-2` (pid 53664) and
-  `ai-peer-controller-4`'s watcher `docs/build/tools/watch2.zsh` (pid 99649, no AI; it tracks `ai-peer-wp3-2` pid
-  53664 and the Peer pid 10924; exits with one line on a change or after 55 minutes; the controller re-arms it;
-  stop: `kill 99649`). `ai-peer-wp4-2` closed 21:51 on 6 Nov.
+- Still running (06:24 on 7 Nov): `ai-peer-handoff-1` (pid 68567) and `ai-peer-controller-4`'s watcher
+  `docs/build/tools/watch2.zsh` (pid 69936, no AI; it tracks `ai-peer-handoff-1`; stop: `kill 69936`). The live Peer is
+  stopped (06:23 on 7 Nov). `ai-peer-wp3-2` closed 06:23 on 7 Nov; `ai-peer-wp4-2` closed 21:51 on 6 Nov.
   At 20:47 `ai-peer-controller-3` had stopped its own watcher at the hand-off.
   Before that (18:55): the live Peer and `ai-peer-controller-3`'s watcher
   `watch2.zsh` (pid 74123, no AI, in the controller's scratchpad; it exits with one line on a change:
