@@ -196,6 +196,9 @@ class NotConnected(Exception):
 def step_profile(c: Ctx) -> str:
     p = c.profile
     c.mem.ensure(owner_name=c.first)
+    # Optional extra topic words (what the owner's work is about), for when the code host gives none,
+    # e.g. the fictional test world, whose repos do not exist. A profile without `topics` is unchanged.
+    c.keywords.update(str(t).strip().lower() for t in p.get("topics", []) if str(t).strip())
     owns = p.get("owns", {})
     wh = p.get("working_hours") or {}
     body = "\n".join([

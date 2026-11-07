@@ -26,5 +26,6 @@
     ]
   },
   "interests": ["AI agents and coding agents", "offline-first apps and sync", "partner pilots and what partners ask for", "app quality and testing", "note-taking and productivity tools"],
+  "topics": ["offline mode", "shared notebooks", "sync engine"],
   "_note": "Fictional test profile: Fernway and its repos (fernway-example/notes, fernway-example/notes-design) are invented, so GitHub discovery records an error for them until a real profile is written."
 }

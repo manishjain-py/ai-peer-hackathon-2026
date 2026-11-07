@@ -474,7 +474,10 @@ The profile file (`peer/world/profiles/<owner>.json`, the directory's record): `
 `preferred_name`, `title`, `company`, `team`, `email`, `slack_email` (the chat login's email),
 `github`, `tz` (an IANA zone such as `Asia/Kolkata`), `location`, `working_hours` (`start`, `end`,
 `days` such as `["Mon", "Tue"]`), `about`, `interests` (a list), `owns` (`repos`: `repo`, `what`,
-`trackers` (path patterns); `services`: `name`, `repo`, `path`, `what`), and optionally `teammates`.
+`trackers` (path patterns); `services`: `name`, `repo`, `path`, `what`), and optionally `teammates` and
+`topics` (extra topic words that make a colleague's question count as about the owner's work; discovery
+adds them to `keywords.json`, beside the repo, service and project names it reads from the code host; the
+fictional test profiles use them because their repos do not exist).
 
 ## 12. Known company notes
 

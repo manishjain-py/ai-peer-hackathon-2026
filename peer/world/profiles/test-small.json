@@ -73,5 +73,6 @@
     "app quality and testing",
     "note-taking and productivity tools"
   ],
+  "topics": ["offline mode", "shared notebooks", "sync engine"],
   "_note": "WP2 test owner: Manish with one repo, so setup walks are quick and cheap. Fictional test profile: Fernway and its repo (fernway-example/notes) are invented, so GitHub discovery records an error for it until a real profile is written."
 }
