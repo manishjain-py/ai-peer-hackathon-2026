@@ -88,7 +88,12 @@ A successor starts its own from the tests written in the table.
 
 ## Needs Manish
 
-Nothing blocks the build.
+Nothing blocks the build. **His standing word (2026-11-14 12:23 UTC, in the controller's session): "Wherever
+you need my choice, send it to me on telegram. I ll review there and reply here"** (`DESIGN.md`
+V11, C12). So every choice goes to the Attention group with its files
+(`demo-video/tools/tg-send-file.sh`), and he answers in the session. The three choices below
+were sent there again with their material at that time: the three voice samples and the
+animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key frames.
 
 1. **Asked** (recorded 2026-11-14 11:44 UTC; in the session with the three audio files, and on the
    Attention group): which voice narrates as the Peer? 1 Matilda, the product's own voice (recommended:
@@ -171,3 +176,4 @@ Nothing blocks the build.
 | 2026-11-14 12:15 | ai-peer-video-controller-2 | WP3 reported milestone 1 by message (and its wait ended): a moving draft of all nine slots in its manifest, $3.74 spent, draft PR 8. The controller looked at `all-shots.jpg` (nine coherent shots: three colleagues in three places, the sleeper, the rise with threads of light, the desk, the morning) and told WP2 to use the manifest in Draft 1. WP3 chose look B for the double by itself; its two key frames went to Manish. | WP3 on tag tracks, then finals; WP2 on the code parts and Draft 1 |
 | 2026-11-14 12:16 | ai-peer-video-wp2 | Handed off at 44.8% context. Since milestone 1: product screens by code (window, camera, cursor, mint outline; the meeting shown as a call tile moved by its real sound, because the stand-in recording's picture is only a name on black), the night clock, proof cards and labels in one text lane, the end card, WP3's nine drafts pulled into the film, film grain. Two helpers still run (the Earth close; music and sound effects). | Successor `ai-peer-video-wp2-2` to be started by the controller; brief `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-2.md` |
 | 2026-11-14 12:18 | ai-peer-video-controller-2 | ai-peer-video-wp2 handed off at 44.8% context (branch pushed at a51c934; the one-command render, voice, captions, clock, end card and product screens built; WP3's nine drafts pulled in; no money spent). The controller read its hand-off brief and launched ai-peer-video-wp2-2 at 12:17 UTC (window 3972, PID 88331, seen working), told to commit by path only while the old session's two helpers still write. Waits re-armed on the new PID. WP2's note for Manish's recordings went into `PLAN.md`. | WP2-2 reading in; the old WP2 window stays until its helpers report |
+| 2026-11-14 12:23 | ai-peer-video-controller-2 | Manish, in the session: "Wherever you need my choice, send it to me on telegram. I ll review there and reply here" (V11). The notify scripts send text only, so the controller wrote `demo-video/tools/tg-send-file.sh` (the Bot API's file calls, token kept out of the argument list, files under `~/.ai-peer/` refused) and sent all three open choices to the Attention group with their material: 3 voice samples, the animatic, the clone clip, 3 pictures of the double's look; 8 files, all accepted by Telegram. | Waiting on his three answers, in the session |
