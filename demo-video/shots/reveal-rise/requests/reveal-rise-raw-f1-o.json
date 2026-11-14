@@ -1,0 +1,20 @@
+{
+  "endpoint": "google/gemini-omni-flash/v1.2/image-to-video",
+  "inputs": {
+    "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed and never moves. A phone glows mint on the bedside table. A man lies asleep in the bed and does not move at any time. For the first second nothing happens. Then, very slowly and gradually, a double of him made of soft mint light sits up out of his sleeping body: half see-through at first, with a gentle glow inside its chest and hair-thin threads of light still joining it to the sleeper. The double looks down at the sleeper with a calm, kind face and closed lips, moves to sit on the edge of the bed and gently pulls the duvet up over the sleeper's shoulder. Then it stands up at the foot of the bed, more solid now, and looks back at the sleeper, while the last fine threads of light stretch between them. It holds still for the last second. The sleeper stays still. There are only two figures at all times: one solid and asleep, one made of light. The double keeps its soft glow and its own natural skin colour the whole time, and never looks at the camera. Slow, graceful, deliberate motion with no sudden moves. One continuous shot with no cuts, no zoom, no music, no speech, no subtitles and no text.",
+    "image_url": "file:demo-video/shots/stills/night-phone-lit.png",
+    "end_image_url": "file:demo-video/shots/stills/night-stand.png",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "duration": 10
+  },
+  "expect": {
+    "units": 10.5,
+    "unit": "second of video at 720p",
+    "unit_price": 0.0819,
+    "cost_usd": 0.8599,
+    "basis": "fal.ai page 2026-11-14: $0.0819 per second at 720p; input tokens add 2 to 5%"
+  },
+  "output": "demo-video/shots/reveal-rise/reveal-rise-raw-f1-o",
+  "note": "reveal-rise final take 1, route O: Omni 1.2 Flash, first frame night-phone-lit, end frame night-stand, 10 s at 720p"
+}
