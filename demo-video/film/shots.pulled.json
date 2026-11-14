@@ -1,0 +1,81 @@
+{
+ "about": "Made by tools/pull_shots.mjs from WP3's manifest. Do not edit by hand.",
+ "manifest_updated_utc": "2026-11-14T12:13:10Z",
+ "slots": {
+  "hook-1": {
+   "grade": "draft",
+   "clip_seconds": 5.167,
+   "clip_fps": 24,
+   "use_from_s": 0.5,
+   "audio": "lipsync",
+   "note": "draft at 768P: the mouth was driven by WP2's sound file, the sync is not yet checked frame by frame; a shoulder enters the foreground at the left",
+   "line_at_s": 0.9
+  },
+  "hook-2": {
+   "grade": "draft",
+   "clip_seconds": 4.458,
+   "clip_fps": 24,
+   "use_from_s": 0.5,
+   "audio": "lipsync",
+   "note": "draft at 768P: the mouth was driven by WP2's sound file, the sync is not yet checked frame by frame",
+   "line_at_s": 0.9
+  },
+  "hook-3": {
+   "grade": "draft",
+   "clip_seconds": 3.042,
+   "clip_fps": 24,
+   "use_from_s": 0.5,
+   "audio": "lipsync",
+   "note": "draft at 768P: the mouth was driven by WP2's sound file, the sync is not yet checked frame by frame; he does not lean back yet",
+   "line_at_s": 0.9
+  },
+  "hook-sleeper": {
+   "grade": "draft",
+   "clip_seconds": 5.167,
+   "clip_fps": 24,
+   "use_from_s": 0.8,
+   "audio": "none",
+   "note": "draft at 768P; a very slow push-in"
+  },
+  "reveal-rise": {
+   "grade": "draft",
+   "clip_seconds": 10.125,
+   "clip_fps": 24,
+   "use_from_s": 0.5,
+   "audio": "none",
+   "note": "draft at 768P (H3 Max Turbo, first and last frame): rise, tuck, stand in one take; the phone is lit from the first frame (the light-up comes by code in the final); no tag track yet"
+  },
+  "reveal-desk": {
+   "grade": "draft",
+   "clip_seconds": 10.125,
+   "clip_fps": 24,
+   "use_from_s": 1.1,
+   "audio": "none",
+   "note": "draft at 768P (H3 Max Turbo, first and last frame); the window ends on the clip's last frame for the push-in; no tag track or screen corners yet"
+  },
+  "morning-wake": {
+   "grade": "draft",
+   "clip_seconds": 5.875,
+   "clip_fps": 24,
+   "use_from_s": 0.6,
+   "audio": "none",
+   "note": "draft at 768P"
+  },
+  "morning-brief": {
+   "grade": "draft",
+   "clip_seconds": 5.167,
+   "clip_fps": 24,
+   "use_from_s": 0.9,
+   "audio": "none",
+   "note": "draft at 768P; the tap is weak in this take"
+  },
+  "morning-nod": {
+   "grade": "draft",
+   "clip_seconds": 5.167,
+   "clip_fps": 24,
+   "use_from_s": 0.3,
+   "audio": "none",
+   "note": "draft at 768P: the double fades cleanly, the nod is slight; no tag track yet"
+  }
+ }
+}

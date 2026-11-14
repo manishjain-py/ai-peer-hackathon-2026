@@ -70,6 +70,10 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
   const productPath = path.join(FILM, "product.json");
   const product = fs.existsSync(productPath) ? readJson(productPath) : { sources: {}, slots: {} };
   const { fps, seconds } = shots;
+  // What tools/pull_shots.mjs brought from WP3 is laid over each slot.
+  const pulledPath = path.join(FILM, "shots.pulled.json");
+  const pulled = fs.existsSync(pulledPath) ? readJson(pulledPath).slots : {};
+  shots.slots = shots.slots.map((s) => (s.clip && pulled[s.id] ? { ...s, ...pulled[s.id] } : s));
   const problems = [];
   const notes = [];
 
@@ -112,6 +116,7 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
       if (s.clip) {
         const src = path.join(FILM, s.clip);
         if (!fs.existsSync(src)) problems.push(`slot ${s.id}: the clip ${s.clip} is missing`);
+        if (s.clip_seconds && s.clip_seconds < (s.use_from_s || 0) + s.length - 0.05) problems.push(`slot ${s.id}: the clip is ${s.clip_seconds} s, too short for ${s.length} s from ${s.use_from_s || 0} s`);
         const to = `assets/shots/${path.basename(s.clip)}`;
         copies.push({ from: src, to });
         slot.use = "clip";

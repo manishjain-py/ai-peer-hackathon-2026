@@ -191,3 +191,20 @@ html, body {
 }
 #chips .lbox i { position: absolute; left: 42px; right: 42px; bottom: 13px; height: 3px; border-radius: 2px;
   background: var(--mint); opacity: 0.7; transform-origin: 0 50%; }
+
+/* ---- an AI shot ------------------------------------------------------------------------------------ */
+.clipshot { background: #000; }
+.clipshot .draftnote { position: absolute; left: 44px; top: 36px; font-size: 22px; font-weight: 800; letter-spacing: 0.14em;
+  text-transform: uppercase; color: rgba(246, 244, 238, 0.82); background: rgba(10, 23, 27, 0.55); border-radius: 999px; padding: 9px 18px 8px; }
+
+/* ---- the end card ---------------------------------------------------------------------------------- */
+.endcard { background: var(--ink); }
+.endcard.over { background: transparent; }
+.endcard .eshade { position: absolute; inset: 0;
+  background: radial-gradient(70% 60% at 50% 48%, rgba(10, 23, 27, 0.78) 0%, rgba(10, 23, 27, 0.5) 60%, rgba(10, 23, 27, 0.2) 100%); }
+.endcard .ebox { position: absolute; left: 0; right: 0; top: 318px; display: flex; flex-direction: column; align-items: center; will-change: transform; }
+.endcard .elock { display: flex; align-items: center; gap: 30px; }
+.endcard .ename { font-size: 92px; font-weight: 800; letter-spacing: -0.03em; color: var(--paper); }
+.endcard .eline { margin-top: 54px; font-size: 76px; font-weight: 700; letter-spacing: -0.025em; color: var(--paper); white-space: nowrap; }
+.endcard .eline span { display: inline-block; will-change: transform, opacity; }
+.endcard .esign { margin-top: 46px; font-size: 32px; font-weight: 800; text-transform: uppercase; color: var(--mint); white-space: nowrap; }
