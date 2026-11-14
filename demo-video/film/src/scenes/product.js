@@ -45,6 +45,7 @@ export async function create(slot, film) {
   const start = slot.start;
   const length = slot.length;
   const chapter = slot.chapter ? slot.chapter.length : 0;
+  const landed = !!slot.landed;   // the push-in before this slot ends on this window, dark: no arrival
   const glowA = el("div.pglow.a");
   const glowB = el("div.pglow.b");
   const win = el("div.pwin");
@@ -103,12 +104,13 @@ export async function create(slot, film) {
     glowA.style.transform = `translate(${lerp(-60, 90, local / length)}px, ${lerp(0, 50, local / length)}px)`;
     glowB.style.transform = `translate(${lerp(40, -70, local / length)}px, ${lerp(20, -30, local / length)}px)`;
     // the window arrives, settles, and leaves
-    const a = ease.out(ramp(local, 0, 0.5));
+    const a = landed ? 1 : ease.out(ramp(local, 0, 0.5));
     const out = ease.in(ramp(local, length - 0.22, length));
     win.style.opacity = Math.min(a, 1 - out);
     win.style.transform = `translateY(${lerp(28, 0, a)}px) scale(${lerp(0.965, 1, a) + 0.012 * out})`;
     // under the chapter card the screen waits in the dark
-    dim.style.opacity = chapter ? 0.62 * (1 - ease.inOut(ramp(local, chapter - 0.45, chapter))) : 0;
+    const under = chapter ? 0.62 * (1 - ease.inOut(ramp(local, chapter - 0.45, chapter))) : 0;
+    dim.style.opacity = landed ? lerp(1, under, ease.out(ramp(local, 0, 0.45))) : under;
 
     for (const p of pics) {
       const { pic } = p;

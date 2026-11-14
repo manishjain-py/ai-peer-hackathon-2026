@@ -30,24 +30,26 @@ let text = shotsText;
 const dest = path.join(FILM, "assets", "shots");
 if (!check) fs.mkdirSync(dest, { recursive: true });
 
-function bring(rel) {
+function bring(rel, id) {
   const from = path.join(root, rel);
   if (!fs.existsSync(from)) throw new Error(`the manifest names ${rel}, which is not there`);
-  const to = path.join(dest, path.basename(rel));
+  // Two slots may name their side files alike (tag-track.json): the copy carries the slot's id.
+  const name = path.basename(rel).startsWith(id) ? path.basename(rel) : `${id}-${path.basename(rel)}`;
+  const to = path.join(dest, name);
   if (!check && (!fs.existsSync(to) || fs.statSync(to).size !== fs.statSync(from).size || fs.statSync(to).mtimeMs < fs.statSync(from).mtimeMs)) {
     fs.copyFileSync(from, to);
   }
-  return `assets/shots/${path.basename(rel)}`;
+  return `assets/shots/${name}`;
 }
 
 for (const [id, m] of Object.entries(manifest.slots || {})) {
   const slot = shots.slots.find((s) => s.id === id);
   if (!slot) { console.log(`manifest slot ${id} is not in shots.json: skipped`); continue; }
-  const clip = bring(m.clip);
+  const clip = bring(m.clip, id);
   const extra = { grade: m.grade, clip_seconds: m.seconds, clip_fps: m.fps, use_from_s: m.use_from_s || 0, audio: m.audio || "none", note: m.note || "" };
   if (m.line_at_s != null) extra.line_at_s = m.line_at_s;
-  if (m.tag_track) extra.tag_track = bring(m.tag_track);
-  if (m.last_still) extra.last_still = bring(m.last_still);
+  if (m.tag_track) extra.tag_track = bring(m.tag_track, id);
+  if (m.last_still) extra.last_still = bring(m.last_still, id);
   if (m.screen_quad) extra.screen_quad = m.screen_quad;
   pulled.slots[id] = extra;
   // set this slot's "clip" in shots.json without reflowing the file

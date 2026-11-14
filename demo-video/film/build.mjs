@@ -63,6 +63,33 @@ function enlarged(file, name) {
   return out;
 }
 
+/** One frame of a clip as a PNG, made once and kept in the build cache (AI clips are not private). */
+function frameOf(clip, seconds) {
+  const info = JSON.parse(execFileSync("ffprobe", ["-v", "error", "-select_streams", "v:0", "-show_entries",
+    "stream=nb_frames,r_frame_rate", "-of", "json", clip], { encoding: "utf8" })).streams[0];
+  const [a, b] = info.r_frame_rate.split("/").map(Number);
+  const frame = Math.max(0, Math.min(Number(info.nb_frames) - 1, Math.round(seconds * (a / b))));
+  const dir = path.join(FILM, ".build", "cache", "stills");
+  const stat = fs.statSync(clip);
+  const out = path.join(dir, `${path.basename(clip, path.extname(clip))}-f${frame}-${stat.size}.png`);
+  if (!fs.existsSync(out)) {
+    fs.mkdirSync(dir, { recursive: true });
+    const tmp = `${out}.${process.pid}.tmp.png`;
+    // bt709 in, as the browser reads an untagged HD clip: the still must match the clip it follows
+    execFileSync("ffmpeg", ["-hide_banner", "-loglevel", "error", "-nostdin", "-y", "-i", clip,
+      "-vf", `select=eq(n\\,${frame}),scale=in_color_matrix=bt709:in_range=tv:out_range=pc,format=rgb24`, "-frames:v", "1", "-update", "1", tmp]);
+    fs.renameSync(tmp, out);
+  }
+  return { file: out, frame };
+}
+
+/** Mean colour [r, g, b] of a box (fractions of the picture) of an image file. */
+function meanColour(file, x, y, w, h) {
+  const raw = execFileSync("ffmpeg", ["-hide_banner", "-loglevel", "error", "-nostdin", "-i", file,
+    "-vf", `crop=iw*${w}:ih*${h}:iw*${x}:ih*${y},scale=1:1:flags=area,format=rgb24`, "-frames:v", "1", "-f", "rawvideo", "-"]);
+  return [raw[0], raw[1], raw[2]];
+}
+
 /** Read the film and resolve what every slot shows. Throws on a timeline that does not hold. */
 export function readFilm({ variant = "public", withScenes = [] } = {}) {
   const shots = readJson(path.join(FILM, "shots.json"));
@@ -184,6 +211,73 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
     }
     return slot;
   });
+
+  // ---- the push-in: out of the shot before it, through the laptop's screen, into what follows ---
+  slots.forEach((slot, i) => {
+    if (slot.use !== "scene" || slot.scene !== "pushin") return;
+    const before = shots.slots[i - 1];
+    const after = slots[i + 1];
+    const clip = before && before.clip ? path.join(FILM, before.clip) : null;
+    const hand = clip ? (slot.hand_quads || {})[path.basename(clip)] : null;
+    const quad = (before && before.screen_quad) || hand;
+    if (!clip || !fs.existsSync(clip) || !quad || !after) {
+      slot.use = "slate";
+      notes.push(`slot ${slot.id}: ${!clip ? "the shot before it has no clip" : !quad ? `no screen corners for ${path.basename(clip)}` : "nothing follows it"}, so it stays a slate`);
+      return;
+    }
+    if (quad.length !== 4 || quad.some((c) => c.length !== 2 || c.some((v) => !(v >= 0 && v <= 1)))) {
+      problems.push(`slot ${slot.id}: the screen corners must be four [x, y] pairs as fractions of the frame`);
+      return;
+    }
+    const still = frameOf(clip, (before.use_from_s || 0) + before.length);
+    const to = `assets/gen/${path.basename(still.file)}`;
+    copies.push({ from: still.file, to });
+    const xs = quad.map((c) => c[0]), ys = quad.map((c) => c[1]);
+    const bx = Math.min(...xs), by = Math.min(...ys), bw = Math.max(...xs) - bx, bh = Math.max(...ys) - by;
+    const lands = after.use === "scene" && after.scene === "product" ? "product" : "slate";
+    slot.pushin = {
+      still: to, quad, lands,
+      sharp: before.last_still || null,   // WP3's sharper still of the same frame, if it gave one
+      tint: meanColour(still.file, bx + bw * 0.35, by + bh * 0.35, bw * 0.3, bh * 0.3),
+      window: lands === "product" ? after.window : { x: 0, y: 0, w: shots.width, h: shots.height },
+      draft: before.grade === "draft",
+    };
+    if (lands === "product") after.landed = true;   // its window is already there: no arrival
+    if (!before.screen_quad) notes.push(`slot ${slot.id}: screen corners set by hand for ${path.basename(clip)} (WP3 gave none)`);
+  });
+
+  // ---- the "AI Peer" tag on the double: WP3's track of the chest, or keys set by hand ----------
+  slots.forEach((slot, i) => {
+    const s = shots.slots[i];
+    if (!s.tag || slot.use !== "clip") return;
+    const name = path.basename(s.clip);
+    const hand = s.tag_keys && s.tag_keys.for === name ? s.tag_keys : null;
+    if (s.tag_keys && !hand) notes.push(`slot ${s.id}: its hand-set tag keys are for ${s.tag_keys.for}, not ${name}: not used`);
+    // a track made on this Mac from the hand-set keys (tools/tag_track.py), in WP3's format
+    const own = path.join(FILM, "assets", "tags", `${path.basename(name, path.extname(name))}.tag.json`);
+    const useTrack = (file) => {
+      const track = readJson(file);
+      const frames = [];
+      for (const e of Array.isArray(track) ? track : track.frames || []) frames[e.f] = [e.x, e.y, e.w, e.on ? 1 : 0];
+      for (let f = 0; f < frames.length; f++) if (!frames[f]) frames[f] = [0, 0, 0, 0];
+      if (!frames.length) problems.push(`slot ${s.id}: the tag track ${path.relative(FILM, file)} is empty`);
+      slot.tagTrack = { fps: s.clip_fps || 24, from: s.use_from_s || 0, frames };
+    };
+    if (s.tag_track) {
+      useTrack(path.join(FILM, s.tag_track));
+    } else if (hand && fs.existsSync(own)) {
+      useTrack(own);
+      notes.push(`slot ${s.id}: the tag follows a track made here from hand-set keys (WP3 gave none)`);
+    } else if (hand) {
+      slot.tagKeys = hand.keys;
+      notes.push(`slot ${s.id}: the tag is placed by hand-set keys (WP3 gave no track)`);
+    } else {
+      notes.push(`slot ${s.id}: no tag track and no keys for ${name}: no tag on the double`);
+    }
+    if (hand && hand.show) slot.tagShow = hand.show;
+    delete slot.tag_keys;
+  });
+  for (const slot of slots) { delete slot.hand_quads; delete slot.tag_keys; }
 
   // ---- the spoken lines --------------------------------------------------------------------------
   const lines = narration.lines.map((n) => {

@@ -194,8 +194,28 @@ html, body {
 
 /* ---- an AI shot ------------------------------------------------------------------------------------ */
 .clipshot { background: #000; }
-.clipshot .draftnote { position: absolute; left: 44px; top: 36px; font-size: 22px; font-weight: 800; letter-spacing: 0.14em;
+.clipshot .draftnote, .pushin .draftnote { position: absolute; left: 44px; top: 36px; font-size: 22px; font-weight: 800; letter-spacing: 0.14em;
   text-transform: uppercase; color: rgba(246, 244, 238, 0.82); background: rgba(10, 23, 27, 0.55); border-radius: 999px; padding: 9px 18px 8px; }
+
+/* ---- the push-in: out of the night room, through the laptop's screen, into the product -------------- */
+.pushin { background: #000; }
+.pushin .proom { position: absolute; inset: 0; overflow: hidden; }
+.pushin .proom img { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; object-fit: cover; transform-origin: 0 0; }
+.pushin .pbloom { position: absolute; left: 0; top: 0; width: 1000px; height: 1000px; transform-origin: 0 0; mix-blend-mode: screen;
+  background: radial-gradient(closest-side, rgba(226, 252, 238, 0.95) 0%, rgba(196, 246, 218, 0.5) 30%, rgba(183, 244, 207, 0.16) 62%, rgba(183, 244, 207, 0) 100%); }
+.pushin .pscreen { position: absolute; transform-origin: 0 0; overflow: hidden; }
+.pushin .pscreen .pdim { opacity: 1; }
+.pushin .plight { position: absolute; inset: 0; }
+.pushin .pember { position: absolute; inset: 0; background: radial-gradient(90% 90% at 50% 45%, rgb(88, 172, 150) 0%, rgb(30, 84, 84) 100%); }
+.pushin .pmark { position: absolute; left: 50%; top: 45%; width: 190px; height: 190px; margin: -95px 0 0 -95px; }
+
+/* ---- the "AI Peer" tag on the double's chest (sizes in em: the overlay sets the font size) ----------- */
+#tag .tagpill { position: absolute; left: 0; top: 0; display: flex; align-items: center; gap: 0.36em;
+  padding: 0.3em 0.62em 0.3em 0.36em; border-radius: 999px; white-space: nowrap; line-height: 1;
+  background: rgba(10, 23, 27, 0.8); border: 0.075em solid rgba(183, 244, 207, 0.8);
+  color: var(--mint); font-weight: 800; letter-spacing: 0.01em; }
+#tag .tagpill .tmk { display: flex; }
+#tag .tagpill svg { display: block; width: 1.2em; height: 1.2em; }
 
 /* ---- the end card ---------------------------------------------------------------------------------- */
 .endcard { background: var(--ink); }
