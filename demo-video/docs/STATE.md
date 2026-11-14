@@ -189,6 +189,15 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    (a v2 with the light-up by code is coming); the tag is off while he bends to stand (7.3 to
    7.8 s); judged from frames, not in motion. WP3 goes on to `reveal-desk` from this clip's
    last frame.
+   **`reveal-desk` shown at 13:01 UTC** (the Attention group and the session):
+   `reveal-desk-final-v1.mp4` in `~/repos/ai-peer-video-wp3/demo-video/shots/reveal-desk/`,
+   route K, first take, from the rise's real last frame; the controller looked at its sheet
+   (the threads let go, he walks to the desk, sits, opens the laptop, the glow holds). No
+   answer needed; silence keeps the take. Still weak, by WP3: blurred and pale for a few
+   frames as he sits (about 5.5 s) with a dark shadow on the wall; the laptop screen is small
+   in the wide frame, so the push-in leans on the 4K still in the manifest. WP3's notes for
+   WP2 (use_from_s 1.04, the screen quad, the tag on for the first 3 s only, a 6-frame
+   dissolve at the join) were passed to ai-peer-video-wp2-2 by message.
    ai-peer-video-controller-3 hands off at 45 to 50% context (see "Where we are" for its last
    reading): its successor is ai-peer-video-controller-4.
 3. Draft 1 from ai-peer-video-wp2-2: look at a frame at every cut, then send it to Manish.
@@ -260,3 +269,4 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 | 2026-11-14 12:44 | ai-peer-video-controller-3 | Took over from ai-peer-video-controller-2: read STATE and the hand-off (context 14% at this row's time); found all five sessions alive (PIDs 88331, 64734, 48241, 49247, 38022); told WP2-2, WP3 and the old WP2 its name; started six waits (Draft 1, WP3's report, three stall watches, and a usage alarm with the new `demo-video/tools/usage-check.sh`). Usage: 12:37 UTC week 20%, Fable 40%; 12:40 UTC week 22%, Fable 42%. Repeated the usage question to Manish in its first reply. Its call under C6: sessions launched from now on run on Opus 5.5. | Live controller; waits armed; the usage answer is open |
 | 2026-11-14 12:54 | ai-peer-video-controller-3 | ai-peer-video-wp2 reported its music and sound helper done: the report is on `main` (`86c32f7`, checked), the Earth helper still runs, so window 3963 stays open. Read the report's licence part: one more question for Manish, queued behind usage (Needs Manish 2e). Summed the three ledgers: $26.57 of $100 (WP1 $6.60, WP3 $19.04 in 85 rows, WP2 $0.94). Usage log: `2026-11-14T12:51:24Z week=25 fable=49 session=?`. Armed a seventh wait, `fable-cap`. | Recorded; the usage answer is still open |
 | 2026-11-14 12:55 | ai-peer-video-controller-3 | WP3 reported the final of `reveal-rise` (route K, V13's fall-back; its ledger $18.86, 84 calls). Looked at one small sheet, then sent the final and the route O take to Manish on the Attention group and the final in the session: no answer needed, silence keeps the take. Context: controller-3 17%, WP2-2 37%, WP3 41% at 12:54 UTC. | Shown; WP3 goes on to `reveal-desk` |
+| 2026-11-14 13:01 | ai-peer-video-controller-3 | WP3 reported the final of `reveal-desk` (route K; its context 43%, it hands off at about 45% once its three helpers have reported). Looked at its sheet, sent the clip to Manish (Attention group and the session) at 13:01 UTC, passed WP3's notes for the push-in to ai-peer-video-wp2-2. Ledgers summed: $29.27 of $100 (WP3 $21.74 in 91 rows). Usage log: `2026-11-14T12:56:29Z week=26 fable=52 session=?`. | Shown; the usage answer is still open |
