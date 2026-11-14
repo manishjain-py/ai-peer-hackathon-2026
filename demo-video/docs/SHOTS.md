@@ -13,18 +13,20 @@ handle, so the edit can trim. All nine show invented people; employee A is the m
 
 | Slot id | Part | Film time | In the film | Deliver | What we see | Sound in the clip |
 |---|---|---|---|---|---|---|
-| `hook-1` | The hook | 0:00.0 to 0:03.4 | 3.4 s | 4.5 s | Daytime, a bright office. A colleague (a woman) looks up from her phone, pleasantly surprised, and says her line to someone beside the camera. | Her line (below) |
-| `hook-2` | The hook | 0:03.4 to 0:06.3 | 2.9 s | 4 s | Late afternoon, another city: a small meeting room. A colleague (a man) glances at the wall screen (turned away from us) and says his line. | His line |
-| `hook-3` | The hook | 0:06.3 to 0:08.3 | 2.0 s | 3 s | Evening, a third place: a home desk under a lamp. A colleague (a man) leans back from his laptop, half laughing, and asks his line. | His line |
-| `hook-sleeper` | The hook | 0:08.3 to 0:12.0 | 3.7 s | 5 s | Cut to night. Employee A is fast asleep (the night room, closer than the wide frame; slow, even breathing). | None (the Peer speaks over it) |
+| `hook-1` | The hook | 0:00.0 to 0:03.5 | 3.5 s | 4.5 s | Daytime, a bright office. A colleague (a woman) looks up from her phone, pleasantly surprised, and says her line to someone beside the camera. | Her line (below) |
+| `hook-2` | The hook | 0:03.5 to 0:06.5 | 3.0 s | 4 s | Late afternoon, another city: a small meeting room. A colleague (a man) glances at the wall screen (turned away from us) and says his line. | His line |
+| `hook-3` | The hook | 0:06.5 to 0:08.5 | 2.0 s | 3 s | Evening, a third place: a home desk under a lamp. A colleague (a man) leans back from his laptop, half laughing, and asks his line. | His line |
+| `hook-sleeper` | The hook | 0:08.5 to 0:12.0 | 3.5 s | 5 s | Cut to night. Employee A is fast asleep (the night room, closer than the wide frame; slow, even breathing). | None (the Peer speaks over it) |
 | `reveal-rise` | The reveal | 0:12.0 to 0:21.0 | 9.0 s | 10 s | The wide night room, locked camera. The phone on the bedside table lights up. A double of him, made of mint light, rises out of him, stands, and pulls the blanket over the sleeper's shoulder. | None |
-| `reveal-desk` | The reveal | 0:21.0 to 0:32.0 | 11.0 s | 9 s of action | The same frame. The double walks to the desk, sits and opens the laptop; its screen lights its face. The last 2 to 3 seconds of the window are WP2's push-in on the laptop screen, made by code from the clip's last frame. | None |
+| `reveal-desk` | The reveal | 0:21.0 to 0:30.0, then WP2's push-in to 0:32.0 | 9.0 s | 9 s of action | The same frame. The double walks to the desk, sits and opens the laptop; its screen lights its face. The last 2 to 3 seconds of the window are WP2's push-in on the laptop screen, made by code from the clip's last frame. | None |
 | `morning-wake` | The morning | 1:30.0 to 1:34.5 | 4.5 s | 5.5 s | The same room at sunrise, warm light through the window. He wakes rested, sits up and picks up his phone. | None |
-| `morning-brief` | The morning | 1:34.5 to 1:38.5 (then WP2's product brief) | 4.0 s | 5 s | Over his shoulder or from the side: he reads on his phone (the screen is a plain soft glow, never readable) and decides with one tap. | None |
-| `morning-nod` | The morning | about 1:44.5 to 1:48.0 | 3.5 s | 4.5 s | By the desk in daylight, the double, now faint, nods to him and fades away. | None |
+| `morning-brief` | The morning | 1:40.5 to 1:44.5 (after WP2's product brief, 1:34.5 to 1:40.5) | 4.0 s | 5 s | Over his shoulder or from the side: he reads on his phone (the screen is a plain soft glow, never readable) and decides with one tap. | None |
+| `morning-nod` | The morning | 1:44.5 to 1:48.0 | 3.5 s | 4.5 s | By the desk in daylight, the double, now faint, nods to him and fades away. | None |
 
-The film windows of the three morning slots sit around WP2's product brief; WP2 may move them
-inside 1:30 to 1:48. The total is about 44 seconds of AI footage.
+The film times are WP2's, read from its message of 14 November (its `shots.json` is the truth;
+cuts sit on a half-second grid for the music). Each hook line starts about 0.4 to 0.5 seconds
+into its shot unless the manifest gives `line_at_s`. The tap in `morning-brief` comes right
+before `morning-nod`. The total is about 44 seconds of AI footage.
 
 ## The colleagues' lines for Draft 1 (the controller's call, `DESIGN.md` C11)
 
