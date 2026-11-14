@@ -1,0 +1,26 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "A new camera angle in the bedroom of image 1, in the same warm sunrise light, looking from the bed toward the wooden desk by the sunlit window. In the foreground at the left edge of the frame, dark and out of focus, are the shoulder and the back of the head of the man sitting up in bed, seen from behind. In focus, standing beside the desk, is a double of the same man, made of light: an exact copy of the man of image 2 and image 3, with the same face, short dark hair, trimmed beard, warm medium-brown skin, dark charcoal T-shirt and loose dark grey pyjama trousers, seen from the knees up. He is turned toward the man in bed and looks at him, not at the camera, with a warm, calm, closed-lip smile. In the daylight the double is faint: he is clearly see-through, so the desk, the wall and the curtain show softly through his body, and the warm shafts of sunlight pass through him and light the fine dust in the air. His face and skin keep their own natural colour. A soft core of pale mint-green light (#b7f4cf) still glows gently inside his chest, his edges are soft with no hard drawn outline, and he gives a faint mint tint to the desk beside him. A closed laptop lies on the desk. He looks friendly and gentle, never ghostly. Photorealistic, like a frame from a premium advertising film, 50mm lens, shallow depth of field. Nothing written anywhere.",
+    "image_urls": [
+      "file:demo-video/shots/stills/morning-wake-a.png",
+      "file:demo-video/look/characters/a-portrait.jpg",
+      "file:demo-video/look/characters/a-full.jpg"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.09,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.09,
+    "estimate": true,
+    "basis": "WP1 paid 6 to 8.5 cents for a 2K picture on this model (demo-video/ledger/wp1.csv)"
+  },
+  "output": "demo-video/shots/stills/morning-nod",
+  "note": "M3: the faint double by the desk in daylight, seen past the shoulder of the man in bed (first frame of morning-nod)"
+}

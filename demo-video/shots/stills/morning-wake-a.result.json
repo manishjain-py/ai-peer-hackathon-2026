@@ -1,0 +1,29 @@
+{
+ "request_id": "01a1d9f0-cc62-7d40-88e0-a6d9e0641e40",
+ "billable_units_header": "0.079449492",
+ "inputs_sent": {
+  "prompt": "Change the time of day in image 1 from night to early morning at sunrise. Keep the same room, the same camera position and framing, and every object in its place. Warm golden sunlight now streams in through the window and the thin curtains and falls in long soft shafts across the floor, the bed and the desk; the room is bright, warm and fresh, and the walls read as a soft muted teal. The bedside lamp is switched off, and the smartphone on the bedside table is dark. The man, who is the man of image 2, is just waking up in the same bed, rested: he lies in the same place with his eyes open and a small contented smile, stretching one arm up above the pillow. He wears the same dark charcoal T-shirt. He is the only person in the room. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab26e33/0rgcZgRNIcQfbMYJ0OfUt_night-phone-lit.png",
+   "https://v3b.fal.media/files/b/0ab26e26/kSJO-RYdbkyh2lmZ_cZw8_a-portrait.jpg"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26e33/5nkvgsNHGUuInmtGGK8Jf_WkDmwTnS.png",
+    "content_type": "image/png",
+    "file_name": "5nkvgsNHGUuInmtGGK8Jf_WkDmwTnS.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

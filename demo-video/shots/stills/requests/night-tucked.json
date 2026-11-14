@@ -1,0 +1,24 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "The off-white duvet has been pulled up higher over the sleeping man: it now covers his chest, his near shoulder and both of his arms, right up to his neck, and his hands are under it. His head, his face and the pillow are unchanged, and he has not moved. Keep everything else in the picture exactly the same.",
+    "image_urls": [
+      "file:demo-video/shots/stills/night-phone-lit.png"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.08,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.08,
+    "estimate": true,
+    "basis": "WP1 paid 6 to 8.5 cents for a 2K picture on this model (demo-video/ledger/wp1.csv)"
+  },
+  "output": "demo-video/shots/stills/night-tucked",
+  "note": "N1t: the night room after the tuck, no double (the duvet up over the sleeper's shoulder); the base of the key frames after the tuck and a clean plate"
+}

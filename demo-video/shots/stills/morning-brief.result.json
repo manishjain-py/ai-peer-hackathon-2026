@@ -1,0 +1,29 @@
+{
+ "request_id": "01a1d9f5-53f2-7fc0-9fa6-6ef56fd2702c",
+ "billable_units_header": "0.076402008",
+ "inputs_sent": {
+  "prompt": "A new, closer camera angle in the bedroom of image 1, in the same warm sunrise light: a medium close-up, from the side and a little in front, of the man of image 2 sitting up in the bed. He holds a slim dark smartphone in one hand at chest height; the plain back of the phone is toward the camera, so its screen cannot be seen, and the screen's soft light touches his face. His thumb rests just above the screen. He reads with calm attention and the beginning of a pleased smile, lips closed. He wears the same dark charcoal T-shirt, his hair a little tousled from sleep; his face, trimmed beard and warm medium-brown skin are exactly as in image 2. Behind him, softly out of focus: the muted teal wall, the off-white pillow and the thin curtains glowing with golden morning sun. 50mm lens at f/2, shallow depth of field, gentle film grain. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab26e51/UYZxaoX4S3H4brcpfCu2-_morning-wake-a.png",
+   "https://v3b.fal.media/files/b/0ab26e26/kSJO-RYdbkyh2lmZ_cZw8_a-portrait.jpg"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26e51/9aB8DNWAiu0hN3ML1mCqy_vPPQfEF8.png",
+    "content_type": "image/png",
+    "file_name": "9aB8DNWAiu0hN3ML1mCqy_vPPQfEF8.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

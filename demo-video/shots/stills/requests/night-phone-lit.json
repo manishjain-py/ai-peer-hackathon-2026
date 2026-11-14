@@ -1,0 +1,24 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "Add a slim dark smartphone lying flat on the bedside table, to the right of the lamp: its screen has just lit up with a plain, blank, soft mint-green glow (#b7f4cf) that throws a faint mint light on the table top, the base of the lamp and the near edge of the pillow. Nothing is written or shown on the screen. Keep everything else in the picture exactly the same: the same room, camera, framing, light and the same sleeping man, who has not moved.",
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high",
+    "image_urls": [
+      "file:demo-video/look/frames/f1.png"
+    ]
+  },
+  "expect": {
+    "units": 0.09,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.09,
+    "estimate": true,
+    "basis": "WP1 paid 6 to 8.5 cents for a 2K picture on this model (demo-video/ledger/wp1.csv)"
+  },
+  "output": "demo-video/shots/stills/night-phone-lit",
+  "note": "N1: the night room (WP1's f1.png) with the phone lit mint on the bedside table; the first frame of reveal-rise"
+}

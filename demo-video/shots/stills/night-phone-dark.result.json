@@ -1,0 +1,28 @@
+{
+ "request_id": "01a1d9f0-cd80-7110-bf13-477c1ea5e654",
+ "billable_units_header": "0.065573430",
+ "inputs_sent": {
+  "prompt": "Switch the smartphone on the bedside table off: its screen is now dark and gives no light at all, and the mint glow it threw on the table, the lamp and the pillow is gone. Keep everything else in the picture exactly the same.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab26e33/nctN7h6ZCUm0oRdTGxBLI_night-phone-lit.png"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26e33/Y0kpSwDUdbJhfhSvURfbJ_JIBvCm2N.png",
+    "content_type": "image/png",
+    "file_name": "Y0kpSwDUdbJhfhSvURfbJ_JIBvCm2N.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

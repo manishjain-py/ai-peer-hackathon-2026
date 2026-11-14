@@ -1,0 +1,26 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "Keep everything in image 1 exactly as it is: the same room, the same camera position and framing, the same light, the lit phone on the bedside table, and the same man asleep in the bed, who has not moved. Add one new element: a double of the sleeping man, made of light, is rising out of his sleeping body. The double has sat up out of the sleeper: his head, shoulders, chest and arms are upright above the middle of the bed, and from the waist down he is still merged with the sleeper's body under the duvet. The double is an exact copy of the man shown in image 2 and image 3, who is also the man asleep in the bed: the same face, the same short dark hair and trimmed beard, the same warm medium-brown skin and the same dark charcoal T-shirt. His face and skin keep their own natural brown colour and his clothes keep their own dark colours; only the light itself is pale mint-green (#b7f4cf). He is lit from within: a soft core of mint light glows inside his chest and shines out through his body, which has soft edges and no hard drawn outline. At this moment he is half see-through: the dark wall and the duvet can be seen faintly through his chest and arms, and he is most solid at the face. Where the two bodies part, the light pulls out into dozens of hair-thin threads of mint light, as fine as spun glass, stretched between the sleeper's chest and the double's chest and back, with tiny beads of light travelling along them. The double's shoulders are turned toward the head of the bed and his head is bowed to look down at the sleeper's face, with a calm, kind expression and closed lips; he does not look at the camera. His glow falls softly on the pillow, the duvet and the sleeper's face. He looks friendly and gentle, never ghostly or frightening. There are exactly two figures: one solid and asleep in the bed, one made of light. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+    "image_urls": [
+      "file:demo-video/shots/stills/night-phone-lit.png",
+      "file:demo-video/look/characters/a-portrait.jpg",
+      "file:demo-video/look/characters/a-full.jpg"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.09,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.09,
+    "estimate": true,
+    "basis": "WP1 paid 6 to 8.5 cents for a 2K picture on this model (demo-video/ledger/wp1.csv)"
+  },
+  "output": "demo-video/shots/stills/night-rise",
+  "note": "N2: the double half-risen out of the sleeper, see-through, joined to him by threads of light, looking at the sleeper (an edit of night-phone-lit.png)"
+}
