@@ -1,41 +1,41 @@
 {
  "about": "Made by tools/pull_shots.mjs from WP3's manifest. Do not edit by hand.",
- "manifest_updated_utc": "2026-11-14T13:00:04Z",
+ "manifest_updated_utc": "2026-11-14T13:19:34Z",
  "slots": {
   "hook-1": {
-   "grade": "draft",
+   "grade": "final",
    "clip_seconds": 5.167,
    "clip_fps": 24,
-   "use_from_s": 0.5,
+   "use_from_s": 0.46,
    "audio": "lipsync",
-   "note": "draft at 768P: the mouth was driven by WP2's sound file, the sync is not yet checked frame by frame; a shoulder enters the foreground at the left",
-   "line_at_s": 0.9
+   "note": "H3 Max Turbo at 1080P, WP2's line pinned as the sound; the mouth follows the line (checker: movement r +0.61 at lag 0, lips shut on both m sounds); her eyebrows are lively and she looks to the right of the camera",
+   "line_at_s": 0.86
   },
   "hook-2": {
-   "grade": "draft",
+   "grade": "final",
    "clip_seconds": 4.458,
    "clip_fps": 24,
-   "use_from_s": 0.5,
+   "use_from_s": 0.44,
    "audio": "lipsync",
-   "note": "draft at 768P: the mouth was driven by WP2's sound file, the sync is not yet checked frame by frame",
-   "line_at_s": 0.9
+   "note": "H3 Max Turbo at 1080P, WP2's line pinned as the sound; the mouth follows the line (checker: movement r +0.51 at lag 0); his lips part 0.15 s before the voice",
+   "line_at_s": 0.84
   },
   "hook-3": {
-   "grade": "draft",
-   "clip_seconds": 3.042,
+   "grade": "final",
+   "clip_seconds": 4.458,
    "clip_fps": 24,
-   "use_from_s": 0.5,
+   "use_from_s": 0.8,
    "audio": "lipsync",
-   "note": "draft at 768P: the mouth was driven by WP2's sound file, the sync is not yet checked frame by frame; he does not lean back yet",
-   "line_at_s": 0.9
+   "note": "H3 Max Turbo at 1080P, WP2's line pinned as the sound; the mouth follows the line (checker: movement r +0.76, two frames early); the lean-back is modest",
+   "line_at_s": 1.2
   },
   "hook-sleeper": {
-   "grade": "draft",
+   "grade": "final",
    "clip_seconds": 5.167,
    "clip_fps": 24,
    "use_from_s": 0.8,
    "audio": "none",
-   "note": "draft at 768P; a very slow push-in"
+   "note": "H3 Max Turbo at 1080P; slow even breathing (small), a very slow push-in"
   },
   "reveal-rise": {
    "grade": "final",
@@ -43,8 +43,8 @@
    "clip_fps": 24,
    "use_from_s": 0.2,
    "audio": "none",
-   "note": "route K (Kling 4.0, four key frames), take 3, upscaled to 1080p; rise, tuck and stand in one take; the phone is lit from the first frame until the light-up by code is added (v2); the tag is off from 7.3 to 7.8 s while he bends to stand",
-   "tag_track": "assets/shots/reveal-rise-tag-track-final-v1.json"
+   "note": "route K (Kling 4.0, four key frames), take 3, upscaled to 1080p; rise, tuck and stand in one take; the phone is dark, then lights up by code at 0.35 s; the tag is on from 1.67 s (once he is up to the hips) and off from 7.3 to 7.8 s while he bends to stand",
+   "tag_track": "assets/shots/reveal-rise-tag-track-final-v2.json"
   },
   "reveal-desk": {
    "grade": "final",
@@ -75,28 +75,29 @@
    ]
   },
   "morning-wake": {
-   "grade": "draft",
-   "clip_seconds": 5.875,
+   "grade": "final",
+   "clip_seconds": 6.583,
    "clip_fps": 24,
    "use_from_s": 0.6,
    "audio": "none",
-   "note": "draft at 768P"
+   "note": "H3 Max Turbo at 768P, upscaled to 1080p; he lies awake to 1.2 s, sits by 2.2 s, holds the phone from 4.8 s; he sits up in about one second, and the phone hand is motion blur for 3 or 4 frames near 4.4 s"
   },
   "morning-brief": {
-   "grade": "draft",
-   "clip_seconds": 5.167,
+   "grade": "final",
+   "clip_seconds": 6.583,
    "clip_fps": 24,
-   "use_from_s": 0.9,
+   "use_from_s": 1,
    "audio": "none",
-   "note": "draft at 768P; the tap is weak in this take"
+   "note": "H3 Max Turbo at 768P, upscaled to 1080p; one tap of the thumb at 4.04 s in the clip (3.04 s into the window), then a smile; the tap is small and quick; 8 frames were retouched by code to remove an earlier thumb lift (the untouched take is morning-brief-final-v3.mp4)"
   },
   "morning-nod": {
-   "grade": "draft",
-   "clip_seconds": 5.167,
+   "grade": "final",
+   "clip_seconds": 5.042,
    "clip_fps": 24,
-   "use_from_s": 0.3,
+   "use_from_s": 1,
    "audio": "none",
-   "note": "draft at 768P: the double fades cleanly, the nod is slight; no tag track yet"
+   "note": "route K (Kling 4.0), first frame morning-nod-b, end frame the same room without the double, upscaled to 1080p; the nod is small (about 1.3 to 2.5 s); the double fades from 3.3 to 4.3 s: fade the tag out with him over that second (the track only says on or off); he is more solid than faint before he fades",
+   "tag_track": "assets/shots/morning-nod-tag-track-final-v1.json"
   }
  }
 }

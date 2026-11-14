@@ -45,6 +45,12 @@ Before a draft render, bring WP3's newest clips in: `node demo-video/film/tools/
 | `tools/mix.mjs` | The sound mix by ffmpeg: voice, scene sound, music pushed down under speech, effects, -14 LUFS. |
 | `tools/stt_check.py` | Speech-to-text on this Mac: the ear no session has. |
 
+Small switches in `shots.json`, per slot: `dissolve_in` (seconds: this shot fades in over the
+tail of the one before, which plays on under it), `tag_keys.show` (when the tag is on screen;
+`force` shows it where the track calls the chest out of view), `hand_quads` (screen corners by
+hand for one clip), `scene_file` (draw a code scene with another file, to pin a render to a
+snapshot).
+
 Rules of the page: nothing keeps state between frames, uses a timer or reads the clock. The
 renderer seeks each frame on its own (`hf-seek`), often out of order.
 

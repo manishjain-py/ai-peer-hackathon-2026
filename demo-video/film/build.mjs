@@ -353,6 +353,11 @@ export function build({ variant = "public", lane, withScenes = [], out = buildDi
   for (const dir of ["src", "vendor", "assets"]) {
     fs.cpSync(path.join(FILM, dir), path.join(out, dir), { recursive: true });
   }
+  // A slot may name the file its scene is drawn with ("scene_file"): it takes the scene's place
+  // in the build. Used to pin a draft to a snapshot while the scene itself is still being made.
+  for (const slot of read.film.slots) {
+    if (slot.use === "scene" && slot.scene_file) fs.copyFileSync(path.join(FILM, slot.scene_file), path.join(out, "src", "scenes", `${slot.scene}.js`));
+  }
   for (const c of read.copies) {
     const to = path.join(out, c.to);
     fs.mkdirSync(path.dirname(to), { recursive: true });
