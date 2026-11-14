@@ -1,0 +1,21 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "How the reference pictures align with the target video \u2014 Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 1) aligns with the 5.90-second mark of the target video.\n\nintegrated_multimodal_description: [Shot 1] Cinematic, live-action, Static Shot of a serene bedroom at sunrise. The walls are a deep muted teal, and warm, golden sunlight filters through sheer white curtains, casting long, soft shafts of light across the light wood floor, the bed and a wooden desk with a chair on the right. In the first frame, (S1) a man with short dark hair and a trimmed beard, wearing a dark charcoal t-shirt, lies on his back in bed under a white duvet, both hands resting on the duvet over his stomach. He has just woken up, rested: his eyes are open and he smiles softly at the morning. The whole shot is slow, gentle and unhurried; he never makes a sudden or fast movement, and his arms stay low and close to his body: no arm is ever lifted or stretched out into the air. From 00:00.000 to 00:00.900, he takes a slow, deep breath, his chest rising under the duvet, and his smile grows a little. From 00:00.900 to 00:02.800, he sits up slowly and smoothly, taking two full seconds: he presses his hands into the mattress and raises his back gradually, the duvet sliding down to his waist, and he ends sitting upright and relaxed. From 00:02.800 to 00:04.400, he turns calmly toward the small wooden bedside table at the left edge of the frame and reaches down to it with his near hand, while his other hand stays resting flat on the duvet beside his hip to steady him; he gently picks up the slim dark smartphone lying on the table, leaving the table top empty. From 00:04.400 to 00:05.400, he brings the phone in front of his chest and holds it in both hands. From 00:05.400 to the end, he looks down at it with a calm, contented, closed-lip smile; the back of the phone faces the camera and its screen is never visible. He moves with real weight, like a man who slept well and has all the time in the world. S1 is the only person in the room. Nothing else in the room moves or changes: the desk, the chair, the closed laptop on the desk, the curtains, the bedside table and its lamp stay exactly where they are, and the sunlight stays steady. The camera remains completely fixed throughout the entire shot, holding the same wide composition.\n\noverall_soundscape: A quiet bedroom in the early morning. A slow breath, the soft rustle of cotton bed linen as the man sits up, a faint creak of the bed frame, the light sound of a phone lifted from a wooden surface. Peaceful, still room tone.\n\nnon_diegetic_music: N/A",
+    "image_url": "file:demo-video/shots/stills/morning-wake-a5.png",
+    "end_image_url": "file:demo-video/shots/stills/morning-wake-b.png",
+    "duration": 5.9,
+    "resolution": "768P",
+    "seed": 4202,
+    "prompt_expansion_mode": "disabled"
+  },
+  "expect": {
+    "units": 5.9,
+    "unit": "second of video at 768P",
+    "unit_price": 0.028,
+    "cost_usd": 0.1652,
+    "basis": "fal.ai page read 2026-11-14: $0.028 a second at 768P until 15 November; billed for exactly the seconds asked (5.9 s asked gives a 6.58 s clip)"
+  },
+  "output": "demo-video/shots/morning-wake/morning-wake-raw-e8",
+  "note": "morning-wake take e8: 768P look-see, prompt 4 (as prompt 3, plus: arms stay low, the far hand stays on the duvet during the reach), first frame morning-wake-a5, last frame morning-wake-b, seed 4202 (helper wp3-morning)"
+}

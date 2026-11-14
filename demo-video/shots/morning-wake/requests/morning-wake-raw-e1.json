@@ -1,0 +1,21 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "How the reference pictures align with the target video \u2014 Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 1) aligns with the 5.90-second mark of the target video.\n\nintegrated_multimodal_description: [Shot 1] Cinematic, live-action, Static Shot of a serene bedroom at sunrise. The walls are a deep muted teal, and warm, golden sunlight filters through sheer white curtains, casting long, soft shafts of light across the light wood floor, the bed and a wooden desk with a chair on the right. In the first frame, (S1) a man with short dark hair and a trimmed beard, wearing a dark charcoal t-shirt, lies on his back in bed under a white duvet. He has just woken up, rested: his eyes are open, one hand is tucked behind his head on the pillow, and he smiles softly at the morning. From 00:00.000 to 00:00.900, he breathes in slowly and takes his hand from behind his head. From 00:00.900 to 00:02.700, he sits up in bed in one smooth, natural movement, pushing himself up with his arm, the duvet gathering around his waist. From 00:02.700 to 00:04.300, he turns toward the small wooden bedside table at the left edge of the frame, reaches out with one hand and picks up the slim dark smartphone lying on it, leaving the table top empty. From 00:04.300 to 00:05.900, he brings the phone in front of his chest, holds it in both hands and looks down at it with a calm, contented, closed-lip smile; the back of the phone faces the camera and its screen is never visible. He moves calmly and unhurriedly, with real weight, like a man who slept well. S1 is the only person in the room. Nothing else in the room moves or changes: the desk, the chair, the closed laptop on the desk, the curtains, the bedside table and its lamp stay exactly where they are, and the sunlight stays steady. The camera remains completely fixed throughout the entire shot, holding the same wide composition.\n\noverall_soundscape: A quiet bedroom in the early morning. The soft rustle of cotton bed linen as the man sits up, a faint creak of the bed frame, the light sound of a phone lifted from a wooden surface. Peaceful, still room tone.\n\nnon_diegetic_music: N/A",
+    "image_url": "file:demo-video/shots/stills/morning-wake-a3.png",
+    "end_image_url": "file:demo-video/shots/stills/morning-wake-b.png",
+    "duration": 5.9,
+    "resolution": "768P",
+    "seed": 4101,
+    "prompt_expansion_mode": "disabled"
+  },
+  "expect": {
+    "units": 5.9,
+    "unit": "second of video at 768P",
+    "unit_price": 0.028,
+    "cost_usd": 0.1652,
+    "basis": "fal.ai page read 2026-11-14: $0.028 a second at 768P until 15 November; billed for exactly the seconds asked (5.9 s asked gives a 6.58 s clip)"
+  },
+  "output": "demo-video/shots/morning-wake/morning-wake-raw-e1",
+  "note": "morning-wake take e1: 768P look-see, first frame morning-wake-a3, last frame morning-wake-b, my own prompt in the model's expanded form (expansion off), seed 4101; the winner is made again at 1080P with its seed (helper wp3-morning)"
+}
