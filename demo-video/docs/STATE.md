@@ -43,9 +43,10 @@ Still running:
 
 1. The interview, one question at a time, in the controller's session. Answered so far: the
    due date (V1), the tools rule (V2: Claude's own abilities first) and the budget (V3: $100 for
-   now). Question 3, asked 2026-11-14 10:43 UTC: who is the employee in the film. Options: Manish
-   himself, filmed on his phone from an exact shot list, with the clone and its effects made by
-   code (recommended); Manish from photos only, generated with AI; an invented employee.
+   now), the employee (V4: an invented person, all AI-made). Question 4, asked 2026-11-14 10:49 UTC:
+   how the video is shown at the hackathon. Options: it is the whole entry and judges watch it
+   alone; it plays inside his live pitch; both or not sure (then the controller builds it to
+   stand alone).
 
 ## Next
 
@@ -72,3 +73,4 @@ Still running:
 | 2026-11-14 10:26 | ai-peer-video-controller-1 | The reader of the old docs reported: saved as `PRIOR-WORK.md`. Keys checked with free calls; fal.ai's catalogue and prices saved. | Waiting on question 1 and on four researchers |
 | 2026-11-14 10:39 | ai-peer-video-controller-1 | Three of four researchers reported; notes committed. Manish answered question 1: due Thursday 19 November. Working dates set (`DESIGN.md` C4). Question 2 (the budget) asked. | Waiting on question 2 and on the last researcher |
 | 2026-11-14 10:43 | ai-peer-video-controller-1 | The last researcher reported; the report writer started. Manish answered question 2: Claude's own abilities first (V2), a $100 cap for now (V3). Question 3 (who is the employee in the film) asked. | Waiting on question 3 and on the report |
+| 2026-11-14 10:49 | ai-peer-video-controller-1 | Manish answered question 3: C, an invented employee (V4). Question 4 (how the video is shown) asked. The controller starts the brief for the first worker: look pictures and test shots of the clone. | Waiting on question 4 and on the report |

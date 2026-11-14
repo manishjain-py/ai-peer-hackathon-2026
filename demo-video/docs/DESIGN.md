@@ -22,6 +22,8 @@
 | V2 | Which tools? | Claude's own abilities first (video made by code: motion graphics, 3D, compositing, the edit). An outside tool only where they cannot meet the requirement; the controller picks it. | "First preference is to use Claude native capabilities. If that is not possible to fulfill the requirement, then we can use any tools that you think can do that." (2026-11-14 10:42 UTC) |
 | V3 | How much may be spent? | A cap of $100 for now. Raising it is his call, later. | "for the budget cap, let's keep $100 for now, and afterwards we will see if we can extend it or not." (2026-11-14 10:42 UTC) |
 
+| V4 | Who is the employee in the film? Asked as: A, Manish filmed on his phone (recommended); B, Manish from photos only, AI-generated; C, an invented employee, all AI-made, paid from the $100. | C: an invented employee. No filming of Manish and no photos of him. | "C" (2026-11-14 10:48 UTC) |
+
 ### The controller's own routine calls (undo: tell the controller)
 
 | # | Call | Why |
@@ -30,6 +32,8 @@
 | C2 | The tools research (notes and report) lives in `demo-video/research/`. | The repo is the only memory. |
 | C3 | No money is spent before a budget is written in this section. | Money is Manish's call. |
 | C5 | How V2 and V3 are applied: each shot is first tried by code; a paid tool is used only for what code cannot make (for example real-looking people and places that nobody filmed, voices, music). The $100 counts new spending (pay-per-use generation, any new subscription); plans Manish already pays for (ElevenLabs) are used inside their quota. Every paid call is logged in `STATE.md` (Money spent); one round of test shots costs at most $15; Manish is told at $50 and at $80. | His two answers of 14 November. |
+| C6 | Worker sessions run on Fable 5.2 at max effort, like the controller; if Fable's weekly allowance runs short, Opus 5.5 at max effort. | Manish set this session to Fable 5.2 at max effort on 14 November; his standing rule is the best model at max effort. |
+| C7 | Because of V4 and V3: generated shots with people are kept few (about 6 to 8 in the film) and each is planned as a still frame first; the clone's glow and see-through look are made by code over the generated footage wherever that works. Manish picks the invented employee's look from pictures before any video is made of them. | Stills cost cents, video costs dollars; his eyes decide a look. |
 | C4 | Working dates from V1: look and script fixed by Sunday 15 November night (India time), first full cut Tuesday 17, final Wednesday 18 night, Thursday 19 morning as buffer. The new product screens are needed by Tuesday 17 morning. | Five days; a cut needs a day of his feedback and a day of fixes. |
 
 ## 1. The film
