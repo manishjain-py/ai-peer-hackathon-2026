@@ -45,6 +45,16 @@ at about 14:05 UTC and the whole week at about 16:30 UTC (rough: the readings ar
 percents). A seventh wait, `fable-cap`, sends Manish an Attention line when Fable's week
 reaches 96%, because a session stopped at the dialog cannot.
 
+**The usage log at 13:07 UTC:** `2026-11-14T13:07:41Z week=29 fable=58 session=?`. From 12:51 to 13:06 UTC the week rose 4 points
+and Fable's 8: about 16% and 32% an hour. At that pace Fable's week ends at about 14:25 UTC
+and the whole week reaches 93% at about 17:05 UTC. Outlook: Draft 1 should come first.
+ai-peer-video-wp2-2 already has WP3's two reveal finals in the film and waits only for the
+Earth helper's report before its two Draft 1 renders (its screen, 13:07 UTC). WP3 (45%
+context) and the old WP2 (48%) are about to hand off and be closed, and no successor starts
+before Manish's answer, so after Draft 1 only the controller is left and the burn stops by
+itself. If Draft 1 is not rendered when Fable's week reaches 75% (the alarm), the controller
+decides then between a hand-off of WP2-2 to an Opus 5.5 successor and Manish's key press.
+
 Keys checked with free, read-only calls (values never printed): fal.ai valid (its balance
 cannot be read with this key); ElevenLabs valid (plan `growing_business`, about 97% of the
 character quota free, instant and professional voice cloning allowed); the Gemini API key lists
@@ -77,7 +87,7 @@ Still running:
 | Wait `stall-wp2-2`: the transcript of WP2-2 (`3b59da85-1a19-4cc4-9875-244a8d19e09d`) and its sub-agents silent for 25 minutes | 22623 | the same log | `kill 22623` |
 | Wait `stall-wp3`: the same for WP3 (`1c97ea6b-c294-42be-ae5e-8c9d772564bf`) | 22665 | the same log | `kill 22665` |
 | Wait `stall-wp2`: the same for the old WP2 and its two helpers (`c5e26ecb-e51c-4042-9605-b280dbe83c04`) | 22682 | the same log | `kill 22682` |
-| Wait `usage`, the usage alarm: `demo-video/tools/usage-check.sh 55 28` every 5 minutes; it ends when Fable's week reaches 55% or the whole week 28%, and the controller then starts it again at the next mark | 22693 | the same log; the readings in `~/.ai-peer/demo-video-private/controller/usage.log` | `kill 22693` |
+| Wait `usage`, the usage alarm: `demo-video/tools/usage-check.sh 75 40` every 5 minutes; it ends when Fable's week reaches 75% or the whole week 40%, and the controller then starts it again at the next mark (the 55 and 28 mark was passed at 13:06 UTC) | 54452 | the same log; the readings in `~/.ai-peer/demo-video-private/controller/usage.log` | `kill 54452` |
 | Wait `fable-cap`: `usage-check.sh 96 200` every 10 minutes; when Fable's week reaches 96% it sends Manish an Attention line (press Enter on the dialog in windows 3972, 3968, 3963, 3973) and ends | 38756 | the same log | `kill 38756` |
 
 The seven waits are runs of `demo-video/tools/wait-for.sh` (its header shows the usage) in the
@@ -270,3 +280,4 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 | 2026-11-14 12:54 | ai-peer-video-controller-3 | ai-peer-video-wp2 reported its music and sound helper done: the report is on `main` (`86c32f7`, checked), the Earth helper still runs, so window 3963 stays open. Read the report's licence part: one more question for Manish, queued behind usage (Needs Manish 2e). Summed the three ledgers: $26.57 of $100 (WP1 $6.60, WP3 $19.04 in 85 rows, WP2 $0.94). Usage log: `2026-11-14T12:51:24Z week=25 fable=49 session=?`. Armed a seventh wait, `fable-cap`. | Recorded; the usage answer is still open |
 | 2026-11-14 12:55 | ai-peer-video-controller-3 | WP3 reported the final of `reveal-rise` (route K, V13's fall-back; its ledger $18.86, 84 calls). Looked at one small sheet, then sent the final and the route O take to Manish on the Attention group and the final in the session: no answer needed, silence keeps the take. Context: controller-3 17%, WP2-2 37%, WP3 41% at 12:54 UTC. | Shown; WP3 goes on to `reveal-desk` |
 | 2026-11-14 13:01 | ai-peer-video-controller-3 | WP3 reported the final of `reveal-desk` (route K; its context 43%, it hands off at about 45% once its three helpers have reported). Looked at its sheet, sent the clip to Manish (Attention group and the session) at 13:01 UTC, passed WP3's notes for the push-in to ai-peer-video-wp2-2. Ledgers summed: $29.27 of $100 (WP3 $21.74 in 91 rows). Usage log: `2026-11-14T12:56:29Z week=26 fable=52 session=?`. | Shown; the usage answer is still open |
+| 2026-11-14 13:07 | ai-peer-video-controller-3 | The usage alarm fired: `2026-11-14T13:07:41Z week=29 fable=58 session=?`. Re-armed it at Fable 75% or week 40%. Read WP2-2's screen: the two reveal finals are in the film with tag, push-in and sound; it waits for the Earth helper, then renders Draft 1 twice. Contexts at 13:07 UTC: controller-3 19%, WP2-2 41%, WP3 45%, the old WP2 48%. Manish has not answered the usage question. | Waiting for Draft 1 |
