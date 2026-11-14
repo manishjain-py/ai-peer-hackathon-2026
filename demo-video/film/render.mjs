@@ -7,6 +7,7 @@
 //   node demo-video/film/render.mjs --private          the full film with the product recordings;
 //                                                      everything it writes stays under
 //                                                      ~/.ai-peer/demo-video-private/
+//   node demo-video/film/render.mjs --prove-guard      test the network guard of a private render
 //   options: --name NAME (file name)  --quality draft|looks|delivery  --workers N  --no-check
 //            --lane NAME   keep this run's build, work files and render in .build/lanes/NAME/
 //                          (for a helper working beside other renders)
@@ -31,30 +32,70 @@ function parse(argv) {
     if (k === "--private") a.private = true;
     else if (k === "--no-check") a.noCheck = true;
     else if (k === "--no-sound") a.noSound = true;
+    else if (k === "--prove-guard") a.proveGuard = true;
     else if (["--part", "--from", "--to", "--name", "--quality", "--workers", "--lane", "--with"].includes(k)) a[k.slice(2)] = argv[++i];
     else throw new Error(`unknown option ${k}`);
   }
   return a;
 }
 
+// The network guard of a private render (DESIGN C8): the renderer and its browser run inside a
+// macOS sandbox that refuses every connection except to this Mac itself, so a recording cannot
+// leave through the tool that draws it, whatever that tool or its browser would like to send.
+const SANDBOX = "/usr/bin/sandbox-exec";
+const GUARD = '(version 1)(allow default)(deny network-outbound)(allow network-outbound (remote ip "localhost:*"))(allow network-outbound (remote unix-socket))';
+
+/**
+ * Prove the guard before trusting it: inside the sandbox a connection to an outside address
+ * must be refused by the system (EPERM), and one to this Mac must still work. The outside
+ * address is a documentation address (192.0.2.1) that nothing answers, so the test does not
+ * depend on the internet being up: without the guard it fails slowly and by another name.
+ */
+export function proveGuard() {
+  const probe = `
+    const net = require("node:net");
+    const out = {};
+    const done = () => { if ("outside" in out && "local" in out) { console.log(JSON.stringify(out)); process.exit(0); } };
+    const server = net.createServer((c) => c.end()).listen(0, "127.0.0.1", () => {
+      net.connect(server.address().port, "127.0.0.1").on("connect", () => { out.local = "ok"; done(); }).on("error", (e) => { out.local = e.code; done(); });
+    });
+    const s = net.connect({ port: 9, host: "192.0.2.1", timeout: 2500 });
+    s.on("connect", () => { out.outside = "connected"; done(); }).on("timeout", () => { out.outside = "timeout"; s.destroy(); done(); }).on("error", (e) => { out.outside = e.code; done(); });
+  `;
+  const run = (guarded) => {
+    const r = spawnSync(guarded ? SANDBOX : process.execPath, guarded ? ["-p", GUARD, process.execPath, "-e", probe] : ["-e", probe], { encoding: "utf8", timeout: 15000 });
+    try { return JSON.parse((r.stdout || "").trim().split("\n").pop()); } catch { return { outside: `no answer (${(r.stderr || "").trim().split("\n").pop()})`, local: "no answer" }; }
+  };
+  const inside = run(true);
+  const control = run(false);
+  const holds = inside.outside === "EPERM" && inside.local === "ok" && control.outside !== "EPERM" && control.local === "ok";
+  return { holds, inside, control };
+}
+
 /** Run the pinned HyperFrames CLI with an environment that holds no key and sends no telemetry. */
-function hyperframes(args, { cwd, tmp, capture = false }) {
+function hyperframes(args, { cwd, tmp, capture = false, guard = false }) {
   const env = {
     PATH: process.env.PATH, HOME: os.homedir(), LANG: process.env.LANG || "en_US.UTF-8",
     TMPDIR: tmp || process.env.TMPDIR || os.tmpdir(),
     DO_NOT_TRACK: "1", HYPERFRAMES_NO_TELEMETRY: "1", HYPERFRAMES_SKIP_SKILLS: "1",
   };
-  const r = spawnSync("npx", ["--yes", HYPERFRAMES, ...args], {
+  // Behind the guard npx cannot reach its registry: it must take the pinned renderer from its cache.
+  // Chrome cannot start its own sandbox inside another one ("Requesting main frame too early"),
+  // so there it runs without: the page it draws is this film's own local page, and the outer
+  // sandbox is the one that keeps the recordings on this Mac.
+  if (guard) Object.assign(env, { npm_config_offline: "true", HYPERFRAMES_CHROME_SANDBOX: "0" });
+  const npx = ["npx", "--yes", HYPERFRAMES, ...args];
+  const r = spawnSync(guard ? SANDBOX : npx[0], guard ? ["-p", GUARD, ...npx] : npx.slice(1), {
     cwd, env, encoding: "utf8", maxBuffer: 1 << 28, stdio: capture ? ["ignore", "pipe", "pipe"] : ["ignore", "inherit", "inherit"],
   });
   return r;
 }
 
-function preflight(project, tmp, seconds) {
+function preflight(project, tmp, seconds, guard) {
   // The renderer exits 0 even when the page's script is dead (seen in the trial: a missing
   // file gave a full-length render of nothing). So ask the checker first and stop on any
   // error the page throws or any file it cannot load.
-  const r = hyperframes(["check", "--json", "--no-craft", "--no-contrast", "--no-cache", "--samples", "8"], { cwd: project, tmp, capture: true });
+  const r = hyperframes(["check", "--json", "--no-craft", "--no-contrast", "--no-cache", "--samples", "8"], { cwd: project, tmp, capture: true, guard });
   const text = r.stdout || "";
   let report;
   try {
@@ -74,7 +115,20 @@ function preflight(project, tmp, seconds) {
 
 function main() {
   const args = parse(process.argv.slice(2));
+  if (args.proveGuard) {
+    const g = proveGuard();
+    console.log(JSON.stringify(g, null, 1));
+    if (!g.holds) throw new Error("the network guard does not hold");
+    return;
+  }
   const variant = args.private ? "private" : "public";
+  // A private render draws real recordings: it runs only behind a guard proven a moment ago.
+  const guard = variant === "private";
+  if (guard) {
+    const g = proveGuard();
+    if (!g.holds) throw new Error(`the network guard does not hold (inside the sandbox: outside ${g.inside.outside}, this Mac ${g.inside.local}; without it: outside ${g.control.outside}): no private render without it`);
+    console.log(`network guard: holds (inside the sandbox an outside address is refused, ${g.inside.outside}; this Mac answers; without the sandbox the same call gives ${g.control.outside})`);
+  }
   const t0 = Date.now();
   if (args.lane && variant === "private") throw new Error("a private render has no lanes");
   const b = build({ variant, lane: args.lane, withScenes: args.with ? args.with.split(",") : [] });
@@ -99,7 +153,7 @@ function main() {
   for (const n of b.notes) console.log("note: " + n);
 
   if (!args.noCheck) {
-    const pre = preflight(b.out, tmp, film.seconds);
+    const pre = preflight(b.out, tmp, film.seconds, guard);
     console.log(`page check: no errors on the page (lint: ${pre.lintErrors} errors, ${pre.lintWarnings} warnings)`);
     for (const x of pre.lintFindings.slice(0, 8)) console.log("  lint " + x);
   }
@@ -111,7 +165,7 @@ function main() {
   if (args.workers) rargs.push("--workers", String(args.workers));
   if (variant === "private") rargs.push("--frames-cache-dir", path.join(PRIVATE, "cache"));
   fs.rmSync(picture, { force: true });
-  const r = hyperframes(rargs, { cwd: b.out, tmp, capture: true });
+  const r = hyperframes(rargs, { cwd: b.out, tmp, capture: true, guard });
   if (r.status !== 0 || !fs.existsSync(picture)) {
     throw new Error("the picture did not render:\n" + ((r.stdout || "") + (r.stderr || "")).split("\n").slice(-25).join("\n"));
   }
