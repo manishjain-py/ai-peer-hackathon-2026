@@ -1,0 +1,132 @@
+/* Draft 3's product screens drawn by code (src/scenes/screens.js). Made-up data only. */
+.scam { position: absolute; left: 0; top: 0; overflow: hidden; will-change: transform; }
+
+/* ---- Zoom: a dark meeting window, a gallery of four ---------------------------------------- */
+.zoom { position: absolute; inset: 0; background: #141414; color: #e8e8e8; font-family: "Manrope", sans-serif; }
+.zoom .ztop { position: absolute; left: 0; right: 0; top: 0; height: 40px; background: #1f1f1f; display: flex; align-items: center; gap: 10px; padding: 0 16px; font-size: 14px; font-weight: 600; color: #d8d8d8; }
+.zoom .zshield svg, .zoom .zview svg, .zoom .zai svg { display: block; }
+.zoom .zgap { flex: 1; }
+.zoom .zai { display: flex; align-items: center; gap: 6px; padding: 4px 11px 4px 8px; border-radius: 999px; background: rgba(143, 184, 255, 0.14); color: #d5e3ff; font-size: 13px; }
+.zoom .zview { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+.zoom .ztile { position: absolute; border-radius: 10px; overflow: hidden; background: #262626; }
+.zoom .zimg { position: absolute; inset: 0; background-size: cover; background-position: center; will-change: transform; }
+.zoom .zname { position: absolute; left: 10px; bottom: 10px; display: flex; align-items: center; gap: 7px; padding: 4px 10px 4px 8px; border-radius: 6px; background: rgba(0, 0, 0, 0.62); font-size: 16px; font-weight: 600; color: #fff; }
+.zoom .zname svg { display: block; }
+.zoom .zaib { padding: 1px 6px; border-radius: 4px; background: var(--mint); color: var(--ink); font-size: 12px; font-weight: 800; }
+.zoom .zactive { position: absolute; inset: 0; border-radius: 10px; box-shadow: inset 0 0 0 3px #3ddc84; opacity: 0; }
+.zoom .zpeer { background: radial-gradient(120% 90% at 50% 42%, #214650 0%, #132a30 58%, #0c1a1e 100%); }
+.zoom .zpglow { position: absolute; left: 50%; top: 45%; width: 640px; height: 640px; margin: -320px 0 0 -320px; background: radial-gradient(closest-side, rgba(183, 244, 207, 0.16), rgba(183, 244, 207, 0) 70%); }
+.zoom .zpc { position: absolute; left: 50%; top: 45%; width: 128px; height: 128px; margin: -64px 0 0 -64px; }
+.zoom .zring { position: absolute; inset: 0; border-radius: 50%; border: 2px solid rgba(183, 244, 207, 0.85); }
+.zoom .zpface { position: absolute; inset: 0; border-radius: 50%; background-size: cover; background-position: center; }
+.zoom .ztoast { position: absolute; left: 50%; top: 54px; display: flex; align-items: center; gap: 10px; padding: 7px 18px 7px 7px; border-radius: 999px; background: rgba(28, 28, 28, 0.94); border: 1px solid rgba(183, 244, 207, 0.55); font-size: 16px; color: #eee; white-space: nowrap; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45); }
+.zoom .ztoast b { color: var(--mint); }
+.zoom .zface { border-radius: 50%; background-size: cover; flex: none; }
+.zoom .zcap { position: absolute; left: 50%; bottom: 92px; transform: translateX(-50%); width: 980px; padding: 12px 20px; border-radius: 8px; background: rgba(0, 0, 0, 0.8); font-size: 27px; font-weight: 500; line-height: 1.36; color: #fff; }
+.zoom .zcap b { color: var(--mint); font-weight: 700; }
+.zoom .zbar { position: absolute; left: 0; right: 0; bottom: 0; height: 74px; background: #1f1f1f; display: flex; align-items: center; gap: 2px; padding: 0 18px; }
+.zoom .zbtn { display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 84px; font-size: 12px; color: #d8d8d8; }
+.zoom .zbtn svg { display: block; }
+.zoom .zbtn.zgreen span:first-child { background: #2fbf5b; border-radius: 8px; padding: 2px 8px; }
+.zoom .zend { padding: 9px 20px; border-radius: 8px; background: #e5484d; color: #fff; font-size: 14px; font-weight: 700; }
+
+/* ---- Slack: light theme, aubergine sidebar ------------------------------------------------- */
+.slack { position: absolute; inset: 0; background: #fff; color: #1d1c1d; font-family: "Manrope", sans-serif; }
+.slack .stop { position: absolute; left: 0; right: 0; top: 0; height: 40px; background: #350d36; display: flex; justify-content: center; align-items: center; }
+.slack .ssearch { width: 560px; height: 26px; border-radius: 6px; background: rgba(255, 255, 255, 0.18); color: rgba(255, 255, 255, 0.78); font-size: 13px; display: flex; align-items: center; padding: 0 12px; }
+.slack .sside { position: absolute; left: 0; top: 40px; bottom: 0; width: 260px; background: #3f0e40; color: rgba(255, 255, 255, 0.74); padding: 10px 0; font-size: 15px; }
+.slack .sws { font-size: 19px; font-weight: 800; color: #fff; padding: 6px 18px 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 8px; }
+.slack .sws i { font-style: normal; opacity: 0.7; }
+.slack .sitem { display: flex; align-items: center; gap: 8px; padding: 0 18px; height: 31px; }
+.slack .sitem svg { display: block; flex: none; }
+.slack .sitem.on { background: #1164a3; color: #fff; font-weight: 700; }
+.slack .shead { padding: 14px 18px 6px; font-size: 14px; font-weight: 700; color: rgba(255, 255, 255, 0.6); }
+.slack .sdm { border-radius: 5px; background-size: cover; background-position: center; flex: none; }
+.slack .smain { position: absolute; left: 260px; right: 0; top: 40px; bottom: 0; display: flex; flex-direction: column; }
+.slack .stitle { height: 52px; flex: none; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; border-bottom: 1px solid #e2e2e2; font-size: 18px; }
+.slack .stitle span:first-child { display: flex; align-items: center; gap: 4px; }
+.slack .smembers { font-size: 13px; color: #616061; }
+.slack .slist { flex: 1; overflow: hidden; padding-top: 8px; }
+.slack .sday { text-align: center; margin: 2px 0 6px; }
+.slack .sday span { font-size: 13px; font-weight: 700; padding: 3px 14px; border: 1px solid #e2e2e2; border-radius: 999px; background: #fff; }
+.slack .smsg { display: flex; gap: 10px; padding: 8px 20px; }
+.slack .smsg.sold { opacity: 0.72; }
+.slack .sav { border-radius: 8px; background-size: cover; background-position: center; flex: none; }
+.slack .sbody { flex: 1; min-width: 0; }
+.slack .sline { display: flex; align-items: baseline; gap: 8px; }
+.slack .sline b { font-size: 16px; font-weight: 800; }
+.slack .stime { font-size: 12.5px; color: #616061; }
+.slack .sapp { font-size: 10.5px; font-weight: 800; color: #616061; background: #e8e8e8; border-radius: 3px; padding: 1px 4px; letter-spacing: 0.04em; }
+.slack .stext { font-size: 16.5px; line-height: 1.48; margin-top: 2px; border-radius: 6px; }
+.slack .smention { color: #1264a3; background: #e8f5fa; border-radius: 3px; padding: 0 2px; font-weight: 600; }
+.slack .ssrc { margin-top: 8px; padding: 8px 12px; border-left: 4px solid #dcdcdc; border-radius: 4px; }
+.slack .ssrch { font-size: 13px; font-weight: 800; color: #616061; margin-bottom: 2px; }
+.slack .slink { display: flex; align-items: center; gap: 7px; font-size: 15.5px; color: #1264a3; line-height: 1.62; }
+.slack .slink svg { display: block; flex: none; }
+.slack .sp2 { margin-top: 8px; padding: 2px 4px; margin-left: -4px; }
+.slack .sfoot { margin-top: 6px; font-size: 12.5px; color: #616061; }
+.slack .sreact { display: inline-block; margin-top: 6px; padding: 2px 9px; border-radius: 999px; border: 1px solid #1d9bd1; background: #e8f5fa; font-size: 13px; color: #1264a3; transform-origin: 0 50%; }
+.slack .scompose { flex: none; padding: 0 20px 18px; position: relative; }
+.slack .styping { position: absolute; left: 22px; top: -24px; font-size: 13px; color: #616061; }
+.slack .sbox { height: 44px; border: 1px solid #c8c8c8; border-radius: 8px; display: flex; align-items: center; padding: 0 14px; font-size: 15px; color: #8a8a8a; }
+
+/* ---- the change: the Peer's own look (paper, ink, mint) ------------------------------------ */
+.chg { position: absolute; inset: 0; background: var(--paper); color: var(--ink); font-family: "Manrope", sans-serif; }
+.chg .chl { position: absolute; left: 0; top: 0; bottom: 0; width: 800px; border-right: 1px solid #d7dfd9; }
+.chg .chhead { height: 118px; display: flex; align-items: center; gap: 14px; padding: 0 28px; }
+.chg .chh1 { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; }
+.chg .chh2 { font-size: 16px; color: #617272; margin-top: 2px; }
+.chg .chnum { font-weight: 800; color: var(--green); font-variant-numeric: tabular-nums; }
+.chg .chface { border-radius: 50%; background-size: cover; background-position: center; flex: none; }
+.chg .chlist { position: absolute; left: 0; right: 0; top: 118px; bottom: 70px; overflow: hidden; }
+.chg .chrows { position: absolute; left: 0; right: 0; top: 0; will-change: transform; }
+.chg .chrow { position: absolute; left: 20px; right: 20px; height: 52px; display: flex; align-items: center; gap: 12px; padding: 0 14px; border-radius: 12px; background: #fffef9; border: 1px solid #d7e2d7; font-size: 15.5px; }
+.chg .chrow.one { background: #edf5ec; }
+.chg .chsrc { flex: none; width: 62px; text-align: center; font-size: 11px; font-weight: 800; color: #fff; border-radius: 6px; padding: 3px 0; text-transform: uppercase; letter-spacing: 0.05em; }
+.chg .chteam { flex: none; width: 134px; font-weight: 800; font-size: 14px; color: var(--green); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.chg .chtitle { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; }
+.chg .chrow.one .chtitle { white-space: normal; line-height: 1.25; }
+.chg .chtime { flex: none; font-size: 13px; color: #617272; }
+.chg .chfade { position: absolute; left: 0; right: 0; height: 56px; pointer-events: none; }
+.chg .chfade.top { top: 0; background: linear-gradient(var(--paper), rgba(246, 244, 238, 0)); }
+.chg .chfade.bot { bottom: 0; background: linear-gradient(rgba(246, 244, 238, 0), var(--paper)); }
+.chg .chleft { position: absolute; left: 20px; right: 20px; bottom: 14px; height: 42px; display: flex; align-items: center; padding: 0 14px; border-radius: 10px; font-size: 16px; font-weight: 700; color: #617272; }
+.chg .chr { position: absolute; left: 800px; right: 0; top: 0; bottom: 0; display: flex; align-items: center; justify-content: center; padding: 28px; }
+.chg .chcard { width: 500px; background: #fff; border: 1px solid #d7e2d7; border-radius: 19px; padding: 22px 24px; box-shadow: 0 10px 30px rgba(21, 43, 49, 0.08); }
+.chg .chcardh { display: flex; align-items: center; gap: 10px; font-size: 16px; }
+.chg .chto { color: #617272; }
+.chg .chct { margin-top: 14px; font-size: 23px; font-weight: 800; letter-spacing: -0.02em; }
+.chg .chcb { margin-top: 8px; font-size: 17px; line-height: 1.5; }
+.chg .chwhy { margin: 12px -10px 0; padding: 10px; border-radius: 10px; font-size: 17px; line-height: 1.5; color: #3f554c; }
+.chg .chwhy b, .chg .chnext b { display: block; color: var(--green); font-size: 11.5px; letter-spacing: 1.4px; text-transform: uppercase; font-weight: 800; margin-bottom: 3px; }
+.chg .chnext { margin-top: 10px; font-size: 16px; line-height: 1.5; color: #53665d; }
+
+/* ---- the morning brief on Ram's phone ------------------------------------------------------ */
+.screens.morning { background: #efcda4; }
+.mbrief { position: absolute; inset: 0; overflow: hidden; background: linear-gradient(160deg, #f8e5cb 0%, #f2cfa5 48%, #e3b386 100%); }
+.mbrief .mglow { position: absolute; right: -320px; top: -460px; width: 1400px; height: 1400px; border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 244, 222, 0.95), rgba(255, 244, 222, 0) 70%); }
+.mbrief .phone { position: absolute; left: 50%; top: 45.5%; width: 446px; height: 900px; border-radius: 66px; background: #101a1d; padding: 13px; box-shadow: 0 40px 100px rgba(90, 45, 10, 0.35), inset 0 0 0 2px rgba(255, 255, 255, 0.14); will-change: transform, opacity; }
+.mbrief .pscreen { position: relative; width: 100%; height: 100%; border-radius: 54px; overflow: hidden; background: var(--paper); color: var(--ink); font-family: "Manrope", sans-serif; }
+.mbrief .pstatus { position: absolute; left: 0; right: 0; top: 0; height: 58px; display: flex; justify-content: space-between; align-items: center; padding: 6px 44px 0; font-size: 18px; z-index: 2; background: var(--paper); }
+.mbrief .bpage { position: absolute; left: 0; right: 0; top: 58px; padding: 12px 26px 40px; will-change: transform; }
+.mbrief .bcrumb { font-size: 14px; color: #617272; }
+.mbrief h1 { margin: 10px 0 10px; font-size: 37px; font-weight: 800; letter-spacing: -0.03em; }
+.mbrief .bpill { display: inline-flex; align-items: center; gap: 8px; padding: 5px 13px; border-radius: 999px; background: #e3f1e6; color: var(--green); font-size: 14px; font-weight: 700; }
+.mbrief .bpill i { width: 8px; height: 8px; border-radius: 50%; background: #22a06b; display: inline-block; }
+.mbrief .blead { font-size: 20px; line-height: 1.45; margin: 14px 0 4px; color: #2a4248; }
+.mbrief .bsec { margin-top: 22px; }
+.mbrief .bsec h2 { display: flex; align-items: center; gap: 9px; font-size: 21px; font-weight: 800; margin: 0 0 10px; }
+.mbrief .bsec h2 i { width: 9px; height: 9px; border-radius: 5px; background: var(--ac); display: inline-block; }
+.mbrief .acc-green { --ac: #167353; }
+.mbrief .acc-blue { --ac: #2f6f9f; }
+.mbrief .acc-amber { --ac: #a8701a; }
+.mbrief .bcard { background: #fff; border: 1px solid #d7e2d7; border-radius: 19px; padding: 16px 18px; margin-bottom: 10px; }
+.mbrief .bcat { font-size: 13.5px; font-weight: 750; color: var(--ac); }
+.mbrief .btitle { font-size: 20px; font-weight: 750; letter-spacing: -0.02em; line-height: 1.3; margin-top: 2px; }
+.mbrief .bwhy { color: #53665d; margin-top: 7px; font-size: 16px; line-height: 1.45; }
+.mbrief .bwhy b { display: block; color: var(--green); font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase; font-weight: 800; }
+.mbrief .bacts { display: flex; gap: 10px; margin-top: 12px; }
+.mbrief .bbtn { padding: 9px 16px; border-radius: 999px; border: 1.5px solid var(--green); color: var(--green); font-size: 15px; font-weight: 700; }
+.mbrief .bbtn.solid { background: var(--green); color: #fff; }
+.mbrief .bfoot { display: flex; align-items: center; gap: 10px; margin-top: 22px; font-size: 14px; color: #617272; }
+.mbrief .bfoot svg { display: block; }

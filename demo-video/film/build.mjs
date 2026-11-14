@@ -132,6 +132,11 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
   const narration = readJson(path.join(FILM, "audio", "narration.json"));
   const productPath = path.join(FILM, "product.json");
   const product = fs.existsSync(productPath) ? readJson(productPath) : { sources: {}, slots: {} };
+  // Draft 3 (V19): the public film draws the product screens by code with made-up data (screens.json)
+  const screensPath = path.join(FILM, "screens.json");
+  const screens = variant !== "private" && fs.existsSync(screensPath) ? readJson(screensPath) : null;
+  const script = readJson(path.join(FILM, "audio", "script.json"));
+  const captionOf = Object.fromEntries(script.lines.map((l) => [l.id, l.caption || null]));
   const { fps, seconds } = shots;
   // What tools/pull_shots.mjs brought from WP3 is laid over each slot.
   const pulledPath = path.join(FILM, "shots.pulled.json");
@@ -274,6 +279,14 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
         }
       } else if (variant === "private") {
         slot.slateNote = "<b>Product screen.</b> No recording of this yet.";
+      } else if (screens && screens.slots[s.id]) {
+        const sc = screens.slots[s.id];
+        slot.use = "scene";
+        slot.scene = "screens";
+        slot.window = sc.kind === "brief" ? { x: 0, y: 0, w: shots.width, h: shots.height } : screens.window;
+        slot.screen = { ...sc, people: screens.people, peer_face: screens.peer_face, note: screens.note };
+        for (const l of sc.labels || []) labels.push({ slot: s.id, start: r3(s.start + l.at), length: l.length, text: l.text });
+        if (sc.chapter) chapters.push({ slot: s.id, start: s.start, length: sc.chapter.length, hour: sc.chapter.hour, text: sc.chapter.text });
       }
     }
     return slot;
@@ -303,7 +316,7 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
     copies.push({ from: still.file, to });
     const xs = quad.map((c) => c[0]), ys = quad.map((c) => c[1]);
     const bx = Math.min(...xs), by = Math.min(...ys), bw = Math.max(...xs) - bx, bh = Math.max(...ys) - by;
-    const lands = after.use === "scene" && after.scene === "product" ? "product" : "slate";
+    const lands = after.use === "scene" && (after.scene === "product" || after.scene === "screens") ? "product" : "slate";
     slot.pushin = {
       still: to, quad, lands,
       sharp: before.last_still || null,   // WP3's sharper still of the same frame, if it gave one
@@ -360,7 +373,7 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
     if (start == null) problems.push(`line ${n.id} has no start time in shots.json`);
     const slot = shots.slots.find((s) => s.line === n.id);
     if (slot && slot.clip && slot.line_at_s != null) start = r3(slot.start + slot.line_at_s - (slot.use_from_s || 0));
-    return { id: n.id, part: n.part, speaker: n.speaker, text: n.text, start, seconds: n.seconds, words: n.words, rms_dbfs: n.rms_dbfs, file: path.join(FILM, n.file) };
+    return { id: n.id, part: n.part, speaker: n.speaker, text: n.text, caption: captionOf[n.id] || undefined, start, seconds: n.seconds, words: n.words, rms_dbfs: n.rms_dbfs, file: path.join(FILM, n.file) };
   });
   lines.push(...sceneLines);
   lines.sort((a, b) => a.start - b.start);

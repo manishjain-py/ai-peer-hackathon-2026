@@ -1,0 +1,96 @@
+{
+  "about": "Draft 3 (DESIGN V19): the four product screens of the public film, drawn by code (src/scenes/screens.js) with made-up data for an Airbnb payments case: Ram owns host payout retries. Every name, team, channel, number and link is invented. A public build draws these in place of the slates; a private build still uses product.json and the real recordings. Times are seconds from the slot's start. The Peer's face is one picture, peer_face: swap that file and every screen follows.",
+  "window": { "x": 280, "y": 56, "w": 1360, "h": 765 },
+  "note": "Made-up data",
+  "peer_face": "assets/screens/peer-face.png",
+  "people": {
+    "amara": { "name": "Amara Johnson", "tile": "assets/screens/amara-tile.jpg", "face": "assets/screens/amara-face.jpg" },
+    "daniel": { "name": "Daniel Weiss", "tile": "assets/screens/daniel-tile.jpg", "face": "assets/screens/daniel-face.jpg" },
+    "vikram": { "name": "Vikram Rao", "tile": "assets/screens/vikram-tile.jpg", "face": "assets/screens/vikram-face.jpg" }
+  },
+  "slots": {
+    "proof-meeting": {
+      "kind": "zoom",
+      "chapter": { "hour": 2, "text": "Joins the meeting as a labelled AI", "length": 2.0 },
+      "topic": "Host Payouts · weekly sync",
+      "tiles": ["amara", "daniel", "vikram", "peer"],
+      "join_at": 1.6,
+      "speakers": { "m1": "peer", "m2": "peer", "m3": "amara", "m4": "peer" },
+      "camera": [{ "t": 0, "s": 1, "fx": 0.5, "fy": 0.5 }, { "t": 2.0, "s": 1, "fx": 0.5, "fy": 0.5 }, { "t": 15.0, "s": 1.045, "fx": 0.56, "fy": 0.56 }, { "t": 22.0, "s": 1.07, "fx": 0.6, "fy": 0.6 }]
+    },
+    "proof-slack": {
+      "kind": "slack",
+      "chapter": { "hour": 4, "text": "A question on Slack", "length": 2.0 },
+      "workspace": "Airbnb",
+      "channel": "host-payouts",
+      "members": 48,
+      "channels": ["announcements", "host-payouts", "payments-eng", "payout-alerts", "launch-brazil"],
+      "dms": ["daniel", "amara", "vikram"],
+      "earlier": { "who": "vikram", "time": "11:48 PM", "text": "The Brazil launch review moves to 9:00 AM tomorrow. The deck is in the channel bookmarks." },
+      "question": { "who": "daniel", "time": "4:02 AM", "text": "@Ram did the new retry logic cause Tuesday's spike in failed payouts in Brazil? I need it for the launch review at 9." },
+      "typing": [3.0, 5.0],
+      "reply": {
+        "at": 5.0, "time": "4:03 AM",
+        "p1": "Hi Daniel, I'm Ram's AI Peer, an AI answering while Ram is asleep. It wasn't the retry logic: a partner bank in Brazil was down on Tuesday from 14:10 to 16:40 BRT, and retries then recovered 92% of those payouts within 6 hours.",
+        "sources": ["INC-20431 · Partner bank outage, Brazil", "Payout retries dashboard · last 7 days", "Payout retry v2 · design doc by Ram"],
+        "p2": "Raising the retry limit for Brazil is Ram's call, so I haven't promised anything. It's in his morning brief.",
+        "footer": "Sent on behalf of Ram · AI-generated reply"
+      },
+      "reaction": { "at": 12.0, "text": "🙏 1" },
+      "labels": [{ "at": 9.2, "length": 3.0, "text": "Answers with its sources", "box": "sources" }, { "at": 13.4, "length": 3.6, "text": "Makes no promise for him", "box": "p2" }],
+      "camera": [{ "t": 0, "s": 1, "fx": 0.5, "fy": 0.5 }, { "t": 4.6, "s": 1, "fx": 0.5, "fy": 0.5 }, { "t": 6.2, "s": 1.16, "fx": 0.95, "fy": 0.72 }, { "t": 18, "s": 1.2, "fx": 0.95, "fy": 0.74 }]
+    },
+    "proof-change": {
+      "kind": "change",
+      "chapter": { "hour": 6, "text": "News from across the company", "length": 2.0 },
+      "count": 1284,
+      "scroll": [2.0, 6.6],
+      "feed": [
+        ["Code", "Search", "Rank boost for long-stay listings", "5:58 AM"],
+        ["Ticket", "Messaging", "New templates for check-in instructions", "5:55 AM"],
+        ["Post", "Trust & Safety", "Review queue hours change next week", "5:51 AM"],
+        ["Code", "iOS", "Release 26.4 branch cut", "5:49 AM"],
+        ["Config", "Pricing", "Price floor update for Lisbon", "5:46 AM"],
+        ["Doc", "Host Tools", "Calendar sync v3 design", "5:41 AM"],
+        ["Code", "Guest Payments", "Clearer copy when a card is declined", "5:37 AM"],
+        ["Ticket", "Data Platform", "Nightly jobs move to 03:00 UTC", "5:33 AM"],
+        ["Post", "Infrastructure", "Database upgrade in staging tonight", "5:30 AM"],
+        ["Doc", "Experiences", "Spring roadmap draft", "5:24 AM"],
+        ["Code", "Android", "Fix for the photo upload crash", "5:19 AM"],
+        ["Config", "Payments Risk", "Fraud-score threshold for Brazil payouts: 0.82 to 0.74 on Thursday", "5:12 AM"],
+        ["Ticket", "Support", "New macro for refund questions", "5:08 AM"],
+        ["Code", "Web", "Faster map tiles on search", "5:02 AM"],
+        ["Post", "Finance", "Month-end close calendar", "4:57 AM"],
+        ["Doc", "Customer Care", "Holiday staffing plan", "4:51 AM"]
+      ],
+      "the_one": 11,
+      "message": {
+        "at": 7.0, "time": "6:04 AM",
+        "title": "Heads-up from Payments Risk",
+        "body": "They lower the fraud-score threshold for Brazil payouts on Thursday.",
+        "why": "About 3% more payouts will be held for review, and they will look like failures on your retry dashboard.",
+        "next": "Ask Lena Fischer, its owner, to tag held payouts so your retries skip them.",
+        "left_out": "1,283 other changes left out: none of them touch your work."
+      },
+      "labels": [{ "at": 7.2, "length": 3.8, "text": "Tells him why it matters", "box": "why" }, { "at": 12.2, "length": 4.0, "text": "Leaves the rest out", "box": "left" }],
+      "camera": [{ "t": 0, "s": 1, "fx": 0.5, "fy": 0.5 }, { "t": 6.8, "s": 1, "fx": 0.5, "fy": 0.5 }, { "t": 8.2, "s": 1.06, "fx": 0.75, "fy": 0.5 }, { "t": 18, "s": 1.08, "fx": 0.76, "fy": 0.52 }]
+    },
+    "morning-product-brief": {
+      "kind": "brief",
+      "time": "7:02",
+      "greeting": "Good morning, Ram",
+      "lead": "Four things happened while you slept. One needs you.",
+      "sections": [
+        { "title": "What I did", "accent": "green", "cards": [
+          { "cat": "Meeting · 2:00 AM", "title": "Gave your update at the Host Payouts sync", "why": "Amara asked about Brazil. I left that decision for you." },
+          { "cat": "Slack · 4:03 AM", "title": "Answered Daniel in #host-payouts", "why": "Tuesday's failures came from a bank outage, with sources. I promised nothing." } ] },
+        { "title": "What I learned", "accent": "blue", "cards": [
+          { "cat": "Payments Risk · 6:04 AM", "title": "Brazil's fraud threshold drops on Thursday", "why": "About 3% more payouts will be held. They will look like retry failures." } ] },
+        { "title": "Needs you", "accent": "amber", "cards": [
+          { "cat": "Decision", "title": "Switch on payout retry for Brazil this week?", "why": "Amara needs your answer for the 9:00 launch review.", "buttons": ["Yes, this week", "Not yet"], "decision": true } ] }
+      ],
+      "scroll": [{ "t": 0, "y": 0 }, { "t": 0.9, "y": 0 }, { "t": 2.3, "y": 330 }, { "t": 3.7, "y": 330 }, { "t": 4.7, "y": 700 }],
+      "highlight": [4.5, 6.0]
+    }
+  }
+}

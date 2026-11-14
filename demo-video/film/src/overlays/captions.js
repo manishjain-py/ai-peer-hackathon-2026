@@ -45,8 +45,10 @@ export function createCaptions(film) {
   const measure = (text) => ctx.measureText(text).width;
   const blocks = [...(film.labels || []), ...(film.chapters || [])];
 
-  const lines = film.lines.map((line, i) => {
-    const next = film.lines[i + 1];
+  // A line said inside a product screen (caption "screen") is captioned by that screen, as the app would.
+  const said = film.lines.filter((l) => l.caption !== "screen");
+  const lines = said.map((line, i) => {
+    const next = said[i + 1];
     const from = line.start - LEAD;
     let to = line.start + line.seconds + HOLD;
     if (next) to = Math.min(to, next.start - LEAD - GAP);

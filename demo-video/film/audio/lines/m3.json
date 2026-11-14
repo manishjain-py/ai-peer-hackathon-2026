@@ -1,0 +1,82 @@
+{
+ "what": "m3",
+ "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+ "voice": "Alice",
+ "model": "eleven_multilingual_v2",
+ "text": "Great. Can we switch it on for Brazil this week?",
+ "spoken": "Great. Can we switch it on for Brazil this week?",
+ "request_sha": "ba4835e2176ee9a7",
+ "request": {
+  "text": "Great. Can we switch it on for Brazil this week?",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.55,
+   "similarity_boost": 0.75,
+   "style": 0,
+   "use_speaker_boost": true,
+   "speed": 1.0
+  },
+  "seed": 14112026
+ },
+ "request_id": "gt5PApd9oPgyeU57huIG",
+ "character_cost": "23",
+ "generated_utc": "2026-11-14 19:48:59",
+ "file": "m3.wav",
+ "seconds": 2.73,
+ "raw_seconds": 2.926,
+ "trimmed_front": 0.04,
+ "peak_dbfs": -1.78,
+ "rms_dbfs": -20.89,
+ "words": [
+  {
+   "w": "Great.",
+   "s": 0.0,
+   "e": 0.471
+  },
+  {
+   "w": "Can",
+   "s": 0.622,
+   "e": 0.761
+  },
+  {
+   "w": "we",
+   "s": 0.808,
+   "e": 0.877
+  },
+  {
+   "w": "switch",
+   "s": 0.912,
+   "e": 1.167
+  },
+  {
+   "w": "it",
+   "s": 1.214,
+   "e": 1.284
+  },
+  {
+   "w": "on",
+   "s": 1.33,
+   "e": 1.434
+  },
+  {
+   "w": "for",
+   "s": 1.493,
+   "e": 1.597
+  },
+  {
+   "w": "Brazil",
+   "s": 1.643,
+   "e": 1.969
+  },
+  {
+   "w": "this",
+   "s": 2.038,
+   "e": 2.189
+  },
+  {
+   "w": "week?",
+   "s": 2.247,
+   "e": 2.886
+  }
+ ]
+}

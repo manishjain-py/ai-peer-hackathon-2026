@@ -65,7 +65,9 @@ export function mix(plan, dir, { target = -14, ceiling = -1.5, voiceRms = -20 } 
   const v = plan.lines.map((l, i) => {
     const n = add(l.file);
     const gain = voiceRms - l.rms_dbfs;
-    f.push(`[${n}:a]aresample=${SR},aformat=channel_layouts=stereo,volume=${db(gain).toFixed(4)},adelay=${ms(l.start)}:all=1,apad,atrim=0:${D}[v${i}]`);
+    // a line said inside a call (Draft 3's made-up Zoom meeting) sounds as if it came through the call
+    const call = l.call ? "highpass=f=230,lowpass=f=6400," : "";
+    f.push(`[${n}:a]aresample=${SR},aformat=channel_layouts=stereo,${call}volume=${db(gain).toFixed(4)},adelay=${ms(l.start)}:all=1,apad,atrim=0:${D}[v${i}]`);
     return `[v${i}]`;
   });
   if (v.length) {

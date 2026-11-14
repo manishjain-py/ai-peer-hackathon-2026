@@ -35,6 +35,7 @@ Before a draft render, bring WP3's newest clips in: `node demo-video/film/tools/
 | `audio/narration.json`, `audio/lines/` | Made by `tools/voice.py`: one WAV per line with word timings. |
 | `audio/mix.json` | The music bed and the sound effects, and where they sit. |
 | `product.json` | How each product recording is cut: which seconds, where the zoom goes, the labels. |
+| `screens.json`, `src/scenes/screens.js`, `src/screens.css` | Draft 3 (V19): the four product screens of the public film drawn by code with made-up data (a Zoom meeting, Slack, one change from across the company, the morning brief on Ram's phone). A public build draws them in place of the slates; a private build still uses `product.json` and the recordings. The Peer's face on them is one file, `assets/screens/peer-face.png`. Lines said inside a screen carry `"caption": "screen"` in `audio/script.json`: the screen captions them, and the mix gives them a light call sound. |
 | `build.mjs` | Checks that the timeline holds (parts and slots tile, no two lines touch) and writes a self-contained project folder. |
 | `render.mjs` | Build, check the page, capture the picture, mix the sound, join, measure. |
 | `src/film.js` | The page: one scene per slot, overlays, captions. `src/scenes/`, `src/overlays/`. |

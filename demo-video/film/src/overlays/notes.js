@@ -24,6 +24,11 @@ export async function create(film) {
       layer.append(label);
       items.push({ node: label, from: slot.start + 0.4, to: slot.start + slot.length, rise: 0 });
     }
+    if (slot.use === "scene" && slot.scene === "screens") {
+      const note = el("div.nreal", { text: (slot.screen && slot.screen.note) || "Made-up data" });
+      layer.append(note);
+      items.push({ node: note, from: slot.start + 0.6, to: slot.start + slot.length, rise: 0 });
+    }
     if (slot.use === "scene" && slot.scene === "product") {
       const note = el("div.nreal", { text: "Real recordings: the builder's own AI Peer at work" });
       layer.append(note);

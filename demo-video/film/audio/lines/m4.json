@@ -1,0 +1,92 @@
+{
+ "what": "m4",
+ "voice_id": "XrExE9yKIg1WjnnlVkGX",
+ "voice": "Matilda",
+ "model": "eleven_multilingual_v2",
+ "text": "That's Ram's call, so it's at the top of his morning brief.",
+ "spoken": "That's Rahm's call, so it's at the top of his morning brief.",
+ "request_sha": "ac432ba6130d4772",
+ "request": {
+  "text": "That's Rahm's call, so it's at the top of his morning brief.",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.6,
+   "similarity_boost": 0.75,
+   "style": 0,
+   "use_speaker_boost": true,
+   "speed": 1.0
+  },
+  "seed": 14112026
+ },
+ "request_id": "WnrZqSg93MiZGqWpe6Ck",
+ "character_cost": "29",
+ "generated_utc": "2026-11-14 19:49:00",
+ "file": "m4.wav",
+ "seconds": 2.829,
+ "raw_seconds": 2.879,
+ "trimmed_front": 0.05,
+ "peak_dbfs": -2.28,
+ "rms_dbfs": -20.79,
+ "words": [
+  {
+   "w": "That's",
+   "s": 0.0,
+   "e": 0.24
+  },
+  {
+   "w": "Ram's",
+   "s": 0.298,
+   "e": 0.589
+  },
+  {
+   "w": "call,",
+   "s": 0.635,
+   "e": 1.03
+  },
+  {
+   "w": "so",
+   "s": 1.157,
+   "e": 1.274
+  },
+  {
+   "w": "it's",
+   "s": 1.332,
+   "e": 1.436
+  },
+  {
+   "w": "at",
+   "s": 1.459,
+   "e": 1.517
+  },
+  {
+   "w": "the",
+   "s": 1.552,
+   "e": 1.622
+  },
+  {
+   "w": "top",
+   "s": 1.657,
+   "e": 1.9
+  },
+  {
+   "w": "of",
+   "s": 1.947,
+   "e": 1.993
+  },
+  {
+   "w": "his",
+   "s": 2.04,
+   "e": 2.133
+  },
+  {
+   "w": "morning",
+   "s": 2.179,
+   "e": 2.423
+  },
+  {
+   "w": "brief.",
+   "s": 2.469,
+   "e": 2.829
+  }
+ ]
+}

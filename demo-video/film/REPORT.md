@@ -286,3 +286,33 @@ Still weak, plainly:
    so the voice starts 0.86 s into the take), not measured.
 4. The card texts are invented placeholders; the card and the label are small at 1080p.
 5. The private render's product screens, and the note on them, were not looked at by this session.
+
+## Draft 3, Phase A and B (ai-peer-video-wp2-4, 2026-11-14)
+
+From Manish's view of Draft 2 (`DESIGN.md` V19; the order: `../docs/FEEDBACK-DRAFT-2-2026-11-14.md`).
+
+- **Phase A, the Peer's entrance (samples for Manish).** Research with links:
+  `../research/peer-entrance-2026-11-14.md`. Four concepts on WP3's room, one board each in
+  `../look/peer-entrance/boards/` (it appears, it works at the desk, it goes back, and its one face
+  on a card, a Zoom tile and a Slack reply): D the little Peer (the app's mark come alive) out of
+  the laptop, recommended; A Ram's look out of the phone; B Ram's look out of the laptop; C a night
+  owl out of the phone (flagged: Duolingo, Harry Potter). Two 5 s motion tests (Kling 4.0, key
+  frames): `../look/peer-entrance/motion/peer-motion-tests.mp4` (D, then A). Sent to Manish by the
+  controller at 19:44 UTC. Spent $3.01 (`../ledger/wp2-4.csv`, 19 calls).
+- **Phase B, the four product screens by code** (`screens.json`, `src/scenes/screens.js`,
+  `src/screens.css`), all data made up for an Airbnb payments case (Ram owns host payout
+  retries): the meeting as a Zoom gallery of four (Amara, Daniel, Vikram from the hook's stills,
+  and the Peer as a labelled AI tile with sound rings, a join notice and Zoom-style live captions);
+  Slack (Daniel's question at 4:02 AM, the Peer's reply with three sources, "Ram's call", sent on
+  behalf of Ram); the change (1,284 changes stream past, one locks: Payments Risk lowers Brazil's
+  fraud threshold; the card says why it matters, the rest is left out); the brief on Ram's phone
+  (what I did, what I learned, the one decision, with the buttons). Each has the chapter card and
+  labels the private cut has, and a "Made-up data" note. The push-in lands on the Zoom window.
+- **Four new meeting lines** (m1 to m4: the Peer says it is an AI, gives the update, colleague 1
+  asks about Brazil, the Peer leaves it for Ram), by the controller's yes; ElevenLabs plan, about 620
+  characters with the re-takes, no per-call bill. m1 now says "I'm an AI" (the first two takes were
+  heard as "and AI"). Speech-to-text: m2 and m3 exact; m1 and m4 differ only in spelling Ram as
+  "Rom"/"Rahm". They play with Zoom-style captions on the screen (the film's captions leave them
+  out) and a light call filter in the mix.
+- **Left for Phase C and D:** Manish's pick; the entrance and the return as AI shots; the cards,
+  the tag and `assets/screens/peer-face.png` take the chosen face; the music before 32 s; Draft 3.
