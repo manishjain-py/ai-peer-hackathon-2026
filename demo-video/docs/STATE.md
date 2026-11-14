@@ -182,7 +182,7 @@ V11, C12). So every choice goes to the Attention group with its files
 were sent there again with their material at that time: the three voice samples and the
 animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key frames.
 
-1. **Asked 2026-11-14 12:36 UTC** (Telegram Attention group and the session): usage. The video uses
+1. **Answered 2026-11-14 14:01 UTC, in the session of ai-peer-video-controller-3: "one worker at a time, on Opus 5.5"** (option A; `DESIGN.md` V15 and C13). The question, asked 2026-11-14 12:36 UTC (Telegram Attention group and the session): usage. The video uses
    about 10% of the week's Claude allowance an hour (20% of Fable's). A (recommended): finish
    Draft 1 tonight with what runs now, then pause the workers; new sessions on Opus 5.5 from
    now; one worker at a time after Draft 1. B: keep full speed and move the video to another
