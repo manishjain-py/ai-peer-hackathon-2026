@@ -107,15 +107,23 @@ own. The usage alarm's test is `demo-video/tools/usage-check.sh` (its header sho
   route O (Gemini Omni 1.2 Flash, first and last frame) for the moment the clone rises, route K
   (Kling 4.0 key frames) for one take through several poses, route P's code only as a finishing
   tool; settle the look of the double in the stills first.
-- WP2, the film in code and Draft 1 (`ai-peer-video-wp2`, brief
-  `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2.md`, cap $10): launched 2026-11-14 11:30 UTC.
-  Handed off at 44.8% context on 2026-11-14 12:20 UTC to `ai-peer-video-wp2-2`
-  (`handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-2.md`); branch `video-wp2-film-build` at
-  `a51c934`, no PR yet. Done: the one-command render (proven from a fresh clone), the voice
-  (milestone 1), captions, the night clock and proof cards, the end card, the product screens
-  for Draft 1, WP3's nine drafts pulled in. Running as helpers of the old session: the Earth
-  close, and music with sound effects (up to $5). Left: the push-in, the tag on the double,
-  Draft 1 (two renders), the report, the PR. Money spent by WP2 itself: $0.
+- WP2, the film in code and Draft 1 (`ai-peer-video-wp2`, then `ai-peer-video-wp2-2`; brief
+  `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2.md`, cap $10): **Draft 1 done**, merged as PR 9
+  on 2026-11-14 13:31 UTC (merge commit 1813ac4). Spent $0.94 (8 calls, all music,
+  `demo-video/ledger/wp2.csv`). The full film: `~/.ai-peer/demo-video-private/renders/draft-01.mp4`
+  (this Mac only; 2:00.0, 114.5 MB). The same with slates for the product screens:
+  `demo-video/film/renders/draft-01-slates.mp4` (in git, 40.2 MB). Read
+  `demo-video/film/REPORT.md`. Both: -14.1 LUFS, each line at least 15 dB above the music,
+  speech-to-text 15 of 15, a frame at every cut looked at; nobody has heard it or watched it
+  move. All nine AI shots are WP3's finals. **Open:** (1) the Earth close in Draft 1 is a
+  snapshot (`film/src/scenes/earth-draft1.js`) of a scene the old session's helper was still
+  polishing at 13:17 UTC: when its report
+  (`handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-2-helpers-earth.md`) is in, commit its
+  `film/src/scenes/earth.js` and `film/assets/earth/SOURCE.md`, drop `scene_file` in
+  `film/shots.json`, delete the snapshot, look at 1:48 to 2:00, render again; (2) the music's
+  licence wording, for Manish (the four points are in the report); (3) the colour of the six AI
+  clips that carry no colour tag was not checked. `ai-peer-video-wp2-2` waits for the
+  controller with Manish's feedback (context 45% at the end of Draft 1).
 - WP3, the nine AI shots with people (`ai-peer-video-wp3`, brief
   `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp3.md`, cap $60): **done**, merged as PR 8 on
   2026-11-14 13:20 UTC (merge commit 839a455). Spent $23.10 (95 calls, `demo-video/ledger/wp3.csv`).
@@ -311,3 +319,4 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 | 2026-11-14 13:19 | ai-peer-video-controller-3 | WP3 reported all nine AI shots final and pushed, no successor needed. Looked at the sheet of all nine, checked the manifest (nine final files) and PR 8 (open, draft, mergeable, `ec45cad`), told ai-peer-video-wp2-2 to use them in Draft 1 if it fits its context line. The wait `wp3-report` ended by itself at 13:18 UTC (correction: an earlier wording said the controller stopped it). Ledgers summed: $30.63 of $100 (WP3 $23.10 in 95 rows). Usage log: `2026-11-14T13:17:56Z week=31 fable=61 session=?`. | WP3 is finishing; Draft 1 awaited |
 | 2026-11-14 13:20 | ai-peer-video-wp3 | WP3 done: one still per slot, four looks for the double (B chosen), a draft of all nine, then nine finals with tag tracks, screen corners, a 4K last still and the phone light-up by code; three helpers made the six plain shots and the tools. PR 8 merged (merge commit 839a455). $23.10 of the $60 cap spent. | Done. Nobody watched a clip in motion or heard one, so Manish's eyes and ears are the real test |
 | 2026-11-14 13:23 | ai-peer-video-controller-3 | WP3's closing message: done, PR 8 merged (`839a455`), final ledger $23.10 (95 rows). Checked the merge, its screen, its child process and its three sub-agents, then closed window 3968 and stopped the wait `stall-wp3`. Passed its last notes for WP2 to ai-peer-video-wp2-2. Money at the package's end: $30.63 of $100. Usage log: `2026-11-14T13:23:01Z week=31 fable=62 session=?`. | WP3 closed; Draft 1 awaited |
+| 2026-11-14 13:31 | ai-peer-video-wp2-2 | Draft 1 done and merged (PR 9, `1813ac4`). Built since the hand-off: the push-in through the laptop screen, the "AI Peer" tag on the double, a proven network guard around every private render, a final packing step (40 to 115 MB instead of 1.5 GB); WP3's nine finals pulled in with their tracks, corners and times; the music helper's bed and effects checked and committed, four effects moved to the finals' frames; one blank second in the Slack stand-in covered. The Earth close is a snapshot of the helper's unfinished scene with its development switches off. Two renders, each 2:00.0, -14.1 LUFS, speech-to-text 15 of 15; a frame at every cut looked at. No helper started; no money spent by this session. | Draft 1 with the controller; open: the Earth's final version, the music's terms (Manish), the colour tag of six AI clips |
