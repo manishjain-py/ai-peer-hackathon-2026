@@ -171,29 +171,22 @@ still running is the worker ai-peer-video-wp2-3 (window 3974, PID 16635) with it
   route O (Gemini Omni 1.2 Flash, first and last frame) for the moment the clone rises, route K
   (Kling 4.0 key frames) for one take through several poses, route P's code only as a finishing
   tool; settle the look of the double in the stills first.
-- WP2, the film in code and Draft 1 (`ai-peer-video-wp2`, then `ai-peer-video-wp2-2`, now
-  `ai-peer-video-wp2-3`; briefs `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2.md`, cap $10, and
-  `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-3.md`): **Draft 1 done**, merged as PR 9
-  on 2026-11-14 13:31 UTC (merge commit 1813ac4). Spent $0.94 (8 calls, all music,
-  `demo-video/ledger/wp2.csv`). The full film: `~/.ai-peer/demo-video-private/renders/draft-01.mp4`
-  (this Mac only; 2:00.0, 114.5 MB). The same with slates for the product screens:
-  `demo-video/film/renders/draft-01-slates.mp4` (in git, 40.2 MB). Read
-  `demo-video/film/REPORT.md`. Both: -14.1 LUFS, each line at least 15 dB above the music,
-  speech-to-text 15 of 15, a frame at every cut looked at; nobody has heard it or watched it
-  move. All nine AI shots are WP3's finals. **Round 3 done** (ai-peer-video-wp2-3), merged as
-  PR 10 on 2026-11-14 14:19 UTC (merge commit 974b9db), no money spent: the Earth close is its
-  final version (`film/src/scenes/earth.js`; the snapshot deleted, `scene_file` dropped,
-  `film/assets/earth/SOURCE.md` in git); the end card names NASA as the source of the Earth
-  imagery (a small line from 1:58.0); seen in a render of the close part and one sheet of 1:48
-  to 2:00. The colour check: no change (all nine clips are untagged and the film reads them all
-  one way; the two possible readings differ by a mean delta E of 1.1 to 1.8, visible only side
-  by side, and the pixels cannot show which is right; the numbers and a one-line fix are in
-  `REPORT.md`, "Round 3"). Draft 1's two renders still carry the snapshot: the next full render
-  brings the final close in. **Open:** (1) Manish's feedback on Draft 1, then Draft 2; (2) the
-  music's licence wording, for Manish (the four points are in the report); (3) the Earth's
-  polish list (the report's "Round 3" and the helper's report), first the plain boxes at 1:48.7
-  and the fast streak at 1:49.0 to 1:49.7, which may shimmer in motion. `ai-peer-video-wp2-3`
-  waits for the controller with Manish's feedback (context 18% at 14:19 UTC).
+- WP2, the film in code (`ai-peer-video-wp2`, `ai-peer-video-wp2-2`, `ai-peer-video-wp2-3`, next
+  `ai-peer-video-wp2-4`; first brief `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2.md`, cap $10):
+  **Draft 2 done**, merged as PR 11 on 2026-11-14 15:08 UTC (merge commit 5a7970f), after Draft 1
+  (PR 9, 1813ac4) and round 3 (PR 10, 974b9db: the Earth's final version, the NASA credit, the colour
+  check with no change). Draft 2 = the quicker reveal (V16) and the new hook with Ram (V17). The
+  slates copy: `demo-video/film/renders/draft-02-slates.mp4` (in git, 39.1 MB). The full film:
+  `~/.ai-peer/demo-video-private/renders/draft-02.mp4` (this Mac only, 113.2 MB; wp2-3 read only
+  its numbers: network guard held). Both 2:00.0, -14.1 LUFS, every line at least 15.0 dB above the
+  music; one 20-frame sheet of the slates copy looked at; nobody has watched it move or heard it.
+  Spent: $0.94 (`demo-video/ledger/wp2.csv`) plus wp2-3's $0.616 (`demo-video/ledger/wp2-3.csv`,
+  two takes). Read `demo-video/film/REPORT.md`, "Draft 2". **Open:** (1) Manish's view of Draft 2;
+  (2) the music's licence wording; (3) the weak points in REPORT "Draft 2" (the bed before 32 s was
+  cut for a 12 s hook; the 0.3 s jump past the blanket; the 2 s working loop; the new takes' lips
+  not measured; the card texts are placeholders); (4) the Earth's polish list; (5) Manish's real
+  recordings (Tuesday). `ai-peer-video-wp2-3` handed off at 15:09 UTC (context 43%):
+  `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-4.md`.
 - WP3, the nine AI shots with people (`ai-peer-video-wp3`, brief
   `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp3.md`, cap $60): **done**, merged as PR 8 on
   2026-11-14 13:20 UTC (merge commit 839a455). Spent $23.10 (95 calls, `demo-video/ledger/wp3.csv`).
@@ -463,3 +456,4 @@ and 7 still hold.
 | 2026-11-14 14:51 | ai-peer-video-controller-3 | Manish answered the hook proposal at 14:49 UTC: yes, with the name Ram and "out of office" in colleague 2's line (V17). Sent ai-peer-video-wp2-3 the whole order for Draft 2 (lines, name, cards, timings, the note on the real recordings, paid calls up to $10). Its round 3 was merged at 14:19 UTC (PR 10: the Earth's final version, the NASA credit, the colour check). Armed the wait `draft2`. Asked Manish the music's licence wording. Usage log: `2026-11-14T14:49:26Z week=34 fable=66 session=?`. | Draft 2 is being built; the licence answer is open |
 | 2026-11-14 14:59 | ai-peer-video-controller-3 | Manish answered the music's licence at 14:55 UTC (V18: used for the internal film) and said he would check the fal.ai balance. Context 40%, the worker's 39%: wrote `handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-3.md`, stopped its four waits, added seven lessons, started ai-peer-video-controller-4 on Opus 5.5 in this repo. Usage log: `2026-11-14T14:54:32Z week=34 fable=66 session=?`. | Handed off; this session only closes |
 | 2026-11-14 15:02 | ai-peer-video-controller-4 | Read in on Opus 5.5 (STATE to the end of its Lessons, controller-3's hand-off; context 7%). The worker ai-peer-video-wp2-3 reported 40.1% at 15:00 UTC, to controller-3: both controllers said yes to finishing Draft 2, then its hand-off (a stop guard at 47 to 48%). Closed controller-3 (window 3973) at 15:01 UTC at its request, after the checks. Started the waits usage, stall-wp2-3 and draft2. Usage log: `2026-11-14T15:01:54Z week=34 fable=66 session=?`. |
+| 2026-11-14 15:09 | ai-peer-video-wp2-3 | Draft 2 done and merged (PR 11, `5a7970f`): the quicker reveal (V16: no blanket, rise, get up, walk, sit, then working while the camera moves into the push-in; cut by code) and the new hook with Ram (V17: 15 s, two new takes by WP3's route for $0.616, new h1, h2 and p02 spoken "Rahm", message cards, the sleeper's label "Ram 1:58 AM", the tag "Ram's AI Peer", the proof's note); a mixer hang in ffmpeg 8 found and fixed (sound bit-identical with the old times). Both renders made; one sheet of the slates copy looked at; the private render's numbers only. | Handed off at 43% context: `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-4.md`; nothing of wp2-3 still runs. |
