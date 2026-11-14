@@ -24,6 +24,7 @@
 
 | V4 | Who is the employee in the film? Asked as: A, Manish filmed on his phone (recommended); B, Manish from photos only, AI-generated; C, an invented employee, all AI-made, paid from the $100. | C: an invented employee. No filming of Manish and no photos of him. | "C" (2026-11-14 10:48 UTC) |
 | V5 | How is the video shown at the hackathon? Asked as: A, it is the whole entry and judges watch it alone; B, it plays inside his live pitch; C, both or not sure. | A: the video is the whole entry; judges watch it on their own. So it must explain the product by itself and show it working. | "A" (2026-11-14 11:01 UTC) |
+| V6 | What do the hackathon's rules say about the video, and how do judges score? Asked with: if there are no written rules, say "none", and the controller builds for under 2:00, 1080p, about half the time on the real product working. | No written rules. Build for under 2:00, 1080p, about half the time on the real product working. | "none" (2026-11-14 11:07 UTC) |
 
 ### The controller's own routine calls (undo: tell the controller)
 

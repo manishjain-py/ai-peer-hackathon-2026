@@ -48,9 +48,10 @@ Still running:
 ## Needs Manish
 
 1. The interview, one question at a time, in the controller's session. Answered so far: V1 to
-   V5 in `DESIGN.md` (due date, tools rule, budget, invented employee, the video is the whole
-   entry). Question 5, asked 2026-11-14 11:01 UTC: what the hackathon's rules say about the video and
-   how judges score it (he pastes them, or says "none").
+   V6 in `DESIGN.md`. Question 6, asked 2026-11-14 11:07 UTC: what the product screens show and where
+   they may go. Options: demo data only (recommended as the safe default); real company
+   content kept on this Mac only, never in git or an outside tool; real company content that
+   never leaves his company laptop, with the last assembly done there.
 
 ## Next
 
@@ -84,3 +85,4 @@ Still running:
 | 2026-11-14 10:55 | ai-peer-video-controller-1 | Launched ai-peer-video-wp1 (window 3962, PID 41753, Fable 5.2 at max effort) in the shared checkout with its worktree at `~/repos/ai-peer-video-wp1`; a watcher waits for its character sheet. | Worker reading its brief |
 | 2026-11-14 11:00 | ai-peer-video-controller-1 | The tools report landed: `research/reports/AI video toolkit for demo film.md`. It was briefed before V2, V3 and V4, so it assumes Manish's own face and about $165 to $335; the controller read its first half and sent it to Manish with that caveat. Its open points for him: a Remotion licence ($25 a month if this is company work) or a free tool instead; the hackathon's rules and the company's policy on AI tools and brand; the fal.ai balance. | Sent to Manish |
 | 2026-11-14 11:01 | ai-peer-video-controller-1 | Manish answered question 4: A, the video is the whole entry and judges watch it alone (V5). Question 5 (the hackathon's rules and scoring) asked. | Waiting on question 5 and on WP1's first pictures |
+| 2026-11-14 11:07 | ai-peer-video-controller-1 | Manish answered question 5: no written rules (V6). Question 6 (what the product screens show and where they may go) asked. | Waiting on question 6 and on WP1's first pictures |
