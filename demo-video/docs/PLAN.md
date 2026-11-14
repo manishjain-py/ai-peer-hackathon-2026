@@ -42,3 +42,9 @@ gives his update, answers one question, brings a decision back to him), with its
 at night (a colleague's question, the Peer's answer with sources and no promise); the other
 direction (a change elsewhere caught for him); the morning brief with the one thing that needs
 him. Full screen, no other notifications, slow mouse.
+
+Added 2026-11-14 from WP2's work on the stand-in recordings: record the meeting from a human
+participant's screen in gallery view, so the Peer's own tile and its "AI Peer" label are in
+the picture (the meeting bot's own view shows only the other side's name on black). Record
+full screen on a Retina display: a recording 1280 pixels wide goes soft when the camera
+moves in.
