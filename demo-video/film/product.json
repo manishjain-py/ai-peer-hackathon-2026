@@ -146,8 +146,20 @@
             },
             {
               "at": 5.6,
-              "length": 12.4,
+              "length": 1.12,
               "in": 44.4
+            },
+            {
+              "about": "The recording goes blank for about a second while the thread loads (seen in frames at 60.9 to 61.6): the last full frame is held over it.",
+              "at": 6.72,
+              "length": 1.18,
+              "in": 45.5,
+              "rate": 0.02
+            },
+            {
+              "at": 7.9,
+              "length": 10.1,
+              "in": 46.7
             }
           ],
           "camera": [
