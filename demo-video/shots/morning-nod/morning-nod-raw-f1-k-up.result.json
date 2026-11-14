@@ -1,0 +1,21 @@
+{
+ "request_id": "01a1da29-6452-70f0-88b3-841bd8449850",
+ "billable_units_header": "249.51",
+ "inputs_sent": {
+  "video_url": "https://v3b.fal.media/files/b/0ab26fa6/RxT_kVcUqtpybpZBPYQ1M_morning-nod-raw-f1-k.mp4",
+  "upscale_factor": 1.5,
+  "model": "base",
+  "color_fix": false,
+  "preserve_audio": false,
+  "video_quality": "maximum"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab26fa7/Mov8HJRgQ4w5HlJCqVf-f_remuxed.mp4",
+   "content_type": "video/mp4",
+   "file_name": "remuxed.mp4",
+   "file_size": null
+  },
+  "seed": 1572790186
+ }
+}

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-14T13:00:04Z",
+  "updated_utc": "2026-11-14T13:06:02Z",
   "slots": {
     "hook-1": {
       "clip": "demo-video/shots/hook-1/hook-1-draft-v1.mp4",
@@ -98,13 +98,14 @@
       "note": "draft at 768P; the tap is weak in this take"
     },
     "morning-nod": {
-      "clip": "demo-video/shots/morning-nod/morning-nod-draft-v1.mp4",
-      "grade": "draft",
-      "seconds": 5.167,
+      "clip": "demo-video/shots/morning-nod/morning-nod-final-v1.mp4",
+      "grade": "final",
+      "seconds": 5.042,
       "fps": 24,
-      "use_from_s": 0.3,
+      "use_from_s": 1.0,
       "audio": "none",
-      "note": "draft at 768P: the double fades cleanly, the nod is slight; no tag track yet"
+      "note": "route K (Kling 4.0), first frame morning-nod-b, end frame the same room without the double, upscaled to 1080p; the nod is small (about 1.3 to 2.5 s), the fade runs from 3.3 to 4.4 s; he is more solid than faint before he fades",
+      "tag_track": "demo-video/shots/morning-nod/tag-track-final-v1.json"
     }
   }
 }
