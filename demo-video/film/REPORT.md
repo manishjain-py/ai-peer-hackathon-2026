@@ -316,3 +316,17 @@ From Manish's view of Draft 2 (`DESIGN.md` V19; the order: `../docs/FEEDBACK-DRA
   out) and a light call filter in the mix.
 - **Left for Phase C and D:** Manish's pick; the entrance and the return as AI shots; the cards,
   the tag and `assets/screens/peer-face.png` take the chosen face; the music before 32 s; Draft 3.
+
+## Draft 3, two Phase B fixes (ai-peer-video-wp2-5, 2026-11-14)
+
+- **The push-in's landing (30.0 to 32.4 s).** It went bright mint, then a dark empty window, then
+  the dimmed Zoom: a jump from light to dark. Now the laptop's screen holds the Zoom window itself
+  (a second copy of the meeting scene's picture, `windowContent` in `src/scenes/screens.js`): it
+  comes up through the screen's light as the screen turns (31.0 to 31.6 s), lands lit, and darkens
+  with the chapter card (`windowDim`, one curve shared by both scenes). No mark on this landing (the
+  Peer's tile joins at the lower right at 33.6 s). The private build's landing is unchanged. Frame
+  change at the cut, 32.0 s: 1.16 (its neighbours 1.34 and 0.95).
+- **The brief's phone and the captions (94.5 to 100.5 s).** The phone overlapped the caption box.
+  It is now 0.9 of its size, centred at 41.1% of the height: about 40 px clear above it and above
+  a one-line caption.
+- Check renders in lane wp25 only; no paid call.

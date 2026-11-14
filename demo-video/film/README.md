@@ -39,7 +39,7 @@ Before a draft render, bring WP3's newest clips in: `node demo-video/film/tools/
 | `build.mjs` | Checks that the timeline holds (parts and slots tile, no two lines touch) and writes a self-contained project folder. |
 | `render.mjs` | Build, check the page, capture the picture, mix the sound, join, measure. |
 | `src/film.js` | The page: one scene per slot, overlays, captions. `src/scenes/`, `src/overlays/`. |
-| `src/scenes/pushin.js` | The push-in: from the last frame of the shot before it, through the laptop's screen, into the product's window. Needs the screen's four corners: WP3's `screen_quad`, or `hand_quads` in `shots.json`. |
+| `src/scenes/pushin.js` | The push-in: from the last frame of the shot before it, through the laptop's screen, into the product's window. On the public film the laptop already shows the Zoom screen drawn by code (`screens.js`, `windowContent`): it comes up through the screen's light as the screen turns, and the push lands on it lit. Needs the screen's four corners: WP3's `screen_quad`, or `hand_quads` in `shots.json`. |
 | `src/overlays/tag.js` | The "AI Peer" tag on the double's chest. It follows WP3's `tag_track`, or a track made here. |
 | `tools/tag_track.py` | Makes that track from a few hand-set keys in `shots.json` (`tag_keys`) by following the chest light, into `assets/tags/`. Run it again when the keys or the clip change. |
 | `tools/pull_shots.mjs` | Copies WP3's current clips (and tag tracks, stills, screen corners) from its manifest. |

@@ -6,9 +6,15 @@
 import { el, show, ramp, ease, lerp, clamp, keyframes, envelope, px } from "../lib.js";
 import { markSvg } from "../mark.js";
 
+let sparkles = 0;   // counts the sparkle icons made, at build time only (never per frame)
 const ICON = {
   shield: '<svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5z" fill="#2fbf5b"/><path d="M8 12l3 3 5-6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-  sparkle: '<svg viewBox="0 0 24 24" width="18" height="18"><defs><linearGradient id="zsg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8fb8ff"/><stop offset="1" stop-color="#b98cff"/></linearGradient></defs><path d="M12 1.5c.7 5.3 2.9 7.8 9 8.9-6.1 1.1-8.3 3.6-9 9.1-.7-5.5-2.9-8-9-9.1 6.1-1.1 8.3-3.6 9-8.9z" fill="url(#zsg)"/></svg>',
+  // a new gradient id at each use: the push-in draws a second Zoom window, and a gradient whose
+  // first copy sits in a hidden scene would leave this icon blank
+  get sparkle() {
+    const id = `zsg${++sparkles}`;
+    return `<svg viewBox="0 0 24 24" width="18" height="18"><defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8fb8ff"/><stop offset="1" stop-color="#b98cff"/></linearGradient></defs><path d="M12 1.5c.7 5.3 2.9 7.8 9 8.9-6.1 1.1-8.3 3.6-9 9.1-.7-5.5-2.9-8-9-9.1 6.1-1.1 8.3-3.6 9-8.9z" fill="url(#${id})"/></svg>`;
+  },
   grid: '<svg viewBox="0 0 24 24" width="16" height="16" fill="#d9d9d9"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>',
   mic: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#e8e8e8" stroke-width="1.8" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg>',
   micOff: '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#ff5b5b" stroke-width="2.2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M4 4l16 16"/></svg>',
@@ -239,6 +245,9 @@ function change(S, film, slot) {
 }
 
 // ---- 4. The morning brief on Ram's phone: what it did, what it learned, the one decision ---------
+// The phone at 0.9 of its drawn size, centred at 41.1% of the frame's height (screens.css), in the
+// room above a one-line caption (96 px up, 95 px tall): about 40 px clear above it and below it.
+const PHONE = 0.9;
 function brief(S, film, slot) {
   const peerName = (film.names && film.names.peer) || "AI Peer";
   const node = el("div.mbrief");
@@ -262,7 +271,7 @@ function brief(S, film, slot) {
     page.style.transform = `translateY(${(-y).toFixed(1)}px)`;
     const a = ease.out(ramp(local, 0, 0.45));
     phone.style.opacity = a;
-    phone.style.transform = `translate(-50%, -50%) translateY(${lerp(30, 0, a).toFixed(1)}px) scale(${lerp(0.97, 1, a).toFixed(4)})`;
+    phone.style.transform = `translate(-50%, -50%) translateY(${lerp(30, 0, a).toFixed(1)}px) scale(${(PHONE * lerp(0.97, 1, a)).toFixed(4)})`;
     const e = envelope(local, S.highlight[0], S.highlight[1] + 1, 0.35, 0.3);
     if (decision) decision.style.boxShadow = `0 0 0 ${(3 * e).toFixed(2)}px rgba(22,115,83,${e.toFixed(3)}), 0 0 30px rgba(183,244,207,${(0.9 * e).toFixed(3)})`;
   }
@@ -270,26 +279,65 @@ function brief(S, film, slot) {
 }
 
 const BUILD = { zoom, slack, change, brief };
+const FULL = new Set(["brief"]);   // drawn over the whole frame, not in a window
+
+/** Waits for the pictures a node shows as backgrounds: nothing may load while frames are captured. */
+function picturesReady(node) {
+  return Promise.all([...node.querySelectorAll("*")].map((n) => n.style.backgroundImage).filter((b) => b && b.startsWith("url"))
+    .map((b) => new Promise((ok) => { const i = new Image(); i.onload = i.onerror = ok; i.src = b.slice(5, -2); })));
+}
+
+/**
+ * How dark a window is, by the slot's local time: 0.62 under its chapter card, lifting as the
+ * card leaves. The window the push-in lands on arrives lit, so there the dark comes up with the
+ * card; the push-in draws the same curve before the cut (at negative local times), so the two
+ * scenes meet on the same frame.
+ */
+export function windowDim(S, local, landed) {
+  const chapter = S.chapter ? S.chapter.length : 0;
+  const under = chapter ? 0.62 * (1 - ease.inOut(ramp(local, chapter - 0.45, chapter))) : 0;
+  return landed ? under * ease.inOut(ramp(local, -0.5, 0.4)) : under;
+}
+
+/**
+ * The picture inside a screen's window: the screen drawn by code, under its slow camera. The
+ * scene shows it in its window; the push-in shows a second one in the laptop's screen and lands
+ * on it. render(t) takes the film time; before the slot starts it draws the slot's first moments
+ * (nobody speaks yet, the Peer has not joined).
+ */
+export async function windowContent(slot, film) {
+  const S = slot.screen, W = slot.window;
+  const built = BUILD[S.kind](S, film, slot);
+  const cam = el("div.scam", {}, built.node);
+  Object.assign(cam.style, { width: px(W.w), height: px(W.h) });
+  await picturesReady(cam);
+  return {
+    node: cam,
+    render(t) {
+      const local = t - slot.start;
+      const c = keyframes(S.camera || [{ t: 0, s: 1, fx: 0.5, fy: 0.5 }], local);
+      cam.style.transformOrigin = `${(c.fx * 100).toFixed(2)}% ${(c.fy * 100).toFixed(2)}%`;
+      cam.style.transform = `scale(${c.s.toFixed(4)})`;
+      built.render(local, t);
+    },
+  };
+}
 
 export async function create(slot, film) {
   const S = slot.screen;
   const W = slot.window;
   const start = slot.start, length = slot.length;
-  const chapter = S.chapter ? S.chapter.length : 0;
-  const landed = !!slot.landed;
-  const built = BUILD[S.kind](S, film, slot);
-  // fonts and pictures first: nothing may load while frames are captured
-  await Promise.all([...built.node.querySelectorAll("*")].map((n) => n.style.backgroundImage).filter((b) => b && b.startsWith("url"))
-    .map((b) => new Promise((ok) => { const i = new Image(); i.onload = i.onerror = ok; i.src = b.slice(5, -2); })));
-  if (built.full) {
+  if (FULL.has(S.kind)) {
+    const built = BUILD[S.kind](S, film, slot);
+    await picturesReady(built.node);
     const node = el("div.scene.screens.morning", {}, built.node);
     return { el: node, render: (t) => built.render(t - start, t) };
   }
+  const landed = !!slot.landed;
+  const content = await windowContent(slot, film);
   const glowA = el("div.pglow.a"), glowB = el("div.pglow.b");
-  const cam = el("div.scam", {}, built.node);
-  Object.assign(cam.style, { width: px(W.w), height: px(W.h) });
   const dim = el("div.pdim");
-  const win = el("div.pwin.swin", {}, cam, dim);
+  const win = el("div.pwin.swin", {}, content.node, dim);
   Object.assign(win.style, { left: px(W.x), top: px(W.y), width: px(W.w), height: px(W.h) });
   const node = el("div.scene.product.screens", {}, glowA, glowB, win);
   function render(t) {
@@ -300,12 +348,8 @@ export async function create(slot, film) {
     const out = ease.in(ramp(local, length - 0.22, length));
     win.style.opacity = Math.min(a, 1 - out);
     win.style.transform = `translateY(${lerp(28, 0, a)}px) scale(${lerp(0.965, 1, a) + 0.012 * out})`;
-    const under = chapter ? 0.62 * (1 - ease.inOut(ramp(local, chapter - 0.45, chapter))) : 0;
-    dim.style.opacity = landed ? lerp(1, under, ease.out(ramp(local, 0, 0.45))) : under;
-    const c = keyframes(S.camera || [{ t: 0, s: 1, fx: 0.5, fy: 0.5 }], local);
-    cam.style.transformOrigin = `${(c.fx * 100).toFixed(2)}% ${(c.fy * 100).toFixed(2)}%`;
-    cam.style.transform = `scale(${c.s.toFixed(4)})`;
-    built.render(local, t);
+    dim.style.opacity = windowDim(S, local, landed);
+    content.render(t);
   }
   return { el: node, render };
 }
