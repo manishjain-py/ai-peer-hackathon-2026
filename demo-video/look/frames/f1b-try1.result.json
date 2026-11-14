@@ -1,0 +1,29 @@
+{
+ "request_id": "01a1d9c6-1493-77e1-85c9-71f449675d31",
+ "billable_units_header": "0.069980661",
+ "inputs_sent": {
+  "prompt": "Keep everything in image 1 exactly as it is: the same room, the same camera position and framing, the same light, the same bed in the same place. Change one thing only: the man now lies asleep on top of the made bed instead of under the duvet. He lies on his back in the same place, his head on the same pillow at the left end of the bed, his face turned a little toward the camera, eyes closed, arms at his sides. He wears the same dark charcoal T-shirt and loose dark grey pyjama trousers, and he is barefoot. The off-white duvet lies flat and smooth underneath him and covers the whole bed. He is the man shown in image 2. He is the only person in the room. Photorealistic. Nothing written anywhere.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab26cf7/Yy1eEk-c9bnwKHEeMYgcM_f1.png",
+   "https://v3b.fal.media/files/b/0ab26cec/rJ7chV-BDLDgxQwCkxYnW_a-full.jpg"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26d1b/BECM16ygFhG-QSOGDIIoE_MiJE20BJ.png",
+    "content_type": "image/png",
+    "file_name": "BECM16ygFhG-QSOGDIIoE_MiJE20BJ.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

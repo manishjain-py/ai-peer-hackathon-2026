@@ -1,0 +1,17 @@
+{
+ "request_id": "01a1d9ca-4e67-7d70-a201-e4e536bc95de",
+ "billable_units_header": "19.797401",
+ "inputs_sent": {
+  "prompt": "Add a glowing, see-through double of the sleeping man, with a thin mint-green rim of light, that slowly sits up out of his body, stands up beside the bed and looks down at him. Keep everything else the same.",
+  "video_url": "https://v3b.fal.media/files/b/0ab26d37/AVuLktgPQJXxUOO7JmrtD_p-plate1.mp4",
+  "resolution": "360p"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab26d42/tgP0Ic6GEBn_zfHEPWYE8_e9f915e83fe141dcabb836bc2932d685.mp4",
+   "content_type": "video/mp4",
+   "file_name": "e9f915e83fe141dcabb836bc2932d685.mp4",
+   "file_size": 1824409
+  }
+ }
+}

@@ -1,0 +1,24 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "Keep everything in image 1 exactly as it is: the same room, the same camera position and framing, the same light, and the same man asleep in the bed, who has not moved. Add one new element: a luminous double of the sleeping man is sitting up out of his body. The double is the same man in the same dark T-shirt, but made of soft pale mint-green light (#b7f4cf). It has risen halfway: its head, shoulders and chest are upright above the sleeper, while its waist and legs are still merged inside the sleeping body under the duvet. It faces right, toward the window, with open eyes and a calm, gentle, awake expression. It is partly see-through, so the dark wall and the pillow show faintly through it. A thin bright mint rim of light runs along its outline, a fine shimmer of tiny light particles drifts off its shoulders, and its glow falls softly on the pillow, the duvet and the wall behind it. He looks friendly and capable, never ghostly or frightening. There are exactly two figures in the room: one solid and asleep in the bed, one made of light. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+    "image_urls": [
+      "file:demo-video/look/frames/f1.png"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.085,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.085,
+    "estimate": true,
+    "basis": "the two F1 candidates were billed $0.162 together at 2K with high thinking"
+  },
+  "output": "demo-video/look/frames/f2-try1",
+  "note": "F2, the mint double half-risen out of the body (an edit of f1.png)"
+}

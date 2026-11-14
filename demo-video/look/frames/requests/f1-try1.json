@@ -1,0 +1,25 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "A wide cinematic film still of a small, calm, tasteful modern bedroom at night, seen from a locked camera at chest height, looking straight at the back wall. On the left, the man from image 1 and image 2 lies asleep on his back in a low bed, his head on a pillow at the left end of the bed, his face turned a little toward the camera, eyes closed, peaceful. A soft off-white duvet covers him up to his chest and one arm rests on top of it. He wears the same plain dark charcoal T-shirt. His face, hair, beard and skin tone are exactly as in image 1. The wall behind the bed is plain and dark. In the middle of the back wall, a tall window with thin curtains lets in cool blue moonlight that falls in a soft pool across the open wooden floor between the bed and the desk. On the right, a small wooden desk with a closed laptop on it and a simple wooden chair stand in shadow. A small bedside lamp beside the pillow glows warm and low, so his face and shoulder are lit warm. The rest of the room is deep teal-ink shadow, a dark blue-green. He is the only person in the room. The whole bed, the window and the whole desk are inside the frame, with room above the bed. Photorealistic, like a frame from a premium advertising film shot on a cinema camera with a 28mm lens: deep shadows, gentle film grain, natural colours. Nothing written anywhere, no clock, no posters, no pictures on the walls.",
+    "image_urls": [
+      "file:demo-video/look/characters/a-portrait.jpg",
+      "file:demo-video/look/characters/a-full.jpg"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 2,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.14,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.14,
+    "estimate": true,
+    "basis": "2K pictures of this package were billed $0.062 to $0.069 each; two pictures, high thinking"
+  },
+  "output": "demo-video/look/frames/f1-try1",
+  "note": "F1, the employee asleep in the night room: two candidates"
+}

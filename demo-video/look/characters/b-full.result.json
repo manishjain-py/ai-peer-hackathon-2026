@@ -1,0 +1,28 @@
+{
+ "request_id": "01a1d9bc-6101-72f3-83c6-9b7a00c5ed2c",
+ "billable_units_header": "0.064835781",
+ "inputs_sent": {
+  "prompt": "Photograph the woman from image 1 again, full length from head to bare feet, standing relaxed and facing the camera with her arms loosely at her sides, against the same seamless deep teal-ink backdrop, which curves down into a floor of the same colour, in the same soft warm light from the front left with a faint cool rim light. She wears the same plain dark charcoal crew-neck T-shirt and loose dark grey cotton pyjama trousers. Her face, hair, skin tone and build stay exactly as image 1 shows them. A calm, friendly expression. Premium advertising photography, photorealistic. Nothing written anywhere.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab26cdc/0Qw1gzbMp2eGysLU845eL_b-portrait.jpg"
+  ],
+  "aspect_ratio": "2:3",
+  "resolution": "2K",
+  "output_format": "jpeg",
+  "num_images": 1,
+  "thinking_level": "medium"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26cdc/DIsyJc4_lH2T6e5QRqB9o_3VncpBmG.jpg",
+    "content_type": "image/jpeg",
+    "file_name": "DIsyJc4_lH2T6e5QRqB9o_3VncpBmG.jpg",
+    "file_size": null,
+    "width": 1696,
+    "height": 2528
+   }
+  ],
+  "description": ""
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "Keep everything in image 1 exactly as it is: the same room, the same camera position and framing, the same light, and the same man asleep in the bed, who has not moved. Change two things only. First, a luminous double of the sleeping man now sits on the chair at the desk on the right, seen in profile. The double is an exact copy of the man shown in image 2 and image 3, who is also the man asleep in the bed: the same face, the same short dark hair and trimmed beard, the same warm medium-brown skin, the same dark charcoal T-shirt and the same loose dark grey pyjama trousers. He is made of light: his body is softly luminous and almost solid, only faintly see-through, with a thin bright rim of pale mint-green light (#b7f4cf) all along his outline, as if lit from behind, and a fine shimmer of tiny mint light particles around him. His face and skin keep their own natural brown colour under the glow, and his clothes keep their own dark colours; only the rim, the shimmer and the soft glow he casts are mint. Second, the laptop on the desk is now open in front of him, its screen a soft blank glow with nothing readable on it, and the cool white light of the screen falls on his face, chest and hands. He looks at the screen, calm and focused, his hands on the keyboard. His glow falls softly on the desk, the chair and the wall. He looks friendly and capable, never ghostly or frightening. There are exactly two figures in the room: one solid and asleep in the bed, one made of light. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+    "image_urls": [
+      "file:demo-video/look/frames/f1.png",
+      "file:demo-video/look/characters/a-portrait.jpg",
+      "file:demo-video/look/characters/a-full.jpg"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.085,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.085,
+    "estimate": true,
+    "basis": "try 1 of these frames was billed $0.072 to $0.079 each; two more input pictures add little"
+  },
+  "output": "demo-video/look/frames/f4-try2",
+  "note": "F4, the mint double seated at the desk, the laptop open and lighting its face (an edit of f1.png; try 2: the double must keep the employee's own face, skin and clothes)"
+}

@@ -21,7 +21,8 @@ Reserve: $15 of the $100.
    full-length animatic with labelled slates where shots are missing.
 2. When WP1 reports: the controller reads its `REPORT.md`, shows Manish the side-by-side clone
    clip, writes WP3's brief from the verdict, closes WP1 and starts WP3.
-3. WP3 hands each finished shot to WP2 through `demo-video/film/shots.json` (a path per slot).
+3. WP3 hands each finished shot to WP2 through its manifest. `SHOTS.md` is the shared list: the
+   nine slot ids, their lengths, the colleagues' lines, and the manifest's path and fields.
 4. Draft 1 is done when WP2's render plays end to end with every part present. The controller
    looks at a frame at every cut, then sends it to Manish.
 

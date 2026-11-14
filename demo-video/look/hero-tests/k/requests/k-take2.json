@@ -1,0 +1,22 @@
+{
+  "endpoint": "kling/v4/image-to-video",
+  "inputs": {
+    "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed and never moves. A man sleeps in the bed and stays completely still under the duvet for the whole shot. Very slowly and gradually, a glowing double of him separates from his sleeping body: first only a faint see-through shimmer of his head and shoulders lifts out of his chest, then over three full seconds it becomes the upper body of the same man, sitting up, still partly see-through, with a thin bright rim of mint-green light and a fine shimmer around him. He turns calmly, swings his legs off the bed, stands up at the foot of the bed, more solid now, and looks down at the sleeper with a kind half-smile. He holds still there for the last two seconds. There are only two figures at all times: one solid and asleep in the bed, one glowing. Slow, deliberate, graceful motion with no sudden moves. One continuous shot with no cuts. Sound: quiet night room tone and a soft shimmer as the double rises, with no music and no speech.",
+    "start_image_url": "file:demo-video/look/frames/f1.png",
+    "middle_image_urls": [
+      "file:demo-video/look/frames/f2.png"
+    ],
+    "end_image_url": "file:demo-video/look/frames/f3.png",
+    "duration": 10,
+    "resolution": "720p"
+  },
+  "expect": {
+    "units": 10,
+    "unit": "second of video at 720p",
+    "unit_price": 0.157,
+    "cost_usd": 1.57,
+    "basis": "fal.ai page 2026-11-14: $0.157 per second at 720p; take 1 was billed exactly this"
+  },
+  "output": "demo-video/look/hero-tests/k/k-take2",
+  "note": "route K take 2: Kling 4.0, only the separation beat, keyframes F1 > F2 > F3, a slow rise, 10 s at 720p"
+}

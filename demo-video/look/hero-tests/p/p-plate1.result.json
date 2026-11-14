@@ -1,0 +1,23 @@
+{
+ "request_id": "01a1d9c6-e25b-7dc1-bd13-2f50f448cc07",
+ "billable_units_header": "19.200000000000003",
+ "inputs_sent": {
+  "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed on a tripod and never moves. The man sleeps peacefully in the bed and barely moves: only his slow, gentle breathing lifts the duvet a little. The thin curtains stir very slightly. Nothing else changes and nobody else is in the room. One continuous shot with no cuts and no zoom.",
+  "image_url": "https://v3b.fal.media/files/b/0ab26cf7/Yy1eEk-c9bnwKHEeMYgcM_f1.png",
+  "duration": 12,
+  "resolution": "768P",
+  "prompt_expansion_mode": "disabled"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab26d21/7wwuJLjQ6eufE3Alv6-FZ_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "7wwuJLjQ6eufE3Alv6-FZ_minimax-h3.mp4",
+   "file_size": 6945340
+  },
+  "expanded_prompt": null,
+  "timings": {
+   "inference": 5.733130774000529
+  }
+ }
+}

@@ -1,0 +1,13 @@
+{
+  "out": "demo-video/look/frames/frames.jpg",
+  "width": 2400,
+  "columns": 2,
+  "title": "The night room: four key frames, one locked camera",
+  "subtitle": "Character A. F2 to F4 are edits of F1, so the room and the camera are the same in all four.",
+  "cells": [
+    {"image": "demo-video/look/frames/f1.png", "label": "F1", "text": "asleep"},
+    {"image": "demo-video/look/frames/f2.png", "label": "F2", "text": "the double rises out of the body"},
+    {"image": "demo-video/look/frames/f3.png", "label": "F3", "text": "the double stands by the bed"},
+    {"image": "demo-video/look/frames/f4.png", "label": "F4", "text": "the double at the desk, laptop open"}
+  ]
+}

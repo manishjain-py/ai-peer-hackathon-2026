@@ -1,0 +1,25 @@
+{
+ "request_id": "01a1d9ba-26fc-7e70-9bef-318a416ed60c",
+ "billable_units_header": "0.063188289",
+ "inputs_sent": {
+  "prompt": "A studio portrait photograph of a South Asian man in his early thirties, with warm medium-brown skin, short dark hair and a neatly trimmed short beard. Head and shoulders, facing the camera, with a calm, friendly, capable expression and a slight closed-mouth smile. He wears a plain dark charcoal crew-neck T-shirt with nothing printed on it. The backdrop is a seamless deep teal-ink wall, a very dark blue-green. One large soft warm key light from the front left, and a faint cool rim light on the right edge of his hair and shoulder. Shot on a full-frame camera with an 85mm lens at f/2.8, with natural skin texture, visible pores and a true-to-life skin tone, no beauty retouching. Premium advertising photography, photorealistic. Nothing written anywhere.",
+  "aspect_ratio": "4:5",
+  "resolution": "2K",
+  "output_format": "jpeg",
+  "num_images": 1,
+  "thinking_level": "medium"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26ccd/OwRt1I2YmmvYko9u30tvx_yOqmeUoJ.jpg",
+    "content_type": "image/jpeg",
+    "file_name": "OwRt1I2YmmvYko9u30tvx_yOqmeUoJ.jpg",
+    "file_size": null,
+    "width": 1856,
+    "height": 2304
+   }
+  ],
+  "description": ""
+ }
+}

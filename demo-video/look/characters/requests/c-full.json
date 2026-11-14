@@ -1,0 +1,24 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "Photograph the woman from image 1 again, full length from head to bare feet, standing relaxed and facing the camera with her arms loosely at her sides, against the same seamless deep teal-ink backdrop, which curves down into a floor of the same colour, in the same soft warm light from the front left with a faint cool rim light. She wears the same plain dark charcoal crew-neck T-shirt and loose dark grey cotton pyjama trousers. Her face, hair, skin tone and build stay exactly as image 1 shows them. A calm, friendly expression. Premium advertising photography, photorealistic. Nothing written anywhere.",
+    "image_urls": [
+      "file:demo-video/look/characters/c-portrait.jpg"
+    ],
+    "aspect_ratio": "2:3",
+    "resolution": "2K",
+    "output_format": "jpeg",
+    "num_images": 1,
+    "thinking_level": "medium"
+  },
+  "expect": {
+    "units": 0.065,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.065,
+    "estimate": true,
+    "basis": "a 2K picture was billed $0.0632 (ledger row 1); one input image adds little"
+  },
+  "output": "demo-video/look/characters/c-full",
+  "note": "character C, full body, from the portrait"
+}

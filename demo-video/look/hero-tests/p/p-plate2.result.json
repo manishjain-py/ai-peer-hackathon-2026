@@ -1,0 +1,23 @@
+{
+ "request_id": "01a1d9c7-398d-7fb3-af56-36f5ef7b96f4",
+ "billable_units_header": "19.200000000000003",
+ "inputs_sent": {
+  "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed on a tripod and never moves. The man lying on the bed smoothly sits up, swings his legs off the side of the bed and stands up at the foot of the bed. He pauses and glances back at the bed, then walks calmly across the room to the desk on the right, sits down on the chair and opens the laptop, whose screen lights his face. Calm, graceful, unhurried movement. He is the only person in the room. One continuous shot with no cuts and no zoom.",
+  "image_url": "https://v3b.fal.media/files/b/0ab26d23/jKUYdZ3I7DoWkvVAjjbz8_f1b-try1.png",
+  "duration": 12,
+  "resolution": "768P",
+  "prompt_expansion_mode": "balanced"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab26d23/ve9DwAgZ1lKgvb1kloGC9_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "ve9DwAgZ1lKgvb1kloGC9_minimax-h3.mp4",
+   "file_size": 6854250
+  },
+  "expanded_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: <Picture 1> Cinematic, live-action, Static Shot of a dimly lit bedroom at night. A man (S1), in his late 30s with a dark t-shirt and trousers, lies flat on his back on a bed with white linens. In the background, a window with sheer white curtains allows cool moonlight to filter into the room. To the right, a minimalist wooden desk and chair sit against the wall. A warm lamp on the nightstand casts a soft amber glow on the left side. The camera remains completely fixed on a tripod throughout the sequence. S1 moves smoothly and gracefully to sit up, his movements unhurried. He swings his legs over the side of the bed and pushes himself up to a standing position at the foot of the bed. He pauses for a brief moment, turning his head to glance back at the empty bed with a contemplative expression. He then turns and walks calmly across the wooden floor toward the desk on the right. He sits in the chair with a fluid motion and reaches out to open a sleek laptop. As the lid opens, the bright cool-toned light from the screen illuminates his face, highlighting his features against the dark room. The shot remains a single, continuous take with no cuts or camera movements.\n\noverall_soundscape: The soft rustle of bed linens as the man sits up, followed by the muffled thud of bare feet hitting the wooden floor. Quiet, rhythmic footsteps echo across the room, ending with the faint creak of the wooden chair as he sits and the sharp, electronic click of a laptop lid being opened.\n\nnon_diegetic_music: N/A",
+  "timings": {
+   "inference": 5.795541514999968
+  }
+ }
+}

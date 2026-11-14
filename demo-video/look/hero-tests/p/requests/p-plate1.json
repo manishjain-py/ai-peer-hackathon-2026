@@ -1,0 +1,19 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed on a tripod and never moves. The man sleeps peacefully in the bed and barely moves: only his slow, gentle breathing lifts the duvet a little. The thin curtains stir very slightly. Nothing else changes and nobody else is in the room. One continuous shot with no cuts and no zoom.",
+    "image_url": "file:demo-video/look/frames/f1.png",
+    "duration": 12,
+    "resolution": "768P",
+    "prompt_expansion_mode": "disabled"
+  },
+  "expect": {
+    "units": 12.7,
+    "unit": "second of video at 768P",
+    "unit_price": 0.028,
+    "cost_usd": 0.3556,
+    "basis": "fal.ai page 2026-11-14: $0.028 per second at 768P until 15 November; the output can run 0.7 s longer than asked"
+  },
+  "output": "demo-video/look/hero-tests/p/p-plate1",
+  "note": "route P plate 1: the sleeper barely moving, 12 s at 768P"
+}
