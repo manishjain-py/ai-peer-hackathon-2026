@@ -33,7 +33,7 @@ set-ups: ask Manish before spending on them.
 | Session | Window | Session URL | Worktree | Branch | PR | Job |
 |---|---|---|---|---|---|---|
 | ai-peer-video-controller-2 | 3964 | https://claude.ai/code/session_01Nfn5h7PShJsTBPY7urCJaZ | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | The live controller; Fable 5.2, max effort, PID 49247 |
-| ai-peer-video-controller-1 | 2952 | https://claude.ai/code/session_01Nfn5h5eNL9YLJMnBQpKKMf | the same checkout | main | none | Handed off at 11:30 UTC. It only waits for its film-watch helper, then saves `DRAFT07-WATCH.md` on `main`. Other sessions message it as `learnlikemagic-f7`; PID 38022. Manish opened its window himself: ask him before closing it. |
+| ai-peer-video-controller-1 | 2952 | https://claude.ai/code/session_01Nfn5h5eNL9YLJMnBQpKKMf | the same checkout | main | none | Handed off at 11:30 UTC; nothing of its own still runs. Its second-by-second watch of the September film is `DRAFT07-WATCH.md` (committed by controller-2). Other sessions message it as `learnlikemagic-f7`; PID 38022. Manish opened its window himself: ask him before closing it. |
 | ai-peer-video-wp1 | 3962 | https://claude.ai/code/session_01Nfn5h7gC1ucD3V5X1FSeSk | `~/repos/ai-peer-video-wp1` (launched in the shared checkout) | video-wp1-look-test | none yet | WP1: three possible employees, the night frames, the clone shot three ways; cap $15; Fable 5.2, max effort, PID 41753 |
 | ai-peer-video-wp2 | 3963 | https://claude.ai/code/session_01Nfn5h95MaF4HSLH6cbpUbu | `~/repos/ai-peer-video-wp2` (launched in the shared checkout, with `CLAUDE_NO_IDLE_PING=1`) | video-wp2-film-build | none yet | WP2: the film in code and Draft 1; cap $10; Fable 5.2, max effort, PID 48241 |
 
@@ -41,13 +41,11 @@ Still running:
 
 | What | PID | Log | Stop command |
 |---|---|---|---|
-| A helper of controller-1 watching the September film second by second (its report becomes `demo-video/docs/DRAFT07-WATCH.md`) | inside controller-1's session (window 2952) | none | It ends by itself |
 | Wait `wp1-end`: ends when WP1's `demo-video/look/REPORT.md` (unchanged for 90 s) and `look/hero-tests/hero-compare.mp4` both exist in `~/repos/ai-peer-video-wp1`, or when PID 41753 is gone | 51860 | `wp1-end.log` | `kill 51860` |
-| Wait `wp2-voice-samples`: ends when `~/repos/ai-peer-video-wp2/demo-video/film/audio/samples/` holds three audio files, or when PID 48241 is gone; sends one routine Telegram line | 51870 | `wp2-voice-samples.log` | `kill 51870` |
 | Wait `wp2-draft-1`: ends when `~/.ai-peer/demo-video-private/renders/draft-01.mp4` exists (unchanged for 90 s), or when PID 48241 is gone; sends one routine Telegram line | 51880 | `wp2-draft-1.log` | `kill 51880` |
 | Wait `worker-stall`: ends when a live worker's transcript (and its sub-agents') has been silent for 25 minutes | 51892 | `worker-stall.log` | `kill 51892` |
 
-The four waits are runs of `demo-video/tools/wait-for.sh` (its header shows the usage) in the
+The waits are runs of `demo-video/tools/wait-for.sh` (its header shows the usage) in the
 background of ai-peer-video-controller-2: each one's end wakes that session, and they end with
 it. Their logs and PID files are in
 `/private/tmp/claude-501/-Users-manishjain-repos-ai-peer-hackathon-2026/7cff79c0-397e-4114-8fb5-e987355dc176/scratchpad/waits/`.
@@ -68,22 +66,31 @@ A successor starts its own from the tests written in the table.
 
 ## Needs Manish
 
-1. Nothing blocks the build. Open for him, in this order: (a) recordings from his company
+Nothing blocks the build.
+
+1. **Asked** (recorded 2026-11-14 11:44 UTC; in the session with the three audio files, and on the
+   Attention group): which voice narrates as the Peer? 1 Matilda, the product's own voice (recommended:
+   the real product speaks with it in the meeting, so the Peer stays one character); 2 River,
+   relaxed and neutral; 3 Brian, deep and warm. Draft 1 is built with voice 1 meanwhile.
+2. Still to come, one at a time: (a) his view of WP1's side-by-side clone clip, when WP1's
+   report is in; (b) may the old controller's window (2952) be closed; (c) a look at the fal.ai
+   credit, which no key can read: WP3 needs up to $60 more; (d) the recordings from his company
    laptop by Tuesday 17 November morning, India time, into `~/.ai-peer/demo-video-private/`
-   (the list is in `PLAN.md`; told to him 2026-11-14 11:28 UTC); (b) his pick among three voice
-   samples, when WP2 has them; (c) his view of WP1's side-by-side clone clip; (d) Draft 1.
+   (the list is in `PLAN.md`; told to him 2026-11-14 11:28 UTC); (e) Draft 1.
 
 ## Next
 
 1. WP1 ends: read its `demo-video/look/REPORT.md` (in `~/repos/ai-peer-video-wp1` until it
-   merges), look at `hero-compare.mp4` by frames, send the clip to Manish, write WP3's brief
-   from the verdict (`PLAN.md`), close WP1's window, start `ai-peer-video-wp3`.
-2. WP2's first milestone: send Manish the three voice samples, ask him to pick.
+   merges), send `hero-compare.mp4` to Manish (the controller has looked at eight frames of
+   it: the Kling route holds the man's face and the glow best; Omni changes his face in the
+   middle; the two-plate composite reaches the desk but its cut-out is rough), finish WP3's
+   brief from the verdict (`PLAN.md`, `SHOTS.md`), close WP1's window, start `ai-peer-video-wp3`.
+2. Manish's voice pick: pass it to WP2 if it is not voice 1.
 3. Draft 1 from WP2: look at a frame at every cut, then send it to Manish.
 4. Sum the ledgers (`demo-video/ledger/*.csv`) into "Money spent" at each package's end; tell
    Manish at $50 and at $80.
-5. When `demo-video/docs/DRAFT07-WATCH.md` lands on `main` from ai-peer-video-controller-1, that
-   session has nothing left. Manish opened its window (2952) himself: ask him before closing it.
+5. ai-peer-video-controller-1 has nothing left. Manish opened its window (2952) himself: ask him
+   before closing it.
 
 ## Settled, do not re-open
 
@@ -114,3 +121,4 @@ A successor starts its own from the tests written in the table.
 | 2026-11-14 11:28 | ai-peer-video-controller-1 | Manish approved the story for a first draft (V10). The controller wrote `PLAN.md` and WP2's brief, chose a licence-free build (C9) and the Draft 1 voice and money split (C10). | WP2 being launched |
 | 2026-11-14 11:30 | ai-peer-video-controller-1 | Launched ai-peer-video-wp2 (window 3963, PID 48241). Context at 43%: wrote `handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-1.md` and started ai-peer-video-controller-2 in this repo. WP1's ledger stood at $5.03 at 11:25 UTC. | Handed off; controller-1 only waits for its film-watch helper |
 | 2026-11-14 11:35 | ai-peer-video-controller-2 | Took over from ai-peer-video-controller-1. Checked by the screen and the system: both workers and the old controller are alive and working; WP1's ledger sums to $6.60. Started four background waits (`demo-video/tools/wait-for.sh`): WP1's end, WP2's voice samples, WP2's Draft 1, and a worker silent for 25 minutes. Told both workers its name. | Waiting on WP1's end and on WP2's voice samples |
+| 2026-11-14 11:44 | ai-peer-video-controller-2 | WP2's three voice samples appeared at 11:41 UTC (the wait ended): measured (2.4 to 2.8 s each, about -21 LUFS), sent to Manish in the session with the question on the Attention group. Wrote `SHOTS.md`, the shared list of the nine AI shots and the hand-over from WP3 to WP2, in step with WP2's script (the colleagues' words and voices are WP2's; decision C11), and told WP2. Committed `DRAFT07-WATCH.md` for ai-peer-video-controller-1 and passed its six lessons to WP2. Looked at eight frames of WP1's side-by-side clip. | Waiting on WP1's report, on Manish's voice pick and on WP2's Draft 1 |
