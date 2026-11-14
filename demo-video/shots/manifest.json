@@ -1,0 +1,89 @@
+{
+  "updated_utc": "2026-11-14T12:13:10Z",
+  "slots": {
+    "hook-1": {
+      "clip": "demo-video/shots/hook-1/hook-1-draft-v1.mp4",
+      "grade": "draft",
+      "seconds": 5.167,
+      "fps": 24,
+      "use_from_s": 0.5,
+      "audio": "lipsync",
+      "line_at_s": 0.9,
+      "note": "draft at 768P: the mouth was driven by WP2's sound file, the sync is not yet checked frame by frame; a shoulder enters the foreground at the left"
+    },
+    "hook-2": {
+      "clip": "demo-video/shots/hook-2/hook-2-draft-v1.mp4",
+      "grade": "draft",
+      "seconds": 4.458,
+      "fps": 24,
+      "use_from_s": 0.5,
+      "audio": "lipsync",
+      "line_at_s": 0.9,
+      "note": "draft at 768P: the mouth was driven by WP2's sound file, the sync is not yet checked frame by frame"
+    },
+    "hook-3": {
+      "clip": "demo-video/shots/hook-3/hook-3-draft-v1.mp4",
+      "grade": "draft",
+      "seconds": 3.042,
+      "fps": 24,
+      "use_from_s": 0.5,
+      "audio": "lipsync",
+      "line_at_s": 0.9,
+      "note": "draft at 768P: the mouth was driven by WP2's sound file, the sync is not yet checked frame by frame; he does not lean back yet"
+    },
+    "hook-sleeper": {
+      "clip": "demo-video/shots/hook-sleeper/hook-sleeper-draft-v1.mp4",
+      "grade": "draft",
+      "seconds": 5.167,
+      "fps": 24,
+      "use_from_s": 0.8,
+      "audio": "none",
+      "note": "draft at 768P; a very slow push-in"
+    },
+    "reveal-rise": {
+      "clip": "demo-video/shots/reveal-rise/reveal-rise-draft-v1.mp4",
+      "grade": "draft",
+      "seconds": 10.125,
+      "fps": 24,
+      "use_from_s": 0.5,
+      "audio": "none",
+      "note": "draft at 768P (H3 Max Turbo, first and last frame): rise, tuck, stand in one take; the phone is lit from the first frame (the light-up comes by code in the final); no tag track yet"
+    },
+    "reveal-desk": {
+      "clip": "demo-video/shots/reveal-desk/reveal-desk-draft-v1.mp4",
+      "grade": "draft",
+      "seconds": 10.125,
+      "fps": 24,
+      "use_from_s": 1.1,
+      "audio": "none",
+      "note": "draft at 768P (H3 Max Turbo, first and last frame); the window ends on the clip's last frame for the push-in; no tag track or screen corners yet"
+    },
+    "morning-wake": {
+      "clip": "demo-video/shots/morning-wake/morning-wake-draft-v1.mp4",
+      "grade": "draft",
+      "seconds": 5.875,
+      "fps": 24,
+      "use_from_s": 0.6,
+      "audio": "none",
+      "note": "draft at 768P"
+    },
+    "morning-brief": {
+      "clip": "demo-video/shots/morning-brief/morning-brief-draft-v1.mp4",
+      "grade": "draft",
+      "seconds": 5.167,
+      "fps": 24,
+      "use_from_s": 0.9,
+      "audio": "none",
+      "note": "draft at 768P; the tap is weak in this take"
+    },
+    "morning-nod": {
+      "clip": "demo-video/shots/morning-nod/morning-nod-draft-v1.mp4",
+      "grade": "draft",
+      "seconds": 5.167,
+      "fps": 24,
+      "use_from_s": 0.3,
+      "audio": "none",
+      "note": "draft at 768P: the double fades cleanly, the nod is slight; no tag track yet"
+    }
+  }
+}

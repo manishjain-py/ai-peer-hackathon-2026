@@ -1,0 +1,24 @@
+{
+ "request_id": "01a1d9f7-406d-7a21-b7b5-c499108ab243",
+ "billable_units_header": "8.8",
+ "inputs_sent": {
+  "prompt": "A locked-off wide shot of a bedroom at sunrise, warm golden light through the curtains. The camera is fixed and never moves. The man in the bed finishes a slow, happy stretch, lowers his arm and sits up in bed, rested and content. He reaches over to the bedside table, picks up his phone, holds it in front of him and looks at it. Calm, natural, unhurried movement. He is the only person in the room. One continuous shot with no cuts, no zoom, no music, no speech, no subtitles and no text.",
+  "image_url": "https://v3b.fal.media/files/b/0ab26e51/BceADDS-vFsupJSBAFuMe_morning-wake-a.png",
+  "end_image_url": "https://v3b.fal.media/files/b/0ab26e5d/DVVtrJSJ3X-5REcEaXWze_morning-wake-b.png",
+  "duration": 5.5,
+  "resolution": "768P",
+  "prompt_expansion_mode": "balanced"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab26e5e/dMM0fRQmvpd46Gz0wum7t_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "dMM0fRQmvpd46Gz0wum7t_minimax-h3.mp4",
+   "file_size": 3498571
+  },
+  "expanded_prompt": "How the reference pictures align with the target video \u2014 Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 1) aligns with the 5.50-second mark of the target video.\n\nintegrated_multimodal_description: [Shot 1] Cinematic, live-action, Static Shot of a serene bedroom at sunrise. The walls are painted a deep teal, and warm, golden sunlight filters through sheer white curtains, casting long, soft shadows across the light wood floor. In the first frame, (S1) a man with dark hair and a short beard, wearing a grey t-shirt, lies in bed under a white duvet, his right arm raised toward the ceiling in a slow, satisfied stretch. He has a peaceful expression on his face, eyes closed in a moment of contentment. As he completes the stretch, he slowly lowers his arm and sits up toward the edge of the bed, the duvet gathering around his waist. His movements are calm and unhurried. He reaches over to the minimalist wooden bedside table on the left, picks up a dark smartphone, and holds it in front of his face. He gazes at the screen with a gentle, relaxed smile, appearing fully rested. The camera remains completely fixed throughout the entire 5.5-second duration, maintaining a wide composition of the quiet morning scene.\n\noverall_soundscape: The room is filled with the soft, rhythmic rustle of cotton linens as the man moves and sits up. A faint, wooden creak of the bed frame is heard under his weight, followed by the subtle tap of the phone being lifted from the wooden surface. Outside, a nearly silent morning creates a peaceful, still atmosphere.\n\nnon_diegetic_music: N/A",
+  "timings": {
+   "inference": 2.107283938001274
+  }
+ }
+}

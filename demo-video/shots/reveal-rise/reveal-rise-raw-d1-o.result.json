@@ -1,0 +1,20 @@
+{
+ "request_id": "01a1d9f7-413c-7a73-aee0-3bedcfa2e3aa",
+ "billable_units_header": "10.496242",
+ "inputs_sent": {
+  "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed and never moves. A phone glows mint on the bedside table. A man lies asleep in the bed and does not move. Very slowly and gradually, a double of him made of soft mint light sits up out of his sleeping body, half see-through at first, with a gentle glow inside its chest and hair-thin threads of light still joining it to the sleeper. The double looks down at the sleeper, moves to sit on the edge of the bed and gently pulls the duvet up over the sleeper's shoulder. Then it stands up at the foot of the bed, more solid now, and looks back at the sleeper with a calm, kind face, while the last fine threads of light stretch between them. The sleeper stays still. There are only two figures at all times: one solid and asleep, one made of light. The double never looks at the camera. Slow, graceful, deliberate motion with no sudden moves. One continuous shot with no cuts, no zoom, no music, no speech, no subtitles and no text.",
+  "image_url": "https://v3b.fal.media/files/b/0ab26e33/cODHC8kSUmOcpoLZ_wO1r_night-phone-lit.png",
+  "end_image_url": "https://v3b.fal.media/files/b/0ab26e5d/AxQkyDzIyivnDHqTLenG7_night-stand.png",
+  "aspect_ratio": "16:9",
+  "resolution": "360p",
+  "duration": 10
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab26e61/3ZktyB96wA7qoqdzfaW65_3e665ca5269546d58a0d4e9416ea8353.mp4",
+   "content_type": "video/mp4",
+   "file_name": "3e665ca5269546d58a0d4e9416ea8353.mp4",
+   "file_size": 1810521
+  }
+ }
+}

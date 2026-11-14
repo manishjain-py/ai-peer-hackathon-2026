@@ -1,0 +1,24 @@
+{
+ "request_id": "01a1d9f7-4bf6-76a0-a069-1285a485ef81",
+ "billable_units_header": "16.0",
+ "inputs_sent": {
+  "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed and never moves. A man sleeps in the bed and stays completely still. His double, made of soft mint light, stands at the foot of the bed. The double turns away from the bed, and the fine threads of light that joined him to the sleeper let go and fade. He walks calmly across the room to the desk on the right, pulls out the chair, sits down and opens the laptop. The laptop's screen lights up, a plain white glow, and its light falls on his face. He rests his hands on the keyboard and looks at the screen, calm and focused, and holds still. There are only two figures at all times: one solid and asleep, one made of light. The double never looks at the camera. Calm, graceful, unhurried motion. One continuous shot with no cuts, no zoom, no music, no speech, no subtitles and no text.",
+  "image_url": "https://v3b.fal.media/files/b/0ab26e5d/sh7SE9Lihb-RMJMiOFxs4_night-stand.png",
+  "end_image_url": "https://v3b.fal.media/files/b/0ab26e5e/B0hDgW9d8w02gg7teVhhq_night-desk.png",
+  "duration": 10,
+  "resolution": "768P",
+  "prompt_expansion_mode": "balanced"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab26e5e/kkjLTQRnsvZloB0PI5Stz_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "kkjLTQRnsvZloB0PI5Stz_minimax-h3.mp4",
+   "file_size": 6700459
+  },
+  "expanded_prompt": "How the reference pictures align with the target video \u2014 Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 1) aligns with the 10.00-second mark of the target video.\n\nintegrated_multimodal_description: [Shot 1] Cinematic, locked-off wide shot of a dimly lit bedroom at night. A solid man (S1) with dark hair and a beard sleeps soundly in a bed under a white duvet, remaining completely still. At the foot of the bed stands his double (S2), a figure composed entirely of ethereal, soft mint-green light and shimmering energy. Fine, glowing threads of mint light physically connect S1's chest to S2's chest. The room is bathed in cool blue tones, with soft moonlight filtering through sheer curtains. At 00:02.000, S2 slowly gracefully turns his body away from the bed. As he moves, the delicate glowing threads snap cleanly and fade into the dark air. S2 walks with a calm, unhurried gait across the wooden floor toward a desk on the right side of the frame. At 00:05.500, S2 reaches out, pulls out the wooden chair, and sits down with fluid movement. At 00:07.500, S2 opens a laptop; a brilliant, plain white glow emits from the screen, casting a sharp light onto his mint-translucent face. S2 rests his hands on the keyboard and stares at the screen with a calm, focused expression, holding perfectly still until the end of the shot. The camera remains static throughout the sequence.\n\noverall_soundscape: The room is quiet, save for the faint, rhythmic breathing of the sleeping man. A delicate, crystalline humming sound occurs as the light threads snap, followed by the soft, muffled thuds of bare feet on wood. The creak of the wooden chair being pulled out and the soft click of the laptop opening complete the quiet atmosphere.\n\nnon_diegetic_music: N/A",
+  "timings": {
+   "inference": 4.714830868000718
+  }
+ }
+}

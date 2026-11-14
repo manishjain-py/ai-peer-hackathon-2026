@@ -1,0 +1,23 @@
+{
+ "request_id": "01a1d9f7-3ea4-7762-a8ca-b8e3246d018f",
+ "billable_units_header": "8.0",
+ "inputs_sent": {
+  "prompt": "A bedroom in warm morning sunlight. The camera is fixed and never moves. A faint double of a man, made of soft light and clearly see-through, stands beside the desk and looks at the man sitting in the foreground. The double gives him one small, warm nod with a gentle closed-lip smile. Then, over two seconds, the double slowly fades away into the sunlight until he is completely gone, leaving only the desk, the wall and the sunlit curtain. The man in the foreground stays where he is and barely moves. The double never looks at the camera. One continuous shot with no cuts, no zoom, no music, no speech, no subtitles and no text.",
+  "image_url": "https://v3b.fal.media/files/b/0ab26e5d/VLbbFhat-HTmMj6DCvWKq_morning-nod.png",
+  "duration": 5.0,
+  "resolution": "768P",
+  "prompt_expansion_mode": "balanced"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab26e5e/mg7yA0YCkfg6t_afzUvwu_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "mg7yA0YCkfg6t_afzUvwu_minimax-h3.mp4",
+   "file_size": 2940918
+  },
+  "expanded_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: <Picture 1> Cinematic, live-action, Static Shot of a sun-drenched bedroom filled with warm morning light. In the foreground, a man (S1) is seen from behind, sitting on the edge of the bed facing a wooden desk. Across the room, a faint double of the man (S2) stands tall; S2 is composed of soft, translucent light, making him clearly see-through against the teal-colored wall. The S2 looks directly at S1 with a gentle, closed-lip smile and gives one small, warm nod of acknowledgment. S1 remains seated in the foreground, perfectly still, only barely moving with his natural breathing as he watches the spectral figure. Over the next two seconds, S2 begins to slowly fade away, his luminous form dissolving into the bright golden sunlight streaming through the sheer curtains. By the end of the shot, S2 is completely gone, leaving only the static desk, the chair, and the sunlit wall. The camera remains completely fixed throughout the entire sequence.\n\noverall_soundscape: A quiet, peaceful atmosphere filled with the faint, airy sound of dust motes dancing in the light and the soft, rhythmic breathing of the man in the foreground. A distant, muffled breeze rustles the sheer curtains near the window.\n\nnon_diegetic_music: N/A",
+  "timings": {
+   "inference": 1.6166883089999828
+  }
+ }
+}

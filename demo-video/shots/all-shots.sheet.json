@@ -1,0 +1,54 @@
+{
+  "out": "demo-video/shots/all-shots.jpg",
+  "width": 2400,
+  "columns": 1,
+  "title": "The nine AI shots",
+  "subtitle": "0 final, 9 draft. Five frames across each clip. Manifest of 2026-11-14T12:13:10Z.",
+  "cells": [
+    {
+      "image": "demo-video/shots/hook-1/hook-1-strip.jpg",
+      "label": "hook-1",
+      "text": "draft, 5.167 s, sound: lipsync | draft at 768P: the mouth was driven by WP2's sound file, the sync is not yet checked frame by frame; a shoulde"
+    },
+    {
+      "image": "demo-video/shots/hook-2/hook-2-strip.jpg",
+      "label": "hook-2",
+      "text": "draft, 4.458 s, sound: lipsync | draft at 768P: the mouth was driven by WP2's sound file, the sync is not yet checked frame by frame"
+    },
+    {
+      "image": "demo-video/shots/hook-3/hook-3-strip.jpg",
+      "label": "hook-3",
+      "text": "draft, 3.042 s, sound: lipsync | draft at 768P: the mouth was driven by WP2's sound file, the sync is not yet checked frame by frame; he does n"
+    },
+    {
+      "image": "demo-video/shots/hook-sleeper/hook-sleeper-strip.jpg",
+      "label": "hook-sleeper",
+      "text": "draft, 5.167 s, sound: none | draft at 768P; a very slow push-in"
+    },
+    {
+      "image": "demo-video/shots/reveal-rise/reveal-rise-strip.jpg",
+      "label": "reveal-rise",
+      "text": "draft, 10.125 s, sound: none | draft at 768P (H3 Max Turbo, first and last frame): rise, tuck, stand in one take; the phone is lit from the f"
+    },
+    {
+      "image": "demo-video/shots/reveal-desk/reveal-desk-strip.jpg",
+      "label": "reveal-desk",
+      "text": "draft, 10.125 s, sound: none | draft at 768P (H3 Max Turbo, first and last frame); the window ends on the clip's last frame for the push-in; "
+    },
+    {
+      "image": "demo-video/shots/morning-wake/morning-wake-strip.jpg",
+      "label": "morning-wake",
+      "text": "draft, 5.875 s, sound: none | draft at 768P"
+    },
+    {
+      "image": "demo-video/shots/morning-brief/morning-brief-strip.jpg",
+      "label": "morning-brief",
+      "text": "draft, 5.167 s, sound: none | draft at 768P; the tap is weak in this take"
+    },
+    {
+      "image": "demo-video/shots/morning-nod/morning-nod-strip.jpg",
+      "label": "morning-nod",
+      "text": "draft, 5.167 s, sound: none | draft at 768P: the double fades cleanly, the nod is slight; no tag track yet"
+    }
+  ]
+}

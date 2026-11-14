@@ -1,0 +1,23 @@
+{
+ "request_id": "01a1d9f1-916c-7d22-a0f9-533b1679a4ce",
+ "billable_units_header": "8.0",
+ "inputs_sent": {
+  "prompt": "A man is fast asleep in bed at night. He breathes slowly and evenly: his chest and the duvet rise and fall gently, and that is the only movement. His eyes stay closed and his face stays peaceful. The lamp glows steadily. The camera pushes in toward him extremely slowly and smoothly. Quiet night, soft room tone. One continuous shot with no cuts, no music, no speech, no subtitles and no text.",
+  "image_url": "https://v3b.fal.media/files/b/0ab26e38/00QhQuypghlMjpJLwWsln_hook-sleeper.png",
+  "duration": 5.0,
+  "resolution": "768P",
+  "prompt_expansion_mode": "balanced"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab26e39/PmEA2PYTzLAiK6FPgDffa_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "PmEA2PYTzLAiK6FPgDffa_minimax-h3.mp4",
+   "file_size": 4204789
+  },
+  "expanded_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] Cinematic, live-action shot. The scene opens on <Picture 1>, showing a man with dark hair and a light beard fast asleep in bed at night. He is lying on a white pillow, covered by a thick, light-colored duvet up to his chest. In the foreground foreground, a bedside lamp with a white cylindrical shade casts a warm, steady golden glow on the side of his face, while the rest of the room remains in deep, cool shadows. A smartphone lies on the wooden nightstand next to the lamp. The camera pushes in with extremely small amplitude at very slow speed toward the man's face. Throughout the continuous shot, the only visible movement is his rhythmic, slow breathing; his chest and the heavy duvet rise and fall gently in synchronization. His eyes remain closed, and his expression stays peaceful and undisturbed. The lighting from the lamp remains constant, casting soft shadows across the fabric textures.\n\noverall_soundscape: The scene is dominated by a deep, quiet room tone of a still house at night. The faint, rhythmic sound of slow nasal breathing is clearly audible, accompanied by the occasional soft rustle of the fabric duvet as the chest moves.\n\n***\n\nnon_diegetic_music: N/A",
+  "timings": {
+   "inference": 1.6497628679999252
+  }
+ }
+}
