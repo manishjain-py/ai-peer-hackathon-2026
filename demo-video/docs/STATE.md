@@ -84,7 +84,9 @@ Nothing blocks the build.
    merges), send `hero-compare.mp4` to Manish (the controller has looked at eight frames of
    it: the Kling route holds the man's face and the glow best; Omni changes his face in the
    middle; the two-plate composite reaches the desk but its cut-out is rough), finish WP3's
-   brief from the verdict (`PLAN.md`, `SHOTS.md`), close WP1's window, start `ai-peer-video-wp3`.
+   brief from the verdict (the draft, with its launch lines, is
+   `handoffs/DRAFT-HANDOFF-ai-peer-video-wp3.md`; a read-only helper of the controller is
+   checking its facts and fal.ai's live prices), close WP1's window, start `ai-peer-video-wp3`.
 2. Manish's voice pick: pass it to WP2 if it is not voice 1.
 3. Draft 1 from WP2: look at a frame at every cut, then send it to Manish.
 4. Sum the ledgers (`demo-video/ledger/*.csv`) into "Money spent" at each package's end; tell
