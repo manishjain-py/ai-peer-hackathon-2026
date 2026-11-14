@@ -1,5 +1,3 @@
-> DRAFT by ai-peer-video-controller-2, not yet a brief. The section marked @@VERDICT@@ waits on WP1's report; a helper is checking the facts. The final file will be `HANDOFF-2026-11-14-ai-peer-video-wp3.md`, and this draft is then deleted. The launch script is at the end.
-
 # Brief: ai-peer-video-wp3, 2026-11-14
 
 For Fable 5.2 (`claude-fable-5-2`), max effort. Spawned by ai-peer-video-controller-2. Dated,
@@ -44,9 +42,9 @@ through your manifest.
 4. `demo-video/look/REPORT.md`: WP1's test of the clone shot three ways, its defects and its
    advice. Then look at `demo-video/look/frames/frames.jpg` and
    `demo-video/look/characters/characters.jpg`.
-5. The header of `demo-video/tools/falgen.py`: the generation tool with the cost ledger. Every
-   paid call goes through it. WP1's other tools are beside it (`sheet.py`, `vgrid.sh`,
-   `double_composite.py`, `person_matte.py`): read a header when you need the tool.
+5. `demo-video/tools/README.md`: WP1's tools. Every paid call goes through `falgen.py`, the
+   generation tool with the cost ledger (copy `gen-wp1.sh` for your ledger and cap). Read
+   another tool's header only when you need it.
 
 Do not read the research notes (WP1 tested what they claim), `film/` or `docs/build/`.
 
@@ -61,11 +59,11 @@ Do not read the research notes (WP1 tested what they claim), `film/` or `docs/bu
   `git -C /Users/manishjain/repos/ai-peer-hackathon-2026 worktree add /Users/manishjain/repos/ai-peer-video-wp3 video-wp3-ai-shots`.
 - It needs: `FAL_KEY` in the shell environment (never print it, never commit it); ffmpeg 8
   (this build has **no `drawtext` filter**), Node 23, Python 3 and `uv` (all installed).
-- Two other worktrees are **read-only** for you. WP1's,
-  `/Users/manishjain/repos/ai-peer-video-wp1`: its session is closed, and any picture or clip
-  that did not reach `main` through Git LFS is still there. WP2's,
-  `/Users/manishjain/repos/ai-peer-video-wp2`: the film; you read the colleagues' spoken lines
-  from `demo-video/film/audio/lines/h1.wav`, `h2.wav` and `h3.wav` there.
+- WP1's pictures, clips, tools and ledger are merged, so they are in your worktree
+  (`demo-video/look/`, `demo-video/tools/`, `demo-video/ledger/wp1.csv`).
+- WP2's worktree, `/Users/manishjain/repos/ai-peer-video-wp2`, is **read-only** for you: you
+  read the colleagues' spoken lines from `demo-video/film/audio/lines/h1.wav`, `h2.wav` and
+  `h3.wav` there, and nothing else.
 - Your ledger is `demo-video/ledger/wp3.csv`; give `falgen.py` the cap `60` and the session
   name `ai-peer-video-wp3`.
 - Scratch files go in your session's scratchpad, never in `/tmp`.
@@ -93,7 +91,50 @@ Do not read the research notes (WP1 tested what they claim), `film/` or `docs/bu
 
 ## What WP1 found, and the route for the double
 
-@@VERDICT@@
+WP1 made the rise three ways (`demo-video/look/REPORT.md`; the side-by-side film is
+`demo-video/look/hero-tests/hero-compare.mp4`). What this brief takes from it:
+
+- **The stills steer everything.** Both video models followed the key-frame stills closely, and
+  a still costs 7 cents. Settle every look in a still before any video of it.
+- **Give the model the man's own pictures every time** (`look/characters/a-portrait.jpg` and
+  `a-full.jpg`) and say that his skin and clothes keep their own colours and only the rim of
+  light is mint. Without that the double became another, lighter-skinned man.
+- **Route O** (`google/gemini-omni-flash/v1.2/image-to-video`, a first and a last frame, 3 to
+  10 s): the most graceful rise, a see-through shape that lifts out and turns solid; about a
+  minute per take. Weak: in the middle of the rise the double is in profile and in shadow, so
+  his face cannot be told as the employee's, and he sits on the bed's edge for about 2.5 s.
+- **Route K** (`kling/v4/image-to-video` with the stills as key frames): it hits every key
+  frame, so the face is his wherever a still shows it; 3 to 5 minutes per take. Weak: the motion
+  between key frames can be rushed or awkward. Ask for it "very slowly and gradually", and one
+  action per clip.
+- **Route P** (two cheap plates and code) is not the hero look: its glow reads as an effect
+  laid on top. Keep its parts: cheap locked plates (`minimax/h3-max-turbo/image-to-video`), the
+  free person matte (`person_matte.py`) and the glow code (`double_composite.py`).
+- Omni's edit mode gave a faceless outline ghost: skip it.
+
+The route, as the controller sets it:
+
+1. **Drafts** (milestone 1): route O at its lowest resolution for every slot it can do, and
+   `minimax/h3-max-turbo` where a plain moving plate is enough.
+2. **Push the look of the double in stills before any final video.** WP1's honest note: today
+   the double is "a man with a glowing outline and sparkles" and "people have seen it before".
+   Manish asked for "absolutely next level". Make three or four still variants of the standing
+   double (WP1's F3) that go further while he stays the same man, calm and friendly: for
+   example a body of soft light that is densest at the chest and thins toward the hands and
+   feet; light that moves inside him like slow breath; fine threads of light that still join
+   him to the sleeper as he separates; the room's surfaces catching his glow. Put them on one
+   labelled sheet, `demo-video/shots/stills/double-looks.jpg`, choose the strongest yourself,
+   send the controller the sheet's path, and go on with your choice. The controller shows
+   Manish; his eyes may change it.
+3. **`reveal-rise`, the signature shot:** make the final both ways from the same new stills,
+   route O and route K, and step through both. Put the better one in the manifest and send the
+   controller both paths. Manish was sent WP1's side-by-side film on 14 November and asked
+   which rise he likes; the controller passes his answer on. Do not wait for it.
+4. **`reveal-desk`:** one action per clip. Start from the real last frame of the chosen
+   `reveal-rise` take; route O first, route K if O drifts from the stills.
+5. The see-through moment and the mint signature may be strengthened by code afterwards (a
+   clean still of the locked room mixed back in under the double's matte; WP1's glow code), but
+   only where the result looks lit together with the room, never laid on top.
 
 ## The contract
 
@@ -206,22 +247,3 @@ launch: ai-peer-video-controller-2, which answers to that name). Read it before 
 - **The shared checkout:** your shell starts in it after every command. Use absolute paths.
 - **This Mac's global instructions** ask for a `## TLDR` at the end of each reply and plain
   words: follow them in what you write to people.
-
-## Launch (run by the controller after WP1 merges)
-
-```
-git -C /Users/manishjain/repos/ai-peer-hackathon-2026 fetch origin
-git -C /Users/manishjain/repos/ai-peer-hackathon-2026 worktree add /Users/manishjain/repos/ai-peer-video-wp3 -b video-wp3-ai-shots origin/main
-git -C /Users/manishjain/repos/ai-peer-video-wp3 branch --unset-upstream
-```
-
-Then this script, opened in a new Terminal window with `osascript` (`do script`), and the window that was in front put back:
-
-```
-#!/bin/zsh
-# Launches the worker session ai-peer-video-wp3 (no keystrokes needed).
-cd /Users/manishjain/repos/ai-peer-hackathon-2026 || exit 1
-export ANTHROPIC_MODEL="claude-fable-5-2"
-exec claude --model "claude-fable-5-2" --effort max --name ai-peer-video-wp3 --remote-control ai-peer-video-wp3 \
-  "You are ai-peer-video-wp3, a worker on the AI Peer demo video in this repo. The live controller is ai-peer-video-controller-2 unless demo-video/docs/STATE.md on the default branch names a newer one. Read, in order: demo-video/docs/STATE.md on origin/main, then demo-video/docs/handoffs/HANDOFF-2026-11-14-ai-peer-video-wp3.md. That brief is your job: follow it end to end, then stop as it says. Your worktree already exists at /Users/manishjain/repos/ai-peer-video-wp3 (branch video-wp3-ai-shots); write nothing in the shared checkout you start in."
-```
