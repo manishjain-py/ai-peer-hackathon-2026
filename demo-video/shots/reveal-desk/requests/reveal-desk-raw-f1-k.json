@@ -1,0 +1,19 @@
+{
+  "endpoint": "kling/v4/image-to-video",
+  "inputs": {
+    "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed and never moves. A man sleeps in the bed and stays completely still. His double, made of soft mint light with a gentle glow inside its chest, stands at the foot of the bed, joined to the sleeper by a few hair-thin threads of light. The double gives the sleeper one last calm look, then turns toward the desk; the threads of light let go, drift and fade away. He walks calmly and unhurriedly across the room to the desk on the right, pulls the chair out a little, sits down and opens the laptop. The laptop's screen lights up, a plain white glow, and its light falls on his face. He rests his hands on the keyboard and looks at the screen, calm and focused, and holds still for the last second. There are only two figures at all times: one solid and asleep, one made of light. The double keeps its soft mint glow and its own natural skin colour the whole time, and never looks at the camera. Calm, graceful motion with no sudden moves. One continuous shot with no cuts, no zoom, no music, no speech, no subtitles and no text.",
+    "start_image_url": "file:demo-video/shots/reveal-desk/first-frame.png",
+    "end_image_url": "file:demo-video/shots/stills/night-desk.png",
+    "duration": 10,
+    "resolution": "720p"
+  },
+  "expect": {
+    "units": 10,
+    "unit": "second of video at 720p",
+    "unit_price": 0.157,
+    "cost_usd": 1.57,
+    "basis": "fal.ai page 2026-11-14: $0.157 per second at 720p (resolution is set)"
+  },
+  "output": "demo-video/shots/reveal-desk/reveal-desk-raw-f1-k",
+  "note": "reveal-desk final take 1, route K: first frame is the real last frame of reveal-rise take 3 (upscaled), end frame night-desk, 10 s at 720p"
+}
