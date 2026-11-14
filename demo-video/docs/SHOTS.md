@@ -13,10 +13,10 @@ handle, so the edit can trim. All nine show invented people; employee A is the m
 
 | Slot id | Part | Film time | In the film | Deliver | What we see | Sound in the clip |
 |---|---|---|---|---|---|---|
-| `hook-1` | The hook | 0:00.0 to 0:03.4 | 3.4 s | 4.5 s | Daytime, a bright office. A colleague looks up from her phone, pleasantly surprised, and says her line to someone beside the camera. | Her line (below) |
-| `hook-2` | The hook | 0:03.4 to 0:05.6 | 2.2 s | 3.5 s | Late afternoon, another city: a small meeting room. A colleague glances at the wall screen (turned away from us) and says his line. | His line |
-| `hook-3` | The hook | 0:05.6 to 0:07.8 | 2.2 s | 3.5 s | Evening, a third place: a home desk under a lamp. A colleague leans back from her laptop, half laughing, and asks her line. | Her line |
-| `hook-sleeper` | The hook | 0:07.8 to 0:12.0 | 4.2 s | 5.5 s | Cut to night. Employee A is fast asleep (the night room, closer than the wide frame; slow, even breathing). | None (the Peer speaks over it) |
+| `hook-1` | The hook | 0:00.0 to 0:03.4 | 3.4 s | 4.5 s | Daytime, a bright office. A colleague (a woman) looks up from her phone, pleasantly surprised, and says her line to someone beside the camera. | Her line (below) |
+| `hook-2` | The hook | 0:03.4 to 0:06.3 | 2.9 s | 4 s | Late afternoon, another city: a small meeting room. A colleague (a man) glances at the wall screen (turned away from us) and says his line. | His line |
+| `hook-3` | The hook | 0:06.3 to 0:08.3 | 2.0 s | 3 s | Evening, a third place: a home desk under a lamp. A colleague (a man) leans back from his laptop, half laughing, and asks his line. | His line |
+| `hook-sleeper` | The hook | 0:08.3 to 0:12.0 | 3.7 s | 5 s | Cut to night. Employee A is fast asleep (the night room, closer than the wide frame; slow, even breathing). | None (the Peer speaks over it) |
 | `reveal-rise` | The reveal | 0:12.0 to 0:21.0 | 9.0 s | 10 s | The wide night room, locked camera. The phone on the bedside table lights up. A double of him, made of mint light, rises out of him, stands, and pulls the blanket over the sleeper's shoulder. | None |
 | `reveal-desk` | The reveal | 0:21.0 to 0:32.0 | 11.0 s | 9 s of action | The same frame. The double walks to the desk, sits and opens the laptop; its screen lights its face. The last 2 to 3 seconds of the window are WP2's push-in on the laptop screen, made by code from the clip's last frame. | None |
 | `morning-wake` | The morning | 1:30.0 to 1:34.5 | 4.5 s | 5.5 s | The same room at sunrise, warm light through the window. He wakes rested, sits up and picks up his phone. | None |
@@ -28,16 +28,26 @@ inside 1:30 to 1:48. The total is about 44 seconds of AI footage.
 
 ## The colleagues' lines for Draft 1 (the controller's call, `DESIGN.md` C11)
 
-They speak on camera, one short line each, natural and unhurried, never excited:
+The words and the voices are WP2's: `demo-video/film/audio/script.json` and the spoken files
+`demo-video/film/audio/lines/h1.wav`, `h2.wav` and `h3.wav` in
+`/Users/manishjain/repos/ai-peer-video-wp2` (ElevenLabs voices that the September film ended on,
+so Manish's ear has passed them). Read on 2026-11-14:
 
-1. `hook-1`: "It's two a.m. for him. His AI Peer just answered."
-2. `hook-2`: "His update's already here."
-3. `hook-3`: "Does he ever sleep?"
+| Slot | Line | Voice | Length |
+|---|---|---|---|
+| `hook-1` | "2 AM where he is, and I've got my answer." | a woman, British English (`h1.wav`) | 2.6 s |
+| `hook-2` | "His update's already here. His Peer gave it." | a man, American English (`h2.wav`) | 2.1 s |
+| `hook-3` | "Does he ever sleep?" | a man, Indian English (`h3.wav`) | 1.1 s |
 
 Then the Peer, over `hook-sleeper` (WP2's narration): "He does. I'm the one who's up."
 
-If a colleague's speech does not look and read natural after a few takes, that shot becomes a
-silent reaction (the same action, mouth closed or turned away), and WP2 adds the line as a
+The colleagues speak on camera. WP3 makes each mouth follow WP2's spoken file (a lip-sync or
+audio-driven model), so the words are exact and the voice is one Manish knows. WP3 reads those
+files where they are and never writes there; if WP2 changes a line, WP2 tells the controller.
+The film's sound for these shots is WP2's file, laid in by WP2.
+
+If a colleague's speech does not look natural after a few takes, that shot becomes a silent
+reaction (the same action, mouth closed or turned away), and WP2 lays the line over it as a
 voice and a caption. WP3 says which in the manifest (`audio`).
 
 ## Rules for every clip
@@ -49,8 +59,9 @@ voice and a caption. WP3 says which in the manifest (`audio`).
 - The look is in WP3's brief and in `demo-video/look/` (the night frames F1 to F4): real-looking
   and cinematic, night in deep teal-ink `#152b31`, people lit warm, the double glowing mint
   `#b7f4cf`.
-- Nothing private: no real person's photo or name, no company or product name in any prompt,
-  and nothing from `~/.ai-peer/` goes to any tool.
+- Nothing private: no real person's photo or name and no company's name in any prompt or
+  upload, and nothing from `~/.ai-peer/` goes to any tool. "AI Peer", the film's own subject,
+  may be heard in a spoken line.
 
 ## How a clip reaches the film
 
@@ -83,8 +94,9 @@ copies what it uses into its own project. Neither session writes in the other's 
 - `clip` and `tag_track` are paths from the root of WP3's worktree. `grade` is `draft` (a cheap,
   low-resolution take, good enough to show the shot moving) or `final`.
 - `use_from_s` is where the film window should start inside the clip.
-- `audio` is `dialogue` (the colleague's line is in the clip, with `"line": "..."` beside it),
-  `ambient`, or `none`.
+- `audio` is `lipsync` (the mouth follows WP2's spoken file; `"line_at_s"` beside it says where
+  in the clip the line starts), `reaction` (a hook shot with no speech on camera), `ambient`
+  (the model's own room sound, which WP2 may drop), or `none`.
 - `tag_track` is given for the three slots that show the double (`reveal-rise`, `reveal-desk`,
   `morning-nod`): a JSON list with one entry per frame, `{"f": 0, "x": 0.41, "y": 0.37, "w": 0.06,
   "on": true}`: the middle of the double's chest and the width of its shoulders, both as
