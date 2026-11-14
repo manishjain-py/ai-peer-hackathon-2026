@@ -1,0 +1,16 @@
+{
+ "request_id": "01a1d9f9-fd8f-74b0-8c6c-7967e63269c3",
+ "billable_units_header": "1",
+ "inputs_sent": {
+  "prompt": "Instrumental only: no vocals, no voice, no choir, no spoken words, no vocal samples. A bed of music for a premium technology advert, exactly 120 BPM, 4/4, a perfectly steady tempo, in D major. Light, airy, warm and modern: muted synth plucks and soft mallets carry the rhythm together with claps, finger snaps and shakers; a soft round kick; the bass is gentle and restrained, never booming, no heavy sub bass; felt piano chords and airy pads. Optimistic, curious, elegant, uncluttered; never corporate-cheesy, never aggressive. [0:00-0:16] Intro: light and curious, a clear pulse from the very first beat, a playful plucked motif. [0:16-0:32] Softer and dreamy, a feeling of wonder: fewer drums, shimmering pads, a gentle riser, and a short fill at the end. [0:32-1:30] Main groove: confident but light, steady and uncluttered, the pluck motif over soft drums; one small new layer joins every sixteen seconds. [1:30-1:48] Breakdown: warm and open, piano and pads with light percussion, like a sunrise. [1:48-1:58] Finale: the full band returns, bigger and wider, with a warm swell. [1:58-2:04] Ending: one final resolving chord that rings out to silence."
+ },
+ "result": {
+  "audio": {
+   "url": "https://v3b.fal.media/files/b/0ab26e72/vjV4Y2x9nozJLp8vVcjU7_output.mp3",
+   "content_type": "audio/mpeg",
+   "file_name": "output.mp3",
+   "file_size": 2959971
+  },
+  "lyrics": "[[A0]]\n[[B1]]\n[[C2]]\n[[D3]]\n[[E4]]\n[[F5]]"
+ }
+}

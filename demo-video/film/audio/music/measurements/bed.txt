@@ -1,0 +1,49 @@
+# Measurements of bed.wav, made 2026-11-14 by the tools in ../tools (beatfit.py cuts, profile.py --film, joincheck.py). Nobody heard this file: these numbers are the evidence.
+
+demo-video/film/audio/music/bed.wav: 121.0 s, measured 120.0023 BPM, whole-bed grid error -0.9 ms
+  grid error: where the beats of the 8 s around the cut sit against the film's half-second grid (+ is late).
+  onset on the cut: the strongest new sound within 60 ms of the cut, and how far it stands above the passage; blank = a held note or a rest there.
+  cut s   grid error ms (conf)   onset on the cut ms (x floor)
+     0.0     +1.4 (2.6)             +0.0 (nan)
+     3.5     +1.1 (2.5)             +0.7 (3.1)
+     6.5     +1.1 (2.5)                  (0.0)
+     8.5     +1.6 (3.0)                  (0.0)
+    12.0     +0.5 (2.6)             -1.3 (10.1)
+    21.0     +3.3 (0.7)                  (0.0)
+    30.0     -0.6 (0.9)             +0.7 (2.3)
+    32.0     -0.6 (1.5)             -3.3 (9.7)
+    54.0     -1.0 (2.6)             -1.3 (4.3)
+    72.0     -1.0 (1.9)             -1.3 (3.7)
+    90.0     -0.0 (1.6)            -29.3 (3.6)
+    94.5     +0.8 (0.7)                  (0.0)
+   100.5     +0.4 (0.6)                  (0.0)
+   104.5     -0.9 (0.8)                  (0.0)
+   108.0     -1.7 (1.6)             -3.3 (3.7)
+   116.0     -0.9 (1.8)             +4.7 (4.8)
+  largest grid error: +3.3 ms at 21 s
+
+demo-video/film/audio/music/bed.wav: 121.000 s
+                       rms dB     sub   bass lowmid    mid   high  centr.  ons/s   width    peak  key
+whole (0-120)           -19.4    -7.8   -3.9   -4.0  -16.1  -22.6     343    3.8    -5.4    -1.5  D maj   0.79 LUFS -16.1
+hook 0-12               -20.5   -52.4   -8.8   -0.7  -18.4  -31.5     455    3.0    -9.1    -1.5  F# min  0.50 LUFS -17.2
+reveal 12-32            -22.7   -25.6   -5.4   -1.6  -19.5  -31.6     443    3.5    -2.5    -4.9  D maj   0.70 LUFS -18.4
+proof-meeting 32-54     -18.5    -6.7   -3.3   -5.2  -17.0  -24.0     276    6.0    -9.4    -2.2  D maj   0.84 LUFS -16.4
+proof-slack 54-72       -18.9    -7.8   -3.7   -4.2  -16.5  -22.4     335    5.0    -5.4    -3.4  D maj   0.76 LUFS -15.8
+proof-change 72-90      -18.8    -8.0   -4.0   -3.9  -16.0  -22.3     349    5.4    -5.0    -3.4  D maj   0.70 LUFS -15.5
+morning 90-108          -20.6   -27.7   -4.4   -2.1  -20.0  -33.2     416    3.8    -2.2    -1.6  D maj   0.80 LUFS -16.3
+planet 108-116          -16.1    -7.0   -3.1   -5.6  -15.0  -22.4     312    5.4    -6.5    -1.5  A maj   0.89 LUFS -13.4
+end card 116-120        -22.9   -51.3  -10.7   -0.4  -19.6  -32.7     436    1.2    -7.9    -1.5  D maj   0.86 LUFS -16.8
+rise 14.5-20            -22.0   -17.7   -4.7   -2.1  -17.3  -26.7     451    3.8    -3.8    -5.6  B min   0.84 LUFS -18.1
+lift 30-32              -22.8   -38.6   -4.6   -2.9   -8.9  -24.4     562    5.0    -0.2    -4.9  F# maj  0.88 LUFS -17.6
+music only 104-108      -19.8   -44.3   -7.3   -1.1  -13.9  -29.3     440    3.2    -2.4    -1.6  F# maj  0.79 LUFS -15.6
+swell 112-114           -15.8    -7.4   -4.2   -4.1  -13.6  -22.3     372    5.5    -7.0    -1.5  A maj   0.90 LUFS -13.3
+accent 116-117          -17.1   -44.5   -2.9   -3.2  -21.3  -31.1     351    2.0    -8.9    -1.5  A maj   0.76 LUFS -14.4
+tail 119-120            -52.5   -41.4   -4.3   -2.1  -25.6  -41.7     395    7.0     3.1   -33.6  B min   0.92 LUFS -45.5
+
+demo-video/film/audio/music/bed.wav: 59 bar lines; the strongest new sound in the 60 ms before a bar line, as a multiple of the bed's median onset level:
+  all bar lines: median 1.6, 90th percentile 3.3, largest 5.1 (at 82 s)
+  join at   54.0 s: before the bar line   3.8x (rank 3 of 59), level step  +1.7 dB, largest sample jump 0.1106 (the bed's largest anywhere: 0.4987)
+  join at   72.0 s: before the bar line   3.0x (rank 9 of 59), level step  +3.1 dB, largest sample jump 0.1106 (the bed's largest anywhere: 0.4987)
+  join at   74.0 s: before the bar line   3.2x (rank 8 of 59), level step  +7.7 dB, largest sample jump 0.2068 (the bed's largest anywhere: 0.4987)
+  join at   90.0 s: before the bar line   3.8x (rank 4 of 59), level step +10.1 dB, largest sample jump 0.1407 (the bed's largest anywhere: 0.4987)
+  join at  106.0 s: before the bar line   1.3x (rank 36 of 59), level step +14.6 dB, largest sample jump 0.0430 (the bed's largest anywhere: 0.4987)

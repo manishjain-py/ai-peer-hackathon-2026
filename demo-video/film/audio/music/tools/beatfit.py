@@ -285,19 +285,22 @@ def cuts(path: str, at: list[float], period: float = 0.5) -> dict:
         lph, h = peak_of(p, near=0.0, reach=0.25)
         conf = (h - np.median(p)) / (np.median(p) + 1e-9)
         grid_err = (((lph * period - LEAD_S) + period / 2) % period - period / 2) * 1000
-        # the single nearest onset to the cut itself
-        i0 = int(max(0, (t + LEAD_S - 0.12)) * ENV_FS)
-        i1 = int(min(len(env) / ENV_FS, t + LEAD_S + 0.12) * ENV_FS)
+        # the onset on the cut itself: the strongest rise within 60 ms of it, if one stands out
+        near_ms, strength, low_ms = None, 0.0, None
+        i0 = int(max(0.0, t + LEAD_S - 0.06) * ENV_FS)
+        i1 = int(min(len(env) / ENV_FS, t + LEAD_S + 0.06) * ENV_FS)
+        floor = np.median(env[max(0, i0 - 2000):i1 + 2000]) + 1e-9
         seg = env[i0:i1]
-        if len(seg) > 3 and seg.max() > 0:
+        if len(seg) > 3 and seg.max() >= 2.0 * floor:
             j = int(np.argmax(seg))
             near_ms = ((i0 + j) / ENV_FS - LEAD_S - t) * 1000
-            strength = seg.max() / (np.median(env[max(0, i0 - 2000):i1 + 2000]) + 1e-9)
-            segl = low[i0:i1]
-            jl = int(np.argmax(segl))
-            low_ms = ((i0 + jl) / ENV_FS - LEAD_S - t) * 1000 if segl.max() > 4 * (np.median(low[max(0, i0 - 2000):i1 + 2000]) + 1e-9) else None
-        else:
-            near_ms, strength, low_ms = None, 0, None
+            strength = seg.max() / floor
+        segl = low[i0:i1]
+        floorl = np.median(low[max(0, i0 - 2000):i1 + 2000]) + 1e-9
+        if len(segl) > 3 and segl.max() >= 4.0 * floorl:
+            low_ms = ((i0 + int(np.argmax(segl))) / ENV_FS - LEAD_S - t) * 1000
+        if t == 0:
+            near_ms, strength = first_sound(x) * 1000, float("nan")
         rows.append({"cut_s": t, "grid_error_ms": round(float(grid_err), 1), "grid_conf": round(float(conf), 2),
                      "nearest_onset_ms": None if near_ms is None else round(float(near_ms), 1),
                      "onset_strength": round(float(strength), 1),
@@ -397,11 +400,14 @@ def main() -> int:
     elif mode == "cuts":
         r = cuts(args[1], at)
         print(f"{r['file']}: {r['seconds']} s, measured {r['measured_bpm']} BPM, whole-bed grid error {r['whole_bed_grid_error_ms']:+.1f} ms")
-        print("  cut s   grid error ms (conf)   nearest onset ms (strength)   nearest low onset ms")
+        print("  grid error: where the beats of the 8 s around the cut sit against the film's half-second grid (+ is late).")
+        print("  onset on the cut: the strongest new sound within 60 ms of the cut, and how far it stands above the passage; blank = a held note or a rest there.")
+        print("  cut s   grid error ms (conf)   onset on the cut ms (x floor)")
         for c in r["cuts"]:
             print(f"  {c['cut_s']:6.1f}   {c['grid_error_ms']:+6.1f} ({c['grid_conf']:.1f})          "
-                  f"{'' if c['nearest_onset_ms'] is None else format(c['nearest_onset_ms'], '+.1f'):>7} ({c['onset_strength']:.1f})"
-                  f"            {'' if c['nearest_low_onset_ms'] is None else format(c['nearest_low_onset_ms'], '+.1f')}")
+                  f"{'' if c['nearest_onset_ms'] is None else format(c['nearest_onset_ms'], '+.1f'):>7} ({c['onset_strength']:.1f})")
+        worst = max(r["cuts"], key=lambda c: abs(c["grid_error_ms"]))
+        print(f"  largest grid error: {worst['grid_error_ms']:+.1f} ms at {worst['cut_s']} s")
         if out_json:
             Path(out_json).write_text(json.dumps(r, indent=1) + "\n")
     else:
