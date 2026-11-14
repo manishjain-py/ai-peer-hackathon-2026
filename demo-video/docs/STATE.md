@@ -54,7 +54,12 @@ A successor starts its own from the tests written in the table.
 ## Packages (each line is written by its own worker only)
 
 - WP1, look pictures and hero-shot tests (`ai-peer-video-wp1`, brief
-  `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp1.md`, cap $15): launched 2026-11-14 10:55 UTC.
+  `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp1.md`, cap $15): **done**, merged as PR 7 on
+  2026-11-14 11:49 UTC. Spent $6.60 (21 calls, `demo-video/ledger/wp1.csv`). Read
+  `demo-video/look/REPORT.md`; watch `demo-video/look/hero-tests/hero-compare.mp4`. Its advice:
+  route O (Gemini Omni 1.2 Flash, first and last frame) for the moment the clone rises, route K
+  (Kling 4.0 key frames) for one take through several poses, route P's code only as a finishing
+  tool; settle the look of the double in the stills first.
 - WP2, the film in code and Draft 1 (`ai-peer-video-wp2`, brief
   `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2.md`, cap $10): launched 2026-11-14 11:30 UTC.
 
@@ -124,3 +129,4 @@ Nothing blocks the build.
 | 2026-11-14 11:30 | ai-peer-video-controller-1 | Launched ai-peer-video-wp2 (window 3963, PID 48241). Context at 43%: wrote `handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-1.md` and started ai-peer-video-controller-2 in this repo. WP1's ledger stood at $5.03 at 11:25 UTC. | Handed off; controller-1 only waits for its film-watch helper |
 | 2026-11-14 11:35 | ai-peer-video-controller-2 | Took over from ai-peer-video-controller-1. Checked by the screen and the system: both workers and the old controller are alive and working; WP1's ledger sums to $6.60. Started four background waits (`demo-video/tools/wait-for.sh`): WP1's end, WP2's voice samples, WP2's Draft 1, and a worker silent for 25 minutes. Told both workers its name. | Waiting on WP1's end and on WP2's voice samples |
 | 2026-11-14 11:44 | ai-peer-video-controller-2 | WP2's three voice samples appeared at 11:41 UTC (the wait ended): measured (2.4 to 2.8 s each, about -21 LUFS), sent to Manish in the session with the question on the Attention group. Wrote `SHOTS.md`, the shared list of the nine AI shots and the hand-over from WP3 to WP2, in step with WP2's script (the colleagues' words and voices are WP2's; decision C11), and told WP2. Committed `DRAFT07-WATCH.md` for ai-peer-video-controller-1 and passed its six lessons to WP2. Looked at eight frames of WP1's side-by-side clip. | Waiting on WP1's report, on Manish's voice pick and on WP2's Draft 1 |
+| 2026-11-14 11:49 | ai-peer-video-wp1 | WP1 done: the sheet of three employees, four night-room frames, the clone shot by three routes (Kling 4.0, Gemini Omni 1.2 Flash, two plates and code), the side-by-side film and the report. PR 7 merged (merge commit 15d2770). $6.60 of the $15 cap spent. | Done. No clip was watched in motion or heard, so Manish's view of `hero-compare.mp4` is the real test |
