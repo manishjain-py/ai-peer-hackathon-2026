@@ -1,10 +1,10 @@
 # AI Peer demo video: state
 
-Live controller: ai-peer-video-controller-2 (Terminal window 3964 on Mac 48 GB, PID 49247,
-https://claude.ai/code/session_01Nfn5h7PShJsTBPY7urCJaZ). Other sessions message it by that
-name. It took over from ai-peer-video-controller-1 on 2026-11-14 and handed off at 12:36 UTC
-to **ai-peer-video-controller-3**, which writes its own window and link here when it has read
-in (the hand-off is `handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-2.md`).
+Live controller: ai-peer-video-controller-3 (Terminal window 3973 on Mac 48 GB, PID 12154,
+https://claude.ai/code/session_01Nfn5h8g3cWzARgY2jkzyPF). Other sessions message it by that
+name. It took over from ai-peer-video-controller-2 on 2026-11-14 at 12:36 UTC (the hand-off is
+`handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-2.md`); by 12:44 UTC it had read in, found
+every session alive, told the workers its name and started its waits.
 
 ## Where we are (2026-11-14 11:54 UTC)
 
@@ -26,6 +26,18 @@ an hour. The week resets Monday 17 November 04:30 India time. At this pace Fable
 sessions. Manish was asked (Needs Manish 1). Context at 12:34 UTC: the controller 40%, WP2-2
 25%, WP3 33%.
 
+**Read again by ai-peer-video-controller-3:** 12:37 UTC week 20%, Fable 40%; 12:40 UTC week
+22%, Fable 42%. A usage alarm now runs (the "Still running" table): it reads `/usage` every 5
+minutes at no token cost and writes one line each time to
+`~/.ai-peer/demo-video-private/controller/usage.log`; read the hourly rate from there (its
+last line now: `2026-11-14T12:41:07Z week=22 fable=44 session=?`). Context at 12:44 UTC, from the transcripts: controller-3
+14%, WP2-2 32%, WP3 38%, the old WP2 46%. When
+Fable's week runs out, every Fable session stops at its next request at a dialog that needs a
+key press ("Switch to Opus 5.5 and continue", or "Continue with Fable" on credits). `DESIGN.md`
+C6 already says Opus 5.5 at max effort when Fable runs short, so every session launched from
+now on runs on Opus 5.5 (the controller's call under C6; to undo it, launch with
+`--model claude-fable-5-2`).
+
 Keys checked with free, read-only calls (values never printed): fal.ai valid (its balance
 cannot be read with this key); ElevenLabs valid (plan `growing_business`, about 97% of the
 character quota free, instant and professional voice cloning allowed); the Gemini API key lists
@@ -37,7 +49,8 @@ set-ups: ask Manish before spending on them.
 
 | Session | Window | Session URL | Worktree | Branch | PR | Job |
 |---|---|---|---|---|---|---|
-| ai-peer-video-controller-2 | 3964 | https://claude.ai/code/session_01Nfn5h7PShJsTBPY7urCJaZ | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | The live controller; Fable 5.2, max effort, PID 49247 |
+| ai-peer-video-controller-3 | 3973 | https://claude.ai/code/session_01Nfn5h8g3cWzARgY2jkzyPF | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | The live controller; Fable 5.2, max effort, PID 12154 |
+| ai-peer-video-controller-2 | 3964 | https://claude.ai/code/session_01Nfn5h7PShJsTBPY7urCJaZ | the same checkout | main | none | Handed off at 12:36 UTC; nothing of its own still runs (no child process, its one helper ended); PID 49247. Manish was asked the usage question in this window too, so it stays open until he has answered; then the controller closes it after the usual checks (a script launched it, not Manish). |
 | ai-peer-video-controller-1 | 2952 | https://claude.ai/code/session_01Nfn5h5eNL9YLJMnBQpKKMf | the same checkout | main | none | Handed off at 11:30 UTC; nothing of its own still runs. Its second-by-second watch of the September film is `DRAFT07-WATCH.md` (committed by controller-2). Other sessions message it as `learnlikemagic-f7`; PID 38022. Manish opened its window himself: ask him before closing it. |
 | ai-peer-video-wp2 | 3963 | https://claude.ai/code/session_01Nfn5h95MaF4HSLH6cbpUbu | `~/repos/ai-peer-video-wp2` (launched in the shared checkout, with `CLAUDE_NO_IDLE_PING=1`) | video-wp2-film-build | none yet | WP2, handed off at 44.8% context (its message of 12:16 UTC). It stays open only until its two helpers report (the Earth close; music and sound effects, up to $5), writes their reports to `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-2-helpers.md` on `main` and tells the controller: close its window only after that file is on `main`. PID 48241 |
 | ai-peer-video-wp2-2 | 3972 | https://claude.ai/code/session_01Nfn5h9VhYd7zMX2hQUt663 | `~/repos/ai-peer-video-wp2` (the same worktree; launched in the shared checkout, with `CLAUDE_NO_IDLE_PING=1`) | video-wp2-film-build | none yet | WP2's successor: the push-in, the "AI Peer" tag, Draft 1 in two renders, the report, the PR; brief `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-2.md`; Fable 5.2, max effort, PID 88331 |
@@ -52,11 +65,18 @@ Still running:
 | What | PID | Log | Stop command |
 |---|---|---|---|
 | Two helpers of the old ai-peer-video-wp2 session, writing only their own files in `~/repos/ai-peer-video-wp2`: the Earth close (`src/scenes/earth.js`, `assets/earth/`) and music with sound effects (`audio/music/`, `audio/sfx/`, `audio/mix.json`, `audio/SOURCES.md`, `demo-video/ledger/wp2.csv`) | inside window 3963 | none | They end by themselves |
+| Wait `draft1`: Draft 1's file `~/.ai-peer/demo-video-private/renders/draft-01.mp4` unchanged for 90 s, or PID 88331 (WP2-2) gone | 22594 | `~/.ai-peer/demo-video-private/controller/waits.log` | `kill 22594` |
+| Wait `wp3-report`: `demo-video/shots/REPORT.md` in `~/repos/ai-peer-video-wp3` unchanged for 90 s, or PID 64734 (WP3) gone | 22607 | the same log | `kill 22607` |
+| Wait `stall-wp2-2`: the transcript of WP2-2 (`3b59da85-1a19-4cc4-9875-244a8d19e09d`) and its sub-agents silent for 25 minutes | 22623 | the same log | `kill 22623` |
+| Wait `stall-wp3`: the same for WP3 (`1c97ea6b-c294-42be-ae5e-8c9d772564bf`) | 22665 | the same log | `kill 22665` |
+| Wait `stall-wp2`: the same for the old WP2 and its two helpers (`c5e26ecb-e51c-4042-9605-b280dbe83c04`) | 22682 | the same log | `kill 22682` |
+| Wait `usage`, the usage alarm: `demo-video/tools/usage-check.sh 55 28` every 5 minutes; it ends when Fable's week reaches 55% or the whole week 28%, and the controller then starts it again at the next mark | 22693 | the same log; the readings in `~/.ai-peer/demo-video-private/controller/usage.log` | `kill 22693` |
 
-No wait is running: ai-peer-video-controller-2 stopped its three at the hand-off, and
-ai-peer-video-controller-3 starts its own and lists them here. They are runs of
-`demo-video/tools/wait-for.sh` (its header shows the usage) in the controller's own background;
-the three tests are written in the hand-off, "Next step" 2.
+The six waits are runs of `demo-video/tools/wait-for.sh` (its header shows the usage) in the
+background of ai-peer-video-controller-3, started at 12:40 UTC: the end of one wakes that
+session, and each sends one routine Telegram line. Their PIDs are also in
+`~/.ai-peer/demo-video-private/controller/<label>.pid`. A successor stops them and starts its
+own. The usage alarm's test is `demo-video/tools/usage-check.sh` (its header shows the usage).
 
 ## Packages (each line is written by its own worker only)
 
@@ -101,7 +121,10 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    Draft 1 tonight with what runs now, then pause the workers; new sessions on Opus 5.5 from
    now; one worker at a time after Draft 1. B: keep full speed and move the video to another
    subscription when this one runs out. C: stop now and go on after Monday's reset. He answers
-   in the session of ai-peer-video-controller-3.
+   in the session of ai-peer-video-controller-3 (window 3973), which repeated the question to
+   him in its first reply and, with its session link, on the Attention group. Not answered at 12:44 UTC.
+   The line "Let's go with A" in the input box of window 3964 is Claude Code's own suggested
+   prompt, not his answer: that transcript holds no `user` record after the question.
 1a. **Answered 2026-11-14 12:33 UTC**, in the controller's session: "Let's go with your
    recommendations". So: voice 1, Matilda (V12); the rise by route O (V13, with the controller's
    reading that the shot-maker may fall back to a route that holds his face and the threads);
@@ -115,6 +138,12 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 
 ## Next
 
+0. **Usage first.** Until Manish answers (Needs Manish 1): start no helper that Draft 1 does
+   not need, and read the usage log at every event. New sessions run on Opus 5.5 (C6). Before
+   Fable's week runs out (at about 85%), move what still runs off Fable, so that no window
+   stops at the dialog with nobody to press a key: each session finishes its step and hands
+   off to an Opus 5.5 successor, the controller too. Whole week at 93%: start nothing long; at
+   95%: every session finishes its step, hands off and stops.
 1. WP3 goes on: tag tracks and screen corners for the three double drafts, then finals of the
    six shots without the double, then `reveal-rise`, `reveal-desk`, `morning-nod`. Each final
    of the two reveal shots: look, show Manish. Pass on Manish's answers about the rise (K, O
@@ -126,13 +155,14 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    off too (its successor is `ai-peer-video-wp3-2`, launched the way WP2-2 was).
 2. Manish's three answers are in (`DESIGN.md` V12 to V14) and passed on. Show him the final of
    `reveal-rise` when WP3 has it (Telegram, V11).
-   The controller hands off at 45 to 50% context (35% at 12:15 UTC): the successor is
-   ai-peer-video-controller-3.
+   ai-peer-video-controller-3 hands off at 45 to 50% context (see "Where we are" for its last
+   reading): its successor is ai-peer-video-controller-4.
 3. Draft 1 from ai-peer-video-wp2-2: look at a frame at every cut, then send it to Manish.
 4. Sum the ledgers (`demo-video/ledger/*.csv`) into "Money spent" at each package's end; tell
    Manish at $50 and at $80.
 5. ai-peer-video-controller-1 has nothing left. Manish opened its window (2952) himself: ask him
-   before closing it.
+   before closing it. ai-peer-video-controller-2 (window 3964) has nothing left either: close
+   it after the usual checks once Manish has answered the usage question.
 
 ## Settled, do not re-open
 
@@ -193,3 +223,4 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 | 2026-11-14 12:23 | ai-peer-video-controller-2 | Manish, in the session: "Wherever you need my choice, send it to me on telegram. I ll review there and reply here" (V11). The notify scripts send text only, so the controller wrote `demo-video/tools/tg-send-file.sh` (the Bot API's file calls, token kept out of the argument list, files under `~/.ai-peer/` refused) and sent all three open choices to the Attention group with their material: 3 voice samples, the animatic, the clone clip, 3 pictures of the double's look; 8 files, all accepted by Telegram. | Waiting on his three answers, in the session |
 | 2026-11-14 12:33 | ai-peer-video-controller-2 | Manish answered the three choices in the session: "Let's go with your recommendations" (V12 voice 1; V13 the rise by route O; V14 the look B, threads of light). The controller told him how it reads the answer on the rise (O first, a fall-back if O loses his face or the threads) and passed the answers to WP3 by message. | The look, the voice and the route are settled |
 | 2026-11-14 12:36 | ai-peer-video-controller-2 | Usage read at 12:34 UTC: week 20%, Fable 39% (10% and 19% an hour earlier): asked Manish what to do, with a recommendation. Context at 40%: wrote `handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-2.md`, stopped its three waits, started ai-peer-video-controller-3 in this repo. WP3's ledger stood at $7.90 (52 rows). | Handed off; this session only passes on anything Manish writes in it |
+| 2026-11-14 12:44 | ai-peer-video-controller-3 | Took over from ai-peer-video-controller-2: read STATE and the hand-off (context 14% at this row's time); found all five sessions alive (PIDs 88331, 64734, 48241, 49247, 38022); told WP2-2, WP3 and the old WP2 its name; started six waits (Draft 1, WP3's report, three stall watches, and a usage alarm with the new `demo-video/tools/usage-check.sh`). Usage: 12:37 UTC week 20%, Fable 40%; 12:40 UTC week 22%, Fable 42%. Repeated the usage question to Manish in its first reply. Its call under C6: sessions launched from now on run on Opus 5.5. | Live controller; waits armed; the usage answer is open |
