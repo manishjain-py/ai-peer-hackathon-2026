@@ -47,10 +47,11 @@ Still running:
 
 ## Needs Manish
 
-1. The interview, one question at a time, in the controller's session. Answered so far: V1 to
-   V8 in `DESIGN.md`. Question 8, asked 2026-11-14 11:12 UTC: the controller's outline of the film in
-   five parts (an original magic-school opening, the problem, the clone at night, the real
-   product for about half the time, the morning and the close): yes, or what to change.
+1. The interview, in the controller's session. Answered so far: V1 to V9 in `DESIGN.md`. The
+   outline with the magic-school opening is withdrawn (V9). Next for him: the controller's
+   new story (`STORY.md`, proposed), told to him once the second-by-second watch of the
+   September film is in. Still to ask after that: voice samples, music, the Remotion licence
+   or a free tool, what exactly to record on his company laptop.
 
 ## Next
 
@@ -88,3 +89,4 @@ Still running:
 | 2026-11-14 11:08 | ai-peer-video-controller-1 | WP1 reported milestone 1 (its message, and the watcher): the sheet of three invented employees, made with `google/nano-banana-2.1`, $0.39 spent so far by its ledger. The controller looked at the sheet (real-looking, even light, skin tones true) and sent it to Manish as question 6, in place of the product-screens question, which moves to question 7. WP1 goes on with character A. | Waiting on question 6 and on WP1's frames and hero tests |
 | 2026-11-14 11:09 | ai-peer-video-controller-1 | Manish picked employee A (V7); WP1 already uses A, so no message was sent to it. Question 7 (what the product screens show and where they may go) asked. | Waiting on question 7 and on WP1's frames and hero tests |
 | 2026-11-14 11:12 | ai-peer-video-controller-1 | Manish answered question 7: B, real company content on this Mac only (V8); the rule for every session is C8 and in `demo-video/AGENTS.md`. Question 8 (the outline of the film) asked. | Waiting on question 8 and on WP1's frames and hero tests |
+| 2026-11-14 11:22 | ai-peer-video-controller-1 | Manish asked whether the September film is here (yes: Draft 07, 4:23, on this Mac), then dropped the student opening (V9) and asked for a better two-minute story after a frame-by-frame watch. The controller read the film's full captions and 48 frames across it; a helper watches every second inside a scratch folder. The proposed story is saved as `STORY.md`. | Waiting on the helper's watch, then the story goes to Manish |
