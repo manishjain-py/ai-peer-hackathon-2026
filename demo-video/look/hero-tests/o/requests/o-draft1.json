@@ -1,0 +1,20 @@
+{
+  "endpoint": "google/gemini-omni-flash/v1.2/image-to-video",
+  "inputs": {
+    "prompt": "A locked-off wide shot of a bedroom at night. The camera does not move. A man lies asleep in the bed and does not move. A glowing copy of the same man, with a thin bright rim of mint-green light and a fine shimmer, slowly sits up out of his sleeping body, partly see-through at first. He swings his legs to the floor, stands up at the foot of the bed, becoming more solid, and turns to look down at the sleeper with a kind half-smile. The sleeper stays still under the duvet. Only two figures: one solid and asleep, one glowing. Slow, deliberate motion. One continuous shot, no cuts, no music, no speech, no subtitles.",
+    "image_url": "file:demo-video/look/frames/f1.png",
+    "end_image_url": "file:demo-video/look/frames/f3.png",
+    "aspect_ratio": "16:9",
+    "resolution": "360p",
+    "duration": 10
+  },
+  "expect": {
+    "units": 10,
+    "unit": "second of video at 360p",
+    "unit_price": 0.0273,
+    "cost_usd": 0.273,
+    "basis": "fal.ai page 2026-11-14: $0.0273 per second at 360p; input tokens ($1.50 per 1M) add a cent or less"
+  },
+  "output": "demo-video/look/hero-tests/o/o-draft1",
+  "note": "route O draft 1: Gemini Omni 1.2 Flash, first frame F1, end frame F3, 10 s at 360p"
+}

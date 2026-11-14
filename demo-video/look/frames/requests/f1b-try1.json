@@ -1,0 +1,25 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "Keep everything in image 1 exactly as it is: the same room, the same camera position and framing, the same light, the same bed in the same place. Change one thing only: the man now lies asleep on top of the made bed instead of under the duvet. He lies on his back in the same place, his head on the same pillow at the left end of the bed, his face turned a little toward the camera, eyes closed, arms at his sides. He wears the same dark charcoal T-shirt and loose dark grey pyjama trousers, and he is barefoot. The off-white duvet lies flat and smooth underneath him and covers the whole bed. He is the man shown in image 2. He is the only person in the room. Photorealistic. Nothing written anywhere.",
+    "image_urls": [
+      "file:demo-video/look/frames/f1.png",
+      "file:demo-video/look/characters/a-full.jpg"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.085,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.085,
+    "estimate": true,
+    "basis": "edits of F1 in this package were billed $0.072 to $0.084 each"
+  },
+  "output": "demo-video/look/frames/f1b-try1",
+  "note": "F1b, start frame for route P plate 2: the man asleep on top of the made bed (an edit of f1.png)"
+}

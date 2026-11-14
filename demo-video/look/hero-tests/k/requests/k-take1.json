@@ -1,0 +1,23 @@
+{
+  "endpoint": "kling/v4/image-to-video",
+  "inputs": {
+    "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed and never moves. A man sleeps in the bed and stays completely still under the duvet for the whole shot. A glowing double of him, the same man with a thin bright rim of mint-green light and a fine shimmer, slowly sits up out of his sleeping body, partly see-through at first. The double swings his legs off the bed, stands up at the foot of the bed, more solid now, and looks down at the sleeper with a kind half-smile. Then he walks calmly to the desk on the right, sits down on the chair, opens the laptop and begins to type, the screen lighting his face. There are only two figures at all times: one solid and asleep in the bed, one glowing. Slow, deliberate, graceful motion. One continuous shot with no cuts. Sound: quiet night room tone and a soft shimmer as the double rises, with no music and no speech.",
+    "start_image_url": "file:demo-video/look/frames/f1.png",
+    "middle_image_urls": [
+      "file:demo-video/look/frames/f2.png",
+      "file:demo-video/look/frames/f3.png"
+    ],
+    "end_image_url": "file:demo-video/look/frames/f4.png",
+    "duration": 10,
+    "resolution": "720p"
+  },
+  "expect": {
+    "units": 10,
+    "unit": "second of video at 720p",
+    "unit_price": 0.157,
+    "cost_usd": 1.57,
+    "basis": "fal.ai page 2026-11-14: $0.157 per second at 720p"
+  },
+  "output": "demo-video/look/hero-tests/k/k-take1",
+  "note": "route K take 1: Kling 4.0, keyframes F1 > F2 > F3 > F4, 10 s at 720p"
+}

@@ -1,0 +1,20 @@
+{
+  "endpoint": "google/gemini-omni-flash/v1.2/image-to-video",
+  "inputs": {
+    "prompt": "A locked-off wide shot of a bedroom at night. The camera does not move. A man lies asleep in the bed and does not move. A glowing copy of the same man, with a thin bright rim of mint-green light and a fine shimmer, slowly sits up out of his sleeping body, partly see-through at first. He swings his legs to the floor, stands up at the foot of the bed, becoming more solid, and turns to look down at the sleeper with a kind half-smile. The sleeper stays still under the duvet. Only two figures: one solid and asleep, one glowing. Slow, deliberate motion. One continuous shot, no cuts, no music, no speech, no subtitles.",
+    "image_url": "file:demo-video/look/frames/f1.png",
+    "end_image_url": "file:demo-video/look/frames/f3.png",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "duration": 10
+  },
+  "expect": {
+    "units": 10.2,
+    "unit": "second of video at 720p",
+    "unit_price": 0.0819,
+    "cost_usd": 0.8354,
+    "basis": "fal.ai page 2026-11-14: $0.0819 per second at 720p; the 360p draft was billed 10.48 units for 10 s, so input tokens add about 2%"
+  },
+  "output": "demo-video/look/hero-tests/o/o-take1-720p",
+  "note": "route O take 1: the prompt of draft 1 at 720p (first frame F1, end frame F3, 10 s)"
+}

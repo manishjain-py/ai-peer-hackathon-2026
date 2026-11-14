@@ -524,6 +524,7 @@ def main() -> int:
     parser.add_argument("--timeout", type=int, default=1800, help="seconds to wait for the result")
     parser.add_argument("--poll", type=float, default=3.0, help="seconds between status checks")
     args = parser.parse_args()
+    sys.stdout.reconfigure(line_buffering=True)   # progress shows at once, also in a log file
     try:
         if args.summary:
             return summary(args)

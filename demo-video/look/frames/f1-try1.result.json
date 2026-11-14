@@ -1,0 +1,37 @@
+{
+ "request_id": "01a1d9be-e930-7721-84e8-33f9401b4295",
+ "billable_units_header": "0.162433311",
+ "inputs_sent": {
+  "prompt": "A wide cinematic film still of a small, calm, tasteful modern bedroom at night, seen from a locked camera at chest height, looking straight at the back wall. On the left, the man from image 1 and image 2 lies asleep on his back in a low bed, his head on a pillow at the left end of the bed, his face turned a little toward the camera, eyes closed, peaceful. A soft off-white duvet covers him up to his chest and one arm rests on top of it. He wears the same plain dark charcoal T-shirt. His face, hair, beard and skin tone are exactly as in image 1. The wall behind the bed is plain and dark. In the middle of the back wall, a tall window with thin curtains lets in cool blue moonlight that falls in a soft pool across the open wooden floor between the bed and the desk. On the right, a small wooden desk with a closed laptop on it and a simple wooden chair stand in shadow. A small bedside lamp beside the pillow glows warm and low, so his face and shoulder are lit warm. The rest of the room is deep teal-ink shadow, a dark blue-green. He is the only person in the room. The whole bed, the window and the whole desk are inside the frame, with room above the bed. Photorealistic, like a frame from a premium advertising film shot on a cinema camera with a 28mm lens: deep shadows, gentle film grain, natural colours. Nothing written anywhere, no clock, no posters, no pictures on the walls.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab26cd4/H0Ji2j1t36YVzLSbWdhQ4_a-portrait.jpg",
+   "https://v3b.fal.media/files/b/0ab26cec/rJ7chV-BDLDgxQwCkxYnW_a-full.jpg"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 2,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26cec/gmzixYIAbdNTAb47KIgQF_NLAWezK1.png",
+    "content_type": "image/png",
+    "file_name": "gmzixYIAbdNTAb47KIgQF_NLAWezK1.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   },
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26cec/78h2gqfDA34QvBrfXi42-_uCOo8jRB.png",
+    "content_type": "image/png",
+    "file_name": "78h2gqfDA34QvBrfXi42-_uCOo8jRB.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

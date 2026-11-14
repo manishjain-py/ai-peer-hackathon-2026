@@ -1,0 +1,19 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed on a tripod and never moves. The man lying on the bed smoothly sits up, swings his legs off the side of the bed and stands up at the foot of the bed. He pauses and glances back at the bed, then walks calmly across the room to the desk on the right, sits down on the chair and opens the laptop, whose screen lights his face. Calm, graceful, unhurried movement. He is the only person in the room. One continuous shot with no cuts and no zoom.",
+    "image_url": "file:demo-video/look/frames/f1b-try1.png",
+    "duration": 12,
+    "resolution": "768P",
+    "prompt_expansion_mode": "balanced"
+  },
+  "expect": {
+    "units": 12.7,
+    "unit": "second of video at 768P",
+    "unit_price": 0.028,
+    "cost_usd": 0.3556,
+    "basis": "fal.ai page 2026-11-14: $0.028 per second at 768P until 15 November; the output can run 0.7 s longer than asked"
+  },
+  "output": "demo-video/look/hero-tests/p/p-plate2",
+  "note": "route P plate 2: from F1b, the man sits up, stands, walks to the desk, sits, opens the laptop; 12 s at 768P"
+}
