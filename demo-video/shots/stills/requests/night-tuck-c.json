@@ -1,0 +1,26 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "Change only the pose of the glowing double and the duvet. The double of light stays in exactly the same place on the bed and at exactly the same size as in image 1, still merged with the sleeper below the waist. He now leans forward toward the head of the bed, and with one outstretched hand he holds the top edge of the duvet at the sleeper's shoulder: he has just gently pulled the duvet up, so it now covers the sleeping man's chest, his near shoulder and both of his arms right up to his neck. The double is a little more solid than before, still with soft edges, the mint light glowing inside his chest and the hair-thin threads of light joining him to the sleeper. His face is the face of the man in image 2 and image 3, with its own natural brown skin colour; he looks down at the sleeper's face with a calm, kind expression and closed lips, and does not look at the camera. The sleeping man's head and face have not moved. Keep everything else in the picture exactly the same.",
+    "image_urls": [
+      "file:demo-video/shots/stills/night-rise.png",
+      "file:demo-video/look/characters/a-portrait.jpg",
+      "file:demo-video/look/characters/a-full.jpg"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.09,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.09,
+    "estimate": true,
+    "basis": "WP1 paid 6 to 8.5 cents for a 2K picture on this model (demo-video/ledger/wp1.csv)"
+  },
+  "output": "demo-video/shots/stills/night-tuck-c",
+  "note": "N2c: an edit of night-rise.png: the double, in the same place and at the same size, leans forward and has pulled the duvet over the sleeper's shoulder (night-tuck-b came out a quarter larger than the double of night-rise)"
+}

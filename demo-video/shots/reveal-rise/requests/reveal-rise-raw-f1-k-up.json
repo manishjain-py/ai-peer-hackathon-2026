@@ -1,0 +1,20 @@
+{
+  "endpoint": "openimaginglab/flashvsr-plus",
+  "inputs": {
+    "video_url": "file:demo-video/shots/reveal-rise/reveal-rise-raw-f1-k.mp4",
+    "upscale_factor": 1.5,
+    "model": "base",
+    "color_fix": false,
+    "preserve_audio": false,
+    "video_quality": "maximum"
+  },
+  "expect": {
+    "units": 497,
+    "unit": "megapixel of upscaled video (1920x1074 x 241 frames)",
+    "unit_price": 0.0005,
+    "cost_usd": 0.2485,
+    "basis": "fal.ai page 2026-11-14: $0.0005 per megapixel of output (width x height x frames)"
+  },
+  "output": "demo-video/shots/reveal-rise/reveal-rise-raw-f1-k-up",
+  "note": "reveal-rise take 1 (route K, 1280x716) upscaled 1.5 times to 1920x1074 with FlashVSR+ base"
+}

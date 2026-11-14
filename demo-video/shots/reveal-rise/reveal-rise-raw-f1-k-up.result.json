@@ -1,0 +1,21 @@
+{
+ "request_id": "01a1da12-5ec8-72e2-84b1-986f17a194ac",
+ "billable_units_header": "496.96",
+ "inputs_sent": {
+  "video_url": "https://v3b.fal.media/files/b/0ab26f0f/vTianLgFPzravwoXGj6Yf_reveal-rise-raw-f1-k.mp4",
+  "upscale_factor": 1.5,
+  "model": "base",
+  "color_fix": false,
+  "preserve_audio": false,
+  "video_quality": "maximum"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab26f11/M26gIkd0qVW43hh8yHHjx_remuxed.mp4",
+   "content_type": "video/mp4",
+   "file_name": "remuxed.mp4",
+   "file_size": null
+  },
+  "seed": 1390851128
+ }
+}
