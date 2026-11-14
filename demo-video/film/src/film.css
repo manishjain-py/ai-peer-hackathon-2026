@@ -228,3 +228,4 @@ html, body {
 .endcard .eline { margin-top: 54px; font-size: 76px; font-weight: 700; letter-spacing: -0.025em; color: var(--paper); white-space: nowrap; }
 .endcard .eline span { display: inline-block; will-change: transform, opacity; }
 .endcard .esign { margin-top: 46px; font-size: 32px; font-weight: 800; text-transform: uppercase; color: var(--mint); white-space: nowrap; }
+.endcard .ecredit { position: absolute; left: 0; right: 0; bottom: 40px; text-align: center; font-size: 19px; font-weight: 500; letter-spacing: 0.02em; color: rgba(246, 244, 238, 0.62); white-space: nowrap; text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6); }

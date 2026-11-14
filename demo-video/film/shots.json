@@ -71,7 +71,7 @@
       "tag_keys": { "about": "As in reveal-rise. The tag fades with the double: WP3's track only says on or off there, and WP3 asks for a fade between 3.3 and 4.3 s of the clip, which is 2.3 to 3.3 s of the slot.",
         "show": [ { "from": 0.12, "to": 3.3, "in": 0.35, "out": 1.0, "force": true } ] } },
 
-    { "id": "close-earth", "part": "close", "start": 108.0, "length": 8.0, "kind": "code", "scene": "earth", "scene_file": "src/scenes/earth-draft1.js",
+    { "id": "close-earth", "part": "close", "start": 108.0, "length": 8.0, "kind": "code", "scene": "earth",
       "shows": "The camera pulls out of one lit window, over the city, up to the Earth from space. On the night side, mint lights come on across the dark cities.",
       "clip": null },
     { "id": "close-endcard", "part": "close", "start": 116.0, "length": 4.0, "kind": "code", "scene": "endcard",
