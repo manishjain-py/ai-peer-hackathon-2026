@@ -1,44 +1,44 @@
 {
-  "updated_utc": "2026-11-14T13:06:02Z",
+  "updated_utc": "2026-11-14T13:06:46Z",
   "slots": {
     "hook-1": {
-      "clip": "demo-video/shots/hook-1/hook-1-draft-v1.mp4",
-      "grade": "draft",
+      "clip": "demo-video/shots/hook-1/hook-1-final-v1.mp4",
+      "grade": "final",
       "seconds": 5.167,
       "fps": 24,
-      "use_from_s": 0.5,
+      "use_from_s": 0.46,
       "audio": "lipsync",
-      "line_at_s": 0.9,
-      "note": "draft at 768P: the mouth was driven by WP2's sound file, the sync is not yet checked frame by frame; a shoulder enters the foreground at the left"
+      "line_at_s": 0.86,
+      "note": "H3 Max Turbo at 1080P, WP2's line pinned as the sound; the mouth follows the line (checker: movement r +0.61 at lag 0, lips shut on both m sounds); her eyebrows are lively and she looks to the right of the camera"
     },
     "hook-2": {
-      "clip": "demo-video/shots/hook-2/hook-2-draft-v1.mp4",
-      "grade": "draft",
+      "clip": "demo-video/shots/hook-2/hook-2-final-v2.mp4",
+      "grade": "final",
       "seconds": 4.458,
       "fps": 24,
-      "use_from_s": 0.5,
+      "use_from_s": 0.44,
       "audio": "lipsync",
-      "line_at_s": 0.9,
-      "note": "draft at 768P: the mouth was driven by WP2's sound file, the sync is not yet checked frame by frame"
+      "line_at_s": 0.84,
+      "note": "H3 Max Turbo at 1080P, WP2's line pinned as the sound; the mouth follows the line (checker: movement r +0.51 at lag 0); his lips part 0.15 s before the voice"
     },
     "hook-3": {
-      "clip": "demo-video/shots/hook-3/hook-3-draft-v1.mp4",
-      "grade": "draft",
-      "seconds": 3.042,
+      "clip": "demo-video/shots/hook-3/hook-3-final-v1.mp4",
+      "grade": "final",
+      "seconds": 4.458,
       "fps": 24,
-      "use_from_s": 0.5,
+      "use_from_s": 0.8,
       "audio": "lipsync",
-      "line_at_s": 0.9,
-      "note": "draft at 768P: the mouth was driven by WP2's sound file, the sync is not yet checked frame by frame; he does not lean back yet"
+      "line_at_s": 1.2,
+      "note": "H3 Max Turbo at 1080P, WP2's line pinned as the sound; the mouth follows the line (checker: movement r +0.76, two frames early); the lean-back is modest"
     },
     "hook-sleeper": {
-      "clip": "demo-video/shots/hook-sleeper/hook-sleeper-draft-v1.mp4",
-      "grade": "draft",
+      "clip": "demo-video/shots/hook-sleeper/hook-sleeper-final-v1.mp4",
+      "grade": "final",
       "seconds": 5.167,
       "fps": 24,
       "use_from_s": 0.8,
       "audio": "none",
-      "note": "draft at 768P; a very slow push-in"
+      "note": "H3 Max Turbo at 1080P; slow even breathing (small), a very slow push-in"
     },
     "reveal-rise": {
       "clip": "demo-video/shots/reveal-rise/reveal-rise-final-v1.mp4",

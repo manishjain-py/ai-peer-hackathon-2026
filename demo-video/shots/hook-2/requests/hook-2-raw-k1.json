@@ -1,0 +1,17 @@
+{
+  "endpoint": "fal-ai/kling-video/ai-avatar/v2/standard",
+  "inputs": {
+    "image_url": "file:demo-video/shots/stills/hook-2.png",
+    "audio_url": "file:demo-video/shots/hook-2/audio/hook-2-line-at-0.9s-4.5s.wav",
+    "prompt": "A man sits in a small meeting room in the late afternoon. He looks at a wall screen that is outside the picture, beyond its right edge, and says his first sentence, quietly impressed. Then he turns his head toward a point just beside the camera and says his second sentence with a small relaxed smile. Natural, understated acting. The camera is locked and does not move."
+  },
+  "expect": {
+    "units": 4.5,
+    "unit": "second of video",
+    "unit_price": 0.0562,
+    "cost_usd": 0.2529,
+    "basis": "fal.ai page read 2026-11-14: $0.0562 per second; the sound file is 4.5 s"
+  },
+  "output": "demo-video/shots/hook-2/hook-2-raw-k1",
+  "note": "hook-2 take k1: Kling AI Avatar v2 standard from the still and WP2's line (at 0.9 s, 4.5 s of sound)"
+}

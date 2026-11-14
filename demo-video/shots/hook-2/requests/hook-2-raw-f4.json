@@ -1,0 +1,21 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "A man sits in a small meeting room in the late afternoon. He is the only person in the picture. From 0 to 0.8 seconds he looks at a wall screen that is outside the picture, beyond its right edge, reading it with his lips closed. At 0.9 seconds he starts to speak, his eyes still on that screen, and says in a calm, quietly impressed voice, in American English: \"His update's already here.\" His lips close for a moment. Then he turns his head toward a point just beside the camera on its right side, never into the lens, and adds: \"His Peer gave it.\" His lips move in exact sync with the words and close when he has finished, in a small, warm smile with soft eyes. His brow stays smooth and relaxed the whole time. His acting is understated and natural, like a real person in a documentary. The camera is locked on a tripod and does not move. One continuous shot with no cuts, no zoom, no music, no subtitles and no text.",
+    "image_url": "file:demo-video/shots/stills/hook-2.png",
+    "target_audio_url": "file:demo-video/shots/hook-2/audio/hook-2-line-at-0.9s.wav",
+    "seed": 224,
+    "duration": 4.0,
+    "resolution": "1080P",
+    "prompt_expansion_mode": "balanced"
+  },
+  "expect": {
+    "units": 4.0,
+    "unit": "second of video at 1080P",
+    "unit_price": 0.056,
+    "cost_usd": 0.224,
+    "basis": "fal.ai page read 2026-11-14: $0.056 per second at 1080P until 15 November, billed on the seconds asked"
+  },
+  "output": "demo-video/shots/hook-2/hook-2-raw-f4",
+  "note": "hook-2 final take f4: H3 Max Turbo at 1080P, WP2's line pinned at 0.9 s; smooth brow, lips close between the two sentences, a small warm smile"
+}

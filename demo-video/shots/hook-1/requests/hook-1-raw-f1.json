@@ -1,0 +1,21 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "A woman stands in a bright open-plan office by day, holding her phone. From 0 to 0.5 seconds she reads the phone. At 0.5 seconds she looks up from it, pleasantly surprised: her eyebrows lift a little and a warm smile grows. She looks just past the camera, at a point close beside the lens on its left side, and never into the lens. At 0.9 seconds she starts to speak and says in a calm, pleased voice, in British English: \"Two A.M. where he is, and I've got my answer.\" Her lips move in exact sync with the words. As she speaks she lowers the phone a little. After the line she keeps a small smile, still looking just past the camera. Her acting is subtle and natural, like a real person in a documentary, never exaggerated. Nobody enters the picture and nobody walks past: the foreground stays empty, and the background stays as it is, with the two people far behind her seated at their desks. The camera is locked on a tripod: the framing does not change at all. One continuous shot with no cuts, no zoom, no pan, no music, no subtitles and no text.",
+    "image_url": "file:demo-video/shots/stills/hook-1.png",
+    "target_audio_url": "file:demo-video/shots/hook-1/audio/hook-1-line-at-0.9s.wav",
+    "seed": 111,
+    "duration": 4.5,
+    "resolution": "1080P",
+    "prompt_expansion_mode": "balanced"
+  },
+  "expect": {
+    "units": 4.5,
+    "unit": "second of video at 1080P",
+    "unit_price": 0.056,
+    "cost_usd": 0.252,
+    "basis": "fal.ai page read 2026-11-14: $0.056 per second at 1080P until 15 November, billed on the seconds asked"
+  },
+  "output": "demo-video/shots/hook-1/hook-1-raw-f1",
+  "note": "hook-1 final take f1: H3 Max Turbo at 1080P from the still, WP2's line pinned at 0.9 s; nobody else named in the prompt, eye line just past the lens, times given for each action"
+}

@@ -1,0 +1,20 @@
+{
+  "endpoint": "creatify/boreal",
+  "inputs": {
+    "prompt": "[VISUAL]\nA man sits at his home desk in the evening under a warm lamp. He is the only person in the picture. He is reading his laptop and smiling. He leans back in his chair, half laughing, lifts his eyes to a point just beside the camera, never into the lens, and asks his question. Then he keeps an amused smile. The camera is locked on a tripod. One continuous shot, realistic, cinematic, natural acting.\n\n[SPEECH]\n\"Does he ever sleep?\"\n\n[SOUNDS]\nA quiet room at night.\n\n[TEXT]\nNone.",
+    "image_url": "file:demo-video/shots/stills/hook-3.png",
+    "audio_url": "file:demo-video/shots/hook-3/audio/hook-3-line-at-0.9s.wav",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "duration": 3
+  },
+  "expect": {
+    "units": 3,
+    "unit": "second of video at 720p",
+    "unit_price": 0.01,
+    "cost_usd": 0.03,
+    "basis": "fal.ai page read 2026-11-14: $0.01 per second at 720p"
+  },
+  "output": "demo-video/shots/hook-3/hook-3-raw-b1",
+  "note": "hook-3 test b1: creatify/boreal at 720p, the still as reference image and WP2's line (at 0.9 s) as driving audio: does this route follow the sound?"
+}
