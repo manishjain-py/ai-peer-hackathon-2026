@@ -58,10 +58,11 @@ export async function create(film) {
   ctx.font = "800 100px Manrope";
   ctx.letterSpacing = "1px";
   // the pill's width in ems: mark, gaps, padding and border as film.css sets them, plus the words
-  const ems = 0.36 + 1.2 + 0.36 + ctx.measureText("AI Peer").width / 100 + 0.62 + 0.15;
+  const TEXT = (film.names && film.names.peer) || "AI Peer";   // "Ram's AI Peer" (shots.json names)
+  const ems = 0.36 + 1.2 + 0.36 + ctx.measureText(TEXT).width / 100 + 0.62 + 0.15;
 
   const tags = film.slots.filter((s) => s.use === "clip" && (s.tagTrack || s.tagKeys)).map((slot) => {
-    const pill = el("div.tagpill", {}, el("span.tmk", { html: markSvg({ size: 100 }) }), el("span", { text: "AI Peer" }));
+    const pill = el("div.tagpill", {}, el("span.tmk", { html: markSvg({ size: 100 }) }), el("span", { text: TEXT }));
     layer.append(pill);
     const windows = slot.tagShow || [{ from: 0, to: slot.length, in: 0.3, out: 0.25 }];
     return { slot, pill, windows };

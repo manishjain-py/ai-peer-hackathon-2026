@@ -143,7 +143,9 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
     const from = s.from_shot ? shots.slots.find((x) => x.id === s.from_shot) : s;
     if (!from) throw new Error(`slot ${s.id}: from_shot ${s.from_shot} is not a slot`);
     const m = { ...s, clip: from.clip };
-    if (m.clip && pulled[from.id]) Object.assign(m, pulled[from.id]);
+    // "own_clip": a clip made for the film itself, not WP3's: nothing of WP3's is laid over it
+    if (m.clip && pulled[from.id] && !s.own_clip) Object.assign(m, pulled[from.id]);
+    if (s.line_in_s != null) m.line_at_s = s.line_in_s;   // where the spoken line starts in the clip
     if (s.in_s != null) m.use_from_s = s.in_s;
     return m;
   });
@@ -382,7 +384,7 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
   const overlays = [...new Set([...(shots.overlays_ready || []), ...withScenes])]
     .filter((n) => fs.existsSync(path.join(FILM, "src", "overlays", `${n}.js`)));
   const film = {
-    variant, fps, seconds, width: shots.width, height: shots.height, bpm: shots.bpm,
+    variant, fps, seconds, width: shots.width, height: shots.height, bpm: shots.bpm, names: shots.names || {},
     parts: shots.parts, slots, overlays, labels, chapters,
     lines: lines.map(({ file, rms_dbfs, ...rest }) => rest),
   };

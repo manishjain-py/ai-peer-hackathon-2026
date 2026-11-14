@@ -1,69 +1,74 @@
 {
  "about": "Made by tools/voice.py from audio/script.json. Do not edit by hand.",
  "model": "eleven_multilingual_v2",
- "total_seconds": 35.58,
+ "total_seconds": 37.53,
  "lines": [
   {
    "id": "h1",
    "part": "hook",
    "speaker": "colleague-1",
    "voice": "Alice",
-   "text": "2 AM where he is, and I've got my answer.",
+   "text": "It's 2 AM for Ram... and I just got my answer.",
    "file": "audio/lines/h1.wav",
-   "seconds": 2.571,
-   "words_per_second": 3.89,
-   "peak_dbfs": -5.27,
-   "rms_dbfs": -20.91,
+   "seconds": 2.86,
+   "words_per_second": 3.68,
+   "peak_dbfs": -1.34,
+   "rms_dbfs": -20.39,
    "words": [
     {
-     "w": "2",
+     "w": "It's",
      "s": 0.0,
-     "e": 0.191
+     "e": 0.179
+    },
+    {
+     "w": "2",
+     "s": 0.225,
+     "e": 0.353
     },
     {
      "w": "AM",
-     "s": 0.283,
-     "e": 0.667
+     "s": 0.423,
+     "e": 0.678
     },
     {
-     "w": "where",
-     "s": 0.748,
-     "e": 0.968
+     "w": "for",
+     "s": 0.701,
+     "e": 0.818
     },
     {
-     "w": "he",
-     "s": 1.003,
-     "e": 1.073
-    },
-    {
-     "w": "is,",
-     "s": 1.143,
-     "e": 1.421
+     "w": "Ram...",
+     "s": 0.864,
+     "e": 1.317
     },
     {
      "w": "and",
-     "s": 1.456,
+     "s": 1.468,
      "e": 1.595
     },
     {
-     "w": "I've",
-     "s": 1.642,
-     "e": 1.77
+     "w": "I",
+     "s": 1.653,
+     "e": 1.677
+    },
+    {
+     "w": "just",
+     "s": 1.758,
+     "e": 1.932
     },
     {
      "w": "got",
-     "s": 1.793,
-     "e": 1.909
+     "s": 1.967,
+     "e": 2.095
     },
     {
      "w": "my",
-     "s": 1.944,
-     "e": 2.037
+     "s": 2.141,
+     "e": 2.234
     },
     {
      "w": "answer.",
-     "s": 2.106,
-     "e": 2.571
+     "s": 2.304,
+     "e": 2.989
     }
    ]
   },
@@ -72,52 +77,87 @@
    "part": "hook",
    "speaker": "colleague-2",
    "voice": "Chris",
-   "text": "His update's already here. His Peer gave it.",
+   "text": "Ram's out of office... but his AI Peer already sent me the update I needed.",
    "file": "audio/lines/h2.wav",
-   "seconds": 2.1,
-   "words_per_second": 3.49,
-   "peak_dbfs": -2.48,
-   "rms_dbfs": -22.76,
+   "seconds": 3.88,
+   "words_per_second": 3.68,
+   "peak_dbfs": -4.91,
+   "rms_dbfs": -22.77,
    "words": [
     {
-     "w": "His",
+     "w": "Ram's",
      "s": 0.0,
-     "e": 0.144
+     "e": 0.3
     },
     {
-     "w": "update's",
-     "s": 0.191,
-     "e": 0.516
+     "w": "out",
+     "s": 0.335,
+     "e": 0.439
     },
     {
-     "w": "already",
-     "s": 0.55,
-     "e": 0.806
+     "w": "of",
+     "s": 0.474,
+     "e": 0.52
     },
     {
-     "w": "here.",
-     "s": 0.864,
-     "e": 1.189
+     "w": "office...",
+     "s": 0.579,
+     "e": 1.089
     },
     {
-     "w": "His",
-     "s": 1.224,
-     "e": 1.375
+     "w": "but",
+     "s": 1.368,
+     "e": 1.507
+    },
+    {
+     "w": "his",
+     "s": 1.542,
+     "e": 1.635
+    },
+    {
+     "w": "AI",
+     "s": 1.693,
+     "e": 1.96
     },
     {
      "w": "Peer",
-     "s": 1.433,
-     "e": 1.63
+     "s": 2.041,
+     "e": 2.262
     },
     {
-     "w": "gave",
-     "s": 1.688,
-     "e": 1.862
+     "w": "already",
+     "s": 2.32,
+     "e": 2.575
     },
     {
-     "w": "it.",
-     "s": 1.897,
-     "e": 2.292
+     "w": "sent",
+     "s": 2.622,
+     "e": 2.773
+    },
+    {
+     "w": "me",
+     "s": 2.808,
+     "e": 2.877
+    },
+    {
+     "w": "the",
+     "s": 2.912,
+     "e": 2.982
+    },
+    {
+     "w": "update",
+     "s": 3.028,
+     "e": 3.319
+    },
+    {
+     "w": "I",
+     "s": 3.353,
+     "e": 3.377
+    },
+    {
+     "w": "needed.",
+     "s": 3.446,
+     "e": 4.073
     }
    ]
   },
@@ -209,32 +249,32 @@
    "part": "reveal",
    "speaker": "peer",
    "voice": "Matilda",
-   "text": "I'm his AI Peer.",
+   "text": "I'm Ram's AI Peer.",
    "file": "audio/lines/p02.wav",
-   "seconds": 1.11,
-   "words_per_second": 3.27,
-   "peak_dbfs": -0.99,
-   "rms_dbfs": -21.81,
+   "seconds": 1.25,
+   "words_per_second": 3.04,
+   "peak_dbfs": -2.02,
+   "rms_dbfs": -21.65,
    "words": [
     {
      "w": "I'm",
      "s": 0.0,
-     "e": 0.167
+     "e": 0.156
     },
     {
-     "w": "his",
-     "s": 0.191,
-     "e": 0.272
+     "w": "Ram's",
+     "s": 0.225,
+     "e": 0.481
     },
     {
      "w": "AI",
-     "s": 0.342,
-     "e": 0.574
+     "s": 0.516,
+     "e": 0.725
     },
     {
      "w": "Peer.",
-     "s": 0.643,
-     "e": 1.224
+     "s": 0.794,
+     "e": 1.317
     }
    ]
   },
@@ -245,75 +285,75 @@
    "voice": "Matilda",
    "text": "I know his projects, his code, his conversations, the way he knows them.",
    "file": "audio/lines/p03.wav",
-   "seconds": 4.26,
-   "words_per_second": 2.94,
-   "peak_dbfs": -5.61,
-   "rms_dbfs": -23.27,
+   "seconds": 4.0,
+   "words_per_second": 2.99,
+   "peak_dbfs": -5.11,
+   "rms_dbfs": -23.09,
    "words": [
     {
      "w": "I",
      "s": 0.0,
-     "e": 0.063
+     "e": 0.048
     },
     {
      "w": "know",
-     "s": 0.144,
-     "e": 0.272
+     "s": 0.129,
+     "e": 0.257
     },
     {
      "w": "his",
-     "s": 0.307,
-     "e": 0.4
+     "s": 0.303,
+     "e": 0.396
     },
     {
      "w": "projects,",
-     "s": 0.458,
-     "e": 1.096
+     "s": 0.454,
+     "e": 1.035
     },
     {
      "w": "his",
-     "s": 1.212,
-     "e": 1.34
+     "s": 1.093,
+     "e": 1.221
     },
     {
      "w": "code,",
-     "s": 1.41,
-     "e": 1.816
+     "s": 1.29,
+     "e": 1.685
     },
     {
      "w": "his",
-     "s": 1.967,
-     "e": 2.095
+     "s": 1.72,
+     "e": 1.824
     },
     {
      "w": "conversations,",
-     "s": 2.153,
-     "e": 3.012
+     "s": 1.882,
+     "e": 2.788
     },
     {
      "w": "the",
-     "s": 3.163,
-     "e": 3.267
+     "s": 2.962,
+     "e": 3.055
     },
     {
      "w": "way",
-     "s": 3.325,
-     "e": 3.453
+     "s": 3.113,
+     "e": 3.218
     },
     {
      "w": "he",
-     "s": 3.511,
-     "e": 3.581
+     "s": 3.264,
+     "e": 3.31
     },
     {
      "w": "knows",
-     "s": 3.639,
-     "e": 3.859
+     "s": 3.369,
+     "e": 3.589
     },
     {
      "w": "them.",
-     "s": 3.906,
-     "e": 4.428
+     "s": 3.636,
+     "e": 4.355
     }
    ]
   },

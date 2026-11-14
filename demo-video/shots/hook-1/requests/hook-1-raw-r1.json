@@ -1,0 +1,21 @@
+{
+ "endpoint": "minimax/h3-max-turbo/image-to-video",
+ "inputs": {
+  "prompt": "A woman stands in a bright open-plan office by day, holding her phone. From 0 to 0.6 seconds she reads the phone and her eyebrows lift a little in surprise. At 0.6 seconds she looks up from it, surprised and pleased: a small, warm smile grows, her eyes stay soft. She looks just to the side of the camera lens, almost at the camera but never into the lens. At 0.9 seconds she starts to speak and says in a surprised, pleased voice, in British English: \"It's two A.M. for Ram... and I just got my answer.\" Her lips move in exact sync with the words, with a short pause after \"Ram\", and she speaks every word clearly. As she speaks she lowers the phone a little. After the line she closes her lips in a small, amazed smile and glances back down at her phone. Her acting is understated and natural, like a real person in a documentary. Nobody enters the picture and nobody walks past: the foreground stays empty, and the background stays as it is, with the two people far behind her seated at their desks. The camera is locked on a tripod: the framing does not change at all. One continuous shot with no cuts, no zoom, no pan, no music, no subtitles and no text.",
+  "image_url": "file:demo-video/shots/stills/hook-1.png",
+  "target_audio_url": "file:demo-video/shots/hook-1/audio/hook-1-ram-line-at-0.9s.wav",
+  "seed": 113,
+  "duration": 5.0,
+  "resolution": "1080P",
+  "prompt_expansion_mode": "balanced"
+ },
+ "expect": {
+  "units": 5.0,
+  "unit": "second of video at 1080P",
+  "unit_price": 0.056,
+  "cost_usd": 0.28,
+  "basis": "fal.ai page read 2026-11-14 (WP3's request files): $0.056 per second at 1080P until 15 November, billed on the seconds asked"
+ },
+ "output": "demo-video/shots/hook-1/hook-1-raw-r1",
+ "note": "Draft 2 (V17): hook-1 with the new line naming Ram, pinned at 0.9 s; WP3's route and seed (take f3), surprise added"
+}

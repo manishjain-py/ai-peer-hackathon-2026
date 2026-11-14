@@ -1,0 +1,25 @@
+{
+ "request_id": "01a1da8f-54e0-7620-b1aa-135d9fe063ae",
+ "billable_units_header": "16.0",
+ "inputs_sent": {
+  "prompt": "A woman stands in a bright open-plan office by day, holding her phone. From 0 to 0.6 seconds she reads the phone and her eyebrows lift a little in surprise. At 0.6 seconds she looks up from it, surprised and pleased: a small, warm smile grows, her eyes stay soft. She looks just to the side of the camera lens, almost at the camera but never into the lens. At 0.9 seconds she starts to speak and says in a surprised, pleased voice, in British English: \"It's two A.M. for Ram... and I just got my answer.\" Her lips move in exact sync with the words, with a short pause after \"Ram\", and she speaks every word clearly. As she speaks she lowers the phone a little. After the line she closes her lips in a small, amazed smile and glances back down at her phone. Her acting is understated and natural, like a real person in a documentary. Nobody enters the picture and nobody walks past: the foreground stays empty, and the background stays as it is, with the two people far behind her seated at their desks. The camera is locked on a tripod: the framing does not change at all. One continuous shot with no cuts, no zoom, no pan, no music, no subtitles and no text.",
+  "image_url": "https://v3b.fal.media/files/b/0ab27242/PT8tQXKCnlKYmbjvBb9Nc_hook-1.png",
+  "target_audio_url": "https://v3b.fal.media/files/b/0ab27242/eHQcmsHmKn6p2xDPJM1-o_hook-1-ram-line-at-0.9s.wav",
+  "seed": 113,
+  "duration": 5.0,
+  "resolution": "1080P",
+  "prompt_expansion_mode": "balanced"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab27243/oblZwNedFbdhNoOKmhfIU_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "oblZwNedFbdhNoOKmhfIU_minimax-h3.mp4",
+   "file_size": 10251727
+  },
+  "expanded_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] This is a live-action, cinematic shot captured on a locked tripod. The scene opens on <Picture 1>, a Black woman with short hair pulled back, wearing a mustard-yellow sweater, standing in a bright, open-plan office during the day. She holds a smartphone in her right hand, looking down at the screen. The background shows two colleagues blurred in the distance seated at their desks, maintaining a depth of field that keeps the focus on her. From 00:00 to 00:06, she reads the phone screen, her eyebrows lifting slightly in a genuine expression of surprise. At 00:06, she looks up from the device, her expression shifting to surprised pleasure; a small, warm smile grows across her face while her eyes remain soft. She directs her gaze just to the side of the camera lens, avoiding direct eye contact. At 00:09, she begins to speak with a surprised, pleased British accent: (S1) <d>[English]It's two A.M. for Ram... and I just got my answer.</d> Her lips move in perfect synchronization with the dialogue, with a distinct, natural pause after the word \"Ram\". As she speaks, she slightly lowers the phone toward her chest. After the line, she closes her lips into a small, amazed smile and glances back down at the phone screen. The acting remains understated and documentary-like, with no camera movement or changes in the environment.\n\noverall_soundscape: The ambient sound of a quiet office includes the distant muffled hum of air conditioning and the faint tapping of keyboards. The woman speaks clearly with a British accent, her voice conveying genuine delight, followed by the soft rustle of her sweater sleeve as she moves her arm.\n\nnon_diegetic_music: N/A",
+  "timings": {
+   "inference": 2.830507022999882
+  }
+ }
+}

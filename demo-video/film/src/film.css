@@ -229,3 +229,20 @@ html, body {
 .endcard .eline span { display: inline-block; will-change: transform, opacity; }
 .endcard .esign { margin-top: 46px; font-size: 32px; font-weight: 800; text-transform: uppercase; color: var(--mint); white-space: nowrap; }
 .endcard .ecredit { position: absolute; left: 0; right: 0; bottom: 40px; text-align: center; font-size: 19px; font-weight: 500; letter-spacing: 0.02em; color: rgba(246, 244, 238, 0.62); white-space: nowrap; text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6); }
+
+/* ---- notes (src/overlays/notes.js): the Peer's message cards in the hook, the sleeper's label, the proof's note */
+#notes .ncard { position: absolute; top: 200px; width: 580px; padding: 22px 28px 26px; border-radius: 26px;
+  background: rgba(10, 23, 27, 0.84); border: 2px solid rgba(183, 244, 207, 0.55); color: var(--paper);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35), 0 0 34px rgba(183, 244, 207, 0.16); will-change: transform, opacity; }
+#notes .ncard.left { left: 96px; }
+#notes .ncard.right { right: 96px; }
+#notes .nhead { display: flex; align-items: center; gap: 12px; font-size: 27px; font-weight: 800; color: var(--mint); }
+#notes .nmark svg { display: block; width: 38px; height: 38px; }
+#notes .nwhen { margin-left: auto; font-size: 22px; font-weight: 600; color: rgba(246, 244, 238, 0.6); }
+#notes .ntext { margin-top: 12px; font-size: 32px; font-weight: 600; line-height: 1.3; letter-spacing: -0.01em; }
+#notes .nsleep { position: absolute; left: 96px; top: 84px; display: flex; align-items: baseline; gap: 16px;
+  padding: 12px 24px; border-radius: 999px; background: rgba(10, 23, 27, 0.62); }
+#notes .nname { font-size: 34px; font-weight: 800; color: var(--paper); }
+#notes .ntime { font-size: 30px; font-weight: 700; color: var(--mint); }
+#notes .nreal { position: absolute; right: 64px; top: 52px; padding: 8px 18px; border-radius: 999px; font-size: 21px;
+  font-weight: 600; letter-spacing: 0.02em; color: rgba(246, 244, 238, 0.74); background: rgba(10, 23, 27, 0.55); }
