@@ -1,12 +1,12 @@
 # AI Peer demo video: state
 
 Live controller: ai-peer-video-controller-3 (Terminal window 3973 on Mac 48 GB, PID 12154,
-https://claude.ai/code/session_01Nfn5h8g3cWzARgY2jkzyPF). Other sessions message it by that
-name. It took over from ai-peer-video-controller-2 on 2026-11-14 at 12:36 UTC (the hand-off is
-`handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-2.md`); by 12:44 UTC it had read in, found
-every session alive, told the workers its name and started its waits.
+https://claude.ai/code/session_01Nfn5h8g3cWzARgY2jkzyPF) until its hand-off at 14:59 UTC to
+**ai-peer-video-controller-4** (Opus 5.5), which writes its own window and link here when it
+has read in (the hand-off is `handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-3.md`).
+Other sessions message the controller by its name.
 
-## Where we are (2026-11-14 14:51 UTC)
+## Where we are (2026-11-14 14:59 UTC)
 
 **Draft 2 is being built.** Manish watched Draft 1 (his words, 14:15 UTC:
 `FEEDBACK-DRAFT-1-2026-11-14.md`; V16): the story, the voice and the music stay. At 14:49 UTC he
@@ -17,6 +17,11 @@ the whole order by message: the new lines and the name, the message cards, the h
 for three re-recorded lines and two new lip-sync clips, then Draft 2 in both renders. Its
 round 3 is merged (PR 10, `974b9db`): the Earth's final version, a NASA credit on the end
 card, and the colour check, which changed nothing.
+
+**14:59 UTC:** Manish answered the music's licence at 14:55 UTC (V18: used for the internal
+film). No question is open for him. The worker ai-peer-video-wp2-3 is at 39% context (18% at
+14:20 UTC): it tells the controller at 40%, and its successor is ai-peer-video-wp2-4.
+ai-peer-video-controller-3 handed off at 40% context to ai-peer-video-controller-4.
 
 **Draft 1 exists and is with Manish.** WP1, WP2 and WP3 are done and merged (PRs 7, 9 and 8).
 The film is built by code in `demo-video/film/` (one command renders it; read
@@ -128,16 +133,13 @@ Still running:
 
 | What | PID | Log | Stop command |
 |---|---|---|---|
-| Wait `usage`, the usage alarm: `demo-video/tools/usage-check.sh 75 40` every 5 minutes; it ends when Fable's week reaches 75% or the whole week 40%, and the controller then starts it again at the next mark | 54452 | `~/.ai-peer/demo-video-private/controller/waits.log`; the readings in `~/.ai-peer/demo-video-private/controller/usage.log` | `kill 54452` |
-| Wait `fable-cap`: `usage-check.sh 96 200` every 10 minutes; when Fable's week reaches 96% it sends Manish an Attention line (press Enter on the dialog in window 3973, the controller's) and ends | 10957 | `~/.ai-peer/demo-video-private/controller/waits.log` | `kill 10957` |
-| Wait `stall-wp2-3`: the transcript of ai-peer-video-wp2-3 (`d1cb4441-b9a9-4aa3-ba40-ccfe560894d3`) and its sub-agents silent for 25 minutes, or PID 16635 gone | 16989 | `~/.ai-peer/demo-video-private/controller/waits.log` | `kill 16989` (stop it before closing that worker's window) |
-| Wait `draft2`: Draft 2's file `~/.ai-peer/demo-video-private/renders/draft-02.mp4` unchanged for 90 s | 32385 | `~/.ai-peer/demo-video-private/controller/waits.log` | `kill 32385` |
 
-The four waits (`usage`, `fable-cap`, `stall-wp2-3`, `draft2`) are runs of `demo-video/tools/wait-for.sh` (its header shows the usage) in the
-background of ai-peer-video-controller-3, started at 12:40 UTC: the end of one wakes that
-session, and each sends one routine Telegram line. Their PIDs are also in
-`~/.ai-peer/demo-video-private/controller/<label>.pid`. A successor stops them and starts its
-own. The usage alarm's test is `demo-video/tools/usage-check.sh` (its header shows the usage).
+No wait is running: ai-peer-video-controller-3 stopped its four at the hand-off, and
+ai-peer-video-controller-4 starts its own and lists them in the table above (the commands are
+in the hand-off, "Your waits"). They are runs of `demo-video/tools/wait-for.sh` in the
+controller's own background; the usage alarm's test is `demo-video/tools/usage-check.sh`. The
+logs are `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log`. The one thing
+still running is the worker ai-peer-video-wp2-3 (window 3974, PID 16635) with its renders.
 
 ## Packages (each line is written by its own worker only)
 
@@ -197,16 +199,14 @@ own. The usage alarm's test is `demo-video/tools/usage-check.sh` (its header sho
 name Ram instead of John and "out of office" in colleague 2's line; the order went to
 ai-peer-video-wp2-3 at once.
 
-**Asked at 14:51 UTC (the session and the Attention group): the music's licence wording**
-(item 2e below has the quoted terms). The music stays (V16), so: A (recommended), use it for the
-internal hackathon film and look again before any public release; B, replace it with a bed
-made fully by code, with no licence question and a plainer sound. He had asked "Is there
-anything else you need from me?" and was also told, as reminders with no answer needed: his
+**Answered 2026-11-14 14:55 UTC: the music's licence (V18).** "Yeah, for the music, yeah, let's go
+with your pick. Let's use it for the internal film. No worries." The terms are read again
+before any public release. **No question is open.** He knows of three small things: his
 recordings by Tuesday 17 November morning (the meeting from a participant's screen in gallery
-view); a look at the fal.ai credit, which no key can read ($30.63 spent, about $10 more for
-Draft 2); and that the first controller's idle window 2952 can be closed when he says so.
-If he ever says "send the full film", that is his word on C8 and C12: record it in `DESIGN.md`
-section 0 before sending.
+view); a look at the fal.ai credit, which no key can read (he said at 14:55 UTC that he would
+check it); the first controller's idle window 2952, closed on his "close it". Next from him:
+his view of Draft 2. If he ever says "send the full film", that is his word on C8 and C12:
+record it in `DESIGN.md` section 0 before sending.
 
 Nothing blocks the build. **His standing word (2026-11-14 12:23 UTC, in the controller's session): "Wherever
 you need my choice, send it to me on telegram. I ll review there and reply here"** (`DESIGN.md`
@@ -248,16 +248,13 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 
 ## Next
 
-**Now (14:51 UTC):** one worker runs, ai-peer-video-wp2-3 (window 3974, Opus 5.5), on
-Draft 2 (the order is in "Where we are" and in V17). (i) When its message or the wait `draft2`
-comes: look at one small sheet of the slates render (`draft-02-slates.mp4`), check the hook
-(the name, the two new lines, the cards), the quicker reveal and the close, then send the
-slates copy to Manish (Attention group and session, 720p) and say what to listen for: the two
-new lines, how "Ram" is spoken, the quicker rise. (ii) Sum its ledger into "Money spent".
-(iii) Record his answer on the music's licence when it comes. (iv) One worker at a time (C13):
-start no other session while 3974 is live; if it reports 40% context before the renders, plan
-its successor (ai-peer-video-wp2-4, Opus 5.5) with it. The numbered items below are older and
-mostly done; 0, 4, 5, 6 and 7 still hold.
+**Now (14:59 UTC), for ai-peer-video-controller-4:** follow "Next step, exactly" in
+`handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-3.md`: your name here and to the worker;
+your waits; the worker's context (it reports at 40%: then a clean stop, its hand-off file, its
+window closed, ai-peer-video-wp2-4 on Opus 5.5); Draft 2: one sheet of the slates render, then
+the slates copy to Manish, never the full render; the ledgers; his view of Draft 2; his
+recordings on Tuesday (WP4). The numbered items below are older and mostly done; 0, 4, 5, 6
+and 7 still hold.
 
 0. **Usage (V15, C13).** One worker at a time, on Opus 5.5; a worker starts no helper unless
    the controller agrees; read the usage log at every event. The controller (Fable 5.2) hands
@@ -366,6 +363,32 @@ mostly done; 0, 4, 5, 6 and 7 still hold.
   (`research/fal-facts-2026-11-14.md`), before its first dear call. The check found a default
   (Kling renders 1080p at one and a half times the price) that the pricing API hides.
 
+- **A "full" render can hold more than the rule lets out.** The hand-off said Draft 1 "holds
+  only demo-data stand-ins" before the film existed; the built film also carried the sound of a
+  live test meeting of 7 November. The controller found it by reading `film/product.json` (the
+  recordings it names, and their dates) before sending, and sent the slates copy. Mechanism: a
+  promise about a file, written before the file. Check what a render holds when you send it.
+- **The safe copy was more than half slates** (66 of 120 seconds), and Manish read them as
+  placeholders still to be built. Say in the caption what the slates stand for and where the
+  full film is.
+- **Closing finished sessions is what stopped the burn.** Fable's week rose from 39% to 64% in
+  64 minutes with four sessions and their helpers, and by 2 points in the 75 minutes after the
+  last worker closed. One helper alone used 710,000 tokens on one scene. Mechanism: every live
+  session and helper pays its whole context on each call.
+- **A worker on Opus 5.5 with frame sheets fills fast too:** ai-peer-video-wp2-3 went from 8% to
+  37% in 47 minutes. Plan each round as two sessions and ask for a word at 40%.
+- **One long inline command was refused by the harness's own safety check** ("could not be
+  checked for dangerous rm operations") though it removed nothing: a heredoc, a commit message
+  with quoted words and a window close in one line. Put edit scripts and commit messages in
+  scratchpad files and run plain commands.
+- **The first text of a turn can go missing:** the controller's greeting, written before its
+  first tool calls, is not in its transcript. Cause unknown, seen once. Put what Manish must
+  read in the last message of the turn.
+- **A name in the story meets the product's label.** The product builds the label from its
+  owner's first name (`peer/defaults.yaml`), so the real recordings say "Manish's AI Peer"
+  while the film says "Ram". Settled with a note on screen (V17). Check such a consequence
+  before proposing a name.
+
 ## Session log
 
 | Date (UTC) | Session | What happened | Outcome |
@@ -413,3 +436,4 @@ mostly done; 0, 4, 5, 6 and 7 still hold.
 | 2026-11-14 14:20 | ai-peer-video-wp2-3 | Round 3 done and merged (PR 10, `974b9db`): the Earth's final version switched on (the snapshot deleted, `SOURCE.md` in git), a NASA credit line on the end card, the close rendered and looked at (one sheet of 1:48 to 2:00, the credit at full size, a strip of the fast streak). The colour check of the AI clips: all nine are untagged; the renderer reads them as BT.709, ffmpeg as BT.601; the readings differ by a mean delta E of 1.1 to 1.8; neither the stills nor the raw Kling takes show which is right, so no change. No paid call, no helper. | Waits for Manish's feedback through the controller; context 18%. |
 | 2026-11-14 14:20 | ai-peer-video-controller-3 | Manish's feedback on Draft 1 came at 14:15 UTC (in full in `FEEDBACK-DRAFT-1-2026-11-14.md`; V16): the story, the voice and the music stay; the signature shot quicker; the hook clearer, with a name for the employee. Read the film's timeline and lines (the hook is 12 s, the three colleagues speak in 8.5 s) and the product's label setting, wrote a proposal for the hook and sent it to him (session and Attention group). Told ai-peer-video-wp2-3 what is settled and what is coming. Usage log: `2026-11-14T14:18:57Z week=33 fable=65 session=?`. | His answer on the hook is open |
 | 2026-11-14 14:51 | ai-peer-video-controller-3 | Manish answered the hook proposal at 14:49 UTC: yes, with the name Ram and "out of office" in colleague 2's line (V17). Sent ai-peer-video-wp2-3 the whole order for Draft 2 (lines, name, cards, timings, the note on the real recordings, paid calls up to $10). Its round 3 was merged at 14:19 UTC (PR 10: the Earth's final version, the NASA credit, the colour check). Armed the wait `draft2`. Asked Manish the music's licence wording. Usage log: `2026-11-14T14:49:26Z week=34 fable=66 session=?`. | Draft 2 is being built; the licence answer is open |
+| 2026-11-14 14:59 | ai-peer-video-controller-3 | Manish answered the music's licence at 14:55 UTC (V18: used for the internal film) and said he would check the fal.ai balance. Context 40%, the worker's 39%: wrote `handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-3.md`, stopped its four waits, added seven lessons, started ai-peer-video-controller-4 on Opus 5.5 in this repo. Usage log: `2026-11-14T14:54:32Z week=34 fable=66 session=?`. | Handed off; this session only closes |
