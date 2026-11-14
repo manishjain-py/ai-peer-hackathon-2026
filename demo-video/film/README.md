@@ -49,7 +49,12 @@ Small switches in `shots.json`, per slot: `dissolve_in` (seconds: this shot fade
 tail of the one before, which plays on under it), `tag_keys.show` (when the tag is on screen;
 `force` shows it where the track calls the chest out of view), `hand_quads` (screen corners by
 hand for one clip), `scene_file` (draw a code scene with another file, to pin a render to a
-snapshot).
+snapshot). For cutting AI shots: `in_s` (where in the clip the slot starts, in place of WP3's
+`use_from_s`), `rate` (how fast the clip plays), `from_shot` (play a stretch of another slot's
+clip, with WP3's track, stills and screen corners), `pingpong` (`[from, to]` seconds of the clip,
+played back and forth from `in_s` for as long as the slot lasts, as a clip the build makes into
+`.build/cache/clips/`), `camera` (`{"to_scale": 1.3}`: the shot moves in, on the line of the
+push-in that follows, which carries on from there at the same speed; `src/camera.js`).
 
 Rules of the page: nothing keeps state between frames, uses a timer or reads the clock. The
 renderer seeks each frame on its own (`hf-seek`), often out of order.

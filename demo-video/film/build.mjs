@@ -63,6 +63,42 @@ function enlarged(file, name) {
   return out;
 }
 
+/**
+ * A clip that plays a stretch of another back and forth ("pingpong": [from, to], seconds of the
+ * source), starting at `start` and going forward, for `seconds`: so a shot of someone at work can
+ * run as long as the edit needs. Made once with ffmpeg into the build cache; its frames keep the
+ * source's own encoding (no colour conversion), so it reads exactly like the source. Returns the
+ * file and, for each of its frames, the source frame it shows.
+ */
+function pingpong(clip, fps, [a, b], start, seconds) {
+  const fa = Math.round(a * fps), fb = Math.round(b * fps), f0 = Math.round(start * fps);
+  if (!(fa < fb) || f0 < fa || f0 > fb) throw new Error(`pingpong ${a} to ${b} from ${start}: the start must lie inside the stretch`);
+  const span = fb - fa, n = Math.ceil(seconds * fps) + 2;
+  const frames = [];
+  for (let i = 0, f = f0, step = 1; i < n; i++) {
+    frames.push(f);
+    if (f + step > fb || f + step < fa) step = -step;
+    f += step;
+  }
+  const cache = path.join(FILM, ".build", "cache", "clips");
+  const out = path.join(cache, `${path.basename(clip, path.extname(clip))}-pp${fa}-${fb}-${f0}-${n}-${fs.statSync(clip).size}.mp4`);
+  if (!fs.existsSync(out)) {
+    fs.mkdirSync(cache, { recursive: true });
+    const off = f0 - fa, loops = Math.ceil((off + n) / (2 * span));
+    // one period: fa..fb, then fb-1..fa+1; repeated, then cut to start at f0
+    const graph = `[0:v]trim=start_frame=${fa}:end_frame=${fb + 1},setpts=PTS-STARTPTS,split[f][b];` +
+      `[b]reverse,trim=start_frame=1:end_frame=${span},setpts=PTS-STARTPTS[r];` +
+      `[f][r]concat=n=2:v=1:a=0,loop=loop=${loops}:size=${2 * span}:start=0,` +
+      `trim=start_frame=${off}:end_frame=${off + n},setpts=N/${fps}/TB[v]`;
+    const tmp = `${out}.${process.pid}.tmp.mp4`;
+    execFileSync("ffmpeg", ["-hide_banner", "-loglevel", "error", "-nostdin", "-y", "-i", clip, "-filter_complex", graph,
+      "-map", "[v]", "-an", "-c:v", "libx264", "-preset", "medium", "-crf", "12", "-pix_fmt", "yuv420p", "-r", String(fps),
+      "-movflags", "+faststart", tmp]);
+    fs.renameSync(tmp, out);
+  }
+  return { file: out, frames };
+}
+
 /** One frame of a clip as a PNG, made once and kept in the build cache (AI clips are not private). */
 function frameOf(clip, seconds) {
   const info = JSON.parse(execFileSync("ffprobe", ["-v", "error", "-select_streams", "v:0", "-show_entries",
@@ -100,7 +136,17 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
   // What tools/pull_shots.mjs brought from WP3 is laid over each slot.
   const pulledPath = path.join(FILM, "shots.pulled.json");
   const pulled = fs.existsSync(pulledPath) ? readJson(pulledPath).slots : {};
-  shots.slots = shots.slots.map((s) => (s.clip && pulled[s.id] ? { ...s, ...pulled[s.id] } : s));
+  // A slot may play a stretch of another slot's clip ("from_shot": that slot's id): it takes that
+  // clip and what WP3 gave with it. "in_s" is where in the clip a slot starts (in place of WP3's
+  // use_from_s) and "rate" how fast it plays.
+  shots.slots = shots.slots.map((s) => {
+    const from = s.from_shot ? shots.slots.find((x) => x.id === s.from_shot) : s;
+    if (!from) throw new Error(`slot ${s.id}: from_shot ${s.from_shot} is not a slot`);
+    const m = { ...s, clip: from.clip };
+    if (m.clip && pulled[from.id]) Object.assign(m, pulled[from.id]);
+    if (s.in_s != null) m.use_from_s = s.in_s;
+    return m;
+  });
   const problems = [];
   const notes = [];
 
@@ -136,6 +182,7 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
   const sceneLines = []; // captions of speech inside a recording (private build only)
   const privPath = path.join(PRIVATE, "product-private.json");
   const priv = variant === "private" && fs.existsSync(privPath) ? readJson(privPath) : {};
+  const videoFile = {};  // the file each clip slot's <video> plays (kept out of the page)
   const slots = shots.slots.map((s) => {
     const slot = { ...s, use: "slate" };
     delete slot.clip;
@@ -143,16 +190,29 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
       if (s.clip) {
         const src = path.join(FILM, s.clip);
         if (!fs.existsSync(src)) problems.push(`slot ${s.id}: the clip ${s.clip} is missing`);
-        if (s.clip_seconds && s.clip_seconds < (s.use_from_s || 0) + s.length - 0.05) problems.push(`slot ${s.id}: the clip is ${s.clip_seconds} s, too short for ${s.length} s from ${s.use_from_s || 0} s`);
-        const to = `assets/shots/${path.basename(s.clip)}`;
-        copies.push({ from: src, to });
+        const rate = s.rate || 1;
         slot.use = "clip";
-        // If the next shot dissolves in, this clip plays on under it for that long (as far as it has frames).
-        const next = shots.slots[shots.slots.indexOf(s) + 1];
-        const spare = s.clip_seconds ? s.clip_seconds - (s.use_from_s || 0) - s.length - 0.05 : 0;
-        const tail = next && next.dissolve_in && next.part === s.part ? Math.max(0, Math.min(next.dissolve_in, Math.floor(spare * fps) / fps)) : 0;
-        slot.tail = tail;
-        slot.video = { id: `v-${s.id}`, src: to, start: s.start, length: r3(s.length + tail), mediaStart: s.use_from_s || 0, rate: 1 };
+        if (s.pingpong) {
+          // Back and forth over a stretch of the clip: a clip of its own, made once by the build.
+          const pp = pingpong(src, s.clip_fps || 24, s.pingpong, s.in_s ?? s.pingpong[0], s.length);
+          const to = `assets/gen/${path.basename(pp.file)}`;
+          copies.push({ from: pp.file, to });
+          videoFile[s.id] = pp.file;
+          slot.pp = pp.frames;   // which frame of the source each of its frames shows (for the tag)
+          slot.tail = 0;
+          slot.video = { id: `v-${s.id}`, src: to, start: s.start, length: s.length, mediaStart: 0, rate: 1 };
+        } else {
+          if (s.clip_seconds && s.clip_seconds < (s.use_from_s || 0) + s.length * rate - 0.05) problems.push(`slot ${s.id}: the clip is ${s.clip_seconds} s, too short for ${s.length} s at ${rate}x from ${s.use_from_s || 0} s`);
+          const to = `assets/shots/${path.basename(s.clip)}`;
+          if (!copies.some((c) => c.to === to)) copies.push({ from: src, to });
+          videoFile[s.id] = src;
+          // If the next shot dissolves in, this clip plays on under it for that long (as far as it has frames).
+          const next = shots.slots[shots.slots.indexOf(s) + 1];
+          const spare = s.clip_seconds ? (s.clip_seconds - (s.use_from_s || 0) - s.length * rate - 0.05) / rate : 0;
+          const tail = next && next.dissolve_in && next.part === s.part ? Math.max(0, Math.min(next.dissolve_in, Math.floor(spare * fps) / fps)) : 0;
+          slot.tail = tail;
+          slot.video = { id: `v-${s.id}`, src: to, start: s.start, length: r3(s.length + tail), mediaStart: s.use_from_s || 0, rate };
+        }
         media.push(slot.video);
       }
     } else if (s.kind === "code") {
@@ -234,7 +294,9 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
       problems.push(`slot ${slot.id}: the screen corners must be four [x, y] pairs as fractions of the frame`);
       return;
     }
-    const still = frameOf(clip, (before.use_from_s || 0) + before.length);
+    // the frame the shot before ends on, as its <video> plays it (in-point, speed, or a made clip)
+    const pv = slots[i - 1].video;
+    const still = frameOf(videoFile[before.id], pv.mediaStart + before.length * pv.rate);
     const to = `assets/gen/${path.basename(still.file)}`;
     copies.push({ from: still.file, to });
     const xs = quad.map((c) => c[0]), ys = quad.map((c) => c[1]);
@@ -246,6 +308,9 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
       tint: meanColour(still.file, bx + bw * 0.35, by + bh * 0.35, bw * 0.3, bh * 0.3),
       window: lands === "product" ? after.window : { x: 0, y: 0, w: shots.width, h: shots.height },
       draft: before.grade === "draft",
+      // a shot that moves in before the push-in: the push carries on from its scale and speed
+      from_scale: (before.camera && before.camera.to_scale) || 1,
+      lead: before.camera && before.camera.to_scale > 1 ? Math.log(before.camera.to_scale) / before.length : 0,
     };
     if (lands === "product") after.landed = true;   // its window is already there: no arrival
     if (!before.screen_quad) notes.push(`slot ${slot.id}: screen corners set by hand for ${path.basename(clip)} (WP3 gave none)`);
@@ -266,7 +331,9 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
       for (const e of Array.isArray(track) ? track : track.frames || []) frames[e.f] = [e.x, e.y, e.w, e.on ? 1 : 0];
       for (let f = 0; f < frames.length; f++) if (!frames[f]) frames[f] = [0, 0, 0, 0];
       if (!frames.length) problems.push(`slot ${s.id}: the tag track ${path.relative(FILM, file)} is empty`);
-      slot.tagTrack = { fps: s.clip_fps || 24, from: s.use_from_s || 0, frames };
+      slot.tagTrack = slot.pp   // a made clip shows the source's frames in its own order
+        ? { fps: s.clip_fps || 24, from: 0, rate: 1, frames: slot.pp.map((f) => frames[Math.min(f, frames.length - 1)]) }
+        : { fps: s.clip_fps || 24, from: s.use_from_s || 0, rate: s.rate || 1, frames };
     };
     if (s.tag_track) {
       useTrack(path.join(FILM, s.tag_track));
@@ -283,7 +350,7 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
     if (s.tag_keys && s.tag_keys.show) slot.tagShow = s.tag_keys.show;
     delete slot.tag_keys;
   });
-  for (const slot of slots) { delete slot.hand_quads; delete slot.tag_keys; }
+  for (const slot of slots) { delete slot.hand_quads; delete slot.tag_keys; delete slot.pp; }
 
   // ---- the spoken lines --------------------------------------------------------------------------
   const lines = narration.lines.map((n) => {
