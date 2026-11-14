@@ -122,7 +122,7 @@ function main() {
   const abs = (p) => (path.isAbsolute(p) ? p : path.join(FILM, p));
   const plan = {
     seconds: film.seconds,
-    lines: b.lines.map((l) => ({ id: l.id, file: l.file, start: l.start, seconds: l.seconds, rms_dbfs: l.rms_dbfs })),
+    lines: b.lines.filter((l) => l.file).map((l) => ({ id: l.id, file: l.file, start: l.start, seconds: l.seconds, rms_dbfs: l.rms_dbfs })),
     sound: b.sound,
     music: cfg.music && fs.existsSync(abs(cfg.music.file)) ? { ...cfg.music, file: abs(cfg.music.file) } : null,
     sfx: (cfg.sfx || []).filter((e) => fs.existsSync(abs(e.file))).map((e) => ({ ...e, file: abs(e.file) })),

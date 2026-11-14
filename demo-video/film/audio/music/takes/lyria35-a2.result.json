@@ -1,0 +1,16 @@
+{
+ "request_id": "01a1d9f3-3fab-74b0-a830-e18e34a5e6bd",
+ "billable_units_header": "1",
+ "inputs_sent": {
+  "prompt": "Instrumental only: no vocals, no voice, no choir, no spoken words, no vocal chops, no humming. A two-minute soundtrack for a premium technology advert. Exactly 120 BPM, 4/4 time, a steady tempo with no tempo changes, in D major. Upbeat, light, modern and warm: a soft four-on-the-floor kick, muted plucked synth and marimba-like mallets, warm felt piano chords, airy pads, light shakers and finger snaps, a round sub bass. Clean, optimistic and human; never corporate-cheesy, never aggressive; no heavy drums, no distorted guitars. It leaves room for a voice-over. [0:00-0:12] Hook: light and curious from the very first beat, a playful plucked motif over a clear soft pulse. [0:12-0:32] Night and wonder: softer, the drums drop to a gentle pulse, shimmering pads and a sparkling arpeggio; a gentle rise from 0:14 to 0:20; a short lift and drum fill at 0:30-0:32 into the next section. [0:32-1:30] Main groove: confident, moving but light, full soft drums and bass with the pluck motif, steady and uncluttered; a small new layer enters at 0:54 and another at 1:12. [1:30-1:48] Morning: warm and open, the drums thin out, piano and warm pads, a sunrise feeling. [1:48-1:56] The widest moment: the full arrangement returns, with a big warm swell at 1:52. [1:56-2:00] Ending: one final resolving D major chord hit at 1:56 that rings out to silence by 2:00."
+ },
+ "result": {
+  "audio": {
+   "url": "https://v3b.fal.media/files/b/0ab26e46/7qmHUMGIk85XFDBAfOYDj_output.mp3",
+   "content_type": "audio/mpeg",
+   "file_name": "output.mp3",
+   "file_size": 2765620
+  },
+  "lyrics": "[[A0]]\n[[B1]]\n[[C2]]\n[[D3]]\n[[C4]]\n[[E5]]"
+ }
+}

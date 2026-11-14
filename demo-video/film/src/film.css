@@ -127,3 +127,67 @@ html, body {
 }
 #captions .cap .who { flex: none; margin-top: 7px; width: 42px; height: 42px; }
 #captions .cap .who svg { display: block; }
+
+/* ---- film grain: hides banding in the dark gradients ---------------------------------------- */
+#grain { position: absolute; inset: 0; pointer-events: none; opacity: 0.055; z-index: 50; }
+
+/* ---- product screens ---------------------------------------------------------------------------- */
+.product { background: var(--ink); }
+.pglow { position: absolute; border-radius: 50%; will-change: transform; }
+.pglow.a { width: 1700px; height: 1700px; left: -620px; top: -820px;
+  background: radial-gradient(closest-side, rgba(47, 98, 108, 0.62), rgba(21, 43, 49, 0) 70%); }
+.pglow.b { width: 1400px; height: 1400px; right: -480px; bottom: -820px;
+  background: radial-gradient(closest-side, rgba(183, 244, 207, 0.15), rgba(21, 43, 49, 0) 70%); }
+.pwin {
+  position: absolute; border-radius: 22px; overflow: hidden; background: #0b171b;
+  box-shadow: 0 40px 110px rgba(0, 0, 0, 0.55), 0 0 0 1.5px rgba(183, 244, 207, 0.24), 0 0 80px rgba(183, 244, 207, 0.11);
+  will-change: transform, opacity;
+}
+.ppic { position: absolute; inset: 0; overflow: hidden; background: #fff; }
+.pcontent { position: absolute; left: 0; top: 0; transform-origin: 0 0; will-change: transform; }
+.pdim { position: absolute; inset: 0; background: #0a171b; pointer-events: none; }
+.phl { position: absolute; border: 3px solid var(--mint); pointer-events: none; }
+.pcursor { position: absolute; left: -9px; top: -5.5px; width: 44px; height: 44px; transform-origin: 9px 5.5px;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.45)); }
+.pripple { position: absolute; left: -40px; top: -40px; width: 80px; height: 80px; border-radius: 50%;
+  border: 5px solid var(--mint); transform-origin: 40px 40px; }
+
+/* the Peer as a call tile, driven by the real sound of the meeting */
+.ptile { position: relative; overflow: hidden;
+  background: radial-gradient(120% 90% at 50% 42%, #214650 0%, #132a30 58%, #0c1a1e 100%); }
+.ptile .tglow { position: absolute; left: 50%; top: 46%; width: 900px; height: 900px; margin: -450px 0 0 -450px;
+  background: radial-gradient(closest-side, rgba(183, 244, 207, 0.16), rgba(183, 244, 207, 0) 70%); }
+.ptile .tcentre { position: absolute; left: 50%; top: 45%; width: 190px; height: 190px; margin: -95px 0 0 -95px; }
+.ptile .ring { position: absolute; inset: 0; border-radius: 31%; border: 3px solid rgba(183, 244, 207, 0.85); }
+.ptile .tmark { position: absolute; inset: 0; }
+.ptile .tname { position: absolute; left: 40px; bottom: 36px; display: flex; align-items: center; gap: 16px;
+  font-size: 38px; font-weight: 700; color: var(--paper); background: rgba(10, 23, 27, 0.72);
+  padding: 12px 20px 12px 14px; border-radius: 18px; }
+.ptile .tname .tdot { display: flex; }
+.ptile .tname b { font-size: 22px; font-weight: 800; letter-spacing: 0.08em; color: var(--ink);
+  background: var(--mint); border-radius: 8px; padding: 5px 11px 4px; }
+.ptile .tnote { position: absolute; right: 36px; top: 30px; font-size: 22px; font-weight: 600; color: rgba(246, 244, 238, 0.5); }
+
+/* ---- the night clock, the proof title card, the labels ------------------------------------------ */
+#chips .chapter {
+  position: absolute; left: 960px; top: 438px; display: flex; align-items: center; gap: 44px;
+  padding: 34px 58px 36px 40px; border-radius: 44px; white-space: nowrap;
+  background: rgba(10, 23, 27, 0.84); border: 1.5px solid rgba(183, 244, 207, 0.42);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.5), 0 0 90px rgba(183, 244, 207, 0.17);
+}
+#chips .dial svg { display: block; }
+#chips .ctime { font-size: 86px; font-weight: 800; line-height: 1; letter-spacing: -0.02em; color: var(--mint);
+  font-variant-numeric: tabular-nums; text-shadow: 0 0 36px rgba(183, 244, 207, 0.45); }
+#chips .ctext { margin-top: 16px; font-size: 52px; font-weight: 650; letter-spacing: -0.015em; color: var(--paper); }
+#chips .dock { position: absolute; left: 80px; top: 70px; width: 120px; }
+#chips .dtime { margin: 14px -30px 0; text-align: center; font-size: 31px; font-weight: 800; color: var(--mint);
+  font-variant-numeric: tabular-nums; white-space: nowrap; }
+#chips .label { position: absolute; left: 0; right: 0; bottom: 96px; display: flex; justify-content: center; }
+#chips .lbox {
+  position: relative; padding: 18px 42px 24px; border-radius: 26px; white-space: nowrap;
+  background: rgba(10, 23, 27, 0.8); border: 1.5px solid rgba(183, 244, 207, 0.5);
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.38), 0 0 54px rgba(183, 244, 207, 0.2);
+  font-size: 50px; font-weight: 750; letter-spacing: -0.012em; color: var(--mint);
+}
+#chips .lbox i { position: absolute; left: 42px; right: 42px; bottom: 13px; height: 3px; border-radius: 2px;
+  background: var(--mint); opacity: 0.7; transform-origin: 0 50%; }

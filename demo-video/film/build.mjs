@@ -8,6 +8,7 @@
 // A public build never reads a product recording. A private build puts every file that holds
 // one (the build, the frame cache, the render) under ~/.ai-peer/demo-video-private/, outside
 // every git checkout (DESIGN C8).
+import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
@@ -15,10 +16,11 @@ import { fileURLToPath } from "node:url";
 
 export const FILM = path.dirname(fileURLToPath(import.meta.url));
 export const PRIVATE = path.join(os.homedir(), ".ai-peer", "demo-video-private");
+const REPO = path.resolve(FILM, "..", "..");
 const MARK = ".film-build";
 
 const readJson = (p) => JSON.parse(fs.readFileSync(p, "utf8"));
-const home = (p) => (p.startsWith("~/") ? path.join(os.homedir(), p.slice(2)) : p);
+const home = (p) => (p.startsWith("~/") ? path.join(os.homedir(), p.slice(2)) : p.startsWith("repo:") ? path.join(REPO, p.slice(5)) : p);
 const onGrid = (x, fps) => Math.abs(x * fps - Math.round(x * fps)) < 1e-6;
 const r3 = (x) => Math.round(x * 1000) / 1000;
 
@@ -29,6 +31,36 @@ export function runHome(variant, lane) {
 }
 export function buildDir(variant, lane) {
   return path.join(runHome(variant, lane), variant === "private" ? "build" : lane ? "project" : "public");
+}
+
+/** Loudness of a piece of a file's sound: overall RMS (dBFS) and a 0..1 level per film frame. */
+function listen(file, start, length, fps) {
+  const raw = execFileSync("ffmpeg", ["-hide_banner", "-loglevel", "error", "-nostdin", "-ss", String(start), "-t", String(length),
+    "-i", file, "-vn", "-ac", "1", "-ar", "8000", "-f", "f32le", "-"], { maxBuffer: 1 << 28 });
+  const x = new Float32Array(raw.buffer, raw.byteOffset, Math.floor(raw.byteLength / 4));
+  const step = 8000 / fps;
+  const values = [];
+  let total = 0;
+  for (let i = 0; i * step < x.length; i++) {
+    let sum = 0, n = 0;
+    for (let j = Math.floor(i * step); j < Math.min(x.length, Math.floor((i + 1) * step)); j++) { sum += x[j] * x[j]; n++; }
+    values.push(Math.sqrt(sum / Math.max(1, n)));
+  }
+  for (const v of x) total += v * v;
+  const peak = Math.max(1e-6, ...values);
+  return { rms_dbfs: 20 * Math.log10(Math.max(1e-6, Math.sqrt(total / Math.max(1, x.length)))), levels: values.map((v) => Math.round((v / peak) * 100) / 100) };
+}
+
+/** A sharper copy of a screenshot at twice the size (made once, kept in the private cache). */
+function enlarged(file, name) {
+  const dir = path.join(PRIVATE, "cache", "img");
+  const out = path.join(dir, `${name}@2x.png`);
+  if (!fs.existsSync(out) || fs.statSync(out).mtimeMs < fs.statSync(file).mtimeMs) {
+    fs.mkdirSync(dir, { recursive: true });
+    execFileSync("ffmpeg", ["-hide_banner", "-loglevel", "error", "-nostdin", "-y", "-i", file,
+      "-vf", "scale=iw*2:ih*2:flags=lanczos,unsharp=5:5:0.5:5:5:0", "-update", "1", out]);
+  }
+  return out;
 }
 
 /** Read the film and resolve what every slot shows. Throws on a timeline that does not hold. */
@@ -68,6 +100,11 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
   const media = [];   // <video> tags the page needs
   const copies = [];  // files to place in the build: {from, to}
   const sound = [];   // sound that belongs to the picture (a recording's own audio)
+  const labels = [];  // what-happens labels on the product screens
+  const chapters = []; // the opening card of each proof, with the night clock's hour
+  const sceneLines = []; // captions of speech inside a recording (private build only)
+  const privPath = path.join(PRIVATE, "product-private.json");
+  const priv = variant === "private" && fs.existsSync(privPath) ? readJson(privPath) : {};
   const slots = shots.slots.map((s) => {
     const slot = { ...s, use: "slate" };
     delete slot.clip;
@@ -89,20 +126,52 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
       const cut = product.slots[s.id];
       slot.slateNote = "<b>Product screen.</b> A real recording, kept on this Mac only: the private render shows it.";
       if (variant === "private" && cut) {
-        const from = home(product.sources[cut.source] || "");
-        if (!from || !fs.existsSync(from)) {
-          notes.push(`slot ${s.id}: the recording "${cut.source}" is not on this Mac, so it stays a slate`);
+        const missing = [...cut.pictures, ...(cut.sound || [])].map((x) => x.source).filter(Boolean)
+          .filter((name) => !product.sources[name] || !fs.existsSync(home(product.sources[name].file)));
+        if (missing.length) {
+          notes.push(`slot ${s.id}: "${missing[0]}" is not on this Mac, so it stays a slate`);
         } else {
-          const to = `assets/private/${cut.source}${path.extname(from)}`;
-          if (!copies.some((c) => c.to === to)) copies.push({ from, to, link: true });
           slot.use = "scene";
-          slot.cut = cut;
-          slot.videos = cut.beats.map((b, i) => {
-            const v = { id: `v-${s.id}-${i}`, src: to, start: r3(s.start + b.at), length: b.length, mediaStart: b.in, rate: b.rate || 1 };
-            media.push(v);
-            if (b.sound) sound.push({ id: `${s.id}-${i}`, file: from, start: v.start, length: b.length, in: b.in, gain_db: b.sound_gain_db ?? 0 });
-            return v;
+          slot.window = product.window;
+          slot.chapter = cut.chapter || null;
+          slot.pictures = cut.pictures.map((pic, pi) => {
+            const out = { ...pic };
+            const src = pic.source ? product.sources[pic.source] : null;
+            if (pic.type === "video") {
+              const to = `assets/private/${pic.source}${path.extname(src.file)}`;
+              if (!copies.some((c) => c.to === to)) copies.push({ from: home(src.file), to });
+              out.width = src.width; out.height = src.height;
+              out.frameWidth = src.frame_width || src.width; out.frameHeight = src.frame_height || src.height;
+              out.videos = pic.beats.map((bt, bi) => {
+                const v = { id: `v-${s.id}-${pi}-${bi}`, src: to, start: r3(s.start + bt.at), length: bt.length, mediaStart: bt.in, rate: bt.rate || 1 };
+                media.push(v);
+                return v;
+              });
+            } else if (pic.type === "image") {
+              const to = `assets/private/${pic.source}@2x.png`;
+              if (!copies.some((c) => c.to === to)) copies.push({ from: enlarged(home(src.file), pic.source), to });
+              out.src = to; out.width = src.width; out.height = src.height;
+            } else if (pic.type === "tile") {
+              out.name = priv.tile_name || "AI Peer";
+            }
+            return out;
           });
+          slot.levels = [];
+          for (const c of cut.sound || []) {
+            const file = home(product.sources[c.source].file);
+            const heard = listen(file, c.in, c.length, fps);
+            sound.push({ id: c.id, file, start: r3(s.start + c.at), length: c.length, in: c.in, gain_db: Math.round((-20 - heard.rms_dbfs) * 10) / 10 });
+            slot.levels.push({ at: c.at, length: c.length, values: heard.levels });
+            const text = (priv.captions || {})[c.id];
+            if (text) {
+              const words = text.split(/\s+/);
+              const span = c.length - 0.3;
+              sceneLines.push({ id: c.id, part: s.part, speaker: "product", text, start: r3(s.start + c.at + 0.12), seconds: r3(span),
+                words: words.map((w, i) => ({ w, s: r3((i * span) / words.length), e: r3(((i + 1) * span) / words.length) })), file: null });
+            }
+          }
+          for (const l of cut.labels || []) labels.push({ slot: s.id, start: r3(s.start + l.at), length: l.length, text: l.text });
+          if (cut.chapter) chapters.push({ slot: s.id, start: s.start, length: cut.chapter.length, hour: cut.chapter.hour, text: cut.chapter.text });
         }
       } else if (variant === "private") {
         slot.slateNote = "<b>Product screen.</b> No recording of this yet.";
@@ -119,6 +188,7 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
     if (slot && slot.clip && slot.line_at_s != null) start = r3(slot.start + slot.line_at_s - (slot.use_from_s || 0));
     return { id: n.id, part: n.part, speaker: n.speaker, text: n.text, start, seconds: n.seconds, words: n.words, rms_dbfs: n.rms_dbfs, file: path.join(FILM, n.file) };
   });
+  lines.push(...sceneLines);
   lines.sort((a, b) => a.start - b.start);
   lines.forEach((l, i) => {
     const part = shots.parts.find((p) => p.id === l.part);
@@ -128,7 +198,11 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
     if (slot && (l.start < slot.start || end > slot.start + slot.length)) problems.push(`line ${l.id} (${r3(l.start)} to ${r3(end)}) leaves its shot ${slot.id}`);
     const next = lines[i + 1];
     if (next && next.start < end + 0.1) problems.push(`line ${next.id} starts ${r3(next.start - end)} s after ${l.id} ends: they touch`);
-    if (!fs.existsSync(l.file)) problems.push(`line ${l.id}: ${l.file} is missing (run tools/voice.py, or git lfs pull)`);
+    if (l.file && !fs.existsSync(l.file)) problems.push(`line ${l.id}: ${l.file} is missing (run tools/voice.py, or git lfs pull)`);
+    // One text at a time: a label or a chapter card never shares the screen with a spoken line.
+    for (const x of [...labels, ...chapters]) {
+      if (l.start - 0.05 < x.start + x.length && x.start < end + 0.05) problems.push(`"${x.text}" (${x.start} to ${r3(x.start + x.length)}) is on screen while line ${l.id} is spoken (${r3(l.start)} to ${r3(end)})`);
+    }
   });
 
   if (problems.length) throw new Error("The film does not hold together:\n  - " + problems.join("\n  - "));
@@ -137,7 +211,7 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
     .filter((n) => fs.existsSync(path.join(FILM, "src", "overlays", `${n}.js`)));
   const film = {
     variant, fps, seconds, width: shots.width, height: shots.height, bpm: shots.bpm,
-    parts: shots.parts, slots, overlays,
+    parts: shots.parts, slots, overlays, labels, chapters,
     lines: lines.map(({ file, rms_dbfs, ...rest }) => rest),
   };
   return { film, lines, media, copies, sound, notes };

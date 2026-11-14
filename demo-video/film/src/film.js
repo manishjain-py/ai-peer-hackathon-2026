@@ -2,7 +2,7 @@
 // each frame on its own ("hf-seek"), often out of order, so nothing here keeps state between
 // frames, uses a timer, or reads the clock.
 import film from "../film-data.js";
-import { el, show } from "./lib.js";
+import { el, show, prng } from "./lib.js";
 import { createSlate } from "./scenes/slate.js";
 import { createCaptions } from "./overlays/captions.js";
 
@@ -63,6 +63,23 @@ async function start() {
   const captions = createCaptions(film);
   root.append(captions.el);
 
+  // Fine grain over everything, moved every frame by a fixed rule: it hides the banding that
+  // H.264 gives dark gradients.
+  const tile = document.createElement("canvas");
+  tile.width = tile.height = 256;
+  const g = tile.getContext("2d");
+  const noise = g.createImageData(256, 256);
+  const rnd = prng(20261114);
+  for (let i = 0; i < noise.data.length; i += 4) {
+    const v = Math.floor(rnd() * 256);
+    noise.data[i] = noise.data[i + 1] = noise.data[i + 2] = v;
+    noise.data[i + 3] = 255;
+  }
+  g.putImageData(noise, 0, 0);
+  const grain = el("div", { id: "grain" });
+  grain.style.backgroundImage = `url(${tile.toDataURL()})`;
+  root.append(grain);
+
   function renderAt(t) {
     for (const s of scenes) {
       const on = t >= s.from && t < s.to;
@@ -71,6 +88,8 @@ async function start() {
     }
     for (const o of overlays) o.render(t);
     captions.render(t);
+    const frame = Math.round(t * film.fps);
+    grain.style.backgroundPosition = `${(frame * 73) % 256}px ${(frame * 151) % 256}px`;
   }
 
   window.addEventListener("hf-seek", (e) => {

@@ -43,12 +43,20 @@ export function createCaptions(film) {
   ctx.font = `650 ${SIZE}px Manrope`;
   ctx.letterSpacing = `${-0.012 * SIZE}px`;
   const measure = (text) => ctx.measureText(text).width;
+  const blocks = [...(film.labels || []), ...(film.chapters || [])];
 
   const lines = film.lines.map((line, i) => {
     const next = film.lines[i + 1];
     const from = line.start - LEAD;
     let to = line.start + line.seconds + HOLD;
     if (next) to = Math.min(to, next.start - LEAD - GAP);
+    // A label or a title card owns the screen while it is up: the caption gives way.
+    let begin = from;
+    for (const b of blocks) {
+      const end = b.start + b.length;
+      if (end <= line.start + 0.3 && end + GAP > begin) begin = end + GAP;
+      if (b.start >= line.start + line.seconds - 0.3 && b.start - GAP < to) to = b.start - GAP;
+    }
     const spans = line.words.map((w) => el("span", { text: w.w + " " }));
     const rows = [];
     let k = 0;
@@ -56,13 +64,13 @@ export function createCaptions(film) {
       rows.push(el("div.ln", {}, spans.slice(k, k + n)));
       k += n;
     }
-    const peer = line.speaker === "peer";
+    const peer = line.speaker === "peer" || line.speaker === "product";
     const box = el("div.box", {},
       peer ? el("div.who", { html: markSvg({ size: 42 }) }) : null,
       el("div.words", {}, rows));
     const node = el(`div.cap${peer ? ".peer" : ""}`, {}, box);
     layer.append(node);
-    return { line, from, to, node, spans };
+    return { line, from: begin, to, node, spans };
   });
 
   return {
