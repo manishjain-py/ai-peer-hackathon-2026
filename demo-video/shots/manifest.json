@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-14T13:14:37Z",
+  "updated_utc": "2026-11-14T13:16:13Z",
   "slots": {
     "hook-1": {
       "clip": "demo-video/shots/hook-1/hook-1-final-v1.mp4",
@@ -41,13 +41,13 @@
       "note": "H3 Max Turbo at 1080P; slow even breathing (small), a very slow push-in"
     },
     "reveal-rise": {
-      "clip": "demo-video/shots/reveal-rise/reveal-rise-final-v1.mp4",
+      "clip": "demo-video/shots/reveal-rise/reveal-rise-final-v2.mp4",
       "grade": "final",
       "seconds": 10.625,
       "fps": 24,
       "use_from_s": 0.2,
       "audio": "none",
-      "note": "route K (Kling 4.0, four key frames), take 3, upscaled to 1080p; rise, tuck and stand in one take; the phone is lit from the first frame until the light-up by code is added (v2); the tag is off from 7.3 to 7.8 s while he bends to stand",
+      "note": "route K (Kling 4.0, four key frames), take 3, upscaled to 1080p; rise, tuck and stand in one take; the phone is dark, then lights up by code at 0.35 s (v2; the tag track was measured on v1, the same frames); the tag is off from 7.3 to 7.8 s while he bends to stand",
       "tag_track": "demo-video/shots/reveal-rise/tag-track-final-v1.json"
     },
     "reveal-desk": {
