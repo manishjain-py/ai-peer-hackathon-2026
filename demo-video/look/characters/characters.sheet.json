@@ -1,0 +1,15 @@
+{
+  "out": "demo-video/look/characters/characters.jpg",
+  "width": 2400,
+  "columns": 3,
+  "title": "Three possible employees",
+  "subtitle": "All three are invented and AI-made. Plain sleepwear, same light. Pick one.",
+  "cells": [
+    {"image": "demo-video/look/characters/a-portrait.jpg", "label": "A", "text": "man, early thirties, short dark hair, trimmed beard"},
+    {"image": "demo-video/look/characters/b-portrait.jpg", "label": "B", "text": "woman, early thirties, shoulder-length dark hair"},
+    {"image": "demo-video/look/characters/c-portrait.jpg", "label": "C", "text": "woman, early thirties, short natural curls"},
+    {"image": "demo-video/look/characters/a-full.jpg"},
+    {"image": "demo-video/look/characters/b-full.jpg"},
+    {"image": "demo-video/look/characters/c-full.jpg"}
+  ]
+}

@@ -1,0 +1,25 @@
+{
+ "request_id": "01a1d9bb-288a-7d32-80c4-8f3afe7a5f47",
+ "billable_units_header": "0.064098825",
+ "inputs_sent": {
+  "prompt": "A studio portrait photograph of a South Asian woman in her early thirties, with warm medium-brown skin and shoulder-length dark hair. Head and shoulders, facing the camera, with a calm, friendly, capable expression and a slight closed-mouth smile. She wears a plain dark charcoal crew-neck T-shirt with nothing printed on it. The backdrop is a seamless deep teal-ink wall, a very dark blue-green. One large soft warm key light from the front left, and a faint cool rim light on the right edge of her hair and shoulder. Shot on a full-frame camera with an 85mm lens at f/2.8, with natural skin texture, visible pores and a true-to-life skin tone, no beauty retouching. Premium advertising photography, photorealistic. Nothing written anywhere.",
+  "aspect_ratio": "4:5",
+  "resolution": "2K",
+  "output_format": "jpeg",
+  "num_images": 1,
+  "thinking_level": "medium"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26cd4/52CS2d0Zf3uvccmN9FBJd_Bh6uBwxC.jpg",
+    "content_type": "image/jpeg",
+    "file_name": "52CS2d0Zf3uvccmN9FBJd_Bh6uBwxC.jpg",
+    "file_size": null,
+    "width": 1856,
+    "height": 2304
+   }
+  ],
+  "description": ""
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "request_id": "01a1d9bb-36de-7bc3-8956-466f6a6ba09c",
+ "billable_units_header": "0.066533325",
+ "inputs_sent": {
+  "prompt": "Photograph the man from image 1 again, full length from head to bare feet, standing relaxed and facing the camera with his arms loosely at his sides, against the same seamless deep teal-ink backdrop, which curves down into a floor of the same colour, in the same soft warm light from the front left with a faint cool rim light. He wears the same plain dark charcoal crew-neck T-shirt and loose dark grey cotton pyjama trousers. His face, hair, beard, skin tone and build stay exactly as image 1 shows them. A calm, friendly expression. Premium advertising photography, photorealistic. Nothing written anywhere.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab26cd4/H0Ji2j1t36YVzLSbWdhQ4_a-portrait.jpg"
+  ],
+  "aspect_ratio": "2:3",
+  "resolution": "2K",
+  "output_format": "jpeg",
+  "num_images": 1,
+  "thinking_level": "medium"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26cd4/s-lgmTKv9RVy-7YRA-t2K_W4DjxKxU.jpg",
+    "content_type": "image/jpeg",
+    "file_name": "s-lgmTKv9RVy-7YRA-t2K_W4DjxKxU.jpg",
+    "file_size": null,
+    "width": 1696,
+    "height": 2528
+   }
+  ],
+  "description": ""
+ }
+}
