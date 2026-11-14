@@ -8,21 +8,27 @@ import { markSvg } from "../mark.js";
 
 const REACH = 3;        // clip frames each side that a tracked position is averaged over
 const SHARE = 0.7;      // the pill's width as a share of the shoulders' width
-const WIDTH = [104, 184]; // and its limits in pixels, so it always reads
+const WIDTH = [124, 190]; // and its limits in pixels, so it always reads
 
-/** The chest from WP3's track at a time of the slot: averaged over a few frames, null when out of view. */
-function fromTrack(track, local) {
+/**
+ * The chest from WP3's track at a time of the slot, averaged over a few frames. `seen` is the
+ * share of those frames where the track says the chest is in view; with `any` the place is
+ * taken from every frame (the track goes on following the upper body when he is side-on).
+ */
+function fromTrack(track, local, any) {
   const f = (track.from + local) * track.fps;
-  let x = 0, y = 0, w = 0, n = 0, all = 0;
+  let x = 0, y = 0, w = 0, n = 0, on = 0, all = 0;
   for (let i = Math.floor(f) - REACH; i <= Math.ceil(f) + REACH; i++) {
     const weight = 1 - Math.abs(i - f) / (REACH + 1);
     if (weight <= 0) continue;
     all += weight;
     const e = track.frames[clamp(i, 0, track.frames.length - 1)];
-    if (!e || !e[3]) continue;
+    if (!e) continue;
+    if (e[3]) on += weight;
+    if (!e[3] && !any) continue;
     x += e[0] * weight; y += e[1] * weight; w += e[2] * weight; n += weight;
   }
-  return n ? { x: x / n, y: y / n, w: w / n, seen: n / all } : null;
+  return n ? { x: x / n, y: y / n, w: w / n, seen: any ? 1 : on / all } : null;
 }
 
 /** The chest from hand-set keys [{t, x, y, w}]: a smooth curve through them, held outside. */
@@ -66,15 +72,17 @@ export async function create(film) {
       for (const { slot, pill, windows } of tags) {
         const local = t - slot.start;
         const inSlot = local >= 0 && local < slot.length;
-        const at = inSlot ? (slot.tagTrack ? fromTrack(slot.tagTrack, local) : fromKeys(slot.tagKeys, local)) : null;
-        let seen = 0, born = 0;
-        if (at) {
+        let seen = 0, born = 0, win = null;
+        if (inSlot) {
           for (const w of windows) {
             const e = envelope(local, w.from, w.to, w.in ?? 0.4, w.out ?? 0.3, ease.out, ease.inOut);
-            if (e > seen) { seen = e; born = w.in ? ramp(local, w.from, w.from + w.in) : 1; }
+            if (e > seen) { seen = e; win = w; born = w.in ? ramp(local, w.from, w.from + w.in) : 1; }
           }
-          seen *= ease.inOut(ramp(at.seen, 0.35, 0.9));
         }
+        // "force": show the tag in this window though the track calls the chest out of view
+        const at = win ? (slot.tagTrack ? fromTrack(slot.tagTrack, local, !!win.force) : fromKeys(slot.tagKeys, local)) : null;
+        if (at) seen *= ease.inOut(ramp(at.seen, 0.35, 0.9));
+        else seen = 0;
         show(pill, seen > 0.003);
         if (seen <= 0.003) continue;
         const size = clamp(SHARE * at.w * film.width, WIDTH[0], WIDTH[1]) / ems;

@@ -147,7 +147,12 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
         const to = `assets/shots/${path.basename(s.clip)}`;
         copies.push({ from: src, to });
         slot.use = "clip";
-        slot.video = { id: `v-${s.id}`, src: to, start: s.start, length: s.length, mediaStart: s.use_from_s || 0, rate: 1 };
+        // If the next shot dissolves in, this clip plays on under it for that long (as far as it has frames).
+        const next = shots.slots[shots.slots.indexOf(s) + 1];
+        const spare = s.clip_seconds ? s.clip_seconds - (s.use_from_s || 0) - s.length - 0.05 : 0;
+        const tail = next && next.dissolve_in && next.part === s.part ? Math.max(0, Math.min(next.dissolve_in, Math.floor(spare * fps) / fps)) : 0;
+        slot.tail = tail;
+        slot.video = { id: `v-${s.id}`, src: to, start: s.start, length: r3(s.length + tail), mediaStart: s.use_from_s || 0, rate: 1 };
         media.push(slot.video);
       }
     } else if (s.kind === "code") {
@@ -252,7 +257,7 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
     if (!s.tag || slot.use !== "clip") return;
     const name = path.basename(s.clip);
     const hand = s.tag_keys && s.tag_keys.for === name ? s.tag_keys : null;
-    if (s.tag_keys && !hand) notes.push(`slot ${s.id}: its hand-set tag keys are for ${s.tag_keys.for}, not ${name}: not used`);
+    if (s.tag_keys && s.tag_keys.for && !hand) notes.push(`slot ${s.id}: its hand-set tag keys are for ${s.tag_keys.for}, not ${name}: not used`);
     // a track made on this Mac from the hand-set keys (tools/tag_track.py), in WP3's format
     const own = path.join(FILM, "assets", "tags", `${path.basename(name, path.extname(name))}.tag.json`);
     const useTrack = (file) => {
@@ -274,7 +279,8 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
     } else {
       notes.push(`slot ${s.id}: no tag track and no keys for ${name}: no tag on the double`);
     }
-    if (hand && hand.show) slot.tagShow = hand.show;
+    // When the tag shows is an edit decision that follows the narration: it holds for any clip.
+    if (s.tag_keys && s.tag_keys.show) slot.tagShow = s.tag_keys.show;
     delete slot.tag_keys;
   });
   for (const slot of slots) { delete slot.hand_quads; delete slot.tag_keys; }

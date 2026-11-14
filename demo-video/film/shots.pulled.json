@@ -1,6 +1,6 @@
 {
  "about": "Made by tools/pull_shots.mjs from WP3's manifest. Do not edit by hand.",
- "manifest_updated_utc": "2026-11-14T12:13:10Z",
+ "manifest_updated_utc": "2026-11-14T13:00:04Z",
  "slots": {
   "hook-1": {
    "grade": "draft",
@@ -38,20 +38,41 @@
    "note": "draft at 768P; a very slow push-in"
   },
   "reveal-rise": {
-   "grade": "draft",
-   "clip_seconds": 10.125,
+   "grade": "final",
+   "clip_seconds": 10.625,
    "clip_fps": 24,
-   "use_from_s": 0.5,
+   "use_from_s": 0.2,
    "audio": "none",
-   "note": "draft at 768P (H3 Max Turbo, first and last frame): rise, tuck, stand in one take; the phone is lit from the first frame (the light-up comes by code in the final); no tag track yet"
+   "note": "route K (Kling 4.0, four key frames), take 3, upscaled to 1080p; rise, tuck and stand in one take; the phone is lit from the first frame until the light-up by code is added (v2); the tag is off from 7.3 to 7.8 s while he bends to stand",
+   "tag_track": "assets/shots/reveal-rise-tag-track-final-v1.json"
   },
   "reveal-desk": {
-   "grade": "draft",
-   "clip_seconds": 10.125,
+   "grade": "final",
+   "clip_seconds": 10.042,
    "clip_fps": 24,
-   "use_from_s": 1.1,
+   "use_from_s": 1.04,
    "audio": "none",
-   "note": "draft at 768P (H3 Max Turbo, first and last frame); the window ends on the clip's last frame for the push-in; no tag track or screen corners yet"
+   "note": "route K (Kling 4.0), take 1, from the real last frame of reveal-rise, upscaled to 1080p; the window ends on the clip's last frame for the push-in; last_still is that frame at 3840x2160 (same framing); the tag is on only for the first 3 s, after that he is side-on (x and y still follow his upper body); the join from reveal-rise is a match on the standing pose: a 6-frame dissolve hides it",
+   "tag_track": "assets/shots/reveal-desk-tag-track-final-v1.json",
+   "last_still": "assets/shots/reveal-desk-last-still-final-v1.png",
+   "screen_quad": [
+    [
+     0.86072,
+     0.48853
+    ],
+    [
+     0.89508,
+     0.49365
+    ],
+    [
+     0.87654,
+     0.58729
+    ],
+    [
+     0.84436,
+     0.57236
+    ]
+   ]
   },
   "morning-wake": {
    "grade": "draft",
