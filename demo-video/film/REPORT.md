@@ -37,7 +37,7 @@ still frames. **Manish's eyes and ears are the first real test.**
 |---|---|---|
 | 1 | One command renders the film | Done. `render.mjs` (whole film, one part, any window, `--private`); proven from a fresh clone by ai-peer-video-wp2. |
 | 2 | The voice | Done. 15 lines in voice 1 (Matilda, the product's own Peer voice; Manish confirmed it, `DESIGN.md` V12), three samples. |
-| 3a | The Earth close | **In Draft 1 as a snapshot.** The helper of ai-peer-video-wp2 was still improving the opening window when Draft 1 was rendered, so the film is pinned to its file as it stood at 13:17 UTC with the development switches off (`src/scenes/earth-draft1.js`, named by `scene_file` in `shots.json`). Textures: NASA Black Marble 2016 and Blue Marble Next Generation, in `assets/earth/` (the scene names `assets/earth/SOURCE.md` for their source and licence: its maker has not written that file yet). Its own report follows on `main` (`../docs/handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-2-helpers-earth.md`); then drop `scene_file`, delete the snapshot, look at 1:48 to 2:00 again. |
+| 3a | The Earth close | **Done in round 3** (below). The final scene, `src/scenes/earth.js`, is on; the Draft 1 snapshot is deleted. Textures: NASA Black Marble 2016 and Blue Marble Next Generation, in `assets/earth/`, with their sources and NASA's terms in `assets/earth/SOURCE.md`; the end card names NASA as their source. Its maker's report: `../docs/handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-2-helpers-earth.md`. |
 | 3b, 3c | The night clock, the proof cards | Done (`src/overlays/chips.js`). |
 | 3d | Captions | Done, word by word (`src/overlays/captions.js`). |
 | 3e | The end card | Done (`src/scenes/endcard.js`); it sits over the Earth. |
@@ -57,7 +57,7 @@ packing step so a delivery render is 40 to 115 MB instead of 1.5 GB.
    (`../shots/REPORT.md`). One point is open and was not checked here: six of the nine files
    carry no colour tag, and WP3 found they may fit BT.601 better than the BT.709 a browser
    assumes for 1080p, so those six may look slightly off in the render. Compare one of them
-   (for example `hook-1`) with its still before the final cut.
+   (for example `hook-1`) with its still before the final cut. (Checked in round 3: no change; see below.)
 2. **The meeting has no real picture.** The stand-in recording shows only the other side's
    name on black, so the Peer is a call tile drawn by code and moved by the real sound, marked
    "Real sound from a live test meeting". **Manish's real recording must be made from a
@@ -80,7 +80,7 @@ packing step so a delivery render is 40 to 115 MB instead of 1.5 GB.
    little. Fine for a draft; the finals may need a proper frame-rate conversion.
 8. **Captions of speech inside recordings** are spread evenly over the words, not timed word
    by word.
-9. **The Earth's opening is the least finished second of the close.** The pull-out starts on a
+9. **The Earth's opening is the least finished second of the close** (written for Draft 1; round 3 put the final version in, see below). The pull-out starts on a
    lit window in a wall, then a fast streak of city lights; the window was being rebuilt by
    its maker when Draft 1 was rendered, and the streak is a blur of lights, not a city one can
    read. From 1:50 the planet, the lights turning mint and the end card over the horizon hold
@@ -183,7 +183,7 @@ none of these questions and would sound plainer.
 
 ## For the next round
 
-- **The Earth's final version** (its maker's report follows on `main`): drop `scene_file`,
+- **Done in round 3:** the Earth's final version (its maker's report follows on `main`): drop `scene_file`,
   delete `src/scenes/earth-draft1.js`, commit `src/scenes/earth.js` and `assets/earth/` with
   the textures' source and licence, look at 1:48 to 2:00.
 - **A new clip from WP3:** `tools/pull_shots.mjs` brings it in with its track, corners and
@@ -192,3 +192,39 @@ none of these questions and would sound plainer.
   full screen on a Retina display; they go into `~/.ai-peer/demo-video-private/` and are cut
   in `product.json` (numbers only) and `product-private.json` (the words, never in git).
 - **His feedback on Draft 1** comes back through the controller.
+
+## Round 3: the Earth's final version and the colour check
+
+Written 2026-11-14 by ai-peer-video-wp2-3. No paid call; no helper.
+
+- **The Earth close is the final version.** `src/scenes/earth.js` (its maker's last version,
+  every development switch off) replaces the Draft 1 snapshot, which is deleted, and
+  `shots.json` no longer pins the slot. `assets/earth/SOURCE.md` (where the four NASA pictures
+  come from, NASA's terms) is in git.
+- **NASA is named on screen.** A small line at the bottom of the end card, from 1:58.0: "Earth
+  imagery: NASA Earth Observatory (Black Marble 2016; Blue Marble: Next Generation)"
+  (`src/scenes/endcard.js`, `.ecredit` in `src/film.css`). It names the source only; the film
+  shows no NASA name or mark anywhere else, so nothing suggests NASA backs the product.
+- **Seen:** `node demo-video/film/render.mjs --part close --quality delivery --lane wp23`
+  (12 s, 360 frames, 18 MB, no page errors, 74 s on this Mac); one sheet of 16 frames from 1:48.0
+  to 1:59.95; the credit at full size; a strip of 16 frames of the fastest half second (1:49.1 to
+  1:49.6). The window, the facade, the globe, the mint wave and the end card read as the maker's
+  report says, and the captions and the end card sit over the scene.
+- **Still weak in the close** (the maker's list stands, in its order): the blocks from above at
+  1:48.7 look like plain boxes; from 1:49.0 to 1:49.7 the pull-out is a fast radial streak of warm
+  lights whose mean brightness swings by up to 7 levels (of 255) from one frame to the next, with
+  a faint grid square at 1:49.1, so it may read as a shimmer in motion. Nobody has watched it
+  move. Banding after the delivery encode and the render time were not checked.
+- **The colour of the AI clips: no change, by measurement.** All nine delivered clips carry no
+  colour tag (not six). The renderer reads an untagged HD clip as BT.709, as Chrome does
+  (HyperFrames 0.9.45, `chromeGuessForUntaggedMatrix`); ffmpeg, WP3's tool for its sheets and
+  checks, reads it as BT.601. The two readings differ little: a mean colour difference (CIE76 delta E)
+  of 1.1 to 1.8 per clip, 2.5 to 4.0 in the most colourful 5% of pixels, which is a difference
+  one sees only side by side. `hook-1`'s still beside both readings at 400 pixels shows no clear
+  difference. The pixels cannot prove which reading is right: against the stills, BT.601 fits 5
+  of the 6 MiniMax shots better by only 0.1 to 0.45 levels in errors of 5 to 8 (the generation
+  changes more than the matrix does), and for the two Kling shots tested, their raw takes (with a
+  real BT.709 tag) differ from the upscaled copies by 5 to 7 levels, more than the gap, with the
+  two leaning opposite ways. So the film keeps reading all nine one way. If an eye ever finds the
+  colours off, tag all nine together (never six alone, so the cuts stay alike) as BT.601, with no
+  re-encode: `ffmpeg -i IN -c copy -bsf:v h264_metadata=matrix_coefficients=6 OUT`.
