@@ -66,6 +66,13 @@ A successor starts its own from the tests written in the table.
   tool; settle the look of the double in the stills first.
 - WP2, the film in code and Draft 1 (`ai-peer-video-wp2`, brief
   `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2.md`, cap $10): launched 2026-11-14 11:30 UTC.
+  Handed off at 44.8% context on 2026-11-14 12:20 UTC to `ai-peer-video-wp2-2`
+  (`handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-2.md`); branch `video-wp2-film-build` at
+  `a51c934`, no PR yet. Done: the one-command render (proven from a fresh clone), the voice
+  (milestone 1), captions, the night clock and proof cards, the end card, the product screens
+  for Draft 1, WP3's nine drafts pulled in. Running as helpers of the old session: the Earth
+  close, and music with sound effects (up to $5). Left: the push-in, the tag on the double,
+  Draft 1 (two renders), the report, the PR. Money spent by WP2 itself: $0.
 - WP3, the nine AI shots with people (`ai-peer-video-wp3`, brief
   `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp3.md`, cap $60): launched 2026-11-14 11:53 UTC.
 
@@ -160,3 +167,4 @@ Nothing blocks the build.
 | 2026-11-14 11:58 | ai-peer-video-controller-2 | WP2 reported milestone 1 by message: the narration (15 lines, checked by speech-to-text), the three voice samples, and a 2:00 animatic with 16 labelled slates (`demo-video/film/renders/animatic-01.mp4` in its worktree, branch commit c8effb0), built on HyperFrames. The controller looked at a 15-frame sheet of it (slates only, nothing private) and sent Manish a 720p copy as an optional listen for the voice question. `SHOTS.md` now carries WP2's film windows. | WP2 goes on to the parts made by code, the product screens, music and Draft 1 |
 | 2026-11-14 12:09 | ai-peer-video-controller-2 | The helper's check of WP3's brief reported (20 minutes, free calls only): the brief's paths, prices paid, slots, money split and privacy rule hold; twelve corrections (always set the resolution: Kling defaults to 1080p at $0.235 a second; the named lip-sync endpoints need 4 to 5 s of sound; stills are not exactly 16:9; no seed on Kling or Omni; the order of the finals) are in `research/fal-facts-2026-11-14.md` with live price tables, and went to WP3 by message; the controller re-read three of them itself. `SHOTS.md` gained the rule for where a spoken line starts. WP3 had spent $1.53 at 12:06 UTC (17 rows) and made its sheet of four looks for the double; the controller looked at it and sent it to Manish with its pick. | Waiting on WP3's drafts, WP2's Draft 1 and Manish's three answers |
 | 2026-11-14 12:15 | ai-peer-video-controller-2 | WP3 reported milestone 1 by message (and its wait ended): a moving draft of all nine slots in its manifest, $3.74 spent, draft PR 8. The controller looked at `all-shots.jpg` (nine coherent shots: three colleagues in three places, the sleeper, the rise with threads of light, the desk, the morning) and told WP2 to use the manifest in Draft 1. WP3 chose look B for the double by itself; its two key frames went to Manish. | WP3 on tag tracks, then finals; WP2 on the code parts and Draft 1 |
+| 2026-11-14 12:16 | ai-peer-video-wp2 | Handed off at 44.8% context. Since milestone 1: product screens by code (window, camera, cursor, mint outline; the meeting shown as a call tile moved by its real sound, because the stand-in recording's picture is only a name on black), the night clock, proof cards and labels in one text lane, the end card, WP3's nine drafts pulled into the film, film grain. Two helpers still run (the Earth close; music and sound effects). | Successor `ai-peer-video-wp2-2` to be started by the controller; brief `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-2.md` |
