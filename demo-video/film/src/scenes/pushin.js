@@ -102,7 +102,7 @@ export async function create(slot, film) {
   // On the product's window the Peer's mark waits where its call tile will show it. On a screen
   // drawn by code the laptop shows that screen itself, darkened as the next scene darkens it.
   const light = el("div.plight");
-  const content = drawn ? await windowContent(next, film) : null;
+  const content = drawn ? await windowContent(next, film, { copy: true }) : null;
   const shade = drawn ? el("div.pshade") : null;
   const mark = product && !drawn ? el("div.pmark", { html: markSvg({ size: 190 }) }) : null;
   const ember = product && !drawn ? el("div.pember") : null;   // mint in the glass while the light goes down, so it never reads grey

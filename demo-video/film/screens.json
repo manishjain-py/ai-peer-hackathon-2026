@@ -16,6 +16,7 @@
       "tiles": ["amara", "daniel", "vikram", "peer"],
       "join_at": 1.6,
       "speakers": { "m1": "peer", "m2": "peer", "m3": "amara", "m4": "peer" },
+      "clips": [{ "who": "amara", "file": "assets/screens/amara-m3.mp4", "line": "m3", "line_at": 1.0, "length": 5.0, "about": "Amara says m3 on her webcam: a lip-synced clip (minimax/h3-max-turbo, demo-video/shots/meeting-amara/), played over her tile from 1.0 s before her line; the tile's still is its first frame" }],
       "camera": [{ "t": 0, "s": 1, "fx": 0.5, "fy": 0.5 }, { "t": 2.0, "s": 1, "fx": 0.5, "fy": 0.5 }, { "t": 15.0, "s": 1.045, "fx": 0.56, "fy": 0.56 }, { "t": 22.0, "s": 1.07, "fx": 0.6, "fy": 0.6 }]
     },
     "proof-slack": {

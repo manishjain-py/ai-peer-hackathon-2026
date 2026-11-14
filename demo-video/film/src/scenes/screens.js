@@ -66,7 +66,7 @@ function wordsSaid(line, t) {
 }
 
 // ---- 1. Zoom: a gallery of four, the Peer as a labelled AI tile, live captions ------------------
-function zoom(S, film, slot) {
+function zoom(S, film, slot, opts = {}) {
   const L = linesById(film);
   const peerName = (film.names && film.names.peer) || "AI Peer";
   const node = el("div.zoom");
@@ -90,9 +90,15 @@ function zoom(S, film, slot) {
     } else {
       const p = S.people[id];
       const img = el("div.zimg", { style: { backgroundImage: `url("${p.tile}")` } });
+      // a tile that talks: the person's lip-synced clip over the still while it plays (it starts
+      // on the still's own frame); the push-in's copy of this window goes without it
+      const clip = opts.copy ? null : (S.clips || []).find((c) => c.who === id) || null;
+      const host = clip ? document.getElementById("host-" + clip.video) : null;
+      if (clip && !host) throw new Error(`no video ${clip.video} on the page`);
+      if (host) img.append(host);
       const mic = el("span", { html: ICON.micOff });
       tile = el("div.ztile", {}, img, el("div.zname", {}, mic, el("span", { text: p.name })));
-      tiles.push({ id, tile, img, mic, i });
+      tiles.push({ id, tile, img, mic, i, clip, host });
     }
     Object.assign(tile.style, { left: px(x), top: px(y), width: px(tw), height: px(th) });
     tile.append(el("div.zactive"));
@@ -124,6 +130,11 @@ function zoom(S, film, slot) {
         const s = 1.035 + 0.012 * Math.sin(local * 0.31 + T.i * 1.9);
         T.img.style.transform = `scale(${s.toFixed(4)}) translate(${(3 * Math.sin(local * 0.23 + T.i)).toFixed(2)}px, ${(2 * Math.cos(local * 0.19 + T.i * 2)).toFixed(2)}px)`;
         T.mic.innerHTML = lit ? ICON.micOn : ICON.micOff;
+        if (T.host) {
+          const v = envelope(t, T.clip.start, T.clip.start + T.clip.length, 0.12, 0.3, ease.inOut, ease.inOut);
+          show(T.host, v > 0);
+          T.host.style.opacity = v.toFixed(3);
+        }
       }
     }
     const tv = envelope(local, S.join_at, S.join_at + 4.4, 0.35, 0.4);
@@ -303,11 +314,12 @@ export function windowDim(S, local, landed) {
  * The picture inside a screen's window: the screen drawn by code, under its slow camera. The
  * scene shows it in its window; the push-in shows a second one in the laptop's screen and lands
  * on it. render(t) takes the film time; before the slot starts it draws the slot's first moments
- * (nobody speaks yet, the Peer has not joined).
+ * (nobody speaks yet, the Peer has not joined). opts.copy: a second copy, which leaves the
+ * page's video clips to the scene itself (a clip's <video> can live in one place only).
  */
-export async function windowContent(slot, film) {
+export async function windowContent(slot, film, opts = {}) {
   const S = slot.screen, W = slot.window;
-  const built = BUILD[S.kind](S, film, slot);
+  const built = BUILD[S.kind](S, film, slot, opts);
   const cam = el("div.scam", {}, built.node);
   Object.assign(cam.style, { width: px(W.w), height: px(W.h) });
   await picturesReady(cam);

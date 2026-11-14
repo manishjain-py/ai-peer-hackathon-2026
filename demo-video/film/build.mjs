@@ -284,7 +284,16 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
         slot.use = "scene";
         slot.scene = "screens";
         slot.window = sc.kind === "brief" ? { x: 0, y: 0, w: shots.width, h: shots.height } : screens.window;
-        slot.screen = { ...sc, people: screens.people, peer_face: screens.peer_face, note: screens.note };
+        // a tile that talks: a lip-synced clip played over a person's tile, timed by the line said
+        const clips = (sc.clips || []).map((c, ci) => {
+          const at = shots.narration[c.line];
+          if (at == null) { problems.push(`slot ${s.id}: a tile clip names the line ${c.line}, which has no start`); return null; }
+          if (!fs.existsSync(path.join(FILM, c.file))) { problems.push(`slot ${s.id}: the tile clip ${c.file} is missing`); return null; }
+          const v = { id: `v-${s.id}-tile-${ci}`, src: c.file, start: r3(at - c.line_at), length: c.length, mediaStart: 0, rate: 1 };
+          media.push(v);
+          return { who: c.who, video: v.id, start: v.start, length: v.length };
+        }).filter(Boolean);
+        slot.screen = { ...sc, clips, people: screens.people, peer_face: screens.peer_face, note: screens.note };
         for (const l of sc.labels || []) labels.push({ slot: s.id, start: r3(s.start + l.at), length: l.length, text: l.text });
         if (sc.chapter) chapters.push({ slot: s.id, start: s.start, length: sc.chapter.length, hour: sc.chapter.hour, text: sc.chapter.text });
       }
