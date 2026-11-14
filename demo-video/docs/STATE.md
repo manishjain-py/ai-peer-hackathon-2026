@@ -6,7 +6,20 @@ read-in at 15:02 UTC. It took over from ai-peer-video-controller-3 (hand-off
 `handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-3.md`), which was closed at 15:01 UTC.
 Other sessions message the controller by its name.
 
-## Where we are (2026-11-14 19:25 UTC)
+## Where we are (2026-11-14 19:47 UTC)
+
+**19:47 UTC: Phase A is with Manish; the question "which Peer?" is open.** ai-peer-video-wp2-4
+sent four concept boards and one motion clip (branch `video-wp2-4-draft3` at `a6587f0`; boards in
+`demo-video/look/peer-entrance/boards/`, research with links in
+`demo-video/research/peer-entrance-2026-11-14.md`; ledger $3.01 of Phase A's $8; context 24%).
+The controller looked at one picture of all four boards and eight frames of the clip, then sent
+them at 19:44 UTC to the Attention group (four photos, the clip, one text line) and to its
+session. The options: D, the little Peer, a small soft mint figure whose face is the product's
+mark, out of the laptop and back (recommended: clearly not human, one face everywhere); A, Ram's
+look out of his phone; B, Ram's look out of his laptop; C, a night owl of light out of the phone
+(it reads as Duolingo's owl and Harry Potter's). Any look can come from either place. The worker
+builds Phase B meanwhile; the controller said yes to four short made-up voice lines in the Zoom
+meeting (32 to 54 s) from the ElevenLabs plan (no per-call bill), in the existing voices.
 
 **19:25 UTC: Manish's view of Draft 2 is in (V19; his words and the controller's order:
 `FEEDBACK-DRAFT-2-2026-11-14.md`).** The Peer must not come out of the sleeping Ram (it feels
@@ -239,9 +252,16 @@ still running is the worker ai-peer-video-wp2-3 (window 3974, PID 16635) with it
 | 2026-11-14 | fal.ai (WP3, finished) | Stills, the look of the double, a moving draft and the final of each of the nine AI shots, with upscaling and lip-sync | $23.10 (95 rows of `demo-video/ledger/wp3.csv`, on `main` since PR 8) |
 | 2026-11-14 | fal.ai (WP2, finished: only its music and sound helper spent) | The music bed (one take of Google's Lyria 3.5) and nine sound effects | $0.94 (8 rows of `demo-video/ledger/wp2.csv`, on `main` since PR 9) |
 | 2026-11-14 | fal.ai (WP2-3, Draft 2, finished) | Two new lip-sync takes (hook-1, hook-2); the re-recorded lines used about 200 characters of the ElevenLabs plan, which is not billed per call | $0.62 (2 rows of `demo-video/ledger/wp2-3.csv`, on `main` since PR 11; cap $10) |
-| | **Total of the $100 cap** | | **$31.25** (the four ledgers on `main`, summed at 15:11 UTC: WP1 $6.60, WP3 $23.10, WP2 $0.94, WP2-3 $0.62) |
+| 2026-11-14 | fal.ai (WP2-4, Draft 3, in progress) | Phase A: the stills of four concept boards and two motion tests | $3.01 so far, by the worker's message at 19:42 UTC (`demo-video/ledger/wp2-4.csv`, on its branch; caps $8 for Phase A, $25 for Phase C) |
+| | **Total of the $100 cap** | | **$34.26** (the four ledgers on `main`, summed at 15:11 UTC: WP1 $6.60, WP3 $23.10, WP2 $0.94, WP2-3 $0.62; plus WP2-4's $3.01 so far) |
 
 ## Needs Manish
+
+**Asked 2026-11-14 19:44 UTC: which Peer for Draft 3?** D, the little Peer from the laptop
+(recommended), A Ram's look from the phone, B Ram's look from the laptop, or C a night owl from
+the phone; any look from either place. Sent with the four boards and the motion clip to the
+Attention group and the session of ai-peer-video-controller-4. Pass his words to
+ai-peer-video-wp2-4 word for word and record them as V20.
 
 **Answered 2026-11-14 19:14 UTC: his view of Draft 2 (V19)**, in the session of
 ai-peer-video-controller-4, word for word in `FEEDBACK-DRAFT-2-2026-11-14.md`. Next from him: his
@@ -495,3 +515,4 @@ and 7 still hold.
 | 2026-11-14 15:09 | ai-peer-video-wp2-3 | Draft 2 done and merged (PR 11, `5a7970f`): the quicker reveal (V16: no blanket, rise, get up, walk, sit, then working while the camera moves into the push-in; cut by code) and the new hook with Ram (V17: 15 s, two new takes by WP3's route for $0.616, new h1, h2 and p02 spoken "Rahm", message cards, the sleeper's label "Ram 1:58 AM", the tag "Ram's AI Peer", the proof's note); a mixer hang in ffmpeg 8 found and fixed (sound bit-identical with the old times). Both renders made; one sheet of the slates copy looked at; the private render's numbers only. | Handed off at 43% context: `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-4.md`; nothing of wp2-3 still runs. |
 | 2026-11-14 15:12 | ai-peer-video-controller-4 | Draft 2 came from ai-peer-video-wp2-3 (PR 11, `5a7970f`). Checked the slates copy only (numbers, loudness, one 30-frame sheet) and sent Manish a 720p copy at 15:10 UTC on the Attention group and in the session, asking for his view. Closed ai-peer-video-wp2-3 (window 3974) at 15:11 UTC after the checks. Ledgers summed: $31.25 of $100. Only the wait `usage` runs. |
 | 2026-11-14 19:25 | ai-peer-video-controller-4 | Manish's view of Draft 2 came at 19:14 UTC (V19): no Peer out of the sleeping Ram; Ram's look from a phone or laptop, or a mascot; back to the same place at the end; made-up Zoom, Slack and morning-brief screens with invented Airbnb payments data; samples first. Wrote `FEEDBACK-DRAFT-2-2026-11-14.md` (his words and the order for Draft 3) and V19; launching ai-peer-video-wp2-4. |
+| 2026-11-14 19:47 | ai-peer-video-controller-4 | Phase A came from ai-peer-video-wp2-4 (four boards, one motion clip, research with links). Checked one picture of all four boards and eight frames of the clip; sent them at 19:44 UTC to the Attention group and the session, asking which Peer (D recommended). Said yes to four made-up voice lines in the Zoom meeting from the ElevenLabs plan. Money $34.26 of $100. |
