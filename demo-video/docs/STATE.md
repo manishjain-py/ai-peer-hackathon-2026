@@ -5,13 +5,23 @@ https://claude.ai/code/session_01Nfn5h5eNL9YLJMnBQpKKMf). It was launched unname
 Learn Like Magic folder, so its window title may not carry the name; its successor is launched
 by name from this repo.
 
-## Where we are (2026-11-14 10:18 UTC)
+## Where we are (2026-11-14 10:26 UTC)
 
 Day one. Manish asked for a 2-minute "wow" demo video (`BRIEF-2026-11-14.md`). The controller
-read the old film and the build, checked this Mac's tools and keys, and started the tools
-research (four web researchers and one reader of the old docs, all inside the controller's own
-session). The interview with Manish has started; nothing is locked beyond the brief. Nothing
-has been generated and no money has been spent.
+read the old film and the build (`PRIOR-WORK.md`), checked this Mac's tools and keys, and
+started the tools research (four web researchers inside the controller's own session, still
+running). The interview with Manish has started with question 1 (when the video must be
+ready), sent in the session and on Attention at 10:20 UTC; no answer yet. Nothing is locked
+beyond the brief. Nothing has been generated and no money has been spent.
+
+Keys checked with free, read-only calls (values never printed): fal.ai valid (its balance
+cannot be read with this key); ElevenLabs valid (plan `growing_business`, about 97% of the
+character quota free, instant and professional voice cloning allowed); the Gemini API key lists
+`gemini-omni-1.2-flash` (video), `lyria-3.5` (music) and `nano-banana-pro-preview` (images);
+the OpenAI key lists `gpt-image-2.6-*` and no Sora model; Stability has 17 credits. fal.ai's own
+catalogue and prices for the leading video models are in
+`research/fal-catalogue-2026-11-14.md`. The Gemini and OpenAI keys belong to Learn Like Magic
+set-ups: ask Manish before spending on them.
 
 | Session | Window | Session URL | Worktree | Branch | PR | Job |
 |---|---|---|---|---|---|---|
@@ -21,7 +31,7 @@ Still running:
 
 | What | PID | Log | Stop command |
 |---|---|---|---|
-| Five background helpers of the controller (4 web researchers, 1 reader of the old docs) | inside the controller's session | notes land in `demo-video/research/research_notes/AI video toolkit for demo film/` | They end by themselves, and die if the controller's session closes |
+| Four background helpers of the controller (web researchers: video models; likeness and voice; the agent's production stack; craft, references and legal) | inside the controller's session | notes land in `demo-video/research/research_notes/AI video toolkit for demo film/` | They end by themselves, and die if the controller's session closes |
 
 ## Money spent
 
@@ -56,3 +66,4 @@ Still running:
 | Date (UTC) | Session | What happened | Outcome |
 |---|---|---|---|
 | 2026-11-14 10:18 | ai-peer-video-controller-1 | Set-up: read the old film and build, checked tools and keys on Mac 48 GB, wrote BRIEF, DESIGN and STATE, started the tools research and the interview. | In progress |
+| 2026-11-14 10:26 | ai-peer-video-controller-1 | The reader of the old docs reported: saved as `PRIOR-WORK.md`. Keys checked with free calls; fal.ai's catalogue and prices saved. | Waiting on question 1 and on four researchers |
