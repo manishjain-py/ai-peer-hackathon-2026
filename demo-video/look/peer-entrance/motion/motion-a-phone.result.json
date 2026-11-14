@@ -1,0 +1,22 @@
+{
+ "request_id": "01a1db90-c5b1-79e1-b72a-687bb57ce434",
+ "billable_units_header": "5.0",
+ "inputs_sent": {
+  "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed and never moves. A man lies asleep in the bed and does not move at any time. The phone on the bedside table glows mint. After a moment a ribbon of soft mint light streams out of the phone's screen and sweeps low across the room in front of the bed to the open floor between the bed and the desk. There, out of the ribbon's glowing particles, a man made of soft mint light builds up, from his head and shoulders down to his bare feet, while the ribbon fades away behind him. He stands upright, calm and friendly, and looks toward the desk. Smooth, slow, elegant motion, like a premium advertising film. Nothing spooky, no mist, no smoke.",
+  "start_image_url": "https://v3b.fal.media/files/b/0ab278aa/zYzqGMa4oMdUZilQaUS9__night-phone-lit.png",
+  "middle_image_urls": [
+   "https://v3b.fal.media/files/b/0ab278c2/tLMsNHu2MRaS0kLb0KA9S_a-phone-1-appears.png"
+  ],
+  "end_image_url": "https://v3b.fal.media/files/b/0ab278d9/RFyBxoE7SUxny7RvefKKa_a-phone-1b-formed.png",
+  "duration": 5,
+  "resolution": "720p"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab278f3/V2C5iYNrW5FXcpCLla_5n_output.mp4",
+   "content_type": "video/mp4",
+   "file_name": "output.mp4",
+   "file_size": 2444476
+  }
+ }
+}
