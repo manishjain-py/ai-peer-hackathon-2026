@@ -27,19 +27,20 @@ set-ups: ask Manish before spending on them.
 |---|---|---|---|---|---|---|
 | ai-peer-video-controller-1 | 2952 | https://claude.ai/code/session_01Nfn5h5eNL9YLJMnBQpKKMf | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | Controller: the interview and the research |
 | ai-peer-video-wp1 | 3962 | https://claude.ai/code/session_01Nfn5h7gC1ucD3V5X1FSeSk | `~/repos/ai-peer-video-wp1` (launched in the shared checkout) | video-wp1-look-test | none yet | WP1: three possible employees, the night frames, the clone shot three ways; cap $15; Fable 5.2, max effort, PID 41753 |
+| ai-peer-video-wp2 | 3963 | on its window's first lines | `~/repos/ai-peer-video-wp2` (launched in the shared checkout, with `CLAUDE_NO_IDLE_PING=1`) | video-wp2-film-build | none yet | WP2: the film in code and Draft 1; cap $10; Fable 5.2, max effort, PID 48241 |
 
 Still running:
 
 | What | PID | Log | Stop command |
 |---|---|---|---|
-| The controller's watcher for WP1's first milestone (it ends when `~/repos/ai-peer-video-wp1/demo-video/look/characters/characters.jpg` exists, when PID 41753 is gone, or after 90 minutes) | a background task of the controller's session | prints one line when it ends | It ends by itself |
+| A helper of controller-1 watching the September film second by second (its report becomes `demo-video/docs/DRAFT07-WATCH.md`) | inside controller-1's session (window 2952) | none | It ends by itself |
 
 ## Packages (each line is written by its own worker only)
 
 - WP1, look pictures and hero-shot tests (`ai-peer-video-wp1`, brief
   `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp1.md`, cap $15): launched 2026-11-14 10:55 UTC.
 - WP2, the film in code and Draft 1 (`ai-peer-video-wp2`, brief
-  `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2.md`, cap $10): not started.
+  `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2.md`, cap $10): launched 2026-11-14 11:30 UTC.
 
 ## Money spent
 
@@ -91,3 +92,4 @@ Still running:
 | 2026-11-14 11:12 | ai-peer-video-controller-1 | Manish answered question 7: B, real company content on this Mac only (V8); the rule for every session is C8 and in `demo-video/AGENTS.md`. Question 8 (the outline of the film) asked. | Waiting on question 8 and on WP1's frames and hero tests |
 | 2026-11-14 11:22 | ai-peer-video-controller-1 | Manish asked whether the September film is here (yes: Draft 07, 4:23, on this Mac), then dropped the student opening (V9) and asked for a better two-minute story after a frame-by-frame watch. The controller read the film's full captions and 48 frames across it; a helper watches every second inside a scratch folder. The proposed story is saved as `STORY.md`. | The story went to Manish before the helper's watch ended |
 | 2026-11-14 11:28 | ai-peer-video-controller-1 | Manish approved the story for a first draft (V10). The controller wrote `PLAN.md` and WP2's brief, chose a licence-free build (C9) and the Draft 1 voice and money split (C10). | WP2 being launched |
+| 2026-11-14 11:30 | ai-peer-video-controller-1 | Launched ai-peer-video-wp2 (window 3963, PID 48241). Context at 43%: wrote `handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-1.md` and started ai-peer-video-controller-2 in this repo. WP1's ledger stood at $5.03 at 11:25 UTC. | Handed off; controller-1 only waits for its film-watch helper |
