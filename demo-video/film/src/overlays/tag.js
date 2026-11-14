@@ -5,6 +5,7 @@
 // screen is an edit decision, also in shots.json ("show").
 import { el, show, ramp, ease, lerp, clamp, envelope, px } from "../lib.js";
 import { markSvg } from "../mark.js";
+import { cameraAt } from "../camera.js";
 
 const REACH = 3;        // clip frames each side that a tracked position is averaged over
 const SHARE = 0.7;      // the pill's width as a share of the shoulders' width
@@ -16,7 +17,7 @@ const WIDTH = [124, 190]; // and its limits in pixels, so it always reads
  * taken from every frame (the track goes on following the upper body when he is side-on).
  */
 function fromTrack(track, local, any) {
-  const f = (track.from + local) * track.fps;
+  const f = (track.from + local * (track.rate || 1)) * track.fps;
   let x = 0, y = 0, w = 0, n = 0, on = 0, all = 0;
   for (let i = Math.floor(f) - REACH; i <= Math.ceil(f) + REACH; i++) {
     const weight = 1 - Math.abs(i - f) / (REACH + 1);
@@ -57,10 +58,11 @@ export async function create(film) {
   ctx.font = "800 100px Manrope";
   ctx.letterSpacing = "1px";
   // the pill's width in ems: mark, gaps, padding and border as film.css sets them, plus the words
-  const ems = 0.36 + 1.2 + 0.36 + ctx.measureText("AI Peer").width / 100 + 0.62 + 0.15;
+  const TEXT = (film.names && film.names.peer) || "AI Peer";   // "Ram's AI Peer" (shots.json names)
+  const ems = 0.36 + 1.2 + 0.36 + ctx.measureText(TEXT).width / 100 + 0.62 + 0.15;
 
   const tags = film.slots.filter((s) => s.use === "clip" && (s.tagTrack || s.tagKeys)).map((slot) => {
-    const pill = el("div.tagpill", {}, el("span.tmk", { html: markSvg({ size: 100 }) }), el("span", { text: "AI Peer" }));
+    const pill = el("div.tagpill", {}, el("span.tmk", { html: markSvg({ size: 100 }) }), el("span", { text: TEXT }));
     layer.append(pill);
     const windows = slot.tagShow || [{ from: 0, to: slot.length, in: 0.3, out: 0.25 }];
     return { slot, pill, windows };
@@ -85,7 +87,12 @@ export async function create(film) {
         else seen = 0;
         show(pill, seen > 0.003);
         if (seen <= 0.003) continue;
-        const size = clamp(SHARE * at.w * film.width, WIDTH[0], WIDTH[1]) / ems;
+        // a shot that moves in carries the tag with it (src/camera.js)
+        const cam = cameraAt(slot, film, t);
+        const zoom = cam ? cam.s : 1;
+        const cx = at.x * film.width, cy = at.y * film.height;
+        const x = cam ? cam.F[0] + zoom * (cx - cam.F[0]) : cx, y = cam ? cam.F[1] + zoom * (cy - cam.F[1]) : cy;
+        const size = clamp(SHARE * at.w * film.width * zoom, WIDTH[0], WIDTH[1]) / ems;
         pill.style.fontSize = px(size);
         pill.style.opacity = seen;
         // it lands with a small settle and a flare of its glow, then breathes very slightly
@@ -93,7 +100,7 @@ export async function create(film) {
         const flare = 1 - ease.out(born);
         const glow = 0.5 + 0.5 * flare + 0.06 * Math.sin(t * 2.1);
         pill.style.boxShadow = `0 0 ${(1.3 + 1.6 * flare).toFixed(2)}em rgba(183,244,207,${glow.toFixed(3)}), 0 0.2em 0.7em rgba(0,0,0,0.4)`;
-        pill.style.transform = `translate(${px(at.x * film.width)}, ${px(at.y * film.height)}) translate(-50%, -50%) scale(${pop.toFixed(4)})`;
+        pill.style.transform = `translate(${px(x)}, ${px(y)}) translate(-50%, -50%) scale(${pop.toFixed(4)})`;
       }
     },
   };

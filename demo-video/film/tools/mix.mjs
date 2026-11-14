@@ -48,6 +48,9 @@ const ms = (s) => Math.round(s * 1000);
  * Writes <dir>/mix.wav and the stems voice.wav, scene.wav, music.wav (after ducking), sfx.wav.
  */
 export function mix(plan, dir, { target = -14, ceiling = -1.5, voiceRms = -20 } = {}) {
+  // Every delayed input is padded to the film's length before it is mixed: ffmpeg 8's amix can
+  // hang for good at full CPU when its inputs end at different times (seen 2026-11-14 with the
+  // effects at Draft 2's times). Silence adds nothing to the sum, so the sound is the same.
   fs.mkdirSync(dir, { recursive: true });
   const D = plan.seconds;
   const inputs = [];
@@ -62,7 +65,7 @@ export function mix(plan, dir, { target = -14, ceiling = -1.5, voiceRms = -20 } 
   const v = plan.lines.map((l, i) => {
     const n = add(l.file);
     const gain = voiceRms - l.rms_dbfs;
-    f.push(`[${n}:a]aresample=${SR},aformat=channel_layouts=stereo,volume=${db(gain).toFixed(4)},adelay=${ms(l.start)}:all=1[v${i}]`);
+    f.push(`[${n}:a]aresample=${SR},aformat=channel_layouts=stereo,volume=${db(gain).toFixed(4)},adelay=${ms(l.start)}:all=1,apad,atrim=0:${D}[v${i}]`);
     return `[v${i}]`;
   });
   if (v.length) {
@@ -75,7 +78,7 @@ export function mix(plan, dir, { target = -14, ceiling = -1.5, voiceRms = -20 } 
     const n = add(c.file);
     const fade = Math.min(0.08, c.length / 4);
     f.push(`[${n}:a]atrim=${c.in}:${c.in + c.length},asetpts=PTS-STARTPTS,aresample=${SR},aformat=channel_layouts=stereo,` +
-      `volume=${db(c.gain_db || 0).toFixed(4)},afade=t=in:d=${fade},afade=t=out:st=${(c.length - fade).toFixed(3)}:d=${fade},adelay=${ms(c.start)}:all=1[s${i}]`);
+      `volume=${db(c.gain_db || 0).toFixed(4)},afade=t=in:d=${fade},afade=t=out:st=${(c.length - fade).toFixed(3)}:d=${fade},adelay=${ms(c.start)}:all=1,apad,atrim=0:${D}[s${i}]`);
     return `[s${i}]`;
   });
   if (s.length) f.push(`${s.join("")}amix=inputs=${s.length}:normalize=0:dropout_transition=0,apad,atrim=0:${D}[scene]`);
@@ -100,7 +103,7 @@ export function mix(plan, dir, { target = -14, ceiling = -1.5, voiceRms = -20 } 
 
   const x = (plan.sfx || []).map((e, i) => {
     const n = add(e.file);
-    f.push(`[${n}:a]aresample=${SR},aformat=channel_layouts=stereo,volume=${db(e.gain_db ?? -8).toFixed(4)},adelay=${ms(e.at)}:all=1[x${i}]`);
+    f.push(`[${n}:a]aresample=${SR},aformat=channel_layouts=stereo,volume=${db(e.gain_db ?? -8).toFixed(4)},adelay=${ms(e.at)}:all=1,apad,atrim=0:${D}[x${i}]`);
     return `[x${i}]`;
   });
   if (x.length) f.push(`${x.join("")}amix=inputs=${x.length}:normalize=0:dropout_transition=0,apad,atrim=0:${D}[sfx]`);

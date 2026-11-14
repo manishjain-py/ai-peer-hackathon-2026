@@ -4,7 +4,8 @@
 // camera move, the screen's light blooms, and the screen turns to face us: it becomes the
 // product's window, dark, where the next scene picks it up. In a build without recordings the
 // screen opens onto the slate that follows instead.
-import { el, show, ramp, ease, lerp, px } from "../lib.js";
+import { el, show, ramp, ease, lerp, clamp, px } from "../lib.js";
+import { centre, area, pushLine } from "../camera.js";
 import { markSvg } from "../mark.js";
 import { createSlate } from "./slate.js";
 
@@ -17,17 +18,6 @@ const MOVE = [0.05, 1.7];
 const TURN = [0.95, 1.72];
 const ROOM_OUT = [1.05, 1.5];
 const SETTLE = [1.5, 1.93];
-
-const centre = (q) => [q.reduce((a, p) => a + p[0], 0) / q.length, q.reduce((a, p) => a + p[1], 0) / q.length];
-/** Area of a polygon given as points in order. */
-function area(q) {
-  let a = 0;
-  q.forEach((p, i) => {
-    const n = q[(i + 1) % q.length];
-    a += p[0] * n[1] - n[0] * p[1];
-  });
-  return Math.abs(a) / 2;
-}
 
 /**
  * The CSS matrix that lays a w x h box (origin at its top left) onto four points, given
@@ -52,15 +42,20 @@ export async function create(slot, film) {
   const next = film.slots[film.slots.findIndex((s) => s.id === slot.id) + 1];
   const product = P.lands === "product";
   const win = P.window;
-  const q0 = P.quad.map(([x, y]) => [x * W, y * H]);
-  const target = [[win.x, win.y], [win.x + win.w, win.y], [win.x + win.w, win.y + win.h], [win.x, win.y + win.h]];
-  const c0 = centre(q0), cT = centre(target);
-  // The zoom that brings the screen to the size of where it lands, and the one point of the
-  // picture that a straight push toward it leaves in place.
-  const S = Math.sqrt((win.w * win.h) / area(q0));
+  // The zoom S that brings the screen to the size of where it lands, and the one point F of the
+  // picture that a straight push toward it leaves in place (src/camera.js, shared with a shot
+  // that moves in before the push).
+  const { q0, target, S, F } = pushLine(P, W, H);
   const LNS = Math.log(S);
-  const F = [c0[0] + (cT[0] - c0[0]) / (1 - S), c0[1] + (cT[1] - c0[1]) / (1 - S)];
   const move = (u) => 0.5 - 0.5 * Math.cos(Math.PI * ramp(u, MOVE[0], MOVE[1]));
+  // When the shot before already moved in (to Z0, at P.lead e-folds a second), the push starts
+  // there at that speed and glides on to S: no jump in place or in speed at the cut.
+  const Z0 = P.from_scale || 1, LN0 = Math.log(Z0);
+  const glide = (u) => {
+    const T = MOVE[1], x = clamp(u / T, 0, 1);
+    return ((x * x * x - 2 * x * x + x) * (P.lead || 0) * T) / (LNS - LN0) + (3 * x * x - 2 * x * x * x);
+  };
+  const logScale = (u) => (Z0 > 1 ? LN0 + (LNS - LN0) * glide(u) : LNS * move(u));
 
   // 1. where it lands: the product's night stage, or the slate that follows
   let stage;
@@ -112,9 +107,8 @@ export async function create(slot, film) {
 
   function render(t) {
     const u = t - slot.start;
-    const k = move(u);
-    const speed = ((move(u + 0.004) - move(u - 0.004)) / 0.008) * LNS;   // e-folds of zoom a second
-    const s = Math.exp(k * LNS);
+    const speed = (logScale(u + 0.004) - logScale(u - 0.004)) / 0.008;   // e-folds of zoom a second
+    const s = Math.exp(logScale(u));
 
     // the room rushes past, then gives way to where we land
     const seen = 1 - ease.inOut(ramp(u, ROOM_OUT[0], ROOM_OUT[1]));

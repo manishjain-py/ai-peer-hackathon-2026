@@ -42,13 +42,18 @@ export async function create(film) {
 
   // Night time as a function of film time: each proof starts on its hour and then runs one
   // minute a second; a new card spins the clock forward to the next hour.
+  // the first card spins from the night time the hook showed beside the sleeper (shots.json names)
+  const nightStart = (base) => {
+    const m = /^(\d+):(\d+)/.exec((film.names && film.names.night_time) || "");
+    return m ? (Number(m[1]) % 12) * 60 + Number(m[2]) : base - 22;
+  };
   function minutesAt(t) {
     let m = null;
     chapters.forEach((c, i) => {
       if (t < c.start) return;
       const base = c.hour * 60;
       const prev = chapters[i - 1];
-      const from = prev ? prev.hour * 60 + (c.start - prev.start - prev.length) : base - 22;
+      const from = prev ? prev.hour * 60 + (c.start - prev.start - prev.length) : nightStart(base);
       const spin = ease.inOut(ramp(t, c.start, c.start + 0.9));
       m = t < c.start + c.length ? lerp(from, base, spin) : base + (t - c.start - c.length);
     });

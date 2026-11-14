@@ -228,3 +228,61 @@ Written 2026-11-14 by ai-peer-video-wp2-3. No paid call; no helper.
   two leaning opposite ways. So the film keeps reading all nine one way. If an eye ever finds the
   colours off, tag all nine together (never six alone, so the cuts stay alike) as BT.601, with no
   re-encode: `ffmpeg -i IN -c copy -bsf:v h264_metadata=matrix_coefficients=6 OUT`.
+
+## Draft 2: the quicker reveal and the new hook with Ram
+
+Written 2026-11-14 by ai-peer-video-wp2-3, from Manish's two answers on Draft 1 (`DESIGN.md` V16
+and V17, relayed by the controller). Renders: `renders/draft-02-slates.mp4` (in git) and
+`~/.ai-peer/demo-video-private/renders/draft-02.mp4` (this Mac only; this session did not look
+at it, by the controller's rule).
+
+- **The reveal is quicker (V16).** No business with the blanket: he rises (15.0), gets up beside
+  the bed (17.5, 1.5x, the blanket skipped by a 0.3 s dissolve), walks to the desk while the tag
+  lands on "AI Peer" (18.5, 1.5x), sits and opens the laptop (20.9, 1.1x), and works from 24.0
+  while the camera moves in on him, on the push-in's own line, so the push-in at 30.0 carries on
+  at the same speed. All by code from WP3's two clips (no paid call). The working shot is the
+  clip's last two seconds played forward and back, so it can take any length: it is the reveal's
+  spare time. To move the reveal's start, read the note on `reveal-rise` in `shots.json`.
+- **The hook names Ram (V17).** The hook is 15.0 s: colleague 1 (4.0 s, "It's 2 AM for Ram... and I
+  just got my answer."), colleague 2 (5.0 s, "Ram's out of office... but his AI Peer already sent
+  me the update I needed."), colleague 3 unchanged (2.5 s), the sleeper (3.5 s). The voices are
+  told "Rahm" (`audio/script.json`, "spoken"), which speech-to-text hears with a long a; captions
+  and screens write "Ram". p02 is "I'm Ram's AI Peer." (p03 was made again too, because the tool
+  sends neighbouring lines as context; same words). Everything from 32.0 on keeps its time.
+- **Two new takes, WP3's route** (MiniMax H3 Max Turbo at 1080P from WP3's stills and seeds, the new
+  line pinned at 0.9 s): `assets/shots/hook-1-ram-r1.mp4`, `assets/shots/hook-2-ram-r1.mp4`
+  (requests in `../shots/hook-1/requests/` and `../shots/hook-2/requests/`). Both read well at the
+  first try on one sheet: surprise, then a pleased smile. **$0.616** (`../ledger/wp2-3.csv`, two
+  rows). ElevenLabs: about 200 characters of the plan already paid for.
+- **On screen, by code** (`src/overlays/notes.js`): beside each of the first two colleagues a card
+  slides in from "Ram's AI Peer" with an invented line ("Yes, the numbers are final. The sheet is
+  in our team folder." / "Your update: the new screens are done, and the review is now on
+  Thursday."); beside the sleeper "Ram 1:58 AM", and the night clock of the proof now spins from
+  1:58 to 2:00 (`names.night_time` in `shots.json`); the tag reads "Ram's AI Peer"; on the product
+  screens of the private render a small note, "Real recordings: the builder's own AI Peer at
+  work" (there are no product screens in the slates copy, so no note there).
+- **New switches** (README): `in_s`, `rate`, `from_shot`, `pingpong`, `camera`, `own_clip` (a
+  clip made for the film: `tools/pull_shots.mjs` keeps it and nothing of WP3's manifest is laid
+  over it), `line_in_s` (where the line starts in such a clip); `names` at the top of `shots.json`.
+- **A trap found and fixed:** ffmpeg 8's `amix` hung for good at full CPU when its delayed inputs
+  ended at different times (the effects at the new times; even Draft 1's times hang when the
+  effects branch runs alone). `tools/mix.mjs` now pads every delayed input to the film's length
+  first. With Draft 1's times every stem and the mix came out bit-identical to before.
+
+Seen: a sheet of each AI cut of the reveal (20 frames), frame-to-frame change measured at every
+cut (no jump), a sheet of the hook check (16 frames, the tag and a card at full size), and one
+sheet of 20 frames of the whole slates render. Its numbers: 2:00.0, 3,600 frames, 39.1 MB,
+-14.1 LUFS, true peak -1.8 dBFS, every line 15.0 to 25.6 dB above the music.
+
+Still weak, plainly:
+
+1. Nobody has watched Draft 2 move or heard it. The music was cut for the old timeline: the bed is
+   the same file, so whatever it does at 12 s now falls in the sleeper shot, three seconds before
+   the reveal's cut; after 32 s nothing moved.
+2. The jump past the blanket is a 0.3 s dissolve in which he moves from behind the bed to its
+   side; the walk at 1.5x may look hurried; the working shot repeats a 2 s movement forward and
+   back, and the tag shows on his side as he walks and sits (forced, as in Draft 1).
+3. The new takes' lips are timed by WP3's rule for this route (the mouth about one frame early,
+   so the voice starts 0.86 s into the take), not measured.
+4. The card texts are invented placeholders; the card and the label are small at 1080p.
+5. The private render's product screens, and the note on them, were not looked at by this session.

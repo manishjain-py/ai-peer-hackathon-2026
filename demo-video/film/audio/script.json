@@ -30,12 +30,12 @@
     }
   },
   "lines": [
-    { "id": "h1", "part": "hook", "speaker": "colleague-1", "text": "2 AM where he is, and I've got my answer.", "spoken": "Two A.M. where he is, and I've got my answer." },
-    { "id": "h2", "part": "hook", "speaker": "colleague-2", "text": "His update's already here. His Peer gave it." },
+    { "id": "h1", "part": "hook", "speaker": "colleague-1", "text": "It's 2 AM for Ram... and I just got my answer.", "spoken": "It's two A.M. for Rahm... and I just got my answer." },
+    { "id": "h2", "part": "hook", "speaker": "colleague-2", "text": "Ram's out of office... but his AI Peer already sent me the update I needed.", "spoken": "Rahm's out of office... but his AI Peer already sent me the update I needed." },
     { "id": "h3", "part": "hook", "speaker": "colleague-3", "text": "Does he ever sleep?" },
     { "id": "p01", "part": "hook", "speaker": "peer", "text": "He does. I'm the one who's up." },
 
-    { "id": "p02", "part": "reveal", "speaker": "peer", "text": "I'm his AI Peer." },
+    { "id": "p02", "part": "reveal", "speaker": "peer", "text": "I'm Ram's AI Peer.", "spoken": "I'm Rahm's AI Peer." },
     { "id": "p03", "part": "reveal", "speaker": "peer", "text": "I know his projects, his code, his conversations, the way he knows them." },
     { "id": "p04", "part": "reveal", "speaker": "peer", "text": "So when work needs him and he can't be there, I cover." },
     { "id": "p05", "part": "reveal", "speaker": "peer", "text": "Not as him. As me." },

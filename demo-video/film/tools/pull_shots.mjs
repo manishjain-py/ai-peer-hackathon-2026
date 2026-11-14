@@ -45,6 +45,7 @@ function bring(rel, id) {
 for (const [id, m] of Object.entries(manifest.slots || {})) {
   const slot = shots.slots.find((s) => s.id === id);
   if (!slot) { console.log(`manifest slot ${id} is not in shots.json: skipped`); continue; }
+  if (slot.own_clip) { console.log(`${id}: the film's own clip ${slot.clip} is kept (own_clip)`); continue; }
   const clip = bring(m.clip, id);
   const extra = { grade: m.grade, clip_seconds: m.seconds, clip_fps: m.fps, use_from_s: m.use_from_s || 0, audio: m.audio || "none", note: m.note || "" };
   if (m.line_at_s != null) extra.line_at_s = m.line_at_s;
