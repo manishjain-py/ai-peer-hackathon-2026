@@ -31,7 +31,7 @@ Still running:
 
 | What | PID | Log | Stop command |
 |---|---|---|---|
-| One background helper of the controller (the web researcher on craft, references and legal). The other three finished; their notes are committed. | inside the controller's session | notes land in `demo-video/research/research_notes/AI video toolkit for demo film/` | It ends by itself, and dies if the controller's session closes |
+| One background helper of the controller: the report writer. All four researchers finished; their notes are committed. | inside the controller's session | it writes `demo-video/research/reports/AI video toolkit for demo film.md` | It ends by itself, and dies if the controller's session closes |
 
 ## Money spent
 
@@ -41,9 +41,11 @@ Still running:
 
 ## Needs Manish
 
-1. The interview, one question at a time, in the controller's session. Question 1 is answered
-   (due Thursday 19 November, `DESIGN.md` V1). Question 2, asked 2026-11-14 10:39 UTC: how much may be
-   spent. Options: up to $500 in total (recommended), up to $250, or his own number.
+1. The interview, one question at a time, in the controller's session. Answered so far: the
+   due date (V1), the tools rule (V2: Claude's own abilities first) and the budget (V3: $100 for
+   now). Question 3, asked 2026-11-14 10:43 UTC: who is the employee in the film. Options: Manish
+   himself, filmed on his phone from an exact shot list, with the clone and its effects made by
+   code (recommended); Manish from photos only, generated with AI; an invented employee.
 
 ## Next
 
@@ -69,3 +71,4 @@ Still running:
 | 2026-11-14 10:18 | ai-peer-video-controller-1 | Set-up: read the old film and build, checked tools and keys on Mac 48 GB, wrote BRIEF, DESIGN and STATE, started the tools research and the interview. | In progress |
 | 2026-11-14 10:26 | ai-peer-video-controller-1 | The reader of the old docs reported: saved as `PRIOR-WORK.md`. Keys checked with free calls; fal.ai's catalogue and prices saved. | Waiting on question 1 and on four researchers |
 | 2026-11-14 10:39 | ai-peer-video-controller-1 | Three of four researchers reported; notes committed. Manish answered question 1: due Thursday 19 November. Working dates set (`DESIGN.md` C4). Question 2 (the budget) asked. | Waiting on question 2 and on the last researcher |
+| 2026-11-14 10:43 | ai-peer-video-controller-1 | The last researcher reported; the report writer started. Manish answered question 2: Claude's own abilities first (V2), a $100 cap for now (V3). Question 3 (who is the employee in the film) asked. | Waiting on question 3 and on the report |

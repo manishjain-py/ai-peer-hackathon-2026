@@ -19,6 +19,8 @@
 | # | Question | Decision | His words, date (UTC) |
 |---|---|---|---|
 | V1 | When must the finished video be ready? | Thursday 19 November 2026. | "Thursday 19 november" (2026-11-14 10:38 UTC) |
+| V2 | Which tools? | Claude's own abilities first (video made by code: motion graphics, 3D, compositing, the edit). An outside tool only where they cannot meet the requirement; the controller picks it. | "First preference is to use Claude native capabilities. If that is not possible to fulfill the requirement, then we can use any tools that you think can do that." (2026-11-14 10:42 UTC) |
+| V3 | How much may be spent? | A cap of $100 for now. Raising it is his call, later. | "for the budget cap, let's keep $100 for now, and afterwards we will see if we can extend it or not." (2026-11-14 10:42 UTC) |
 
 ### The controller's own routine calls (undo: tell the controller)
 
@@ -27,6 +29,7 @@
 | C1 | The work lives in `demo-video/` of `manishjain-py/ai-peer-hackathon-2026`; docs go straight to `main`. | The repo already holds the old film, the build and their lessons; its rule sends docs-only commits to `main`. |
 | C2 | The tools research (notes and report) lives in `demo-video/research/`. | The repo is the only memory. |
 | C3 | No money is spent before a budget is written in this section. | Money is Manish's call. |
+| C5 | How V2 and V3 are applied: each shot is first tried by code; a paid tool is used only for what code cannot make (for example real-looking people and places that nobody filmed, voices, music). The $100 counts new spending (pay-per-use generation, any new subscription); plans Manish already pays for (ElevenLabs) are used inside their quota. Every paid call is logged in `STATE.md` (Money spent); one round of test shots costs at most $15; Manish is told at $50 and at $80. | His two answers of 14 November. |
 | C4 | Working dates from V1: look and script fixed by Sunday 15 November night (India time), first full cut Tuesday 17, final Wednesday 18 night, Thursday 19 morning as buffer. The new product screens are needed by Tuesday 17 morning. | Five days; a cut needs a day of his feedback and a day of fixes. |
 
 ## 1. The film
