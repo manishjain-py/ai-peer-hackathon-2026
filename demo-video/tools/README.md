@@ -12,6 +12,9 @@ All run with `uv run --quiet <tool>` (each file names its own Python packages) o
 | `person_matte.py` | A matte video of the person in a clip, made on this Mac with an open person detector (free). |
 | `double_composite.py` | Lays the person of one plate over another plate as a double made of light (mint glow, see-through, shimmer); can let the double move real things. |
 | `compare_film.py` | Up to three takes side by side in one labelled 1080p film. |
+| `chest_track.py` | The tag track of a clip with the double: one JSON entry per frame with the middle of its chest, its shoulder width and whether the chest is in view (`on`). A pose model on this Mac (run it from a scratch folder, it downloads about 115 MB); the sleeper and the foreground man are set aside, short gaps filled, the track smoothed, `on` without flicker. `--check` draws it on 8 frames. |
+| `screen_quad.py` | The four corners of the lit laptop screen in a clip's last frame, placed finer than a pixel and printed as JSON (fractions of the frame, clockwise from the top left). `--still` saves that frame, `--check` draws the outline. |
+| `phone_lightup.py` | Makes the bedside phone dark at first and lets it light up at `--on` seconds: registers the lit still to the clip, adds (dark still minus lit still) inside a soft mask, and leaves every other pixel and every later frame as it was. `--prove` measures that against a control, `--check` shows the table before, during and after. |
 
 A request file holds the endpoint, the inputs, the price you expect and the output path. A local
 input is written `"file:<path from the repo root>"` and is uploaded for the call. Every request

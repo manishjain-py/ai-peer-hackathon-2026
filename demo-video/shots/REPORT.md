@@ -94,6 +94,13 @@ Three routes were made from the same new stills:
   (about 2.4 s of standing still is skipped): a 6-frame dissolve hides it.
 - `reveal-desk`'s tag is on only for the first 3 s (after that he is side-on).
 - The fal.ai balance is still unknown; no call was refused for it.
+- **Colour tags.** None of the nine delivered files carries a colour tag. Kling's raw files are tagged BT.709;
+  H3 Max Turbo's and FlashVSR+'s are untagged, and the tools helper found the H3 drafts fit BT.601 better
+  than BT.709. ffmpeg reads them right, but a player or browser that assumes BT.709 for 1080p may show the
+  H3-made shots slightly off. I did not measure this on the finals: WP2 should check one H3 shot against
+  its still before the final cut.
+- The tag tracks say only on or off. In `morning-nod` the tag should fade with the double (3.3 to 4.3 s).
+  The tag point is the middle of the seen torso, so the chest light slides under it when he turns.
 
 ## Money
 

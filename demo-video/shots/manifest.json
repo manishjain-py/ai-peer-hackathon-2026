@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-14T13:16:13Z",
+  "updated_utc": "2026-11-14T13:19:34Z",
   "slots": {
     "hook-1": {
       "clip": "demo-video/shots/hook-1/hook-1-final-v1.mp4",
@@ -47,8 +47,8 @@
       "fps": 24,
       "use_from_s": 0.2,
       "audio": "none",
-      "note": "route K (Kling 4.0, four key frames), take 3, upscaled to 1080p; rise, tuck and stand in one take; the phone is dark, then lights up by code at 0.35 s (v2; the tag track was measured on v1, the same frames); the tag is off from 7.3 to 7.8 s while he bends to stand",
-      "tag_track": "demo-video/shots/reveal-rise/tag-track-final-v1.json"
+      "note": "route K (Kling 4.0, four key frames), take 3, upscaled to 1080p; rise, tuck and stand in one take; the phone is dark, then lights up by code at 0.35 s; the tag is on from 1.67 s (once he is up to the hips) and off from 7.3 to 7.8 s while he bends to stand",
+      "tag_track": "demo-video/shots/reveal-rise/tag-track-final-v2.json"
     },
     "reveal-desk": {
       "clip": "demo-video/shots/reveal-desk/reveal-desk-final-v1.mp4",
@@ -105,7 +105,7 @@
       "fps": 24,
       "use_from_s": 1.0,
       "audio": "none",
-      "note": "route K (Kling 4.0), first frame morning-nod-b, end frame the same room without the double, upscaled to 1080p; the nod is small (about 1.3 to 2.5 s), the fade runs from 3.3 to 4.4 s; he is more solid than faint before he fades",
+      "note": "route K (Kling 4.0), first frame morning-nod-b, end frame the same room without the double, upscaled to 1080p; the nod is small (about 1.3 to 2.5 s); the double fades from 3.3 to 4.3 s: fade the tag out with him over that second (the track only says on or off); he is more solid than faint before he fades",
       "tag_track": "demo-video/shots/morning-nod/tag-track-final-v1.json"
     }
   }
