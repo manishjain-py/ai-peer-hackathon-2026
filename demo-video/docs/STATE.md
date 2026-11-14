@@ -6,7 +6,17 @@ read-in at 15:02 UTC. It took over from ai-peer-video-controller-3 (hand-off
 `handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-3.md`), which was closed at 15:01 UTC.
 Other sessions message the controller by its name.
 
-## Where we are (2026-11-14 20:12 UTC)
+## Where we are (2026-11-14 20:52 UTC)
+
+**20:52 UTC: ai-peer-video-wp2-5 waits, idle, for Manish's pick; "which Peer?" is still open.**
+While waiting it fixed the two weak points (the push-in now lands on the Zoom window itself;
+the brief's phone clears the captions) and made the meeting look like webcams: Amara talks on
+hers during m3 (a new seated still and a 5 s lip-sync clip; the controller looked at one sheet
+and passed it), and Daniel and Vikram got matching webcam stills. Branch `video-wp2-4-draft3` at
+`f833b84`; its ledger $0.53 of Phase C's $25; context 26%. The controller stopped the wait
+`stall-wp2-5` at 20:52 UTC, because an idle worker would raise a false alarm; it re-arms it when
+it passes on the pick (the command is `wait-stall-wp2-4`'s with the name, PID 61062 and
+transcript `65f3cec6-9f1f-41b2-8d05-1f8c94c3a03f`).
 
 **20:12 UTC: Phase B is done; ai-peer-video-wp2-5 has taken over; "which Peer?" is still open.**
 ai-peer-video-wp2-4 drew the four product screens by code with made-up Airbnb payments data (a
@@ -215,7 +225,6 @@ Still running:
 
 | What | PID | Log | Stop command |
 |---|---|---|---|
-| Wait `stall-wp2-5`: the worker silent for 25 minutes, or PID 61062 gone (stop it before closing window 4262) | 61639 | `~/.ai-peer/demo-video-private/controller/waits.log` | `kill 61639` |
 | Wait `usage`: the whole week passes 50% (checked every 5 minutes; Fable's threshold is 101, out of reach; the 40% alarm rang at 19:46 UTC: 38% at 19:20, 40% at 19:46 with one worker, about 4.6 points an hour) | 46163 | `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log` | `kill 46163` |
 
 The three waits were started by ai-peer-video-controller-4 at 15:01 UTC (the commands are in
@@ -270,7 +279,8 @@ still running is the worker ai-peer-video-wp2-3 (window 3974, PID 16635) with it
 | 2026-11-14 | fal.ai (WP2, finished: only its music and sound helper spent) | The music bed (one take of Google's Lyria 3.5) and nine sound effects | $0.94 (8 rows of `demo-video/ledger/wp2.csv`, on `main` since PR 9) |
 | 2026-11-14 | fal.ai (WP2-3, Draft 2, finished) | Two new lip-sync takes (hook-1, hook-2); the re-recorded lines used about 200 characters of the ElevenLabs plan, which is not billed per call | $0.62 (2 rows of `demo-video/ledger/wp2-3.csv`, on `main` since PR 11; cap $10) |
 | 2026-11-14 | fal.ai (WP2-4, Draft 3, in progress) | Phase A: the stills of four concept boards and two motion tests | $3.01 so far, by the worker's message at 19:42 UTC (`demo-video/ledger/wp2-4.csv`, on its branch; caps $8 for Phase A, $25 for Phase C) |
-| | **Total of the $100 cap** | | **$34.26** (the four ledgers on `main`, summed at 15:11 UTC: WP1 $6.60, WP3 $23.10, WP2 $0.94, WP2-3 $0.62; plus WP2-4's $3.01 so far) |
+| 2026-11-14 | fal.ai (WP2-5, Draft 3, in progress) | Webcam stills for the three colleagues and Amara's 5 s lip-sync clip for the meeting | $0.53 so far, by the worker's message at 20:31 UTC (`demo-video/ledger/wp2-5.csv`, on its branch; inside Phase C's $25) |
+| | **Total of the $100 cap** | | **$34.79** (the four ledgers on `main`, summed at 15:11 UTC: WP1 $6.60, WP3 $23.10, WP2 $0.94, WP2-3 $0.62; plus WP2-4's $3.01 and WP2-5's $0.53 so far) |
 
 ## Needs Manish
 
