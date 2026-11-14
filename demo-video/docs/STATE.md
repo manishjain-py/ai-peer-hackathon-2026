@@ -2,8 +2,9 @@
 
 Live controller: ai-peer-video-controller-2 (Terminal window 3964 on Mac 48 GB, PID 49247,
 https://claude.ai/code/session_01Nfn5h7PShJsTBPY7urCJaZ). Other sessions message it by that
-name. It took over from ai-peer-video-controller-1 on 2026-11-14 (the hand-off is
-`handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-1.md`).
+name. It took over from ai-peer-video-controller-1 on 2026-11-14 and handed off at 12:36 UTC
+to **ai-peer-video-controller-3**, which writes its own window and link here when it has read
+in (the hand-off is `handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-2.md`).
 
 ## Where we are (2026-11-14 11:54 UTC)
 
@@ -18,8 +19,12 @@ nine AI shots with people, cap $60) started at 11:53 UTC: stills first, then a c
 every shot, then the finals. No film exists yet. The controller waits with background scripts
 (the "Still running" table), at no token cost.
 
-Read at 11:47 UTC: context in use, WP2 26%, the controller 27%; Claude usage at 11:33 UTC, 10%
-of the week (Fable 19%); the week resets 17 November, 04:29 India time.
+**Usage alarm (read 12:34 UTC):** week (all models) 20%, week (Fable) 39%; one hour earlier 10%
+and 19%; 0% at 10:10 UTC. The video burns about 10% of the whole week and 20% of Fable's week
+an hour. The week resets Monday 17 November 04:30 India time. At this pace Fable ends at about
+15:30 UTC and the whole week at about 20:30 UTC today, which would also stop Learn Like Magic's
+sessions. Manish was asked (Needs Manish 1). Context at 12:34 UTC: the controller 40%, WP2-2
+25%, WP3 33%.
 
 Keys checked with free, read-only calls (values never printed): fal.ai valid (its balance
 cannot be read with this key); ElevenLabs valid (plan `growing_business`, about 97% of the
@@ -46,16 +51,12 @@ Still running:
 
 | What | PID | Log | Stop command |
 |---|---|---|---|
-| Wait `wp2-draft-1`: ends when `~/.ai-peer/demo-video-private/renders/draft-01.mp4` exists (unchanged for 90 s), or when PID 88331 is gone; sends one routine Telegram line | 88834 | `wp2-draft-1b.log` | `kill 88834` |
-| Wait `wp3-end`: ends when `~/repos/ai-peer-video-wp3/demo-video/shots/REPORT.md` exists (unchanged for 90 s), or when PID 64734 is gone | 87279 | `wp3-end.log` | `kill 87279` |
-| Wait `worker-stall`: ends when the transcript of WP2-2 or WP3 (and its sub-agents') has been silent for 25 minutes | 88881 | `worker-stall-3.log` | `kill 88881` |
 | Two helpers of the old ai-peer-video-wp2 session, writing only their own files in `~/repos/ai-peer-video-wp2`: the Earth close (`src/scenes/earth.js`, `assets/earth/`) and music with sound effects (`audio/music/`, `audio/sfx/`, `audio/mix.json`, `audio/SOURCES.md`, `demo-video/ledger/wp2.csv`) | inside window 3963 | none | They end by themselves |
 
-The waits are runs of `demo-video/tools/wait-for.sh` (its header shows the usage) in the
-background of ai-peer-video-controller-2: each one's end wakes that session, and they end with
-it. Their logs and PID files are in
-`/private/tmp/claude-501/-Users-manishjain-repos-ai-peer-hackathon-2026/7cff79c0-397e-4114-8fb5-e987355dc176/scratchpad/waits/`.
-A successor starts its own from the tests written in the table.
+No wait is running: ai-peer-video-controller-2 stopped its three at the hand-off, and
+ai-peer-video-controller-3 starts its own and lists them here. They are runs of
+`demo-video/tools/wait-for.sh` (its header shows the usage) in the controller's own background;
+the three tests are written in the hand-off, "Next step" 2.
 
 ## Packages (each line is written by its own worker only)
 
@@ -95,7 +96,13 @@ V11, C12). So every choice goes to the Attention group with its files
 were sent there again with their material at that time: the three voice samples and the
 animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key frames.
 
-1. **Answered 2026-11-14 12:33 UTC**, in the controller's session: "Let's go with your
+1. **Asked 2026-11-14 12:36 UTC** (Telegram Attention group and the session): usage. The video uses
+   about 10% of the week's Claude allowance an hour (20% of Fable's). A (recommended): finish
+   Draft 1 tonight with what runs now, then pause the workers; new sessions on Opus 5.5 from
+   now; one worker at a time after Draft 1. B: keep full speed and move the video to another
+   subscription when this one runs out. C: stop now and go on after Monday's reset. He answers
+   in the session of ai-peer-video-controller-3.
+1a. **Answered 2026-11-14 12:33 UTC**, in the controller's session: "Let's go with your
    recommendations". So: voice 1, Matilda (V12); the rise by route O (V13, with the controller's
    reading that the shot-maker may fall back to a route that holds his face and the threads);
    the look B, threads of light (V14). WP3 was told by message; nothing changes for WP2-2
@@ -133,7 +140,26 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 
 ## Lessons
 
-- (none yet)
+- **Usage: four or five max-effort sessions that read pictures burn about 10% of the week an
+  hour** (measured 10:10 to 12:34 UTC on 14 November: 0% to 20%, Fable 39%), twice to five
+  times the usual. Mechanism: every picture, every long read and every helper is paid again on
+  each later call of that session, and a 300k-token helper counts in full. Read `/usage` at
+  every event, not only at milestones, and say the hourly rate in the hand-off.
+- **A session's context fills in about an hour here** (controller-2: 9% to 40% in 65 minutes;
+  WP2: 13% to 45% in 45 minutes; WP3: 24% after 15 minutes). Mechanism: full-size pictures and
+  long thinking inside one turn. Look at one small sheet per event and plan each package as two
+  or three sessions from the start.
+- **Text on Telegram is not the material.** The first three choices went to Manish as files in
+  the session and one text line on Telegram; he asked for the choice itself on Telegram (V11).
+  The notify scripts send text only: `demo-video/tools/tg-send-file.sh` sends the file.
+- **A worker's script and a controller's shared doc can disagree within minutes.** `SHOTS.md`
+  was written with its own lines for the colleagues while WP2 had already recorded different
+  ones. Mechanism: the controller wrote from the story, not from the worker's files. Read the
+  live worker's files before fixing an interface in a doc.
+- **A brief can be checked after the launch when minutes matter:** the helper's twelve
+  corrections reached WP3 twelve minutes into its work, as one message plus a facts file
+  (`research/fal-facts-2026-11-14.md`), before its first dear call. The check found a default
+  (Kling renders 1080p at one and a half times the price) that the pricing API hides.
 
 ## Session log
 
@@ -166,3 +192,4 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 | 2026-11-14 12:18 | ai-peer-video-controller-2 | ai-peer-video-wp2 handed off at 44.8% context (branch pushed at a51c934; the one-command render, voice, captions, clock, end card and product screens built; WP3's nine drafts pulled in; no money spent). The controller read its hand-off brief and launched ai-peer-video-wp2-2 at 12:17 UTC (window 3972, PID 88331, seen working), told to commit by path only while the old session's two helpers still write. Waits re-armed on the new PID. WP2's note for Manish's recordings went into `PLAN.md`. | WP2-2 reading in; the old WP2 window stays until its helpers report |
 | 2026-11-14 12:23 | ai-peer-video-controller-2 | Manish, in the session: "Wherever you need my choice, send it to me on telegram. I ll review there and reply here" (V11). The notify scripts send text only, so the controller wrote `demo-video/tools/tg-send-file.sh` (the Bot API's file calls, token kept out of the argument list, files under `~/.ai-peer/` refused) and sent all three open choices to the Attention group with their material: 3 voice samples, the animatic, the clone clip, 3 pictures of the double's look; 8 files, all accepted by Telegram. | Waiting on his three answers, in the session |
 | 2026-11-14 12:33 | ai-peer-video-controller-2 | Manish answered the three choices in the session: "Let's go with your recommendations" (V12 voice 1; V13 the rise by route O; V14 the look B, threads of light). The controller told him how it reads the answer on the rise (O first, a fall-back if O loses his face or the threads) and passed the answers to WP3 by message. | The look, the voice and the route are settled |
+| 2026-11-14 12:36 | ai-peer-video-controller-2 | Usage read at 12:34 UTC: week 20%, Fable 39% (10% and 19% an hour earlier): asked Manish what to do, with a recommendation. Context at 40%: wrote `handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-2.md`, stopped its three waits, started ai-peer-video-controller-3 in this repo. WP3's ledger stood at $7.90 (52 rows). | Handed off; this session only passes on anything Manish writes in it |
