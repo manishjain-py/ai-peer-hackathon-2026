@@ -38,6 +38,8 @@ Still running:
 
 - WP1, look pictures and hero-shot tests (`ai-peer-video-wp1`, brief
   `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp1.md`, cap $15): launched 2026-11-14 10:55 UTC.
+- WP2, the film in code and Draft 1 (`ai-peer-video-wp2`, brief
+  `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2.md`, cap $10): not started.
 
 ## Money spent
 
@@ -47,22 +49,20 @@ Still running:
 
 ## Needs Manish
 
-1. The interview, in the controller's session. Answered so far: V1 to V9 in `DESIGN.md`. The
-   outline with the magic-school opening is withdrawn (V9). Next for him: the controller's
-   new story (`STORY.md`, proposed), told to him once the second-by-second watch of the
-   September film is in. Still to ask after that: voice samples, music, the Remotion licence
-   or a free tool, what exactly to record on his company laptop.
+1. Nothing blocks the build. Open for him, in this order: (a) recordings from his company
+   laptop by Tuesday 17 November morning, India time, into `~/.ai-peer/demo-video-private/`
+   (the list is in `PLAN.md`; told to him 2026-11-14 11:28 UTC); (b) his pick among three voice
+   samples, when WP2 has them; (c) his view of WP1's side-by-side clone clip; (d) Draft 1.
 
 ## Next
 
-1. Interview Manish; each answer goes into `DESIGN.md` section 0 (the controller).
-2. Done: the tools report is in `research/reports/` and was sent to Manish. Still to ask him,
-   one at a time: the Remotion licence or a free tool; the hackathon's rules; which world the
-   product screens show; the opening (an original magic school is the low-risk form); how the
-   film stays honest about the labelled AI; voice and music.
-3. Test shots of the hero image (the clone rising from the sleeping employee) on the top 3 or
-   4 models, side by side, once the look and a test budget are decided.
-4. Script and storyboard, then `PLAN.md` with the work packages.
+1. WP1 ends: read its `demo-video/look/REPORT.md` (in `~/repos/ai-peer-video-wp1` until it
+   merges), look at `hero-compare.mp4` by frames, send the clip to Manish, write WP3's brief
+   from the verdict (`PLAN.md`), close WP1's window, start `ai-peer-video-wp3`.
+2. WP2's first milestone: send Manish the three voice samples, ask him to pick.
+3. Draft 1 from WP2: look at a frame at every cut, then send it to Manish.
+4. Sum the ledgers (`demo-video/ledger/*.csv`) into "Money spent" at each package's end; tell
+   Manish at $50 and at $80.
 
 ## Settled, do not re-open
 
@@ -89,4 +89,5 @@ Still running:
 | 2026-11-14 11:08 | ai-peer-video-controller-1 | WP1 reported milestone 1 (its message, and the watcher): the sheet of three invented employees, made with `google/nano-banana-2.1`, $0.39 spent so far by its ledger. The controller looked at the sheet (real-looking, even light, skin tones true) and sent it to Manish as question 6, in place of the product-screens question, which moves to question 7. WP1 goes on with character A. | Waiting on question 6 and on WP1's frames and hero tests |
 | 2026-11-14 11:09 | ai-peer-video-controller-1 | Manish picked employee A (V7); WP1 already uses A, so no message was sent to it. Question 7 (what the product screens show and where they may go) asked. | Waiting on question 7 and on WP1's frames and hero tests |
 | 2026-11-14 11:12 | ai-peer-video-controller-1 | Manish answered question 7: B, real company content on this Mac only (V8); the rule for every session is C8 and in `demo-video/AGENTS.md`. Question 8 (the outline of the film) asked. | Waiting on question 8 and on WP1's frames and hero tests |
-| 2026-11-14 11:22 | ai-peer-video-controller-1 | Manish asked whether the September film is here (yes: Draft 07, 4:23, on this Mac), then dropped the student opening (V9) and asked for a better two-minute story after a frame-by-frame watch. The controller read the film's full captions and 48 frames across it; a helper watches every second inside a scratch folder. The proposed story is saved as `STORY.md`. | Waiting on the helper's watch, then the story goes to Manish |
+| 2026-11-14 11:22 | ai-peer-video-controller-1 | Manish asked whether the September film is here (yes: Draft 07, 4:23, on this Mac), then dropped the student opening (V9) and asked for a better two-minute story after a frame-by-frame watch. The controller read the film's full captions and 48 frames across it; a helper watches every second inside a scratch folder. The proposed story is saved as `STORY.md`. | The story went to Manish before the helper's watch ended |
+| 2026-11-14 11:28 | ai-peer-video-controller-1 | Manish approved the story for a first draft (V10). The controller wrote `PLAN.md` and WP2's brief, chose a licence-free build (C9) and the Draft 1 voice and money split (C10). | WP2 being launched |
