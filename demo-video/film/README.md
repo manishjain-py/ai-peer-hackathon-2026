@@ -15,8 +15,16 @@ node demo-video/film/render.mjs --from 30 --to 40
 node demo-video/film/render.mjs --private        # with the product recordings (see below)
 ```
 
-Options: `--name NAME`, `--quality draft|looks|delivery`, `--workers N`, `--no-check`.
-The whole film (3,600 frames, 1920x1080, 30 fps) takes about a minute on this Mac.
+Options: `--name NAME`, `--quality draft|looks|delivery`, `--crf N`, `--workers N`, `--no-check`,
+`--no-sound`, `--lane NAME` (a run with its own folders under `.build/lanes/`, beside other
+renders), `--with a,b` (use a scene or overlay that `shots.json` does not list as ready yet).
+The whole film (3,600 frames, 1920x1080, 30 fps) takes about two minutes on this Mac.
+
+`--quality delivery` packs the result once more (`--crf`, default 22: about 60 to 80 MB for
+the film; at 18 the film grain is kept and the file is close to 1 GB). The renderer's own file is close to lossless and, with the film grain, about 1.5 GB
+for the two minutes: it stays in the work folder as the master.
+
+Before a draft render, bring WP3's newest clips in: `node demo-video/film/tools/pull_shots.mjs`.
 
 ## How it fits together
 
@@ -30,6 +38,10 @@ The whole film (3,600 frames, 1920x1080, 30 fps) takes about a minute on this Ma
 | `build.mjs` | Checks that the timeline holds (parts and slots tile, no two lines touch) and writes a self-contained project folder. |
 | `render.mjs` | Build, check the page, capture the picture, mix the sound, join, measure. |
 | `src/film.js` | The page: one scene per slot, overlays, captions. `src/scenes/`, `src/overlays/`. |
+| `src/scenes/pushin.js` | The push-in: from the last frame of the shot before it, through the laptop's screen, into the product's window. Needs the screen's four corners: WP3's `screen_quad`, or `hand_quads` in `shots.json`. |
+| `src/overlays/tag.js` | The "AI Peer" tag on the double's chest. It follows WP3's `tag_track`, or a track made here. |
+| `tools/tag_track.py` | Makes that track from a few hand-set keys in `shots.json` (`tag_keys`) by following the chest light, into `assets/tags/`. Run it again when the keys or the clip change. |
+| `tools/pull_shots.mjs` | Copies WP3's current clips (and tag tracks, stills, screen corners) from its manifest. |
 | `tools/mix.mjs` | The sound mix by ffmpeg: voice, scene sound, music pushed down under speech, effects, -14 LUFS. |
 | `tools/stt_check.py` | Speech-to-text on this Mac: the ear no session has. |
 
@@ -42,6 +54,18 @@ Product recordings never enter git. `--private` builds under
 `~/.ai-peer/demo-video-private/` (the project copy, the frame cache, the temp folder, the
 sound work, the render), and the public build refuses to read a recording. Speech-to-text runs
 on this Mac, so a private mix can be checked without leaving it.
+
+**The network guard.** A private render runs the renderer and its browser inside a macOS
+sandbox (`sandbox-exec`) that refuses every connection except to this Mac itself. `render.mjs`
+proves the guard before each private render and stops if it does not hold;
+`node demo-video/film/render.mjs --prove-guard` runs the proof alone. Behind the guard `npx`
+works from its cache only (so render the public film once first on a new Mac), and Chrome runs
+without its own inner sandbox, which cannot start inside another one. Never use
+`hyperframes snapshot --describe`: it sends frames to an outside model.
+
+A tag set by hand and a push-in's screen corners belong to one clip file. When WP3 delivers a
+new clip without a track or corners, the build says so in a note and leaves the tag off (or
+the push-in a slate) instead of drawing them in the wrong place.
 
 ## Checks
 

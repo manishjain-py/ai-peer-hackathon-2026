@@ -9,6 +9,7 @@
 //                                                      ~/.ai-peer/demo-video-private/
 //   node demo-video/film/render.mjs --prove-guard      test the network guard of a private render
 //   options: --name NAME (file name)  --quality draft|looks|delivery  --workers N  --no-check
+//            --crf N       how hard a delivery render is packed (default 22; lower is finer and much bigger)
 //            --lane NAME   keep this run's build, work files and render in .build/lanes/NAME/
 //                          (for a helper working beside other renders)
 //            --with a,b    also use these scenes or overlays though shots.json does not list
@@ -33,7 +34,7 @@ function parse(argv) {
     else if (k === "--no-check") a.noCheck = true;
     else if (k === "--no-sound") a.noSound = true;
     else if (k === "--prove-guard") a.proveGuard = true;
-    else if (["--part", "--from", "--to", "--name", "--quality", "--workers", "--lane", "--with"].includes(k)) a[k.slice(2)] = argv[++i];
+    else if (["--part", "--from", "--to", "--name", "--quality", "--workers", "--lane", "--with", "--crf"].includes(k)) a[k.slice(2)] = argv[++i];
     else throw new Error(`unknown option ${k}`);
   }
   return a;
@@ -188,8 +189,17 @@ function main() {
   } else {
     sound = mix(plan, path.join(work, `${name}.sound`), cfg.master || {});
     const cut = from > 0 || to < film.seconds ? ["-ss", String(from), "-t", String(to - from)] : [];
+    // The renderer's own file is close to lossless (the film grain makes that about 100 Mbit/s,
+    // 1.5 GB for the film): a delivery render is packed once more to a size that can be sent,
+    // played anywhere and kept in git, and the big one stays in the work folder as the master.
+    // Measured on the whole film: crf 18 keeps the grain and gives 966 MB, crf 23 drops it and
+    // gives 56 MB with the dark gradients still smooth. 22 is the default.
+    const pack = args.quality === "delivery"
+      ? ["-c:v", "libx264", "-preset", "slow", "-crf", String(args.crf || 22), "-pix_fmt", "yuv420p", "-profile:v", "high",
+        "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709"]
+      : ["-c:v", "copy"];
     execFileSync("ffmpeg", ["-hide_banner", "-nostdin", "-loglevel", "error", "-y", "-i", picture, ...cut, "-i", sound.file,
-      "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "256k", "-ar", "48000",
+      "-map", "0:v", "-map", "1:a", ...pack, "-c:a", "aac", "-b:a", "256k", "-ar", "48000",
       "-t", String(to - from), "-movflags", "+faststart", out]);
   }
 
@@ -200,6 +210,7 @@ function main() {
   const report = {
     file: out, variant, window: [from, to], seconds, frames: Number(v.nb_frames), size: `${v.width}x${v.height}`, fps: v.r_frame_rate,
     megabytes: Math.round(Number(probe.format.size) / 1e5) / 10,
+    master: args.quality === "delivery" && !args.noSound ? picture : undefined,
     slots: { clips: count("clip"), by_code: count("scene"), slates: count("slate") },
     took_s: Math.round((Date.now() - t0) / 1000),
   };
