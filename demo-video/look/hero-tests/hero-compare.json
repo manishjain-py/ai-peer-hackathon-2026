@@ -1,0 +1,23 @@
+{
+  "out": "demo-video/look/hero-tests/hero-compare.mp4",
+  "seconds": 12.25,
+  "title": "The clone rises: three ways",
+  "panels": [
+    {"clip": "demo-video/look/hero-tests/k/k-take2.mp4", "label": "K", "text": "Kling 4.0, key frames", "cost": "$1.57 per take"},
+    {"clip": "demo-video/look/hero-tests/o/o-take1-720p.mp4", "label": "O", "text": "Gemini Omni 1.2 Flash, first and last frame", "cost": "$0.84 per take"},
+    {"clip": "demo-video/look/hero-tests/p/p-composite.mp4", "label": "P", "text": "Two plates, glow made by code", "cost": "$0.67 per take"}
+  ],
+  "legend": [
+    "K | Kling 4.0: stills F1, F2, F3 as key frames. 10 s at 720p.",
+    "Made in 3 to 5 minutes.",
+    "",
+    "O | Gemini Omni 1.2 Flash: first frame F1, last frame F3.",
+    "10 s at 720p. Made in 1 minute.",
+    "",
+    "P | Two cheap plates (sleeper; the man gets up), 12 s at 768p.",
+    "The double, its glow and the open laptop are laid in by code.",
+    "",
+    "Test shots of 14 November 2026. Employee A is invented.",
+    "K and O hold their last frame after 10 s."
+  ]
+}

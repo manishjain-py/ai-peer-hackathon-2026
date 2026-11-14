@@ -1,0 +1,28 @@
+{
+ "request_id": "01a1d9c1-2995-7c42-ba5e-282f82046e18",
+ "billable_units_header": "0.071759997",
+ "inputs_sent": {
+  "prompt": "Keep everything in image 1 exactly as it is: the same room, the same camera position and framing, the same light, and the same man asleep in the bed, who has not moved. Change two things only. First, a luminous double of the sleeping man now sits on the chair at the desk on the right: the same man in the same dark T-shirt and loose pyjama trousers, but made of soft pale mint-green light (#b7f4cf), solid with only a faint transparency, with a thin bright mint rim of light along his outline and a fine shimmer of tiny light particles around him. Second, the laptop on the desk is now open in front of him, its screen a soft blank glow with nothing readable on it, and the cool white light of the screen falls on his face, chest and hands. He looks at the screen, calm and focused, his hands on the keyboard. His glow falls softly on the desk, the chair and the wall. He looks friendly and capable, never ghostly or frightening. There are exactly two figures in the room: one solid and asleep in the bed, one made of light. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab26cf7/Yy1eEk-c9bnwKHEeMYgcM_f1.png"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26cfb/GdjYQ4BtRPZrxASNCtHkA_HF0gi8Y4.png",
+    "content_type": "image/png",
+    "file_name": "GdjYQ4BtRPZrxASNCtHkA_HF0gi8Y4.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

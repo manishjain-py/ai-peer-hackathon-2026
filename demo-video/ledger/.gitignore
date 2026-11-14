@@ -1,0 +1,4 @@
+# Working files of falgen: calls in flight, its lock, and the cache of uploaded inputs.
+.*.pending.json
+.*.lock
+.upload-cache.json

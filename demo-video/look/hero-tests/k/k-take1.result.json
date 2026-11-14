@@ -1,0 +1,23 @@
+{
+ "request_id": "01a1d9c6-27eb-7c61-a48b-1eae446636f1",
+ "billable_units_header": "10.0",
+ "inputs_sent": {
+  "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed and never moves. A man sleeps in the bed and stays completely still under the duvet for the whole shot. A glowing double of him, the same man with a thin bright rim of mint-green light and a fine shimmer, slowly sits up out of his sleeping body, partly see-through at first. The double swings his legs off the bed, stands up at the foot of the bed, more solid now, and looks down at the sleeper with a kind half-smile. Then he walks calmly to the desk on the right, sits down on the chair, opens the laptop and begins to type, the screen lighting his face. There are only two figures at all times: one solid and asleep in the bed, one glowing. Slow, deliberate, graceful motion. One continuous shot with no cuts. Sound: quiet night room tone and a soft shimmer as the double rises, with no music and no speech.",
+  "start_image_url": "https://v3b.fal.media/files/b/0ab26cf7/Yy1eEk-c9bnwKHEeMYgcM_f1.png",
+  "middle_image_urls": [
+   "https://v3b.fal.media/files/b/0ab26d1b/6bp9tENWIXrPIY-22gLR5_f2.png",
+   "https://v3b.fal.media/files/b/0ab26d1b/tTmwwL5tLIMWhqZdNV-Fr_f3.png"
+  ],
+  "end_image_url": "https://v3b.fal.media/files/b/0ab26d1c/82S2XGY9Mo8QHVegVa3dC_f4.png",
+  "duration": 10,
+  "resolution": "720p"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab26d36/_Ib3Sa7gXrsYIS4xFs49t_output.mp4",
+   "content_type": "video/mp4",
+   "file_name": "output.mp4",
+   "file_size": 4216818
+  }
+ }
+}

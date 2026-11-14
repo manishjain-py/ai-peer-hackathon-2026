@@ -1,0 +1,22 @@
+{
+ "request_id": "01a1d9cf-6a6c-7041-ada3-f710f10b7600",
+ "billable_units_header": "10.0",
+ "inputs_sent": {
+  "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed and never moves. A man sleeps in the bed and stays completely still under the duvet for the whole shot. Very slowly and gradually, a glowing double of him separates from his sleeping body: first only a faint see-through shimmer of his head and shoulders lifts out of his chest, then over three full seconds it becomes the upper body of the same man, sitting up, still partly see-through, with a thin bright rim of mint-green light and a fine shimmer around him. He turns calmly, swings his legs off the bed, stands up at the foot of the bed, more solid now, and looks down at the sleeper with a kind half-smile. He holds still there for the last two seconds. There are only two figures at all times: one solid and asleep in the bed, one glowing. Slow, deliberate, graceful motion with no sudden moves. One continuous shot with no cuts. Sound: quiet night room tone and a soft shimmer as the double rises, with no music and no speech.",
+  "start_image_url": "https://v3b.fal.media/files/b/0ab26cf7/Yy1eEk-c9bnwKHEeMYgcM_f1.png",
+  "middle_image_urls": [
+   "https://v3b.fal.media/files/b/0ab26d1b/6bp9tENWIXrPIY-22gLR5_f2.png"
+  ],
+  "end_image_url": "https://v3b.fal.media/files/b/0ab26d1b/tTmwwL5tLIMWhqZdNV-Fr_f3.png",
+  "duration": 10,
+  "resolution": "720p"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab26d6c/8bjC1vTXmy8XENCaNUnaB_output.mp4",
+   "content_type": "video/mp4",
+   "file_name": "output.mp4",
+   "file_size": 3671948
+  }
+ }
+}

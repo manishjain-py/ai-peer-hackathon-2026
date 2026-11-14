@@ -1,0 +1,20 @@
+{
+ "request_id": "01a1d9c7-8121-7a51-8546-b70cdd95f0f8",
+ "billable_units_header": "10.4787",
+ "inputs_sent": {
+  "prompt": "A locked-off wide shot of a bedroom at night. The camera does not move. A man lies asleep in the bed and does not move. A glowing copy of the same man, with a thin bright rim of mint-green light and a fine shimmer, slowly sits up out of his sleeping body, partly see-through at first. He swings his legs to the floor, stands up at the foot of the bed, becoming more solid, and turns to look down at the sleeper with a kind half-smile. The sleeper stays still under the duvet. Only two figures: one solid and asleep, one glowing. Slow, deliberate motion. One continuous shot, no cuts, no music, no speech, no subtitles.",
+  "image_url": "https://v3b.fal.media/files/b/0ab26cf7/Yy1eEk-c9bnwKHEeMYgcM_f1.png",
+  "end_image_url": "https://v3b.fal.media/files/b/0ab26d1b/tTmwwL5tLIMWhqZdNV-Fr_f3.png",
+  "aspect_ratio": "16:9",
+  "resolution": "360p",
+  "duration": 10
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab26d28/I5Up7pptGx0YDHFl5tpwy_4c871b6955074399bb0e62cef48dd932.mp4",
+   "content_type": "video/mp4",
+   "file_name": "4c871b6955074399bb0e62cef48dd932.mp4",
+   "file_size": 1765151
+  }
+ }
+}

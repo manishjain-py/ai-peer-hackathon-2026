@@ -1,0 +1,17 @@
+{
+  "endpoint": "google/gemini-omni-flash/v1.2/edit",
+  "inputs": {
+    "prompt": "Add a glowing, see-through double of the sleeping man, with a thin mint-green rim of light, that slowly sits up out of his body, stands up beside the bed and looks down at him. Keep everything else the same.",
+    "video_url": "file:demo-video/look/hero-tests/p/p-plate1.mp4",
+    "resolution": "360p"
+  },
+  "expect": {
+    "units": 12.8,
+    "unit": "second of edited video at 360p",
+    "unit_price": 0.0273,
+    "cost_usd": 0.3494,
+    "basis": "fal.ai page 2026-11-14: $0.0273 per second of output at 360p; the input clip is 12.25 s; input video tokens at $1.50 per 1M add a little"
+  },
+  "output": "demo-video/look/hero-tests/o/o-edit1-360p",
+  "note": "route O, the optional edit try: add the double to the clean sleeper clip (p-plate1.mp4), 360p"
+}

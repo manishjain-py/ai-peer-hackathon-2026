@@ -1,0 +1,24 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "Keep everything in image 1 exactly as it is: the same room, the same camera position and framing, the same light, and the same man asleep in the bed, who has not moved. Add one new element: a luminous double of the sleeping man stands on the open floor at the foot of the bed, in the moonlight, seen full length from head to bare feet. The double is the same man in the same dark T-shirt and loose pyjama trousers, but made of soft pale mint-green light (#b7f4cf), more solid than see-through, with only a faint transparency. He has turned to look back down at the sleeping man with a calm, kind half-smile. A thin bright mint rim of light runs along his outline, a fine shimmer of tiny light particles hangs around him, and his glow falls softly on the floor, the end of the bed and the curtains. He looks friendly and capable, never ghostly or frightening. There are exactly two figures in the room: one solid and asleep in the bed, one made of light. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+    "image_urls": [
+      "file:demo-video/look/frames/f1.png"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.085,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.085,
+    "estimate": true,
+    "basis": "the two F1 candidates were billed $0.162 together at 2K with high thinking"
+  },
+  "output": "demo-video/look/frames/f3-try1",
+  "note": "F3, the mint double standing by the bed, looking at the sleeper (an edit of f1.png)"
+}

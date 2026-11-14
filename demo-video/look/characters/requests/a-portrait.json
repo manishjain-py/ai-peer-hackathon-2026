@@ -1,0 +1,21 @@
+{
+  "endpoint": "google/nano-banana-2.1",
+  "inputs": {
+    "prompt": "A studio portrait photograph of a South Asian man in his early thirties, with warm medium-brown skin, short dark hair and a neatly trimmed short beard. Head and shoulders, facing the camera, with a calm, friendly, capable expression and a slight closed-mouth smile. He wears a plain dark charcoal crew-neck T-shirt with nothing printed on it. The backdrop is a seamless deep teal-ink wall, a very dark blue-green. One large soft warm key light from the front left, and a faint cool rim light on the right edge of his hair and shoulder. Shot on a full-frame camera with an 85mm lens at f/2.8, with natural skin texture, visible pores and a true-to-life skin tone, no beauty retouching. Premium advertising photography, photorealistic. Nothing written anywhere.",
+    "aspect_ratio": "4:5",
+    "resolution": "2K",
+    "output_format": "jpeg",
+    "num_images": 1,
+    "thinking_level": "medium"
+  },
+  "expect": {
+    "units": 0.07,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.07,
+    "estimate": true,
+    "basis": "fal.ai page 2026-11-14: image output tokens $35.294 per 1M; my guess of about 1,700 image tokens at 2K plus thinking tokens"
+  },
+  "output": "demo-video/look/characters/a-portrait",
+  "note": "character A, portrait"
+}

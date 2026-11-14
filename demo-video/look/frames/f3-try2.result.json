@@ -1,0 +1,30 @@
+{
+ "request_id": "01a1d9c2-f5b0-7e53-b54c-384e9c249a22",
+ "billable_units_header": "0.081652710",
+ "inputs_sent": {
+  "prompt": "Keep everything in image 1 exactly as it is: the same room, the same camera position and framing, the same light, and the same man asleep in the bed, who has not moved. Add one new element: a luminous double of the sleeping man stands on the open floor at the foot of the bed, in the moonlight, seen full length from head to bare feet. The double is an exact copy of the man shown in image 2 and image 3, who is also the man asleep in the bed: the same face, the same short dark hair and trimmed beard, the same warm medium-brown skin, the same dark charcoal T-shirt and the same loose dark grey pyjama trousers. He is made of light: his body is softly luminous and almost solid, only faintly see-through, with a thin bright rim of pale mint-green light (#b7f4cf) all along his outline, as if lit from behind, and a fine shimmer of tiny mint light particles around him. His face and skin keep their own natural brown colour under the glow, and his clothes keep their own dark colours; only the rim, the shimmer and the soft glow he casts are mint. His body is turned three-quarters toward the camera and his head is turned to look down at the sleeping man, with a calm, kind half-smile. His glow falls softly on the floor, the end of the bed and the curtains. He looks friendly and capable, never ghostly or frightening. There are exactly two figures in the room: one solid and asleep in the bed, one made of light. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab26cf7/Yy1eEk-c9bnwKHEeMYgcM_f1.png",
+   "https://v3b.fal.media/files/b/0ab26cd4/H0Ji2j1t36YVzLSbWdhQ4_a-portrait.jpg",
+   "https://v3b.fal.media/files/b/0ab26cec/rJ7chV-BDLDgxQwCkxYnW_a-full.jpg"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26d07/cKtgZmfxKrGAaNJKuZYDo_Ut3jGcia.png",
+    "content_type": "image/png",
+    "file_name": "cKtgZmfxKrGAaNJKuZYDo_Ut3jGcia.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

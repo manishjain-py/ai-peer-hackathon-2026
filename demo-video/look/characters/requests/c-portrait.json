@@ -1,0 +1,21 @@
+{
+  "endpoint": "google/nano-banana-2.1",
+  "inputs": {
+    "prompt": "A studio portrait photograph of a Black woman in her early thirties, with deep brown skin and short natural curls. Head and shoulders, facing the camera, with a calm, friendly, capable expression and a slight closed-mouth smile. She wears a plain dark charcoal crew-neck T-shirt with nothing printed on it. The backdrop is a seamless deep teal-ink wall, a very dark blue-green. One large soft warm key light from the front left, and a faint cool rim light on the right edge of her hair and shoulder. Shot on a full-frame camera with an 85mm lens at f/2.8, with natural skin texture, visible pores and a true-to-life skin tone, no beauty retouching. Premium advertising photography, photorealistic. Nothing written anywhere.",
+    "aspect_ratio": "4:5",
+    "resolution": "2K",
+    "output_format": "jpeg",
+    "num_images": 1,
+    "thinking_level": "medium"
+  },
+  "expect": {
+    "units": 0.065,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.065,
+    "estimate": true,
+    "basis": "the first 2K picture of this package was billed $0.0632 (ledger row 1)"
+  },
+  "output": "demo-video/look/characters/c-portrait",
+  "note": "character C, portrait"
+}

@@ -1,0 +1,24 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "Keep everything in image 1 exactly as it is: the same room, the same camera position and framing, the same light, and the same man asleep in the bed, who has not moved. Change two things only. First, a luminous double of the sleeping man now sits on the chair at the desk on the right: the same man in the same dark T-shirt and loose pyjama trousers, but made of soft pale mint-green light (#b7f4cf), solid with only a faint transparency, with a thin bright mint rim of light along his outline and a fine shimmer of tiny light particles around him. Second, the laptop on the desk is now open in front of him, its screen a soft blank glow with nothing readable on it, and the cool white light of the screen falls on his face, chest and hands. He looks at the screen, calm and focused, his hands on the keyboard. His glow falls softly on the desk, the chair and the wall. He looks friendly and capable, never ghostly or frightening. There are exactly two figures in the room: one solid and asleep in the bed, one made of light. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+    "image_urls": [
+      "file:demo-video/look/frames/f1.png"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.085,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.085,
+    "estimate": true,
+    "basis": "the two F1 candidates were billed $0.162 together at 2K with high thinking"
+  },
+  "output": "demo-video/look/frames/f4-try1",
+  "note": "F4, the mint double seated at the desk, the laptop open and lighting its face (an edit of f1.png)"
+}
