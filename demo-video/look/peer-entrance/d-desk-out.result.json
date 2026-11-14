@@ -1,0 +1,30 @@
+{
+ "request_id": "01a1db8e-3b66-7f82-8ab5-66206b42ef69",
+ "billable_units_header": "0.086965995",
+ "inputs_sent": {
+  "prompt": "Keep everything in image 1 exactly as it is: the same desk, the same open laptop with its glowing screen, the chair, the wall, the same night light, the same camera position and framing. Add one element: the small friendly character shown in image 3, exactly as it looks there: a soft, very rounded mint-green block (#b7f4cf) about the size of a hand, frosted and softly glowing from within, with the dark double arch and the two small dark dots of the app icon in image 2 on its front as its face, and two tiny stubby arms. It has just hopped out of the laptop and stands on the desk beside the laptop, turned toward the camera, lifting one tiny arm in a small hello, its glow lighting the desk mint around it. It looks cheerful and wide awake. It must read as friendly, advanced technology, never as a ghost or a spirit: no mist, no smoke, no dark shadows, nothing spooky. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab278c8/d_Rtn3qjujDZG5BievdKW_d-desk-empty.png",
+   "https://v3b.fal.media/files/b/0ab278ab/9Iu4vWvAFVw9pEFsjV1C9_peer-mark.png",
+   "https://v3b.fal.media/files/b/0ab278c9/u2dzt7bzq8KuC3maYOT2__d-desk-crop.png"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab278c9/nWbCoY8oxFumqeEA25KAw_deYbiKjZ.png",
+    "content_type": "image/png",
+    "file_name": "nWbCoY8oxFumqeEA25KAw_deYbiKjZ.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

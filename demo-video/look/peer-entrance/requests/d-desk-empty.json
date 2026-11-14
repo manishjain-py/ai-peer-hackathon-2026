@@ -1,0 +1,24 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "Image 1 is a crop of a bedroom at night: a wooden desk against a dark teal wall, a chair, and an open laptop whose screen glows soft white. Remove the small mint character from the desk entirely, and keep everything else exactly as it is: the same desk, the same open laptop and its glowing screen, the chair, the wall, the same night light, the same camera position and framing. Render it as a sharp, detailed photographic frame, like a frame from a premium advertising film. Nothing written anywhere.",
+    "image_urls": [
+      "file:demo-video/look/peer-entrance/d-desk-crop.png"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.09,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.09,
+    "estimate": true,
+    "basis": "WP1 and WP3 paid 6 to 9 cents for a 2K picture on this model (demo-video/ledger/wp3.csv)"
+  },
+  "output": "demo-video/look/peer-entrance/d-desk-empty",
+  "note": "Motion test D, key frame 1: a closer shot of the desk at night, the laptop open and lit, nobody there (from a crop of d-little-2-works)"
+}

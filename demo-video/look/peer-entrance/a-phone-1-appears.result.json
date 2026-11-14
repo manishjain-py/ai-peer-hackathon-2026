@@ -1,0 +1,30 @@
+{
+ "request_id": "01a1db89-a46e-7bb0-a8f4-47eb914ec2ca",
+ "billable_units_header": "0.092538477",
+ "inputs_sent": {
+  "prompt": "Keep everything in image 1 exactly as it is: the same room, the same camera position and framing, the same night light, and the same man asleep in the bed, who has not moved. The phone on the bedside table glows mint. Add two new elements. First: a ribbon of soft mint light (#b7f4cf) streams out of the phone's screen, sweeps low across the room in front of the bed, and ends on the open floor between the foot of the bed and the desk, with fine glowing particles along it. Second: at the end of that ribbon, on the open floor between the foot of the bed and the desk, a man made of mint light is taking shape: his head, shoulders, chest and arms are fully formed, while from the knees down he is still building up out of the ribbon's glowing particles. He is an exact copy of the man shown in image 2 and image 3, who is also the man in the bed: the same face, the same short dark hair and trimmed beard, the same warm medium-brown skin, the same dark charcoal T-shirt and the same loose dark grey pyjama trousers. His face and skin keep their own natural brown colour and his clothes keep their own dark colours; only the light is pale mint-green (#b7f4cf). He glows softly from within and is slightly see-through, with soft edges and no drawn outline. He stands upright, turned three-quarters toward the camera, looking toward the desk, with a calm, awake and friendly face and closed lips. The ribbon of light plainly starts at the phone's screen; nothing connects the man of light to the man asleep, and the sleeper is not lit by it. It must read as friendly, advanced technology, never as a ghost or a spirit: no mist, no smoke, no dark shadows, nothing spooky. There are exactly two people in the room: one solid and asleep in the bed, one made of light. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab278aa/5mKUmqMddPBC5VkS0VsfA_night-phone-lit.png",
+   "https://v3b.fal.media/files/b/0ab278aa/xV2QGCi38S3DLK7vHGHT7_a-portrait.jpg",
+   "https://v3b.fal.media/files/b/0ab278ab/MF30g8TBhUvjrz-KqWC2f_a-full.jpg"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab278ab/vhjHiXjr784pNU21aJSTH_8puWFpwa.png",
+    "content_type": "image/png",
+    "file_name": "vhjHiXjr784pNU21aJSTH_8puWFpwa.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

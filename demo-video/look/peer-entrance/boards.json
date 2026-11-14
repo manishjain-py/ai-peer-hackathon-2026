@@ -1,0 +1,54 @@
+{
+  "about": "The four Peer concepts of Draft 3, Phase A (DESIGN V19), one board each, made by make_boards.py. Tag positions are the pill's centre as fractions of the (cropped) still.",
+  "common": {
+    "card_text": "Yes, the numbers are final. The sheet is in our team folder.",
+    "slack_text": "On behalf of Ram: the payout retry fix is in review, and the failure rate is in the dashboard below. The rollout date is his call, so it is in his morning brief.",
+    "footer": "Draft 3, Phase A sample · stills made by AI (Nano Banana 2.1 edits of the film's room) · tag, card, tile and Slack line drawn by code · all names and data made up"
+  },
+  "boards": [
+    {
+      "id": "d-little-peer",
+      "title": "D · The little Peer, out of his laptop (recommended)",
+      "line": "The AI Peer's own app icon comes to life and climbs out of the laptop's screen: a small, soft, clearly non-human helper whose face is the product's mark, the same on the cards, in Zoom and in Slack. In the morning it waves and dives back into the screen.",
+      "face": {"mark": true},
+      "stills": [
+        {"image": "demo-video/look/peer-entrance/d-desk-half.png", "caption": "It climbs out of the laptop", "tag": [0.58, 0.2]},
+        {"image": "demo-video/look/peer-entrance/d-desk-crop.png", "caption": "It works at the desk all night", "tag": [0.44, 0.25]},
+        {"image": "demo-video/look/peer-entrance/d-desk-morning-dive.png", "caption": "Morning: it dives back into the screen", "tag": [0.62, 0.1]}
+      ]
+    },
+    {
+      "id": "a-ram-phone",
+      "title": "A · Ram's look, out of his phone",
+      "line": "The phone lights up for the night's meeting; a ribbon of light streams out of it and the Peer takes shape on the floor, looking like Ram, with the tag. In the morning it smiles at him and flows back into the phone in his hand, where the brief is waiting.",
+      "face": {"image": "demo-video/look/characters/a-portrait.jpg", "crop": [0.18, 0.04, 0.82, 0.556], "badge": true},
+      "stills": [
+        {"image": "demo-video/look/peer-entrance/a-phone-1-appears.png", "caption": "A ribbon from the phone; he takes shape", "tag": [0.708, 0.31]},
+        {"image": "demo-video/shots/stills/night-desk.png", "caption": "He works at the desk (Draft 2's still)", "tag": [0.66, 0.47]},
+        {"image": "demo-video/look/peer-entrance/a-phone-3-back.png", "caption": "Morning: he flows back into the phone", "tag": [0.74, 0.31]}
+      ]
+    },
+    {
+      "id": "b-ram-laptop",
+      "title": "B · Ram's look, out of his laptop",
+      "line": "The laptop on the desk wakes by itself and the Peer takes shape in its light, already seated and ready to work. In the morning he stands, smiles at Ram, and streams back into the laptop's screen.",
+      "face": {"image": "demo-video/look/characters/a-portrait.jpg", "crop": [0.18, 0.04, 0.82, 0.556], "badge": true},
+      "stills": [
+        {"image": "demo-video/look/peer-entrance/b-laptop-1-appears.png", "caption": "The laptop wakes; he takes shape in its light", "tag": [0.75, 0.5]},
+        {"image": "demo-video/shots/stills/night-desk.png", "caption": "He works at the desk (Draft 2's still)", "tag": [0.66, 0.47]},
+        {"image": "demo-video/look/peer-entrance/b-laptop-3-back.png", "caption": "Morning: he streams back into the laptop", "tag": [0.69, 0.45]}
+      ]
+    },
+    {
+      "id": "c-night-owl",
+      "title": "C · A night owl of light, out of his phone",
+      "line": "A small owl made of light steps out of the phone: the night owl that stays up so he can sleep, and hears the one change in a thousand. In the morning it flies back into the phone in his hand. Risk: an owl mascot is Duolingo's, and a white owl bringing messages is Harry Potter's.",
+      "face": {"image": "demo-video/look/peer-entrance/c-owl-face.png"},
+      "stills": [
+        {"image": "demo-video/look/peer-entrance/c-owl-1-appears.png", "crop": [0.0, 0.33, 0.5, 0.834], "caption": "It steps out of the phone (closer)", "tag": [0.24, 0.5]},
+        {"image": "demo-video/look/peer-entrance/c-owl-2-works.png", "crop": [0.5, 0.25, 1.0, 0.754], "caption": "It works at the laptop (closer)", "tag": [0.58, 0.28]},
+        {"image": "demo-video/look/peer-entrance/c-owl-3-back.png", "caption": "Morning: it flies back into the phone", "tag": [0.62, 0.12]}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "Keep everything in image 1 exactly as it is: the same room, the same camera position and framing, the same night light, and the same man asleep in the bed, who has not moved. Change two things. First: the laptop on the desk is now open, by itself, and its screen shines bright mint-white, lighting the desk, the chair and the wall. Second: out of the laptop's screen pours a soft fan of mint light (#b7f4cf) with fine glowing particles, and in that light, sitting on the chair at the desk and facing the laptop, a man made of mint light is taking shape: his head, shoulders and arms are fully formed and his hands rest near the keyboard, while his legs are still building up from the glowing particles. He is an exact copy of the man shown in image 2 and image 3, who is also the man in the bed: the same face, the same short dark hair and trimmed beard, the same warm medium-brown skin, the same dark charcoal T-shirt and the same loose dark grey pyjama trousers. His face and skin keep their own natural brown colour and his clothes keep their own dark colours; only the light is pale mint-green (#b7f4cf). He glows softly from within and is slightly see-through, with soft edges and no drawn outline. He is seen from the side, turned toward the laptop, with a calm and focused face, lips closed. The light plainly comes from the laptop's screen; the sleeper in the bed stays dark and untouched by it. It must read as friendly, advanced technology, never as a ghost or a spirit: no mist, no smoke, no dark shadows, nothing spooky. There are exactly two people in the room: one solid and asleep in the bed, one made of light. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+    "image_urls": [
+      "file:demo-video/shots/stills/night-phone-lit.png",
+      "file:demo-video/look/characters/a-portrait.jpg",
+      "file:demo-video/look/characters/a-full.jpg"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.09,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.09,
+    "estimate": true,
+    "basis": "WP1 and WP3 paid 6 to 9 cents for a 2K picture on this model (demo-video/ledger/wp3.csv)"
+  },
+  "output": "demo-video/look/peer-entrance/b-laptop-1-appears",
+  "note": "Concept B (Ram's look, from the laptop), still 1: the laptop wakes and he takes shape in its light, seated"
+}

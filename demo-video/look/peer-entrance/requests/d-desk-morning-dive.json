@@ -1,0 +1,26 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "Image 1 is a closer shot of a desk in a sunlit bedroom in the morning, with an open laptop whose screen glows soft mint and a small mint character beside it. Keep everything in image 1 exactly as it is: the same desk, the laptop, the chair, the wall, the warm morning light, the same camera position and framing. Change only the character, which is the small friendly character shown in image 3, exactly as it looks there: a soft, very rounded mint-green block (#b7f4cf) about the size of a hand, frosted and softly glowing from within, with the dark double arch and the two small dark dots of the app icon in image 2 on its front as its face, and two tiny stubby arms: it is diving head first into the laptop's glowing screen, like jumping into a pool of light. Its head and arms have already gone in and show as a soft mint shape inside the screen, which glows brighter around it, while its lower half and its two tiny feet are still outside the screen, kicking happily in the air. It must read as friendly, advanced technology, never as a ghost or a spirit: no mist, no smoke, no dark shadows, nothing spooky. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+    "image_urls": [
+      "file:demo-video/look/peer-entrance/d-desk-morning-crop.png",
+      "file:demo-video/look/peer-entrance/peer-mark.png",
+      "file:demo-video/look/peer-entrance/d-desk-crop.png"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.09,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.09,
+    "estimate": true,
+    "basis": "WP1 and WP3 paid 6 to 9 cents for a 2K picture on this model (demo-video/ledger/wp3.csv)"
+  },
+  "output": "demo-video/look/peer-entrance/d-desk-morning-dive",
+  "note": "Concept D, still 3, closer: in the morning it dives back into the laptop's screen"
+}

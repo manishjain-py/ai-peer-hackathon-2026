@@ -1,0 +1,30 @@
+{
+ "request_id": "01a1db8f-7eb9-76b1-a0bc-51b2d8e13f21",
+ "billable_units_header": "0.086918319",
+ "inputs_sent": {
+  "prompt": "Image 1 is a closer shot of a desk in a sunlit bedroom in the morning, with an open laptop whose screen glows soft mint and a small mint character beside it. Keep everything in image 1 exactly as it is: the same desk, the laptop, the chair, the wall, the warm morning light, the same camera position and framing. Change only the character, which is the small friendly character shown in image 3, exactly as it looks there: a soft, very rounded mint-green block (#b7f4cf) about the size of a hand, frosted and softly glowing from within, with the dark double arch and the two small dark dots of the app icon in image 2 on its front as its face, and two tiny stubby arms: it is diving head first into the laptop's glowing screen, like jumping into a pool of light. Its head and arms have already gone in and show as a soft mint shape inside the screen, which glows brighter around it, while its lower half and its two tiny feet are still outside the screen, kicking happily in the air. It must read as friendly, advanced technology, never as a ghost or a spirit: no mist, no smoke, no dark shadows, nothing spooky. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab278d1/NabOFi8uMeoQqHTTAIR3l_d-desk-morning-crop.png",
+   "https://v3b.fal.media/files/b/0ab278ab/9Iu4vWvAFVw9pEFsjV1C9_peer-mark.png",
+   "https://v3b.fal.media/files/b/0ab278c9/u2dzt7bzq8KuC3maYOT2__d-desk-crop.png"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab278d1/AJ7RhMpqmrGHjK3Bd0nrk_JscrJh9R.png",
+    "content_type": "image/png",
+    "file_name": "AJ7RhMpqmrGHjK3Bd0nrk_JscrJh9R.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

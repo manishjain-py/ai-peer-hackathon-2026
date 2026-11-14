@@ -1,0 +1,26 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "Keep everything in image 1 exactly as it is: the same desk, the same open laptop with its glowing screen, the chair, the wall, the same night light, the same camera position and framing. Add one element: the small friendly character shown in image 3, exactly as it looks there: a soft, very rounded mint-green block (#b7f4cf) about the size of a hand, frosted and softly glowing from within, with the dark double arch and the two small dark dots of the app icon in image 2 on its front as its face, and two tiny stubby arms. It has just hopped out of the laptop and stands on the desk beside the laptop, turned toward the camera, lifting one tiny arm in a small hello, its glow lighting the desk mint around it. It looks cheerful and wide awake. It must read as friendly, advanced technology, never as a ghost or a spirit: no mist, no smoke, no dark shadows, nothing spooky. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+    "image_urls": [
+      "file:demo-video/look/peer-entrance/d-desk-empty.png",
+      "file:demo-video/look/peer-entrance/peer-mark.png",
+      "file:demo-video/look/peer-entrance/d-desk-crop.png"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.09,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.09,
+    "estimate": true,
+    "basis": "WP1 and WP3 paid 6 to 9 cents for a 2K picture on this model (demo-video/ledger/wp3.csv)"
+  },
+  "output": "demo-video/look/peer-entrance/d-desk-out",
+  "note": "Motion test D, key frame 3: the little Peer out on the desk, waving (closer shot)"
+}

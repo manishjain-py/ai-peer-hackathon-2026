@@ -1,0 +1,22 @@
+{
+  "endpoint": "kling/v4/image-to-video",
+  "inputs": {
+    "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed and never moves. A man lies asleep in the bed and does not move at any time. The phone on the bedside table glows mint. After a moment a ribbon of soft mint light streams out of the phone's screen and sweeps low across the room in front of the bed to the open floor between the bed and the desk. There, out of the ribbon's glowing particles, a man made of soft mint light builds up, from his head and shoulders down to his bare feet, while the ribbon fades away behind him. He stands upright, calm and friendly, and looks toward the desk. Smooth, slow, elegant motion, like a premium advertising film. Nothing spooky, no mist, no smoke.",
+    "start_image_url": "file:demo-video/shots/stills/night-phone-lit.png",
+    "middle_image_urls": [
+      "file:demo-video/look/peer-entrance/a-phone-1-appears.png"
+    ],
+    "end_image_url": "file:demo-video/look/peer-entrance/a-phone-1b-formed.png",
+    "duration": 5,
+    "resolution": "720p"
+  },
+  "expect": {
+    "units": 5,
+    "unit": "second of video at 720p",
+    "unit_price": 0.157,
+    "cost_usd": 0.785,
+    "basis": "fal.ai page 2026-11-14 (WP3's request files): $0.157 per second at 720p"
+  },
+  "output": "demo-video/look/peer-entrance/motion/motion-a-phone",
+  "note": "Motion test A (Ram's look, from the phone): the ribbon leaves the phone and he takes shape on the floor; route K, key frames"
+}

@@ -1,0 +1,22 @@
+{
+  "endpoint": "kling/v4/image-to-video",
+  "inputs": {
+    "prompt": "A locked-off closer shot of a wooden desk in a bedroom at night. The camera is fixed and never moves. An open laptop on the desk glows soft white. After a moment the screen glows brighter, and a small, soft, rounded mint character with the app's face pushes out through the glowing screen as if through a doorway of light, climbs out over the keyboard, hops down onto the desk beside the laptop, turns to the camera and lifts one tiny arm in a small, cheerful hello. Its soft glow lights the desk. Playful, smooth motion, like a premium 3D animated brand film. Nothing spooky.",
+    "start_image_url": "file:demo-video/look/peer-entrance/d-desk-empty.png",
+    "middle_image_urls": [
+      "file:demo-video/look/peer-entrance/d-desk-half.png"
+    ],
+    "end_image_url": "file:demo-video/look/peer-entrance/d-desk-out.png",
+    "duration": 5,
+    "resolution": "720p"
+  },
+  "expect": {
+    "units": 5,
+    "unit": "second of video at 720p",
+    "unit_price": 0.157,
+    "cost_usd": 0.785,
+    "basis": "fal.ai page 2026-11-14 (WP3's request files): $0.157 per second at 720p"
+  },
+  "output": "demo-video/look/peer-entrance/motion/motion-d-laptop",
+  "note": "Motion test D (the little Peer, from the laptop): it climbs out of the screen and says hello; route K, key frames"
+}

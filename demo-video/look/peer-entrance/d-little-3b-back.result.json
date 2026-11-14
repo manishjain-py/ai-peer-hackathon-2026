@@ -1,0 +1,29 @@
+{
+ "request_id": "01a1db8d-2ad6-7433-99d9-3709d514cb8f",
+ "billable_units_header": "0.087774807",
+ "inputs_sent": {
+  "prompt": "Keep everything in image 1 exactly as it is: the same sunlit room, the same camera position and framing, the same warm light, and the same man sitting up in bed holding his phone, who has not moved. Change two things. First: the laptop on the desk is open and its screen glows soft mint. Second: a small friendly character that is the app icon shown in image 2 come to life: a soft, very rounded mint-green cube (#b7f4cf) about the size of a hand, made of frosted, softly glowing material, with the same dark double arch and the same two small dark dots of image 2 on its front, which read as its face, and two tiny stubby arms. It glows softly from within. Simple, premium 3D design, like the mascot of a high-end tech brand, not childish. It is stepping back into the laptop's glowing screen: its back half is already inside the screen, which shines brighter around it like a lit doorway, and it looks back over its shoulder toward the man in bed, waving goodbye with one tiny arm. The man in bed has looked up from his phone toward it, with a small, rested smile. It must read as friendly, advanced technology, never as a ghost or a spirit: no mist, no smoke, no dark shadows, nothing spooky. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab278ab/ozfGwV3GWCflpRmEKX5T3_morning-wake-b.png",
+   "https://v3b.fal.media/files/b/0ab278ab/9Iu4vWvAFVw9pEFsjV1C9_peer-mark.png"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab278c2/jcN9NeIxk--xPEJDsRL-C_3UudqXGu.png",
+    "content_type": "image/png",
+    "file_name": "jcN9NeIxk--xPEJDsRL-C_3UudqXGu.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}
