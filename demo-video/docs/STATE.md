@@ -217,22 +217,22 @@ still running is the worker ai-peer-video-wp2-3 (window 3974, PID 16635) with it
   route O (Gemini Omni 1.2 Flash, first and last frame) for the moment the clone rises, route K
   (Kling 4.0 key frames) for one take through several poses, route P's code only as a finishing
   tool; settle the look of the double in the stills first.
-- WP2, the film in code (`ai-peer-video-wp2`, `ai-peer-video-wp2-2`, `ai-peer-video-wp2-3`, next
-  `ai-peer-video-wp2-4`; first brief `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2.md`, cap $10):
-  **Draft 2 done**, merged as PR 11 on 2026-11-14 15:08 UTC (merge commit 5a7970f), after Draft 1
-  (PR 9, 1813ac4) and round 3 (PR 10, 974b9db: the Earth's final version, the NASA credit, the colour
-  check with no change). Draft 2 = the quicker reveal (V16) and the new hook with Ram (V17). The
-  slates copy: `demo-video/film/renders/draft-02-slates.mp4` (in git, 39.1 MB). The full film:
-  `~/.ai-peer/demo-video-private/renders/draft-02.mp4` (this Mac only, 113.2 MB; wp2-3 read only
-  its numbers: network guard held). Both 2:00.0, -14.1 LUFS, every line at least 15.0 dB above the
-  music; one 20-frame sheet of the slates copy looked at; nobody has watched it move or heard it.
-  Spent: $0.94 (`demo-video/ledger/wp2.csv`) plus wp2-3's $0.616 (`demo-video/ledger/wp2-3.csv`,
-  two takes). Read `demo-video/film/REPORT.md`, "Draft 2". **Open:** (1) Manish's view of Draft 2;
-  (2) the music's licence wording; (3) the weak points in REPORT "Draft 2" (the bed before 32 s was
-  cut for a 12 s hook; the 0.3 s jump past the blanket; the 2 s working loop; the new takes' lips
-  not measured; the card texts are placeholders); (4) the Earth's polish list; (5) Manish's real
-  recordings (Tuesday). `ai-peer-video-wp2-3` handed off at 15:09 UTC (context 43%):
-  `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-4.md`.
+- WP2, the film in code (`ai-peer-video-wp2`, `ai-peer-video-wp2-2`, `ai-peer-video-wp2-3`,
+  `ai-peer-video-wp2-4`, next `ai-peer-video-wp2-5`; first brief `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2.md`):
+  **Draft 3 in progress** on branch `video-wp2-4-draft3` (pushed at `538edf2`, not merged; one PR at
+  Phase D), by the order in `FEEDBACK-DRAFT-2-2026-11-14.md`. **Phase A done** (ai-peer-video-wp2-4):
+  research `demo-video/research/peer-entrance-2026-11-14.md`; four boards in
+  `demo-video/look/peer-entrance/boards/` (D the little Peer out of the laptop, recommended; A Ram's
+  look out of the phone; B out of the laptop; C a night owl out of the phone) and the clip
+  `demo-video/look/peer-entrance/motion/peer-motion-tests.mp4`, with Manish since 19:44 UTC.
+  **Phase B done:** the four product screens by code with made-up data (`demo-video/film/screens.json`,
+  `src/scenes/screens.js`), four meeting lines m1 to m4 (the controller's yes), no slate left in a
+  public build; a preview in lane wp24 (2:00.0, -14.1 LUFS, every line 15.0 to 25.6 dB above the
+  music, m1 to m4 heard with no error). Spent $3.01 (`demo-video/ledger/wp2-4.csv`, Phase A cap $8).
+  Read `demo-video/film/REPORT.md`, "Draft 3, Phase A and B". **Open:** Manish's pick, then Phase C
+  (the entrance and the return, cap $25) and Phase D (Draft 3). Earlier: Draft 2 PR 11 (`5a7970f`),
+  round 3 PR 10, Draft 1 PR 9. `ai-peer-video-wp2-4` handed off at about 40% context:
+  `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-5.md`.
 - WP3, the nine AI shots with people (`ai-peer-video-wp3`, brief
   `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp3.md`, cap $60): **done**, merged as PR 8 on
   2026-11-14 13:20 UTC (merge commit 839a455). Spent $23.10 (95 calls, `demo-video/ledger/wp3.csv`).
@@ -516,3 +516,4 @@ and 7 still hold.
 | 2026-11-14 15:12 | ai-peer-video-controller-4 | Draft 2 came from ai-peer-video-wp2-3 (PR 11, `5a7970f`). Checked the slates copy only (numbers, loudness, one 30-frame sheet) and sent Manish a 720p copy at 15:10 UTC on the Attention group and in the session, asking for his view. Closed ai-peer-video-wp2-3 (window 3974) at 15:11 UTC after the checks. Ledgers summed: $31.25 of $100. Only the wait `usage` runs. |
 | 2026-11-14 19:25 | ai-peer-video-controller-4 | Manish's view of Draft 2 came at 19:14 UTC (V19): no Peer out of the sleeping Ram; Ram's look from a phone or laptop, or a mascot; back to the same place at the end; made-up Zoom, Slack and morning-brief screens with invented Airbnb payments data; samples first. Wrote `FEEDBACK-DRAFT-2-2026-11-14.md` (his words and the order for Draft 3) and V19; launching ai-peer-video-wp2-4. |
 | 2026-11-14 19:47 | ai-peer-video-controller-4 | Phase A came from ai-peer-video-wp2-4 (four boards, one motion clip, research with links). Checked one picture of all four boards and eight frames of the clip; sent them at 19:44 UTC to the Attention group and the session, asking which Peer (D recommended). Said yes to four made-up voice lines in the Zoom meeting from the ElevenLabs plan. Money $34.26 of $100. |
+| 2026-11-14 20:03 | ai-peer-video-wp2-4 | Draft 3, Phases A and B: research, four concept boards and two motion tests (sent to Manish by the controller at 19:44 UTC); the four product screens by code with made-up Airbnb payments data and four meeting lines; a preview render checked by numbers, one sheet and speech-to-text. $3.01 spent. Handed off at about 40% context to ai-peer-video-wp2-5. | Waiting on Manish's pick; Phases C and D next |
