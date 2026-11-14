@@ -137,23 +137,29 @@ own. The usage alarm's test is `demo-video/tools/usage-check.sh` (its header sho
   route O (Gemini Omni 1.2 Flash, first and last frame) for the moment the clone rises, route K
   (Kling 4.0 key frames) for one take through several poses, route P's code only as a finishing
   tool; settle the look of the double in the stills first.
-- WP2, the film in code and Draft 1 (`ai-peer-video-wp2`, then `ai-peer-video-wp2-2`; brief
-  `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2.md`, cap $10): **Draft 1 done**, merged as PR 9
+- WP2, the film in code and Draft 1 (`ai-peer-video-wp2`, then `ai-peer-video-wp2-2`, now
+  `ai-peer-video-wp2-3`; briefs `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2.md`, cap $10, and
+  `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-3.md`): **Draft 1 done**, merged as PR 9
   on 2026-11-14 13:31 UTC (merge commit 1813ac4). Spent $0.94 (8 calls, all music,
   `demo-video/ledger/wp2.csv`). The full film: `~/.ai-peer/demo-video-private/renders/draft-01.mp4`
   (this Mac only; 2:00.0, 114.5 MB). The same with slates for the product screens:
   `demo-video/film/renders/draft-01-slates.mp4` (in git, 40.2 MB). Read
   `demo-video/film/REPORT.md`. Both: -14.1 LUFS, each line at least 15 dB above the music,
   speech-to-text 15 of 15, a frame at every cut looked at; nobody has heard it or watched it
-  move. All nine AI shots are WP3's finals. **Open:** (1) the Earth close in Draft 1 is a
-  snapshot (`film/src/scenes/earth-draft1.js`) of a scene the old session's helper was still
-  polishing at 13:17 UTC: when its report
-  (`handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-2-helpers-earth.md`) is in, commit its
-  `film/src/scenes/earth.js` and `film/assets/earth/SOURCE.md`, drop `scene_file` in
-  `film/shots.json`, delete the snapshot, look at 1:48 to 2:00, render again; (2) the music's
-  licence wording, for Manish (the four points are in the report); (3) the colour of the six AI
-  clips that carry no colour tag was not checked. `ai-peer-video-wp2-2` waits for the
-  controller with Manish's feedback (context 45% at the end of Draft 1).
+  move. All nine AI shots are WP3's finals. **Round 3 done** (ai-peer-video-wp2-3), merged as
+  PR 10 on 2026-11-14 14:19 UTC (merge commit 974b9db), no money spent: the Earth close is its
+  final version (`film/src/scenes/earth.js`; the snapshot deleted, `scene_file` dropped,
+  `film/assets/earth/SOURCE.md` in git); the end card names NASA as the source of the Earth
+  imagery (a small line from 1:58.0); seen in a render of the close part and one sheet of 1:48
+  to 2:00. The colour check: no change (all nine clips are untagged and the film reads them all
+  one way; the two possible readings differ by a mean delta E of 1.1 to 1.8, visible only side
+  by side, and the pixels cannot show which is right; the numbers and a one-line fix are in
+  `REPORT.md`, "Round 3"). Draft 1's two renders still carry the snapshot: the next full render
+  brings the final close in. **Open:** (1) Manish's feedback on Draft 1, then Draft 2; (2) the
+  music's licence wording, for Manish (the four points are in the report); (3) the Earth's
+  polish list (the report's "Round 3" and the helper's report), first the plain boxes at 1:48.7
+  and the fast streak at 1:49.0 to 1:49.7, which may shimmer in motion. `ai-peer-video-wp2-3`
+  waits for the controller with Manish's feedback (context 18% at 14:19 UTC).
 - WP3, the nine AI shots with people (`ai-peer-video-wp3`, brief
   `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp3.md`, cap $60): **done**, merged as PR 8 on
   2026-11-14 13:20 UTC (merge commit 839a455). Spent $23.10 (95 calls, `demo-video/ledger/wp3.csv`).
@@ -383,3 +389,4 @@ older and mostly done; 0, 4, 5, 6 and 7 still hold.
 | 2026-11-14 13:37 | ai-peer-video-controller-3 | ai-peer-video-wp2-2 reported Draft 1 done and merged (PR 9, `1813ac4`): two renders, the full film (this Mac only) and a slates copy (in git). Checked what the full film holds (`product.json` names a walk of 6 November and a meeting recording of 7 November; the report says the sound of a live test meeting): not sent, and the controller's own unopened copy and frame sheet of it were deleted. Looked at one sheet of the slates copy, sent it to Manish at 13:36 UTC (Attention group and session, 720p). Asked the old ai-peer-video-wp2 to wrap up its Earth helper (1h34m, 710k tokens). Closed window 3972 after the checks and stopped the wait `stall-wp2-2`. Money: $30.63 of $100. Usage log: `2026-11-14T13:33:13Z week=32 fable=63 session=?`. | Draft 1 is with Manish; his view and the usage answer are open |
 | 2026-11-14 13:42 | ai-peer-video-controller-3 | The old ai-peer-video-wp2 reported its Earth helper stopped and the report on `main` (`b0003cd`). Checked the file, the worktree (the final `earth.js` is there, uncommitted), its screen, child and sub-agents; closed window 3963 at 13:42 UTC; stopped the wait `stall-wp2`; started `fable-cap` again naming only window 3973. Took one call: the Earth pull-out stays in Bengaluru. Usage log: `2026-11-14T13:38:21Z week=33 fable=64 session=?`. | Only the controller is left; Manish's view of Draft 1 and his usage answer are open |
 | 2026-11-14 14:08 | ai-peer-video-controller-3 | Manish answered the usage question at 14:01 UTC: "one worker at a time, on Opus 5.5" (recorded as V15 and C13, commit `57f8299`). Closed the old controller's window 3964 at 14:06 UTC after the checks. Launched ai-peer-video-wp2-3 at 14:07 UTC (window 3974, PID 16635, `claude-opus-5-5[1m]`, max effort): the Earth's final version and the colour check, no helper without a yes. Armed the wait `stall-wp2-3`. Usage log: `2026-11-14T14:03:42Z week=33 fable=65 session=?`. | One worker live; Manish's view of Draft 1 is awaited |
+| 2026-11-14 14:20 | ai-peer-video-wp2-3 | Round 3 done and merged (PR 10, `974b9db`): the Earth's final version switched on (the snapshot deleted, `SOURCE.md` in git), a NASA credit line on the end card, the close rendered and looked at (one sheet of 1:48 to 2:00, the credit at full size, a strip of the fast streak). The colour check of the AI clips: all nine are untagged; the renderer reads them as BT.709, ffmpeg as BT.601; the readings differ by a mean delta E of 1.1 to 1.8; neither the stills nor the raw Kling takes show which is right, so no change. No paid call, no helper. | Waits for Manish's feedback through the controller; context 18%. |
