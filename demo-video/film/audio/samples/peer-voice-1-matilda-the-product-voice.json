@@ -1,0 +1,67 @@
+{
+ "what": "sample",
+ "voice_id": "XrExE9yKIg1WjnnlVkGX",
+ "voice": "Matilda",
+ "model": "eleven_multilingual_v2",
+ "text": "I cover. Not as him. As me.",
+ "spoken": "I cover. Not as him. As me.",
+ "request_sha": "740cb24a7cf8329c",
+ "request": {
+  "text": "I cover. Not as him. As me.",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.6,
+   "similarity_boost": 0.75,
+   "style": 0,
+   "use_speaker_boost": true,
+   "speed": 1.0
+  },
+  "seed": 14112026
+ },
+ "request_id": "diFK7xQhEWt44hLpGmKQ",
+ "character_cost": "13",
+ "generated_utc": "2026-11-14 11:40:35",
+ "file": "peer-voice-1-matilda-the-product-voice.wav",
+ "seconds": 2.19,
+ "raw_seconds": 2.368,
+ "trimmed_front": 0.03,
+ "peak_dbfs": -3.65,
+ "rms_dbfs": -22.93,
+ "words": [
+  {
+   "w": "I",
+   "s": 0.0,
+   "e": 0.063
+  },
+  {
+   "w": "cover.",
+   "s": 0.156,
+   "e": 0.632
+  },
+  {
+   "w": "Not",
+   "s": 0.91,
+   "e": 1.119
+  },
+  {
+   "w": "as",
+   "s": 1.166,
+   "e": 1.235
+  },
+  {
+   "w": "him.",
+   "s": 1.294,
+   "e": 1.549
+  },
+  {
+   "w": "As",
+   "s": 1.584,
+   "e": 1.711
+  },
+  {
+   "w": "me.",
+   "s": 1.793,
+   "e": 2.338
+  }
+ ]
+}

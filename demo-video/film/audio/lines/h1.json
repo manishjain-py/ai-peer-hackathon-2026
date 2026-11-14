@@ -1,0 +1,82 @@
+{
+ "what": "h1",
+ "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+ "voice": "Alice",
+ "model": "eleven_multilingual_v2",
+ "text": "2 AM where he is, and I've got my answer.",
+ "spoken": "Two A.M. where he is, and I've got my answer.",
+ "request_sha": "5068167658ad510b",
+ "request": {
+  "text": "Two A.M. where he is, and I've got my answer.",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.55,
+   "similarity_boost": 0.75,
+   "style": 0,
+   "use_speaker_boost": true,
+   "speed": 1.0
+  },
+  "seed": 14112026
+ },
+ "request_id": "R56pwow7HMbImkk8dVuE",
+ "character_cost": "22",
+ "generated_utc": "2026-11-14 11:40:19",
+ "file": "h1.wav",
+ "seconds": 2.571,
+ "raw_seconds": 2.601,
+ "trimmed_front": 0.03,
+ "peak_dbfs": -5.27,
+ "rms_dbfs": -20.91,
+ "words": [
+  {
+   "w": "2",
+   "s": 0.0,
+   "e": 0.191
+  },
+  {
+   "w": "AM",
+   "s": 0.283,
+   "e": 0.667
+  },
+  {
+   "w": "where",
+   "s": 0.748,
+   "e": 0.968
+  },
+  {
+   "w": "he",
+   "s": 1.003,
+   "e": 1.073
+  },
+  {
+   "w": "is,",
+   "s": 1.143,
+   "e": 1.421
+  },
+  {
+   "w": "and",
+   "s": 1.456,
+   "e": 1.595
+  },
+  {
+   "w": "I've",
+   "s": 1.642,
+   "e": 1.77
+  },
+  {
+   "w": "got",
+   "s": 1.793,
+   "e": 1.909
+  },
+  {
+   "w": "my",
+   "s": 1.944,
+   "e": 2.037
+  },
+  {
+   "w": "answer.",
+   "s": 2.106,
+   "e": 2.571
+  }
+ ]
+}

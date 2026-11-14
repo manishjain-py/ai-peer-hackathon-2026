@@ -1,0 +1,53 @@
+{
+ "what": "p12",
+ "voice_id": "XrExE9yKIg1WjnnlVkGX",
+ "voice": "Matilda",
+ "model": "eleven_multilingual_v2",
+ "text": "Now someone's still there.",
+ "spoken": "Now someone's still there.",
+ "request_sha": "3c15a577ca3575d5",
+ "request": {
+  "text": "Now someone's still there.",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.6,
+   "similarity_boost": 0.75,
+   "style": 0,
+   "use_speaker_boost": true,
+   "speed": 1.0
+  },
+  "seed": 14112026,
+  "previous_text": "It's always night for someone on your team."
+ },
+ "request_id": "lrrzh88cPt4WYRv2RQ0Z",
+ "character_cost": "13",
+ "generated_utc": "2026-11-14 11:40:34",
+ "file": "p12.wav",
+ "seconds": 1.34,
+ "raw_seconds": 1.533,
+ "trimmed_front": 0.03,
+ "peak_dbfs": -1.71,
+ "rms_dbfs": -20.37,
+ "words": [
+  {
+   "w": "Now",
+   "s": 0.0,
+   "e": 0.191
+  },
+  {
+   "w": "someone's",
+   "s": 0.26,
+   "e": 0.609
+  },
+  {
+   "w": "still",
+   "s": 0.632,
+   "e": 0.841
+  },
+  {
+   "w": "there.",
+   "s": 0.887,
+   "e": 1.503
+  }
+ ]
+}

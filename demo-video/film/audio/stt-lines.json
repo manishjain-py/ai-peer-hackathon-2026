@@ -1,0 +1,114 @@
+{
+ "model": "faster-whisper small.en",
+ "mode": "lines",
+ "items": [
+  {
+   "id": "h1",
+   "want": "2 AM where he is, and I've got my answer.",
+   "heard": "2am where he is and I've got my answer",
+   "word_errors": 0
+  },
+  {
+   "id": "h2",
+   "want": "His update's already here. His Peer gave it.",
+   "heard": "His update's already here, his peer gave it.",
+   "word_errors": 0
+  },
+  {
+   "id": "h3",
+   "want": "Does he ever sleep?",
+   "heard": "Does he ever sleep?",
+   "word_errors": 0
+  },
+  {
+   "id": "p01",
+   "want": "He does. I'm the one who's up.",
+   "heard": "He does, I'm the one who's up.",
+   "word_errors": 0
+  },
+  {
+   "id": "p02",
+   "want": "I'm his AI Peer.",
+   "heard": "I'm his A.I. peer.",
+   "word_errors": 0
+  },
+  {
+   "id": "p03",
+   "want": "I know his projects, his code, his conversations, the way he knows them.",
+   "heard": "I know his projects, his code, his conversations, the way he knows them.",
+   "word_errors": 0
+  },
+  {
+   "id": "p04",
+   "want": "So when work needs him and he can't be there, I cover.",
+   "heard": "So when work needs him and he can't be there, I cover.",
+   "word_errors": 0
+  },
+  {
+   "id": "p05",
+   "want": "Not as him. As me.",
+   "heard": "not as him, as me.\"",
+   "word_errors": 0
+  },
+  {
+   "id": "p06",
+   "want": "A question from another time zone doesn't have to wait a day.",
+   "heard": "A question from another time zone doesn't have to wait a day.",
+   "word_errors": 0
+  },
+  {
+   "id": "p07",
+   "want": "And while he's away, I listen, for the one change in a thousand that touches his work.",
+   "heard": "And while he's away, I listen, for the one change in a thousand that touches his work.",
+   "word_errors": 0
+  },
+  {
+   "id": "p08",
+   "want": "By morning it's all in one brief.",
+   "heard": "By morning, it's all in one brief.",
+   "word_errors": 0
+  },
+  {
+   "id": "p09",
+   "want": "What I did. What I learned.",
+   "heard": "What I did. What I learned.",
+   "word_errors": 0
+  },
+  {
+   "id": "p10",
+   "want": "And the decisions that are his, because they always were.",
+   "heard": "and the decisions that are his because they always were.",
+   "word_errors": 0
+  },
+  {
+   "id": "p11",
+   "want": "It's always night for someone on your team.",
+   "heard": "It's always night for someone on your team.",
+   "word_errors": 0
+  },
+  {
+   "id": "p12",
+   "want": "Now someone's still there.",
+   "heard": "Now someone's still there.",
+   "word_errors": 0
+  },
+  {
+   "id": "peer-voice-1-matilda-the-product-voice",
+   "want": "I cover. Not as him. As me.",
+   "heard": "I cover, not as him as me.",
+   "word_errors": 0
+  },
+  {
+   "id": "peer-voice-2-river",
+   "want": "I cover. Not as him. As me.",
+   "heard": "I cover, not as him, as me.",
+   "word_errors": 0
+  },
+  {
+   "id": "peer-voice-3-brian",
+   "want": "I cover. Not as him. As me.",
+   "heard": "I cover not as him as me.",
+   "word_errors": 0
+  }
+ ]
+}

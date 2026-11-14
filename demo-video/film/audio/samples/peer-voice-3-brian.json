@@ -1,0 +1,67 @@
+{
+ "what": "sample",
+ "voice_id": "nPczCjzI2devNBz1zQrb",
+ "voice": "Brian",
+ "model": "eleven_multilingual_v2",
+ "text": "I cover. Not as him. As me.",
+ "spoken": "I cover. Not as him. As me.",
+ "request_sha": "6ba5eff8ba86f368",
+ "request": {
+  "text": "I cover. Not as him. As me.",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.6,
+   "similarity_boost": 0.75,
+   "style": 0,
+   "use_speaker_boost": true,
+   "speed": 1.0
+  },
+  "seed": 14112026
+ },
+ "request_id": "PT04P6zG4MrHopaYbGNo",
+ "character_cost": "13",
+ "generated_utc": "2026-11-14 11:40:36",
+ "file": "peer-voice-3-brian.wav",
+ "seconds": 2.12,
+ "raw_seconds": 2.322,
+ "trimmed_front": 0.0,
+ "peak_dbfs": -4.85,
+ "rms_dbfs": -23.96,
+ "words": [
+  {
+   "w": "I",
+   "s": 0.0,
+   "e": 0.093
+  },
+  {
+   "w": "cover.",
+   "s": 0.209,
+   "e": 0.604
+  },
+  {
+   "w": "Not",
+   "s": 0.662,
+   "e": 0.859
+  },
+  {
+   "w": "as",
+   "s": 0.906,
+   "e": 0.987
+  },
+  {
+   "w": "him.",
+   "s": 1.045,
+   "e": 1.405
+  },
+  {
+   "w": "As",
+   "s": 1.474,
+   "e": 1.637
+  },
+  {
+   "w": "me.",
+   "s": 1.73,
+   "e": 2.322
+  }
+ ]
+}

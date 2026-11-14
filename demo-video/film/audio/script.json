@@ -1,0 +1,62 @@
+{
+  "about": "The spoken script of the film. tools/voice.py turns it into audio/lines/*.wav and audio/narration.json. 'text' is what the caption shows; 'spoken' (optional) is what the voice engine is given when the two differ.",
+  "model": "eleven_multilingual_v2",
+  "format": "pcm_44100",
+  "seed": 14112026,
+  "voices": {
+    "peer": {
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "name": "Matilda",
+      "why": "The product's own Peer voice (DESIGN C10). Never Manish's cloned voice.",
+      "settings": { "stability": 0.6, "similarity_boost": 0.75, "style": 0, "use_speaker_boost": true, "speed": 1.0 }
+    },
+    "colleague-1": {
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "name": "Alice",
+      "why": "British English. A colleague voice the September film ended on.",
+      "settings": { "stability": 0.55, "similarity_boost": 0.75, "style": 0, "use_speaker_boost": true, "speed": 1.0 }
+    },
+    "colleague-2": {
+      "voice_id": "iP95p4xoKVk53GoZ742B",
+      "name": "Chris",
+      "why": "American English. A colleague voice the September film ended on.",
+      "settings": { "stability": 0.55, "similarity_boost": 0.75, "style": 0, "use_speaker_boost": true, "speed": 1.0 }
+    },
+    "colleague-3": {
+      "voice_id": "oaz5NvoRIhcJystOASAA",
+      "name": "Karthik",
+      "why": "Indian English. A colleague voice the September film ended on.",
+      "settings": { "stability": 0.55, "similarity_boost": 0.75, "style": 0, "use_speaker_boost": true, "speed": 1.0 }
+    }
+  },
+  "lines": [
+    { "id": "h1", "part": "hook", "speaker": "colleague-1", "text": "2 AM where he is, and I've got my answer.", "spoken": "Two A.M. where he is, and I've got my answer." },
+    { "id": "h2", "part": "hook", "speaker": "colleague-2", "text": "His update's already here. His Peer gave it." },
+    { "id": "h3", "part": "hook", "speaker": "colleague-3", "text": "Does he ever sleep?" },
+    { "id": "p01", "part": "hook", "speaker": "peer", "text": "He does. I'm the one who's up." },
+
+    { "id": "p02", "part": "reveal", "speaker": "peer", "text": "I'm his AI Peer." },
+    { "id": "p03", "part": "reveal", "speaker": "peer", "text": "I know his projects, his code, his conversations, the way he knows them." },
+    { "id": "p04", "part": "reveal", "speaker": "peer", "text": "So when work needs him and he can't be there, I cover." },
+    { "id": "p05", "part": "reveal", "speaker": "peer", "text": "Not as him. As me." },
+
+    { "id": "p06", "part": "proof", "speaker": "peer", "text": "A question from another time zone doesn't have to wait a day." },
+    { "id": "p07", "part": "proof", "speaker": "peer", "text": "And while he's away, I listen, for the one change in a thousand that touches his work." },
+
+    { "id": "p08", "part": "morning", "speaker": "peer", "text": "By morning it's all in one brief." },
+    { "id": "p09", "part": "morning", "speaker": "peer", "text": "What I did. What I learned." },
+    { "id": "p10", "part": "morning", "speaker": "peer", "text": "And the decisions that are his, because they always were." },
+
+    { "id": "p11", "part": "close", "speaker": "peer", "text": "It's always night for someone on your team." },
+    { "id": "p12", "part": "close", "speaker": "peer", "text": "Now someone's still there." }
+  ],
+  "samples": {
+    "about": "One line in three voices, for Manish's ear. The first is the voice the draft uses.",
+    "text": "I cover. Not as him. As me.",
+    "voices": [
+      { "file": "peer-voice-1-matilda-the-product-voice", "voice_id": "XrExE9yKIg1WjnnlVkGX", "name": "Matilda", "note": "The product's own Peer voice; the one Draft 1 uses.", "settings": { "stability": 0.6, "similarity_boost": 0.75, "style": 0, "use_speaker_boost": true, "speed": 1.0 } },
+      { "file": "peer-voice-2-river", "voice_id": "SAz9YHcvj6GT2YYXdXww", "name": "River", "note": "Relaxed, neutral, neither a man's nor a woman's voice.", "settings": { "stability": 0.6, "similarity_boost": 0.75, "style": 0, "use_speaker_boost": true, "speed": 1.0 } },
+      { "file": "peer-voice-3-brian", "voice_id": "nPczCjzI2devNBz1zQrb", "name": "Brian", "note": "Deep, warm, a man's voice.", "settings": { "stability": 0.6, "similarity_boost": 0.75, "style": 0, "use_speaker_boost": true, "speed": 1.0 } }
+    ]
+  }
+}

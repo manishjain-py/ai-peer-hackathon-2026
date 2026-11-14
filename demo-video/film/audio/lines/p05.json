@@ -1,0 +1,58 @@
+{
+ "what": "p05",
+ "voice_id": "XrExE9yKIg1WjnnlVkGX",
+ "voice": "Matilda",
+ "model": "eleven_multilingual_v2",
+ "text": "Not as him. As me.",
+ "spoken": "Not as him. As me.",
+ "request_sha": "ea46cd05f6d44f6b",
+ "request": {
+  "text": "Not as him. As me.",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.6,
+   "similarity_boost": 0.75,
+   "style": 0,
+   "use_speaker_boost": true,
+   "speed": 1.0
+  },
+  "seed": 14112026,
+  "previous_text": "So when work needs him and he can't be there, I cover."
+ },
+ "request_id": "aFEOOsTJscTvQDOhtRvH",
+ "character_cost": "9",
+ "generated_utc": "2026-11-14 11:40:29",
+ "file": "p05.wav",
+ "seconds": 1.67,
+ "raw_seconds": 1.858,
+ "trimmed_front": 0.0,
+ "peak_dbfs": -4.54,
+ "rms_dbfs": -21.8,
+ "words": [
+  {
+   "w": "Not",
+   "s": 0.0,
+   "e": 0.244
+  },
+  {
+   "w": "as",
+   "s": 0.29,
+   "e": 0.36
+  },
+  {
+   "w": "him.",
+   "s": 0.43,
+   "e": 0.848
+  },
+  {
+   "w": "As",
+   "s": 1.022,
+   "e": 1.196
+  },
+  {
+   "w": "me.",
+   "s": 1.277,
+   "e": 1.858
+  }
+ ]
+}

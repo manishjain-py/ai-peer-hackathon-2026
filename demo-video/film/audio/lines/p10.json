@@ -1,0 +1,83 @@
+{
+ "what": "p10",
+ "voice_id": "XrExE9yKIg1WjnnlVkGX",
+ "voice": "Matilda",
+ "model": "eleven_multilingual_v2",
+ "text": "And the decisions that are his, because they always were.",
+ "spoken": "And the decisions that are his, because they always were.",
+ "request_sha": "cb1d14207e5f7e1b",
+ "request": {
+  "text": "And the decisions that are his, because they always were.",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.6,
+   "similarity_boost": 0.75,
+   "style": 0,
+   "use_speaker_boost": true,
+   "speed": 1.0
+  },
+  "seed": 14112026,
+  "previous_text": "What I did. What I learned."
+ },
+ "request_id": "yqJjzPVGUQGGPH6s2Pdr",
+ "character_cost": "27",
+ "generated_utc": "2026-11-14 11:40:33",
+ "file": "p10.wav",
+ "seconds": 2.71,
+ "raw_seconds": 2.926,
+ "trimmed_front": 0.05,
+ "peak_dbfs": -2.27,
+ "rms_dbfs": -21.05,
+ "words": [
+  {
+   "w": "And",
+   "s": 0.0,
+   "e": 0.124
+  },
+  {
+   "w": "the",
+   "s": 0.171,
+   "e": 0.24
+  },
+  {
+   "w": "decisions",
+   "s": 0.275,
+   "e": 0.739
+  },
+  {
+   "w": "that",
+   "s": 0.786,
+   "e": 0.902
+  },
+  {
+   "w": "are",
+   "s": 0.925,
+   "e": 1.03
+  },
+  {
+   "w": "his,",
+   "s": 1.076,
+   "e": 1.459
+  },
+  {
+   "w": "because",
+   "s": 1.506,
+   "e": 1.773
+  },
+  {
+   "w": "they",
+   "s": 1.796,
+   "e": 1.912
+  },
+  {
+   "w": "always",
+   "s": 1.959,
+   "e": 2.237
+  },
+  {
+   "w": "were.",
+   "s": 2.284,
+   "e": 2.876
+  }
+ ]
+}

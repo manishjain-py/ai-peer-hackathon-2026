@@ -1,0 +1,73 @@
+{
+ "what": "p11",
+ "voice_id": "XrExE9yKIg1WjnnlVkGX",
+ "voice": "Matilda",
+ "model": "eleven_multilingual_v2",
+ "text": "It's always night for someone on your team.",
+ "spoken": "It's always night for someone on your team.",
+ "request_sha": "a1664d0da1827d89",
+ "request": {
+  "text": "It's always night for someone on your team.",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.6,
+   "similarity_boost": 0.75,
+   "style": 0,
+   "use_speaker_boost": true,
+   "speed": 1.0
+  },
+  "seed": 14112026,
+  "next_text": "Now someone's still there."
+ },
+ "request_id": "HlCeXNakOuSRzoU2xUm3",
+ "character_cost": "21",
+ "generated_utc": "2026-11-14 11:40:33",
+ "file": "p11.wav",
+ "seconds": 2.421,
+ "raw_seconds": 2.461,
+ "trimmed_front": 0.04,
+ "peak_dbfs": -4.42,
+ "rms_dbfs": -22.36,
+ "words": [
+  {
+   "w": "It's",
+   "s": 0.0,
+   "e": 0.157
+  },
+  {
+   "w": "always",
+   "s": 0.192,
+   "e": 0.448
+  },
+  {
+   "w": "night",
+   "s": 0.506,
+   "e": 0.715
+  },
+  {
+   "w": "for",
+   "s": 0.761,
+   "e": 0.866
+  },
+  {
+   "w": "someone",
+   "s": 0.912,
+   "e": 1.191
+  },
+  {
+   "w": "on",
+   "s": 1.225,
+   "e": 1.284
+  },
+  {
+   "w": "your",
+   "s": 1.318,
+   "e": 1.423
+  },
+  {
+   "w": "team.",
+   "s": 1.458,
+   "e": 2.421
+  }
+ ]
+}
