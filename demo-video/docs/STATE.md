@@ -22,8 +22,8 @@ slates copy (30 frames, every 4 s) and sent that copy to Manish at 13:36 UTC: th
 group and the session, each as a 720p copy (the 1080p file is over the session's 30 MiB limit).
 About half of that copy is slates (the proof part, 0:30 to 1:30, and the morning brief), so he
 was told to watch the full film on this Mac or to tell the controller to send it. Nobody has
-watched the film move or heard it. Sessions left: the controller, and the old
-ai-peer-video-wp2 until its Earth helper reports (asked at 13:36 UTC to wrap up). What comes
+watched the film move or heard it. Sessions left: the controller only (the old
+ai-peer-video-wp2 was closed at 13:42 UTC, once its Earth helper's report was on `main`). What comes
 next is Manish's: his view of Draft 1 and his answer on usage. His feedback round, the Earth's
 final version, the colour check and the final cut go to a new session, ai-peer-video-wp2-3
 (brief `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-3.md`), on Opus 5.5.
@@ -89,7 +89,6 @@ set-ups: ask Manish before spending on them.
 | ai-peer-video-controller-3 | 3973 | https://claude.ai/code/session_01Nfn5h8g3cWzARgY2jkzyPF | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | The live controller; Fable 5.2, max effort, PID 12154 |
 | ai-peer-video-controller-2 | 3964 | https://claude.ai/code/session_01Nfn5h7PShJsTBPY7urCJaZ | the same checkout | main | none | Handed off at 12:36 UTC; nothing of its own still runs (no child process, its one helper ended); PID 49247. Manish was asked the usage question in this window too, so it stays open until he has answered; then the controller closes it after the usual checks (a script launched it, not Manish). |
 | ai-peer-video-controller-1 | 2952 | https://claude.ai/code/session_01Nfn5h5eNL9YLJMnBQpKKMf | the same checkout | main | none | Handed off at 11:30 UTC; nothing of its own still runs. Its second-by-second watch of the September film is `DRAFT07-WATCH.md` (committed by controller-2). Other sessions message it as `learnlikemagic-f7`; PID 38022. Manish opened its window himself: ask him before closing it. |
-| ai-peer-video-wp2 | 3963 | https://claude.ai/code/session_01Nfn5h95MaF4HSLH6cbpUbu | `~/repos/ai-peer-video-wp2` (launched in the shared checkout, with `CLAUDE_NO_IDLE_PING=1`) | video-wp2-film-build | none yet | WP2, handed off at 44.8% context (its message of 12:16 UTC). It stays open only until its two helpers report (the Earth close; music and sound effects, up to $5), writes their reports to `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-2-helpers.md` on `main` and tells the controller: close its window only after that file is on `main`. PID 48241 |
 
 Closed: ai-peer-video-wp1 (window 3962, PID 41753), by the controller at 11:52 UTC after its
 report, with its screen idle, no child process, no sub-agent and a clean, merged worktree
@@ -103,18 +102,20 @@ PID 88331), by ai-peer-video-controller-3 at 13:36 UTC after its report: PR 9 me
 (`1813ac4`), its screen idle, no child process, no sub-agent, its successor's brief on `main`.
 The worktree `~/repos/ai-peer-video-wp2` is kept and must not be cleaned: it holds, outside
 git on purpose, the Earth helper's working `earth.js` and five unused music takes, and the
-old WP2's Earth helper still writes there. Its scratchpad (97 files, 38 MB) was left in place.
+old WP2's Earth helper wrote there until it was stopped. Its scratchpad (97 files, 38 MB) was
+left in place. ai-peer-video-wp2 (window 3963, PID 48241), by ai-peer-video-controller-3 at
+13:42 UTC after its message: the Earth helper's report on `main` (`b0003cd`), its screen
+idle, its only child `caffeinate`, both sub-agents ended; its scratchpad (3,035 files, 325 MB)
+left in place.
 
 Still running:
 
 | What | PID | Log | Stop command |
 |---|---|---|---|
-| One helper still runs (the Earth close; the music and sound helper ended, its report is on `main` at `86c32f7`) of the two helpers of the old ai-peer-video-wp2 session, which write only their own files in `~/repos/ai-peer-video-wp2`: the Earth close (`src/scenes/earth.js`, `assets/earth/`) and music with sound effects (`audio/music/`, `audio/sfx/`, `audio/mix.json`, `audio/SOURCES.md`, `demo-video/ledger/wp2.csv`) | inside window 3963 | none | They end by themselves |
-| Wait `stall-wp2`: the transcript of the old WP2 (`c5e26ecb-e51c-4042-9605-b280dbe83c04`) and its helpers silent for 25 minutes | 22682 | `~/.ai-peer/demo-video-private/controller/waits.log` | `kill 22682` |
-| Wait `usage`, the usage alarm: `demo-video/tools/usage-check.sh 75 40` every 5 minutes; it ends when Fable's week reaches 75% or the whole week 40%, and the controller then starts it again at the next mark (the 55 and 28 mark was passed at 13:06 UTC) | 54452 | the same log; the readings in `~/.ai-peer/demo-video-private/controller/usage.log` | `kill 54452` |
-| Wait `fable-cap`: `usage-check.sh 96 200` every 10 minutes; when Fable's week reaches 96% it sends Manish an Attention line (press Enter on the dialog in windows 3972, 3968, 3963, 3973) and ends | 38756 | the same log | `kill 38756` |
+| Wait `usage`, the usage alarm: `demo-video/tools/usage-check.sh 75 40` every 5 minutes; it ends when Fable's week reaches 75% or the whole week 40%, and the controller then starts it again at the next mark | 54452 | `~/.ai-peer/demo-video-private/controller/waits.log`; the readings in `~/.ai-peer/demo-video-private/controller/usage.log` | `kill 54452` |
+| Wait `fable-cap`: `usage-check.sh 96 200` every 10 minutes; when Fable's week reaches 96% it sends Manish an Attention line (press Enter on the dialog in window 3973, the controller's) and ends | 10957 | `~/.ai-peer/demo-video-private/controller/waits.log` | `kill 10957` |
 
-The three waits left (`stall-wp2`, `usage`, `fable-cap`; `draft1` ended by itself when the file was 90 s old, `stall-wp2-2` and `stall-wp3` were stopped as their windows closed) are runs of `demo-video/tools/wait-for.sh` (its header shows the usage) in the
+The two waits left (`usage` and `fable-cap`; the others ended by themselves or were stopped as their sessions closed) are runs of `demo-video/tools/wait-for.sh` (its header shows the usage) in the
 background of ai-peer-video-controller-3, started at 12:40 UTC: the end of one wakes that
 session, and each sends one routine Telegram line. Their PIDs are also in
 `~/.ai-peer/demo-video-private/controller/<label>.pid`. A successor stops them and starts its
@@ -214,15 +215,15 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 
 ## Next
 
-**Now, after Draft 1 (13:37 UTC):** (i) wait for Manish: his answer on usage and his view of
-Draft 1; (ii) when the old ai-peer-video-wp2 says its Earth report is on `main`
-(`handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-2-helpers-earth.md`): check it, close window
-3963 after the usual checks, stop the wait `stall-wp2`, start `fable-cap` again with only
-window 3973 in its text; (iii) from then on only the controller is left and it waits by
-script; (iv) his feedback round, the Earth's final version, the colour check and the final
-cut go to ai-peer-video-wp2-3 on Opus 5.5, one worker at a time, launched after his answer;
-(v) ask him the music's licence wording (Needs Manish 2e) once the usage answer is in. The
-numbered items below are older and mostly done; 0, 4, 5 and 6 still hold.
+**Now, after Draft 1 (13:42 UTC):** only the controller is left, and it waits by script.
+(i) Wait for Manish: his view of Draft 1 and his answer on usage. (ii) Then launch
+ai-peer-video-wp2-3 on Opus 5.5, one worker at a time: its brief is
+`handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-3.md`, and its kickoff must also name
+`handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-2-helpers-earth.md` (written after the brief) and
+item 7 below. Its work: his feedback round, the Earth's final version, the colour check, the
+final cut. (iii) Ask him the music's licence wording (Needs Manish 2e) once the usage answer
+is in. (iv) Close window 3964 (the old controller) once he has answered. The numbered items
+below are older and mostly done; 0, 4, 5, 6 and 7 still hold.
 
 0. **Usage first.** Until Manish answers (Needs Manish 1): start no helper that Draft 1 does
    not need, and read the usage log at every event. New sessions run on Opus 5.5 (C6). Before
@@ -289,6 +290,21 @@ numbered items below are older and mostly done; 0, 4, 5 and 6 still hold.
    `tag-track-final-v2.json` (on at 1.67 s); in `morning-nod` the tag fades out with the double
    between 3.3 and 4.3 s; passed to ai-peer-video-wp2-2. (d) About 98 unused raw takes sit
    uncommitted in WP3's worktree.
+7. The Earth close, from the old ai-peer-video-wp2's last message (its report is on `main`,
+   `b0003cd`), for ai-peer-video-wp2-3: (a) the helper's final scene is
+   `demo-video/film/src/scenes/earth.js` in `~/repos/ai-peer-video-wp2`, modified and not
+   committed, every development switch off; the film still draws the older snapshot because
+   `shots.json` pins the slot `close-earth` to `src/scenes/earth-draft1.js`. To switch the
+   final on: remove that field, delete `earth-draft1.js`, render `--part close`, look, commit
+   `earth.js`. (b) `demo-video/film/assets/earth/SOURCE.md` (the NASA sources) is not in git,
+   and NASA asks to be named: the film needs a credit line, none is on screen yet. (c) Left to
+   polish, in order: render time (0.2 to 0.5 s a frame against a 0.1 s aim), the grain that
+   makes files huge (149 MB for the 12 s), the plain boxes at 108.7 to 108.9, the room, a
+   faint square at 109.1, the mint glow, the stars; not checked by anyone: flicker at full
+   size, banding after the delivery encode. (d) The pull-out starts in Bengaluru, the helper's
+   pick; the employee's city was never fixed. The controller's call: keep Bengaluru (he is an
+   invented employee in India in every shot); Manish was told, and another city is one
+   setting to change.
 
 ## Settled, do not re-open
 
@@ -359,3 +375,4 @@ numbered items below are older and mostly done; 0, 4, 5 and 6 still hold.
 | 2026-11-14 13:23 | ai-peer-video-controller-3 | WP3's closing message: done, PR 8 merged (`839a455`), final ledger $23.10 (95 rows). Checked the merge, its screen, its child process and its three sub-agents, then closed window 3968 and stopped the wait `stall-wp3`. Passed its last notes for WP2 to ai-peer-video-wp2-2. Money at the package's end: $30.63 of $100. Usage log: `2026-11-14T13:23:01Z week=31 fable=62 session=?`. | WP3 closed; Draft 1 awaited |
 | 2026-11-14 13:31 | ai-peer-video-wp2-2 | Draft 1 done and merged (PR 9, `1813ac4`). Built since the hand-off: the push-in through the laptop screen, the "AI Peer" tag on the double, a proven network guard around every private render, a final packing step (40 to 115 MB instead of 1.5 GB); WP3's nine finals pulled in with their tracks, corners and times; the music helper's bed and effects checked and committed, four effects moved to the finals' frames; one blank second in the Slack stand-in covered. The Earth close is a snapshot of the helper's unfinished scene with its development switches off. Two renders, each 2:00.0, -14.1 LUFS, speech-to-text 15 of 15; a frame at every cut looked at. No helper started; no money spent by this session. | Draft 1 with the controller; open: the Earth's final version, the music's terms (Manish), the colour tag of six AI clips |
 | 2026-11-14 13:37 | ai-peer-video-controller-3 | ai-peer-video-wp2-2 reported Draft 1 done and merged (PR 9, `1813ac4`): two renders, the full film (this Mac only) and a slates copy (in git). Checked what the full film holds (`product.json` names a walk of 6 November and a meeting recording of 7 November; the report says the sound of a live test meeting): not sent, and the controller's own unopened copy and frame sheet of it were deleted. Looked at one sheet of the slates copy, sent it to Manish at 13:36 UTC (Attention group and session, 720p). Asked the old ai-peer-video-wp2 to wrap up its Earth helper (1h34m, 710k tokens). Closed window 3972 after the checks and stopped the wait `stall-wp2-2`. Money: $30.63 of $100. Usage log: `2026-11-14T13:33:13Z week=32 fable=63 session=?`. | Draft 1 is with Manish; his view and the usage answer are open |
+| 2026-11-14 13:42 | ai-peer-video-controller-3 | The old ai-peer-video-wp2 reported its Earth helper stopped and the report on `main` (`b0003cd`). Checked the file, the worktree (the final `earth.js` is there, uncommitted), its screen, child and sub-agents; closed window 3963 at 13:42 UTC; stopped the wait `stall-wp2`; started `fable-cap` again naming only window 3973. Took one call: the Earth pull-out stays in Bengaluru. Usage log: `2026-11-14T13:38:21Z week=33 fable=64 session=?`. | Only the controller is left; Manish's view of Draft 1 and his usage answer are open |
