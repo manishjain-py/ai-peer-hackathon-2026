@@ -83,14 +83,13 @@ Still running:
 |---|---|---|---|
 | One helper still runs (the Earth close; the music and sound helper ended, its report is on `main` at `86c32f7`) of the two helpers of the old ai-peer-video-wp2 session, which write only their own files in `~/repos/ai-peer-video-wp2`: the Earth close (`src/scenes/earth.js`, `assets/earth/`) and music with sound effects (`audio/music/`, `audio/sfx/`, `audio/mix.json`, `audio/SOURCES.md`, `demo-video/ledger/wp2.csv`) | inside window 3963 | none | They end by themselves |
 | Wait `draft1`: Draft 1's file `~/.ai-peer/demo-video-private/renders/draft-01.mp4` unchanged for 90 s, or PID 88331 (WP2-2) gone | 22594 | `~/.ai-peer/demo-video-private/controller/waits.log` | `kill 22594` |
-| Wait `wp3-report`: `demo-video/shots/REPORT.md` in `~/repos/ai-peer-video-wp3` unchanged for 90 s, or PID 64734 (WP3) gone | 22607 | the same log | `kill 22607` |
 | Wait `stall-wp2-2`: the transcript of WP2-2 (`3b59da85-1a19-4cc4-9875-244a8d19e09d`) and its sub-agents silent for 25 minutes | 22623 | the same log | `kill 22623` |
 | Wait `stall-wp3`: the same for WP3 (`1c97ea6b-c294-42be-ae5e-8c9d772564bf`) | 22665 | the same log | `kill 22665` |
 | Wait `stall-wp2`: the same for the old WP2 and its two helpers (`c5e26ecb-e51c-4042-9605-b280dbe83c04`) | 22682 | the same log | `kill 22682` |
 | Wait `usage`, the usage alarm: `demo-video/tools/usage-check.sh 75 40` every 5 minutes; it ends when Fable's week reaches 75% or the whole week 40%, and the controller then starts it again at the next mark (the 55 and 28 mark was passed at 13:06 UTC) | 54452 | the same log; the readings in `~/.ai-peer/demo-video-private/controller/usage.log` | `kill 54452` |
 | Wait `fable-cap`: `usage-check.sh 96 200` every 10 minutes; when Fable's week reaches 96% it sends Manish an Attention line (press Enter on the dialog in windows 3972, 3968, 3963, 3973) and ends | 38756 | the same log | `kill 38756` |
 
-The seven waits are runs of `demo-video/tools/wait-for.sh` (its header shows the usage) in the
+The six waits (`wp3-report` was stopped at 13:19 UTC: the report exists) are runs of `demo-video/tools/wait-for.sh` (its header shows the usage) in the
 background of ai-peer-video-controller-3, started at 12:40 UTC: the end of one wakes that
 session, and each sends one routine Telegram line. Their PIDs are also in
 `~/.ai-peer/demo-video-private/controller/<label>.pid`. A successor stops them and starts its
@@ -184,9 +183,17 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    `86c32f7`, checked by the controller at 12:54 UTC). Its Earth helper still runs, and that
    report follows as `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-2-helpers-earth.md`. When
    ai-peer-video-wp2 says that file is on `main`: check it, then close window 3963 after the
-   usual checks. WP3 was at 38% context at 12:44 UTC: it hands off at 45 to 50% and tells the
-   controller. Its successor `ai-peer-video-wp3-2` is not needed for Draft 1, so it is launched
-   (on Opus 5.5, the way WP2-2 was) only after Manish's answer on usage.
+   usual checks. WP3 reported (read at 13:19 UTC) that all nine slots are final in its manifest and
+   pushed (branch head `ec45cad`, draft PR 8 open and mergeable), and that it finishes at 48%
+   context without a successor: its tools helper's last report, the merge of PR 8, its line
+   here, a closing message. The controller saw the sheet of all nine (`all-shots.jpg`, one
+   picture at 1000 pixels) and the nine final files named in the manifest, and passed WP3's
+   notes to ai-peer-video-wp2-2 (each colleague's `line_at_s` and `use_from_s`, `tap_at_s`
+   4.04 for `morning-brief`, `reveal-rise` v2 with the phone lighting up by code). When WP3
+   sends its closing message: check PR 8 is merged and its worktree clean, close window 3968
+   after the usual checks, stop the wait `stall-wp3`. By WP3, what Manish's eyes should judge
+   first: the tap in `morning-brief` is small and quick, the nod is small, the eyebrows in
+   `hook-1` are lively, and nobody has watched a clip in motion or heard it.
 2. Manish's three answers are in (`DESIGN.md` V12 to V14) and passed on. Show him the final of
    `reveal-rise` when WP3 has it (Telegram, V11).
    **Shown at 12:55 UTC** (the Attention group, two clips; the final also in the session):
@@ -281,3 +288,4 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 | 2026-11-14 12:55 | ai-peer-video-controller-3 | WP3 reported the final of `reveal-rise` (route K, V13's fall-back; its ledger $18.86, 84 calls). Looked at one small sheet, then sent the final and the route O take to Manish on the Attention group and the final in the session: no answer needed, silence keeps the take. Context: controller-3 17%, WP2-2 37%, WP3 41% at 12:54 UTC. | Shown; WP3 goes on to `reveal-desk` |
 | 2026-11-14 13:01 | ai-peer-video-controller-3 | WP3 reported the final of `reveal-desk` (route K; its context 43%, it hands off at about 45% once its three helpers have reported). Looked at its sheet, sent the clip to Manish (Attention group and the session) at 13:01 UTC, passed WP3's notes for the push-in to ai-peer-video-wp2-2. Ledgers summed: $29.27 of $100 (WP3 $21.74 in 91 rows). Usage log: `2026-11-14T12:56:29Z week=26 fable=52 session=?`. | Shown; the usage answer is still open |
 | 2026-11-14 13:07 | ai-peer-video-controller-3 | The usage alarm fired: `2026-11-14T13:07:41Z week=29 fable=58 session=?`. Re-armed it at Fable 75% or week 40%. Read WP2-2's screen: the two reveal finals are in the film with tag, push-in and sound; it waits for the Earth helper, then renders Draft 1 twice. Contexts at 13:07 UTC: controller-3 19%, WP2-2 41%, WP3 45%, the old WP2 48%. Manish has not answered the usage question. | Waiting for Draft 1 |
+| 2026-11-14 13:19 | ai-peer-video-controller-3 | WP3 reported all nine AI shots final and pushed, no successor needed. Looked at the sheet of all nine, checked the manifest (nine final files) and PR 8 (open, draft, mergeable, `ec45cad`), told ai-peer-video-wp2-2 to use them in Draft 1 if it fits its context line. Stopped the wait `wp3-report`. Ledgers summed: $30.63 of $100 (WP3 $23.10 in 95 rows). Usage log: `2026-11-14T13:17:56Z week=31 fable=61 session=?`. | WP3 is finishing; Draft 1 awaited |
