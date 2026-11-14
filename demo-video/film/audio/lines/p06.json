@@ -1,0 +1,93 @@
+{
+ "what": "p06",
+ "voice_id": "XrExE9yKIg1WjnnlVkGX",
+ "voice": "Matilda",
+ "model": "eleven_multilingual_v2",
+ "text": "A question from another time zone doesn't have to wait a day.",
+ "spoken": "A question from another time zone doesn't have to wait a day.",
+ "request_sha": "dd0587cecbcdd31a",
+ "request": {
+  "text": "A question from another time zone doesn't have to wait a day.",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.6,
+   "similarity_boost": 0.75,
+   "style": 0,
+   "use_speaker_boost": true,
+   "speed": 1.0
+  },
+  "seed": 14112026,
+  "next_text": "And while he's away, I listen, for the one change in a thousand that touches his work."
+ },
+ "request_id": "nlWK234xFvnPwTJCLUM3",
+ "character_cost": "29",
+ "generated_utc": "2026-11-14 11:40:30",
+ "file": "p06.wav",
+ "seconds": 2.94,
+ "raw_seconds": 3.39,
+ "trimmed_front": 0.03,
+ "peak_dbfs": -1.8,
+ "rms_dbfs": -21.77,
+ "words": [
+  {
+   "w": "A",
+   "s": 0.0,
+   "e": 0.063
+  },
+  {
+   "w": "question",
+   "s": 0.144,
+   "e": 0.504
+  },
+  {
+   "w": "from",
+   "s": 0.55,
+   "e": 0.678
+  },
+  {
+   "w": "another",
+   "s": 0.736,
+   "e": 1.015
+  },
+  {
+   "w": "time",
+   "s": 1.061,
+   "e": 1.27
+  },
+  {
+   "w": "zone",
+   "s": 1.294,
+   "e": 1.526
+  },
+  {
+   "w": "doesn't",
+   "s": 1.561,
+   "e": 1.816
+  },
+  {
+   "w": "have",
+   "s": 1.862,
+   "e": 2.048
+  },
+  {
+   "w": "to",
+   "s": 2.083,
+   "e": 2.129
+  },
+  {
+   "w": "wait",
+   "s": 2.188,
+   "e": 2.35
+  },
+  {
+   "w": "a",
+   "s": 2.385,
+   "e": 2.408
+  },
+  {
+   "w": "day.",
+   "s": 2.466,
+   "e": 3.36
+  }
+ ]
+}

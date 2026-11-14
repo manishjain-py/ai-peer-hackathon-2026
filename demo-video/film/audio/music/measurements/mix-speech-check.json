@@ -1,0 +1,734 @@
+{
+ "model": "faster-whisper small.en",
+ "mode": "film",
+ "items": [
+  {
+   "id": "h1",
+   "want": "2 AM where he is, and I've got my answer.",
+   "word_errors": 0,
+   "found": true
+  },
+  {
+   "id": "h2",
+   "want": "His update's already here. His Peer gave it.",
+   "word_errors": 0,
+   "found": true
+  },
+  {
+   "id": "h3",
+   "want": "Does he ever sleep?",
+   "word_errors": 0,
+   "found": true
+  },
+  {
+   "id": "p01",
+   "want": "He does. I'm the one who's up.",
+   "word_errors": 0,
+   "found": true
+  },
+  {
+   "id": "p02",
+   "want": "I'm his AI Peer.",
+   "word_errors": 0,
+   "found": true
+  },
+  {
+   "id": "p03",
+   "want": "I know his projects, his code, his conversations, the way he knows them.",
+   "word_errors": 0,
+   "found": true
+  },
+  {
+   "id": "p04",
+   "want": "So when work needs him and he can't be there, I cover.",
+   "word_errors": 0,
+   "found": true
+  },
+  {
+   "id": "p05",
+   "want": "Not as him. As me.",
+   "word_errors": 0,
+   "found": true
+  },
+  {
+   "id": "p06",
+   "want": "A question from another time zone doesn't have to wait a day.",
+   "word_errors": 0,
+   "found": true
+  },
+  {
+   "id": "p07",
+   "want": "And while he's away, I listen, for the one change in a thousand that touches his work.",
+   "word_errors": 0,
+   "found": true
+  },
+  {
+   "id": "p08",
+   "want": "By morning it's all in one brief.",
+   "word_errors": 0,
+   "found": true
+  },
+  {
+   "id": "p09",
+   "want": "What I did. What I learned.",
+   "word_errors": 0,
+   "found": true
+  },
+  {
+   "id": "p10",
+   "want": "And the decisions that are his, because they always were.",
+   "word_errors": 0,
+   "found": true
+  },
+  {
+   "id": "p11",
+   "want": "It's always night for someone on your team.",
+   "word_errors": 0,
+   "found": true
+  },
+  {
+   "id": "p12",
+   "want": "Now someone's still there.",
+   "word_errors": 0,
+   "found": true
+  }
+ ],
+ "heard": "2am, where he is, and I've got my answer. His update's already here, his peer gave it. Does he ever sleep? He does. I'm the one who's up. I'm his AI peer. I know his projects, his code, his conversations, the way he knows them. So when work needs him and he can't be there, I cover. never. Not as him, as me. A question from another time zone doesn't have to wait a day. And while he's away, I listen. For the one change in a thousand that touches his work. By morning, it's all in one brief. What I did, what I learned, and the decisions that are his because they always were. It's always night for someone on your team. Now someone's still there.",
+ "words": [
+  {
+   "w": "2am,",
+   "s": 0.0,
+   "e": 0.88
+  },
+  {
+   "w": "where",
+   "s": 1.14,
+   "e": 1.32
+  },
+  {
+   "w": "he",
+   "s": 1.32,
+   "e": 1.48
+  },
+  {
+   "w": "is,",
+   "s": 1.48,
+   "e": 1.76
+  },
+  {
+   "w": "and",
+   "s": 1.92,
+   "e": 2.0
+  },
+  {
+   "w": "I've",
+   "s": 2.0,
+   "e": 2.18
+  },
+  {
+   "w": "got",
+   "s": 2.18,
+   "e": 2.26
+  },
+  {
+   "w": "my",
+   "s": 2.26,
+   "e": 2.44
+  },
+  {
+   "w": "answer.",
+   "s": 2.44,
+   "e": 2.82
+  },
+  {
+   "w": "His",
+   "s": 3.94,
+   "e": 4.04
+  },
+  {
+   "w": "update's",
+   "s": 4.04,
+   "e": 4.44
+  },
+  {
+   "w": "already",
+   "s": 4.44,
+   "e": 4.62
+  },
+  {
+   "w": "here,",
+   "s": 4.62,
+   "e": 5.0
+  },
+  {
+   "w": "his",
+   "s": 5.18,
+   "e": 5.32
+  },
+  {
+   "w": "peer",
+   "s": 5.32,
+   "e": 5.48
+  },
+  {
+   "w": "gave",
+   "s": 5.48,
+   "e": 5.68
+  },
+  {
+   "w": "it.",
+   "s": 5.68,
+   "e": 6.04
+  },
+  {
+   "w": "Does",
+   "s": 6.92,
+   "e": 7.1
+  },
+  {
+   "w": "he",
+   "s": 7.1,
+   "e": 7.24
+  },
+  {
+   "w": "ever",
+   "s": 7.24,
+   "e": 7.4
+  },
+  {
+   "w": "sleep?",
+   "s": 7.4,
+   "e": 7.7
+  },
+  {
+   "w": "He",
+   "s": 9.26,
+   "e": 9.52
+  },
+  {
+   "w": "does.",
+   "s": 9.52,
+   "e": 9.76
+  },
+  {
+   "w": "I'm",
+   "s": 10.2,
+   "e": 10.34
+  },
+  {
+   "w": "the",
+   "s": 10.34,
+   "e": 10.42
+  },
+  {
+   "w": "one",
+   "s": 10.42,
+   "e": 10.56
+  },
+  {
+   "w": "who's",
+   "s": 10.56,
+   "e": 10.76
+  },
+  {
+   "w": "up.",
+   "s": 10.76,
+   "e": 11.0
+  },
+  {
+   "w": "I'm",
+   "s": 15.36,
+   "e": 15.7
+  },
+  {
+   "w": "his",
+   "s": 15.7,
+   "e": 15.78
+  },
+  {
+   "w": "AI",
+   "s": 15.78,
+   "e": 16.08
+  },
+  {
+   "w": "peer.",
+   "s": 16.08,
+   "e": 16.32
+  },
+  {
+   "w": "I",
+   "s": 17.24,
+   "e": 17.52
+  },
+  {
+   "w": "know",
+   "s": 17.52,
+   "e": 17.66
+  },
+  {
+   "w": "his",
+   "s": 17.66,
+   "e": 17.8
+  },
+  {
+   "w": "projects,",
+   "s": 17.8,
+   "e": 18.24
+  },
+  {
+   "w": "his",
+   "s": 18.56,
+   "e": 18.74
+  },
+  {
+   "w": "code,",
+   "s": 18.74,
+   "e": 19.06
+  },
+  {
+   "w": "his",
+   "s": 19.36,
+   "e": 19.5
+  },
+  {
+   "w": "conversations,",
+   "s": 19.5,
+   "e": 20.02
+  },
+  {
+   "w": "the",
+   "s": 20.48,
+   "e": 20.66
+  },
+  {
+   "w": "way",
+   "s": 20.66,
+   "e": 20.84
+  },
+  {
+   "w": "he",
+   "s": 20.84,
+   "e": 21.0
+  },
+  {
+   "w": "knows",
+   "s": 21.0,
+   "e": 21.18
+  },
+  {
+   "w": "them.",
+   "s": 21.18,
+   "e": 21.56
+  },
+  {
+   "w": "So",
+   "s": 22.48,
+   "e": 22.78
+  },
+  {
+   "w": "when",
+   "s": 22.78,
+   "e": 22.92
+  },
+  {
+   "w": "work",
+   "s": 22.92,
+   "e": 23.12
+  },
+  {
+   "w": "needs",
+   "s": 23.12,
+   "e": 23.36
+  },
+  {
+   "w": "him",
+   "s": 23.36,
+   "e": 23.58
+  },
+  {
+   "w": "and",
+   "s": 23.58,
+   "e": 23.68
+  },
+  {
+   "w": "he",
+   "s": 23.68,
+   "e": 23.82
+  },
+  {
+   "w": "can't",
+   "s": 23.82,
+   "e": 24.1
+  },
+  {
+   "w": "be",
+   "s": 24.1,
+   "e": 24.22
+  },
+  {
+   "w": "there,",
+   "s": 24.22,
+   "e": 24.48
+  },
+  {
+   "w": "I",
+   "s": 24.8,
+   "e": 24.94
+  },
+  {
+   "w": "cover.",
+   "s": 24.94,
+   "e": 25.18
+  },
+  {
+   "w": "never.",
+   "s": 25.18,
+   "e": 25.4
+  },
+  {
+   "w": "Not",
+   "s": 26.5,
+   "e": 26.82
+  },
+  {
+   "w": "as",
+   "s": 26.82,
+   "e": 26.96
+  },
+  {
+   "w": "him,",
+   "s": 26.96,
+   "e": 27.26
+  },
+  {
+   "w": "as",
+   "s": 27.7,
+   "e": 27.8
+  },
+  {
+   "w": "me.",
+   "s": 27.8,
+   "e": 28.06
+  },
+  {
+   "w": "A",
+   "s": 55.8,
+   "e": 56.32
+  },
+  {
+   "w": "question",
+   "s": 56.32,
+   "e": 56.6
+  },
+  {
+   "w": "from",
+   "s": 56.6,
+   "e": 56.88
+  },
+  {
+   "w": "another",
+   "s": 56.88,
+   "e": 57.18
+  },
+  {
+   "w": "time",
+   "s": 57.18,
+   "e": 57.44
+  },
+  {
+   "w": "zone",
+   "s": 57.44,
+   "e": 57.66
+  },
+  {
+   "w": "doesn't",
+   "s": 57.66,
+   "e": 58.0
+  },
+  {
+   "w": "have",
+   "s": 58.0,
+   "e": 58.2
+  },
+  {
+   "w": "to",
+   "s": 58.2,
+   "e": 58.34
+  },
+  {
+   "w": "wait",
+   "s": 58.34,
+   "e": 58.5
+  },
+  {
+   "w": "a",
+   "s": 58.5,
+   "e": 58.64
+  },
+  {
+   "w": "day.",
+   "s": 58.64,
+   "e": 59.54
+  },
+  {
+   "w": "And",
+   "s": 74.02,
+   "e": 74.3
+  },
+  {
+   "w": "while",
+   "s": 74.3,
+   "e": 74.46
+  },
+  {
+   "w": "he's",
+   "s": 74.46,
+   "e": 74.68
+  },
+  {
+   "w": "away,",
+   "s": 74.68,
+   "e": 74.96
+  },
+  {
+   "w": "I",
+   "s": 75.2,
+   "e": 75.32
+  },
+  {
+   "w": "listen.",
+   "s": 75.32,
+   "e": 75.62
+  },
+  {
+   "w": "For",
+   "s": 76.18,
+   "e": 76.32
+  },
+  {
+   "w": "the",
+   "s": 76.32,
+   "e": 76.44
+  },
+  {
+   "w": "one",
+   "s": 76.44,
+   "e": 76.66
+  },
+  {
+   "w": "change",
+   "s": 76.66,
+   "e": 76.94
+  },
+  {
+   "w": "in",
+   "s": 76.94,
+   "e": 77.14
+  },
+  {
+   "w": "a",
+   "s": 77.14,
+   "e": 77.24
+  },
+  {
+   "w": "thousand",
+   "s": 77.24,
+   "e": 77.58
+  },
+  {
+   "w": "that",
+   "s": 77.58,
+   "e": 77.92
+  },
+  {
+   "w": "touches",
+   "s": 77.92,
+   "e": 78.16
+  },
+  {
+   "w": "his",
+   "s": 78.16,
+   "e": 78.38
+  },
+  {
+   "w": "work.",
+   "s": 78.38,
+   "e": 78.68
+  },
+  {
+   "w": "By",
+   "s": 91.0,
+   "e": 91.56
+  },
+  {
+   "w": "morning,",
+   "s": 91.56,
+   "e": 91.88
+  },
+  {
+   "w": "it's",
+   "s": 92.08,
+   "e": 92.26
+  },
+  {
+   "w": "all",
+   "s": 92.26,
+   "e": 92.44
+  },
+  {
+   "w": "in",
+   "s": 92.44,
+   "e": 92.58
+  },
+  {
+   "w": "one",
+   "s": 92.58,
+   "e": 92.78
+  },
+  {
+   "w": "brief.",
+   "s": 92.78,
+   "e": 93.14
+  },
+  {
+   "w": "What",
+   "s": 95.5,
+   "e": 95.54
+  },
+  {
+   "w": "I",
+   "s": 95.54,
+   "e": 95.66
+  },
+  {
+   "w": "did,",
+   "s": 95.66,
+   "e": 95.96
+  },
+  {
+   "w": "what",
+   "s": 96.74,
+   "e": 96.86
+  },
+  {
+   "w": "I",
+   "s": 96.86,
+   "e": 96.98
+  },
+  {
+   "w": "learned,",
+   "s": 96.98,
+   "e": 97.36
+  },
+  {
+   "w": "and",
+   "s": 98.34,
+   "e": 98.74
+  },
+  {
+   "w": "the",
+   "s": 98.74,
+   "e": 98.84
+  },
+  {
+   "w": "decisions",
+   "s": 98.84,
+   "e": 99.22
+  },
+  {
+   "w": "that",
+   "s": 99.22,
+   "e": 99.5
+  },
+  {
+   "w": "are",
+   "s": 99.5,
+   "e": 99.62
+  },
+  {
+   "w": "his",
+   "s": 99.62,
+   "e": 99.86
+  },
+  {
+   "w": "because",
+   "s": 99.86,
+   "e": 100.32
+  },
+  {
+   "w": "they",
+   "s": 100.32,
+   "e": 100.48
+  },
+  {
+   "w": "always",
+   "s": 100.48,
+   "e": 100.78
+  },
+  {
+   "w": "were.",
+   "s": 100.78,
+   "e": 101.12
+  },
+  {
+   "w": "It's",
+   "s": 108.88,
+   "e": 109.16
+  },
+  {
+   "w": "always",
+   "s": 109.16,
+   "e": 109.4
+  },
+  {
+   "w": "night",
+   "s": 109.4,
+   "e": 109.64
+  },
+  {
+   "w": "for",
+   "s": 109.64,
+   "e": 109.86
+  },
+  {
+   "w": "someone",
+   "s": 109.86,
+   "e": 110.14
+  },
+  {
+   "w": "on",
+   "s": 110.14,
+   "e": 110.28
+  },
+  {
+   "w": "your",
+   "s": 110.28,
+   "e": 110.44
+  },
+  {
+   "w": "team.",
+   "s": 110.44,
+   "e": 110.74
+  },
+  {
+   "w": "Now",
+   "s": 111.76,
+   "e": 112.76
+  },
+  {
+   "w": "someone's",
+   "s": 112.76,
+   "e": 113.26
+  },
+  {
+   "w": "still",
+   "s": 113.26,
+   "e": 113.4
+  },
+  {
+   "w": "there.",
+   "s": 113.4,
+   "e": 113.76
+  }
+ ]
+}

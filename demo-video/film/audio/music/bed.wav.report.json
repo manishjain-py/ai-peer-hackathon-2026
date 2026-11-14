@@ -1,0 +1,63 @@
+{
+ "edl": "demo-video/film/audio/music/bed.edl.json",
+ "out": "demo-video/film/audio/music/bed.wav",
+ "seconds": 121.0,
+ "source_time_factor": 0.9999774462179042,
+ "pitch_change_cents": 0.039,
+ "first_bar_line_in_take_s": 0.067,
+ "joins": [
+  {
+   "film_s": 54.0,
+   "from_src_bar": 27,
+   "to_src_bar": 33,
+   "crossfade_ms_before_bar_line": [
+    20,
+    5
+   ]
+  },
+  {
+   "film_s": 72.0,
+   "from_src_bar": 41,
+   "to_src_bar": 33,
+   "crossfade_ms_before_bar_line": [
+    20,
+    5
+   ]
+  },
+  {
+   "film_s": 74.0,
+   "from_src_bar": 33,
+   "to_src_bar": 41,
+   "crossfade_ms_before_bar_line": [
+    20,
+    5
+   ]
+  },
+  {
+   "film_s": 90.0,
+   "from_src_bar": 48,
+   "to_src_bar": 9,
+   "crossfade_ms_before_bar_line": [
+    60,
+    45
+   ]
+  },
+  {
+   "film_s": 106.0,
+   "from_src_bar": 16,
+   "to_src_bar": 52,
+   "crossfade_ms_before_bar_line": [
+    20,
+    5
+   ]
+  }
+ ],
+ "limiter": {
+  "threshold_dbfs_before_scaling": -1.75,
+  "largest_reduction_db": 4.0,
+  "share_of_time_reduced_by_1db_or_more": 0.0055,
+  "share_of_time_reduced_by_3db_or_more": 0.0006
+ },
+ "scaled_by_db": 0.25,
+ "peak_dbfs": -1.5
+}

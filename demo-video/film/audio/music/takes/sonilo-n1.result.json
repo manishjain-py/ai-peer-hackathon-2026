@@ -1,0 +1,25 @@
+{
+ "request_id": "01a1d9fa-1d3a-7e91-9525-3cdfa2baa287",
+ "billable_units_header": "124",
+ "inputs_sent": {
+  "prompt": "Instrumental only, no vocals. Upbeat, light, modern, warm music for a premium technology advert, 120 BPM, 4/4, D major. Muted synth plucks, marimba, felt piano, airy pads, soft kick, claps, finger snaps, shakers, gentle bass. Optimistic, curious, elegant, uncluttered, never corporate-cheesy, never aggressive. Light intro with a clear pulse, a softer dreamy passage, a confident but light main groove, a warm open breakdown, a wide uplifting finale, and a final resolving chord that rings out.",
+  "duration": 124,
+  "num_samples": 1
+ },
+ "result": {
+  "audio": {
+   "url": "https://v3b.fal.media/files/b/0ab26e72/jgbP_X4HoZ1XZxcF8mkNH_tmpd3mk25we.m4a",
+   "content_type": "audio/mp4",
+   "file_name": "tmpd3mk25we.m4a",
+   "file_size": 3992117
+  },
+  "audios": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26e72/jgbP_X4HoZ1XZxcF8mkNH_tmpd3mk25we.m4a",
+    "content_type": "audio/mp4",
+    "file_name": "tmpd3mk25we.m4a",
+    "file_size": 3992117
+   }
+  ]
+ }
+}

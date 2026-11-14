@@ -1,0 +1,45 @@
+{
+ "edl": "demo-video/film/audio/music/bed-alt-1.edl.json",
+ "out": "demo-video/film/audio/music/bed-alt-1.wav",
+ "seconds": 121.0,
+ "source_time_factor": 0.9999774462179042,
+ "pitch_change_cents": 0.039,
+ "first_bar_line_in_take_s": 0.067,
+ "joins": [
+  {
+   "film_s": 64.0,
+   "from_src_bar": 32,
+   "to_src_bar": 36,
+   "crossfade_ms_before_bar_line": [
+    20,
+    5
+   ]
+  },
+  {
+   "film_s": 90.0,
+   "from_src_bar": 48,
+   "to_src_bar": 9,
+   "crossfade_ms_before_bar_line": [
+    60,
+    45
+   ]
+  },
+  {
+   "film_s": 106.0,
+   "from_src_bar": 16,
+   "to_src_bar": 52,
+   "crossfade_ms_before_bar_line": [
+    20,
+    5
+   ]
+  }
+ ],
+ "limiter": {
+  "threshold_dbfs_before_scaling": -1.85,
+  "largest_reduction_db": 5.0,
+  "share_of_time_reduced_by_1db_or_more": 0.0068,
+  "share_of_time_reduced_by_3db_or_more": 0.0011
+ },
+ "scaled_by_db": -1.45,
+ "peak_dbfs": -3.3
+}

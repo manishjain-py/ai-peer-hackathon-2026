@@ -1,0 +1,94 @@
+{
+ "what": "p04",
+ "voice_id": "XrExE9yKIg1WjnnlVkGX",
+ "voice": "Matilda",
+ "model": "eleven_multilingual_v2",
+ "text": "So when work needs him and he can't be there, I cover.",
+ "spoken": "So when work needs him and he can't be there, I cover.",
+ "request_sha": "99ac1b62b6fcb80b",
+ "request": {
+  "text": "So when work needs him and he can't be there, I cover.",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.6,
+   "similarity_boost": 0.75,
+   "style": 0,
+   "use_speaker_boost": true,
+   "speed": 1.0
+  },
+  "seed": 14112026,
+  "previous_text": "I know his projects, his code, his conversations, the way he knows them.",
+  "next_text": "Not as him. As me."
+ },
+ "request_id": "SF7C4EN3Zb3NjjiQcdHD",
+ "character_cost": "26",
+ "generated_utc": "2026-11-14 11:40:28",
+ "file": "p04.wav",
+ "seconds": 2.87,
+ "raw_seconds": 3.529,
+ "trimmed_front": 0.02,
+ "peak_dbfs": -3.69,
+ "rms_dbfs": -21.97,
+ "words": [
+  {
+   "w": "So",
+   "s": 0.0,
+   "e": 0.154
+  },
+  {
+   "w": "when",
+   "s": 0.201,
+   "e": 0.317
+  },
+  {
+   "w": "work",
+   "s": 0.363,
+   "e": 0.56
+  },
+  {
+   "w": "needs",
+   "s": 0.619,
+   "e": 0.828
+  },
+  {
+   "w": "him",
+   "s": 0.874,
+   "e": 0.967
+  },
+  {
+   "w": "and",
+   "s": 1.013,
+   "e": 1.083
+  },
+  {
+   "w": "he",
+   "s": 1.129,
+   "e": 1.187
+  },
+  {
+   "w": "can't",
+   "s": 1.245,
+   "e": 1.478
+  },
+  {
+   "w": "be",
+   "s": 1.524,
+   "e": 1.64
+  },
+  {
+   "w": "there,",
+   "s": 1.687,
+   "e": 2.035
+  },
+  {
+   "w": "I",
+   "s": 2.209,
+   "e": 2.267
+  },
+  {
+   "w": "cover.",
+   "s": 2.383,
+   "e": 3.509
+  }
+ ]
+}

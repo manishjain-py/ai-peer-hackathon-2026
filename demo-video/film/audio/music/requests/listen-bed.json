@@ -1,0 +1,17 @@
+{
+  "endpoint": "fal-ai/audio-understanding",
+  "inputs": {
+    "audio_url": "file:demo-video/film/.build/lanes/sound/scratch/prep/bed-listen.m4a",
+    "prompt": "This is an instrumental music bed of two minutes for a short film. Listen to all of it and answer each point plainly, with times in seconds where you can. 1. Describe what you hear in order: instruments, mood, and where the energy changes. 2. Is there any human voice anywhere: singing, choir, humming, vocal samples or spoken words? Give the times if so. 3. Is the tempo steady, and about how many beats per minute? 4. Are there audible edit points or faults: jumps, clicks, stutters, abrupt cuts, distortion, pumping? Give the times. 5. Does it sound like a modern premium technology advert, or cheesy and corporate, or aggressive? Say which and why. 6. How does it end, and does the ending sound finished?",
+    "detailed_analysis": true
+  },
+  "expect": {
+    "units": 25,
+    "unit": "5 seconds of audio",
+    "unit_price": 0.01,
+    "cost_usd": 0.25,
+    "basis": "live price read 2026-11-14: 0.01 USD per 5 seconds; the file is 120.5 s"
+  },
+  "output": "demo-video/film/audio/music/listen/bed-listen",
+  "note": "a listening model's notes on bed.wav (music only is sent: no speech, no picture)"
+}

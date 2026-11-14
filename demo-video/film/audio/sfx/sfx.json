@@ -1,0 +1,158 @@
+{
+ "about": "Made by make_sfx.py: what each effect is and how it measures. sync_s is the moment in the file that belongs on the film event.",
+ "effects": {
+  "phone": {
+   "sync_s": 0.0,
+   "what": "two soft buzzes of a phone's motor on wood (0.36 s, 0.16 s apart)",
+   "seconds": 0.93,
+   "loudest_300ms_centred_at_s": 0.17,
+   "peak_dbfs": -6.0,
+   "rms_dbfs": -23.4,
+   "loudest_100ms_rms_dbfs": -21.1,
+   "peak_at_s": 0.134,
+   "centroid_hz": 390,
+   "band_5_95_hz": [
+    166,
+    1621
+   ],
+   "first_5ms_peak_dbfs": -47.1,
+   "last_5ms_peak_dbfs": -170.6
+  },
+  "rise": {
+   "sync_s": 0.0,
+   "peak_at_s": 2.151,
+   "what": "airy shimmer in D major: swells to about 2.5 s, gone by 4.4 s",
+   "seconds": 4.4,
+   "loudest_300ms_centred_at_s": 2.29,
+   "peak_dbfs": -6.0,
+   "rms_dbfs": -23.9,
+   "loudest_100ms_rms_dbfs": -16.8,
+   "centroid_hz": 2208,
+   "band_5_95_hz": [
+    1174,
+    3523
+   ],
+   "first_5ms_peak_dbfs": -170.7,
+   "last_5ms_peak_dbfs": -111.3
+  },
+  "laptop": {
+   "sync_s": 0.0,
+   "what": "one soft plastic click with a low body, a fainter second one 85 ms later",
+   "seconds": 0.17,
+   "loudest_300ms_centred_at_s": null,
+   "peak_dbfs": -6.0,
+   "rms_dbfs": -27.1,
+   "loudest_100ms_rms_dbfs": -24.9,
+   "peak_at_s": 0.001,
+   "centroid_hz": 984,
+   "band_5_95_hz": [
+    176,
+    2605
+   ],
+   "first_5ms_peak_dbfs": -6.0,
+   "last_5ms_peak_dbfs": -84.7
+  },
+  "push": {
+   "sync_s": 2.0,
+   "what": "noise whoosh rising from low to bright over 2.0 s; it stops at its end, which belongs on the cut",
+   "seconds": 2.0,
+   "loudest_300ms_centred_at_s": 1.84,
+   "peak_dbfs": -6.0,
+   "rms_dbfs": -26.5,
+   "loudest_100ms_rms_dbfs": -17.9,
+   "peak_at_s": 1.948,
+   "centroid_hz": 2474,
+   "band_5_95_hz": [
+    842,
+    5140
+   ],
+   "first_5ms_peak_dbfs": -191.8,
+   "last_5ms_peak_dbfs": -29.7
+  },
+  "change-1": {
+   "sync_s": 0.15,
+   "what": "soft swish (0.42 s) peaking at 0.15 s with a faint tick there; brightness x1.0",
+   "seconds": 0.42,
+   "loudest_300ms_centred_at_s": null,
+   "peak_dbfs": -6.0,
+   "rms_dbfs": -23.9,
+   "loudest_100ms_rms_dbfs": -18.8,
+   "peak_at_s": 0.151,
+   "centroid_hz": 3706,
+   "band_5_95_hz": [
+    1978,
+    6280
+   ],
+   "first_5ms_peak_dbfs": -60.9,
+   "last_5ms_peak_dbfs": -110.6
+  },
+  "change-2": {
+   "sync_s": 0.15,
+   "what": "soft swish (0.42 s) peaking at 0.15 s with a faint tick there; brightness x1.25",
+   "seconds": 0.42,
+   "loudest_300ms_centred_at_s": null,
+   "peak_dbfs": -6.0,
+   "rms_dbfs": -22.9,
+   "loudest_100ms_rms_dbfs": -17.7,
+   "peak_at_s": 0.151,
+   "centroid_hz": 4746,
+   "band_5_95_hz": [
+    2504,
+    7666
+   ],
+   "first_5ms_peak_dbfs": -61.3,
+   "last_5ms_peak_dbfs": -108.1
+  },
+  "tap": {
+   "sync_s": 0.0,
+   "what": "one soft fingertip tap: a low thump, a faint touch of glass",
+   "seconds": 0.11,
+   "loudest_300ms_centred_at_s": null,
+   "peak_dbfs": -6.0,
+   "rms_dbfs": -23.6,
+   "loudest_100ms_rms_dbfs": -23.2,
+   "peak_at_s": 0.004,
+   "centroid_hz": 805,
+   "band_5_95_hz": [
+    190,
+    1663
+   ],
+   "first_5ms_peak_dbfs": -6.0,
+   "last_5ms_peak_dbfs": -100.1
+  },
+  "lights": {
+   "sync_s": 0.0,
+   "peak_at_s": 1.272,
+   "what": "wide shimmer of short high notes in D major: swells to 1.0 s, gone by 3.2 s",
+   "seconds": 3.2,
+   "loudest_300ms_centred_at_s": 1.27,
+   "peak_dbfs": -6.0,
+   "rms_dbfs": -22.9,
+   "loudest_100ms_rms_dbfs": -17.2,
+   "centroid_hz": 2048,
+   "band_5_95_hz": [
+    1174,
+    3514
+   ],
+   "first_5ms_peak_dbfs": -132.8,
+   "last_5ms_peak_dbfs": -94.6
+  },
+  "end": {
+   "sync_s": 0.0,
+   "what": "one warm chime on D (D4, D5, D6 with a little F#6 and A6), ringing about 3 s",
+   "seconds": 3.8,
+   "loudest_300ms_centred_at_s": 0.15,
+   "peak_dbfs": -6.0,
+   "rms_dbfs": -21.1,
+   "loudest_100ms_rms_dbfs": -13.3,
+   "peak_at_s": 0.072,
+   "centroid_hz": 554,
+   "band_5_95_hz": [
+    293,
+    587
+   ],
+   "first_5ms_peak_dbfs": -7.1,
+   "last_5ms_peak_dbfs": -117.6
+  }
+ }
+}

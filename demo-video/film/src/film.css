@@ -1,0 +1,230 @@
+/* The film's look. Night ink #152b31, paper #f6f4ee, the Peer's mint #b7f4cf, green #167353. */
+@font-face {
+  font-family: "Manrope";
+  src: url("../assets/fonts/Manrope.ttf");
+  font-weight: 200 800;
+  font-display: block;
+}
+
+:root {
+  --ink: #152b31;
+  --ink-deep: #0d1c21;
+  --ink-soft: #1d3a42;
+  --paper: #f6f4ee;
+  --mint: #b7f4cf;
+  --green: #167353;
+  --warm: #ffc98a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  background: var(--ink-deep);
+}
+
+#root {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  font-family: "Manrope", sans-serif;
+  color: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+/* Shown until the film's script has started: a dead script must never pass for a film. */
+#boot-error {
+  position: absolute; inset: 0; z-index: 99;
+  display: flex; align-items: center; justify-content: center;
+  background: #7a1010; color: #fff; font: 700 64px "Manrope", sans-serif;
+}
+
+.layer { position: absolute; inset: 0; overflow: hidden; }
+.layer.pass { pointer-events: none; }
+.scene { position: absolute; inset: 0; overflow: hidden; }
+
+/* ---- media hosts (the build writes the <video> tags; scenes adopt their hosts) ---------- */
+#media { position: absolute; inset: 0; }
+.vhost { position: absolute; inset: 0; overflow: hidden; }
+.vhost video {
+  position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+  object-fit: cover; background: #000;
+}
+
+/* ---- slate: a labelled stand-in for a shot that is not made yet ------------------------- */
+.slate { background: var(--ink); }
+.slate .glow {
+  position: absolute; width: 2400px; height: 2400px; left: -400px; top: -900px;
+  background: radial-gradient(closest-side, rgba(53, 108, 118, 0.55), rgba(21, 43, 49, 0) 70%);
+  will-change: transform;
+}
+.slate .sweep {
+  position: absolute; top: -200px; width: 700px; height: 1500px;
+  background: linear-gradient(90deg, rgba(183,244,207,0) 0%, rgba(183,244,207,0.07) 50%, rgba(183,244,207,0) 100%);
+  transform: rotate(14deg);
+  will-change: transform;
+}
+.slate .corner { position: absolute; width: 44px; height: 44px; border: 2px solid rgba(246,244,238,0.34); }
+.slate .corner.tl { left: 64px; top: 64px; border-right: 0; border-bottom: 0; }
+.slate .corner.tr { right: 64px; top: 64px; border-left: 0; border-bottom: 0; }
+.slate .corner.bl { left: 64px; bottom: 64px; border-right: 0; border-top: 0; }
+.slate .corner.br { right: 64px; bottom: 64px; border-left: 0; border-top: 0; }
+.slate .top {
+  position: absolute; left: 128px; right: 128px; top: 112px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.slate .pill {
+  font-size: 22px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--mint); border: 2px solid rgba(183,244,207,0.6); border-radius: 999px;
+  padding: 10px 22px 9px;
+}
+.slate .where { font-size: 26px; font-weight: 600; color: rgba(246,244,238,0.62); letter-spacing: 0.01em; }
+.slate .body { position: absolute; left: 128px; top: 250px; width: 1330px; will-change: transform; }
+.slate .id {
+  font-size: 30px; font-weight: 700; color: var(--mint); letter-spacing: 0.02em; margin-bottom: 26px;
+}
+.slate .shows {
+  font-size: 58px; line-height: 1.2; font-weight: 600; letter-spacing: -0.018em; color: var(--paper);
+  text-wrap: balance;
+}
+.slate .maker {
+  position: absolute; left: 128px; top: 746px;
+  font-size: 28px; font-weight: 600; color: rgba(246,244,238,0.6);
+}
+.slate .maker b { color: var(--paper); font-weight: 700; }
+.slate .bar {
+  position: absolute; left: 128px; right: 128px; bottom: 64px; height: 4px;
+  background: rgba(246,244,238,0.14); border-radius: 2px; overflow: hidden;
+}
+.slate .bar i { display: block; height: 100%; width: 100%; background: var(--mint); transform-origin: 0 50%; }
+
+/* ---- spoken-line captions ---------------------------------------------------------------- */
+#captions .cap {
+  position: absolute; left: 0; right: 0; bottom: 96px;
+  display: flex; justify-content: center;
+  will-change: transform, opacity;
+}
+#captions .cap .box {
+  display: flex; align-items: flex-start; gap: 20px;
+  padding: 18px 34px 20px;
+  border-radius: 26px;
+  background: rgba(10, 23, 27, 0.74);
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.38);
+}
+#captions .cap .words {
+  font-size: 46px; line-height: 1.24; font-weight: 650; letter-spacing: -0.012em;
+  color: var(--paper); text-align: center; white-space: nowrap;
+}
+#captions .cap .words .ln { display: block; }
+#captions .cap .words span { display: inline; white-space: pre; }
+#captions .cap.peer .box {
+  border: 1.5px solid rgba(183, 244, 207, 0.34);
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.38), 0 0 46px rgba(183, 244, 207, 0.16);
+}
+#captions .cap .who { flex: none; margin-top: 7px; width: 42px; height: 42px; }
+#captions .cap .who svg { display: block; }
+
+/* ---- film grain: hides banding in the dark gradients ---------------------------------------- */
+#grain { position: absolute; inset: 0; pointer-events: none; opacity: 0.055; z-index: 50; }
+
+/* ---- product screens ---------------------------------------------------------------------------- */
+.product { background: var(--ink); }
+.pglow { position: absolute; border-radius: 50%; will-change: transform; }
+.pglow.a { width: 1700px; height: 1700px; left: -620px; top: -820px;
+  background: radial-gradient(closest-side, rgba(47, 98, 108, 0.62), rgba(21, 43, 49, 0) 70%); }
+.pglow.b { width: 1400px; height: 1400px; right: -480px; bottom: -820px;
+  background: radial-gradient(closest-side, rgba(183, 244, 207, 0.15), rgba(21, 43, 49, 0) 70%); }
+.pwin {
+  position: absolute; border-radius: 22px; overflow: hidden; background: #0b171b;
+  box-shadow: 0 40px 110px rgba(0, 0, 0, 0.55), 0 0 0 1.5px rgba(183, 244, 207, 0.24), 0 0 80px rgba(183, 244, 207, 0.11);
+  will-change: transform, opacity;
+}
+.ppic { position: absolute; inset: 0; overflow: hidden; background: #fff; }
+.pcontent { position: absolute; left: 0; top: 0; transform-origin: 0 0; will-change: transform; }
+.pdim { position: absolute; inset: 0; background: #0a171b; pointer-events: none; }
+.phl { position: absolute; border: 3px solid var(--mint); pointer-events: none; }
+.pcursor { position: absolute; left: -9px; top: -5.5px; width: 44px; height: 44px; transform-origin: 9px 5.5px;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.45)); }
+.pripple { position: absolute; left: -40px; top: -40px; width: 80px; height: 80px; border-radius: 50%;
+  border: 5px solid var(--mint); transform-origin: 40px 40px; }
+
+/* the Peer as a call tile, driven by the real sound of the meeting */
+.ptile { position: relative; overflow: hidden;
+  background: radial-gradient(120% 90% at 50% 42%, #214650 0%, #132a30 58%, #0c1a1e 100%); }
+.ptile .tglow { position: absolute; left: 50%; top: 46%; width: 900px; height: 900px; margin: -450px 0 0 -450px;
+  background: radial-gradient(closest-side, rgba(183, 244, 207, 0.16), rgba(183, 244, 207, 0) 70%); }
+.ptile .tcentre { position: absolute; left: 50%; top: 45%; width: 190px; height: 190px; margin: -95px 0 0 -95px; }
+.ptile .ring { position: absolute; inset: 0; border-radius: 31%; border: 3px solid rgba(183, 244, 207, 0.85); }
+.ptile .tmark { position: absolute; inset: 0; }
+.ptile .tname { position: absolute; left: 40px; bottom: 36px; display: flex; align-items: center; gap: 16px;
+  font-size: 38px; font-weight: 700; color: var(--paper); background: rgba(10, 23, 27, 0.72);
+  padding: 12px 20px 12px 14px; border-radius: 18px; }
+.ptile .tname .tdot { display: flex; }
+.ptile .tname b { font-size: 22px; font-weight: 800; letter-spacing: 0.08em; color: var(--ink);
+  background: var(--mint); border-radius: 8px; padding: 5px 11px 4px; }
+.ptile .tnote { position: absolute; right: 36px; top: 30px; font-size: 22px; font-weight: 600; color: rgba(246, 244, 238, 0.5); }
+
+/* ---- the night clock, the proof title card, the labels ------------------------------------------ */
+#chips .chapter {
+  position: absolute; left: 960px; top: 438px; display: flex; align-items: center; gap: 44px;
+  padding: 34px 58px 36px 40px; border-radius: 44px; white-space: nowrap;
+  background: rgba(10, 23, 27, 0.84); border: 1.5px solid rgba(183, 244, 207, 0.42);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.5), 0 0 90px rgba(183, 244, 207, 0.17);
+}
+#chips .dial svg { display: block; }
+#chips .ctime { font-size: 86px; font-weight: 800; line-height: 1; letter-spacing: -0.02em; color: var(--mint);
+  font-variant-numeric: tabular-nums; text-shadow: 0 0 36px rgba(183, 244, 207, 0.45); }
+#chips .ctext { margin-top: 16px; font-size: 52px; font-weight: 650; letter-spacing: -0.015em; color: var(--paper); }
+#chips .dock { position: absolute; left: 80px; top: 70px; width: 120px; }
+#chips .dtime { margin: 14px -30px 0; text-align: center; font-size: 31px; font-weight: 800; color: var(--mint);
+  font-variant-numeric: tabular-nums; white-space: nowrap; }
+#chips .label { position: absolute; left: 0; right: 0; bottom: 96px; display: flex; justify-content: center; }
+#chips .lbox {
+  position: relative; padding: 18px 42px 24px; border-radius: 26px; white-space: nowrap;
+  background: rgba(10, 23, 27, 0.8); border: 1.5px solid rgba(183, 244, 207, 0.5);
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.38), 0 0 54px rgba(183, 244, 207, 0.2);
+  font-size: 50px; font-weight: 750; letter-spacing: -0.012em; color: var(--mint);
+}
+#chips .lbox i { position: absolute; left: 42px; right: 42px; bottom: 13px; height: 3px; border-radius: 2px;
+  background: var(--mint); opacity: 0.7; transform-origin: 0 50%; }
+
+/* ---- an AI shot ------------------------------------------------------------------------------------ */
+.clipshot { background: #000; }
+.clipshot .draftnote, .pushin .draftnote { position: absolute; left: 44px; top: 36px; font-size: 22px; font-weight: 800; letter-spacing: 0.14em;
+  text-transform: uppercase; color: rgba(246, 244, 238, 0.82); background: rgba(10, 23, 27, 0.55); border-radius: 999px; padding: 9px 18px 8px; }
+
+/* ---- the push-in: out of the night room, through the laptop's screen, into the product -------------- */
+.pushin { background: #000; }
+.pushin .proom { position: absolute; inset: 0; overflow: hidden; }
+.pushin .proom img { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; object-fit: cover; transform-origin: 0 0; }
+.pushin .pbloom { position: absolute; left: 0; top: 0; width: 1000px; height: 1000px; transform-origin: 0 0; mix-blend-mode: screen;
+  background: radial-gradient(closest-side, rgba(226, 252, 238, 0.95) 0%, rgba(196, 246, 218, 0.5) 30%, rgba(183, 244, 207, 0.16) 62%, rgba(183, 244, 207, 0) 100%); }
+.pushin .pscreen { position: absolute; transform-origin: 0 0; overflow: hidden; }
+.pushin .pscreen .pdim { opacity: 1; }
+.pushin .plight { position: absolute; inset: 0; }
+.pushin .pember { position: absolute; inset: 0; background: radial-gradient(90% 90% at 50% 45%, rgb(88, 172, 150) 0%, rgb(30, 84, 84) 100%); }
+.pushin .pmark { position: absolute; left: 50%; top: 45%; width: 190px; height: 190px; margin: -95px 0 0 -95px; }
+
+/* ---- the "AI Peer" tag on the double's chest (sizes in em: the overlay sets the font size) ----------- */
+#tag .tagpill { position: absolute; left: 0; top: 0; display: flex; align-items: center; gap: 0.36em;
+  padding: 0.3em 0.62em 0.3em 0.36em; border-radius: 999px; white-space: nowrap; line-height: 1;
+  background: rgba(10, 23, 27, 0.8); border: 0.075em solid rgba(183, 244, 207, 0.8);
+  color: var(--mint); font-weight: 800; letter-spacing: 0.01em; }
+#tag .tagpill .tmk { display: flex; }
+#tag .tagpill svg { display: block; width: 1.2em; height: 1.2em; }
+
+/* ---- the end card ---------------------------------------------------------------------------------- */
+.endcard { background: var(--ink); }
+.endcard.over { background: transparent; }
+.endcard .eshade { position: absolute; inset: 0;
+  background: radial-gradient(70% 60% at 50% 48%, rgba(10, 23, 27, 0.78) 0%, rgba(10, 23, 27, 0.5) 60%, rgba(10, 23, 27, 0.2) 100%); }
+.endcard .ebox { position: absolute; left: 0; right: 0; top: 318px; display: flex; flex-direction: column; align-items: center; will-change: transform; }
+.endcard .elock { display: flex; align-items: center; gap: 30px; }
+.endcard .ename { font-size: 92px; font-weight: 800; letter-spacing: -0.03em; color: var(--paper); }
+.endcard .eline { margin-top: 54px; font-size: 76px; font-weight: 700; letter-spacing: -0.025em; color: var(--paper); white-space: nowrap; }
+.endcard .eline span { display: inline-block; will-change: transform, opacity; }
+.endcard .esign { margin-top: 46px; font-size: 32px; font-weight: 800; text-transform: uppercase; color: var(--mint); white-space: nowrap; }

@@ -1,0 +1,21 @@
+{
+ "request_id": "01a1d9fa-1553-75b2-b4ef-36ff25d2fa97",
+ "billable_units_header": "1",
+ "inputs_sent": {
+  "prompt": "Upbeat, light, modern, warm instrumental for a premium technology advert. 120 BPM, 4/4, D major. Muted plucked synth, marimba, felt piano chords, airy pads, soft kick, claps, finger snaps, shakers, gentle round bass. Optimistic, curious, clean, elegant, uncluttered. It starts light with a clear pulse, builds gradually to a confident groove, has a warm open breakdown, a wide uplifting finale, and ends on a resolving final chord that rings out.",
+  "negative_prompt": "vocals, voice, singing, choir, speech, heavy drums, distortion, aggressive, dark, cheesy, low quality",
+  "duration": 126,
+  "seed": 2026,
+  "output_format": "wav"
+ },
+ "result": {
+  "audio": {
+   "url": "https://v3b.fal.media/files/b/0ab26e71/GXHp7DtnaxixX4UiOe8aL_CalQbvyq.wav",
+   "content_type": "audio/wav",
+   "file_name": "GXHp7DtnaxixX4UiOe8aL_CalQbvyq.wav",
+   "file_size": null
+  },
+  "seed": 2026,
+  "prompt": "Upbeat, light, modern, warm instrumental for a premium technology advert. 120 BPM, 4/4, D major. Muted plucked synth, marimba, felt piano chords, airy pads, soft kick, claps, finger snaps, shakers, gentle round bass. Optimistic, curious, clean, elegant, uncluttered. It starts light with a clear pulse, builds gradually to a confident groove, has a warm open breakdown, a wide uplifting finale, and ends on a resolving final chord that rings out."
+ }
+}

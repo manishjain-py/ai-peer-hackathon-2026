@@ -1,0 +1,19 @@
+time_utc,what,voice,model,characters,character_cost,request_id
+2026-11-14 11:40:19,h1,Alice,eleven_multilingual_v2,45,22,R56pwow7HMbImkk8dVuE
+2026-11-14 11:40:19,h2,Chris,eleven_multilingual_v2,44,21,OLR5mhhT8ARRB7KQ0Gnm
+2026-11-14 11:40:25,h3,Karthik,eleven_multilingual_v2,19,9,LuL99dchf7pn4Cs6gaI1
+2026-11-14 11:40:26,p01,Matilda,eleven_multilingual_v2,30,14,nhbiPnV5Jq81O487GyrM
+2026-11-14 11:40:27,p02,Matilda,eleven_multilingual_v2,16,8,15XcX2IMXe3HeIaEyMfd
+2026-11-14 11:40:27,p03,Matilda,eleven_multilingual_v2,72,35,US91qWAfBSNd9cjVumIC
+2026-11-14 11:40:28,p04,Matilda,eleven_multilingual_v2,54,26,SF7C4EN3Zb3NjjiQcdHD
+2026-11-14 11:40:29,p05,Matilda,eleven_multilingual_v2,18,9,aFEOOsTJscTvQDOhtRvH
+2026-11-14 11:40:30,p06,Matilda,eleven_multilingual_v2,61,29,nlWK234xFvnPwTJCLUM3
+2026-11-14 11:40:31,p07,Matilda,eleven_multilingual_v2,86,41,5NE6C58qfA0XJnaclLMH
+2026-11-14 11:40:31,p08,Matilda,eleven_multilingual_v2,33,16,nesTVip5DHf4aJ5Rp6Zd
+2026-11-14 11:40:32,p09,Matilda,eleven_multilingual_v2,27,13,JBPcMtmiyZyWHPgKXAx4
+2026-11-14 11:40:33,p10,Matilda,eleven_multilingual_v2,57,27,yqJjzPVGUQGGPH6s2Pdr
+2026-11-14 11:40:33,p11,Matilda,eleven_multilingual_v2,43,21,HlCeXNakOuSRzoU2xUm3
+2026-11-14 11:40:34,p12,Matilda,eleven_multilingual_v2,26,13,lrrzh88cPt4WYRv2RQ0Z
+2026-11-14 11:40:35,sample,Matilda,eleven_multilingual_v2,27,13,diFK7xQhEWt44hLpGmKQ
+2026-11-14 11:40:35,sample,River,eleven_multilingual_v2,27,13,fI2CZwaR1kqGEzYojJOF
+2026-11-14 11:40:36,sample,Brian,eleven_multilingual_v2,27,13,PT04P6zG4MrHopaYbGNo

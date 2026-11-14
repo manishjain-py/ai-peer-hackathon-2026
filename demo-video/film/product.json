@@ -1,0 +1,447 @@
+{
+  "about": "How each product screen is cut. Used only by a private build (render.mjs --private); a public build shows slates. Times are seconds from the slot's start. Camera, cursor and highlight positions are pixels of the source picture. This file holds numbers and generic labels only: what a recording says or shows is never written here (the words of a recording's speech live in ~/.ai-peer/demo-video-private/product-private.json).",
+  "stand_in": "Draft 1 uses the demo-data stand-ins of 5 to 7 November: the Slack walk, the sound of the live test meeting (its picture is only the other side's name on black, so the Peer is shown as a call tile driven by the real sound), and two screenshots of the product's own pages from docs/build/evidence. Manish's real recordings replace them.",
+  "window": {
+    "x": 280,
+    "y": 56,
+    "w": 1360,
+    "h": 765
+  },
+  "sources": {
+    "slack": {
+      "type": "video",
+      "file": "~/.ai-peer/manish/walks/s1-away-20261106T182028Z/walk.mp4",
+      "width": 1280,
+      "height": 720,
+      "frame_width": 1280,
+      "frame_height": 860
+    },
+    "meeting": {
+      "type": "audio",
+      "file": "~/.ai-peer/manish/meeting-runs/m2db7aebe/recording.mp4"
+    },
+    "meetings-page": {
+      "type": "image",
+      "file": "repo:docs/build/evidence/wp4/s3-live-meetings-page.png",
+      "width": 1280,
+      "height": 1650
+    },
+    "brief-page": {
+      "type": "image",
+      "file": "repo:docs/build/evidence/wp3/s2-dry-brief-page.png",
+      "width": 1280,
+      "height": 2790
+    }
+  },
+  "slots": {
+    "proof-meeting": {
+      "chapter": {
+        "hour": 2,
+        "text": "Joins the meeting as a labelled AI",
+        "length": 2.0
+      },
+      "pictures": [
+        {
+          "type": "tile",
+          "at": 0,
+          "length": 17.4
+        },
+        {
+          "type": "image",
+          "source": "meetings-page",
+          "at": 17.4,
+          "length": 4.6,
+          "camera": [
+            {
+              "t": 17.4,
+              "x": 270,
+              "y": 330,
+              "w": 980
+            },
+            {
+              "t": 19.0,
+              "x": 735,
+              "y": 520,
+              "w": 520
+            },
+            {
+              "t": 22.0,
+              "x": 735,
+              "y": 528,
+              "w": 508
+            }
+          ],
+          "highlights": [
+            {
+              "from": 19.2,
+              "to": 22.0,
+              "x": 772,
+              "y": 566,
+              "w": 448,
+              "h": 150
+            }
+          ]
+        }
+      ],
+      "sound": [
+        {
+          "id": "m1",
+          "source": "meeting",
+          "at": 2.2,
+          "in": 0.6,
+          "length": 4.35
+        },
+        {
+          "id": "m2",
+          "source": "meeting",
+          "at": 6.7,
+          "in": 5.75,
+          "length": 4.55
+        },
+        {
+          "id": "m3",
+          "source": "meeting",
+          "at": 13.4,
+          "in": 51.75,
+          "length": 3.65
+        },
+        {
+          "id": "m4",
+          "source": "meeting",
+          "at": 19.1,
+          "in": 222.05,
+          "length": 2.85
+        }
+      ],
+      "labels": [
+        {
+          "at": 11.6,
+          "length": 1.6,
+          "text": "Gives his update"
+        },
+        {
+          "at": 17.4,
+          "length": 1.6,
+          "text": "Brings decisions back to him"
+        }
+      ]
+    },
+    "proof-slack": {
+      "chapter": {
+        "hour": 4,
+        "text": "A question on Slack",
+        "length": 2.0
+      },
+      "pictures": [
+        {
+          "type": "video",
+          "source": "slack",
+          "at": 0,
+          "length": 18.0,
+          "beats": [
+            {
+              "at": 0,
+              "length": 5.6,
+              "in": 9.0
+            },
+            {
+              "at": 5.6,
+              "length": 1.12,
+              "in": 44.4
+            },
+            {
+              "about": "The recording goes blank for about a second while the thread loads (seen in frames at 60.9 to 61.6): the last full frame is held over it.",
+              "at": 6.72,
+              "length": 1.18,
+              "in": 45.5,
+              "rate": 0.02
+            },
+            {
+              "at": 7.9,
+              "length": 10.1,
+              "in": 46.7
+            }
+          ],
+          "camera": [
+            {
+              "t": 0,
+              "x": 0,
+              "y": 0,
+              "w": 1280
+            },
+            {
+              "t": 2.0,
+              "x": 0,
+              "y": 0,
+              "w": 1280
+            },
+            {
+              "t": 4.4,
+              "x": 360,
+              "y": 300,
+              "w": 700
+            },
+            {
+              "t": 7.4,
+              "x": 360,
+              "y": 306,
+              "w": 690
+            },
+            {
+              "t": 8.8,
+              "x": 896,
+              "y": 280,
+              "w": 384
+            },
+            {
+              "t": 12.4,
+              "x": 896,
+              "y": 284,
+              "w": 384
+            },
+            {
+              "t": 13.4,
+              "x": 896,
+              "y": 500,
+              "w": 384
+            },
+            {
+              "t": 18.0,
+              "x": 896,
+              "y": 504,
+              "w": 384
+            }
+          ],
+          "cursor": [
+            {
+              "t": 4.6,
+              "x": 760,
+              "y": 690
+            },
+            {
+              "t": 6.5,
+              "x": 478,
+              "y": 627
+            },
+            {
+              "t": 6.75,
+              "x": 478,
+              "y": 627,
+              "click": 1
+            },
+            {
+              "t": 8.4,
+              "x": 700,
+              "y": 560
+            }
+          ],
+          "highlights": [
+            {
+              "from": 9.4,
+              "to": 12.3,
+              "x": 968,
+              "y": 398,
+              "w": 292,
+              "h": 90
+            },
+            {
+              "from": 13.6,
+              "to": 17.0,
+              "x": 968,
+              "y": 648,
+              "w": 292,
+              "h": 48
+            }
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "at": 9.2,
+          "length": 3.0,
+          "text": "Answers with its sources"
+        },
+        {
+          "at": 13.4,
+          "length": 3.6,
+          "text": "Makes no promise for him"
+        }
+      ]
+    },
+    "proof-change": {
+      "chapter": {
+        "hour": 6,
+        "text": "News from across the company",
+        "length": 2.0
+      },
+      "pictures": [
+        {
+          "type": "image",
+          "source": "brief-page",
+          "at": 0,
+          "length": 18.0,
+          "camera": [
+            {
+              "t": 0,
+              "x": 250,
+              "y": 2180,
+              "w": 1000
+            },
+            {
+              "t": 2.0,
+              "x": 250,
+              "y": 2180,
+              "w": 1000
+            },
+            {
+              "t": 7.0,
+              "x": 256,
+              "y": 2212,
+              "w": 950
+            },
+            {
+              "t": 8.4,
+              "x": 262,
+              "y": 2380,
+              "w": 800
+            },
+            {
+              "t": 11.6,
+              "x": 262,
+              "y": 2392,
+              "w": 790
+            },
+            {
+              "t": 12.8,
+              "x": 250,
+              "y": 2228,
+              "w": 1000
+            },
+            {
+              "t": 18.0,
+              "x": 252,
+              "y": 2228,
+              "w": 984
+            }
+          ],
+          "cursor": [
+            {
+              "t": 6.4,
+              "x": 1150,
+              "y": 2690
+            },
+            {
+              "t": 8.4,
+              "x": 880,
+              "y": 2505
+            },
+            {
+              "t": 12.8,
+              "x": 640,
+              "y": 2650
+            }
+          ],
+          "highlights": [
+            {
+              "from": 7.6,
+              "to": 11.4,
+              "x": 364,
+              "y": 2468,
+              "w": 670,
+              "h": 56
+            },
+            {
+              "from": 13.0,
+              "to": 16.8,
+              "x": 270,
+              "y": 2578,
+              "w": 976,
+              "h": 84
+            }
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "at": 7.2,
+          "length": 3.8,
+          "text": "Tells him why it matters"
+        },
+        {
+          "at": 12.2,
+          "length": 4.0,
+          "text": "Leaves the rest out"
+        }
+      ]
+    },
+    "morning-product-brief": {
+      "pictures": [
+        {
+          "type": "image",
+          "source": "brief-page",
+          "at": 0,
+          "length": 6.0,
+          "camera": [
+            {
+              "t": 0,
+              "x": 250,
+              "y": 262,
+              "w": 1000
+            },
+            {
+              "t": 3.2,
+              "x": 262,
+              "y": 290,
+              "w": 960
+            },
+            {
+              "t": 3.9,
+              "x": 262,
+              "y": 1690,
+              "w": 960
+            },
+            {
+              "t": 6.0,
+              "x": 290,
+              "y": 1720,
+              "w": 900
+            }
+          ],
+          "cursor": [
+            {
+              "t": 3.2,
+              "x": 1100,
+              "y": 700
+            },
+            {
+              "t": 4.2,
+              "x": 1100,
+              "y": 1950
+            },
+            {
+              "t": 5.3,
+              "x": 1161,
+              "y": 1784
+            },
+            {
+              "t": 5.55,
+              "x": 1161,
+              "y": 1784,
+              "click": 1
+            }
+          ],
+          "highlights": [
+            {
+              "from": 4.4,
+              "to": 6.0,
+              "x": 1112,
+              "y": 1762,
+              "w": 104,
+              "h": 44
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

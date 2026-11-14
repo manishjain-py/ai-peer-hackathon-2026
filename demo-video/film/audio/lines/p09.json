@@ -1,0 +1,64 @@
+{
+ "what": "p09",
+ "voice_id": "XrExE9yKIg1WjnnlVkGX",
+ "voice": "Matilda",
+ "model": "eleven_multilingual_v2",
+ "text": "What I did. What I learned.",
+ "spoken": "What I did. What I learned.",
+ "request_sha": "1a78074537ef2e3c",
+ "request": {
+  "text": "What I did. What I learned.",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.6,
+   "similarity_boost": 0.75,
+   "style": 0,
+   "use_speaker_boost": true,
+   "speed": 1.0
+  },
+  "seed": 14112026,
+  "previous_text": "By morning it's all in one brief.",
+  "next_text": "And the decisions that are his, because they always were."
+ },
+ "request_id": "JBPcMtmiyZyWHPgKXAx4",
+ "character_cost": "13",
+ "generated_utc": "2026-11-14 11:40:32",
+ "file": "p09.wav",
+ "seconds": 2.15,
+ "raw_seconds": 2.647,
+ "trimmed_front": 0.03,
+ "peak_dbfs": -2.15,
+ "rms_dbfs": -21.87,
+ "words": [
+  {
+   "w": "What",
+   "s": 0.0,
+   "e": 0.167
+  },
+  {
+   "w": "I",
+   "s": 0.214,
+   "e": 0.237
+  },
+  {
+   "w": "did.",
+   "s": 0.307,
+   "e": 0.783
+  },
+  {
+   "w": "What",
+   "s": 1.294,
+   "e": 1.479
+  },
+  {
+   "w": "I",
+   "s": 1.526,
+   "e": 1.549
+  },
+  {
+   "w": "learned.",
+   "s": 1.63,
+   "e": 2.617
+  }
+ ]
+}

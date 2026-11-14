@@ -1,0 +1,17 @@
+{
+  "endpoint": "sonilo/v1.1/text-to-music",
+  "inputs": {
+    "prompt": "Instrumental only, no vocals. Upbeat, light, modern, warm music for a premium technology advert, 120 BPM, 4/4, D major. Muted synth plucks, marimba, felt piano, airy pads, soft kick, claps, finger snaps, shakers, gentle bass. Optimistic, curious, elegant, uncluttered, never corporate-cheesy, never aggressive. Light intro with a clear pulse, a softer dreamy passage, a confident but light main groove, a warm open breakdown, a wide uplifting finale, and a final resolving chord that rings out.",
+    "duration": 124,
+    "num_samples": 1
+  },
+  "expect": {
+    "units": 124,
+    "unit": "second of output",
+    "unit_price": 0.0025,
+    "cost_usd": 0.31,
+    "basis": "live price read 2026-11-14: 0.0025 USD per second, per sample"
+  },
+  "output": "demo-video/film/audio/music/takes/sonilo-n1",
+  "note": "music bed, Sonilo v1.1 take n1, 124 s"
+}

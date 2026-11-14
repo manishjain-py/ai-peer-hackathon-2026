@@ -1,0 +1,129 @@
+{
+ "file": "/Users/manishjain/repos/ai-peer-video-wp2/demo-video/film/.build/lanes/sound/renders/sound-0-120.mp4",
+ "variant": "public",
+ "window": [
+  0,
+  120
+ ],
+ "seconds": 120,
+ "frames": 3600,
+ "size": "1920x1080",
+ "fps": "30/1",
+ "megabytes": 22.8,
+ "slots": {
+  "clips": 9,
+  "by_code": 2,
+  "slates": 5
+ },
+ "took_s": 64,
+ "loudness": {
+  "before_master": {
+   "lufs": -21.8,
+   "lra": 4.1,
+   "true_peak": -2.8
+  },
+  "mix": {
+   "lufs": -14.1,
+   "lra": 3.7,
+   "true_peak": -1.8
+  },
+  "in_file": {
+   "lufs": -14.1,
+   "lra": 3.7,
+   "true_peak": -1.7
+  }
+ },
+ "voice_over_music_db": [
+  {
+   "id": "h1",
+   "voice_db": -22.197643,
+   "music_db": -45.002595,
+   "above_db": 22.8
+  },
+  {
+   "id": "h2",
+   "voice_db": -23.559947,
+   "music_db": -44.841641,
+   "above_db": 21.3
+  },
+  {
+   "id": "h3",
+   "voice_db": -22.552559,
+   "music_db": -38.513743,
+   "above_db": 16
+  },
+  {
+   "id": "p01",
+   "voice_db": -23.316622,
+   "music_db": -43.522716,
+   "above_db": 20.2
+  },
+  {
+   "id": "p02",
+   "voice_db": -23.255153,
+   "music_db": -44.208295,
+   "above_db": 21
+  },
+  {
+   "id": "p03",
+   "voice_db": -23.02983,
+   "music_db": -45.600122,
+   "above_db": 22.6
+  },
+  {
+   "id": "p04",
+   "voice_db": -22.839211,
+   "music_db": -45.147459,
+   "above_db": 22.3
+  },
+  {
+   "id": "p05",
+   "voice_db": -23.075354,
+   "music_db": -43.982439,
+   "above_db": 20.9
+  },
+  {
+   "id": "p06",
+   "voice_db": -22.759122,
+   "music_db": -43.337491,
+   "above_db": 20.6
+  },
+  {
+   "id": "p07",
+   "voice_db": -22.939293,
+   "music_db": -40.997445,
+   "above_db": 18.1
+  },
+  {
+   "id": "p08",
+   "voice_db": -22.664923,
+   "music_db": -43.657157,
+   "above_db": 21
+  },
+  {
+   "id": "p09",
+   "voice_db": -23.955059,
+   "music_db": -39.787721,
+   "above_db": 15.8
+  },
+  {
+   "id": "p10",
+   "voice_db": -22.620256,
+   "music_db": -43.748091,
+   "above_db": 21.1
+  },
+  {
+   "id": "p11",
+   "voice_db": -23.418025,
+   "music_db": -38.37788,
+   "above_db": 15
+  },
+  {
+   "id": "p12",
+   "voice_db": -22.447794,
+   "music_db": -40.096417,
+   "above_db": 17.6
+  }
+ ],
+ "sound_work": "/Users/manishjain/repos/ai-peer-video-wp2/demo-video/film/.build/lanes/sound/work/sound-0-120.sound"
+}

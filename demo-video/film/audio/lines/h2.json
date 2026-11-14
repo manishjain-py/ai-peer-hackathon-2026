@@ -1,0 +1,72 @@
+{
+ "what": "h2",
+ "voice_id": "iP95p4xoKVk53GoZ742B",
+ "voice": "Chris",
+ "model": "eleven_multilingual_v2",
+ "text": "His update's already here. His Peer gave it.",
+ "spoken": "His update's already here. His Peer gave it.",
+ "request_sha": "f10b74871f7c8bba",
+ "request": {
+  "text": "His update's already here. His Peer gave it.",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.55,
+   "similarity_boost": 0.75,
+   "style": 0,
+   "use_speaker_boost": true,
+   "speed": 1.0
+  },
+  "seed": 14112026
+ },
+ "request_id": "OLR5mhhT8ARRB7KQ0Gnm",
+ "character_cost": "21",
+ "generated_utc": "2026-11-14 11:40:19",
+ "file": "h2.wav",
+ "seconds": 2.1,
+ "raw_seconds": 2.322,
+ "trimmed_front": 0.03,
+ "peak_dbfs": -2.48,
+ "rms_dbfs": -22.76,
+ "words": [
+  {
+   "w": "His",
+   "s": 0.0,
+   "e": 0.144
+  },
+  {
+   "w": "update's",
+   "s": 0.191,
+   "e": 0.516
+  },
+  {
+   "w": "already",
+   "s": 0.55,
+   "e": 0.806
+  },
+  {
+   "w": "here.",
+   "s": 0.864,
+   "e": 1.189
+  },
+  {
+   "w": "His",
+   "s": 1.224,
+   "e": 1.375
+  },
+  {
+   "w": "Peer",
+   "s": 1.433,
+   "e": 1.63
+  },
+  {
+   "w": "gave",
+   "s": 1.688,
+   "e": 1.862
+  },
+  {
+   "w": "it.",
+   "s": 1.897,
+   "e": 2.292
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+  "endpoint": "fal-ai/stable-audio-3/medium/text-to-audio",
+  "inputs": {
+    "prompt": "Upbeat, light, modern, warm instrumental for a premium technology advert. 120 BPM, 4/4, D major. Muted plucked synth, marimba, felt piano chords, airy pads, soft kick, claps, finger snaps, shakers, gentle round bass. Optimistic, curious, clean, elegant, uncluttered. It starts light with a clear pulse, builds gradually to a confident groove, has a warm open breakdown, a wide uplifting finale, and ends on a resolving final chord that rings out.",
+    "negative_prompt": "vocals, voice, singing, choir, speech, heavy drums, distortion, aggressive, dark, cheesy, low quality",
+    "duration": 126,
+    "seed": 1411,
+    "output_format": "wav"
+  },
+  "expect": {
+    "units": 1,
+    "unit": "audio",
+    "unit_price": 0.0376,
+    "cost_usd": 0.0376,
+    "basis": "the model page read 2026-11-14: 0.0376 USD per audio"
+  },
+  "output": "demo-video/film/audio/music/takes/stable3m-s1",
+  "note": "music bed, Stable Audio 3 Medium take s1 (seed 1411), 126 s, WAV"
+}

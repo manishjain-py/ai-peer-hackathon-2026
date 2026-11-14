@@ -1,0 +1,189 @@
+{
+ "the bed": {
+  "voice_detector": {
+   "windows": 3781,
+   "share_over_0.5": 0.0011,
+   "highest": 0.692,
+   "mean": 0.0009,
+   "longest_run_s": 0.13,
+   "runs_over_0.25_s": []
+  },
+  "speech_to_text": [
+   {
+    "from_s": 0,
+    "text": "",
+    "no_speech": [],
+    "avg_logprob": []
+   },
+   {
+    "from_s": 30,
+    "text": "",
+    "no_speech": [],
+    "avg_logprob": []
+   },
+   {
+    "from_s": 60,
+    "text": "",
+    "no_speech": [],
+    "avg_logprob": []
+   },
+   {
+    "from_s": 90,
+    "text": "Thank you so much for watching, and I'll see you in the next video.",
+    "no_speech": [
+     0.67
+    ],
+    "avg_logprob": [
+     -0.99
+    ]
+   },
+   {
+    "from_s": 120,
+    "text": "You",
+    "no_speech": [
+     0.9
+    ],
+    "avg_logprob": [
+     -0.72
+    ]
+   }
+  ]
+ },
+ "control, no voice for sure (sine chords and a pulse)": {
+  "voice_detector": {
+   "windows": 3781,
+   "share_over_0.5": 0.0,
+   "highest": 0.259,
+   "mean": 0.0006,
+   "longest_run_s": 0.0,
+   "runs_over_0.25_s": []
+  },
+  "speech_to_text": [
+   {
+    "from_s": 0,
+    "text": "",
+    "no_speech": [],
+    "avg_logprob": []
+   },
+   {
+    "from_s": 30,
+    "text": "You",
+    "no_speech": [
+     0.9
+    ],
+    "avg_logprob": [
+     -0.95
+    ]
+   },
+   {
+    "from_s": 60,
+    "text": "You",
+    "no_speech": [
+     0.91
+    ],
+    "avg_logprob": [
+     -0.97
+    ]
+   },
+   {
+    "from_s": 90,
+    "text": "You",
+    "no_speech": [
+     0.89
+    ],
+    "avg_logprob": [
+     -0.94
+    ]
+   },
+   {
+    "from_s": 120,
+    "text": "You",
+    "no_speech": [
+     0.93
+    ],
+    "avg_logprob": [
+     -0.91
+    ]
+   }
+  ]
+ },
+ "control, a voice for sure (the bed + 'p03' 6 dB under the music at [(5.0, 9.26), (40.0, 44.26)])": {
+  "voice_detector": {
+   "windows": 3781,
+   "share_over_0.5": 0.037,
+   "highest": 0.993,
+   "mean": 0.039,
+   "longest_run_s": 1.67,
+   "runs_over_0.25_s": [
+    [
+     5.18,
+     6.85
+    ],
+    [
+     6.98,
+     7.94
+    ],
+    [
+     8.19,
+     9.15
+    ],
+    [
+     42.46,
+     42.72
+    ]
+   ]
+  },
+  "speech_to_text": [
+   {
+    "from_s": 0,
+    "text": "I know his projects, his code, his conversations, the way he knows them. Thanks for watching!",
+    "no_speech": [
+     0.11,
+     0.77
+    ],
+    "avg_logprob": [
+     -0.36,
+     -0.91
+    ]
+   },
+   {
+    "from_s": 30,
+    "text": "I know his projects, his code, his conversations, the way he knows them. Thanks for watching!",
+    "no_speech": [
+     0.11,
+     0.8
+    ],
+    "avg_logprob": [
+     -0.36,
+     -0.95
+    ]
+   },
+   {
+    "from_s": 60,
+    "text": "",
+    "no_speech": [],
+    "avg_logprob": []
+   },
+   {
+    "from_s": 90,
+    "text": "Thank you so much for watching, and I'll see you in the next video.",
+    "no_speech": [
+     0.67
+    ],
+    "avg_logprob": [
+     -0.99
+    ]
+   },
+   {
+    "from_s": 120,
+    "text": "You",
+    "no_speech": [
+     0.9
+    ],
+    "avg_logprob": [
+     -0.72
+    ]
+   }
+  ]
+ }
+}

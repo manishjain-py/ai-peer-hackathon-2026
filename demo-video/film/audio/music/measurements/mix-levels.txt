@@ -1,0 +1,23 @@
+demo-video/film/.build/lanes/sound/work/sound-0-120.sound
+finished mix while a line is spoken (lines of 1.5 s or more): median -12.2 LUFS, from -13.0 to -11.5
+passages with no speech (the gaps between lines of 1.2 s or more), finished mix:
+     8.9-   9.4 s   music stem  -29.9 dB RMS   mix -18.4 LUFS   (-6.2 LU against the spoken lines)
+    12.0-  15.5 s   music stem  -29.5 dB RMS   mix -18.1 LUFS   (-5.9 LU against the spoken lines)
+    29.2-  56.2 s   music stem  -25.4 dB RMS   mix -15.6 LUFS   (-3.4 LU against the spoken lines)
+    60.0-  74.2 s   music stem  -24.6 dB RMS   mix -14.6 LUFS   (-2.4 LU against the spoken lines)
+    79.8-  91.4 s   music stem  -24.2 dB RMS   mix -14.0 LUFS   (-1.8 LU against the spoken lines)
+    94.2-  95.4 s   music stem  -27.6 dB RMS   mix -17.4 LUFS   (-5.2 LU against the spoken lines)
+   102.2- 109.0 s   music stem  -25.3 dB RMS   mix -14.9 LUFS   (-2.7 LU against the spoken lines)
+   114.8- 120.0 s   music stem  -26.4 dB RMS   mix -14.2 LUFS   (-2.0 LU against the spoken lines)
+
+effects in the mix before the master gain (voice stem while speaking: median -23.0 dB RMS, loudest 100 ms -17.7 dB)
+  effect      at s   loudest 100 ms dB  (under the voice's RMS by)   peak dBFS   music stem's loudest 100 ms there   a line is spoken there
+  phone        12.60     -29.1            (  6.2 dB)               -14.0      -23.2                             -
+  rise         14.50     -32.8            (  9.8 dB)               -22.0      -22.9                             p02, p03
+  laptop       27.60     -33.9            ( 10.9 dB)               -15.0      -42.2                             p05
+  push         30.00     -28.9            (  5.9 dB)               -17.0      -22.7                             -
+  change-1     53.85     -30.8            (  7.9 dB)               -18.0      -25.8                             -
+  change-2     71.85     -30.7            (  7.7 dB)               -19.0      -25.8                             -
+  tap         102.60     -33.2            ( 10.2 dB)               -16.0      -29.7                             -
+  lights      112.40     -32.2            (  9.2 dB)               -21.0      -17.4                             p12
+  end         116.00     -28.3            (  5.3 dB)               -21.0      -19.7                             -
