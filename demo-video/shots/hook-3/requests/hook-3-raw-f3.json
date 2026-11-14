@@ -1,0 +1,21 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "A man sits at his home desk in the evening under a warm lamp. He is the only person in the picture. At the start he is reading his laptop and smiling. Straight away he leans back in his chair: his hands come off the keyboard and his shoulders move back, away from the laptop, with a soft half laugh. As he leans back he lifts his eyes from the laptop to a point just to the right of the camera and a little above it, never into the lens, and asks, amused, in Indian English: \"Does he ever sleep?\" His lips move in exact sync with the words. Then he stays leaned back with an amused smile, still looking past the camera. Natural, relaxed acting with small movements, like a real person in a documentary. His face, glasses and moustache stay exactly as they are. The camera is locked on a tripod and does not move. One continuous shot with no cuts, no zoom, no music, no subtitles and no text.",
+    "image_url": "file:demo-video/shots/stills/hook-3.png",
+    "target_audio_url": "file:demo-video/shots/hook-3/audio/hook-3-line-at-1.3s.wav",
+    "duration": 4.0,
+    "resolution": "1080P",
+    "seed": 333,
+    "prompt_expansion_mode": "balanced"
+  },
+  "expect": {
+    "units": 4.0,
+    "unit": "second of video at 1080P",
+    "unit_price": 0.056,
+    "cost_usd": 0.224,
+    "basis": "fal.ai page read 2026-11-14: $0.056 per second at 1080P until 15 November, billed on the seconds asked"
+  },
+  "output": "demo-video/shots/hook-3/hook-3-raw-f3",
+  "note": "hook-3 final take f3: H3 Max Turbo at 1080P from the still, WP2's line pinned as the soundtrack (the same prompt with the line moved to 1.3 s: if the mouth moves with it, the mouth follows the file and not the prompt); he leans back and looks past the camera"
+}

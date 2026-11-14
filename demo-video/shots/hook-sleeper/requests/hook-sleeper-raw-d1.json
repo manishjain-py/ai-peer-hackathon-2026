@@ -1,0 +1,19 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "A man is fast asleep in bed at night. He breathes slowly and evenly: his chest and the duvet rise and fall gently, and that is the only movement. His eyes stay closed and his face stays peaceful. The lamp glows steadily. The camera pushes in toward him extremely slowly and smoothly. Quiet night, soft room tone. One continuous shot with no cuts, no music, no speech, no subtitles and no text.",
+    "image_url": "file:demo-video/shots/stills/hook-sleeper.png",
+    "duration": 5.0,
+    "resolution": "768P",
+    "prompt_expansion_mode": "balanced"
+  },
+  "expect": {
+    "units": 5.7,
+    "unit": "second of video at 768P",
+    "unit_price": 0.028,
+    "cost_usd": 0.1596,
+    "basis": "fal.ai page 2026-11-14: $0.028 per second at 768P until 15 November; the output can run 0.7 s longer than asked"
+  },
+  "output": "demo-video/shots/hook-sleeper/hook-sleeper-raw-d1",
+  "note": "hook-sleeper draft 1: H3 Max Turbo from the still, slow even breathing, a very slow push-in"
+}

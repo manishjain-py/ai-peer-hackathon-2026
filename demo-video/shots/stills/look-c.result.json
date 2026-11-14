@@ -1,0 +1,30 @@
+{
+ "request_id": "01a1d9f0-d603-7af0-8e9f-fe0c338a2c1b",
+ "billable_units_header": "0.082935528",
+ "inputs_sent": {
+  "prompt": "Keep everything in image 1 exactly as it is: the same room, the same camera position and framing, the same light, the lit phone on the bedside table, and the same man asleep in the bed, who has not moved. Add one new element: a double of the sleeping man, made of light, stands on the open floor at the foot of the bed, seen full length from head to bare feet. The double is an exact copy of the man shown in image 2 and image 3, who is also the man asleep in the bed: the same face, the same short dark hair and trimmed beard, the same warm medium-brown skin, the same dark charcoal T-shirt and the same loose dark grey pyjama trousers. His face and skin keep their own natural brown colour and his clothes keep their own dark colours; only the light itself is pale mint-green (#b7f4cf). He looks like the real man standing there, almost solid, but his whole body gives off light, like a figure of softly glowing frosted glass: an even, gentle mint luminance comes from his skin and his clothes, with no outline and no sparkles. The air around him is faintly misty and catches his light, so a soft halo of glowing haze surrounds him, with a few fine dust motes drifting in it. The room is clearly lit by him: mint light spills across the floorboards, the bed and the chair cast long soft shadows away from him, there is a mint sheen on the bed frame, the duvet and the curtain folds, and a faint reflection of him in the dark window glass. His body is turned three-quarters toward the camera and his head is turned to look down at the sleeping man; he does not look at the camera. His face is calm and kind, with closed lips. He looks friendly and capable, never ghostly or frightening. There are exactly two figures in the room: one solid and asleep in the bed, one made of light. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab26e33/-NuETANlXIy_vaniszMrz_night-phone-lit.png",
+   "https://v3b.fal.media/files/b/0ab26e26/kSJO-RYdbkyh2lmZ_cZw8_a-portrait.jpg",
+   "https://v3b.fal.media/files/b/0ab26e33/HErkJNoTUHevg96fRqb53_a-full.jpg"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26e34/XcLIBEXqwz8rzhJ9ux1Sx_ymTuF6ee.png",
+    "content_type": "image/png",
+    "file_name": "XcLIBEXqwz8rzhJ9ux1Sx_ymTuF6ee.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

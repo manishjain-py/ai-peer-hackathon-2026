@@ -1,0 +1,20 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: <Picture 1> Cinematic, live-action, Static Shot: a medium close-up from the side of a man with short dark hair and a trimmed beard (S1) sitting up in bed in a room bathed in warm, golden morning light. He wears a dark charcoal t-shirt and holds a slim black smartphone upright in one hand at chest height; the plain back of the phone faces the camera, so its screen is never visible. His four fingers wrap around the back of the phone and his thumb is hidden behind it, on the screen side. Behind him a sheer white curtain glows softly with sunlight against the teal wall. The camera remains perfectly fixed throughout the shot. From 00:00.000 to 00:04.200, S1 reads: his eyes travel slowly down the screen, his expression calm and attentive; his head and the hand holding the phone stay still, with only gentle breathing, and his thumb stays hidden and does not move. At 00:04.200, S1 has decided: with the smallest nod, his thumb rises into view beside the edge of the phone and presses the screen once, a single, firm, deliberate tap. This is the only time his thumb moves in the whole shot; the thumb has the same warm brown skin as his fingers. Immediately after the tap, at 00:04.600, a small, satisfied, closed-lip smile spreads across his face. From then until the end his hand holds the phone steady, his thumb stays still, and he keeps looking at the phone, content and at ease. The phone never turns: its back stays toward the camera for the entire shot. S1 is the only person in the frame. All movements are natural, subtle and unhurried, with realistic skin texture and soft natural light.\n\noverall_soundscape: A quiet bedroom in the early morning: soft room tone and gentle breathing. One single faint tap of a thumb on glass, then a soft, contented exhale.\n\nnon_diegetic_music: N/A",
+    "image_url": "file:demo-video/shots/stills/morning-brief.png",
+    "duration": 6.5,
+    "resolution": "768P",
+    "seed": 3303,
+    "prompt_expansion_mode": "disabled"
+  },
+  "expect": {
+    "units": 6.5,
+    "unit": "second of video at 768P",
+    "unit_price": 0.028,
+    "cost_usd": 0.182,
+    "basis": "fal.ai page read 2026-11-14: $0.028 a second at 768P until 15 November; billed for exactly the seconds asked"
+  },
+  "output": "demo-video/shots/morning-brief/morning-brief-raw-e4",
+  "note": "morning-brief take e4: 768P look-see, 6.5 s, prompt 2 (one tap at 4.2 s, then the smile, the hand still after), seed 3303; the winner is made again at 1080P with its seed (helper wp3-morning)"
+}

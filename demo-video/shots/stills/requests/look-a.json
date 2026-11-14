@@ -1,0 +1,26 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "Keep everything in image 1 exactly as it is: the same room, the same camera position and framing, the same light, the lit phone on the bedside table, and the same man asleep in the bed, who has not moved. Add one new element: a double of the sleeping man, made of light, stands on the open floor at the foot of the bed, seen full length from head to bare feet. The double is an exact copy of the man shown in image 2 and image 3, who is also the man asleep in the bed: the same face, the same short dark hair and trimmed beard, the same warm medium-brown skin, the same dark charcoal T-shirt and the same loose dark grey pyjama trousers. His face and skin keep their own natural brown colour and his clothes keep their own dark colours; only the light itself is pale mint-green (#b7f4cf). He is lit from within, like a lantern: a soft core of mint light glows inside his chest and shines out through his body, so he is brightest and most solid at the chest and face, and becomes gradually more see-through toward his hands and feet, which thin away into a fine luminous mist. He has no drawn outline: his edges are soft and melt into a faint haze of light. He is a real light source in the room: a pool of soft mint light lies on the floorboards around his feet, and his glow touches the end of the bed, the duvet and the folds of the curtain. His body is turned three-quarters toward the camera and his head is turned to look down at the sleeping man; he does not look at the camera. His face is calm and kind, with closed lips. He looks friendly and capable, never ghostly or frightening. There are exactly two figures in the room: one solid and asleep in the bed, one made of light. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+    "image_urls": [
+      "file:demo-video/shots/stills/night-phone-lit.png",
+      "file:demo-video/look/characters/a-portrait.jpg",
+      "file:demo-video/look/characters/a-full.jpg"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.09,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.09,
+    "estimate": true,
+    "basis": "WP1 paid 6 to 8.5 cents for a 2K picture on this model (demo-video/ledger/wp1.csv)"
+  },
+  "output": "demo-video/shots/stills/look-a",
+  "note": "look variant 'lantern': the double standing at the foot of the bed (an edit of night-phone-lit.png), for the sheet double-looks.jpg"
+}

@@ -1,0 +1,28 @@
+{
+ "request_id": "01a1d9f3-6d3c-79e0-a65c-5ce81e2ffe7d",
+ "billable_units_header": "0.077000967",
+ "inputs_sent": {
+  "prompt": "The off-white duvet has been pulled up higher over the sleeping man: it now covers his chest, his near shoulder and both of his arms, right up to his neck, and his hands are under it. His head, his face and the pillow are unchanged, and he has not moved. Keep everything else in the picture exactly the same.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab26e33/cODHC8kSUmOcpoLZ_wO1r_night-phone-lit.png"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26e45/fBGHSVI2gKGN16Yuf1WHa_QfidFvzo.png",
+    "content_type": "image/png",
+    "file_name": "fBGHSVI2gKGN16Yuf1WHa_QfidFvzo.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

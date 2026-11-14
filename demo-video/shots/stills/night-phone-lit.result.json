@@ -1,0 +1,28 @@
+{
+ "request_id": "01a1d9ee-b6d9-7ce2-96bf-c20d7574ee98",
+ "billable_units_header": "0.070350168",
+ "inputs_sent": {
+  "prompt": "Add a slim dark smartphone lying flat on the bedside table, to the right of the lamp: its screen has just lit up with a plain, blank, soft mint-green glow (#b7f4cf) that throws a faint mint light on the table top, the base of the lamp and the near edge of the pillow. Nothing is written or shown on the screen. Keep everything else in the picture exactly the same: the same room, camera, framing, light and the same sleeping man, who has not moved.",
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab26e25/6_JYbhkICAWfwPUdYaQdd_f1.png"
+  ]
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26e26/d2UGkVj9pIF5Zn4J-Zmt-_EUu85he8.png",
+    "content_type": "image/png",
+    "file_name": "d2UGkVj9pIF5Zn4J-Zmt-_EUu85he8.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

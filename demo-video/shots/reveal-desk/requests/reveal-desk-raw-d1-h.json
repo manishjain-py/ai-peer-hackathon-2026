@@ -1,0 +1,20 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed and never moves. A man sleeps in the bed and stays completely still. His double, made of soft mint light, stands at the foot of the bed. The double turns away from the bed, and the fine threads of light that joined him to the sleeper let go and fade. He walks calmly across the room to the desk on the right, pulls out the chair, sits down and opens the laptop. The laptop's screen lights up, a plain white glow, and its light falls on his face. He rests his hands on the keyboard and looks at the screen, calm and focused, and holds still. There are only two figures at all times: one solid and asleep, one made of light. The double never looks at the camera. Calm, graceful, unhurried motion. One continuous shot with no cuts, no zoom, no music, no speech, no subtitles and no text.",
+    "image_url": "file:demo-video/shots/stills/night-stand.png",
+    "end_image_url": "file:demo-video/shots/stills/night-desk.png",
+    "duration": 10,
+    "resolution": "768P",
+    "prompt_expansion_mode": "balanced"
+  },
+  "expect": {
+    "units": 10,
+    "unit": "second of video at 768P",
+    "unit_price": 0.028,
+    "cost_usd": 0.28,
+    "basis": "fal.ai page 2026-11-14: $0.028 per second at 768P until 15 November; my first four calls were billed for exactly the seconds asked"
+  },
+  "output": "demo-video/shots/reveal-desk/reveal-desk-raw-d1-h",
+  "note": "reveal-desk draft, a test of H3 Max Turbo with first and last frame on the double, 10 s at 768P"
+}

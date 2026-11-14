@@ -1,0 +1,13 @@
+{
+  "out": "demo-video/shots/stills/double-looks.jpg",
+  "width": 2400,
+  "columns": 2,
+  "title": "The double: four looks, the same man each time",
+  "subtitle": "Edits of one night frame, so the room and the camera are identical. His skin and clothes keep their own colours; only the light is mint.",
+  "cells": [
+    {"image": "demo-video/shots/stills/look-a.png", "label": "A", "text": "lantern: lit from inside the chest, thinning to mist at hands and feet"},
+    {"image": "demo-video/shots/stills/look-b.png", "label": "B", "text": "threads: fine threads of light still join him to the sleeper"},
+    {"image": "demo-video/shots/stills/look-c.png", "label": "C", "text": "frosted glass: almost solid, and the room catches his glow"},
+    {"image": "demo-video/shots/stills/look-d.png", "label": "D", "text": "woven light: his body drawn in fine flowing lines"}
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "updated_utc": "2026-11-14T13:19:34Z",
+  "slots": {
+    "hook-1": {
+      "clip": "demo-video/shots/hook-1/hook-1-final-v1.mp4",
+      "grade": "final",
+      "seconds": 5.167,
+      "fps": 24,
+      "use_from_s": 0.46,
+      "audio": "lipsync",
+      "line_at_s": 0.86,
+      "note": "H3 Max Turbo at 1080P, WP2's line pinned as the sound; the mouth follows the line (checker: movement r +0.61 at lag 0, lips shut on both m sounds); her eyebrows are lively and she looks to the right of the camera"
+    },
+    "hook-2": {
+      "clip": "demo-video/shots/hook-2/hook-2-final-v2.mp4",
+      "grade": "final",
+      "seconds": 4.458,
+      "fps": 24,
+      "use_from_s": 0.44,
+      "audio": "lipsync",
+      "line_at_s": 0.84,
+      "note": "H3 Max Turbo at 1080P, WP2's line pinned as the sound; the mouth follows the line (checker: movement r +0.51 at lag 0); his lips part 0.15 s before the voice"
+    },
+    "hook-3": {
+      "clip": "demo-video/shots/hook-3/hook-3-final-v1.mp4",
+      "grade": "final",
+      "seconds": 4.458,
+      "fps": 24,
+      "use_from_s": 0.8,
+      "audio": "lipsync",
+      "line_at_s": 1.2,
+      "note": "H3 Max Turbo at 1080P, WP2's line pinned as the sound; the mouth follows the line (checker: movement r +0.76, two frames early); the lean-back is modest"
+    },
+    "hook-sleeper": {
+      "clip": "demo-video/shots/hook-sleeper/hook-sleeper-final-v1.mp4",
+      "grade": "final",
+      "seconds": 5.167,
+      "fps": 24,
+      "use_from_s": 0.8,
+      "audio": "none",
+      "note": "H3 Max Turbo at 1080P; slow even breathing (small), a very slow push-in"
+    },
+    "reveal-rise": {
+      "clip": "demo-video/shots/reveal-rise/reveal-rise-final-v2.mp4",
+      "grade": "final",
+      "seconds": 10.625,
+      "fps": 24,
+      "use_from_s": 0.2,
+      "audio": "none",
+      "note": "route K (Kling 4.0, four key frames), take 3, upscaled to 1080p; rise, tuck and stand in one take; the phone is dark, then lights up by code at 0.35 s; the tag is on from 1.67 s (once he is up to the hips) and off from 7.3 to 7.8 s while he bends to stand",
+      "tag_track": "demo-video/shots/reveal-rise/tag-track-final-v2.json"
+    },
+    "reveal-desk": {
+      "clip": "demo-video/shots/reveal-desk/reveal-desk-final-v1.mp4",
+      "grade": "final",
+      "seconds": 10.042,
+      "fps": 24,
+      "use_from_s": 1.04,
+      "audio": "none",
+      "note": "route K (Kling 4.0), take 1, from the real last frame of reveal-rise, upscaled to 1080p; the window ends on the clip's last frame for the push-in; last_still is that frame at 3840x2160 (same framing); the tag is on only for the first 3 s, after that he is side-on (x and y still follow his upper body); the join from reveal-rise is a match on the standing pose: a 6-frame dissolve hides it",
+      "tag_track": "demo-video/shots/reveal-desk/tag-track-final-v1.json",
+      "screen_quad": [
+        [
+          0.86072,
+          0.48853
+        ],
+        [
+          0.89508,
+          0.49365
+        ],
+        [
+          0.87654,
+          0.58729
+        ],
+        [
+          0.84436,
+          0.57236
+        ]
+      ],
+      "last_still": "demo-video/shots/reveal-desk/last-still-final-v1.png"
+    },
+    "morning-wake": {
+      "clip": "demo-video/shots/morning-wake/morning-wake-final-v3.mp4",
+      "grade": "final",
+      "seconds": 6.583,
+      "fps": 24,
+      "use_from_s": 0.6,
+      "audio": "none",
+      "note": "H3 Max Turbo at 768P, upscaled to 1080p; he lies awake to 1.2 s, sits by 2.2 s, holds the phone from 4.8 s; he sits up in about one second, and the phone hand is motion blur for 3 or 4 frames near 4.4 s"
+    },
+    "morning-brief": {
+      "clip": "demo-video/shots/morning-brief/morning-brief-final-v4.mp4",
+      "grade": "final",
+      "seconds": 6.583,
+      "fps": 24,
+      "use_from_s": 1.0,
+      "audio": "none",
+      "note": "H3 Max Turbo at 768P, upscaled to 1080p; one tap of the thumb at 4.04 s in the clip (3.04 s into the window), then a smile; the tap is small and quick; 8 frames were retouched by code to remove an earlier thumb lift (the untouched take is morning-brief-final-v3.mp4)",
+      "tap_at_s": 4.04
+    },
+    "morning-nod": {
+      "clip": "demo-video/shots/morning-nod/morning-nod-final-v1.mp4",
+      "grade": "final",
+      "seconds": 5.042,
+      "fps": 24,
+      "use_from_s": 1.0,
+      "audio": "none",
+      "note": "route K (Kling 4.0), first frame morning-nod-b, end frame the same room without the double, upscaled to 1080p; the nod is small (about 1.3 to 2.5 s); the double fades from 3.3 to 4.3 s: fade the tag out with him over that second (the track only says on or off); he is more solid than faint before he fades",
+      "tag_track": "demo-video/shots/morning-nod/tag-track-final-v1.json"
+    }
+  }
+}

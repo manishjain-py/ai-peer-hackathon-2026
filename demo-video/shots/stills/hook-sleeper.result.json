@@ -1,0 +1,29 @@
+{
+ "request_id": "01a1d9ee-c1b7-7b62-90c4-cf7ddcc8218f",
+ "billable_units_header": "0.069947061",
+ "inputs_sent": {
+  "prompt": "A new, closer camera angle on the scene of image 1: the same bedroom at night, the same bed, pillow, off-white duvet and warm bedside lamp, and the same sleeping man, who is the man of image 2. A medium close shot from just above mattress height, from the same side of the bed as image 1. He sleeps deeply and peacefully on his back with his face turned a little toward the camera, eyes closed, lips closed, one hand resting on the duvet on his chest. His head, shoulders and chest fill the middle of the frame. The low warm lamp on the bedside table at the left edge of the frame lights his face and shoulder; a slim dark smartphone lies flat on the bedside table beside the lamp, its screen off. Behind him the wall is deep teal-ink shadow, a dark blue-green, and at the right edge the curtain glows softly with cool blue moonlight, out of focus. He wears the same plain dark charcoal T-shirt; his face, hair, trimmed beard and warm medium-brown skin are exactly as in image 2. 50mm lens at f/2, shallow depth of field, gentle film grain. Photorealistic, like a frame from a premium advertising film shot on a cinema camera. Nothing written anywhere: no logos, no signs, no labels, no readable text on any object or screen.",
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab26e25/hZvuNgHdGiZ2pPY3ekcAF_f1.png",
+   "https://v3b.fal.media/files/b/0ab26e26/kSJO-RYdbkyh2lmZ_cZw8_a-portrait.jpg"
+  ]
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26e26/3Xc0t3ywAOXK3CwHrHnfg_dRTiVSNu.png",
+    "content_type": "image/png",
+    "file_name": "3Xc0t3ywAOXK3CwHrHnfg_dRTiVSNu.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

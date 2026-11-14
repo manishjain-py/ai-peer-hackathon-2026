@@ -1,0 +1,30 @@
+{
+ "request_id": "01a1d9f0-d60b-76d3-8a56-7818072dba71",
+ "billable_units_header": "0.071816802",
+ "inputs_sent": {
+  "prompt": "Keep everything in image 1 exactly as it is: the same room, the same camera position and framing, the same light, the lit phone on the bedside table, and the same man asleep in the bed, who has not moved. Add one new element: a double of the sleeping man, made of light, stands on the open floor at the foot of the bed, seen full length from head to bare feet. The double is an exact copy of the man shown in image 2 and image 3, who is also the man asleep in the bed: the same face, the same short dark hair and trimmed beard, the same warm medium-brown skin, the same dark charcoal T-shirt and the same loose dark grey pyjama trousers. His face and skin keep their own natural brown colour and his clothes keep their own dark colours; only the light itself is pale mint-green (#b7f4cf). His body is woven from light: thousands of very fine flowing lines of mint light run along the contours of his face, arms, shirt and trousers, like a long-exposure photograph of light drawn in the air, densest at the chest and thinning into loose drifting strands at the hands and feet. Between the lines he is softly see-through, so the curtain and the window can be dimly seen through him. His face stays clearly recognisable with its own natural skin colour. His light falls softly on the floorboards and the end of the bed. His body is turned three-quarters toward the camera and his head is turned to look down at the sleeping man; he does not look at the camera. His face is calm and kind, with closed lips. He looks friendly and capable, never ghostly or frightening. There are exactly two figures in the room: one solid and asleep in the bed, one made of light. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab26e33/rVDMm6WsNHB-1WS0LRHN6_night-phone-lit.png",
+   "https://v3b.fal.media/files/b/0ab26e26/kSJO-RYdbkyh2lmZ_cZw8_a-portrait.jpg",
+   "https://v3b.fal.media/files/b/0ab26e33/6qdD0Z3QcTiM2aO0VXorD_a-full.jpg"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26e34/wIq77bO3MqB6w1-uk9tTb_B4wXe3y2.png",
+    "content_type": "image/png",
+    "file_name": "wIq77bO3MqB6w1-uk9tTb_B4wXe3y2.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

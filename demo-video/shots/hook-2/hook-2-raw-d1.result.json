@@ -1,0 +1,24 @@
+{
+ "request_id": "01a1d9f1-8f0c-7681-addd-f88b187f01a9",
+ "billable_units_header": "6.4",
+ "inputs_sent": {
+  "prompt": "A man in a small meeting room in the late afternoon. For the first second he looks at the wall screen beyond the right side of the camera, reading it. Then he turns his head to a colleague just to the left of the camera and says, quietly impressed, in American English: \"His update's already here. His Peer gave it.\" His lips move in exact sync with the words. He gives a small nod toward the screen as he speaks. Natural, relaxed, small movements. The camera is locked on a tripod and does not move. One continuous shot with no cuts, no zoom, no music, no subtitles and no text.",
+  "image_url": "https://v3b.fal.media/files/b/0ab26e38/FhU3leMj-5JRfer1c5kpB_hook-2.png",
+  "target_audio_url": "https://v3b.fal.media/files/b/0ab26e38/rB04U0SckZ5iMuY4zSs24_hook-2-line-at-0.9s.wav",
+  "duration": 4.0,
+  "resolution": "768P",
+  "prompt_expansion_mode": "balanced"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab26e39/TsrIf5ST3k17_w_IuXq-C_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "TsrIf5ST3k17_w_IuXq-C_minimax-h3.mp4",
+   "file_size": 3411952
+  },
+  "expanded_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: <Picture 1> Cinematic, live-action, Static Shot. A man in his late 40s with salt-and-pepper hair, wearing a dark navy button-down shirt, sits in a glass-walled meeting room during the late afternoon. He is bathed in the warm, golden glow of the setting sun filtering through window blinds, creating soft shadows. In front of him on the wooden table sits an open notebook and a black mug. The man (S1) is initially looking off-camera to the right, his eyes moving slightly as he focuses on reading information on a wall-mounted screen. At 00:01.000, (S1) smoothly turns his head toward a colleague positioned just to the left of the camera. His expression is one of quiet impression. He speaks in a low, natural tone, his lips moving in perfect synchronization with the words: <d>[English] His update's already here. His Peer gave it.</d> As he speaks, he gives a subtle, professional nod toward the screen on the right, his movements remaining relaxed and natural. The camera remains completely locked on a tripod throughout the entire four-second sequence with no cuts or zooms.\n\noverall_soundscape: The ambient sound of a quiet office environment, featuring the faint, distant hum of an ventilation system. (S1) speaks in a quiet, clear, American English voice, accompanied by the soft rustle of his shirt sleeve as he moves his arm.\n\nnon_diegetic_music: N/A",
+  "timings": {
+   "inference": 1.3556500070000084
+  }
+ }
+}

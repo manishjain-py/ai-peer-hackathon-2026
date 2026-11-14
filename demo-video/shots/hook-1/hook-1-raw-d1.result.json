@@ -1,0 +1,24 @@
+{
+ "request_id": "01a1d9f1-7158-7350-a85f-5dae280b0d23",
+ "billable_units_header": "7.2",
+ "inputs_sent": {
+  "prompt": "A woman in a bright office. For the first second she reads her phone. Then she looks up from it toward a colleague just to the left of the camera, pleasantly surprised, eyebrows up, and says with a warm smile, in British English: \"Two A.M. where he is, and I've got my answer.\" Her lips move in exact sync with the words. She lowers the phone a little as she speaks. Natural, relaxed, small movements; the people far behind her barely move. The camera is locked on a tripod and does not move. One continuous shot with no cuts, no zoom, no music, no subtitles and no text.",
+  "image_url": "https://v3b.fal.media/files/b/0ab26e37/R-z5526fJvIPhHov-L8QM_hook-1.png",
+  "target_audio_url": "https://v3b.fal.media/files/b/0ab26e37/JgMKxnDgjk-tgAwYOaEnN_hook-1-line-at-0.9s.wav",
+  "duration": 4.5,
+  "resolution": "768P",
+  "prompt_expansion_mode": "balanced"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab26e38/XdVY36SiMYZfcmv1dXJb0_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "XdVY36SiMYZfcmv1dXJb0_minimax-h3.mp4",
+   "file_size": 5880920
+  },
+  "expanded_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] Cinematic, live-action, Static Shot. The scene opens on <Picture 1>, featuring a Black woman with her hair pulled back, wearing a mustard-yellow knit sweater, standing in a bright, modern office with large windows in the background. She is looking down at a black smartphone held in her hands, her face illuminated by the soft office light. The background shows blurred office elements like desks, indoor plants, and distant moving figures. At 00:01.000, she looks up from her phone, turning toward a colleague positioned just to the left of the camera. Her expression shifts to one of pleasant surprise, her eyebrows raising slightly and a warm, genuine smile forming her face. She speaks directly to the colleague with a clear British accent: <d>[English]Two A.M. where he is, and I've got my answer.</d> Her lips move in perfect synchronization with the spoken words. As she speaks, she slightly lowers the phone toward her chest level, her movements appearing natural and relaxed. In the deep background, other office workers move with subtle, realistic motions. The camera remains completely locked on a tripod throughout the entire 4.5-second duration.\n\noverall_soundscape: The ambient hum of a quiet office is present, featuring the distant, muffled sounds of keyboards and soft conversations. The woman's voice is clear and warm with a distinct British lilt, accompanied by the faint rustle of her sweater sleeve as she moves.\n\nnon_diegetic_music: N/A",
+  "timings": {
+   "inference": 1.6465045140000143
+  }
+ }
+}

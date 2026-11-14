@@ -1,0 +1,20 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "A man at his home desk in the evening. For the first second he reads his laptop screen, smiling. Then he leans back in his chair, half laughing, shakes his head a little in friendly disbelief and, looking at someone just beside the camera, asks in Indian English: \"Does he ever sleep?\" His lips move in exact sync with the words. Then he keeps smiling, amused. Natural, relaxed, small movements. The camera is locked on a tripod and does not move. One continuous shot with no cuts, no zoom, no music, no subtitles and no text.",
+    "image_url": "file:demo-video/shots/stills/hook-3.png",
+    "target_audio_url": "file:demo-video/shots/hook-3/audio/hook-3-line-at-0.9s.wav",
+    "duration": 3.0,
+    "resolution": "768P",
+    "prompt_expansion_mode": "balanced"
+  },
+  "expect": {
+    "units": 3.7,
+    "unit": "second of video at 768P",
+    "unit_price": 0.028,
+    "cost_usd": 0.1036,
+    "basis": "fal.ai page 2026-11-14: $0.028 per second at 768P until 15 November; the output can run 0.7 s longer than asked"
+  },
+  "output": "demo-video/shots/hook-3/hook-3-raw-d1",
+  "note": "hook-3 draft 1: H3 Max Turbo from the still, WP2's line pinned as the soundtrack (the line starts at 0.9 s); the cheapest lip-sync try"
+}

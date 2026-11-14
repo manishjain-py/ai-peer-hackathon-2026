@@ -1,0 +1,20 @@
+{
+  "endpoint": "google/gemini-omni-flash/v1.2/image-to-video",
+  "inputs": {
+    "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed and never moves. A man sleeps in the bed and stays completely still. His double, made of soft mint light, stands at the foot of the bed. The double turns away from the bed, and the fine threads of light that joined him to the sleeper let go and fade. He walks calmly across the room to the desk on the right, pulls out the chair, sits down and opens the laptop. The laptop's screen lights up, a plain white glow, and its light falls on his face. He rests his hands on the keyboard and looks at the screen, calm and focused, and holds still. There are only two figures at all times: one solid and asleep, one made of light. The double never looks at the camera. Calm, graceful, unhurried motion. One continuous shot with no cuts, no zoom, no music, no speech, no subtitles and no text.",
+    "image_url": "file:demo-video/shots/stills/night-stand.png",
+    "end_image_url": "file:demo-video/shots/stills/night-desk.png",
+    "aspect_ratio": "16:9",
+    "resolution": "360p",
+    "duration": 10
+  },
+  "expect": {
+    "units": 10.5,
+    "unit": "second of video at 360p",
+    "unit_price": 0.0273,
+    "cost_usd": 0.2867,
+    "basis": "fal.ai page 2026-11-14: $0.0273 per second at 360p; input tokens add 2 to 5% (WP1's 10 s draft was billed 10.48 units)"
+  },
+  "output": "demo-video/shots/reveal-desk/reveal-desk-raw-d1-o",
+  "note": "reveal-desk draft, route O: Omni 1.2 Flash, first frame night-stand, end frame night-desk, 10 s at 360p"
+}

@@ -1,0 +1,24 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "Remove the see-through man made of light who stands beside the desk in image 1, completely: his whole body, his face, the pale mint-green glow in his chest and around him, and the faint mint tint he casts on the desk. Where he stood, show what was behind him: the wooden desk with the closed laptop on it, the wooden chair, the teal wall with its soft patches of warm sunlight, and the skirting board, all whole and in the same warm sunrise light, with no glow, no shadow and no trace of him left. The man in the foreground, seen from behind and out of focus, stays exactly as he is. Keep everything else in the picture exactly the same: the same camera, framing, focus, curtain, bed, light and colours.",
+    "image_urls": [
+      "file:demo-video/shots/stills/morning-nod-b.png"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.09,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.09,
+    "estimate": true,
+    "basis": "the 2K edits on this model cost 6.5 to 9 cents each today (demo-video/ledger/wp3.csv)"
+  },
+  "output": "demo-video/shots/stills/morning-nod-plate",
+  "note": "M3 plate: morning-nod-b with the double of light removed (desk, chair and wall shown), a background plate for a fade made by code; only the still itself is given, no portraits, because nobody's face is in it (helper wp3-morning)"
+}

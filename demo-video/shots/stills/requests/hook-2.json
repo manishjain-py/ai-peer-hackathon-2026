@@ -1,0 +1,21 @@
+{
+  "endpoint": "google/nano-banana-2.1",
+  "inputs": {
+    "prompt": "A cinematic film still, a medium close-up at eye level, of a white American man in his mid-forties in a small glass-walled meeting room in the late afternoon. He has short sandy-brown hair greying at the temples, light stubble, and wears a navy cotton shirt with the sleeves rolled up. He sits at a wooden meeting table with a paper notebook and a ceramic mug in front of him, his body turned three-quarters to the right of the camera, leaning back a little in his chair. He looks up and past the right side of the camera at a large wall screen that is outside the frame; its soft cool glow lights the front of his face, while low golden late-afternoon sunlight comes through the window blinds behind him and rims his hair and shoulder with warm light. His expression is quietly impressed: eyebrows slightly raised, lips closed. Warm amber and gold tones with long soft shadows of the blinds on the wall. 50mm lens at f/2, shallow depth of field, natural skin texture, no beauty retouching: an ordinary, likeable working person, not a model. Photorealistic, like a frame from a premium advertising film shot on a cinema camera. Nothing written anywhere: no logos, no signs, no labels, no readable text on any object or screen. No screen is visible in the picture.",
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.08,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.08,
+    "estimate": true,
+    "basis": "WP1 paid 6 to 8.5 cents for a 2K picture on this model (demo-video/ledger/wp1.csv)"
+  },
+  "output": "demo-video/shots/stills/hook-2",
+  "note": "hook-2: the colleague in the small meeting room in late afternoon, glancing at the wall screen outside the frame"
+}

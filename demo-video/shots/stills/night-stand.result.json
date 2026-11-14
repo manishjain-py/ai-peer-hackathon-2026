@@ -1,0 +1,30 @@
+{
+ "request_id": "01a1d9f5-540b-7332-a989-cd31207cdb09",
+ "billable_units_header": "0.081003285",
+ "inputs_sent": {
+  "prompt": "Keep everything in image 1 exactly as it is: the same room, the same camera position and framing, the same light, the lit phone on the bedside table, and the same man asleep in the bed under the duvet, who has not moved. Add one new element: a double of the sleeping man, made of light, stands on the open floor at the foot of the bed, seen full length from head to bare feet. The double is an exact copy of the man shown in image 2 and image 3, who is also the man asleep in the bed: the same face, the same short dark hair and trimmed beard, the same warm medium-brown skin, the same dark charcoal T-shirt and the same loose dark grey pyjama trousers. His face and skin keep their own natural brown colour and his clothes keep their own dark colours; only the light itself is pale mint-green (#b7f4cf). He is lit from within: a soft core of mint light glows inside his chest and shines out through his body, which has soft edges and no hard drawn outline. He is softly luminous and almost solid; toward his bare feet he becomes a little more see-through, and a pool of soft mint light lies on the floorboards around his feet. A dozen hair-thin threads of mint light, as fine as spun glass, flow from the middle of his chest in long, slow, graceful curves through the air back to the chest of the sleeping man, joining the two of them like strands of silk, with tiny beads of light travelling along them. His body is turned three-quarters toward the camera and his head is turned to look down at the sleeping man; he does not look at the camera. His face is calm and kind, with closed lips. His glow touches the end of the bed and the folds of the curtain. He looks friendly, gentle and capable, never ghostly or frightening. There are exactly two figures in the room: one solid and asleep in the bed, one made of light. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab26e51/7ngje7i3IVsF8FDFNtFzH_night-tucked.png",
+   "https://v3b.fal.media/files/b/0ab26e26/kSJO-RYdbkyh2lmZ_cZw8_a-portrait.jpg",
+   "https://v3b.fal.media/files/b/0ab26e34/sII6HmrqFi6vArtsln9le_a-full.jpg"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26e51/ekvHaAqNvhAWHYqybXSoE_ie8O5eEf.png",
+    "content_type": "image/png",
+    "file_name": "ekvHaAqNvhAWHYqybXSoE_ie8O5eEf.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

@@ -1,0 +1,24 @@
+{
+  "out": "demo-video/shots/stills/stills.jpg",
+  "width": 2400,
+  "columns": 3,
+  "title": "The AI shots: one still per slot, before any video",
+  "subtitle": "All people are invented. The night frames are edits of one frame (same room, same camera); so are the two wide morning frames.",
+  "cells": [
+    {"image": "demo-video/shots/stills/hook-1.png", "label": "hook-1", "text": "a bright office by day"},
+    {"image": "demo-video/shots/stills/hook-2.png", "label": "hook-2", "text": "a small meeting room, late afternoon"},
+    {"image": "demo-video/shots/stills/hook-3.png", "label": "hook-3", "text": "a home desk under an evening lamp"},
+    {"image": "demo-video/shots/stills/hook-sleeper.png", "label": "hook-sleeper", "text": "he is fast asleep"},
+    {"image": "demo-video/shots/stills/night-phone-lit.png", "label": "reveal-rise 1", "text": "the phone lights up (first frame)"},
+    {"image": "demo-video/shots/stills/night-rise.png", "label": "reveal-rise 2", "text": "the double rises, joined to him by threads"},
+    {"image": "demo-video/shots/stills/night-tuck.png", "label": "reveal-rise 3", "text": "it pulls the blanket over his shoulder"},
+    {"image": "demo-video/shots/stills/night-stand.png", "label": "reveal-rise 4", "text": "it stands (last frame)"},
+    {"image": "demo-video/shots/stills/night-desk.png", "label": "reveal-desk", "text": "at the open laptop (last frame)"},
+    {"image": "demo-video/shots/stills/morning-wake-a.png", "label": "morning-wake 1", "text": "sunrise, he wakes rested"},
+    {"image": "demo-video/shots/stills/morning-wake-b.png", "label": "morning-wake 2", "text": "sitting up with his phone"},
+    {"image": "demo-video/shots/stills/morning-brief.png", "label": "morning-brief", "text": "he reads the brief and decides"},
+    {"image": "demo-video/shots/stills/morning-nod.png", "label": "morning-nod", "text": "the double, faint in daylight, nods to him"},
+    {"image": "demo-video/shots/stills/night-phone-dark.png", "label": "plate", "text": "the room before the phone lights (for code)"},
+    {"image": "demo-video/shots/stills/night-tucked.png", "label": "plate", "text": "the room after the tuck, no double (for code)"}
+  ]
+}

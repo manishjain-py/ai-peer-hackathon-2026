@@ -1,0 +1,25 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "Change the time of day in image 1 from night to early morning at sunrise. Keep the same room, the same camera position and framing, and every object in its place. Warm golden sunlight now streams in through the window and the thin curtains and falls in long soft shafts across the floor, the bed and the desk; the room is bright, warm and fresh, and the walls read as a soft muted teal. The bedside lamp is switched off, and the smartphone on the bedside table is dark. The man, who is the man of image 2, is just waking up in the same bed, rested: he lies in the same place with his eyes open and a small contented smile, stretching one arm up above the pillow. He wears the same dark charcoal T-shirt. He is the only person in the room. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+    "image_urls": [
+      "file:demo-video/shots/stills/night-phone-lit.png",
+      "file:demo-video/look/characters/a-portrait.jpg"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.09,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.09,
+    "estimate": true,
+    "basis": "WP1 paid 6 to 8.5 cents for a 2K picture on this model (demo-video/ledger/wp1.csv)"
+  },
+  "output": "demo-video/shots/stills/morning-wake-a",
+  "note": "M1: the same room at sunrise, employee A waking, rested (first frame of morning-wake)"
+}

@@ -1,0 +1,25 @@
+{
+ "request_id": "01a1d9ee-a519-7961-9ffc-51ac819deecb",
+ "billable_units_header": "0.071751828",
+ "inputs_sent": {
+  "prompt": "A cinematic film still, a medium close-up at eye level, of an Indian man in his early fifties at a desk in his home in the evening. He has short greying hair, a neat grey moustache, no beard, thin metal-framed glasses and a comfortable dark green cardigan over a light shirt. He sits behind an open laptop whose plain, unmarked lid is toward the camera in the lower right corner of the frame, so its screen cannot be seen; the screen's soft light touches his face. He is leaning back from the laptop a little, looking at its screen with an amused, half-laughing smile, as if he cannot quite believe what he has just read. A warm desk lamp beside him is the main light: cosy amber lamplight on his face and hands. Behind him, softly out of focus, a dim living room at night with a dark window, a plant and a floor lamp. Deep warm evening tones. 50mm lens at f/2, shallow depth of field, natural skin texture and a true-to-life medium-brown skin tone, no beauty retouching: an ordinary, likeable working person, not a model. Photorealistic, like a frame from a premium advertising film shot on a cinema camera. Nothing written anywhere: no logos, no signs, no labels, no readable text on any object or screen.",
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26e25/cj8OdH12BAdjYkXNCpKXz_ngdtCMf1.png",
+    "content_type": "image/png",
+    "file_name": "cj8OdH12BAdjYkXNCpKXz_ngdtCMf1.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

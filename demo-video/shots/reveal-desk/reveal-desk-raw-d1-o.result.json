@@ -1,0 +1,20 @@
+{
+ "request_id": "01a1d9f7-4c61-7642-bdc9-526de06722f9",
+ "billable_units_header": "10.58305",
+ "inputs_sent": {
+  "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed and never moves. A man sleeps in the bed and stays completely still. His double, made of soft mint light, stands at the foot of the bed. The double turns away from the bed, and the fine threads of light that joined him to the sleeper let go and fade. He walks calmly across the room to the desk on the right, pulls out the chair, sits down and opens the laptop. The laptop's screen lights up, a plain white glow, and its light falls on his face. He rests his hands on the keyboard and looks at the screen, calm and focused, and holds still. There are only two figures at all times: one solid and asleep, one made of light. The double never looks at the camera. Calm, graceful, unhurried motion. One continuous shot with no cuts, no zoom, no music, no speech, no subtitles and no text.",
+  "image_url": "https://v3b.fal.media/files/b/0ab26e5d/vyeQFFnLZ9JW-szV6ctUn_night-stand.png",
+  "end_image_url": "https://v3b.fal.media/files/b/0ab26e5e/tjlDs7U0PunVJzAv4jC4u_night-desk.png",
+  "aspect_ratio": "16:9",
+  "resolution": "360p",
+  "duration": 10
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab26e61/6M_FPAnSxpSUn3J2TiOxe_1d520d389e174d1d9afa0c76541ee0b5.mp4",
+   "content_type": "video/mp4",
+   "file_name": "1d520d389e174d1d9afa0c76541ee0b5.mp4",
+   "file_size": 1710469
+  }
+ }
+}

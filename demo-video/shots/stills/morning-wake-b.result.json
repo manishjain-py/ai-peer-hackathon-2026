@@ -1,0 +1,29 @@
+{
+ "request_id": "01a1d9f5-53fc-7b92-8f3e-ba8addb2d09e",
+ "billable_units_header": "0.083917491",
+ "inputs_sent": {
+  "prompt": "The man is now sitting up in the bed, awake and rested, with the duvet over his legs and his upper body upright, turned a little toward the camera. He holds his slim dark smartphone in both hands in front of his chest and looks down at it with a calm, contented face and closed lips. The back of the phone is toward the camera, so its screen cannot be seen, and the phone is no longer on the bedside table. He is the man of image 2, in the same dark charcoal T-shirt. Keep everything else in the picture exactly the same: the same room, camera, framing and warm sunrise light.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab26e51/Dbg2y15d6po6svjbDlKE3_morning-wake-a.png",
+   "https://v3b.fal.media/files/b/0ab26e26/kSJO-RYdbkyh2lmZ_cZw8_a-portrait.jpg"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26e51/szZJV5rZkl06r9w892749_XkoUKhh3.png",
+    "content_type": "image/png",
+    "file_name": "szZJV5rZkl06r9w892749_XkoUKhh3.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

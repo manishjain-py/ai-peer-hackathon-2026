@@ -1,0 +1,24 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "Switch the smartphone on the bedside table off: its screen is now dark and gives no light at all, and the mint glow it threw on the table, the lamp and the pillow is gone. Keep everything else in the picture exactly the same.",
+    "image_urls": [
+      "file:demo-video/shots/stills/night-phone-lit.png"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.08,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.08,
+    "estimate": true,
+    "basis": "WP1 paid 6 to 8.5 cents for a 2K picture on this model (demo-video/ledger/wp1.csv)"
+  },
+  "output": "demo-video/shots/stills/night-phone-dark",
+  "note": "N0: the night room with the phone dark (before it lights up); pairs with night-phone-lit.png for the light-up by code"
+}

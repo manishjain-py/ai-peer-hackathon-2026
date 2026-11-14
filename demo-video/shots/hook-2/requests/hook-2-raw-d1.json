@@ -1,0 +1,20 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "A man in a small meeting room in the late afternoon. For the first second he looks at the wall screen beyond the right side of the camera, reading it. Then he turns his head to a colleague just to the left of the camera and says, quietly impressed, in American English: \"His update's already here. His Peer gave it.\" His lips move in exact sync with the words. He gives a small nod toward the screen as he speaks. Natural, relaxed, small movements. The camera is locked on a tripod and does not move. One continuous shot with no cuts, no zoom, no music, no subtitles and no text.",
+    "image_url": "file:demo-video/shots/stills/hook-2.png",
+    "target_audio_url": "file:demo-video/shots/hook-2/audio/hook-2-line-at-0.9s.wav",
+    "duration": 4.0,
+    "resolution": "768P",
+    "prompt_expansion_mode": "balanced"
+  },
+  "expect": {
+    "units": 4.7,
+    "unit": "second of video at 768P",
+    "unit_price": 0.028,
+    "cost_usd": 0.1316,
+    "basis": "fal.ai page 2026-11-14: $0.028 per second at 768P until 15 November; the output can run 0.7 s longer than asked"
+  },
+  "output": "demo-video/shots/hook-2/hook-2-raw-d1",
+  "note": "hook-2 draft 1: H3 Max Turbo from the still, WP2's line pinned as the soundtrack (the line starts at 0.9 s)"
+}
