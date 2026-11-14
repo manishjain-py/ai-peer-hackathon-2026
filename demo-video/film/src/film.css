@@ -1,0 +1,129 @@
+/* The film's look. Night ink #152b31, paper #f6f4ee, the Peer's mint #b7f4cf, green #167353. */
+@font-face {
+  font-family: "Manrope";
+  src: url("../assets/fonts/Manrope.ttf");
+  font-weight: 200 800;
+  font-display: block;
+}
+
+:root {
+  --ink: #152b31;
+  --ink-deep: #0d1c21;
+  --ink-soft: #1d3a42;
+  --paper: #f6f4ee;
+  --mint: #b7f4cf;
+  --green: #167353;
+  --warm: #ffc98a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  background: var(--ink-deep);
+}
+
+#root {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  font-family: "Manrope", sans-serif;
+  color: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+/* Shown until the film's script has started: a dead script must never pass for a film. */
+#boot-error {
+  position: absolute; inset: 0; z-index: 99;
+  display: flex; align-items: center; justify-content: center;
+  background: #7a1010; color: #fff; font: 700 64px "Manrope", sans-serif;
+}
+
+.layer { position: absolute; inset: 0; overflow: hidden; }
+.layer.pass { pointer-events: none; }
+.scene { position: absolute; inset: 0; overflow: hidden; }
+
+/* ---- media hosts (the build writes the <video> tags; scenes adopt their hosts) ---------- */
+#media { position: absolute; inset: 0; }
+.vhost { position: absolute; inset: 0; overflow: hidden; }
+.vhost video {
+  position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+  object-fit: cover; background: #000;
+}
+
+/* ---- slate: a labelled stand-in for a shot that is not made yet ------------------------- */
+.slate { background: var(--ink); }
+.slate .glow {
+  position: absolute; width: 2400px; height: 2400px; left: -400px; top: -900px;
+  background: radial-gradient(closest-side, rgba(53, 108, 118, 0.55), rgba(21, 43, 49, 0) 70%);
+  will-change: transform;
+}
+.slate .sweep {
+  position: absolute; top: -200px; width: 700px; height: 1500px;
+  background: linear-gradient(90deg, rgba(183,244,207,0) 0%, rgba(183,244,207,0.07) 50%, rgba(183,244,207,0) 100%);
+  transform: rotate(14deg);
+  will-change: transform;
+}
+.slate .corner { position: absolute; width: 44px; height: 44px; border: 2px solid rgba(246,244,238,0.34); }
+.slate .corner.tl { left: 64px; top: 64px; border-right: 0; border-bottom: 0; }
+.slate .corner.tr { right: 64px; top: 64px; border-left: 0; border-bottom: 0; }
+.slate .corner.bl { left: 64px; bottom: 64px; border-right: 0; border-top: 0; }
+.slate .corner.br { right: 64px; bottom: 64px; border-left: 0; border-top: 0; }
+.slate .top {
+  position: absolute; left: 128px; right: 128px; top: 112px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.slate .pill {
+  font-size: 22px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--mint); border: 2px solid rgba(183,244,207,0.6); border-radius: 999px;
+  padding: 10px 22px 9px;
+}
+.slate .where { font-size: 26px; font-weight: 600; color: rgba(246,244,238,0.62); letter-spacing: 0.01em; }
+.slate .body { position: absolute; left: 128px; top: 250px; width: 1330px; will-change: transform; }
+.slate .id {
+  font-size: 30px; font-weight: 700; color: var(--mint); letter-spacing: 0.02em; margin-bottom: 26px;
+}
+.slate .shows {
+  font-size: 58px; line-height: 1.2; font-weight: 600; letter-spacing: -0.018em; color: var(--paper);
+  text-wrap: balance;
+}
+.slate .maker {
+  position: absolute; left: 128px; top: 746px;
+  font-size: 28px; font-weight: 600; color: rgba(246,244,238,0.6);
+}
+.slate .maker b { color: var(--paper); font-weight: 700; }
+.slate .bar {
+  position: absolute; left: 128px; right: 128px; bottom: 64px; height: 4px;
+  background: rgba(246,244,238,0.14); border-radius: 2px; overflow: hidden;
+}
+.slate .bar i { display: block; height: 100%; width: 100%; background: var(--mint); transform-origin: 0 50%; }
+
+/* ---- spoken-line captions ---------------------------------------------------------------- */
+#captions .cap {
+  position: absolute; left: 0; right: 0; bottom: 96px;
+  display: flex; justify-content: center;
+  will-change: transform, opacity;
+}
+#captions .cap .box {
+  display: flex; align-items: flex-start; gap: 20px;
+  padding: 18px 34px 20px;
+  border-radius: 26px;
+  background: rgba(10, 23, 27, 0.74);
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.38);
+}
+#captions .cap .words {
+  font-size: 46px; line-height: 1.24; font-weight: 650; letter-spacing: -0.012em;
+  color: var(--paper); text-align: center; white-space: nowrap;
+}
+#captions .cap .words .ln { display: block; }
+#captions .cap .words span { display: inline; white-space: pre; }
+#captions .cap.peer .box {
+  border: 1.5px solid rgba(183, 244, 207, 0.34);
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.38), 0 0 46px rgba(183, 244, 207, 0.16);
+}
+#captions .cap .who { flex: none; margin-top: 7px; width: 42px; height: 42px; }
+#captions .cap .who svg { display: block; }

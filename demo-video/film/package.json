@@ -1,0 +1,13 @@
+{
+  "name": "ai-peer-film",
+  "private": true,
+  "type": "module",
+  "description": "The AI Peer demo video, built in code. See README.md.",
+  "scripts": {
+    "render": "node render.mjs",
+    "render:part": "node render.mjs --part",
+    "render:private": "node render.mjs --private",
+    "build": "node build.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

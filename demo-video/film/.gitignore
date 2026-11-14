@@ -1,0 +1,7 @@
+# Made by build.mjs and render.mjs: rebuilt by one command, never committed.
+/.build/
+# Renders are committed one by one, by name (git add -f), so a private one can never slip in.
+/renders/*
+!/renders/.gitkeep
+# Working files of a voice call in flight.
+*.pending
