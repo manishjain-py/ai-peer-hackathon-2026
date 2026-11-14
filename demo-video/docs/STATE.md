@@ -46,7 +46,7 @@ Still running:
 | What | PID | Log | Stop command |
 |---|---|---|---|
 | Wait `wp2-draft-1`: ends when `~/.ai-peer/demo-video-private/renders/draft-01.mp4` exists (unchanged for 90 s), or when PID 48241 is gone; sends one routine Telegram line | 51880 | `wp2-draft-1.log` | `kill 51880` |
-| Wait `wp3-drafts`: ends when `~/repos/ai-peer-video-wp3/demo-video/shots/manifest.json` lists nine slots (unchanged for 60 s), or when PID 64734 is gone; sends one routine Telegram line | 65566 | `wp3-drafts.log` | `kill 65566` |
+| Wait `wp3-end`: ends when `~/repos/ai-peer-video-wp3/demo-video/shots/REPORT.md` exists (unchanged for 90 s), or when PID 64734 is gone | 87279 | `wp3-end.log` | `kill 87279` |
 | Wait `worker-stall`: ends when the transcript of WP2 or WP3 (and its sub-agents') has been silent for 25 minutes | 65574 | `worker-stall-2.log` | `kill 65574` |
 
 The waits are runs of `demo-video/tools/wait-for.sh` (its header shows the usage) in the
@@ -74,7 +74,8 @@ A successor starts its own from the tests written in the table.
 | Date (UTC) | Tool | What for | Amount |
 |---|---|---|---|
 | 2026-11-14 | fal.ai (WP1, finished) | Pictures of three possible employees, the night-room frames, and the clone shot by three routes (Kling 4.0, Gemini Omni Flash, two plates and code) | $6.60 (21 rows of `demo-video/ledger/wp1.csv`; about 4 cents above fal.ai's own bill, its report says) |
-| | **Total of the $100 cap** | | **$6.60** |
+| 2026-11-14 | fal.ai (WP3, running) | Stills for the nine shots, four looks for the double, a cheap moving draft of all nine | $3.74 so far (31 calls, its message of 12:14 UTC; `demo-video/ledger/wp3.csv` on its branch) |
+| | **Total of the $100 cap** | | **$10.34** |
 
 ## Needs Manish
 
@@ -93,8 +94,11 @@ Nothing blocks the build.
    `demo-video/shots/stills/double-looks.jpg`, and on the Attention group): which look for the
    double? A lit from inside the chest, B threads of light still joining him to the sleeper, C
    frosted glass, D woven lines of light. The controller's pick: B while he rises, settling
-   into A once he stands (the chest light is where the "AI Peer" tag sits). WP3 makes the six
-   shots without the double first, so the dearest shots can wait for his eyes.
+   into A once he stands (the chest light is where the "AI Peer" tag sits). WP3 chose the same
+   by itself (B with a mint core in the chest, no outline, no sparkles) and made it in the
+   film's frames (`shots/stills/night-rise.png`, `night-stand.png`): both pictures went to
+   Manish, with "the film is built with it unless you say otherwise". WP3 makes the six shots
+   without the double first, so the dearest shots can wait for his eyes.
 4. Still to come, one at a time: (a) may the old controller's window (2952) be closed; (b) a
    look at the fal.ai credit, which no key can read: WP3 may spend up to $60 (told to him at
    the take-over); (c) the recordings from his company laptop by Tuesday 17 November morning,
@@ -103,15 +107,17 @@ Nothing blocks the build.
 
 ## Next
 
-1. WP3's milestones. Its nine drafts in the manifest: look at `all-shots.jpg`, tell WP2 the
-   manifest is there. Each final of the two reveal shots: look, show Manish. Pass on Manish's
-   answers about the rise (K, O or P) and the double's look (A to D) as soon as they come.
-   Watch the money: WP3 reports its ledger total in each message and on passing $30.
+1. WP3 goes on: tag tracks and screen corners for the three double drafts, then finals of the
+   six shots without the double, then `reveal-rise`, `reveal-desk`, `morning-nod`. Each final
+   of the two reveal shots: look, show Manish. Pass on Manish's answers about the rise (K, O
+   or P) and the double's look as soon as they come. Watch the money: WP3 reports its ledger
+   total in each message and on passing $30. Its hook mouths are driven by WP2's sound but
+   the sync is not yet checked frame by frame.
    WP2 was at 40% context at 12:08 UTC and hands off at 45 to 50%: when it says so, start
    `ai-peer-video-wp2-2` from its hand-off, in the same worktree, with `CLAUDE_NO_IDLE_PING=1`,
    and close the old window after the checks. WP3 was at 24% after 15 minutes: expect the same.
 2. Manish's voice pick: pass it to WP2 if it is not voice 1.
-   The controller hands off at 45 to 50% context (33% at 12:08 UTC): the successor is
+   The controller hands off at 45 to 50% context (35% at 12:15 UTC): the successor is
    ai-peer-video-controller-3.
 3. Draft 1 from WP2: look at a frame at every cut, then send it to Manish.
 4. Sum the ledgers (`demo-video/ledger/*.csv`) into "Money spent" at each package's end; tell
@@ -153,3 +159,4 @@ Nothing blocks the build.
 | 2026-11-14 11:54 | ai-peer-video-controller-2 | Read WP1's report (its wait ended at 11:49 UTC) and sent its side-by-side clip to Manish with one question (which rise, and is the look bold enough). Closed WP1's window 3962 at 11:52 UTC after the checks. Wrote WP3's brief from WP1's verdict (drafts first; the signature shot both ways, O and K; bolder looks for the double tried in stills), made its worktree and launched ai-peer-video-wp3 at 11:53 UTC (window 3968, PID 64734, seen working at max effort). Re-armed the waits (WP3's nine drafts; a silent worker). The brief's facts are being checked by a read-only helper after the launch, not before it, to save time: its findings go to WP3 by message. | Waiting on WP3's stills and drafts, WP2's Draft 1, and Manish's two answers |
 | 2026-11-14 11:58 | ai-peer-video-controller-2 | WP2 reported milestone 1 by message: the narration (15 lines, checked by speech-to-text), the three voice samples, and a 2:00 animatic with 16 labelled slates (`demo-video/film/renders/animatic-01.mp4` in its worktree, branch commit c8effb0), built on HyperFrames. The controller looked at a 15-frame sheet of it (slates only, nothing private) and sent Manish a 720p copy as an optional listen for the voice question. `SHOTS.md` now carries WP2's film windows. | WP2 goes on to the parts made by code, the product screens, music and Draft 1 |
 | 2026-11-14 12:09 | ai-peer-video-controller-2 | The helper's check of WP3's brief reported (20 minutes, free calls only): the brief's paths, prices paid, slots, money split and privacy rule hold; twelve corrections (always set the resolution: Kling defaults to 1080p at $0.235 a second; the named lip-sync endpoints need 4 to 5 s of sound; stills are not exactly 16:9; no seed on Kling or Omni; the order of the finals) are in `research/fal-facts-2026-11-14.md` with live price tables, and went to WP3 by message; the controller re-read three of them itself. `SHOTS.md` gained the rule for where a spoken line starts. WP3 had spent $1.53 at 12:06 UTC (17 rows) and made its sheet of four looks for the double; the controller looked at it and sent it to Manish with its pick. | Waiting on WP3's drafts, WP2's Draft 1 and Manish's three answers |
+| 2026-11-14 12:15 | ai-peer-video-controller-2 | WP3 reported milestone 1 by message (and its wait ended): a moving draft of all nine slots in its manifest, $3.74 spent, draft PR 8. The controller looked at `all-shots.jpg` (nine coherent shots: three colleagues in three places, the sleeper, the rise with threads of light, the desk, the morning) and told WP2 to use the manifest in Draft 1. WP3 chose look B for the double by itself; its two key frames went to Manish. | WP3 on tag tracks, then finals; WP2 on the code parts and Draft 1 |
