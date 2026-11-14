@@ -26,17 +26,19 @@ set-ups: ask Manish before spending on them.
 | Session | Window | Session URL | Worktree | Branch | PR | Job |
 |---|---|---|---|---|---|---|
 | ai-peer-video-controller-1 | 2952 | https://claude.ai/code/session_01Nfn5h5eNL9YLJMnBQpKKMf | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | Controller: the interview and the research |
+| ai-peer-video-wp1 | 3962 | https://claude.ai/code/session_01Nfn5h7gC1ucD3V5X1FSeSk | `~/repos/ai-peer-video-wp1` (launched in the shared checkout) | video-wp1-look-test | none yet | WP1: three possible employees, the night frames, the clone shot three ways; cap $15; Fable 5.2, max effort, PID 41753 |
 
 Still running:
 
 | What | PID | Log | Stop command |
 |---|---|---|---|
 | One background helper of the controller: the report writer. All four researchers finished; their notes are committed. | inside the controller's session | it writes `demo-video/research/reports/AI video toolkit for demo film.md` | It ends by itself, and dies if the controller's session closes |
+| The controller's watcher for WP1's first milestone (it ends when `~/repos/ai-peer-video-wp1/demo-video/look/characters/characters.jpg` exists, when PID 41753 is gone, or after 90 minutes) | a background task of the controller's session | prints one line when it ends | It ends by itself |
 
 ## Packages (each line is written by its own worker only)
 
 - WP1, look pictures and hero-shot tests (`ai-peer-video-wp1`, brief
-  `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp1.md`, cap $15): not started.
+  `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp1.md`, cap $15): launched 2026-11-14 10:55 UTC.
 
 ## Money spent
 
@@ -80,3 +82,4 @@ Still running:
 | 2026-11-14 10:43 | ai-peer-video-controller-1 | The last researcher reported; the report writer started. Manish answered question 2: Claude's own abilities first (V2), a $100 cap for now (V3). Question 3 (who is the employee in the film) asked. | Waiting on question 3 and on the report |
 | 2026-11-14 10:49 | ai-peer-video-controller-1 | Manish answered question 3: C, an invented employee (V4). Question 4 (how the video is shown) asked. The controller starts the brief for the first worker: look pictures and test shots of the clone. | Waiting on question 4 and on the report |
 | 2026-11-14 10:54 | ai-peer-video-controller-1 | Wrote the brief for WP1 (three possible employees, the night frames, the clone shot three ways, cap $15) from the research notes read first-hand and fal.ai's own prices. The repo is hackathon-light, so the brief was self-checked against the catalogue, with no reviewer pass. | WP1 worker being launched |
+| 2026-11-14 10:55 | ai-peer-video-controller-1 | Launched ai-peer-video-wp1 (window 3962, PID 41753, Fable 5.2 at max effort) in the shared checkout with its worktree at `~/repos/ai-peer-video-wp1`; a watcher waits for its character sheet. | Worker reading its brief |
