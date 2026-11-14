@@ -1,0 +1,24 @@
+{
+ "endpoint": "google/nano-banana-2.1/edit",
+ "inputs": {
+  "prompt": "Image 1 shows a man sitting at a table in a small meeting room in late-afternoon light. Make a new photo of the same man on a video call, exactly as his laptop's webcam sees him. He sits at the same table in the same small meeting room, facing the camera straight on, at eye level. The framing is a typical webcam picture: his head and shoulders and the top of his chest, his face a little above the centre of the picture, with a little space above his head. He looks at his screen, just below the camera lens, with a calm, friendly and attentive face, his lips closed. He is exactly the same man as in image 1: the same face, the same hair, the same skin and the same dark navy shirt. His hands are out of the picture. Behind him, softly out of focus, the same meeting room: the glass wall, the window blinds and the warm late-afternoon sun. It looks like a real frame from a video call: natural colours, a little soft, an ordinary laptop camera, not a film still. Nothing written anywhere.",
+  "image_urls": [
+   "file:demo-video/shots/stills/hook-2.png"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "expect": {
+  "units": 0.09,
+  "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+  "unit_price": 1.0,
+  "cost_usd": 0.09,
+  "estimate": true,
+  "basis": "Amara's webcam still on this model cost $0.0854 (demo-video/ledger/wp2-5.csv)"
+ },
+ "output": "demo-video/shots/meeting-tiles/daniel-webcam",
+ "note": "Draft 3: Daniel's Zoom tile as his laptop's webcam sees him, to match Amara's (the controller's yes, about $0.17 for both)"
+}
