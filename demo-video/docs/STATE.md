@@ -48,12 +48,11 @@ Still running:
 ## Needs Manish
 
 1. The interview, one question at a time, in the controller's session. Answered so far: V1 to
-   V6 in `DESIGN.md`. Question 6, asked 2026-11-14 11:08 UTC with WP1's character sheet
-   (`~/repos/ai-peer-video-wp1/demo-video/look/characters/characters.jpg`, branch
-   `video-wp1-look-test`): which invented employee, A (a man with a trimmed beard,
-   recommended, and the one WP1 already uses), B or C. Not yet asked, next in line: what the
-   product screens show and where they may go (demo data only; real company content kept on
-   this Mac only; or real content that never leaves his company laptop).
+   V7 in `DESIGN.md`. Question 7, asked 2026-11-14 11:09 UTC: what the product screens show and where
+   they may go. Options: demo data only (recommended as the safe default; recordings of 6
+   November already exist on this Mac); real company content kept on this Mac only, never in
+   git or an outside tool; real company content that never leaves his company laptop, with
+   the last assembly done there.
 
 ## Next
 
@@ -89,3 +88,4 @@ Still running:
 | 2026-11-14 11:01 | ai-peer-video-controller-1 | Manish answered question 4: A, the video is the whole entry and judges watch it alone (V5). Question 5 (the hackathon's rules and scoring) asked. | Waiting on question 5 and on WP1's first pictures |
 | 2026-11-14 11:07 | ai-peer-video-controller-1 | Manish answered question 5: no written rules (V6). Question 6 (what the product screens show and where they may go) asked. | Superseded by the next row: the pictures arrived first |
 | 2026-11-14 11:08 | ai-peer-video-controller-1 | WP1 reported milestone 1 (its message, and the watcher): the sheet of three invented employees, made with `google/nano-banana-2.1`, $0.39 spent so far by its ledger. The controller looked at the sheet (real-looking, even light, skin tones true) and sent it to Manish as question 6, in place of the product-screens question, which moves to question 7. WP1 goes on with character A. | Waiting on question 6 and on WP1's frames and hero tests |
+| 2026-11-14 11:09 | ai-peer-video-controller-1 | Manish picked employee A (V7); WP1 already uses A, so no message was sent to it. Question 7 (what the product screens show and where they may go) asked. | Waiting on question 7 and on WP1's frames and hero tests |
