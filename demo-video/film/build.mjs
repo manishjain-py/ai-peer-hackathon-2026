@@ -22,12 +22,17 @@ const home = (p) => (p.startsWith("~/") ? path.join(os.homedir(), p.slice(2)) : 
 const onGrid = (x, fps) => Math.abs(x * fps - Math.round(x * fps)) < 1e-6;
 const r3 = (x) => Math.round(x * 1000) / 1000;
 
-export function buildDir(variant) {
-  return variant === "private" ? path.join(PRIVATE, "build") : path.join(FILM, ".build", "public");
+/** Where a run keeps its files. A lane gives a helper its own folders, so two runs never share a build. */
+export function runHome(variant, lane) {
+  if (variant === "private") return PRIVATE;
+  return lane ? path.join(FILM, ".build", "lanes", lane) : path.join(FILM, ".build");
+}
+export function buildDir(variant, lane) {
+  return path.join(runHome(variant, lane), variant === "private" ? "build" : lane ? "project" : "public");
 }
 
 /** Read the film and resolve what every slot shows. Throws on a timeline that does not hold. */
-export function readFilm({ variant = "public" } = {}) {
+export function readFilm({ variant = "public", withScenes = [] } = {}) {
   const shots = readJson(path.join(FILM, "shots.json"));
   const narration = readJson(path.join(FILM, "audio", "narration.json"));
   const productPath = path.join(FILM, "product.json");
@@ -77,7 +82,9 @@ export function readFilm({ variant = "public" } = {}) {
         media.push(slot.video);
       }
     } else if (s.kind === "code") {
-      if (fs.existsSync(path.join(FILM, "src", "scenes", `${s.scene}.js`))) slot.use = "scene";
+      // A scene by code is used once it is listed as ready in shots.json (or asked for with --with).
+      const ready = (shots.scenes_ready || []).includes(s.scene) || withScenes.includes(s.scene);
+      if (ready && fs.existsSync(path.join(FILM, "src", "scenes", `${s.scene}.js`))) slot.use = "scene";
     } else if (s.kind === "product") {
       const cut = product.slots[s.id];
       slot.slateNote = "<b>Product screen.</b> A real recording, kept on this Mac only: the private render shows it.";
@@ -126,7 +133,8 @@ export function readFilm({ variant = "public" } = {}) {
 
   if (problems.length) throw new Error("The film does not hold together:\n  - " + problems.join("\n  - "));
 
-  const overlays = ["clock", "chips", "tag"].filter((n) => fs.existsSync(path.join(FILM, "src", "overlays", `${n}.js`)));
+  const overlays = [...new Set([...(shots.overlays_ready || []), ...withScenes])]
+    .filter((n) => fs.existsSync(path.join(FILM, "src", "overlays", `${n}.js`)));
   const film = {
     variant, fps, seconds, width: shots.width, height: shots.height, bpm: shots.bpm,
     parts: shots.parts, slots, overlays,
@@ -145,8 +153,8 @@ function videoTag(v) {
 }
 
 /** Write the project folder. Returns what was built. */
-export function build({ variant = "public", out = buildDir(variant) } = {}) {
-  const read = readFilm({ variant });
+export function build({ variant = "public", lane, withScenes = [], out = buildDir(variant, lane) } = {}) {
+  const read = readFilm({ variant, withScenes });
   if (variant !== "private" && read.copies.some((c) => c.to.startsWith("assets/private/"))) {
     throw new Error("a public build tried to use a private recording");
   }

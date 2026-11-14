@@ -5,6 +5,8 @@
   "height": 1080,
   "seconds": 120,
   "bpm": 120,
+  "scenes_ready": [],
+  "overlays_ready": [],
   "wp3_manifest": "/Users/manishjain/repos/ai-peer-video-wp3/demo-video/shots/manifest.json",
   "parts": [
     { "id": "hook", "title": "The hook", "start": 0, "length": 12 },

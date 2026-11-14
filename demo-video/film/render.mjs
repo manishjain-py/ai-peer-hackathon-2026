@@ -8,6 +8,10 @@
 //                                                      everything it writes stays under
 //                                                      ~/.ai-peer/demo-video-private/
 //   options: --name NAME (file name)  --quality draft|looks|delivery  --workers N  --no-check
+//            --lane NAME   keep this run's build, work files and render in .build/lanes/NAME/
+//                          (for a helper working beside other renders)
+//            --with a,b    also use these scenes or overlays though shots.json does not list
+//                          them as ready yet
 //
 // Steps: build the project (build.mjs) -> check that the page runs -> capture the picture with
 // HyperFrames (pinned) -> mix the sound with ffmpeg -> join -> probe and measure the result.
@@ -15,7 +19,7 @@ import { execFileSync, spawnSync } from "node:child_process";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { build, FILM, PRIVATE } from "./build.mjs";
+import { build, FILM, PRIVATE, runHome } from "./build.mjs";
 import { ffprobe, measure, mix, voiceOverMusic } from "./tools/mix.mjs";
 
 const HYPERFRAMES = "hyperframes@0.9.45";
@@ -27,7 +31,7 @@ function parse(argv) {
     if (k === "--private") a.private = true;
     else if (k === "--no-check") a.noCheck = true;
     else if (k === "--no-sound") a.noSound = true;
-    else if (["--part", "--from", "--to", "--name", "--quality", "--workers"].includes(k)) a[k.slice(2)] = argv[++i];
+    else if (["--part", "--from", "--to", "--name", "--quality", "--workers", "--lane", "--with"].includes(k)) a[k.slice(2)] = argv[++i];
     else throw new Error(`unknown option ${k}`);
   }
   return a;
@@ -72,12 +76,13 @@ function main() {
   const args = parse(process.argv.slice(2));
   const variant = args.private ? "private" : "public";
   const t0 = Date.now();
-  const b = build({ variant });
+  if (args.lane && variant === "private") throw new Error("a private render has no lanes");
+  const b = build({ variant, lane: args.lane, withScenes: args.with ? args.with.split(",") : [] });
   const { film } = b;
-  const home = variant === "private" ? PRIVATE : path.join(FILM, ".build");
+  const home = runHome(variant, args.lane);
   const work = path.join(home, "work");
   const tmp = variant === "private" ? path.join(PRIVATE, "tmp") : undefined;
-  const renders = variant === "private" ? path.join(PRIVATE, "renders") : path.join(FILM, "renders");
+  const renders = variant === "private" || args.lane ? path.join(home, "renders") : path.join(FILM, "renders");
   for (const d of [work, renders, tmp].filter(Boolean)) fs.mkdirSync(d, { recursive: true });
 
   let from = 0, to = film.seconds, label = "";
