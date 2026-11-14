@@ -23,6 +23,7 @@
 | V3 | How much may be spent? | A cap of $100 for now. Raising it is his call, later. | "for the budget cap, let's keep $100 for now, and afterwards we will see if we can extend it or not." (2026-11-14 10:42 UTC) |
 
 | V4 | Who is the employee in the film? Asked as: A, Manish filmed on his phone (recommended); B, Manish from photos only, AI-generated; C, an invented employee, all AI-made, paid from the $100. | C: an invented employee. No filming of Manish and no photos of him. | "C" (2026-11-14 10:48 UTC) |
+| V5 | How is the video shown at the hackathon? Asked as: A, it is the whole entry and judges watch it alone; B, it plays inside his live pitch; C, both or not sure. | A: the video is the whole entry; judges watch it on their own. So it must explain the product by itself and show it working. | "A" (2026-11-14 11:01 UTC) |
 
 ### The controller's own routine calls (undo: tell the controller)
 
