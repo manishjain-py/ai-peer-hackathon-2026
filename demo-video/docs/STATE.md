@@ -33,6 +33,11 @@ Still running:
 |---|---|---|---|
 | One background helper of the controller: the report writer. All four researchers finished; their notes are committed. | inside the controller's session | it writes `demo-video/research/reports/AI video toolkit for demo film.md` | It ends by itself, and dies if the controller's session closes |
 
+## Packages (each line is written by its own worker only)
+
+- WP1, look pictures and hero-shot tests (`ai-peer-video-wp1`, brief
+  `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp1.md`, cap $15): not started.
+
 ## Money spent
 
 | Date (UTC) | Tool | What for | Amount |
@@ -74,3 +79,4 @@ Still running:
 | 2026-11-14 10:39 | ai-peer-video-controller-1 | Three of four researchers reported; notes committed. Manish answered question 1: due Thursday 19 November. Working dates set (`DESIGN.md` C4). Question 2 (the budget) asked. | Waiting on question 2 and on the last researcher |
 | 2026-11-14 10:43 | ai-peer-video-controller-1 | The last researcher reported; the report writer started. Manish answered question 2: Claude's own abilities first (V2), a $100 cap for now (V3). Question 3 (who is the employee in the film) asked. | Waiting on question 3 and on the report |
 | 2026-11-14 10:49 | ai-peer-video-controller-1 | Manish answered question 3: C, an invented employee (V4). Question 4 (how the video is shown) asked. The controller starts the brief for the first worker: look pictures and test shots of the clone. | Waiting on question 4 and on the report |
+| 2026-11-14 10:54 | ai-peer-video-controller-1 | Wrote the brief for WP1 (three possible employees, the night frames, the clone shot three ways, cap $15) from the research notes read first-hand and fal.ai's own prices. The repo is hackathon-light, so the brief was self-checked against the catalogue, with no reviewer pass. | WP1 worker being launched |
