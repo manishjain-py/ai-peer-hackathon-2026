@@ -38,6 +38,13 @@ C6 already says Opus 5.5 at max effort when Fable runs short, so every session l
 now on runs on Opus 5.5 (the controller's call under C6; to undo it, launch with
 `--model claude-fable-5-2`).
 
+**The usage log at 12:54 UTC:** `2026-11-14T12:51:24Z week=25 fable=49 session=?`. From 12:34 to 12:46 UTC the week went from 20%
+to 24% and Fable's from 39% to 47%: twice the earlier pace, over 12 minutes that hold
+controller-3's read-in and controller-2's hand-off. If it stayed there, Fable's week would end
+at about 14:05 UTC and the whole week at about 16:30 UTC (rough: the readings are whole
+percents). A seventh wait, `fable-cap`, sends Manish an Attention line when Fable's week
+reaches 96%, because a session stopped at the dialog cannot.
+
 Keys checked with free, read-only calls (values never printed): fal.ai valid (its balance
 cannot be read with this key); ElevenLabs valid (plan `growing_business`, about 97% of the
 character quota free, instant and professional voice cloning allowed); the Gemini API key lists
@@ -64,15 +71,16 @@ Still running:
 
 | What | PID | Log | Stop command |
 |---|---|---|---|
-| Two helpers of the old ai-peer-video-wp2 session, writing only their own files in `~/repos/ai-peer-video-wp2`: the Earth close (`src/scenes/earth.js`, `assets/earth/`) and music with sound effects (`audio/music/`, `audio/sfx/`, `audio/mix.json`, `audio/SOURCES.md`, `demo-video/ledger/wp2.csv`) | inside window 3963 | none | They end by themselves |
+| One helper still runs (the Earth close; the music and sound helper ended, its report is on `main` at `86c32f7`) of the two helpers of the old ai-peer-video-wp2 session, which write only their own files in `~/repos/ai-peer-video-wp2`: the Earth close (`src/scenes/earth.js`, `assets/earth/`) and music with sound effects (`audio/music/`, `audio/sfx/`, `audio/mix.json`, `audio/SOURCES.md`, `demo-video/ledger/wp2.csv`) | inside window 3963 | none | They end by themselves |
 | Wait `draft1`: Draft 1's file `~/.ai-peer/demo-video-private/renders/draft-01.mp4` unchanged for 90 s, or PID 88331 (WP2-2) gone | 22594 | `~/.ai-peer/demo-video-private/controller/waits.log` | `kill 22594` |
 | Wait `wp3-report`: `demo-video/shots/REPORT.md` in `~/repos/ai-peer-video-wp3` unchanged for 90 s, or PID 64734 (WP3) gone | 22607 | the same log | `kill 22607` |
 | Wait `stall-wp2-2`: the transcript of WP2-2 (`3b59da85-1a19-4cc4-9875-244a8d19e09d`) and its sub-agents silent for 25 minutes | 22623 | the same log | `kill 22623` |
 | Wait `stall-wp3`: the same for WP3 (`1c97ea6b-c294-42be-ae5e-8c9d772564bf`) | 22665 | the same log | `kill 22665` |
 | Wait `stall-wp2`: the same for the old WP2 and its two helpers (`c5e26ecb-e51c-4042-9605-b280dbe83c04`) | 22682 | the same log | `kill 22682` |
 | Wait `usage`, the usage alarm: `demo-video/tools/usage-check.sh 55 28` every 5 minutes; it ends when Fable's week reaches 55% or the whole week 28%, and the controller then starts it again at the next mark | 22693 | the same log; the readings in `~/.ai-peer/demo-video-private/controller/usage.log` | `kill 22693` |
+| Wait `fable-cap`: `usage-check.sh 96 200` every 10 minutes; when Fable's week reaches 96% it sends Manish an Attention line (press Enter on the dialog in windows 3972, 3968, 3963, 3973) and ends | 38756 | the same log | `kill 38756` |
 
-The six waits are runs of `demo-video/tools/wait-for.sh` (its header shows the usage) in the
+The seven waits are runs of `demo-video/tools/wait-for.sh` (its header shows the usage) in the
 background of ai-peer-video-controller-3, started at 12:40 UTC: the end of one wakes that
 session, and each sends one routine Telegram line. Their PIDs are also in
 `~/.ai-peer/demo-video-private/controller/<label>.pid`. A successor stops them and starts its
@@ -104,8 +112,9 @@ own. The usage alarm's test is `demo-video/tools/usage-check.sh` (its header sho
 | Date (UTC) | Tool | What for | Amount |
 |---|---|---|---|
 | 2026-11-14 | fal.ai (WP1, finished) | Pictures of three possible employees, the night-room frames, and the clone shot by three routes (Kling 4.0, Gemini Omni Flash, two plates and code) | $6.60 (21 rows of `demo-video/ledger/wp1.csv`; about 4 cents above fal.ai's own bill, its report says) |
-| 2026-11-14 | fal.ai (WP3, running) | Stills for the nine shots, four looks for the double, a cheap moving draft of all nine | $3.74 so far (31 calls, its message of 12:14 UTC; `demo-video/ledger/wp3.csv` on its branch) |
-| | **Total of the $100 cap** | | **$10.34** |
+| 2026-11-14 | fal.ai (WP3, running) | Stills for the nine shots, four looks for the double, a cheap moving draft of all nine | $19.04 so far (85 rows of `demo-video/ledger/wp3.csv` in its worktree, summed by the controller at 12:54 UTC; $7.90 at 12:34 UTC) |
+| 2026-11-14 | fal.ai (WP2's music and sound helper, finished) | The music bed (one take of Google's Lyria 3.5) and nine sound effects | $0.94 (8 rows of `demo-video/ledger/wp2.csv`, in WP2's worktree until ai-peer-video-wp2-2 commits it) |
+| | **Total of the $100 cap** | | **$26.57** (the three ledgers summed at 12:54 UTC; WP1's 21 rows give $6.60) |
 
 ## Needs Manish
 
@@ -134,7 +143,18 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    look at the fal.ai credit, which no key can read: WP3 may spend up to $60 (told to him at
    the take-over); (c) the recordings from his company laptop by Tuesday 17 November morning,
    India time, into `~/.ai-peer/demo-video-private/` (the list is in `PLAN.md`; told to him
-   2026-11-14 11:28 UTC); (d) Draft 1.
+   2026-11-14 11:28 UTC); (d) Draft 1; (e) **the music's licence wording** (raised by
+   ai-peer-video-wp2, read by the controller at 12:54 UTC in
+   `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-2-helpers.md`, "The terms"): the music bed is
+   one take of Google's Lyria 3.5 bought through fal.ai. fal.ai marks the model "Commercial use"
+   and grants use "for your own personal or internal business use". The published words do not
+   say that the customer owns the music, whether "your own" use covers a film shown inside his
+   employer from his own fal.ai account, or which of Google's terms reach fal.ai's customers.
+   Recommended: use it for the internal hackathon film and look again before any public
+   release. The other choice: a bed made fully by code, with no licence question and a plainer
+   sound (not made yet). It does not block Draft 1; it is asked after the usage answer; (f) his
+   ear on the music when Draft 1 comes (nobody has heard it): the joins at 54, 72, 74 and 90
+   seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
 
@@ -150,9 +170,13 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    or P) and the double's look as soon as they come. Watch the money: WP3 reports its ledger
    total in each message and on passing $30. Its hook mouths are driven by WP2's sound but
    the sync is not yet checked frame by frame.
-   When ai-peer-video-wp2 says its helpers' report is on `main`: check the file, then close its
-   window 3963 after the usual checks. WP3 was at 24% context after 15 minutes: it will hand
-   off too (its successor is `ai-peer-video-wp3-2`, launched the way WP2-2 was).
+   ai-peer-video-wp2's music and sound helper has ended; its report is on `main` (commit
+   `86c32f7`, checked by the controller at 12:54 UTC). Its Earth helper still runs, and that
+   report follows as `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-2-helpers-earth.md`. When
+   ai-peer-video-wp2 says that file is on `main`: check it, then close window 3963 after the
+   usual checks. WP3 was at 38% context at 12:44 UTC: it hands off at 45 to 50% and tells the
+   controller. Its successor `ai-peer-video-wp3-2` is not needed for Draft 1, so it is launched
+   (on Opus 5.5, the way WP2-2 was) only after Manish's answer on usage.
 2. Manish's three answers are in (`DESIGN.md` V12 to V14) and passed on. Show him the final of
    `reveal-rise` when WP3 has it (Telegram, V11).
    ai-peer-video-controller-3 hands off at 45 to 50% context (see "Where we are" for its last
@@ -224,3 +248,4 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 | 2026-11-14 12:33 | ai-peer-video-controller-2 | Manish answered the three choices in the session: "Let's go with your recommendations" (V12 voice 1; V13 the rise by route O; V14 the look B, threads of light). The controller told him how it reads the answer on the rise (O first, a fall-back if O loses his face or the threads) and passed the answers to WP3 by message. | The look, the voice and the route are settled |
 | 2026-11-14 12:36 | ai-peer-video-controller-2 | Usage read at 12:34 UTC: week 20%, Fable 39% (10% and 19% an hour earlier): asked Manish what to do, with a recommendation. Context at 40%: wrote `handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-2.md`, stopped its three waits, started ai-peer-video-controller-3 in this repo. WP3's ledger stood at $7.90 (52 rows). | Handed off; this session only passes on anything Manish writes in it |
 | 2026-11-14 12:44 | ai-peer-video-controller-3 | Took over from ai-peer-video-controller-2: read STATE and the hand-off (context 14% at this row's time); found all five sessions alive (PIDs 88331, 64734, 48241, 49247, 38022); told WP2-2, WP3 and the old WP2 its name; started six waits (Draft 1, WP3's report, three stall watches, and a usage alarm with the new `demo-video/tools/usage-check.sh`). Usage: 12:37 UTC week 20%, Fable 40%; 12:40 UTC week 22%, Fable 42%. Repeated the usage question to Manish in its first reply. Its call under C6: sessions launched from now on run on Opus 5.5. | Live controller; waits armed; the usage answer is open |
+| 2026-11-14 12:54 | ai-peer-video-controller-3 | ai-peer-video-wp2 reported its music and sound helper done: the report is on `main` (`86c32f7`, checked), the Earth helper still runs, so window 3963 stays open. Read the report's licence part: one more question for Manish, queued behind usage (Needs Manish 2e). Summed the three ledgers: $26.57 of $100 (WP1 $6.60, WP3 $19.04 in 85 rows, WP2 $0.94). Usage log: `2026-11-14T12:51:24Z week=25 fable=49 session=?`. Armed a seventh wait, `fable-cap`. | Recorded; the usage answer is still open |
