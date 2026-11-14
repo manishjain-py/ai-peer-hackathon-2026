@@ -19,6 +19,9 @@ It is a new film, separate from the September concept film in `../film/`.
 - Secrets stay in the shell environment or `~/.ai-peer/.env`: never in git, chat or Telegram.
 - Never send a person's name, the company's name or product screens to an outside tool unless
   `docs/DESIGN.md` section 0 allows it.
+- **The real product recordings are private** (`docs/DESIGN.md` V8 and C8): they live only in
+  `~/.ai-peer/demo-video-private/`, never in git, never in any outside service, never quoted.
+  Previews and the repo use a stand-in.
 - Money: log every paid generation in `docs/STATE.md` (Money spent) and stay inside the budget
   in `docs/DESIGN.md` section 0. No budget there yet means: spend nothing.
 - The root `AGENTS.md` rules also apply: no Airbnb-internal details in new files, and the Peer
