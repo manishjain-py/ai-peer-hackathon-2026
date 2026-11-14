@@ -13,18 +13,20 @@ handle, so the edit can trim. All nine show invented people; employee A is the m
 
 | Slot id | Part | Film time | In the film | Deliver | What we see | Sound in the clip |
 |---|---|---|---|---|---|---|
-| `hook-1` | The hook | 0:00.0 to 0:03.4 | 3.4 s | 4.5 s | Daytime, a bright office. A colleague (a woman) looks up from her phone, pleasantly surprised, and says her line to someone beside the camera. | Her line (below) |
-| `hook-2` | The hook | 0:03.4 to 0:06.3 | 2.9 s | 4 s | Late afternoon, another city: a small meeting room. A colleague (a man) glances at the wall screen (turned away from us) and says his line. | His line |
-| `hook-3` | The hook | 0:06.3 to 0:08.3 | 2.0 s | 3 s | Evening, a third place: a home desk under a lamp. A colleague (a man) leans back from his laptop, half laughing, and asks his line. | His line |
-| `hook-sleeper` | The hook | 0:08.3 to 0:12.0 | 3.7 s | 5 s | Cut to night. Employee A is fast asleep (the night room, closer than the wide frame; slow, even breathing). | None (the Peer speaks over it) |
+| `hook-1` | The hook | 0:00.0 to 0:03.5 | 3.5 s | 4.5 s | Daytime, a bright office. A colleague (a woman) looks up from her phone, pleasantly surprised, and says her line to someone beside the camera. | Her line (below) |
+| `hook-2` | The hook | 0:03.5 to 0:06.5 | 3.0 s | 4 s | Late afternoon, another city: a small meeting room. A colleague (a man) glances at the wall screen (turned away from us) and says his line. | His line |
+| `hook-3` | The hook | 0:06.5 to 0:08.5 | 2.0 s | 3 s | Evening, a third place: a home desk under a lamp. A colleague (a man) leans back from his laptop, half laughing, and asks his line. | His line |
+| `hook-sleeper` | The hook | 0:08.5 to 0:12.0 | 3.5 s | 5 s | Cut to night. Employee A is fast asleep (the night room, closer than the wide frame; slow, even breathing). | None (the Peer speaks over it) |
 | `reveal-rise` | The reveal | 0:12.0 to 0:21.0 | 9.0 s | 10 s | The wide night room, locked camera. The phone on the bedside table lights up. A double of him, made of mint light, rises out of him, stands, and pulls the blanket over the sleeper's shoulder. | None |
-| `reveal-desk` | The reveal | 0:21.0 to 0:32.0 | 11.0 s | 9 s of action | The same frame. The double walks to the desk, sits and opens the laptop; its screen lights its face. The last 2 to 3 seconds of the window are WP2's push-in on the laptop screen, made by code from the clip's last frame. | None |
+| `reveal-desk` | The reveal | 0:21.0 to 0:30.0, then WP2's push-in to 0:32.0 | 9.0 s | 9 s of action | The same frame. The double walks to the desk, sits and opens the laptop; its screen lights its face. The last 2 to 3 seconds of the window are WP2's push-in on the laptop screen, made by code from the clip's last frame. | None |
 | `morning-wake` | The morning | 1:30.0 to 1:34.5 | 4.5 s | 5.5 s | The same room at sunrise, warm light through the window. He wakes rested, sits up and picks up his phone. | None |
-| `morning-brief` | The morning | 1:34.5 to 1:38.5 (then WP2's product brief) | 4.0 s | 5 s | Over his shoulder or from the side: he reads on his phone (the screen is a plain soft glow, never readable) and decides with one tap. | None |
-| `morning-nod` | The morning | about 1:44.5 to 1:48.0 | 3.5 s | 4.5 s | By the desk in daylight, the double, now faint, nods to him and fades away. | None |
+| `morning-brief` | The morning | 1:40.5 to 1:44.5 (after WP2's product brief, 1:34.5 to 1:40.5) | 4.0 s | 5 s | Over his shoulder or from the side: he reads on his phone (the screen is a plain soft glow, never readable) and decides with one tap. | None |
+| `morning-nod` | The morning | 1:44.5 to 1:48.0 | 3.5 s | 4.5 s | By the desk in daylight, the double, now faint, nods to him and fades away. | None |
 
-The film windows of the three morning slots sit around WP2's product brief; WP2 may move them
-inside 1:30 to 1:48. The total is about 44 seconds of AI footage.
+The film times are WP2's, read from its message of 14 November (its `shots.json` is the truth;
+cuts sit on a half-second grid for the music). Each hook line starts about 0.4 to 0.5 seconds
+into its shot unless the manifest gives `line_at_s`. The tap in `morning-brief` comes right
+before `morning-nod`. The total is about 44 seconds of AI footage.
 
 ## The colleagues' lines for Draft 1 (the controller's call, `DESIGN.md` C11)
 
@@ -53,7 +55,9 @@ voice and a caption. WP3 says which in the manifest (`audio`).
 ## Rules for every clip
 
 - 16:9. Delivered as H.264 MP4, 1920x1080, `yuv420p`, at the model's own frame rate (WP2
-  conforms to 30 fps). A clip made at 720p is upscaled before delivery.
+  conforms to 30 fps). A clip made at 720p is upscaled before delivery. A picture that is not
+  exactly 16:9 is scaled to cover and cropped at the centre, never stretched; the tag track
+  and the screen corners are measured on the delivered frame.
 - No readable text anywhere in the picture: screens face away or are a plain glow. Labels, the
   "AI Peer" tag, captions and product screens are added by WP2 in code.
 - The look is in WP3's brief and in `demo-video/look/` (the night frames F1 to F4): real-looking
@@ -93,9 +97,10 @@ copies what it uses into its own project. Neither session writes in the other's 
 
 - `clip` and `tag_track` are paths from the root of WP3's worktree. `grade` is `draft` (a cheap,
   low-resolution take, good enough to show the shot moving) or `final`.
-- `use_from_s` is where the film window should start inside the clip.
+- `use_from_s` is where the film window should start inside the clip. WP3 always writes it.
 - `audio` is `lipsync` (the mouth follows WP2's spoken file; `"line_at_s"` beside it says where
-  in the clip the line starts), `reaction` (a hook shot with no speech on camera), `ambient`
+  in the clip the line starts, so in the film the line starts at the window's start plus
+  `line_at_s` minus `use_from_s`), `reaction` (a hook shot with no speech on camera), `ambient`
   (the model's own room sound, which WP2 may drop), or `none`.
 - `tag_track` is given for the three slots that show the double (`reveal-rise`, `reveal-desk`,
   `morning-nod`): a JSON list with one entry per frame, `{"f": 0, "x": 0.41, "y": 0.37, "w": 0.06,
