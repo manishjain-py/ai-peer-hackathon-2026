@@ -28,6 +28,7 @@ The concept film that started the idea lives in `film/`.
 | Session hand-offs (dated, never edited) | `docs/build/handoffs/` |
 | Porting to a real company | `docs/porting-guide.md` (written in WP5) |
 | The concept film: vision, scenes, video source | `film/AGENTS.md` |
+| The 2-minute demo video (from 14 November 2026) | `demo-video/AGENTS.md` |
 | The full original idea | `film/source-material/ai-peer-original.txt` |
 
 ## How we work (hackathon-light)
@@ -71,6 +72,7 @@ docs/build/       STATE, DESIGN, PRD, PLAN, brief, research, handoffs/, evidence
 peer/             product code (from WP1)
 demo/             demo script and backup recordings (WP5)
 film/             the concept film, with its own AGENTS.md
+demo-video/       the 2-minute demo video (November 2026), with its own AGENTS.md
 .agents/skills/   the $ai-peer resume skill (Codex); .claude/skills links to it
 ```
 
