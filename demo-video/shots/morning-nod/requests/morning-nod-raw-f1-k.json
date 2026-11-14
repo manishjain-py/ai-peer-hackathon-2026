@@ -1,0 +1,19 @@
+{
+  "endpoint": "kling/v4/image-to-video",
+  "inputs": {
+    "prompt": "A bedroom in warm morning sunlight. The camera is fixed and never moves. A faint double of a man, made of soft light and clearly see-through, with a gentle mint glow in his chest, stands beside the desk and looks at the man sitting in the foreground. For the first second he simply looks at him with a warm, calm, closed-lip smile. Then he gives him one small, clear nod of the head. Then, over the last two seconds, the double slowly fades away into the sunlight until he is completely gone, leaving only the desk, the chair, the wall and the sunlit curtain. The man in the foreground stays where he is and barely moves. The double never looks at the camera. Nothing else in the room changes and nothing new appears. One continuous shot with no cuts, no zoom, no music, no speech, no subtitles and no text.",
+    "start_image_url": "file:demo-video/shots/stills/morning-nod-b.png",
+    "end_image_url": "file:demo-video/shots/stills/morning-nod-plate-exact.png",
+    "duration": 5,
+    "resolution": "720p"
+  },
+  "expect": {
+    "units": 5,
+    "unit": "second of video at 720p",
+    "unit_price": 0.157,
+    "cost_usd": 0.785,
+    "basis": "fal.ai page 2026-11-14: $0.157 per second at 720p (resolution is set)"
+  },
+  "output": "demo-video/shots/morning-nod/morning-nod-raw-f1-k",
+  "note": "morning-nod final take 1, route K: first frame morning-nod-b (closed-lip smile), end frame the same room without the double, 5 s at 720p"
+}

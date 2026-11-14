@@ -1,0 +1,21 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: <Picture 1> Cinematic, live-action, Static Shot. A middle-aged Indian man (S1) with salt-and-pepper hair, glasses, and a neat moustache, wearing a green cardigan over a white shirt, sits at his wooden desk in the evening. The scene is illuminated by the warm glow of a desk lamp, casting soft shadows in the background of a cozy home office. S1 is initially focused, looking down at his laptop screen with a genuine smile forming on his face. Immediately, S1 leans back in his office chair, his hands lifting off the keyboard and his shoulders moving away from the laptop as he gives a soft, relaxed half-laugh. As he reclines, he lifts his eyes from the screen to a point just to the right and slightly above the camera lens, avoiding direct contact with the viewer. He speaks with an amused expression, his voice a natural Indian English accent: <d>[English] Does he ever sleep?</d> His lips move in perfect synchronization with the spoken words. After speaking, S1 remains leaned back, maintaining his amused smile and continuing to gaze just past the camera. The camera remains completely locked on a tripod throughout the continuous shot, capturing the natural, documentary-like movements of his relaxed performance.\n\noverall_soundscape: The soft creak of a leather office chair as the man leans back is accompanied by the faint rustle of his cardigan fabric. A gentle, breathy half-laugh is followed by the clear, resonant tone of his voice speaking in Indian English against the quiet ambiance of a still room.\n\nnon_diegetic_music: N/A",
+    "image_url": "file:demo-video/shots/stills/hook-3.png",
+    "target_audio_url": "file:demo-video/shots/hook-3/audio/hook-3-line-at-0.9s.wav",
+    "duration": 3.5,
+    "resolution": "768P",
+    "seed": 777,
+    "prompt_expansion_mode": "disabled"
+  },
+  "expect": {
+    "units": 3.5,
+    "unit": "second of video at 768P",
+    "unit_price": 0.028,
+    "cost_usd": 0.098,
+    "basis": "fal.ai page read 2026-11-14: $0.028 per second at 768P until 15 November, billed on the seconds asked"
+  },
+  "output": "demo-video/shots/hook-3/hook-3-raw-t1",
+  "note": "hook-3 test A: fixed seed, prompt expansion off, the line at 0.9 s (the prompt is take f3's expanded prompt, word for word)"
+}

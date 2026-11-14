@@ -1,0 +1,16 @@
+{
+  "endpoint": "veed/lipsync",
+  "inputs": {
+    "video_url": "file:demo-video/shots/hook-2/hook-2-raw-f1.mp4",
+    "audio_url": "file:demo-video/shots/hook-2/audio/hook-2-line-at-0.9s.wav"
+  },
+  "expect": {
+    "units": 0.0743,
+    "unit": "minute of video",
+    "unit_price": 0.4,
+    "cost_usd": 0.0297,
+    "basis": "fal.ai page read 2026-11-14: $0.4 per minute; the clip is 4.46 s"
+  },
+  "output": "demo-video/shots/hook-2/hook-2-raw-f1-veed",
+  "note": "hook-2 test: a lip-sync pass (veed/lipsync) over take f1 with WP2's line at 0.9 s: does it sharpen the sync, and what does it do to the picture?"
+}

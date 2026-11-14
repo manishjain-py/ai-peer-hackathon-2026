@@ -1,0 +1,19 @@
+{
+ "request_id": "01a1d9f7-408f-7fc0-a2b1-73d1966703d6",
+ "billable_units_header": "5.242267",
+ "inputs_sent": {
+  "prompt": "A bedroom in warm morning sunlight. The camera is fixed and never moves. A faint double of a man, made of soft light and clearly see-through, stands beside the desk and looks at the man sitting in the foreground. The double gives him one small, warm nod with a gentle closed-lip smile. Then, over two seconds, the double slowly fades away into the sunlight until he is completely gone, leaving only the desk, the wall and the sunlit curtain. The man in the foreground stays where he is and barely moves. The double never looks at the camera. One continuous shot with no cuts, no zoom, no music, no speech, no subtitles and no text.",
+  "image_url": "https://v3b.fal.media/files/b/0ab26e5d/flcZVgEkH8Rymvxd4KHvm_morning-nod.png",
+  "aspect_ratio": "16:9",
+  "resolution": "360p",
+  "duration": 5
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab26e60/-RD-WU4UH-Rn6iKsUxV-M_55329681874f487897b83caab2c7682f.mp4",
+   "content_type": "video/mp4",
+   "file_name": "55329681874f487897b83caab2c7682f.mp4",
+   "file_size": 1318142
+  }
+ }
+}

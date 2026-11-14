@@ -1,0 +1,21 @@
+{
+ "request_id": "01a1da23-1a31-7231-ac4d-ada58d07d4a6",
+ "billable_units_header": "82.48",
+ "inputs_sent": {
+  "video_url": "https://v3b.fal.media/files/b/0ab26f7d/mw2g36RWqxqa3hFjsTy4Y_reveal-desk-raw-f1-k-tail.mp4",
+  "upscale_factor": 3,
+  "model": "base",
+  "color_fix": false,
+  "preserve_audio": false,
+  "video_quality": "maximum"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab26f7e/ImuVIr1HItyxGo7X13aXb_remuxed.mp4",
+   "content_type": "video/mp4",
+   "file_name": "remuxed.mp4",
+   "file_size": null
+  },
+  "seed": 1855648949
+ }
+}

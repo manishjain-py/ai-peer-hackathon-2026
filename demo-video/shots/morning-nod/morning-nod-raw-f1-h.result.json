@@ -1,0 +1,24 @@
+{
+ "request_id": "01a1da25-ae9d-70d2-8319-67dd208f3775",
+ "billable_units_header": "16.0",
+ "inputs_sent": {
+  "prompt": "A bedroom in warm morning sunlight. The camera is fixed and never moves. A faint double of a man, made of soft light and clearly see-through, with a gentle mint glow in his chest, stands beside the desk and looks at the man sitting in the foreground. For the first second he simply looks at him with a warm, calm, closed-lip smile. Then he gives him one small, clear nod of the head. Then, over the last two seconds, the double slowly fades away into the sunlight until he is completely gone, leaving only the desk, the chair, the wall and the sunlit curtain. The man in the foreground stays where he is and barely moves. The double never looks at the camera. Nothing else in the room changes and nothing new appears. One continuous shot with no cuts, no zoom, no music, no speech, no subtitles and no text.",
+  "image_url": "https://v3b.fal.media/files/b/0ab26f23/0ippTaYQI9LxPx4wVlP-a_morning-nod-b.png",
+  "end_image_url": "https://v3b.fal.media/files/b/0ab26f8e/oeay6dGVQ-w6vVzuDJQKl_morning-nod-plate-exact.png",
+  "duration": 5,
+  "resolution": "1080P",
+  "prompt_expansion_mode": "balanced"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab26f8e/aaaz6pAhroYDY7XSrzXP9_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "aaaz6pAhroYDY7XSrzXP9_minimax-h3.mp4",
+   "file_size": 5155699
+  },
+  "expanded_prompt": "How the reference pictures align with the target video \u2014 Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 1) aligns with the 5.00-second mark of the target video.\n\nintegrated_multimodal_description: [Shot 1] Cinematic, live-action, Static Shot of a bedroom bathed in warm, golden morning sunlight. In the foreground, a man (S1) is seen from behind, sitting on a bed and facing toward the desk. Across the room, beside a light wooden desk, stands an ethereal double of the man (S2). S2 is composed of soft, translucent light with a distinct gentle mint-green glow emanating from his chest. The sunlight filters through sheer white curtains, casting soft shadows and visible dust motes into the air. For the first second, S2 stands still, looking at S1 with a warm, calm, closed-lip smile, never glancing toward the camera. At 00:01.000, S2 gives one small, clear nod of the head toward S1. Starting at 00:03.000, S2 begins to slowly and steadily fade away into the bright beams of sunlight, his form becoming increasingly transparent. By 00:05.000, S2 is completely gone, leaving only the static room with the desk, chair, teal wall, and the sunlit curtain. S1 remains perfectly still in the foreground, barely moving throughout the entire sequence.\n\noverall_soundscape: The quiet, peaceful atmosphere of a still room, filled with the faint, rhythmic rustle of breeze moving the sheer curtains. A very subtle, ethereal hum accompanies the presence of the light double.\n\nnon_diegetic_music: N/A",
+  "timings": {
+   "inference": 3.124088694996317
+  }
+ }
+}

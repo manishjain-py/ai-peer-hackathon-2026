@@ -1,0 +1,23 @@
+{
+ "request_id": "01a1d9f7-3f84-7631-8bcd-1ab3d5d1c092",
+ "billable_units_header": "8.0",
+ "inputs_sent": {
+  "prompt": "A man sits up in bed in warm morning light and reads on his phone. The camera is fixed. For three seconds his eyes move down the screen as he reads, calm and attentive, and he gives a small pleased nod. Then he taps the screen once with his thumb, a single clear, decided tap, and a small satisfied smile appears. The back of the phone stays toward the camera the whole time. Small, natural movements; the curtain behind him glows softly. One continuous shot with no cuts, no zoom, no music, no speech, no subtitles and no text.",
+  "image_url": "https://v3b.fal.media/files/b/0ab26e5d/rODHNA9AYIa248zOzUJI-_morning-brief.png",
+  "duration": 5.0,
+  "resolution": "768P",
+  "prompt_expansion_mode": "balanced"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab26e5e/QsrxEGPWpkjStaJilikNV_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "QsrxEGPWpkjStaJilikNV_minimax-h3.mp4",
+   "file_size": 3270438
+  },
+  "expanded_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: <Picture 1> Cinematic, live-action, Static Shot of a man with dark hair and a neat beard (S1) sitting up in bed in a room bathed in warm, golden morning light. He wears a simple dark grey t-shirt and holds a black smartphone in both hands, the back of the phone facing the camera. In the background, a sheer white curtain glows softly as sunlight filters through, creating a peaceful atmosphere against the teal-toned wall. The camera remains perfectly fixed throughout the shot. For the first three seconds, S1 is focused, his eyes moving rhythmically downward and horizontally across the screen of the phone as he reads content; his expression is calm and deeply attentive. He then gives a small, pleased nod to acknowledge what he is reading. At 00:03.500, S1 raises his right thumb and performs a single, clear, decided tap on the screen. Following the tap, a small, satisfied smile spreads across his face as he relaxes. All movements are natural and subtle, including minor shifts in his breathing and the slight tension of his shoulders.\n\noverall_soundscape: The room is quiet, filled with the soft, rhythmic sound of gentle breathing as the man reads. A faint, tactile \"tap\" of a thumb hitting the glass screen is heard clearly at three seconds, followed by the subtle rustle of bed linens as he shifts slightly.\n\nnon_diegetic_music: N/A",
+  "timings": {
+   "inference": 1.630434452999907
+  }
+ }
+}

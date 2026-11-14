@@ -1,0 +1,26 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "In image 1, change only the man's arm that is bent up behind his head: that arm now lies down along his body, and both of his hands rest relaxed on top of the duvet over his stomach. No arm is raised and no hand is behind his head; his head rests fully on the pillow. He is still awake and rested, his eyes open, looking up, with the same small, soft smile. He is the man of image 2 and image 3, in the same dark charcoal T-shirt. The dark smartphone still lies on the bedside table. He is the only person in the room. Keep everything else in the picture exactly the same: the same room, camera, framing, bed, pillows, duvet, furniture and warm sunrise light.",
+    "image_urls": [
+      "file:demo-video/shots/stills/morning-wake-a3.png",
+      "file:demo-video/look/characters/a-portrait.jpg",
+      "file:demo-video/look/characters/a-full.jpg"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.09,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.09,
+    "estimate": true,
+    "basis": "the 2K edits on this model cost 6.5 to 9 cents each today (demo-video/ledger/wp3.csv)"
+  },
+  "output": "demo-video/shots/stills/morning-wake-a4",
+  "note": "M1a4: first frame for morning-wake with both hands resting on the duvet, so the video has no arm to swing down (an edit of morning-wake-a3.png; helper wp3-morning)"
+}

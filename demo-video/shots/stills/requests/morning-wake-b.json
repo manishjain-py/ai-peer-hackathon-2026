@@ -1,0 +1,25 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "The man is now sitting up in the bed, awake and rested, with the duvet over his legs and his upper body upright, turned a little toward the camera. He holds his slim dark smartphone in both hands in front of his chest and looks down at it with a calm, contented face and closed lips. The back of the phone is toward the camera, so its screen cannot be seen, and the phone is no longer on the bedside table. He is the man of image 2, in the same dark charcoal T-shirt. Keep everything else in the picture exactly the same: the same room, camera, framing and warm sunrise light.",
+    "image_urls": [
+      "file:demo-video/shots/stills/morning-wake-a.png",
+      "file:demo-video/look/characters/a-portrait.jpg"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.09,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.09,
+    "estimate": true,
+    "basis": "WP1 paid 6 to 8.5 cents for a 2K picture on this model (demo-video/ledger/wp1.csv)"
+  },
+  "output": "demo-video/shots/stills/morning-wake-b",
+  "note": "M1b: the sunrise room, employee A sitting up in bed with his phone (the last frame of morning-wake)"
+}

@@ -1,0 +1,20 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "A locked-off wide shot of a bedroom at sunrise, warm golden light through the curtains. The camera is fixed and never moves. The man in the bed finishes a slow, happy stretch, lowers his arm and sits up in bed, rested and content. He reaches over to the bedside table, picks up his phone, holds it in front of him and looks at it. Calm, natural, unhurried movement. He is the only person in the room. One continuous shot with no cuts, no zoom, no music, no speech, no subtitles and no text.",
+    "image_url": "file:demo-video/shots/stills/morning-wake-a.png",
+    "end_image_url": "file:demo-video/shots/stills/morning-wake-b.png",
+    "duration": 5.5,
+    "resolution": "768P",
+    "prompt_expansion_mode": "balanced"
+  },
+  "expect": {
+    "units": 5.5,
+    "unit": "second of video at 768P",
+    "unit_price": 0.028,
+    "cost_usd": 0.154,
+    "basis": "fal.ai page 2026-11-14: $0.028 per second at 768P until 15 November; my first four calls were billed for exactly the seconds asked"
+  },
+  "output": "demo-video/shots/morning-wake/morning-wake-raw-d1",
+  "note": "morning-wake draft: H3 Max Turbo, first frame morning-wake-a, end frame morning-wake-b, 5.5 s at 768P"
+}

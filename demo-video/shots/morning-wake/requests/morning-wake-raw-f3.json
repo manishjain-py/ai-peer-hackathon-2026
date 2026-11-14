@@ -1,0 +1,23 @@
+{
+  "endpoint": "openimaginglab/flashvsr-plus",
+  "inputs": {
+    "video_url": "file:demo-video/shots/morning-wake/morning-wake-raw-e9.mp4",
+    "upscale_factor": 1.5,
+    "model": "base",
+    "temporal_compression": 4,
+    "color_fix": true,
+    "preserve_audio": false,
+    "seed": 7,
+    "video_output_type": "X264 (.mp4)",
+    "video_quality": "maximum"
+  },
+  "expect": {
+    "units": 366.9,
+    "unit": "megapixel of output (2016 x 1152 x 158 frames)",
+    "unit_price": 0.0005,
+    "cost_usd": 0.1835,
+    "basis": "fal.ai page read 2026-11-14: $0.0005 per megapixel of upscaled video (width x height x frames) at temporal_compression 4; billed exactly so for morning-brief-raw-f3"
+  },
+  "output": "demo-video/shots/morning-wake/morning-wake-raw-f3",
+  "note": "morning-wake take f3: take e9 (768P, prompt 4, seed 4404: the calmest reach, the far hand stays low) upscaled 1.5x with FlashVSR+ base, colour fix on, sound dropped (helper wp3-morning)"
+}

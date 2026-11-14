@@ -1,0 +1,21 @@
+{
+  "endpoint": "creatify/boreal",
+  "inputs": {
+    "prompt": "[VISUAL]\nA man sits in a small meeting room in the late afternoon, warm low sun through the blinds. He is the only person in the picture. He looks at a wall screen that is outside the picture, beyond its right edge, and says the first sentence, quietly impressed. Then he turns his head toward a point just beside the camera, never into the lens, and says the second sentence with a small relaxed smile. His lips are closed before and after he speaks. The camera is locked on a tripod and does not move. One continuous shot, realistic, cinematic, natural understated acting.\n\n[SPEECH]\n\"His update's already here. His Peer gave it.\"\n\n[SOUNDS]\nA quiet office room.\n\n[TEXT]\nNone.",
+    "negative_prompt": "camera movement, zoom, pan, cut, subtitles, text, extra people",
+    "image_url": "file:demo-video/shots/stills/hook-2.png",
+    "audio_url": "file:demo-video/shots/hook-2/audio/hook-2-line-at-0.9s-4.5s.wav",
+    "resolution": "1080p",
+    "aspect_ratio": "16:9",
+    "duration": 4.5
+  },
+  "expect": {
+    "units": 4.5,
+    "unit": "second of video at 1080p",
+    "unit_price": 0.03,
+    "cost_usd": 0.135,
+    "basis": "fal.ai page read 2026-11-14: $0.03 per second at 1080p"
+  },
+  "output": "demo-video/shots/hook-2/hook-2-raw-b1",
+  "note": "hook-2 take b1: creatify/boreal at 1080p, the still as reference image and WP2's line (at 0.9 s) as driving audio"
+}

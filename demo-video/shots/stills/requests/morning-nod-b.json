@@ -1,0 +1,26 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "In image 1, change only the mouth of the see-through man who stands beside the desk: his lips are now closed in a gentle, warm smile, with no teeth showing. He still looks at the man in the foreground, not at the camera, with the same kind eyes, and his face is still the face of the man of image 2 and image 3. Keep everything else in the picture exactly the same.",
+    "image_urls": [
+      "file:demo-video/shots/stills/morning-nod.png",
+      "file:demo-video/look/characters/a-portrait.jpg",
+      "file:demo-video/look/characters/a-full.jpg"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.09,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.09,
+    "estimate": true,
+    "basis": "the 2K edits on this model cost 6.5 to 9 cents each today (demo-video/ledger/wp3.csv)"
+  },
+  "output": "demo-video/shots/stills/morning-nod-b",
+  "note": "M3b: morning-nod with the double's lips closed in a gentle smile, no teeth (an edit of morning-nod.png; helper wp3-morning)"
+}

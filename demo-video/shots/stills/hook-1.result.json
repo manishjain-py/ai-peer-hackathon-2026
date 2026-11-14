@@ -1,0 +1,25 @@
+{
+ "request_id": "01a1d9ee-a4d6-7a61-8ee0-7e89147f2ade",
+ "billable_units_header": "0.075893346",
+ "inputs_sent": {
+  "prompt": "A cinematic film still, a medium close-up at eye level, of a Black British woman in her late thirties in a bright, modern open-plan office in the daytime. She has dark natural hair pulled back, small gold earrings and a soft mustard-yellow knit jumper. She stands beside her desk and holds a slim smartphone in one hand at chest height, with the plain dark back of the phone toward the camera. She has just read something on it: her head is tilted a little down toward the phone, her face still fully visible, with her eyebrows lifting and the first hint of a pleasantly surprised smile, lips closed. Her body is turned three-quarters to the left of the camera. Behind her, softly out of focus: big windows full of clean daylight, pale desks, green plants and one or two colleagues far away. Fresh, bright, airy daylight with a slightly cool white balance. 50mm lens at f/2, shallow depth of field, natural skin texture and a true-to-life deep-brown skin tone, no beauty retouching: an ordinary, likeable working person, not a model. Photorealistic, like a frame from a premium advertising film shot on a cinema camera. Nothing written anywhere: no logos, no signs, no labels, no readable text on any object or screen. Every monitor faces away from the camera.",
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26e25/mcUH1WKBdSlM6kT-pPnY__FsTX7Zel.png",
+    "content_type": "image/png",
+    "file_name": "mcUH1WKBdSlM6kT-pPnY__FsTX7Zel.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

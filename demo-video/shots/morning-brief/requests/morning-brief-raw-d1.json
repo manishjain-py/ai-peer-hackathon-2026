@@ -1,0 +1,19 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "A man sits up in bed in warm morning light and reads on his phone. The camera is fixed. For three seconds his eyes move down the screen as he reads, calm and attentive, and he gives a small pleased nod. Then he taps the screen once with his thumb, a single clear, decided tap, and a small satisfied smile appears. The back of the phone stays toward the camera the whole time. Small, natural movements; the curtain behind him glows softly. One continuous shot with no cuts, no zoom, no music, no speech, no subtitles and no text.",
+    "image_url": "file:demo-video/shots/stills/morning-brief.png",
+    "duration": 5.0,
+    "resolution": "768P",
+    "prompt_expansion_mode": "balanced"
+  },
+  "expect": {
+    "units": 5.0,
+    "unit": "second of video at 768P",
+    "unit_price": 0.028,
+    "cost_usd": 0.14,
+    "basis": "fal.ai page 2026-11-14: $0.028 per second at 768P until 15 November; my first four calls were billed for exactly the seconds asked"
+  },
+  "output": "demo-video/shots/morning-brief/morning-brief-raw-d1",
+  "note": "morning-brief draft: H3 Max Turbo from the still, he reads and decides with one tap near the end, 5 s at 768P"
+}

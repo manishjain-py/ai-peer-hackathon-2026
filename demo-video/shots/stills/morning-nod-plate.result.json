@@ -1,0 +1,28 @@
+{
+ "request_id": "01a1da15-54a2-7521-80a6-279c7e12b05f",
+ "billable_units_header": "0.070711878",
+ "inputs_sent": {
+  "prompt": "Remove the see-through man made of light who stands beside the desk in image 1, completely: his whole body, his face, the pale mint-green glow in his chest and around him, and the faint mint tint he casts on the desk. Where he stood, show what was behind him: the wooden desk with the closed laptop on it, the wooden chair, the teal wall with its soft patches of warm sunlight, and the skirting board, all whole and in the same warm sunrise light, with no glow, no shadow and no trace of him left. The man in the foreground, seen from behind and out of focus, stays exactly as he is. Keep everything else in the picture exactly the same: the same camera, framing, focus, curtain, bed, light and colours.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab26f23/0ippTaYQI9LxPx4wVlP-a_morning-nod-b.png"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26f23/e3X94SQEcFC4wfAz9uK1m_wA7fQNTL.png",
+    "content_type": "image/png",
+    "file_name": "e3X94SQEcFC4wfAz9uK1m_wA7fQNTL.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

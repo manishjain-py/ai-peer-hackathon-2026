@@ -1,0 +1,24 @@
+{
+ "request_id": "01a1d9f1-5ab6-7b21-a329-553d2d5ba76a",
+ "billable_units_header": "4.800000000000001",
+ "inputs_sent": {
+  "prompt": "A man at his home desk in the evening. For the first second he reads his laptop screen, smiling. Then he leans back in his chair, half laughing, shakes his head a little in friendly disbelief and, looking at someone just beside the camera, asks in Indian English: \"Does he ever sleep?\" His lips move in exact sync with the words. Then he keeps smiling, amused. Natural, relaxed, small movements. The camera is locked on a tripod and does not move. One continuous shot with no cuts, no zoom, no music, no subtitles and no text.",
+  "image_url": "https://v3b.fal.media/files/b/0ab26e37/aupUYG0Tm0pNvjlrODvif_hook-3.png",
+  "target_audio_url": "https://v3b.fal.media/files/b/0ab26e37/zwBCxZuzIl6qM47aYKn_q_hook-3-line-at-0.9s.wav",
+  "duration": 3.0,
+  "resolution": "768P",
+  "prompt_expansion_mode": "balanced"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab26e37/acUO2qIpbnZsexjnFsAuq_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "acUO2qIpbnZsexjnFsAuq_minimax-h3.mp4",
+   "file_size": 2480563
+  },
+  "expanded_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] Cinematic, live-action, Static Shot. A middle-aged Indian man (S1) with salt-and-pepper hair and glasses, wearing a green cardigan over a collared shirt, sits at his wooden desk in the evening. The room is warmly lit by the soft glow of a desk lamp and a background lamp, creating deep shadows and a cozy atmosphere. In <Picture 1>, S1 is looking down at his laptop screen, a genuine, wide smile spreading across his face as he reads. At 00:01.000, S1 leans back comfortably in his ergonomic chair, letting out a soft half-laugh while shaking his head slightly in friendly disbelief. He then turns his gaze to look just beside the camera, making eye contact with someone off-screen, and speaks in a natural Indian English accent: <d>[English] Does he ever sleep?</d> His lip movements are perfectly synchronized with the spoken words. After speaking, he maintains his amused expression, continuing to smile with with relaxed, natural micro-movements. The camera remains completely locked on a tripod throughout the entire sequence.\n\noverall_soundscape: The ambient sound of a quiet evening at home, punctuated by the soft rustle of a cardigan and the faint creak of the chair as the man leans back. The man's voice is clear and warm, carrying a light tone of amusement and disbelief.\n\nnon_diegetic_music: N/A",
+  "timings": {
+   "inference": 0.8842232299994066
+  }
+ }
+}

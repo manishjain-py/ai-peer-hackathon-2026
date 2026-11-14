@@ -1,0 +1,19 @@
+{
+  "endpoint": "google/gemini-omni-flash/v1.2/image-to-video",
+  "inputs": {
+    "prompt": "A bedroom in warm morning sunlight. The camera is fixed and never moves. A faint double of a man, made of soft light and clearly see-through, stands beside the desk and looks at the man sitting in the foreground. The double gives him one small, warm nod with a gentle closed-lip smile. Then, over two seconds, the double slowly fades away into the sunlight until he is completely gone, leaving only the desk, the wall and the sunlit curtain. The man in the foreground stays where he is and barely moves. The double never looks at the camera. One continuous shot with no cuts, no zoom, no music, no speech, no subtitles and no text.",
+    "image_url": "file:demo-video/shots/stills/morning-nod.png",
+    "aspect_ratio": "16:9",
+    "resolution": "360p",
+    "duration": 5
+  },
+  "expect": {
+    "units": 5.3,
+    "unit": "second of video at 360p",
+    "unit_price": 0.0273,
+    "cost_usd": 0.1447,
+    "basis": "fal.ai page 2026-11-14: $0.0273 per second at 360p; input tokens add 2 to 5% (WP1's 10 s draft was billed 10.48 units)"
+  },
+  "output": "demo-video/shots/morning-nod/morning-nod-raw-d1-o",
+  "note": "morning-nod draft, route O: Omni 1.2 Flash from the still, the double nods and fades, 5 s at 360p"
+}

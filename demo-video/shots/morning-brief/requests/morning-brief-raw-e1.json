@@ -1,0 +1,20 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: <Picture 1> Cinematic, live-action, Static Shot: a medium close-up from the side of a man with short dark hair and a trimmed beard (S1) sitting up in bed in a room bathed in warm, golden morning light. He wears a dark charcoal t-shirt and holds a slim black smartphone upright in one hand at chest height; the plain back of the phone faces the camera, so its screen is never visible. His four fingers wrap around the back of the phone and his thumb is on the screen side. Behind him a sheer white curtain glows softly with sunlight against the teal wall. The camera remains perfectly fixed throughout the shot. From 00:00.000 to 00:04.000, S1 reads: his eyes travel slowly down the screen, his expression calm and attentive, his head and the hand holding the phone staying almost still, with only gentle breathing; his thumb rests motionless and does not touch the screen. At 00:04.000, S1 decides: his thumb lifts clearly into view beside the edge of the phone, then presses down once on the screen in a single, firm, deliberate tap and stays resting there; the phone dips very slightly under the press. He taps only once. From 00:04.500 to the end, a small, satisfied, closed-lip smile spreads slowly across his face while he keeps looking at the phone, content and at ease. The phone never turns: its back stays toward the camera for the entire shot. S1 is the only person in the frame. All movements are natural, subtle and unhurried, with realistic skin texture and soft natural light.\n\noverall_soundscape: A quiet bedroom in the early morning: soft room tone and gentle breathing. A single faint tap of a thumb on glass at four seconds, then a soft, contented exhale.\n\nnon_diegetic_music: N/A",
+    "image_url": "file:demo-video/shots/stills/morning-brief.png",
+    "duration": 6.0,
+    "resolution": "768P",
+    "seed": 1101,
+    "prompt_expansion_mode": "disabled"
+  },
+  "expect": {
+    "units": 6.0,
+    "unit": "second of video at 768P",
+    "unit_price": 0.028,
+    "cost_usd": 0.168,
+    "basis": "fal.ai page read 2026-11-14: $0.028 a second at 768P and $0.056 at 1080P until 15 November; billed for exactly the seconds asked"
+  },
+  "output": "demo-video/shots/morning-brief/morning-brief-raw-e1",
+  "note": "morning-brief take e1: the same prompt and seed as f1 at 768P, to see whether 1080P is the same take refined and how much sharper it is (helper wp3-morning)"
+}

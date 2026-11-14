@@ -1,0 +1,23 @@
+{
+  "endpoint": "kling/v4/image-to-video",
+  "inputs": {
+    "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed and never moves. A phone glows mint on the bedside table. A man lies asleep in the bed and does not move at any time. For the first second nothing happens. Then, very slowly and gradually, a double of him made of soft mint light sits up out of his sleeping body: half see-through at first, with a gentle glow inside its chest and many hair-thin threads of light still joining it to the sleeper. The double looks down at the sleeper with a calm, kind face and closed lips. In one smooth, easy movement it swings both legs off the near side of the bed and sits on the edge of the bed; it never kneels, crawls or climbs over the sleeper. Seated on the edge, it gently pulls the duvet up over the sleeper's shoulder and rests its hand there for a moment. Then it stands up calmly at the foot of the bed, more solid now, and looks back down at the sleeper, while the last fine threads of light stretch between them. It holds still for the last second. The sleeper stays still. There are only two figures at all times: one solid and asleep, one made of light. The double keeps its soft glow and its own natural skin colour the whole time, and never looks at the camera. Slow, graceful, deliberate motion with no sudden moves. One continuous shot with no cuts, no zoom, no music, no speech, no subtitles and no text.",
+    "start_image_url": "file:demo-video/shots/stills/night-phone-lit.png",
+    "middle_image_urls": [
+      "file:demo-video/shots/stills/night-rise.png",
+      "file:demo-video/shots/stills/night-tuck.png"
+    ],
+    "end_image_url": "file:demo-video/shots/stills/night-stand.png",
+    "duration": 10,
+    "resolution": "720p"
+  },
+  "expect": {
+    "units": 10,
+    "unit": "second of video at 720p",
+    "unit_price": 0.157,
+    "cost_usd": 1.57,
+    "basis": "fal.ai page 2026-11-14: $0.157 per second at 720p (1080p is $0.235 and the default: resolution is set)"
+  },
+  "output": "demo-video/shots/reveal-rise/reveal-rise-raw-f2-k",
+  "note": "reveal-rise final take 2, route K: the same four key frames, the prompt now describes the move to the bed's edge (take 1 crawled over the sleeper for half a second)"
+}

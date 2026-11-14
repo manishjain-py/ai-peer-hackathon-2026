@@ -1,0 +1,30 @@
+{
+ "request_id": "01a1d9f3-6c73-7ac1-85ec-5324e87de44c",
+ "billable_units_header": "0.089563353",
+ "inputs_sent": {
+  "prompt": "Keep everything in image 1 exactly as it is: the same room, the same camera position and framing, the same light, the lit phone on the bedside table, and the same man asleep in the bed, who has not moved. Add one new element: a double of the sleeping man, made of light, is rising out of his sleeping body. The double has sat up out of the sleeper: his head, shoulders, chest and arms are upright above the middle of the bed, and from the waist down he is still merged with the sleeper's body under the duvet. The double is an exact copy of the man shown in image 2 and image 3, who is also the man asleep in the bed: the same face, the same short dark hair and trimmed beard, the same warm medium-brown skin and the same dark charcoal T-shirt. His face and skin keep their own natural brown colour and his clothes keep their own dark colours; only the light itself is pale mint-green (#b7f4cf). He is lit from within: a soft core of mint light glows inside his chest and shines out through his body, which has soft edges and no hard drawn outline. At this moment he is half see-through: the dark wall and the duvet can be seen faintly through his chest and arms, and he is most solid at the face. Where the two bodies part, the light pulls out into dozens of hair-thin threads of mint light, as fine as spun glass, stretched between the sleeper's chest and the double's chest and back, with tiny beads of light travelling along them. The double's shoulders are turned toward the head of the bed and his head is bowed to look down at the sleeper's face, with a calm, kind expression and closed lips; he does not look at the camera. His glow falls softly on the pillow, the duvet and the sleeper's face. He looks friendly and gentle, never ghostly or frightening. There are exactly two figures: one solid and asleep in the bed, one made of light. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab26e33/cODHC8kSUmOcpoLZ_wO1r_night-phone-lit.png",
+   "https://v3b.fal.media/files/b/0ab26e26/kSJO-RYdbkyh2lmZ_cZw8_a-portrait.jpg",
+   "https://v3b.fal.media/files/b/0ab26e34/sII6HmrqFi6vArtsln9le_a-full.jpg"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26e45/BKhyirvhbF7DwquKN-q26_zJMZl4GY.png",
+    "content_type": "image/png",
+    "file_name": "BKhyirvhbF7DwquKN-q26_zJMZl4GY.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}
