@@ -199,7 +199,7 @@ Still running:
 | What | PID | Log | Stop command |
 |---|---|---|---|
 | Wait `stall-wp2-4`: the worker silent for 25 minutes, or PID 31012 gone (stop it before closing window 3984) | 31302 | `~/.ai-peer/demo-video-private/controller/waits.log` | `kill 31302` |
-| Wait `usage`: the whole week passes 40% (checked every 5 minutes; Fable's threshold is 101, out of reach) | 39372 | `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log` | `kill 39372` |
+| Wait `usage`: the whole week passes 50% (checked every 5 minutes; Fable's threshold is 101, out of reach; the 40% alarm rang at 19:46 UTC: 38% at 19:20, 40% at 19:46 with one worker, about 4.6 points an hour) | 46163 | `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log` | `kill 46163` |
 
 The three waits were started by ai-peer-video-controller-4 at 15:01 UTC (the commands are in
 controller-3's hand-off, "Your waits"); `draft2` was met at about 15:06 UTC and `stall-wp2-3`
