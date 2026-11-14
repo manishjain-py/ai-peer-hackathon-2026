@@ -302,9 +302,9 @@ below are older and mostly done; 0, 4, 5, 6 and 7 still hold.
    makes files huge (149 MB for the 12 s), the plain boxes at 108.7 to 108.9, the room, a
    faint square at 109.1, the mint glow, the stars; not checked by anyone: flicker at full
    size, banding after the delivery encode. (d) The pull-out starts in Bengaluru, the helper's
-   pick; the employee's city was never fixed. The controller's call: keep Bengaluru (he is an
-   invented employee in India in every shot); Manish was told, and another city is one
-   setting to change.
+   pick; the employee's city was never fixed. The controller's call: keep Bengaluru as the default
+   (nothing in the film names his city; correction: an earlier wording gave a reason the
+   controller had not checked); Manish was told, and another city is one setting to change.
 
 ## Settled, do not re-open
 
