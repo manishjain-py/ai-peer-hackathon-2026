@@ -18,7 +18,7 @@
 
 | # | Question | Decision | His words, date (UTC) |
 |---|---|---|---|
-| | (none yet) | | |
+| V1 | When must the finished video be ready? | Thursday 19 November 2026. | "Thursday 19 november" (2026-11-14 10:38 UTC) |
 
 ### The controller's own routine calls (undo: tell the controller)
 
@@ -27,6 +27,7 @@
 | C1 | The work lives in `demo-video/` of `manishjain-py/ai-peer-hackathon-2026`; docs go straight to `main`. | The repo already holds the old film, the build and their lessons; its rule sends docs-only commits to `main`. |
 | C2 | The tools research (notes and report) lives in `demo-video/research/`. | The repo is the only memory. |
 | C3 | No money is spent before a budget is written in this section. | Money is Manish's call. |
+| C4 | Working dates from V1: look and script fixed by Sunday 15 November night (India time), first full cut Tuesday 17, final Wednesday 18 night, Thursday 19 morning as buffer. The new product screens are needed by Tuesday 17 morning. | Five days; a cut needs a day of his feedback and a day of fixes. |
 
 ## 1. The film
 

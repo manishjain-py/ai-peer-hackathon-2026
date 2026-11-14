@@ -9,10 +9,10 @@ by name from this repo.
 
 Day one. Manish asked for a 2-minute "wow" demo video (`BRIEF-2026-11-14.md`). The controller
 read the old film and the build (`PRIOR-WORK.md`), checked this Mac's tools and keys, and
-started the tools research (four web researchers inside the controller's own session, still
-running). The interview with Manish has started with question 1 (when the video must be
-ready), sent in the session and on Attention at 10:20 UTC; no answer yet. Nothing is locked
-beyond the brief. Nothing has been generated and no money has been spent.
+started the tools research (four web researchers inside the controller's own session; three
+have reported, one still runs; the report is written after the last). The interview is under
+way: the video is due Thursday 19 November (`DESIGN.md` V1), with the controller's working
+dates in C4. Nothing has been generated and no money has been spent.
 
 Keys checked with free, read-only calls (values never printed): fal.ai valid (its balance
 cannot be read with this key); ElevenLabs valid (plan `growing_business`, about 97% of the
@@ -31,7 +31,7 @@ Still running:
 
 | What | PID | Log | Stop command |
 |---|---|---|---|
-| Four background helpers of the controller (web researchers: video models; likeness and voice; the agent's production stack; craft, references and legal) | inside the controller's session | notes land in `demo-video/research/research_notes/AI video toolkit for demo film/` | They end by themselves, and die if the controller's session closes |
+| One background helper of the controller (the web researcher on craft, references and legal). The other three finished; their notes are committed. | inside the controller's session | notes land in `demo-video/research/research_notes/AI video toolkit for demo film/` | It ends by itself, and dies if the controller's session closes |
 
 ## Money spent
 
@@ -41,8 +41,9 @@ Still running:
 
 ## Needs Manish
 
-1. The interview, one question at a time, in the controller's session. Question 1: when the
-   finished video must be ready.
+1. The interview, one question at a time, in the controller's session. Question 1 is answered
+   (due Thursday 19 November, `DESIGN.md` V1). Question 2, asked 2026-11-14 10:39 UTC: how much may be
+   spent. Options: up to $500 in total (recommended), up to $250, or his own number.
 
 ## Next
 
@@ -67,3 +68,4 @@ Still running:
 |---|---|---|---|
 | 2026-11-14 10:18 | ai-peer-video-controller-1 | Set-up: read the old film and build, checked tools and keys on Mac 48 GB, wrote BRIEF, DESIGN and STATE, started the tools research and the interview. | In progress |
 | 2026-11-14 10:26 | ai-peer-video-controller-1 | The reader of the old docs reported: saved as `PRIOR-WORK.md`. Keys checked with free calls; fal.ai's catalogue and prices saved. | Waiting on question 1 and on four researchers |
+| 2026-11-14 10:39 | ai-peer-video-controller-1 | Three of four researchers reported; notes committed. Manish answered question 1: due Thursday 19 November. Working dates set (`DESIGN.md` C4). Question 2 (the budget) asked. | Waiting on question 2 and on the last researcher |
