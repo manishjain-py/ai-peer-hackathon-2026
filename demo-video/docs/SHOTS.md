@@ -55,7 +55,9 @@ voice and a caption. WP3 says which in the manifest (`audio`).
 ## Rules for every clip
 
 - 16:9. Delivered as H.264 MP4, 1920x1080, `yuv420p`, at the model's own frame rate (WP2
-  conforms to 30 fps). A clip made at 720p is upscaled before delivery.
+  conforms to 30 fps). A clip made at 720p is upscaled before delivery. A picture that is not
+  exactly 16:9 is scaled to cover and cropped at the centre, never stretched; the tag track
+  and the screen corners are measured on the delivered frame.
 - No readable text anywhere in the picture: screens face away or are a plain glow. Labels, the
   "AI Peer" tag, captions and product screens are added by WP2 in code.
 - The look is in WP3's brief and in `demo-video/look/` (the night frames F1 to F4): real-looking
@@ -95,9 +97,10 @@ copies what it uses into its own project. Neither session writes in the other's 
 
 - `clip` and `tag_track` are paths from the root of WP3's worktree. `grade` is `draft` (a cheap,
   low-resolution take, good enough to show the shot moving) or `final`.
-- `use_from_s` is where the film window should start inside the clip.
+- `use_from_s` is where the film window should start inside the clip. WP3 always writes it.
 - `audio` is `lipsync` (the mouth follows WP2's spoken file; `"line_at_s"` beside it says where
-  in the clip the line starts), `reaction` (a hook shot with no speech on camera), `ambient`
+  in the clip the line starts, so in the film the line starts at the window's start plus
+  `line_at_s` minus `use_from_s`), `reaction` (a hook shot with no speech on camera), `ambient`
   (the model's own room sound, which WP2 may drop), or `none`.
 - `tag_track` is given for the three slots that show the double (`reveal-rise`, `reveal-desk`,
   `morning-nod`): a JSON list with one entry per frame, `{"f": 0, "x": 0.41, "y": 0.37, "w": 0.06,
