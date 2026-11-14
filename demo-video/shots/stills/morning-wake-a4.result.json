@@ -1,0 +1,30 @@
+{
+ "request_id": "01a1da0f-7757-76e0-8fdf-8ac7b1c8adcc",
+ "billable_units_header": "0.078090093",
+ "inputs_sent": {
+  "prompt": "In image 1, change only the man's arm that is bent up behind his head: that arm now lies down along his body, and both of his hands rest relaxed on top of the duvet over his stomach. No arm is raised and no hand is behind his head; his head rests fully on the pillow. He is still awake and rested, his eyes open, looking up, with the same small, soft smile. He is the man of image 2 and image 3, in the same dark charcoal T-shirt. The dark smartphone still lies on the bedside table. He is the only person in the room. Keep everything else in the picture exactly the same: the same room, camera, framing, bed, pillows, duvet, furniture and warm sunrise light.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab26ecc/Slz9QieEIyay_1i_mJikh_morning-wake-a3.png",
+   "https://v3b.fal.media/files/b/0ab26e26/kSJO-RYdbkyh2lmZ_cZw8_a-portrait.jpg",
+   "https://v3b.fal.media/files/b/0ab26e34/sII6HmrqFi6vArtsln9le_a-full.jpg"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26efc/cPvYx82kDStt9ZTVIF3Y6_fliZDNhv.png",
+    "content_type": "image/png",
+    "file_name": "cPvYx82kDStt9ZTVIF3Y6_fliZDNhv.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

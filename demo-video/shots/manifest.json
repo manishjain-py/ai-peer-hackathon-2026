@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-14T13:06:46Z",
+  "updated_utc": "2026-11-14T13:14:37Z",
   "slots": {
     "hook-1": {
       "clip": "demo-video/shots/hook-1/hook-1-final-v1.mp4",
@@ -80,22 +80,23 @@
       "last_still": "demo-video/shots/reveal-desk/last-still-final-v1.png"
     },
     "morning-wake": {
-      "clip": "demo-video/shots/morning-wake/morning-wake-draft-v1.mp4",
-      "grade": "draft",
-      "seconds": 5.875,
+      "clip": "demo-video/shots/morning-wake/morning-wake-final-v3.mp4",
+      "grade": "final",
+      "seconds": 6.583,
       "fps": 24,
       "use_from_s": 0.6,
       "audio": "none",
-      "note": "draft at 768P"
+      "note": "H3 Max Turbo at 768P, upscaled to 1080p; he lies awake to 1.2 s, sits by 2.2 s, holds the phone from 4.8 s; he sits up in about one second, and the phone hand is motion blur for 3 or 4 frames near 4.4 s"
     },
     "morning-brief": {
-      "clip": "demo-video/shots/morning-brief/morning-brief-draft-v1.mp4",
-      "grade": "draft",
-      "seconds": 5.167,
+      "clip": "demo-video/shots/morning-brief/morning-brief-final-v4.mp4",
+      "grade": "final",
+      "seconds": 6.583,
       "fps": 24,
-      "use_from_s": 0.9,
+      "use_from_s": 1.0,
       "audio": "none",
-      "note": "draft at 768P; the tap is weak in this take"
+      "note": "H3 Max Turbo at 768P, upscaled to 1080p; one tap of the thumb at 4.04 s in the clip (3.04 s into the window), then a smile; the tap is small and quick; 8 frames were retouched by code to remove an earlier thumb lift (the untouched take is morning-brief-final-v3.mp4)",
+      "tap_at_s": 4.04
     },
     "morning-nod": {
       "clip": "demo-video/shots/morning-nod/morning-nod-final-v1.mp4",

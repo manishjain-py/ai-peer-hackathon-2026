@@ -1,0 +1,30 @@
+{
+ "request_id": "01a1da02-4c7a-7050-8e5e-92441a77fc51",
+ "billable_units_header": "0.082566870",
+ "inputs_sent": {
+  "prompt": "In image 1, change only the man's pose and expression. He has just woken up and opened his eyes: he lies on his back in the same place in the bed with his head resting on the pillow, his eyes open, and a small, rested smile with closed lips. The arm that was raised in the air is now bent, with the forearm resting loosely on the pillow above his head, relaxed, the hand soft and open; no arm is raised in the air. His other hand still rests on the duvet over his stomach. He is the man of image 2 and image 3, in the same dark charcoal T-shirt. The dark smartphone still lies on the bedside table. He is the only person in the room. Keep everything else in the picture exactly the same: the same room, camera, framing, bed, duvet, furniture and warm sunrise light.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab26e51/BceADDS-vFsupJSBAFuMe_morning-wake-a.png",
+   "https://v3b.fal.media/files/b/0ab26e26/kSJO-RYdbkyh2lmZ_cZw8_a-portrait.jpg",
+   "https://v3b.fal.media/files/b/0ab26e34/sII6HmrqFi6vArtsln9le_a-full.jpg"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab26ea6/t3FrtXP9g71a3_ZD5tSQP_5BgoGNHG.png",
+    "content_type": "image/png",
+    "file_name": "t3FrtXP9g71a3_ZD5tSQP_5BgoGNHG.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}
