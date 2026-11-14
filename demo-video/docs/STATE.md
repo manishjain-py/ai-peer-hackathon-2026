@@ -6,7 +6,18 @@ read-in at 15:02 UTC. It took over from ai-peer-video-controller-3 (hand-off
 `handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-3.md`), which was closed at 15:01 UTC.
 Other sessions message the controller by its name.
 
-## Where we are (2026-11-14 15:12 UTC)
+## Where we are (2026-11-14 19:25 UTC)
+
+**19:25 UTC: Manish's view of Draft 2 is in (V19; his words and the controller's order:
+`FEEDBACK-DRAFT-2-2026-11-14.md`).** The Peer must not come out of the sleeping Ram (it feels
+like a ghost): either Ram's look with the AI tag, out of a phone, a laptop or somewhere else, or
+a mascot or generic avatar that does not look like Ram; he picks after suggestions and samples
+informed by similar products. It goes back at the end to where it came from. The slates are
+filled, for now, with made-up screens (Zoom, Slack, the change, the morning brief) with
+invented Airbnb payments data. Then one final version. ai-peer-video-wp2-4 is launched with that
+order: Phase A (research, 3 to 4 concepts, samples for Manish, up to $8), Phase B (the four
+screens by code while he chooses), Phase C (the chosen entrance and return, up to $25), Phase D
+(Draft 3, one public render that can go to him in full).
 
 **15:12 UTC: Draft 2 is done and with Manish; no session but the controller runs.**
 ai-peer-video-wp2-3 merged it as PR 11 (`5a7970f`, 15:08 UTC; its report and the weak points
@@ -230,9 +241,10 @@ still running is the worker ai-peer-video-wp2-3 (window 3974, PID 16635) with it
 
 ## Needs Manish
 
-**Asked 2026-11-14 15:10 UTC: his view of Draft 2**, with the 720p slates copy on the Attention
-group and in the session of ai-peer-video-controller-4. Record his words at once
-(`FEEDBACK-DRAFT-2-2026-11-14.md` and a V row in `DESIGN.md`), then start ai-peer-video-wp2-4.
+**Answered 2026-11-14 19:14 UTC: his view of Draft 2 (V19)**, in the session of
+ai-peer-video-controller-4, word for word in `FEEDBACK-DRAFT-2-2026-11-14.md`. Next from him: his
+pick among Phase A's concepts and samples, sent to the Attention group and the session when
+ai-peer-video-wp2-4 has them.
 
 **Answered 2026-11-14 14:49 UTC: the new hook (V17).** "Sure, the proposals look good", with the
 name Ram instead of John and "out of office" in colleague 2's line; the order went to
@@ -287,13 +299,13 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 
 ## Next
 
-**Now (15:12 UTC), ai-peer-video-controller-4:** Draft 2 is with Manish and no worker runs.
-(1) His view of Draft 2: his words at once into `FEEDBACK-DRAFT-2-2026-11-14.md` and a V row
-in `DESIGN.md`. (2) Then ai-peer-video-wp2-4 on Opus 5.5 (launched like its predecessor, with
-`CLAUDE_NO_IDLE_PING=1`, in the shared checkout, told that its worktree
-`~/repos/ai-peer-video-wp2` exists), from `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-4.md`
-plus his words and the weak points in `REPORT.md` "Draft 2". Before the spawn, re-read what
-that hand-off cites. (3) Tuesday 17 November: his recordings (WP4). The numbered items below are older and mostly done; 0, 4, 5, 6
+**Now (19:25 UTC), ai-peer-video-controller-4:** (1) ai-peer-video-wp2-4 works on the order in
+`FEEDBACK-DRAFT-2-2026-11-14.md`; read its context at each event (it reports at 40%). (2) Phase
+A's concepts and samples: look at one board, then send them to Manish (the Attention group with
+the files, one text line with the options and the recommendation; the same in the session) and
+pass his pick to the worker word for word, with a V row. (3) Draft 3: one sheet, then the whole
+public render to him (720p copy). (4) Money: tell him at $50 and $80. (5) Tuesday 17 November:
+his recordings (WP4), only if he still wants them after the made-up screens (V19, "for now"). The numbered items below are older and mostly done; 0, 4, 5, 6
 and 7 still hold.
 
 0. **Usage (V15, C13).** One worker at a time, on Opus 5.5; a worker starts no helper unless
@@ -480,3 +492,4 @@ and 7 still hold.
 | 2026-11-14 15:02 | ai-peer-video-controller-4 | Read in on Opus 5.5 (STATE to the end of its Lessons, controller-3's hand-off; context 7%). The worker ai-peer-video-wp2-3 reported 40.1% at 15:00 UTC, to controller-3: both controllers said yes to finishing Draft 2, then its hand-off (a stop guard at 47 to 48%). Closed controller-3 (window 3973) at 15:01 UTC at its request, after the checks. Started the waits usage, stall-wp2-3 and draft2. Usage log: `2026-11-14T15:01:54Z week=34 fable=66 session=?`. |
 | 2026-11-14 15:09 | ai-peer-video-wp2-3 | Draft 2 done and merged (PR 11, `5a7970f`): the quicker reveal (V16: no blanket, rise, get up, walk, sit, then working while the camera moves into the push-in; cut by code) and the new hook with Ram (V17: 15 s, two new takes by WP3's route for $0.616, new h1, h2 and p02 spoken "Rahm", message cards, the sleeper's label "Ram 1:58 AM", the tag "Ram's AI Peer", the proof's note); a mixer hang in ffmpeg 8 found and fixed (sound bit-identical with the old times). Both renders made; one sheet of the slates copy looked at; the private render's numbers only. | Handed off at 43% context: `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-4.md`; nothing of wp2-3 still runs. |
 | 2026-11-14 15:12 | ai-peer-video-controller-4 | Draft 2 came from ai-peer-video-wp2-3 (PR 11, `5a7970f`). Checked the slates copy only (numbers, loudness, one 30-frame sheet) and sent Manish a 720p copy at 15:10 UTC on the Attention group and in the session, asking for his view. Closed ai-peer-video-wp2-3 (window 3974) at 15:11 UTC after the checks. Ledgers summed: $31.25 of $100. Only the wait `usage` runs. |
+| 2026-11-14 19:25 | ai-peer-video-controller-4 | Manish's view of Draft 2 came at 19:14 UTC (V19): no Peer out of the sleeping Ram; Ram's look from a phone or laptop, or a mascot; back to the same place at the end; made-up Zoom, Slack and morning-brief screens with invented Airbnb payments data; samples first. Wrote `FEEDBACK-DRAFT-2-2026-11-14.md` (his words and the order for Draft 3) and V19; launching ai-peer-video-wp2-4. |
