@@ -114,7 +114,15 @@ own. The usage alarm's test is `demo-video/tools/usage-check.sh` (its header sho
   close, and music with sound effects (up to $5). Left: the push-in, the tag on the double,
   Draft 1 (two renders), the report, the PR. Money spent by WP2 itself: $0.
 - WP3, the nine AI shots with people (`ai-peer-video-wp3`, brief
-  `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp3.md`, cap $60): launched 2026-11-14 11:53 UTC.
+  `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp3.md`, cap $60): **done**, merged as PR 8 on
+  2026-11-14 13:20 UTC (merge commit 839a455). Spent $23.10 (95 calls, `demo-video/ledger/wp3.csv`).
+  All nine slots are final in `demo-video/shots/manifest.json` (WP2 reads the copy in
+  `/Users/manishjain/repos/ai-peer-video-wp3`, which stays). Read `demo-video/shots/REPORT.md`; look at
+  `demo-video/shots/all-shots.jpg`. The double is look B, threads of light. The two reveal shots and
+  the nod are on route K (Kling, key frames; route O lost his face mid-rise), the other six on
+  MiniMax H3 Max Turbo, with the colleagues' mouths following WP2's recordings. Open for the
+  controller: no clip was watched in motion or heard; the delivered files carry no colour tag (the
+  report says what to check); the tap in `morning-brief` and the nod are small.
 
 ## Money spent
 
@@ -289,3 +297,4 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 | 2026-11-14 13:01 | ai-peer-video-controller-3 | WP3 reported the final of `reveal-desk` (route K; its context 43%, it hands off at about 45% once its three helpers have reported). Looked at its sheet, sent the clip to Manish (Attention group and the session) at 13:01 UTC, passed WP3's notes for the push-in to ai-peer-video-wp2-2. Ledgers summed: $29.27 of $100 (WP3 $21.74 in 91 rows). Usage log: `2026-11-14T12:56:29Z week=26 fable=52 session=?`. | Shown; the usage answer is still open |
 | 2026-11-14 13:07 | ai-peer-video-controller-3 | The usage alarm fired: `2026-11-14T13:07:41Z week=29 fable=58 session=?`. Re-armed it at Fable 75% or week 40%. Read WP2-2's screen: the two reveal finals are in the film with tag, push-in and sound; it waits for the Earth helper, then renders Draft 1 twice. Contexts at 13:07 UTC: controller-3 19%, WP2-2 41%, WP3 45%, the old WP2 48%. Manish has not answered the usage question. | Waiting for Draft 1 |
 | 2026-11-14 13:19 | ai-peer-video-controller-3 | WP3 reported all nine AI shots final and pushed, no successor needed. Looked at the sheet of all nine, checked the manifest (nine final files) and PR 8 (open, draft, mergeable, `ec45cad`), told ai-peer-video-wp2-2 to use them in Draft 1 if it fits its context line. The wait `wp3-report` ended by itself at 13:18 UTC (correction: an earlier wording said the controller stopped it). Ledgers summed: $30.63 of $100 (WP3 $23.10 in 95 rows). Usage log: `2026-11-14T13:17:56Z week=31 fable=61 session=?`. | WP3 is finishing; Draft 1 awaited |
+| 2026-11-14 13:20 | ai-peer-video-wp3 | WP3 done: one still per slot, four looks for the double (B chosen), a draft of all nine, then nine finals with tag tracks, screen corners, a 4K last still and the phone light-up by code; three helpers made the six plain shots and the tools. PR 8 merged (merge commit 839a455). $23.10 of the $60 cap spent. | Done. Nobody watched a clip in motion or heard one, so Manish's eyes and ears are the real test |
