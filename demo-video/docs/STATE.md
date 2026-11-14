@@ -95,25 +95,12 @@ V11, C12). So every choice goes to the Attention group with its files
 were sent there again with their material at that time: the three voice samples and the
 animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key frames.
 
-1. **Asked** (recorded 2026-11-14 11:44 UTC; in the session with the three audio files, and on the
-   Attention group): which voice narrates as the Peer? 1 Matilda, the product's own voice (recommended:
-   the real product speaks with it in the meeting, so the Peer stays one character); 2 River,
-   relaxed and neutral; 3 Brian, deep and warm. Draft 1 is built with voice 1 meanwhile.
-2. **Asked** (recorded 2026-11-14 11:54 UTC; in the session with WP1's side-by-side clip, and on
-   the Attention group): which rise of the clone does he like best, K (Kling), O (Gemini Omni)
-   or P (two plates and code), and is the double's look (a mint outline with sparkles) bold
-   enough? WP1 recommends O; the controller's frames say K shows his face most clearly. WP3
-   makes the signature shot both ways and tries bolder looks in stills meanwhile.
-3. **Asked** (recorded 2026-11-14 12:09 UTC; in the session with WP3's sheet
-   `demo-video/shots/stills/double-looks.jpg`, and on the Attention group): which look for the
-   double? A lit from inside the chest, B threads of light still joining him to the sleeper, C
-   frosted glass, D woven lines of light. The controller's pick: B while he rises, settling
-   into A once he stands (the chest light is where the "AI Peer" tag sits). WP3 chose the same
-   by itself (B with a mint core in the chest, no outline, no sparkles) and made it in the
-   film's frames (`shots/stills/night-rise.png`, `night-stand.png`): both pictures went to
-   Manish, with "the film is built with it unless you say otherwise". WP3 makes the six shots
-   without the double first, so the dearest shots can wait for his eyes.
-4. Still to come, one at a time: (a) may the old controller's window (2952) be closed; (b) a
+1. **Answered 2026-11-14 12:33 UTC**, in the controller's session: "Let's go with your
+   recommendations". So: voice 1, Matilda (V12); the rise by route O (V13, with the controller's
+   reading that the shot-maker may fall back to a route that holds his face and the threads);
+   the look B, threads of light (V14). WP3 was told by message; nothing changes for WP2-2
+   (voice 1 is what the film already uses).
+2. Still to come, one at a time, each sent to Telegram with its material (V11): (a) may the old controller's window (2952) be closed; (b) a
    look at the fal.ai credit, which no key can read: WP3 may spend up to $60 (told to him at
    the take-over); (c) the recordings from his company laptop by Tuesday 17 November morning,
    India time, into `~/.ai-peer/demo-video-private/` (the list is in `PLAN.md`; told to him
@@ -130,7 +117,8 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    When ai-peer-video-wp2 says its helpers' report is on `main`: check the file, then close its
    window 3963 after the usual checks. WP3 was at 24% context after 15 minutes: it will hand
    off too (its successor is `ai-peer-video-wp3-2`, launched the way WP2-2 was).
-2. Manish's voice pick: pass it to ai-peer-video-wp2-2 if it is not voice 1.
+2. Manish's three answers are in (`DESIGN.md` V12 to V14) and passed on. Show him the final of
+   `reveal-rise` when WP3 has it (Telegram, V11).
    The controller hands off at 45 to 50% context (35% at 12:15 UTC): the successor is
    ai-peer-video-controller-3.
 3. Draft 1 from ai-peer-video-wp2-2: look at a frame at every cut, then send it to Manish.
@@ -177,3 +165,4 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 | 2026-11-14 12:16 | ai-peer-video-wp2 | Handed off at 44.8% context. Since milestone 1: product screens by code (window, camera, cursor, mint outline; the meeting shown as a call tile moved by its real sound, because the stand-in recording's picture is only a name on black), the night clock, proof cards and labels in one text lane, the end card, WP3's nine drafts pulled into the film, film grain. Two helpers still run (the Earth close; music and sound effects). | Successor `ai-peer-video-wp2-2` to be started by the controller; brief `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-2.md` |
 | 2026-11-14 12:18 | ai-peer-video-controller-2 | ai-peer-video-wp2 handed off at 44.8% context (branch pushed at a51c934; the one-command render, voice, captions, clock, end card and product screens built; WP3's nine drafts pulled in; no money spent). The controller read its hand-off brief and launched ai-peer-video-wp2-2 at 12:17 UTC (window 3972, PID 88331, seen working), told to commit by path only while the old session's two helpers still write. Waits re-armed on the new PID. WP2's note for Manish's recordings went into `PLAN.md`. | WP2-2 reading in; the old WP2 window stays until its helpers report |
 | 2026-11-14 12:23 | ai-peer-video-controller-2 | Manish, in the session: "Wherever you need my choice, send it to me on telegram. I ll review there and reply here" (V11). The notify scripts send text only, so the controller wrote `demo-video/tools/tg-send-file.sh` (the Bot API's file calls, token kept out of the argument list, files under `~/.ai-peer/` refused) and sent all three open choices to the Attention group with their material: 3 voice samples, the animatic, the clone clip, 3 pictures of the double's look; 8 files, all accepted by Telegram. | Waiting on his three answers, in the session |
+| 2026-11-14 12:33 | ai-peer-video-controller-2 | Manish answered the three choices in the session: "Let's go with your recommendations" (V12 voice 1; V13 the rise by route O; V14 the look B, threads of light). The controller told him how it reads the answer on the rise (O first, a fall-back if O loses his face or the threads) and passed the answers to WP3 by message. | The look, the voice and the route are settled |
