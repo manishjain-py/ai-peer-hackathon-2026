@@ -4,6 +4,7 @@
 //
 //   node demo-video/film/build.mjs                 the public film: product screens are slates
 //   node demo-video/film/build.mjs --private       the full film, built under ~/.ai-peer/demo-video-private/
+//   node demo-video/film/build.mjs --cut NAME      another cut of the film (cuts/NAME/cut.json, WP7: the blended videos)
 //
 // A public build never reads a product recording. A private build puts every file that holds
 // one (the build, the frame cache, the render) under ~/.ai-peer/demo-video-private/, outside
@@ -25,12 +26,31 @@ const onGrid = (x, fps) => Math.abs(x * fps - Math.round(x * fps)) < 1e-6;
 const r3 = (x) => Math.round(x * 1000) / 1000;
 
 /** Where a run keeps its files. A lane gives a helper its own folders, so two runs never share a build. */
-export function runHome(variant, lane) {
+export function runHome(variant, lane, cut) {
   if (variant === "private") return PRIVATE;
-  return lane ? path.join(FILM, ".build", "lanes", lane) : path.join(FILM, ".build");
+  return lane ? path.join(FILM, ".build", "lanes", lane) : cut ? path.join(FILM, ".build", "cuts", cut) : path.join(FILM, ".build");
 }
-export function buildDir(variant, lane) {
-  return path.join(runHome(variant, lane), variant === "private" ? "build" : lane ? "project" : "public");
+export function buildDir(variant, lane, cut) {
+  return path.join(runHome(variant, lane, cut), variant === "private" ? "build" : lane || cut ? "project" : "public");
+}
+
+/**
+ * A cut (WP7): another film made from the same parts, with its own timeline, screens, lines and
+ * sound, described by cuts/<name>/cut.json (paths relative to that folder): "shots", "narration",
+ * "screens", "script", "mix", and "layers" (folders laid over the project after src/, vendor/
+ * and assets/, mirroring its layout). Without a cut, the build makes Draft 3 exactly as before.
+ */
+export function cutConfig(cut) {
+  if (!cut) return null;
+  const dir = path.join(FILM, "cuts", cut);
+  const file = path.join(dir, "cut.json");
+  if (!fs.existsSync(file)) throw new Error(`no cut "${cut}": ${path.relative(REPO, file)} is missing`);
+  const c = readJson(file);
+  const at = (p) => (p ? path.resolve(dir, p) : null);
+  // "copies": single files placed in the project ([{from, to}], to relative to the project), such as
+  // a mascot's own drawing code from demo-video/ui-concepts, so it is never duplicated in git.
+  return { name: cut, dir, shots: at(c.shots), narration: at(c.narration), screens: at(c.screens), script: at(c.script),
+    mix: at(c.mix), layers: (c.layers || []).map(at), copies: (c.copies || []).map((x) => ({ from: at(x.from), to: x.to })) };
 }
 
 /** Loudness of a piece of a file's sound: overall RMS (dBFS) and a 0..1 level per film frame. */
@@ -127,15 +147,17 @@ function meanColour(file, x, y, w, h) {
 }
 
 /** Read the film and resolve what every slot shows. Throws on a timeline that does not hold. */
-export function readFilm({ variant = "public", withScenes = [] } = {}) {
-  const shots = readJson(path.join(FILM, "shots.json"));
-  const narration = readJson(path.join(FILM, "audio", "narration.json"));
+export function readFilm({ variant = "public", withScenes = [], cut } = {}) {
+  const C = cutConfig(cut);
+  if (C && variant === "private") throw new Error("a cut is a public film: no private build of it");
+  const shots = readJson(C && C.shots ? C.shots : path.join(FILM, "shots.json"));
+  const narration = readJson(C && C.narration ? C.narration : path.join(FILM, "audio", "narration.json"));
   const productPath = path.join(FILM, "product.json");
   const product = fs.existsSync(productPath) ? readJson(productPath) : { sources: {}, slots: {} };
   // Draft 3 (V19): the public film draws the product screens by code with made-up data (screens.json)
-  const screensPath = path.join(FILM, "screens.json");
+  const screensPath = C && C.screens ? C.screens : path.join(FILM, "screens.json");
   const screens = variant !== "private" && fs.existsSync(screensPath) ? readJson(screensPath) : null;
-  const script = readJson(path.join(FILM, "audio", "script.json"));
+  const script = readJson(C && C.script ? C.script : path.join(FILM, "audio", "script.json"));
   const captionOf = Object.fromEntries(script.lines.map((l) => [l.id, l.caption || null]));
   const { fps, seconds } = shots;
   // What tools/pull_shots.mjs brought from WP3 is laid over each slot.
@@ -315,6 +337,8 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
         if (sc.chapter) chapters.push({ slot: s.id, start: s.start, length: sc.chapter.length, hour: sc.chapter.hour, text: sc.chapter.text });
       }
     }
+    // WP7: a clip or code slot may carry its own labels (a cut's walkthrough), in slot seconds.
+    if (s.kind !== "product") for (const l of s.labels || []) labels.push({ slot: s.id, start: r3(s.start + l.at), length: l.length, text: l.text });
     return slot;
   });
 
@@ -342,9 +366,16 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
     copies.push({ from: still.file, to });
     const xs = quad.map((c) => c[0]), ys = quad.map((c) => c[1]);
     const bx = Math.min(...xs), by = Math.min(...ys), bw = Math.max(...xs) - bx, bh = Math.max(...ys) - by;
-    const lands = after.use === "scene" && (after.scene === "product" || after.scene === "screens") ? "product" : "slate";
+    // WP7: a push-in may land on a clip (a cut's walkthrough): the screen shows that clip's first frame.
+    const lands = after.use === "scene" && (after.scene === "product" || after.scene === "screens") ? "product" : after.use === "clip" ? "clip" : "slate";
+    let landing = null;
+    if (lands === "clip") {
+      const f = frameOf(videoFile[after.id], after.video.mediaStart);
+      landing = `assets/gen/${path.basename(f.file)}`;
+      copies.push({ from: f.file, to: landing });
+    }
     slot.pushin = {
-      still: to, quad, lands,
+      still: to, quad, lands, ...(landing ? { landing } : {}),
       sharp: before.last_still || null,   // WP3's sharper still of the same frame, if it gave one
       tint: meanColour(still.file, bx + bw * 0.35, by + bh * 0.35, bw * 0.3, bh * 0.3),
       window: lands === "product" ? after.window : { x: 0, y: 0, w: shots.width, h: shots.height },
@@ -440,8 +471,8 @@ function videoTag(v) {
 }
 
 /** Write the project folder. Returns what was built. */
-export function build({ variant = "public", lane, withScenes = [], out = buildDir(variant, lane) } = {}) {
-  const read = readFilm({ variant, withScenes });
+export function build({ variant = "public", lane, withScenes = [], cut, out = buildDir(variant, lane, cut) } = {}) {
+  const read = readFilm({ variant, withScenes, cut });
   if (variant !== "private" && read.copies.some((c) => c.to.startsWith("assets/private/"))) {
     throw new Error("a public build tried to use a private recording");
   }
@@ -460,6 +491,14 @@ export function build({ variant = "public", lane, withScenes = [], out = buildDi
 
   for (const dir of ["src", "vendor", "assets"]) {
     fs.cpSync(path.join(FILM, dir), path.join(out, dir), { recursive: true });
+  }
+  // A cut's layers lie over the project (WP7): its own scene files, mascots and plates.
+  const C = cutConfig(cut);
+  for (const layer of C ? C.layers : []) fs.cpSync(layer, out, { recursive: true });
+  for (const x of C ? C.copies : []) {
+    const to = path.join(out, x.to);
+    fs.mkdirSync(path.dirname(to), { recursive: true });
+    fs.copyFileSync(x.from, to);
   }
   // A slot may name the file its scene is drawn with ("scene_file"): it takes the scene's place
   // in the build. Used to pin a draft to a snapshot while the scene itself is still being made.
@@ -484,8 +523,10 @@ export function build({ variant = "public", lane, withScenes = [], out = buildDi
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const variant = process.argv.includes("--private") ? "private" : "public";
+  const ci = process.argv.indexOf("--cut");
+  const cut = ci > 0 ? process.argv[ci + 1] : undefined;
   try {
-    const b = build({ variant });
+    const b = build({ variant, cut });
     const count = (u) => b.film.slots.filter((s) => s.use === u).length;
     console.log(`built ${b.out}`);
     console.log(`  ${b.film.slots.length} slots: ${count("clip")} clips, ${count("scene")} scenes by code, ${count("slate")} slates; ${b.lines.length} spoken lines`);

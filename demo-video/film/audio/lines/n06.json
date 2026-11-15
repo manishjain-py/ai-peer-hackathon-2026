@@ -1,0 +1,84 @@
+{
+ "what": "n06",
+ "voice_id": "XrExE9yKIg1WjnnlVkGX",
+ "voice": "Matilda",
+ "model": "eleven_multilingual_v2",
+ "text": "Every answer shows its sources, and how sure I am.",
+ "spoken": "Every answer shows its sources, and how sure I am.",
+ "request_sha": "b32df3200f0a6d72",
+ "request": {
+  "text": "Every answer shows its sources, and how sure I am.",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.6,
+   "similarity_boost": 0.75,
+   "style": 0,
+   "use_speaker_boost": true,
+   "speed": 1.0
+  },
+  "seed": 14112026,
+  "previous_text": "He can ask me anything about his work.",
+  "next_text": "Not as him. As me."
+ },
+ "request_id": "Kl1x5RBDVVRqfVGHmyI3",
+ "character_cost": "24",
+ "generated_utc": "2026-11-15 17:11:14",
+ "file": "n06.wav",
+ "seconds": 3.03,
+ "raw_seconds": 3.437,
+ "trimmed_front": 0.01,
+ "peak_dbfs": -1.15,
+ "rms_dbfs": -22.21,
+ "words": [
+  {
+   "w": "Every",
+   "s": 0.0,
+   "e": 0.292
+  },
+  {
+   "w": "answer",
+   "s": 0.362,
+   "e": 0.652
+  },
+  {
+   "w": "shows",
+   "s": 0.721,
+   "e": 0.977
+  },
+  {
+   "w": "its",
+   "s": 1.023,
+   "e": 1.139
+  },
+  {
+   "w": "sources,",
+   "s": 1.174,
+   "e": 1.778
+  },
+  {
+   "w": "and",
+   "s": 1.894,
+   "e": 2.033
+  },
+  {
+   "w": "how",
+   "s": 2.091,
+   "e": 2.184
+  },
+  {
+   "w": "sure",
+   "s": 2.254,
+   "e": 2.475
+  },
+  {
+   "w": "I",
+   "s": 2.533,
+   "e": 2.556
+  },
+  {
+   "w": "am.",
+   "s": 2.649,
+   "e": 3.427
+  }
+ ]
+}

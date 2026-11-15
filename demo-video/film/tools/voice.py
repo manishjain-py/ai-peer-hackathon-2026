@@ -198,16 +198,22 @@ def context_for(lines: list[dict], i: int) -> dict:
     return ctx
 
 
-def do_lines(script: dict) -> None:
+def do_lines(script: dict, index_path: Path) -> None:
     LINES.mkdir(parents=True, exist_ok=True)
     lines = script["lines"]
     for i, line in enumerate(lines):
+        if line.get("reuse"):
+            # WP7: a line another script already made (Draft 3's): used as it is, never made again,
+            # since a new context would change its request and overwrite its audio.
+            if not (LINES / f"{line['id']}.wav").exists():
+                raise SystemExit(f"{line['id']}: marked reuse, but audio/lines/{line['id']}.wav is missing")
+            continue
         voice = script["voices"][line["speaker"]]
         make(LINES / line["id"], line["id"], voice, line.get("spoken", line["text"]), line["text"], script, context_for(lines, i))
-    do_index(script)
+    do_index(script, index_path)
 
 
-def do_index(script: dict) -> None:
+def do_index(script: dict, index_path: Path = AUDIO / "narration.json") -> None:
     out = []
     for line in script["lines"]:
         meta = json.loads((LINES / f"{line['id']}.json").read_text())
@@ -219,10 +225,11 @@ def do_index(script: dict) -> None:
             "words_per_second": round(len(words) / speech, 2) if speech > 0 else None,
             "peak_dbfs": meta["peak_dbfs"], "rms_dbfs": meta["rms_dbfs"], "words": words,
         })
-    index = {"about": "Made by tools/voice.py from audio/script.json. Do not edit by hand.",
+    made_from = "audio/script.json" if index_path == AUDIO / "narration.json" else str(index_path.parent.relative_to(FILM) / "script.json")
+    index = {"about": f"Made by tools/voice.py from {made_from}. Do not edit by hand.",
              "model": script["model"], "total_seconds": round(sum(x["seconds"] for x in out), 2), "lines": out}
-    (AUDIO / "narration.json").write_text(json.dumps(index, indent=1, ensure_ascii=False) + "\n")
-    print(f"audio/narration.json: {len(out)} lines, {index['total_seconds']} s of speech")
+    index_path.write_text(json.dumps(index, indent=1, ensure_ascii=False) + "\n")
+    print(f"{index_path.relative_to(FILM)}: {len(out)} lines, {index['total_seconds']} s of speech")
     for x in out:
         print(f"  {x['id']:<4} {x['voice']:<8} {x['seconds']:>5.2f}s  {x['words_per_second']} w/s  {x['text']}")
 
@@ -241,9 +248,23 @@ def do_samples(script: dict) -> None:
 
 
 def main() -> None:
-    script = json.loads(SCRIPT.read_text())
-    mode = sys.argv[1] if len(sys.argv) > 1 else "lines"
-    {"lines": do_lines, "samples": do_samples, "index": do_index}[mode](script)
+    # --script PATH (WP7): another script, such as a cut's (cuts/<name>/script.json); its index is
+    # written beside it as narration.json. Its new lines go to audio/lines/ like every other line.
+    args = sys.argv[1:]
+    script_path, index_path = SCRIPT, AUDIO / "narration.json"
+    if "--script" in args:
+        i = args.index("--script")
+        script_path = (Path.cwd() / args[i + 1]).resolve()
+        index_path = script_path.parent / "narration.json"
+        del args[i:i + 2]
+    script = json.loads(script_path.read_text())
+    mode = args[0] if args else "lines"
+    if mode == "samples":
+        do_samples(script)
+    elif mode == "lines":
+        do_lines(script, index_path)
+    else:
+        do_index(script, index_path)
 
 
 if __name__ == "__main__":

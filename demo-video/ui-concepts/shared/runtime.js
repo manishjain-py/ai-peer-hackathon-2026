@@ -26,10 +26,12 @@ function fail(err) {
 // as one series.
 function framing(root, meta) {
   const total = meta.of || 5;
+  // meta.kicker (WP7): the title card's first line, for a concept outside the five (the tag base).
+  const kicker = meta.kicker || `AI Peer &middot; wow concept ${meta.number} of ${total}`;
   const veil = el("div", "fr-veil", root);
   const title = el("div", "fr-title", root);
   title.innerHTML = `
-    <div class="fr-kicker">AI Peer &middot; wow concept ${meta.number} of ${total}</div>
+    <div class="fr-kicker">${kicker}</div>
     <div class="fr-name">${meta.title}</div>
     <div class="fr-line">${meta.line}</div>
     <div class="fr-foot">Same functions as today &middot; made-up data</div>`;
@@ -38,7 +40,7 @@ function framing(root, meta) {
   tag.textContent = `Concept ${meta.number} · ${meta.title} · made-up data`;
   const end = el("div", "fr-end", root);
   end.innerHTML = `
-    <div class="fr-kicker">AI Peer &middot; wow concept ${meta.number} of ${total}</div>
+    <div class="fr-kicker">${kicker}</div>
     <div class="fr-name">${meta.title}</div>
     <div class="fr-line">${meta.line}</div>
     <div class="fr-foot">${meta.change ? "Function change: " + meta.change : "No change in function"}</div>`;

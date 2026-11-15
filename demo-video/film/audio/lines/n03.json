@@ -1,0 +1,79 @@
+{
+ "what": "n03",
+ "voice_id": "XrExE9yKIg1WjnnlVkGX",
+ "voice": "Matilda",
+ "model": "eleven_multilingual_v2",
+ "text": "Every fact I learn shows where it came from.",
+ "spoken": "Every fact I learn shows where it came from.",
+ "request_sha": "c8b677b489b4d67a",
+ "request": {
+  "text": "Every fact I learn shows where it came from.",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.6,
+   "similarity_boost": 0.75,
+   "style": 0,
+   "use_speaker_boost": true,
+   "speed": 1.0
+  },
+  "seed": 14112026,
+  "previous_text": "I know his projects, his code, his conversations, the way he knows them.",
+  "next_text": "Then I tell him what matters, with a next step for each."
+ },
+ "request_id": "4GqgHi0UOCv2o4wFcTtM",
+ "character_cost": "21",
+ "generated_utc": "2026-11-15 17:11:12",
+ "file": "n03.wav",
+ "seconds": 2.44,
+ "raw_seconds": 2.972,
+ "trimmed_front": 0.03,
+ "peak_dbfs": -2.16,
+ "rms_dbfs": -22.69,
+ "words": [
+  {
+   "w": "Every",
+   "s": 0.0,
+   "e": 0.307
+  },
+  {
+   "w": "fact",
+   "s": 0.376,
+   "e": 0.643
+  },
+  {
+   "w": "I",
+   "s": 0.701,
+   "e": 0.725
+  },
+  {
+   "w": "learn",
+   "s": 0.818,
+   "e": 1.085
+  },
+  {
+   "w": "shows",
+   "s": 1.166,
+   "e": 1.433
+  },
+  {
+   "w": "where",
+   "s": 1.468,
+   "e": 1.619
+  },
+  {
+   "w": "it",
+   "s": 1.653,
+   "e": 1.7
+  },
+  {
+   "w": "came",
+   "s": 1.735,
+   "e": 1.955
+  },
+  {
+   "w": "from.",
+   "s": 2.002,
+   "e": 2.942
+  }
+ ]
+}

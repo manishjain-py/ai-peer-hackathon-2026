@@ -1,0 +1,74 @@
+{
+ "what": "n05",
+ "voice_id": "XrExE9yKIg1WjnnlVkGX",
+ "voice": "Matilda",
+ "model": "eleven_multilingual_v2",
+ "text": "He can ask me anything about his work.",
+ "spoken": "He can ask me anything about his work.",
+ "request_sha": "4f6d4b0cf742be1e",
+ "request": {
+  "text": "He can ask me anything about his work.",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.6,
+   "similarity_boost": 0.75,
+   "style": 0,
+   "use_speaker_boost": true,
+   "speed": 1.0
+  },
+  "seed": 14112026,
+  "previous_text": "Then I tell him what matters, with a next step for each.",
+  "next_text": "Every answer shows its sources, and how sure I am."
+ },
+ "request_id": "JIBMT8mWGr0PmToMLwxV",
+ "character_cost": "18",
+ "generated_utc": "2026-11-15 17:11:13",
+ "file": "n05.wav",
+ "seconds": 2.09,
+ "raw_seconds": 2.647,
+ "trimmed_front": 0.05,
+ "peak_dbfs": -5.91,
+ "rms_dbfs": -22.27,
+ "words": [
+  {
+   "w": "He",
+   "s": 0.0,
+   "e": 0.113
+  },
+  {
+   "w": "can",
+   "s": 0.159,
+   "e": 0.275
+  },
+  {
+   "w": "ask",
+   "s": 0.333,
+   "e": 0.554
+  },
+  {
+   "w": "me",
+   "s": 0.623,
+   "e": 0.728
+  },
+  {
+   "w": "anything",
+   "s": 0.798,
+   "e": 1.157
+  },
+  {
+   "w": "about",
+   "s": 1.204,
+   "e": 1.424
+  },
+  {
+   "w": "his",
+   "s": 1.471,
+   "e": 1.575
+  },
+  {
+   "w": "work.",
+   "s": 1.633,
+   "e": 2.597
+  }
+ ]
+}
