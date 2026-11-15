@@ -1,0 +1,22 @@
+{
+ "request_id": "01a1dd81-8f5f-7970-a445-751159426377",
+ "billable_units_header": "7.4841",
+ "inputs_sent": {
+  "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed and never moves. A man lies asleep in the bed on the left and does not move at any time. On the right, in front of the window beside the desk, stands a man made of soft mint light; a glowing ribbon of mint light still runs low across the floor to his feet. First the whole ribbon flows into him: it streams along the floor toward him and is drawn up into his legs and body, and the loop beside the desk curls in to him as well; his legs become whole and the last sparkles fade at his feet. The light stays low on the floor and never rises over the bed; nothing moves toward the bed, the bedside table or the sleeping man. Then, calm and complete and softly glowing, he turns to the desk, takes one easy step to the chair, rests one hand on the desk and takes the back of the chair with the other, about to pull it out and sit. Smooth, natural, unhurried motion, like a premium advertising film. Nothing spooky, no mist, no smoke, no text.",
+  "start_image_url": "https://v3b.fal.media/files/b/0ab28563/J9_A9ibA3sQHcuF05ZsJG_s0-at-3.0s-2752.png",
+  "middle_image_urls": [
+   "https://v3b.fal.media/files/b/0ab28591/uNc8c3Xm4CG7z6wtvGrkw_e2-clean.png"
+  ],
+  "end_image_url": "https://v3b.fal.media/files/b/0ab28591/OwsqXhEcoAjr5wA9eOzcI_desk-at-4.2s-2k.png",
+  "duration": 5,
+  "resolution": "1080p"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab285b6/JXeJi0hG316UEoWyqvZwm_output.mp4",
+   "content_type": "video/mp4",
+   "file_name": "output.mp4",
+   "file_size": 5867753
+  }
+ }
+}

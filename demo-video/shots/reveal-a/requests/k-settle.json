@@ -1,0 +1,20 @@
+{
+ "endpoint": "kling/v4/image-to-video",
+ "inputs": {
+  "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed and never moves. A man lies asleep in the bed on the left and does not move at any time. On the right, in front of the window beside the desk, stands a man made of soft mint light; a glowing ribbon of mint light still runs low across the floor to his feet. Now the whole ribbon flows into him: it streams along the floor toward him and is drawn up into his legs and body, and the loop beside the desk curls in to him as well. His legs become whole. The last few sparkles fade at his feet. The light stays low on the floor and never rises over the bed; nothing moves toward the bed, the bedside table or the sleeping man. At the end he stands calm and complete, softly glowing, and looks toward the desk. Smooth, slow, elegant motion, like a premium advertising film. Nothing spooky, no mist, no smoke, no text.",
+  "start_image_url": "file:demo-video/shots/reveal-a/keys/s0-at-3.0s-2752.png",
+  "end_image_url": "file:demo-video/shots/reveal-a/keys/e2-tm.png",
+  "duration": 3,
+  "resolution": "1080p"
+ },
+ "expect": {
+  "units": 4.4904,
+  "unit": "billed unit (fal.ai)",
+  "unit_price": 0.157,
+  "cost_usd": 0.705,
+  "estimate": true,
+  "basis": "wp2-5's k-walk on this route: 3 s at 1080p billed 4.4904 units at $0.157 = $0.705 (demo-video/ledger/wp2-5.csv)"
+ },
+ "output": "demo-video/shots/reveal-a/k-settle-r1",
+ "note": "Phase C (A, V20), wp2-6: the ribbon's tail flows into him (18.0 to 20.0) instead of arcing over Ram's head back into the phone; from the entrance's frame at 3.0 s to key frame e2, where the walk starts (route K)"
+}
