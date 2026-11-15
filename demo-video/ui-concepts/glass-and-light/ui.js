@@ -140,7 +140,7 @@ export function sourceWindow(parent, src, i) {
 
 // What lands on the bench: a chip per key line, the raw line, and the sentence it becomes.
 export const BENCH_ROWS = [
-  { src: "directory", ref: "Company directory", date: "Nov 15", raw: "Ram · Senior Software Engineer · Host Payouts · reports to Amara Johnson", sen: learned.facts[5].title },
+  { src: "directory", ref: "Company directory", date: "Nov 15", raw: "Ram · Staff Engineer · Host Payouts · reports to Amara Johnson", sen: learned.facts[5].title },
   { src: "docs", ref: "Payout retry v2 · design doc", date: "Nov 11", raw: "Payout retry v2 · design doc · by Ram · edited Nov 11", sen: learned.facts[0].title },
   { src: "slack", ref: "#host-payouts", date: "Nov 15", raw: `Daniel Weiss: "${reads.slack[0].text}"`, sen: brief.items[0].title },
   { src: "slack", ref: "#payments-eng", date: "Nov 12", raw: `Ram: "${reads.slack[2].text}"`, sen: learned.facts[1].title },
@@ -315,7 +315,7 @@ export function answerCard(parent) {
   const srcs = ask.sources.map((s, k) => el("div", "an-src", g.c, `<em>${k + 1}</em>${icChip(s.source, 30)}<div><b>${s.ref}</b><span>${sourceById[s.source].name} · ${s.date}</span></div>`));
   const foot = el("div", "an-f", g.c);
   const gauge = el("div", "gauge", foot, `<i></i><b>High</b>`);
-  el("div", "cert", foot, `<b>Certainty: ${ask.certainty}</b><span>${ask.asOf}</span>`);
+  el("div", "cert", foot, `<b>Confidence: ${ask.certainty}</b><span>${ask.asOf}</span>`);
   return { ...g, sens, srcs, gauge, gaugeFill: gauge.querySelector("i"), foot };
 }
 

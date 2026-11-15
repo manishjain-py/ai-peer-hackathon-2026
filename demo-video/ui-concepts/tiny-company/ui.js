@@ -59,7 +59,7 @@ export function buildUI(stage) {
   U.copyCall = call("ok", CAM, "Copies only", "never takes or changes a thing");
   U.pressCall = call("ok", icons.spark, "Printing your first brief", "four things, newest first");
   U.vaultCall = call("red", icons.lock, "Finance vault", "Ram has no access, so it stays shut");
-  U.homeCall = call("ok", icons.home, "Notes stay in Ram's house", "kept in his browser; Forget me clears them");
+  U.homeCall = call("ok", icons.home, "Notes stay in Ram's house", "kept in his browser; one click clears them");
   U.copyCall2 = call("ok", CAM, "It only reads", "posts nothing, sends nothing, changes nothing");
   U.stamp = pinned(lab, "", `<div class="tc-stamp">Just information<small>not an instruction · ignored</small></div>`);
   // connect signs and the sign-in sheet
@@ -88,7 +88,7 @@ export function buildUI(stage) {
     D.steps.map((s) => `<div class="row"><div class="st"><div class="ring"></div>${SPIN}<div class="done">${icons.check}</div></div><span class="tx">${s.text}</span><em class="tm">${s.time.toFixed(1)} s</em></div>`).join(""));
   U.stepRows = [...U.steps.querySelectorAll(".row")].map((r) => ({ r, ring: r.querySelector(".ring"), spin: r.querySelector(".tc-spin"), done: r.querySelector(".done"), tx: r.querySelector(".tx"), tm: r.querySelector(".tm") }));
   // the facts being written (step 3)
-  U.write = el("div", "tc-big tc-card tc-write", ui, `<div class="hd">${icons.book}Writing what it learned, with sources</div>` +
+  U.write = el("div", "tc-big tc-card tc-write", ui, `<div class="hd">${icons.book}Writing up what it found, with sources</div>` +
     D.learned.facts.map((f) => `<div class="li"><i class="tc-dot" style="--h:${HUE[f.source]}"></i><div><b>${f.title}</b><span>${D.sourceById[f.source].name} · ${f.ref} · ${f.date}</span></div></div>`).join(""));
   U.writeRows = [...U.write.querySelectorAll(".li")];
   // the sources line
@@ -140,7 +140,7 @@ export function buildUI(stage) {
     <div class="tc-foot"><div class="tc-gauge"><svg viewBox="0 0 96 56"><path d="M8 50a40 40 0 0 1 80 0" fill="none" stroke="#cfe5d8" stroke-width="10" stroke-linecap="round"/>
       <path class="arc" d="M8 50a40 40 0 0 1 80 0" fill="none" stroke="#167353" stroke-width="10" stroke-linecap="round" stroke-dasharray="126" stroke-dashoffset="126"/>
       <g class="needle"><path d="M48 50L48 18" stroke="#1c2a2b" stroke-width="4" stroke-linecap="round"/><circle cx="48" cy="50" r="6" fill="#1c2a2b"/></g></svg>
-      <div><b>Certainty: ${D.ask.certainty}</b><span>how sure it is</span></div></div>
+      <div><b>Confidence: ${D.ask.certainty}</b><span>how sure it is</span></div></div>
       <div class="tc-asof">${CLOCK}${D.ask.asOf}</div><div class="tc-ai-mark"><i>AI</i>written by ${D.peer.name}</div></div>`);
   U.ansParts = { q: U.ans.querySelector(".qq"), sents: [...U.ans.querySelectorAll(".tc-sents p")], srcs: [...U.ans.querySelectorAll(".tc-srcs > div")], foot: U.ans.querySelector(".tc-foot"),
     arc: U.ans.querySelector(".arc"), needle: U.ans.querySelector(".needle"), asof: U.ans.querySelector(".tc-asof") };

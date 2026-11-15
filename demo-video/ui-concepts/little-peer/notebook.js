@@ -9,7 +9,7 @@ import { NB, SPREAD, R, S3, LEARN, BRIEF } from "./tl.js";
 import { DEEP, TINT } from "./widgets.js";
 
 export const NOTES = [
-  { text: "Senior Software Engineer, Host Payouts", src: "directory", date: "Nov 15" },
+  { text: "Staff Engineer, Host Payouts", src: "directory", date: "Nov 15" },
   { text: "You own Payout retry v2", src: "docs", date: "Nov 11" },
   { text: "Retry v2 is live for 10% in Mexico", src: "slack", date: "Nov 12" },
   { text: "PR #4182: retry limit per market", src: "code", date: "Nov 14" },

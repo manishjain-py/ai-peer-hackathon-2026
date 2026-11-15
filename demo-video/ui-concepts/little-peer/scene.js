@@ -17,7 +17,7 @@ import { buildBg, renderBg } from "./bg.js";
 import { buildMotion } from "./motion.js";
 
 const STRIP = {
-  directory: "Ram · Senior Software Engineer · Host Payouts",
+  directory: "Ram · Staff Engineer · Host Payouts",
   docs: "Payout retry v2 · design doc · by Ram",
   slack: "Retry v2 is live for 10% of payouts in Mexico",
   code: "PR #4182 · Retry limit per market",

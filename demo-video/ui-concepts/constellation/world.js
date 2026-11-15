@@ -34,7 +34,7 @@ export const ORDER = ["directory", "docs", "slack", "code", "tickets", "mail"];
 // The named items each source gives (from shared/data.js `reads`), as stars at an offset from the
 // cluster's centre. `side`: which side of its star the title sits (1 right, -1 left).
 export const ITEMS = [
-  { id: "ram", src: "directory", off: [0.9, -0.5, 1.0], title: "Ram · Senior Software Engineer", sub: "Host Payouts · Payments · Dublin", side: 1 },
+  { id: "ram", src: "directory", off: [0.9, -0.5, 1.0], title: "Ram · Staff Engineer", sub: "Host Payouts · Payments · Dublin", side: 1 },
   { id: "amara", src: "directory", off: [-1.1, 1.0, 0.2], title: "Amara Johnson · your manager", sub: "Host Payouts · Payments", side: 1 },
   { id: "d1", src: "docs", off: [1.0, 0.9, 1.0], title: "Payout retry v2 · design doc", sub: "by Ram · edited Nov 11", side: 1 },
   { id: "d2", src: "docs", off: [-1.0, 1.5, 0.2], title: "Brazil launch plan", sub: "Payments · Nov 12", side: 1 },

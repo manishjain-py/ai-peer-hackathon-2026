@@ -100,8 +100,10 @@ async function start() {
     await document.fonts.ready;
     const ctx = { meta, root, stage, W, H, fps: 30 };
     if (scene.init) await scene.init(stage, ctx);
-    const fr = framing(root, meta);
-    const caps = captionsLayer(root, scene.captions || []);
+    // meta.framing === false: no title card, corner tag, end card or captions (for stills such as the overview).
+    const off = meta.framing === false;
+    const fr = off ? { render() {} } : framing(root, meta);
+    const caps = off ? { render() {} } : captionsLayer(root, scene.captions || []);
     const renderAt = (t) => {
       const wait = scene.render(t);
       caps.render(t);

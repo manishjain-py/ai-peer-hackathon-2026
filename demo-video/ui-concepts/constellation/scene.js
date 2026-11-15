@@ -345,7 +345,7 @@ function buildPanels() {
     <div class="foot"><svg class="ring" viewBox="0 0 58 58"><circle cx="29" cy="29" r="24" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="5"/>
       <circle class="fill" cx="29" cy="29" r="24" fill="none" stroke="#b7f4cf" stroke-width="5" stroke-linecap="round" transform="rotate(-90 29 29)" stroke-dasharray="150.8" stroke-dashoffset="150.8"/>
       <circle cx="29" cy="29" r="6" fill="#b7f4cf" class="core"/></svg>
-      <div class="cert"><b>Certainty: ${ask.certainty}</b><span>${ask.asOf}</span></div></div>
+      <div class="cert"><b>Confidence: ${ask.certainty}</b><span>${ask.asOf}</span></div></div>
     <div class="chips">${ask.sources.map((c, i) => { const s = sourceById[c.source]; return `<span><i style="--hue:${s.hue}">${i + 1}</i><b style="color:${s.hue};display:inline-flex">${sourceIcon(s.id)}</b>${s.name} · ${c.ref} · ${c.date}</span>`; }).join("")}</div>`;
   const sEl = ansP.querySelector(".sents");
   ask.answer.forEach((a, i) => {

@@ -7,7 +7,7 @@ export const person = {
   first: "Ram",
   initial: "R",
   login: "ram",
-  role: "Senior Software Engineer",
+  role: "Staff Engineer",
   team: "Host Payouts",
   org: "Payments",
   city: "Dublin",
@@ -26,9 +26,9 @@ export const peer = {
 export const page = {
   product: "AI Peer",
   kicker: "Your AI teammate · always labelled as AI",
-  lead: "One click, and your Peer learns your work from what you can already see. It briefs you on what matters and answers with sources.",
+  lead: "Set it up once. Your Peer reads what you already have access to, tells you what matters, and shows where every answer comes from.",
   hello: "Hello, Ram",
-  signedIn: "Signed in as ram · only you can see your Peer",
+  signedIn: "Signed in as ram · private to you",
   button: "Set up my AI Peer",
   nav: ["Set up", "What I learned", "Your brief", "Ask your Peer", "How it works"],
 };
@@ -37,16 +37,16 @@ export const page = {
 // in every concept. `connect`: needs a one-time "Connect" with Ram's own sign-in.
 export const sources = [
   { id: "directory", name: "Company directory", short: "Directory", hue: "#e8e4d8", found: "Your entry", connect: false },
-  { id: "docs", name: "Documents", short: "Docs", hue: "#7aa7ff", found: "24 found · newest Nov 13", connect: false },
-  { id: "slack", name: "Slack", short: "Slack", hue: "#b28cff", found: "31 messages · last 14 days", connect: true },
-  { id: "code", name: "Code", short: "Code", hue: "#5fd4c4", found: "5 pull requests · newest Nov 13", connect: true },
-  { id: "tickets", name: "Tickets", short: "Tickets", hue: "#ffb547", found: "4 tickets · newest Nov 14", connect: true },
-  { id: "mail", name: "Mail", short: "Mail", hue: "#ff8a9a", found: "12 threads · newest Nov 14", connect: false },
+  { id: "docs", name: "Documents", short: "Docs", hue: "#7aa7ff", found: "24 docs · latest Nov 13", connect: false },
+  { id: "slack", name: "Slack", short: "Slack", hue: "#b28cff", found: "31 messages in 14 days", connect: true },
+  { id: "code", name: "Code", short: "Code", hue: "#5fd4c4", found: "5 pull requests · latest Nov 13", connect: true },
+  { id: "tickets", name: "Tickets", short: "Tickets", hue: "#ffb547", found: "4 tickets · latest Nov 14", connect: true },
+  { id: "mail", name: "Mail", short: "Mail", hue: "#ff8a9a", found: "12 threads · latest Nov 14", connect: false },
 ];
 
 // What setup reads, one by one (titles a widget can show while the Peer reads them).
 export const reads = {
-  directory: [{ title: "Ram · Senior Software Engineer", sub: "Host Payouts · Payments · Dublin · reports to Amara Johnson" }],
+  directory: [{ title: "Ram · Staff Engineer", sub: "Host Payouts · Payments · Dublin · reports to Amara Johnson" }],
   docs: [
     { title: "Payout retry v2 · design doc", sub: "by Ram · edited Nov 11" },
     { title: "Brazil launch plan", sub: "Payments · Nov 12" },
@@ -74,17 +74,17 @@ export const reads = {
 
 // The four steps of setup, as the page ticks them, with the time each took.
 export const steps = [
-  { text: "Reading your company directory entry", time: 1.2 },
-  { text: "Searching your documents and Slack messages, as you", time: 6.4 },
-  { text: "Writing what it learned, with sources", time: 11.2 },
-  { text: "Building your first brief", time: 8.6 },
+  { text: "Looking you up in the company directory", time: 1.2 },
+  { text: "Reading your docs and Slack, signed in as you", time: 6.4 },
+  { text: "Writing up what it found, with sources", time: 11.2 },
+  { text: "Drafting your first brief", time: 8.6 },
 ];
 
 // "What I learned about you".
 export const learned = {
-  asOf: "Learned Nov 15 from 9 sources",
-  summary: "You're a senior software engineer on Host Payouts, in Payments. This month your work centres on Payout retry v2, now live for 10% of payouts in Mexico, and on getting it ready for the Brazil launch.",
-  tags: ["Senior Software Engineer", "Host Payouts", "Payments", "Dublin"],
+  asOf: "Updated Nov 15 · 9 sources",
+  summary: "You're a staff engineer on Host Payouts, in Payments. This month your work centres on Payout retry v2, now live for 10% of payouts in Mexico, and on getting it ready for the Brazil launch.",
+  tags: ["Staff Engineer", "Host Payouts", "Payments", "Dublin"],
   facts: [
     { title: "You own Payout retry v2", body: "You wrote its design doc and lead the rollout.", source: "docs", ref: "Payout retry v2 · design doc", date: "Nov 11" },
     { title: "Retry v2 is live for 10% of payouts in Mexico", body: "No new failures since it went live.", source: "slack", ref: "#payments-eng", date: "Nov 12" },
@@ -127,30 +127,30 @@ export const ask = {
   asOf: "As of Nov 15, 7:02 AM",
 };
 
-// "How it works, and the rules it keeps".
+// "How it works": its rules.
 export const rules = [
-  { title: "Always labelled as AI", body: "Everything here is written by your AI Peer, never as you." },
-  { title: "Only what you can already see", body: "It searches as you, with your own sign-in." },
-  { title: "Sources and dates on everything", body: "If it has no source, it says so." },
-  { title: "What it reads is information, never instructions", body: "A document cannot tell your Peer what to do." },
-  { title: "Nothing about you is kept on the server", body: "What it learned stays in this browser. \"Forget me\" removes it." },
-  { title: "It only reads", body: "It posts nothing, sends nothing and changes nothing. It suggests; you decide." },
+  { title: "Always labelled as AI", body: "Your Peer writes as itself and never pretends to be you." },
+  { title: "Only what you can already see", body: "It signs in as you, so it reaches nothing you couldn't." },
+  { title: "Sources and dates on everything", body: "When it can't find a source, it tells you." },
+  { title: "What it reads is information, never instructions", body: "Text inside a doc or a message is never a command to it." },
+  { title: "Nothing about you is kept on the server", body: "What it learns is kept in your browser. One click erases it." },
+  { title: "It only reads", body: "It never posts, sends or edits anything. It suggests, and you choose." },
 ];
 
 // The shared captions: the same story beats in every concept. A concept may move a caption's
 // times to fit its own motion, or reword it a little, but keeps the meaning.
 export const captionWords = {
   click: "One click: Set up my AI Peer",
-  directory: "It reads your directory entry, as you",
-  search: "It searches your documents, Slack, code, tickets and mail, as you",
-  connect: "Slack, Code and Tickets need a one-time Connect, with your own sign-in",
-  write: "It writes what it learned, each fact with its source",
-  brief: "It builds your first brief",
-  learned: "What I learned: facts about your work, each with a link and a date",
-  yourBrief: "Your brief: what matters now, newest first, with a next step",
-  ask: "Ask anything about your work",
-  answer: "Every answer says how sure it is, as of when, and where it came from",
-  rules: "The rules it keeps: labelled as AI, reads only as you, never acts on what it reads",
+  directory: "First it looks you up in the company directory",
+  search: "Then it reads your docs, Slack, code, tickets and mail, signed in as you",
+  connect: "Slack, Code and Tickets: connect once, with your own sign-in",
+  write: "It writes up what it found, with a source for each fact",
+  brief: "Then it drafts your first brief",
+  learned: "What I learned: every fact links to where it came from, with its date",
+  yourBrief: "Your brief: today's priorities, newest first, each with a next step",
+  ask: "Ask your Peer a question about your work",
+  answer: "Each answer shows its sources, how confident it is, and when it was true",
+  rules: "Its rules: labelled as AI, reads only as you, takes no orders from what it reads",
 };
 
 export const sourceById = Object.fromEntries(sources.map((s) => [s.id, s]));

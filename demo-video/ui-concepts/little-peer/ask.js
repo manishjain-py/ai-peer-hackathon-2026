@@ -1,6 +1,6 @@
 // "Ask your Peer": the question is typed, the box folds into a paper plane the Peer catches; it
 // visits four sources (each glows) and collects a result chip at each; back home the plane
-// unfolds into the answer card; the Peer stamps "Certainty: High"; "As of" and the four source
+// unfolds into the answer card; the Peer stamps "Confidence: High"; "As of" and the four source
 // chips hang below on strings and swing.
 import { el, prog, ease, clamp, typed } from "../shared/kit.js";
 import { ask, sourceById } from "../shared/data.js";
@@ -62,7 +62,7 @@ export function buildAsk(parent) {
     <div class="lpa-ss">${ask.answer.map((a, i) => {
       const s = ask.sources[a.cite];
       return `<div class="lpa-s"><span>${a.text}</span><sup style="background:${DEEP[s.source]}">${i + 1}</sup></div>`;
-    }).join("")}</div><div class="lpa-stamp">Certainty: ${ask.certainty}</div>`;
+    }).join("")}</div><div class="lpa-stamp">Confidence: ${ask.certainty}</div>`;
   const sentences = [...ans.querySelectorAll(".lpa-s")];
   const stamp = ans.querySelector(".lpa-stamp");
   const strings = document.createElementNS("http://www.w3.org/2000/svg", "svg");
