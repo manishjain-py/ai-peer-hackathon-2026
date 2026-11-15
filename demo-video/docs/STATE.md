@@ -1,9 +1,10 @@
 # AI Peer demo video: state
 
-Live controller: **ai-peer-video-controller-4** (Opus 5.5, max effort; Terminal window 3977 on
-Mac 48 GB, PID 35776, https://claude.ai/code/session_01Nfn5h9pvSF58rFbV1QBNt4), since its
-read-in at 15:02 UTC. It took over from ai-peer-video-controller-3 (hand-off
-`handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-3.md`), which was closed at 15:01 UTC.
+Live controller: ai-peer-video-controller-4 (Opus 5.5; Terminal window 3977 on Mac 48 GB, PID
+35776, https://claude.ai/code/session_01Nfn5h9pvSF58rFbV1QBNt4) until its hand-off at 13:21 UTC on
+15 November to **ai-peer-video-controller-5** (Opus 5.5), which writes its own window and link
+here when it has read in (the hand-off is
+`handoffs/HANDOFF-2026-11-15-ai-peer-video-controller-4.md`).
 Other sessions message the controller by its name.
 
 ## Where we are (2026-11-15 13:18 UTC)
@@ -440,7 +441,10 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 
 ## Next
 
-**Now (19:25 UTC), ai-peer-video-controller-4:** (1) ai-peer-video-wp2-4 works on the order in
+**Now (13:21 UTC, 15 November), for ai-peer-video-controller-5:** follow "Next step, exactly" in
+`handoffs/HANDOFF-2026-11-15-ai-peer-video-controller-4.md`: your name here and to
+ai-peer-video-wp6; your waits; WP6's events and its concepts to Manish; usage (85% and 93%);
+the ledgers. Older paragraph, kept: **Now (19:25 UTC), ai-peer-video-controller-4:** (1) ai-peer-video-wp2-4 works on the order in
 `FEEDBACK-DRAFT-2-2026-11-14.md`; read its context at each event (it reports at 40%). (2) Phase
 A's concepts and samples: look at one board, then send them to Manish (the Attention group with
 the files, one text line with the options and the recommendation; the same in the session) and
@@ -534,6 +538,21 @@ and 7 still hold.
 - See `DESIGN.md` section 0.
 
 ## Lessons
+
+- **A weekday worked out by hand put the weekly reset a day early.** The controller turned
+  "Monday 17 November 04:30 India time" into Sunday 23:00 UTC, but 17 November 2026 is a
+  Tuesday; `/usage` says "resets Nov 17 at 4:29am (Asia/Calcutta)", which is Monday 16 November
+  22:59 UTC. A worker noticed it. Read the reset line from `/usage` itself, and convert with
+  `date`, never by hand.
+- **An idle worker sets off its own stall alarm.** The wait `stall-wp*` reads silence as a
+  stall, so a worker that waits for Manish would send a false "silent" line. Stop the wait while
+  the worker waits on Manish; re-arm it when the work resumes.
+- **An unquoted heredoc ran the backticks of a Markdown edit.** Two commit ids in STATE.md became
+  empty strings, and the commit still went out. Quote every heredoc (`<<'EOF'`) and pass values
+  through the environment (shared lesson `gotcha_unquoted_heredoc_runs_backticks.md`).
+- **A controller's big context costs the shared week.** At 36% (364k tokens) each of its calls
+  re-reads its whole context. Under a tight week, hand a waiting controller's follow-up to a
+  fresh one early (the skill's 150k mark), not only at 45%.
 
 - **Usage: four or five max-effort sessions that read pictures burn about 10% of the week an
   hour** (measured 10:10 to 12:34 UTC on 14 November: 0% to 20%, Fable 39%), twice to five
@@ -643,3 +662,4 @@ and 7 still hold.
 | 2026-11-15 05:08 | ai-peer-video-wp2-6 | Finished Phase C and Draft 3: the phone lights up in the close-up and its ribbon's tail now flows into the Peer (no light near Ram); the Zoom colleagues move for the whole meeting (six H3 listening takes); the big world's outside names checked (one renamed), its web louder, its card drops in clean. Rendered Draft 3 (public, 2:00.0, -14.1 LUFS, 18 of 19 lines by the speech check), merged PR 12 (`bb81fc5`). $3.42 (ledger wp2-6). |
 | 2026-11-15 05:12 | ai-peer-video-controller-4 | Draft 3 came from ai-peer-video-wp2-6 (PR 12, `bb81fc5`). Checked that it is the public build, its numbers and one 30-frame sheet; sent Manish a 720p copy at 05:09 UTC (Attention group and session) asking for his view. Stopped the idle worker's stall wait. Money $41.43 of $100. |
 | 2026-11-15 13:20 | ai-peer-video-controller-4 | Manish: "draft 3 looks good" (V21), and a new task (V22): wow concepts for the AI Peer's own screens, from his walkthrough recording (real company content: copied to the private folder, kept out of git). Wrote `BRIEF-UI-WOW-2026-11-15.md` and WP6's brief; closed ai-peer-video-wp2-6 at 13:19 UTC; launched ai-peer-video-wp6 at 13:19 UTC (window 5567). Usage 63% (13:13 UTC). Corrected a typed time in "Where we are" (13:35 to 13:18). |
+| 2026-11-15 13:21 | ai-peer-video-controller-4 | Handed off at 36% context to ai-peer-video-controller-5 (Opus 5.5), early because of the tight week (63% at 13:13 UTC): `handoffs/HANDOFF-2026-11-15-ai-peer-video-controller-4.md`. Stopped its waits; added four lessons; filed one shared lesson (unquoted heredocs). WP6 runs (ai-peer-video-wp6). |
