@@ -7,7 +7,22 @@ PID 14002, https://claude.ai/code/session_01Nfn5hAQtMCLhcAz7Z5MUzm, transcript
 3977, PID 35776) was closed at 13:24 UTC.
 Other sessions message the controller by its name.
 
-## Where we are (2026-11-15 16:12 UTC)
+## Where we are (2026-11-15 16:31 UTC)
+
+**16:31 UTC: Manish picked Little Peer (V23) and gave the next task (V24, V25; his words:
+`BRIEF-BLENDED-2026-11-15.md`).** Two "blended videos": Draft 3's story with a product
+walkthrough as the main demo part, one on a video he made on his other Mac, one on Little
+Peer; the Peer out of the phone becomes each version's mascot; nothing is overwritten. And a
+repo that carries the work between Macs. His video came in a second message at 16:28 UTC
+(88.7 s, 848x528, silent; its mascot is a walking name tag, hence "one with tag"; made-up
+data; one generic match with WP6's private list, a job title), kept outside git for now in
+`~/.ai-peer/demo-video-private/bases/`; the controller looked at one sheet of 16 frames. The
+work already lives in the private `manishjain-py/ai-peer-hackathon-2026` (created 4
+November), so the controller proposed completing it rather than a second repo. He asked for
+a short plan before any start: sent in the session at 16:31 UTC, with one question (does
+the code that made the tag video exist?), also on the Attention group. Nothing starts before
+his go. ai-peer-video-wp6 gets his pick word for word and closes; the blends go to a fresh
+worker.
 
 **16:12 UTC: WP6's five concepts are with Manish; his pick is the open question.**
 ai-peer-video-wp6 delivered them with its order and an overview picture; PR 13 merged at
@@ -440,6 +455,17 @@ background; the usage alarm's test is `demo-video/tools/usage-check.sh`. The log
 
 ## Needs Manish
 
+**Asked 2026-11-15 16:31 UTC: does the code or project that made the tag video exist on his
+other Mac (then the worker builds from it at full size instead of rebuilding the 848x528
+video by code), and his go on the plan** (the session of ai-peer-video-controller-5 and the
+Attention group). The plan as sent: tags for every
+milestone; the existing private repo completed for a fresh Mac (unless he wants a new one);
+both videos studied in depth; two blended videos under 2:00 (V6), about half on the product
+walkthrough, each with its own mascot out of the phone; Draft 3 and everything else kept.
+
+**Answered 2026-11-15 16:26 UTC: Little Peer (V23).** "from the videos you sent me, I liked
+little peer", with the next task (V24, V25).
+
 **Asked 2026-11-15 16:10 UTC: which of the five wow concepts does he like?** (his review,
 V22.) Sent to the Attention group (the overview, the five videos with captions, one text
 line) and in the session of ai-peer-video-controller-5 (window 5570). The worker's order,
@@ -527,6 +553,13 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
+
+**Now (16:31 UTC, 15 November), ai-peer-video-controller-5:** wait for his video and his go.
+Then: (1) git tags for every milestone (Drafts 1 to 3, the wow concepts) and the repo made
+complete for a fresh Mac (a start-here guide, the ways of working, the lessons, the helper
+scripts, the files outside git that matter; real company content stays out); (2) one fresh
+worker, WP7 on Opus 5.5: study both videos in depth, plan the blend, build the two blended
+videos as new files (Draft 3 untouched), send both to him. The paragraph below is older.
 
 **Now (16:12 UTC, 15 November), ai-peer-video-controller-5:** wait for Manish's pick of
 the wow concepts (Needs Manish). When it comes: his words in a feedback file and V23, word for
@@ -760,3 +793,4 @@ and 7 still hold.
 | 2026-11-15 13:39 | ai-peer-video-wp6 | Read in (STATE, the WP6 brief, its hand-off); made the worktree and branch; looked at the recording once (one sheet, private folder only); built and proved the concepts kit (a 12 s test rendered in 8 s; pushed `fc1df34`); wrote `BUILDERS.md` with five concepts; started one research helper and three builders. | In progress; $0.00 of $10 |
 | 2026-11-15 16:12 | ai-peer-video-wp6 | Five concepts built and checked (each final sheet seen); privacy: the product's own wording found in the shared data, rewritten, four concepts re-rendered; numbered 1 to 5 in my order, overview picture, README and REPORT; privacy grep clean on WP6's files; delivered to ai-peer-video-controller-5 at 16:07; PR 13 merged (`ff352f0`). | Done; $0.00 of $10; context 33% |
 | 2026-11-15 16:12 | ai-peer-video-controller-5 | WP6 delivered five concepts (PR 13 merged by the worker, `ff352f0`). Privacy check at `0da0985` (no real term in WP6's 260 files, no exact copy of a private file); looked at the overview; sent the overview and five videos with captions plus one question to the Attention group and the session at 16:10 UTC. Stopped `stall-wp6` (worker idle for Manish). Week 71%. |
+| 2026-11-15 16:31 | ai-peer-video-controller-5 | Manish picked Little Peer (V23) and asked for two blended videos (V24) and a repo for any Mac (V25); his words in `BRIEF-BLENDED-2026-11-15.md`. His tag video came at 16:28 UTC (one sheet looked at; kept outside git for now); the repo already exists (private, since 4 November). Sent him a short plan and one question; nothing started. |
