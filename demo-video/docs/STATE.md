@@ -360,6 +360,19 @@ is the worker ai-peer-video-wp6 (window 5567, PID 11478).
   MiniMax H3 Max Turbo, with the colleagues' mouths following WP2's recordings. Open for the
   controller: no clip was watched in motion or heard; the delivered files carry no colour tag (the
   report says what to check); the tap in `morning-brief` and the nod are small.
+- WP6, wow concepts for the AI Peer's own screens (`ai-peer-video-wp6`, brief
+  `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp6.md`, cap $10): **in progress** since 13:19 UTC.
+  Worktree `/Users/manishjain/repos/ai-peer-video-wp6`, branch `video-wp6-wow-concepts`. The kit is
+  pushed (`fc1df34`): `demo-video/ui-concepts/render.mjs` renders one concept folder frame by frame
+  with the film's renderer (page check, mp4, small sheets); `shared/` holds the runtime (title card,
+  captions, end card), the made-up story (`data.js`: Ram), today's page in generic words, fonts and
+  three.js. `demo-video/ui-concepts/BUILDERS.md` is the builders' one shared brief, with five
+  concepts: Little Peer (a character does the work), Glass & Light (the page in 3D glass, read by a
+  living light), Tiny Company (an isometric miniature with a courier), Constellation (a 3D star map
+  of his work), The Notebook (paper, light ink, footnotes). Builders for little-peer,
+  glass-and-light and tiny-company started at 13:37 UTC; one read-only research helper (web) since
+  13:27. The recording was looked at once (one sheet of 20 frames, kept in the private folder);
+  nothing from it is in the worktree. Spent $0.00.
 
 ## Money spent
 
@@ -676,3 +689,4 @@ and 7 still hold.
 | 2026-11-15 13:20 | ai-peer-video-controller-4 | Manish: "draft 3 looks good" (V21), and a new task (V22): wow concepts for the AI Peer's own screens, from his walkthrough recording (real company content: copied to the private folder, kept out of git). Wrote `BRIEF-UI-WOW-2026-11-15.md` and WP6's brief; closed ai-peer-video-wp2-6 at 13:19 UTC; launched ai-peer-video-wp6 at 13:19 UTC (window 5567). Usage 63% (13:13 UTC). Corrected a typed time in "Where we are" (13:35 to 13:18). |
 | 2026-11-15 13:21 | ai-peer-video-controller-4 | Handed off at 36% context to ai-peer-video-controller-5 (Opus 5.5), early because of the tight week (63% at 13:13 UTC): `handoffs/HANDOFF-2026-11-15-ai-peer-video-controller-4.md`. Stopped its waits; added four lessons; filed one shared lesson (unquoted heredocs). WP6 runs (ai-peer-video-wp6). |
 | 2026-11-15 13:25 | ai-peer-video-controller-5 | Took over from ai-peer-video-controller-4 (Opus 5.5, window 5570, PID 14002). Told ai-peer-video-wp6 its name; started the waits `usage` (70%) and `stall-wp6`; closed controller-4's window 3977 after the checks. No question open for Manish. |
+| 2026-11-15 13:39 | ai-peer-video-wp6 | Read in (STATE, the WP6 brief, its hand-off); made the worktree and branch; looked at the recording once (one sheet, private folder only); built and proved the concepts kit (a 12 s test rendered in 8 s; pushed `fc1df34`); wrote `BUILDERS.md` with five concepts; started one research helper and three builders. | In progress; $0.00 of $10 |
