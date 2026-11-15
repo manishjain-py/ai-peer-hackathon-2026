@@ -30,6 +30,13 @@ CUT = f"blended-{WHICH}"
 IDEA = sys.argv[sys.argv.index("--idea") + 1] if "--idea" in sys.argv else None
 if IDEA:
     CUT = f"idea-{WHICH}-{IDEA}"
+# WP7 v2 (V27, V28, V29): --v2 writes the Tag blend's version 2 as cuts/blended-tag-v2/ (the "v2" block
+# below); without it every output is as before.
+V2 = "--v2" in sys.argv
+if V2:
+    if WHICH != "tag" or IDEA:
+        raise SystemExit("v2 is the Tag blend only (V28), without --idea")
+    CUT = f"blended-{WHICH}-v2"
 OUT = FILM / "cuts" / CUT
 r3 = lambda x: round(x + 1e-9, 3)
 
@@ -192,10 +199,10 @@ ENTRANCE = [
                      "night-desk-v1.mp4": QUAD},
          shows="The camera follows the mascot through the laptop's screen into the product."),
 ]
-if IDEA:
+if IDEA or V2:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     import ideas
-    HOOK_M, HOOK_EXTRA, ENTRANCE, P02 = ideas.make(WHICH, IDEA, MASCOT, QUAD, slot)
+    HOOK_M, HOOK_EXTRA, ENTRANCE, P02 = ideas.make(WHICH, IDEA or "c", MASCOT, QUAD, slot)
 
 slots = [
     keep("hook-1", start=0.0, length=3.5),
@@ -248,6 +255,11 @@ PART_OF = {"h1": "hook", "h2": "hook", "h3": "hook", "p01": "hook", "p02": "entr
            "m1": "night", "m2": "night", "m3": "night", "m4": "night", "p06": "night", "p08": "morning", "p10": "morning",
            "p11": "morning", "p12": "close"}
 
+NEW_META = {}
+if V2:
+    import v2
+    SECONDS, PARTS, slots, NARRATION, NEW_META = v2.timeline(slots, NARRATION, NEW_LINES, LABELS, MASCOT, V, slot, keep, d3, r3)
+
 shots = {
     "about": f"WP7, the blended video with {V['title']} (DESIGN V24): Draft 3's story with the {V['title']} walkthrough as its main demo part. "
              "Times are film seconds. Written by cuts/_blend/make_cut.py (edit that, not this file). Draft 3's own shots.json is untouched.",
@@ -280,6 +292,8 @@ sl["camera"] = [{"t": 0, "s": 1, "fx": 0.5, "fy": 0.5}, {"t": 2.8, "s": 1, "fx":
 br["scroll"] = [{"t": 0, "y": 0}, {"t": 0.6, "y": 0}, {"t": 1.5, "y": 330}, {"t": 2.2, "y": 330}, {"t": 3.0, "y": 700}]
 br["highlight"] = [2.9, 4.4]
 sc["slots"] = {"proof-meeting": z, "proof-slack": sl, "morning-product-brief": br}
+if V2:
+    v2.screens(sc, r3)
 
 # ------------------------------------------------------------------ the lines: Draft 3's reused, new ones made
 by_id = {l["id"]: l for l in script["lines"]}
@@ -294,6 +308,7 @@ for lid in sorted(NARRATION, key=lambda k: NARRATION[k]):
         l = {"id": lid, "part": "walkthrough", "speaker": "peer", "text": text}
         if spoken:
             l["spoken"] = spoken
+        l.update(NEW_META.get(lid, {}))
     lines.append(l)
 sc_script = {k: v for k, v in script.items() if k not in ("lines", "samples")}
 sc_script["about"] = ("WP7: the blended video's spoken script. Lines marked reuse are Draft 3's own audio (audio/lines/), never made again; "
@@ -336,6 +351,10 @@ cut = {
         {"from": "../../../ui-concepts/shared/kit.js", "to": "src/mascot/shared/kit.js"},
     ],
 }
+
+if V2:
+    v2.mix_and_cut(m, cut, moved, r3)
+    shots["about"] = ("WP7 v2, the Tag blend's version 2 (DESIGN V27, V28, V29): " + shots["about"])
 
 OUT.mkdir(parents=True, exist_ok=True)
 for name, data in (("cut.json", cut), ("shots.json", shots), ("screens.json", sc), ("script.json", sc_script), ("mix.json", m)):

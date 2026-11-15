@@ -1,0 +1,30 @@
+{
+ "about": "WP7 v2: the Tag blend's version 2. Read by build.mjs and render.mjs (--cut blended-tag-v2); written by cuts/_blend/make_cut.py tag --v2 (cuts/_blend/v2.py).",
+ "shots": "shots.json",
+ "narration": "narration.json",
+ "screens": "screens.json",
+ "script": "script.json",
+ "mix": "mix.json",
+ "layers": [
+  "../_blend/layer",
+  "../_blend/layer-tag-v2"
+ ],
+ "copies": [
+  {
+   "from": "../../../ui-concepts/tag/mascot.js",
+   "to": "src/mascot/tag/mascot.js"
+  },
+  {
+   "from": "../../../ui-concepts/little-peer/motion-core.js",
+   "to": "src/mascot/little-peer/motion-core.js"
+  },
+  {
+   "from": "../../../ui-concepts/shared/kit.js",
+   "to": "src/mascot/shared/kit.js"
+  },
+  {
+   "from": "../../src/scenes/earth.js",
+   "to": "src/scenes/earth-d3.js"
+  }
+ ]
+}
