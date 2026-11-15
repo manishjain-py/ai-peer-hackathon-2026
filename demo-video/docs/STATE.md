@@ -6,7 +6,21 @@ read-in at 15:02 UTC. It took over from ai-peer-video-controller-3 (hand-off
 `handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-3.md`), which was closed at 15:01 UTC.
 Other sessions message the controller by its name.
 
-## Where we are (2026-11-15 05:12 UTC)
+## Where we are (2026-11-15 13:35 UTC)
+
+**13:35 UTC: Draft 3 is approved for now (V21); the new work is WP6, wow concepts for the AI
+Peer's own screens (V22; `BRIEF-UI-WOW-2026-11-15.md`).** Manish: "draft 3 looks good. next
+task". He shared an 81-second silent walkthrough of the product running at his company and
+asked for his 4 to 5 best "wow" visual ideas for its screens, same functionality, each as an
+end-to-end walkthrough video, for his review. The recording shows real company content: a copy
+is in `~/.ai-peer/demo-video-private/ui-wow/`, sessions may look at it (his request), nothing
+from it goes into git or to an outside tool. The controller looked at one sheet of 20 frames.
+ai-peer-video-wp6 does WP6 (brief `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp6.md`): one
+research helper and up to three builder helpers allowed, up to $10. **Usage:** the week was at
+63% at 13:13 UTC (52% at 05:05: about 1.4 points an hour, mostly the account's other sessions)
+and resets Monday 16 November 22:59 UTC; at that pace it reaches 95% about Monday 12:00 UTC
+even without the video, and WP6 brings that earlier. At 85% the worker stops at a clean step;
+at 93% the video pauses and Manish is told.
 
 **05:12 UTC: Draft 3 is done and with Manish; his view is the open question.**
 ai-peer-video-wp2-6 merged it as PR 12 (`bb81fc5`, 05:07 UTC): the Peer out of Ram's phone and
@@ -340,6 +354,10 @@ still running is the worker ai-peer-video-wp2-3 (window 3974, PID 16635) with it
 | | **Total of the $100 cap** | | **$41.43** (WP1 $6.60, WP3 $23.10, WP2 $0.94, WP2-3 $0.62, WP2-4 $3.01, WP2-5 $3.74, WP2-6 $3.42; the last three on `main` since PR 12) |
 
 ## Needs Manish
+
+**Answered 2026-11-15 13:14 UTC: his view of Draft 3 (V21): "draft 3 looks good."** With it
+came the next task (V22, WP6). Next from him: his review of WP6's concepts. Later: whether his
+real recordings replace the film's made-up screens.
 
 **Asked 2026-11-15 05:09 UTC: his view of Draft 3**, with the 720p copy of the whole film on the
 Attention group and in the session of ai-peer-video-controller-4. Record his words at once (a
