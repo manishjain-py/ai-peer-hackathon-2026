@@ -7,7 +7,17 @@ it took over from ai-peer-video-controller-5 (closed at 16:58 UTC). Read next: t
 `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7.md`. A new Mac or a take-over: `START-HERE.md`
 at the repo root. Other sessions message the controller by its name.
 
-## Where we are (2026-11-15 18:56 UTC)
+## Where we are (2026-11-15 19:48 UTC)
+
+**19:48 UTC: the Tag's version 2 is with Manish; his view is the open question.**
+ai-peer-video-wp7-3 delivered `demo-video/film/renders/blended-tag-v2.mp4` on `video-wp7-v2` at
+`7b72e0d` (LFS; 119.6 s, 1080p, -14.1 LUFS, every line 15 dB or more over the new bed). The
+controller's checks: `privacy-check.sh 7b72e0d origin/main` 0 and 0, no private path in the cuts,
+`ledger/wp7-3.csv` $0.6506 (3 rows), one 16-frame sheet (the new second hook line, no sender on
+the hook's bubbles, the glide, "Set up my AI Peer", the Zoom line, Slack full frame, Ram at the
+desk, the brief on the laptop, the globe, the end card). Sent: its own 720p copy (16.1 MB) to the
+Attention group with a caption, one text line, and the same in the session. wp7-3 next: the PR, a
+squash merge, then idle for his view. Week 79% at 19:46 UTC.
 
 **18:56 UTC: the Tag's v2 plan is approved (the controller's call), with up to $3.50.**
 ai-peer-video-wp7-3's plan, about 119.3 s: the hook's new second line ("Ram's out of office...
@@ -608,6 +618,11 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 video 1 (the Attention group and the session of ai-peer-video-controller-6). Record his words at
 once (`FEEDBACK-BLENDED-2026-11-15.md`, V27 onwards) and pass them to ai-peer-video-wp7-2.
 
+**Asked 2026-11-15 19:48 UTC: what does he think of the Tag's version 2?** The Attention
+group (the 720p video with its caption, then one text line) and the session of
+ai-peer-video-controller-6. Record his words at once (a feedback file, V30) and pass them word for
+word to ai-peer-video-wp7-3.
+
 **Answered 2026-11-15 18:53 UTC (V29): "C"**, the paper-card glide. Next from him: his view of
 the Tag's v2.
 
@@ -1058,3 +1073,4 @@ and 7 still hold.
 | 2026-11-15 18:48 | ai-peer-video-controller-6 | Checked and sent wp7-2's five Tag transition ideas to Manish (18:44 UTC); wp7-2 handed off at 33% and was closed; launched ai-peer-video-wp7-3 (window 5612, PID 98609) for the Tag's v2; `stall-wp7-3` armed. | Waiting on his pick and on v2 |
 | 2026-11-15 18:53 | ai-peer-video-controller-6 | Manish picked transition idea C (V29); passed to ai-peer-video-wp7-3 word for word; recorded. | Waiting on the Tag's v2 |
 | 2026-11-15 18:56 | ai-peer-video-controller-6 | Approved ai-peer-video-wp7-3's v2 plan for the Tag and up to $3.50 (lip-sync take and the desk shot; made-up stills only). | v2 in progress |
+| 2026-11-15 19:48 | ai-peer-video-controller-6 | Checked the Tag's v2 (privacy 0 and 0, ledger $0.65, one sheet) and sent it to Manish at 19:48 UTC; approved wp7-3's PR and squash merge. | Waiting on his view of v2 |
