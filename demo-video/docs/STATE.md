@@ -16,7 +16,7 @@ big world of information (a flood of emails, Slack, tickets, code, docs and the 
 counters; the Peer draws it in; the Brazil change drops into "Your morning brief"; built by its
 helper in three new files). The controller looked at the reveal sheet (and asked that the phone
 be the clear source of the ribbon, which starts beside Ram's head in the wide shot) and at the
-big-world sheet. wp2-5 handed off at 42% (; branch at ) and was closed at
+big-world sheet. wp2-5 handed off at 42% (`1744557`; branch at `1a510e0`) and was closed at
 04:22 UTC; ai-peer-video-wp2-6 was launched at 04:23 UTC (window 5463).
 
 **03:50 UTC: Manish picked the Peer: A, Ram's look out of his phone (V20).** His words and the
