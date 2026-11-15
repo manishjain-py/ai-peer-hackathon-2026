@@ -290,18 +290,21 @@ still running is the worker ai-peer-video-wp2-3 (window 3974, PID 16635) with it
   (Kling 4.0 key frames) for one take through several poses, route P's code only as a finishing
   tool; settle the look of the double in the stills first.
 - WP2, the film in code (`ai-peer-video-wp2`, `ai-peer-video-wp2-2`, `ai-peer-video-wp2-3`,
-  `ai-peer-video-wp2-4`, `ai-peer-video-wp2-5`, next `ai-peer-video-wp2-6`; first brief `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2.md`):
-  **Draft 3 in progress** on branch `video-wp2-4-draft3` (pushed at `1a510e0`, not merged; one PR at Phase D), by
-  `FEEDBACK-DRAFT-2-2026-11-14.md` and Manish's pick A (`FEEDBACK-PHASE-A-2026-11-15.md`, V20). Phases A and B done
-  (ai-peer-video-wp2-4). **Phase C with A, so far** (ai-peer-video-wp2-5): the entrance (the phone's ribbon, he is
-  formed by 18.0 s, steps to the chair; Draft 2's desk clip from 4.2 s only), the return into the phone in Ram's hand
-  (104.5 to 108.0), Ram's face with the badge on the cards, tag, Zoom and Slack, webcam stills for the three Zoom
-  colleagues with Amara saying m3 in a lip-synced clip, the two Phase B fixes (the push-in lands on the lit Zoom; the
-  brief's phone clears the captions), and the big world of information in `proof-change` (a builder helper's scene,
-  switched on). Music unchanged on purpose. Spent $3.74 (`demo-video/ledger/wp2-5.csv`, 12 calls; wp2-4's $3.01 before).
-  Read `demo-video/film/REPORT.md`, "Draft 3, Phase C with A, so far". **Open:** the phone as the clear source of the
-  ribbon (the controller's point), the Zoom colleagues moving, then Phase D (Draft 3). `ai-peer-video-wp2-5` handed off
-  at about 42% context: `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp2-6.md`.
+  `ai-peer-video-wp2-4`, `ai-peer-video-wp2-5`, `ai-peer-video-wp2-6`; first brief `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2.md`):
+  **Draft 3 done**, merged as PR 12 on 2026-11-15 05:07 UTC (merge commit `bb81fc5`), by
+  `FEEDBACK-DRAFT-2-2026-11-14.md` and Manish's pick A (`FEEDBACK-PHASE-A-2026-11-15.md`, V20). Watch
+  `demo-video/film/renders/draft-03.mp4` (public: no real recording in it, so it can go to Manish in full; 124 MB, so
+  a 720p copy for Telegram). Read `demo-video/film/REPORT.md`, the three Draft 3 sections. The Peer has Ram's look and
+  comes out of his phone: the phone lights up in the sleeper close-up at 14.2 s (by code), its ribbon streams out in the
+  wide, the last of it flows into him low over the floor (the old take's arch over Ram's head is gone), he walks to the
+  desk; in the morning he flows back into the phone in Ram's hand. Ram's face with the AI badge on the cards, the tag,
+  Zoom and Slack. Made-up screens with invented Airbnb-payments data; in Zoom all three colleagues move for the whole
+  meeting (listening takes), Amara says m3 lip-synced; the big world of information in `proof-change` (outside names
+  checked on the web: none real; "Lumeira Pay" became "Orvalla Pay"). Numbers: 2:00.0, -14.1 LUFS, every line at
+  least 15.0 dB above the music; speech check 18 of 19 (h3 is the model's slip, explained in the report). Music and
+  voices unchanged (V16); nobody has heard the film. Spent in Draft 3: wp2-4 $3.01, wp2-5 $3.74, wp2-6 $3.42
+  (`demo-video/ledger/wp2-6.csv`, 8 calls). **Open for Manish:** his view of Draft 3. Known weak points: Vikram's name
+  partly under the Zoom caption bar, the tag small on the wide shots.
 - WP3, the nine AI shots with people (`ai-peer-video-wp3`, brief
   `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp3.md`, cap $60): **done**, merged as PR 8 on
   2026-11-14 13:20 UTC (merge commit 839a455). Spent $23.10 (95 calls, `demo-video/ledger/wp3.csv`).
@@ -596,3 +599,4 @@ and 7 still hold.
 | 2026-11-15 03:50 | ai-peer-video-controller-4 | Re-sent everything for review to the Attention group at 02:34 UTC at Manish's request. He picked A at 03:41 UTC (V20): Ram's look out of his phone; Zoom colleagues must move; the change part becomes the big world of information. Wrote `FEEDBACK-PHASE-A-2026-11-15.md` and V20; passed his words to ai-peer-video-wp2-5. |
 | 2026-11-15 04:21 | ai-peer-video-wp2-5 | Phase C with A so far, on `video-wp2-4-draft3` at `1a510e0`: the Phase B fixes, webcam tiles and Amara's lip-synced m3, the entrance out of the phone (two Kling shots) and the return into it (one), Ram's face everywhere, and the big world scene (a builder helper, reviewed and switched on); $3.74 of Phase C's $25. Handed off at about 42% context: `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp2-6.md` (first: the phone as the ribbon's clear source; then the Zoom colleagues moving; then Draft 3). |
 | 2026-11-15 04:26 | ai-peer-video-controller-4 | wp2-5 handed off at 42% (entrance, face, return and the big-world scene in; $3.74). Closed it at 04:22 UTC after the checks; looked at the big-world sheet; launched ai-peer-video-wp2-6 at 04:23 UTC (window 5463) to finish Draft 3. Money $38.01 of $100. |
+| 2026-11-15 05:08 | ai-peer-video-wp2-6 | Finished Phase C and Draft 3: the phone lights up in the close-up and its ribbon's tail now flows into the Peer (no light near Ram); the Zoom colleagues move for the whole meeting (six H3 listening takes); the big world's outside names checked (one renamed), its web louder, its card drops in clean. Rendered Draft 3 (public, 2:00.0, -14.1 LUFS, 18 of 19 lines by the speech check), merged PR 12 (`bb81fc5`). $3.42 (ledger wp2-6). |
