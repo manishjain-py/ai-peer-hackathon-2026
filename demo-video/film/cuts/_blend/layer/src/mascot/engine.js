@@ -12,7 +12,8 @@
 //   start: [x, y, g]  where it stands at the slot's start (g: how far above its ground it floats),
 //   moves: [{ t0, t1, to: [x, y, g], h, kind: "hop" | "zip" | "glide" }]  (motion-core's makeBody),
 //   pop:  { at, dur, from: [x, y] }   it grows out of a point (the phone), with a burst,
-//   dive: { at, dur, to: [x, y] }     it shrinks into a point (the phone, the screen), with a flash,
+//   dive: { at, dur, to: [x, y], flash }  it shrinks into a point (the phone, the screen), with a flash
+//                                      (flash: its strength, 1 if not given; WP7 v2's daylight desk uses 0.25),
 //   enter: u   it is not there before u (for one that hops in from outside the frame),
 //   look: [[u, [lx, ly]], ...], happy: [[u, v]], badge: [[u, v]], wave: [[a, b], ...],
 //   blinks: [u, ...], trail: [[t0, t1], ...], glow: aura 0..1, light: light spill 0..1,
@@ -194,7 +195,7 @@ export async function createMascot(slot, film) {
         sx *= 1 - 0.2 * Math.sin(Math.PI * k);
         if (k >= 1) alpha = 0;
         flashAt = to;
-        flashA = Math.sin(Math.PI * prog(u, at + dur * 0.6, at + dur + 0.45));
+        flashA = Math.sin(Math.PI * prog(u, at + dur * 0.6, at + dur + 0.45)) * (M.dive.flash ?? 1);
         burst(out, u, at + dur * 0.85, to, { n: 16, speed: 160, size: 11, seed: 77 });
       }
     }

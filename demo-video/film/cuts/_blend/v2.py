@@ -30,7 +30,7 @@ FILM = Path(__file__).resolve().parents[2]
 WALK = [("walk-click", 2.6, 2.8, 2.7), ("walk-setup", 16.0, 5.5, 19.5), ("walk-learned", 6.4, 25.0, 7.0),
         ("walk-brief", 6.8, 32.0, 7.5), ("walk-ask", 9.0, 39.5, 10.5), ("walk-rules", 6.6, 50.0, 7.5)]
 # The rest, in order after the walkthrough (film seconds each).
-LEN = {"zoom": 22.8, "slack": 7.6, "wake": 2.2, "desk": 3.4, "laptop": 5.4, "earth": 4.9, "end": 3.9}
+LEN = {"zoom": 22.8, "slack": 7.8, "wake": 2.2, "desk": 3.4, "laptop": 5.4, "earth": 4.7, "end": 3.9}   # the morning on a bar line (100.0)
 ORDER = ["zoom", "slack", "wake", "desk", "laptop", "earth", "end"]
 
 LINES = [
@@ -46,9 +46,21 @@ META = {"h2b": {"part": "hook", "speaker": "colleague-2"}, "m4b": {"part": "nigh
 HOOK2 = {"clip": "assets/shots/hook-2-h2b-v2t1.mp4", "in_s": 0.4, "line_in_s": 0.9,
          "shows": "Late afternoon, another city, a small meeting room. A colleague reads his update, surprised and pleased: "
                   "Ram is out of office, and the update he needed is already here."}
-# The desk shot's plate (None until it is made: a slate stands in) and its mascot.
-DESK = None
-DESK_MASCOT = None
+# The desk shot: Ram at the desk in the sunrise, reading the laptop (shots/morning-desk: a nano-banana
+# edit of morning-wake-b with his portrait, $0.09, made live by one H3 Max Turbo take, $0.224; camera
+# locked). The camera moves a little toward the laptop at the end; the cut lands in the brief.
+DESK = {"clip": "assets/shots/morning-desk-t1.mp4", "own_clip": True, "clip_seconds": 4.0, "in_s": 0.3,
+        "view": [[0, [960, 540, 1.0]], [2.3, [960, 540, 1.0]], [3.4, [1180, 600, 1.3]]]}
+# The tag, where it spent the night (beside the laptop, idea C): it looks at Ram and waves, hops onto
+# his phone, folds back into a plain tag and goes into it (V19: back where it came from). Plate px.
+DESK_MASCOT = {
+    "s": 0.44, "start": [1650, 815, 0],
+    "moves": [{"t0": 1.45, "t1": 1.8, "to": [1540, 893, 0], "h": 60, "kind": "hop"}],
+    "dive": {"at": 2.1, "dur": 0.4, "to": [1530, 900], "flash": 0.25},
+    "look": [[0, [-1, -0.4]], [1.3, [-1, -0.4]], [1.45, [-0.3, 0.5]]], "happy": [[0, 0.6], [0.4, 0.95]],
+    "wave": [[0.3, 1.3]], "blinks": [0.9], "legs": [[1.85, 1], [2.0, 0]], "eyes": [[1.9, 1], [2.05, 0]],
+    "badge": [[0, 0.3], [2.0, 1]], "glow": 0.25, "light": 0.15, "shadow": 0.5, "trail": [[1.45, 1.8]],
+}
 # In the laptop brief: his click on his answer (slot seconds).
 CLICK = 4.2
 
@@ -139,10 +151,16 @@ def screens(sc, r3):
     z["camera"] = [{"t": 0, "s": 1, "fx": 0.5, "fy": 0.5}, {"t": 1.8, "s": 1, "fx": 0.5, "fy": 0.5},
                    {"t": r3(14.0 * L / 21.6), "s": 1.045, "fx": 0.56, "fy": 0.56}, {"t": L, "s": 1.07, "fx": 0.6, "fy": 0.6}]
     sl["reaction"]["at"] = 6.0
-    sl["labels"][0].update({"at": 4.7, "length": 1.4})
+    sl["labels"][0].update({"at": 4.8, "length": 1.3})
     sl["labels"][1].update({"at": 6.2, "length": 1.3})
-    sl["camera"] = [{"t": 0, "s": 1, "fx": 0.5, "fy": 0.5}, {"t": 1.6, "s": 1, "fx": 0.5, "fy": 0.5},
-                    {"t": 2.6, "s": 1.32, "fx": 0.62, "fy": 0.5}, {"t": LEN["slack"], "s": 1.38, "fx": 0.64, "fy": 0.56}]
+    # closer on the message (V27 item 6): the thread's question and reply fill the frame (the camera scales
+    # about the point fx, fy; measured on v2's first render, the reply spans x 0.32 to 0.80, y 0.22 to 0.54)
+    # The window fills the frame (build.mjs "full"): no night margins, the thread about a third larger than
+    # v1's; the reply's lines run nearly the full width, so the camera only leans in from the top right
+    # (above 1.045 the film's clock, drawn over the sidebar, would reach the avatars).
+    sl["full"] = True
+    sl["camera"] = [{"t": 0, "s": 1, "fx": 1, "fy": 0}, {"t": 2.6, "s": 1, "fx": 1, "fy": 0},
+                    {"t": 4.0, "s": 1.04, "fx": 1, "fy": 0}, {"t": LEN["slack"], "s": 1.045, "fx": 1, "fy": 0}]
     sc["slots"] = {"proof-meeting": z, "proof-slack": sl}
 
 

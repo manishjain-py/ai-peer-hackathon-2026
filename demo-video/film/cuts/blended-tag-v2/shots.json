@@ -7,7 +7,9 @@
  "bpm": 120,
  "scenes_ready": [
   "endcard",
-  "pushin"
+  "pushin",
+  "earth",
+  "tagbrief"
  ],
  "overlays_ready": [
   "chips",
@@ -44,19 +46,19 @@
    "id": "night",
    "title": "The night",
    "start": 69.4,
-   "length": 30.4
+   "length": 30.6
   },
   {
    "id": "morning",
    "title": "The morning",
-   "start": 99.8,
+   "start": 100.0,
    "length": 11.0
   },
   {
    "id": "close",
    "title": "The close",
-   "start": 110.8,
-   "length": 8.8
+   "start": 111.0,
+   "length": 8.6
   }
  ],
  "slots": [
@@ -641,7 +643,7 @@
    "id": "proof-slack",
    "part": "night",
    "start": 92.2,
-   "length": 7.6,
+   "length": 7.8,
    "kind": "product",
    "scene": "product",
    "clock": "4 AM",
@@ -651,7 +653,7 @@
   {
    "id": "morning-wake",
    "part": "morning",
-   "start": 99.8,
+   "start": 100.0,
    "length": 2.2,
    "kind": "ai",
    "shows": "Sunrise: Ram wakes and sits up; on the desk by the window the tag waves.",
@@ -704,16 +706,156 @@
   {
    "id": "morning-desk",
    "part": "morning",
-   "start": 102.0,
+   "start": 102.2,
    "length": 3.4,
    "kind": "ai",
-   "clip": null,
-   "shows": "Ram at the desk in the sunrise, reading the laptop; the tag beside it waves, folds back into a plain tag and slips into his phone on the desk (V19: back where it came from); the camera goes to the screen."
+   "clip": "assets/shots/morning-desk-t1.mp4",
+   "shows": "Ram at the desk in the sunrise, reading the laptop; the tag beside it waves, folds back into a plain tag and slips into his phone on the desk (V19: back where it came from); the camera goes to the screen.",
+   "own_clip": true,
+   "clip_seconds": 4.0,
+   "in_s": 0.3,
+   "view": [
+    [
+     0,
+     [
+      960,
+      540,
+      1.0
+     ]
+    ],
+    [
+     2.3,
+     [
+      960,
+      540,
+      1.0
+     ]
+    ],
+    [
+     3.4,
+     [
+      1180,
+      600,
+      1.3
+     ]
+    ]
+   ],
+   "mascot": {
+    "s": 0.44,
+    "start": [
+     1650,
+     815,
+     0
+    ],
+    "moves": [
+     {
+      "t0": 1.45,
+      "t1": 1.8,
+      "to": [
+       1540,
+       893,
+       0
+      ],
+      "h": 60,
+      "kind": "hop"
+     }
+    ],
+    "dive": {
+     "at": 2.1,
+     "dur": 0.4,
+     "to": [
+      1530,
+      900
+     ],
+     "flash": 0.25
+    },
+    "look": [
+     [
+      0,
+      [
+       -1,
+       -0.4
+      ]
+     ],
+     [
+      1.3,
+      [
+       -1,
+       -0.4
+      ]
+     ],
+     [
+      1.45,
+      [
+       -0.3,
+       0.5
+      ]
+     ]
+    ],
+    "happy": [
+     [
+      0,
+      0.6
+     ],
+     [
+      0.4,
+      0.95
+     ]
+    ],
+    "wave": [
+     [
+      0.3,
+      1.3
+     ]
+    ],
+    "blinks": [
+     0.9
+    ],
+    "legs": [
+     [
+      1.85,
+      1
+     ],
+     [
+      2.0,
+      0
+     ]
+    ],
+    "eyes": [
+     [
+      1.9,
+      1
+     ],
+     [
+      2.05,
+      0
+     ]
+    ],
+    "badge": [
+     [
+      0,
+      0.3
+     ],
+     [
+      2.0,
+      1
+     ]
+    ],
+    "glow": 0.25,
+    "light": 0.15,
+    "shadow": 0.5,
+    "trail": [
+     [
+      1.45,
+      1.8
+     ]
+    ]
+   }
   },
   {
    "id": "morning-laptop",
    "part": "morning",
-   "start": 105.4,
+   "start": 105.6,
    "length": 5.4,
    "kind": "code",
    "scene": "tagbrief",
@@ -774,8 +916,8 @@
   {
    "id": "close-earth",
    "part": "close",
-   "start": 110.8,
-   "length": 4.9,
+   "start": 111.0,
+   "length": 4.7,
    "kind": "code",
    "scene": "earth",
    "clip": null,
@@ -783,7 +925,7 @@
     "about": "film seconds -> Draft 3's globe seconds (its scene runs 108.0 to 120.0; its end card came at 116.0)",
     "points": [
      [
-      110.8,
+      111.0,
       108.0
      ],
      [
@@ -830,9 +972,9 @@
   "m3": 84.7,
   "m4b": 87.85,
   "p06": 94.0,
-  "p08": 100.1,
-  "p10": 107.0,
-  "p11": 111.4,
+  "p08": 100.3,
+  "p10": 107.2,
+  "p11": 111.6,
   "p12": 116.1
  }
 }

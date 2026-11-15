@@ -1,0 +1,29 @@
+{
+ "request_id": "01a1e09c-29c3-73a3-987d-2234b341e854",
+ "billable_units_header": "0.090571734",
+ "inputs_sent": {
+  "prompt": "A new, closer camera angle in the bedroom of image 1, in the same warm sunrise light through the same sheer curtains: the man of image 2, in the same dark charcoal T-shirt he wears in image 1, now sits on the wooden chair at the small wooden desk by the wall, working. The camera is behind him and to his left, at desk height, a medium shot: we see his left shoulder, the back and side of his head and a little of his face in profile, calm and contented, reading. The open laptop stands on the desk to the right of his head, its screen turned a little toward the camera so the whole screen is clearly visible and nothing covers it: a plain, softly glowing, light cream screen with no text. His slim dark smartphone lies flat on the desk to the right of the laptop, screen up and dark, with a clear empty patch of desk between the laptop and the phone. Keep the same room, the same pale blue-green wall, the same wooden desk and chair and the same warm morning light as image 1. Photorealistic, cinematic, natural, no text, no logos.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab299e8/oFUSzn7a6OAYKwhPp5K02_morning-wake-b.png",
+   "https://v3b.fal.media/files/b/0ab299e9/dx4T_c2h40Sh3LUXMl814_a-portrait.jpg"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab299e9/gQPlW1uUXzscpUghGrNTB_vUk2ZZhe.png",
+    "content_type": "image/png",
+    "file_name": "gQPlW1uUXzscpUghGrNTB_vUk2ZZhe.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

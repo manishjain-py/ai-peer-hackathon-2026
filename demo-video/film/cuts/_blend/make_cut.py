@@ -259,6 +259,7 @@ NEW_META = {}
 if V2:
     import v2
     SECONDS, PARTS, slots, NARRATION, NEW_META = v2.timeline(slots, NARRATION, NEW_LINES, LABELS, MASCOT, V, slot, keep, d3, r3)
+    PART_OF["p11"] = "close"   # over the globe now
 
 shots = {
     "about": f"WP7, the blended video with {V['title']} (DESIGN V24): Draft 3's story with the {V['title']} walkthrough as its main demo part. "
@@ -355,6 +356,7 @@ cut = {
 if V2:
     v2.mix_and_cut(m, cut, moved, r3)
     shots["about"] = ("WP7 v2, the Tag blend's version 2 (DESIGN V27, V28, V29): " + shots["about"])
+    shots["scenes_ready"] = shots["scenes_ready"] + ["earth", "tagbrief"]
 
 OUT.mkdir(parents=True, exist_ok=True)
 for name, data in (("cut.json", cut), ("shots.json", shots), ("screens.json", sc), ("script.json", sc_script), ("mix.json", m)):

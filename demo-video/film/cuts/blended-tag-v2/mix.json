@@ -60,18 +60,18 @@
   {
    "id": "return",
    "file": "audio/sfx/rise.wav",
-   "at": 101.7,
+   "at": 101.9,
    "gain_db": -19,
-   "event_s": 104.0,
+   "event_s": 104.2,
    "sync_s": 2.3,
    "note": "the reveal's shimmer, quieter, as the tag goes back into his phone on the desk"
   },
   {
    "id": "tap",
    "file": "audio/sfx/tap.wav",
-   "at": 109.6,
+   "at": 109.8,
    "gain_db": -10,
-   "event_s": 109.6,
+   "event_s": 109.8,
    "sync_s": 0,
    "note": "his click on his answer in the laptop brief"
   },
