@@ -6,7 +6,18 @@ read-in at 15:02 UTC. It took over from ai-peer-video-controller-3 (hand-off
 `handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-3.md`), which was closed at 15:01 UTC.
 Other sessions message the controller by its name.
 
-## Where we are (2026-11-15 04:58 UTC)
+## Where we are (2026-11-15 05:12 UTC)
+
+**05:12 UTC: Draft 3 is done and with Manish; his view is the open question.**
+ai-peer-video-wp2-6 merged it as PR 12 (`bb81fc5`, 05:07 UTC): the Peer out of Ram's phone and
+back into it, the moving Zoom colleagues (six listening takes plus Amara's talking clip), Slack,
+the big world of information, the morning brief; the outside names checked (one renamed); the
+film `demo-video/film/renders/draft-03.mp4` (public build, rendered without `--private`, no slate,
+no real recording; 2:00.0, -14.1 LUFS, 18 of 19 lines heard word for word, the miss being h3's
+laughing delivery). The controller checked the render command, the numbers and one sheet of 30
+frames, and sent Manish a 720p copy (23.8 MB) at 05:09 UTC on the Attention group and in the
+session, asking for his view. wp2-6 waits idle (context 34%); the controller stopped its stall
+wait at 05:08 UTC (an idle worker raises a false alarm) and re-arms it when work resumes.
 
 **Correction, 04:56 UTC (ai-peer-video-controller-4):** the week does not reset on 15 November
 at 23:00 UTC, as the controller wrote here and told Manish and the workers. `/usage` at 04:55
@@ -270,7 +281,6 @@ Still running:
 
 | What | PID | Log | Stop command |
 |---|---|---|---|
-| Wait `stall-wp2-6`: the worker silent for 25 minutes, or PID 60593 gone (stop it before closing window 5463) | 60910 | `~/.ai-peer/demo-video-private/controller/waits.log` | `kill 60910` |
 | Wait `usage`: the whole week passes 70% (checked every 5 minutes; Fable's threshold is 101, out of reach). The 50% alarm rang at 01:57 UTC on 15 November with the video idle: about 1.3 points an hour from the account's other sessions since 22:03 UTC; the week resets Monday 16 November 22:59 UTC (Tuesday 17 November 04:29 India time, read from `/usage` at 04:55 UTC on 15 November) | 92972 | `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log` | `kill 92972` |
 
 The three waits were started by ai-peer-video-controller-4 at 15:01 UTC (the commands are in
@@ -326,9 +336,14 @@ still running is the worker ai-peer-video-wp2-3 (window 3974, PID 16635) with it
 | 2026-11-14 | fal.ai (WP2-3, Draft 2, finished) | Two new lip-sync takes (hook-1, hook-2); the re-recorded lines used about 200 characters of the ElevenLabs plan, which is not billed per call | $0.62 (2 rows of `demo-video/ledger/wp2-3.csv`, on `main` since PR 11; cap $10) |
 | 2026-11-14 | fal.ai (WP2-4, Draft 3, in progress) | Phase A: the stills of four concept boards and two motion tests | $3.01 so far, by the worker's message at 19:42 UTC (`demo-video/ledger/wp2-4.csv`, on its branch; caps $8 for Phase A, $25 for Phase C) |
 | 2026-11-14/15 | fal.ai (WP2-5, Draft 3, finished) | Webcam stills and Amara's lip-sync clip; the two entrance shots and the return from the phone, with their stills | $3.74 (12 calls, `demo-video/ledger/wp2-5.csv`, on its branch; inside Phase C's $25) |
-| | **Total of the $100 cap** | | **$38.01** (WP1 $6.60, WP3 $23.10, WP2 $0.94, WP2-3 $0.62 on `main`; WP2-4 $3.01 and WP2-5 $3.74 on the branch, by their messages; WP2-6 may add up to $21) |
+| 2026-11-15 | fal.ai (WP2-6, Draft 3, finished) | The phone's entrance take (`reveal-gather`, plus one unused take) and six webcam listening takes for the Zoom colleagues | $3.42 (8 calls, `demo-video/ledger/wp2-6.csv`, on `main` since PR 12) |
+| | **Total of the $100 cap** | | **$41.43** (WP1 $6.60, WP3 $23.10, WP2 $0.94, WP2-3 $0.62, WP2-4 $3.01, WP2-5 $3.74, WP2-6 $3.42; the last three on `main` since PR 12) |
 
 ## Needs Manish
+
+**Asked 2026-11-15 05:09 UTC: his view of Draft 3**, with the 720p copy of the whole film on the
+Attention group and in the session of ai-peer-video-controller-4. Record his words at once (a
+`FEEDBACK-DRAFT-3-...md` file and a V row), then pass them to ai-peer-video-wp2-6.
 
 **Answered 2026-11-15 03:41 UTC: A, Ram's look out of his phone (V20)**, after the items were
 re-sent at his request at 02:34 UTC; in full in `FEEDBACK-PHASE-A-2026-11-15.md`. No question
@@ -600,3 +615,4 @@ and 7 still hold.
 | 2026-11-15 04:21 | ai-peer-video-wp2-5 | Phase C with A so far, on `video-wp2-4-draft3` at `1a510e0`: the Phase B fixes, webcam tiles and Amara's lip-synced m3, the entrance out of the phone (two Kling shots) and the return into it (one), Ram's face everywhere, and the big world scene (a builder helper, reviewed and switched on); $3.74 of Phase C's $25. Handed off at about 42% context: `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp2-6.md` (first: the phone as the ribbon's clear source; then the Zoom colleagues moving; then Draft 3). |
 | 2026-11-15 04:26 | ai-peer-video-controller-4 | wp2-5 handed off at 42% (entrance, face, return and the big-world scene in; $3.74). Closed it at 04:22 UTC after the checks; looked at the big-world sheet; launched ai-peer-video-wp2-6 at 04:23 UTC (window 5463) to finish Draft 3. Money $38.01 of $100. |
 | 2026-11-15 05:08 | ai-peer-video-wp2-6 | Finished Phase C and Draft 3: the phone lights up in the close-up and its ribbon's tail now flows into the Peer (no light near Ram); the Zoom colleagues move for the whole meeting (six H3 listening takes); the big world's outside names checked (one renamed), its web louder, its card drops in clean. Rendered Draft 3 (public, 2:00.0, -14.1 LUFS, 18 of 19 lines by the speech check), merged PR 12 (`bb81fc5`). $3.42 (ledger wp2-6). |
+| 2026-11-15 05:12 | ai-peer-video-controller-4 | Draft 3 came from ai-peer-video-wp2-6 (PR 12, `bb81fc5`). Checked that it is the public build, its numbers and one 30-frame sheet; sent Manish a 720p copy at 05:09 UTC (Attention group and session) asking for his view. Stopped the idle worker's stall wait. Money $41.43 of $100. |
