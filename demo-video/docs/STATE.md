@@ -7,7 +7,19 @@ it took over from ai-peer-video-controller-5 (closed at 16:58 UTC). Read next: t
 `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7.md`. A new Mac or a take-over: `START-HERE.md`
 at the repo root. Other sessions message the controller by its name.
 
-## Where we are (2026-11-15 17:44 UTC)
+## Where we are (2026-11-15 18:02 UTC)
+
+**18:02 UTC: blended video 2, Tag, is with Manish; both blends now wait on his view.**
+ai-peer-video-wp7-2 fixed the tag's labels first (`0ca3b73`, privacy check 0 and 0, confirmed by
+the controller), then delivered `demo-video/film/renders/blended-tag-v1.mp4` on
+`video-wp7-blended` at `5890c13` (LFS; 119.6 s, 1080p, -14.3 LUFS; the same lines, music and
+timeline as Little Peer). The controller's checks: `privacy-check.sh 5890c13 c6cfe05` 0 and 0, no
+private path in the cuts, one 16-frame sheet (the tag slides out of the phone, the rebuilt
+walkthrough, Zoom with its face, the morning, end card). Sent: a 720p copy (14.8 MB) to the
+Attention group with a caption naming the cut parts, one text line, the same in the session.
+Approved for wp7-2: item 8 (`shots.json` to the repo's own manifest, Draft 3 byte-identical),
+then one PR with both blends, a squash merge and the branch deleted; then it waits, idle, for
+Manish's views (any v2 is its work). Money $0.00 for WP7. Week 76% at 17:59 UTC.
 
 **17:44 UTC: ai-peer-video-wp7-2 builds the tag blend.** WP7's tag helper reported; WP7 pushed
 `99aa9b0` (the tag concept in `demo-video/ui-concepts/tag/` with `REPORT.md` and its clips) and
@@ -543,6 +555,10 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 
 ## Needs Manish
 
+**Asked 2026-11-15 18:02 UTC: what does he think of blended video 2, Tag?** The same way as
+video 1 (the Attention group and the session of ai-peer-video-controller-6). Record his words at
+once (`FEEDBACK-BLENDED-2026-11-15.md`, V27 onwards) and pass them to ai-peer-video-wp7-2.
+
 **Asked 2026-11-15 17:25 UTC: what does he think of blended video 1, Little Peer?** The
 Attention group (the 720p video with its caption, then one text line) and the session of
 ai-peer-video-controller-6 (window 5591). Record his words at once: `FEEDBACK-BLENDED-2026-11-15.md`
@@ -650,6 +666,11 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
+
+**Now (18:02 UTC, 15 November), ai-peer-video-controller-6:** wait for Manish's views of
+both blends and for wp7-2's merge sha. When wp7-2 goes idle, stop `stall-wp7-2`. His words: a
+feedback file and V rows, then word for word to wp7-2; re-arm the stall wait if it works again.
+Money: sum the ledgers into "Money spent" at the package's end.
 
 **Now (17:44 UTC, 15 November), ai-peer-video-controller-6:** ai-peer-video-wp7-2 fixes the
 tag's labels and builds the tag blend. At its events: its context (it tells at 40%, hands off by
@@ -942,3 +963,4 @@ and 7 still hold.
 | 2026-11-15 17:22 | ai-peer-video-wp7 | Read in, plan approved; built the film's --cut option (Draft 3 byte-identical), the shared blend timeline, Little Peer over the night plates by code, 7 new lines, the music re-cut; delivered `blended-little-peer-v1.mp4` at 17:20 UTC; a builder helper rebuilds the tag concept. Handed off at 44.5% context. | The tag blend goes to ai-peer-video-wp7-2 |
 | 2026-11-15 17:26 | ai-peer-video-controller-6 | Checked and sent blended video 1, Little Peer (one sheet; public build; privacy check 0 private copies, 1 helper notes file with 4 real-term lines, fixed next by wp7-2) to Manish on the Attention group and in the session. WP7 handed off at 44.5%. | Waiting on Manish's view and WP7's head sha |
 | 2026-11-15 17:44 | ai-peer-video-controller-6 | WP7 pushed its tag helper's work (`99aa9b0`) and stopped; closed it at 17:43 UTC; privacy check: 4 files with real terms (the tag's labels among them); launched ai-peer-video-wp7-2 (window 5605, PID 36089) with the fix first; `stall-wp7-2` armed. | Waiting on the tag blend and Manish's view of Little Peer |
+| 2026-11-15 18:02 | ai-peer-video-controller-6 | Checked wp7-2's label fix (0 and 0) and its Tag blend (one sheet, privacy 0 and 0); sent the Tag blend to Manish at 18:02 UTC; approved item 8 and the PR (squash merge). | Waiting on Manish's views of both blends |
