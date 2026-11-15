@@ -1,0 +1,208 @@
+/* Tiny Company: the diorama's labels and cards (HTML over the three.js canvas). No transitions:
+   every moving style is set from t in scene.js. */
+:root { --ink: #1c2a2b; --muted: #5b6965; --green: #167353; --mint: #b7f4cf; --paper: #fffdf8; }
+.tc-gl { position: absolute; inset: 0; z-index: 1; }
+.tc-css3d { position: absolute; left: 0; top: 0; z-index: 2; }
+.tc-lab, .tc-ui { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.tc-lab { z-index: 3; }
+.tc-svg { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; z-index: 4; pointer-events: none; overflow: visible; }
+.tc-ui { z-index: 5; }
+.tc-page0 { position: absolute; inset: 0; z-index: 6; }
+.tp-cursor { z-index: 60 !important; }
+.tc-wrap { width: 1920px; height: 1080px; }
+.tc-wrap .tp { border-radius: var(--r, 0px); overflow: hidden; }
+.tc-shade { position: absolute; inset: 0; border-radius: var(--r, 0px); pointer-events: none; }
+.tc-ring { position: absolute; inset: 0; pointer-events: none; }
+
+/* things pinned to a point of the 3D world: the outer box moves, the inner box hangs above it */
+.tc-at { position: absolute; left: 0; top: 0; }
+.tc-at > .in { position: absolute; left: 0; top: 0; transform-origin: 50% 100%; display: flex; flex-direction: column; align-items: center; }
+
+.tc-ic { width: 30px; height: 30px; flex: none; border-radius: 50%; background: var(--h); display: grid; place-items: center; color: #1d2b31; box-shadow: inset 0 -2px 0 rgba(0,0,0,.08); }
+.tc-ic svg { width: 18px; height: 18px; }
+
+/* building labels */
+.tc-bl .pill { display: flex; align-items: center; gap: 9px; padding: 6px 15px 6px 6px; border-radius: 999px; background: rgba(255,255,255,.97);
+  box-shadow: 0 8px 18px -6px rgba(36,48,40,.34), 0 1px 0 rgba(255,255,255,.9) inset; font: 700 18px/1 "Manrope"; color: var(--ink); white-space: nowrap; }
+.tc-bl .sub { margin-top: 7px; display: flex; align-items: center; gap: 7px; padding: 7px 12px; border-radius: 12px; background: #167353; color: #fff;
+  font: 600 18px/1 "Manrope"; white-space: nowrap; box-shadow: 0 8px 16px -6px rgba(22,115,83,.5); }
+.tc-bl .sub.wait { background: #fff1d6; color: #8a5600; box-shadow: 0 8px 16px -6px rgba(140,90,0,.35); }
+.tc-bl .sub.read { background: #ffffff; color: #12563f; }
+.tc-bl .sub svg { width: 18px; height: 18px; flex: none; }
+.tc-bl .stem { width: 2px; height: 18px; background: linear-gradient(rgba(255,255,255,.95), rgba(255,255,255,0)); }
+.tc-spin { width: 18px; height: 18px; flex: none; display: block; }
+
+/* the courier's AI tag */
+.tc-ai .tag { display: flex; align-items: center; gap: 0; padding: 5px 6px; border-radius: 12px; background: #167353; color: #fff;
+  box-shadow: 0 8px 18px -6px rgba(22,115,83,.6), 0 0 0 2px rgba(183,244,207,.55); white-space: nowrap; font: 700 18px/1 "Manrope"; }
+.tc-ai .tag i { font-style: normal; display: grid; place-items: center; width: 34px; height: 26px; border-radius: 8px; background: #b7f4cf; color: #0f4d38; font: 800 17px/1 "Manrope"; letter-spacing: .02em; }
+.tc-ai .nm { overflow: hidden; display: block; }
+.tc-ai .nm span { display: block; padding: 0 6px 0 9px; }
+.tc-ai .stem { width: 2px; height: 12px; background: rgba(22,115,83,.7); }
+
+/* small callouts */
+.tc-call { display: flex; align-items: center; gap: 9px; padding: 8px 14px 8px 9px; border-radius: 14px; background: rgba(255,255,255,.97); color: var(--ink);
+  font: 700 18px/1.15 "Manrope"; white-space: nowrap; box-shadow: 0 10px 24px -8px rgba(36,48,40,.38); }
+.tc-call small { display: block; margin-top: 3px; font: 500 17px/1.1 "Inter"; color: var(--muted); }
+.tc-call .tc-ic { width: 32px; height: 32px; }
+.tc-call.red { background: #fff1f1; color: #8f1d24; }
+.tc-call.red .tc-ic { background: #ffd2d2; color: #a3242c; }
+.tc-call.ok .tc-ic { background: #d9f6e6; color: #167353; }
+.tc-stamp { padding: 10px 18px; border: 4px solid #d6455a; border-radius: 12px; color: #d6455a; background: rgba(255,248,248,.94);
+  font: 800 22px/1.1 "Manrope"; letter-spacing: .02em; text-transform: uppercase; white-space: nowrap; box-shadow: 0 10px 24px -10px rgba(120,20,30,.4); }
+.tc-stamp small { display: block; margin-top: 4px; font: 700 16px/1 "Manrope"; letter-spacing: .04em; color: #b33a4c; }
+
+/* connect sign (like the page's button) and the sign-in sheet */
+.tc-conn { display: flex; align-items: center; gap: 9px; padding: 11px 18px 11px 13px; border-radius: 14px; background: #ffffff; color: #1c2a2b;
+  border: 2px solid #167353; font: 800 19px/1 "Manrope"; white-space: nowrap; box-shadow: 0 12px 26px -10px rgba(22,115,83,.55); }
+.tc-conn svg { width: 20px; height: 20px; color: #167353; }
+.tc-conn.done { background: #167353; color: #fff; }
+.tc-conn.done svg { color: #b7f4cf; }
+.tc-sheet { width: 340px; padding: 16px 18px; border-radius: 18px; background: var(--paper); box-shadow: 0 24px 50px -16px rgba(40,30,20,.45), 0 0 0 1px rgba(120,100,60,.1); }
+.tc-sheet .hd { display: flex; align-items: center; gap: 10px; font: 800 20px/1 "Manrope"; color: var(--ink); }
+.tc-sheet .who { margin-top: 14px; display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 12px; background: #eef8f2; font: 700 18px/1.2 "Inter"; color: #12563f; }
+.tc-sheet .who .av { width: 34px; height: 34px; border-radius: 50%; background: #167353; color: #b7f4cf; display: grid; place-items: center; font: 800 16px/1 "Inter"; }
+.tc-sheet .who svg { margin-left: auto; width: 22px; height: 22px; color: #167353; }
+.tc-sheet .nt { margin-top: 10px; font: 500 18px/1.3 "Inter"; color: var(--muted); }
+
+/* the four steps and the nav */
+.tc-nav { position: absolute; left: 34px; top: 24px; height: 56px; display: flex; align-items: center; gap: 2px; padding: 6px 10px 6px 6px; border-radius: 999px;
+  background: rgba(255,253,248,.95); box-shadow: 0 12px 28px -12px rgba(40,40,30,.4), 0 0 0 1px rgba(120,100,60,.08); }
+.tc-nav .lg { display: flex; align-items: center; gap: 10px; padding: 0 16px 0 2px; font: 800 18px/1 "Manrope"; color: #173b30; white-space: nowrap; }
+.tc-nav .lg i { font-style: normal; width: 44px; height: 44px; border-radius: 50%; background: #167353; color: #b7f4cf; display: grid; place-items: center; font: 800 16px/1 "Manrope"; }
+.tc-nav .it { position: relative; z-index: 1; padding: 12px 15px; font: 600 17px/1 "Manrope"; color: #5b6965; white-space: nowrap; }
+.tc-nav .hl { position: absolute; left: 0; top: 6px; height: 44px; border-radius: 999px; background: #dcf4e6; z-index: 0; }
+.tc-steps { position: absolute; left: 34px; top: 98px; width: 610px; padding: 18px 22px 10px; border-radius: 22px; background: rgba(255,253,248,.96);
+  box-shadow: 0 22px 44px -18px rgba(40,40,30,.45), 0 0 0 1px rgba(120,100,60,.08); transform-origin: 0 0; }
+.tc-steps .hd { display: flex; align-items: center; gap: 10px; padding-bottom: 12px; font: 800 21px/1 "Manrope"; color: #173b30; }
+.tc-steps .hd svg { width: 22px; height: 22px; color: #167353; }
+.tc-steps .hd span { margin-left: auto; padding: 6px 11px; border-radius: 999px; background: #e3f5ea; color: #12563f; font: 700 16px/1 "Manrope"; }
+.tc-steps .row { display: flex; align-items: center; gap: 13px; padding: 10px 0; border-top: 1px solid #efe9dd; font: 500 18px/1.2 "Inter"; color: #2b3438; }
+.tc-steps .st { position: relative; width: 28px; height: 28px; flex: none; }
+.tc-steps .st > * { position: absolute; inset: 0; }
+.tc-steps .ring { border-radius: 50%; border: 2.5px solid #dcd8cf; }
+.tc-steps .done { border-radius: 50%; background: #167353; color: #fff; display: grid; place-items: center; }
+.tc-steps .done svg { width: 18px; height: 18px; }
+.tc-steps .tm { margin-left: auto; font: 800 18px/1 "Manrope"; color: #167353; }
+
+/* reading cards (the ID card, the list being read, the facts being written) */
+.tc-card { background: var(--paper); border-radius: 20px; box-shadow: 0 26px 54px -18px rgba(44,34,20,.42), 0 8px 20px -10px rgba(44,34,20,.2), 0 0 0 1px rgba(120,100,60,.08); }
+.tc-id { width: 430px; padding: 18px 20px; display: flex; gap: 16px; align-items: center; border-top: 6px solid #d9c38f; }
+.tc-id .av { width: 64px; height: 64px; flex: none; border-radius: 50%; background: #dff1e6; color: #12563f; display: grid; place-items: center; font: 800 28px/1 "Inter"; }
+.tc-id b { display: block; font: 800 24px/1.1 "Manrope"; color: var(--ink); }
+.tc-id span { display: block; margin-top: 5px; font: 500 18px/1.3 "Inter"; color: #46524f; }
+.tc-list { width: 470px; padding: 14px 16px 10px; border-top: 6px solid var(--h); }
+.tc-list .hd { display: flex; align-items: center; gap: 10px; padding: 0 4px 10px; font: 800 18px/1 "Manrope"; color: var(--ink); }
+.tc-list .hd em { margin-left: auto; font: 600 16px/1 "Manrope"; color: #12563f; font-style: normal; }
+.tc-list .li { position: relative; padding: 9px 10px; border-radius: 10px; }
+.tc-list .li b { position: relative; z-index: 1; display: block; font: 600 18px/1.25 "Inter"; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tc-list .li span { position: relative; z-index: 1; display: block; margin-top: 3px; font: 500 16px/1.2 "Inter"; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tc-list .bar { position: absolute; left: 0; top: 0; right: 0; height: 0; border-radius: 10px; background: #fff3c4; }
+.tc-write { width: 560px; padding: 16px 18px 8px; }
+.tc-write .hd { display: flex; align-items: center; gap: 10px; padding: 0 2px 10px; font: 800 19px/1 "Manrope"; color: var(--ink); }
+.tc-write .hd svg { width: 20px; height: 20px; color: #167353; }
+.tc-write .li { display: flex; align-items: flex-start; gap: 12px; padding: 9px 2px; border-top: 1px solid #f0eadf; }
+.tc-write .li b { display: block; font: 600 18px/1.25 "Inter"; color: var(--ink); }
+.tc-write .li span { display: block; margin-top: 3px; font: 600 16px/1.2 "Manrope"; color: #5b6965; }
+.tc-dot { width: 16px; height: 16px; flex: none; margin-top: 3px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff 0 12%, var(--h) 42%, color-mix(in srgb, var(--h) 70%, #000) 100%);
+  box-shadow: 0 2px 3px rgba(0,0,0,.25); }
+
+/* the sources line */
+.tc-srcline { position: absolute; left: 50%; top: 742px; width: 1290px; margin-left: -645px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.tc-sc { display: flex; align-items: center; gap: 12px; padding: 11px 14px 11px 11px; border-radius: 18px; background: rgba(255,253,248,.97);
+  box-shadow: 0 14px 30px -14px rgba(40,40,30,.45), 0 0 0 1px rgba(120,100,60,.08); }
+.tc-sc .tc-ic { width: 40px; height: 40px; }
+.tc-sc .tc-ic svg { width: 22px; height: 22px; }
+.tc-sc b { display: block; font: 800 18px/1.1 "Manrope"; color: var(--ink); }
+.tc-sc span { display: block; margin-top: 4px; font: 500 18px/1.1 "Inter"; color: #4d5a56; white-space: nowrap; }
+.tc-sc .ok { margin-left: auto; width: 28px; height: 28px; flex: none; border-radius: 50%; background: #167353; color: #fff; display: grid; place-items: center; }
+.tc-sc .ok svg { width: 17px; height: 17px; }
+
+/* big cards: what I learned, your brief, the answer, the rules */
+.tc-big { position: absolute; transform-origin: 0 0; }
+.tc-k { display: flex; align-items: center; gap: 9px; font: 800 15px/1 "Manrope"; letter-spacing: .14em; text-transform: uppercase; color: #167353; }
+.tc-k svg { width: 19px; height: 19px; }
+.tc-h1 { margin-top: 10px; font: 400 46px/1.02 "Instrument Serif"; color: #18221f; letter-spacing: -.005em; }
+.tc-meta { margin-top: 6px; font: 600 18px/1.2 "Manrope"; color: #6b7672; }
+.tc-learn { left: 876px; top: 96px; width: 1004px; padding: 26px 32px 28px; }
+.tc-learn .sum { margin-top: 14px; font: 400 20px/1.45 "Inter"; color: #2a3533; }
+.tc-tags { margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap; }
+.tc-tags span { padding: 8px 14px; border-radius: 999px; background: #e9f6ee; color: #12563f; font: 700 18px/1 "Manrope"; }
+.tc-facts { margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.tc-fact { position: relative; padding: 13px 16px 12px 44px; border-radius: 14px; background: #fffaf0; box-shadow: 0 1px 0 rgba(120,100,60,.12), 0 8px 18px -12px rgba(60,40,20,.35); }
+.tc-fact .tc-dot { position: absolute; left: 15px; top: 16px; width: 18px; height: 18px; }
+.tc-fact b { display: block; font: 700 22px/1.22 "Manrope"; color: var(--ink); letter-spacing: -.005em; }
+.tc-fact p { margin-top: 4px; font: 400 18px/1.34 "Inter"; color: #3e4a47; }
+.tc-src { margin-top: 7px; display: flex; align-items: center; gap: 7px; font: 700 17px/1.1 "Manrope"; color: #3a5d52; }
+.tc-src svg { width: 18px; height: 18px; flex: none; }
+.tc-src .lk { color: #167353; }
+.tc-fact .glow { position: absolute; inset: -3px; border-radius: 16px; border: 3px solid #7aa7ff; opacity: 0; }
+.tc-chip { display: flex; align-items: center; gap: 10px; padding: 10px 14px 10px 10px; border-radius: 14px; background: #ffffff; border: 2px solid #7aa7ff;
+  box-shadow: 0 12px 26px -10px rgba(50,80,160,.5); white-space: nowrap; }
+.tc-chip b { display: block; font: 800 18px/1.1 "Manrope"; color: var(--ink); }
+.tc-chip span { display: block; margin-top: 3px; font: 600 17px/1.1 "Inter"; color: #3d55a0; }
+.tc-chip > svg { width: 20px; height: 20px; color: #3d6fe0; }
+
+.tc-brief { left: 866px; top: 112px; width: 1014px; padding: 24px 32px 18px; background: #fffcf3; }
+.tc-mast { display: flex; align-items: flex-end; gap: 18px; padding-bottom: 12px; border-bottom: 3px solid #1c2a2b; }
+.tc-mast .t { font: 400 60px/0.95 "Instrument Serif"; color: #18221f; }
+.tc-mast .d { margin-left: auto; text-align: right; font: 700 18px/1.3 "Manrope"; color: #4d5a56; }
+.tc-lead { margin-top: 12px; padding-bottom: 6px; font: italic 400 26px/1.25 "Instrument Serif"; color: #2a3533; }
+.tc-bi { position: relative; display: flex; gap: 16px; margin: 0 -12px; padding: 14px 16px 14px 12px; border-radius: 12px; border-top: 1px solid #e9e2d2; }
+.tc-bi .n { width: 34px; height: 34px; flex: none; margin-top: 2px; border-radius: 50%; background: var(--h); color: #1d2b31; display: grid; place-items: center; font: 800 17px/1 "Manrope"; }
+.tc-bi .c { flex: 1; min-width: 0; }
+.tc-bi b { display: block; font: 700 22px/1.24 "Manrope"; color: var(--ink); letter-spacing: -.005em; }
+.tc-bi p { margin-top: 4px; font: 400 18px/1.35 "Inter"; color: #46524f; }
+.tc-next { margin-top: 8px; display: flex; align-items: center; gap: 9px; font: 600 18px/1.3 "Inter"; color: #12563f; }
+.tc-next i { font-style: normal; padding: 4px 9px; border-radius: 7px; background: #167353; color: #fff; font: 800 15px/1 "Manrope"; letter-spacing: .06em; text-transform: uppercase; }
+.tc-bi .s { width: 190px; flex: none; text-align: right; font: 700 17px/1.3 "Manrope"; color: #4d5a56; }
+.tc-bi .s div { display: flex; align-items: center; justify-content: flex-end; gap: 7px; color: var(--ink); font-size: 18px; }
+.tc-bi .s svg { width: 18px; height: 18px; }
+.tc-bi .new { position: absolute; left: -4px; top: 6px; padding: 5px 8px; border-radius: 7px; background: #ffd36b; color: #5b3d00; font: 800 13px/1 "Manrope"; letter-spacing: .08em; transform: rotate(-8deg); }
+
+.tc-ask { width: 780px; padding: 16px 18px 16px; border-radius: 24px; }
+.tc-ask .hd { display: flex; align-items: center; gap: 10px; font: 800 18px/1 "Manrope"; color: #173b30; }
+.tc-ask .hd svg { width: 20px; height: 20px; color: #167353; }
+.tc-ask .box { margin-top: 12px; display: flex; align-items: center; gap: 12px; padding: 14px 14px 14px 18px; border-radius: 16px; background: #ffffff; border: 2px solid #cfe9db; }
+.tc-ask .q { flex: 1; font: 500 24px/1.2 "Inter"; color: #1b2a5c; white-space: nowrap; }
+.tc-ask .q .ph { color: #9aa3a0; }
+.tc-ask .caret { display: inline-block; width: 2px; height: 26px; margin-left: 2px; vertical-align: -5px; background: #2a55d8; }
+.tc-ask .go { width: 46px; height: 46px; flex: none; border-radius: 13px; background: #167353; color: #fff; display: grid; place-items: center; }
+.tc-ask .go svg { width: 22px; height: 22px; }
+.tc-ask .ex { margin-top: 12px; display: flex; gap: 8px; flex-wrap: nowrap; }
+.tc-ask .ex span { padding: 8px 12px; border-radius: 999px; background: #f1efe7; color: #44504c; font: 600 16px/1 "Manrope"; white-space: nowrap; }
+.tc-ask .tail { position: absolute; left: 50%; bottom: -14px; width: 28px; height: 28px; margin-left: -14px; background: var(--paper); transform: rotate(45deg); border-radius: 4px; }
+.tc-qpill { display: flex; align-items: center; gap: 12px; padding: 10px 16px 10px 12px; border-radius: 16px; background: rgba(255,253,248,.97); box-shadow: 0 14px 30px -12px rgba(40,40,30,.45); white-space: nowrap; }
+.tc-qpill b { display: block; font: 700 19px/1.2 "Inter"; color: #1b2a5c; }
+.tc-qpill span { display: flex; gap: 6px; align-items: center; margin-top: 5px; font: 700 16px/1 "Manrope"; color: #12563f; }
+.tc-qpill .mini { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: #eceae3; color: #8a948f; }
+.tc-qpill .mini svg { width: 15px; height: 15px; }
+
+.tc-ans { left: 872px; top: 118px; width: 1006px; padding: 26px 32px 24px; transform-origin: 50% 0; }
+.tc-ans .qq { margin-top: 10px; font: italic 400 38px/1.1 "Instrument Serif"; color: #1b2a5c; }
+.tc-sents { margin-top: 16px; display: flex; flex-direction: column; gap: 10px; }
+.tc-sents p { font: 400 21px/1.42 "Inter"; color: #23302d; }
+.tc-cite { display: inline-grid; place-items: center; width: 26px; height: 26px; margin-left: 7px; vertical-align: 2px; border-radius: 50%; background: var(--h); color: #1d2b31; font: 800 14px/1 "Manrope"; }
+.tc-srcs { margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.tc-srcs div { display: flex; align-items: center; gap: 10px; padding: 9px 12px 9px 9px; border-radius: 12px; background: #f6f3ea; font: 700 18px/1.1 "Manrope"; color: var(--ink); white-space: nowrap; }
+.tc-srcs div span { font: 500 17px/1 "Inter"; color: #5b6965; }
+.tc-srcs .tc-cite { margin: 0; }
+.tc-srcs svg { width: 18px; height: 18px; }
+.tc-foot { margin-top: 18px; display: flex; align-items: center; gap: 22px; }
+.tc-gauge { display: flex; align-items: center; gap: 14px; padding: 10px 18px 10px 12px; border-radius: 16px; background: #eaf7ef; }
+.tc-gauge svg { width: 96px; height: 56px; }
+.tc-gauge b { display: block; font: 800 24px/1 "Manrope"; color: #12563f; }
+.tc-gauge span { display: block; margin-top: 5px; font: 600 16px/1 "Manrope"; color: #4d6a5e; }
+.tc-asof { display: flex; align-items: center; gap: 10px; font: 700 20px/1 "Manrope"; color: #2a3533; }
+.tc-asof svg { width: 22px; height: 22px; color: #167353; }
+.tc-ai-mark { margin-left: auto; display: flex; align-items: center; gap: 8px; font: 700 16px/1 "Manrope"; color: #5b6965; }
+.tc-ai-mark i { font-style: normal; padding: 5px 7px; border-radius: 7px; background: #167353; color: #b7f4cf; font: 800 14px/1 "Manrope"; }
+
+.tc-rules { left: 40px; top: 100px; width: 610px; padding: 24px 26px 18px; }
+.tc-rule { position: relative; display: flex; gap: 14px; padding: 11px 12px; margin: 0 -12px; border-radius: 14px; }
+.tc-rule .bg { position: absolute; inset: 0; border-radius: 14px; background: #e6f6ec; opacity: 0; }
+.tc-rule .rn { position: relative; width: 34px; height: 34px; flex: none; border-radius: 50%; display: grid; place-items: center; font: 800 17px/1 "Manrope"; color: #7b8580; border: 2.5px solid #d9d5cc; background: #fff; }
+.tc-rule .tx { position: relative; }
+.tc-rule b { display: block; font: 700 22px/1.2 "Manrope"; color: var(--ink); letter-spacing: -.005em; }
+.tc-rule p { margin-top: 3px; font: 400 18px/1.32 "Inter"; color: #4a5653; }
+.tc-num { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; background: #ffffff; color: #6b7672; font: 800 19px/1 "Manrope"; box-shadow: 0 8px 18px -6px rgba(0,0,0,.4); border: 3px solid #e9e4da; }
