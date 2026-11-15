@@ -8,6 +8,7 @@ colleagues with sources, attends a meeting as a clearly labelled AI, and briefs 
 afterwards. Built for Airbnb's hackathon (16 to 20 Nov 2026), generic first, with Learn
 Like Magic as the test company.
 
+- A new Mac, or taking over: [START-HERE.md](START-HERE.md)
 - Build state and next steps: [docs/build/STATE.md](docs/build/STATE.md)
 - Decisions and design: [docs/build/DESIGN.md](docs/build/DESIGN.md)
 - Agent instructions: [AGENTS.md](AGENTS.md)

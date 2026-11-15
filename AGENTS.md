@@ -14,6 +14,7 @@ The concept film that started the idea lives in `film/`.
 
 ## Start here
 
+0. A new Mac, or taking over a session's work: `START-HERE.md` first.
 1. `docs/build/STATE.md`: where we are, live sessions, what needs Manish, next, lessons.
 2. Your hand-off brief, if you were started with one.
 3. Then only the doc your task needs:

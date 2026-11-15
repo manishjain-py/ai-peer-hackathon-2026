@@ -9,6 +9,12 @@ Other sessions message the controller by its name.
 
 ## Where we are (2026-11-15 16:37 UTC)
 
+**16:41 UTC: the repo is complete for a fresh Mac (V25).** `START-HERE.md` at the root
+(what is where, the tags, setting up a Mac, taking over as the controller, how we work, what
+stays outside git and why) and `docs/ways-of-working/` (snapshots of the controller recipe,
+the notify and terminal skills, the 108 shared lessons and Manish's global rules; no secret
+in them, by a scan). `AGENTS.md` and `README.md` point to it.
+
 **16:37 UTC: WP7 starts, the two blended videos (V24, V26).** Manish at 16:34 UTC: "For now
 let's build from the video" (the tag version is rebuilt by code from his video). With no
 objection to the plan, the existing private repo is completed rather than a new one (V25).
