@@ -139,6 +139,31 @@ MASCOT = {
         "badge": [[0.8, 0.3], [2.75, 1]], "glow": 0.35, "light": 0.25, "shadow": 0.3, "trail": [[0.12, 0.74]],
     },
 }
+# The tag (V24, Manish's idea): a plain tag slides out of the phone (no legs, no eyes), then its eyes
+# and its legs come out and it hops to the desk; in the morning it folds back into a plain tag before
+# it goes back into the phone (V19: back where it came from). It is about 260 px wide at s = 1 against
+# Little Peer's 164, so its scales are 0.6 of Little Peer's; both origins are the point between the
+# feet, so its feet land where Little Peer's do. "legs" and "eyes" are [[u, value]] keys (0: a plain
+# flat tag; eyes above 1 pop bigger). It has no arms: its wave is a happy rock (engine.js).
+def tag_mascot(lp):
+    m = copy.deepcopy(lp)
+    for v in m.values():
+        v["s"] = r3(v["s"] * 0.6)
+    h = m["hook-sleeper"]
+    h["pop"] = {"at": 2.45, "dur": 0.55, "from": [385, 990]}
+    h["eyes"] = [[2.95, 0], [3.1, 1.3], [3.22, 1]]
+    h["legs"] = [[3.08, 0], [3.32, 1]]
+    h["happy"] = [[3.1, 0], [3.3, 0.8]]
+    h["blinks"] = [3.42]
+    b = m["morning-brief"]
+    b["legs"] = [[2.6, 1], [2.76, 0]]
+    b["eyes"] = [[2.64, 1], [2.8, 0]]
+    return m
+
+
+if WHICH == "tag":
+    MASCOT = tag_mascot(MASCOT)
+
 QUAD = [[0.6734, 0.45], [0.7682, 0.4667], [0.7203, 0.7009], [0.6307, 0.6648]]   # the lit laptop screen in night-desk-v1
 
 # ------------------------------------------------------------------ the slots

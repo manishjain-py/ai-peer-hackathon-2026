@@ -57,8 +57,10 @@ async function loadMascot(name) {
         m.defs(svg);
         const t = m.buildTag(svg, { label: "Ram's AI Peer" });
         return (p) => t.draw({
-          x: p.x, y: p.y, s: p.s, alpha: p.alpha, rot: p.rot, sx: p.sx, sy: p.sy,
-          walk: p.walk, legs: p.legs ?? 1, lift: 0, look: p.look, blink: p.blink, eyes: p.eyes ?? 1,
+          x: p.x, y: p.y, s: p.s, alpha: p.alpha, sx: p.sx, sy: p.sy,
+          // it has no arms: its wave is a happy rock about its feet
+          rot: p.rot + 7 * (p.wave || 0) * Math.sin(p.u * 2 * Math.PI * 1.7),
+          walk: p.walk, stride: p.stride ?? 0, legs: p.legs ?? 1, lift: 0, look: p.look, blink: p.blink, eyes: p.eyes ?? 1,
           happy: p.happy, glow: p.badge, shadow: p.shadowOpacity,
         });
       },
@@ -188,7 +190,8 @@ export async function createMascot(slot, film) {
     draw({
       u, x: px, y: py, s, alpha, rot, sx, sy, sway, look, blink, happy, badge, wave,
       aura: (M.glow ?? 0.55) * alpha, ground: gy, air: air * r, shadowOpacity: (M.shadow ?? 0.45) * alpha * (grow > 0.3 ? 1 : 0),
-      walk: u * 2.2, legs: 1, eyes: 1,
+      // the tag's feet step only on a glide; legs and eyes are keyed (0: a plain flat tag), else 1
+      walk: u * 2.2, stride: b.kind === "glide" ? 1 : 0, legs: keyed(M.legs, u) ?? 1, eyes: keyed(M.eyes, u) ?? 1,
     });
 
     // the light it gives off

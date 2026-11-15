@@ -1,0 +1,313 @@
+{
+ "about": "WP7: Draft 3's screens (screens.json), re-timed for the blended video and with the mascot's face. Draft 3 (DESIGN V19): the four product screens of the public film, drawn by code (src/scenes/screens.js) with made-up data for an Airbnb payments case: Ram owns host payout retries. Every name, team, channel, number and link is invented. A public build draws these in place of the slates; a private build still uses product.json and the real recordings. Times are seconds from the slot's start. The Peer's face is one picture, peer_face: swap that file and every screen follows.",
+ "window": {
+  "x": 280,
+  "y": 56,
+  "w": 1360,
+  "h": 765
+ },
+ "note": "Made-up data",
+ "peer_face": "assets/screens/peer-face-tag.png",
+ "people": {
+  "amara": {
+   "name": "Amara Johnson",
+   "tile": "assets/screens/amara-tile.jpg",
+   "face": "assets/screens/amara-face.jpg"
+  },
+  "daniel": {
+   "name": "Daniel Weiss",
+   "tile": "assets/screens/daniel-tile.jpg",
+   "face": "assets/screens/daniel-face.jpg"
+  },
+  "vikram": {
+   "name": "Vikram Rao",
+   "tile": "assets/screens/vikram-tile.jpg",
+   "face": "assets/screens/vikram-face.jpg"
+  }
+ },
+ "slots": {
+  "proof-meeting": {
+   "kind": "zoom",
+   "chapter": {
+    "hour": 2,
+    "text": "Joins the meeting as a labelled AI",
+    "length": 1.8
+   },
+   "topic": "Host Payouts · weekly sync",
+   "tiles": [
+    "amara",
+    "daniel",
+    "vikram",
+    "peer"
+   ],
+   "join_at": 1.4,
+   "speakers": {
+    "m1": "peer",
+    "m2": "peer",
+    "m3": "amara",
+    "m4": "peer"
+   },
+   "clips_note": "Draft 3 (V20): nobody is frozen while the Peer speaks. Each colleague plays listening takes back to back for the whole meeting (minimax/h3-max-turbo at 768P, made by wp2-6 in demo-video/shots/meeting-listen/, shrunk to 960x540): each starts and ends on the person's tile still, so they join with no jump. 'at' is in slot seconds. Later clips lie on top: Amara's talking clip comes last.",
+   "clips": [
+    {
+     "who": "amara",
+     "file": "assets/screens/amara-listen-a.mp4",
+     "at": 0.0,
+     "length": 10.0
+    },
+    {
+     "who": "amara",
+     "file": "assets/screens/amara-listen-b.mp4",
+     "at": 10.0,
+     "length": 5.0
+    },
+    {
+     "who": "amara",
+     "file": "assets/screens/amara-listen-a.mp4",
+     "at": 19.7,
+     "length": 2.8
+    },
+    {
+     "who": "daniel",
+     "file": "assets/screens/daniel-listen-a.mp4",
+     "at": 0.0,
+     "length": 10.0
+    },
+    {
+     "who": "daniel",
+     "file": "assets/screens/daniel-listen-b.mp4",
+     "at": 10.0,
+     "length": 10.0
+    },
+    {
+     "who": "daniel",
+     "file": "assets/screens/daniel-listen-a.mp4",
+     "at": 20.0,
+     "length": 2.5
+    },
+    {
+     "who": "vikram",
+     "file": "assets/screens/vikram-listen-b.mp4",
+     "at": 0.0,
+     "length": 10.0
+    },
+    {
+     "who": "vikram",
+     "file": "assets/screens/vikram-listen-a.mp4",
+     "at": 10.0,
+     "length": 10.0
+    },
+    {
+     "who": "vikram",
+     "file": "assets/screens/vikram-listen-b.mp4",
+     "at": 20.0,
+     "length": 2.5
+    },
+    {
+     "who": "amara",
+     "file": "assets/screens/amara-m3.mp4",
+     "line": "m3",
+     "line_at": 1.0,
+     "length": 5.0,
+     "about": "Amara says m3 on her webcam: a lip-synced clip (minimax/h3-max-turbo, demo-video/shots/meeting-amara/), played over her tile from 1.0 s before her line; the tile's still is its first frame"
+    }
+   ],
+   "camera": [
+    {
+     "t": 0,
+     "s": 1,
+     "fx": 0.5,
+     "fy": 0.5
+    },
+    {
+     "t": 1.8,
+     "s": 1,
+     "fx": 0.5,
+     "fy": 0.5
+    },
+    {
+     "t": 14.0,
+     "s": 1.045,
+     "fx": 0.56,
+     "fy": 0.56
+    },
+    {
+     "t": 21.6,
+     "s": 1.07,
+     "fx": 0.6,
+     "fy": 0.6
+    }
+   ]
+  },
+  "proof-slack": {
+   "kind": "slack",
+   "chapter": {
+    "hour": 4,
+    "text": "A question on Slack",
+    "length": 1.6
+   },
+   "workspace": "Airbnb",
+   "channel": "host-payouts",
+   "members": 48,
+   "channels": [
+    "announcements",
+    "host-payouts",
+    "payments-eng",
+    "payout-alerts",
+    "launch-brazil"
+   ],
+   "dms": [
+    "daniel",
+    "amara",
+    "vikram"
+   ],
+   "earlier": {
+    "who": "vikram",
+    "time": "11:48 PM",
+    "text": "The Brazil launch review moves to 9:00 AM tomorrow. The deck is in the channel bookmarks."
+   },
+   "question": {
+    "who": "daniel",
+    "time": "4:02 AM",
+    "text": "@Ram did the new retry logic cause Tuesday's spike in failed payouts in Brazil? I need it for the launch review at 9."
+   },
+   "typing": [
+    1.9,
+    2.9
+   ],
+   "reply": {
+    "at": 2.9,
+    "time": "4:03 AM",
+    "p1": "Hi Daniel, I'm Ram's AI Peer, an AI answering while Ram is asleep. It wasn't the retry logic: a partner bank in Brazil was down on Tuesday from 14:10 to 16:40 BRT, and retries then recovered 92% of those payouts within 6 hours.",
+    "sources": [
+     "INC-20431 · Partner bank outage, Brazil",
+     "Payout retries dashboard · last 7 days",
+     "Payout retry v2 · design doc by Ram"
+    ],
+    "p2": "Raising the retry limit for Brazil is Ram's call, so I haven't promised anything. It's in his morning brief.",
+    "footer": "Sent on behalf of Ram · AI-generated reply"
+   },
+   "reaction": {
+    "at": 6.3,
+    "text": "🙏 1"
+   },
+   "labels": [
+    {
+     "at": 5.0,
+     "length": 1.4,
+     "text": "Answers with its sources",
+     "box": "sources"
+    },
+    {
+     "at": 6.5,
+     "length": 1.4,
+     "text": "Makes no promise for him",
+     "box": "p2"
+    }
+   ],
+   "camera": [
+    {
+     "t": 0,
+     "s": 1,
+     "fx": 0.5,
+     "fy": 0.5
+    },
+    {
+     "t": 2.8,
+     "s": 1,
+     "fx": 0.5,
+     "fy": 0.5
+    },
+    {
+     "t": 4.0,
+     "s": 1.16,
+     "fx": 0.95,
+     "fy": 0.72
+    },
+    {
+     "t": 8.0,
+     "s": 1.2,
+     "fx": 0.95,
+     "fy": 0.74
+    }
+   ]
+  },
+  "morning-product-brief": {
+   "kind": "brief",
+   "time": "7:02",
+   "greeting": "Good morning, Ram",
+   "lead": "Four things happened while you slept. One needs you.",
+   "sections": [
+    {
+     "title": "What I did",
+     "accent": "green",
+     "cards": [
+      {
+       "cat": "Meeting · 2:00 AM",
+       "title": "Gave your update at the Host Payouts sync",
+       "why": "Amara asked about Brazil. I left that decision for you."
+      },
+      {
+       "cat": "Slack · 4:03 AM",
+       "title": "Answered Daniel in #host-payouts",
+       "why": "Tuesday's failures came from a bank outage, with sources. I promised nothing."
+      }
+     ]
+    },
+    {
+     "title": "What I learned",
+     "accent": "blue",
+     "cards": [
+      {
+       "cat": "Payments Risk · 6:04 AM",
+       "title": "Brazil's fraud threshold drops on Thursday",
+       "why": "About 3% more payouts will be held. They will look like retry failures."
+      }
+     ]
+    },
+    {
+     "title": "Needs you",
+     "accent": "amber",
+     "cards": [
+      {
+       "cat": "Decision",
+       "title": "Switch on payout retry for Brazil this week?",
+       "why": "Amara needs your answer for the 9:00 launch review.",
+       "buttons": [
+        "Yes, this week",
+        "Not yet"
+       ],
+       "decision": true
+      }
+     ]
+    }
+   ],
+   "scroll": [
+    {
+     "t": 0,
+     "y": 0
+    },
+    {
+     "t": 0.6,
+     "y": 0
+    },
+    {
+     "t": 1.5,
+     "y": 330
+    },
+    {
+     "t": 2.2,
+     "y": 330
+    },
+    {
+     "t": 3.0,
+     "y": 700
+    }
+   ],
+   "highlight": [
+    2.9,
+    4.4
+   ]
+  }
+ }
+}
