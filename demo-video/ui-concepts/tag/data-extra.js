@@ -28,7 +28,7 @@ export const X = {
   skipped: (n) => `${n} skipped, never opened`,
   // The page.
   updated: `${learned.asOf.split(" · ")[0]} · kept in your browser`,
-  buttons: ["Refresh brief", "Set up again", "Forget my Peer"],
+  buttons: ["Catch me up", "Change sources", "Erase it all"],
   briefHead: "Your brief · Nov 15",
   next: "Next:",
   // Ask.
@@ -46,12 +46,12 @@ export const X = {
   nextDay: "Mon, Nov 16 · 8:40 AM",
   updatedNext: "Updated Nov 16, 8:41 AM · kept in your browser",
   briefHeadNext: "Your brief · Nov 16 · refreshed",
-  forgotten: "Erased from this browser. Set it up again any time.",
+  forgotten: "Erased from this browser. Nothing is kept.",
   // Captions in our own words (the rest are data.js captionWords).
   capCalm: "It suggests, and you choose",
   capNextDay: "The next day, your Peer is still here, kept in this browser",
-  capRefresh: "Refresh brief reads your sources again, as you",
-  capForget: "Forget my Peer erases it, and the tag is a plain label again",
+  capRefresh: "Catch me up reads your sources again, as you",
+  capForget: "Erase it all, and the tag is a plain label again",
 };
 
 // What each source gave: its count split for the cards ("24 docs" / "latest Nov 13"), and the

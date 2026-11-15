@@ -59,16 +59,16 @@ Setup: "out reading as ram", "always labelled as AI · it only reads", "Reading 
 reads · nothing is changed", "1 entry · read as Ram", "Needs your sign-in", "Connect Slack/Code/Tickets",
 "read-only · private to you", "and N more", "not shared with Ram", "3 skipped, never opened",
 "in 14 days", Role/Team/Org/City/Manager. Page, Ask and rules: "Hello, Ram.", "Updated Nov 15 · kept in
-your browser", "Refresh brief", "Set up again", "Forget my Peer", "Your brief · Nov 15", "Next", "Type a
+your browser", "Catch me up", "Change sources", "Erase it all", "Your brief · Nov 15", "Next", "Type a
 question about your work", "Ask", "Thinking…", "Reading your sources again, as Ram", "Ram's AI Peer ·
 AI", "Confidence", "High", "Sources", "Ram's AI Peer · how it works". Next day: "Mon, Nov 16 · 8:40 AM",
 "Updated Nov 16, 8:41 AM · kept in your browser", "Your brief · Nov 16 · refreshed", "Erased from this
-browser. Set it up again any time." Captions: "The next day, your Peer is still here, kept in this
-browser", "Refresh brief reads your sources again, as you", "Forget my Peer erases it, and the tag is a
-plain label again" ("It suggests, and you choose" is `data.js`'s own). Caption kickers: Start, Setup
-k/4, What I learned, Your brief, Ask your Peer, How it works, Next day. Some of these echo the product
-wording his video showed (for example "Refresh brief", "Forget my Peer"): ai-peer-video-wp7-2 runs the
-controller's `privacy-check.sh` on them before the PR.
+browser. Nothing is kept." Captions: "The next day, your Peer is still here, kept in this
+browser", "Catch me up reads your sources again, as you", "Erase it all, and the tag is a plain
+label again" ("It suggests, and you choose" is `data.js`'s own). Caption kickers: Start, Setup
+k/4, What I learned, Your brief, Ask your Peer, How it works, Next day. Three button labels and two
+captions first echoed the product wording his video showed; ai-peer-video-wp7-2 replaced them with
+the made-up ones above before the blend used them.
 
 ## Privacy grep
 

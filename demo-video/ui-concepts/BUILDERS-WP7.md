@@ -25,7 +25,8 @@ steps as you can, but with the film's made-up story (Ram) and our own words.
    Payments, Dublin, Amara Johnson, Daniel Weiss, Vikram Rao, PR #4182, INC-20431, PAY-4821, Payout
    retry v2, the Brazil launch) and WP6's own wording there (`page`, `steps`, `captionWords`,
    `learned`, `brief`, `ask`, `rules`). Never write: Maya, Chen, Fernway, Lisbon, Checkout, the job
-   title "Senior Software Engineer" (or "Senior"), "Certainty" (say "Confidence"), any PR, ticket or
+   title his video shows (or its first word), his video's word for how sure it is (say "Confidence"),
+   any PR, ticket or
    channel name you read in his video. Where his video shows a phrase we have no word for, write a
    new plain phrase of your own; never copy his sentence. If you need more made-up content than
    `data.js` has, put it in your own `tag/data-extra.js`, consistent with `data.js`.
@@ -74,8 +75,8 @@ card. Its parts, in order:
    then the answer with a confidence bar, an "as of" date and its sources.
 6. **The trust note**: the tag holds up a big dark green card listing its rules; a close-up of the
    tag with "always labelled · read-only" under it.
-7. **The return**: a later visit (the Peer is remembered in this browser), "refresh brief" reads the
-   sources again, and "forget my Peer" turns it back into a plain label in the rail.
+7. **The return**: a later visit (the Peer is remembered in this browser), one button reads the
+   sources again, and another erases the Peer and turns it back into a plain label in the rail.
 
 ## The concept you build: `demo-video/ui-concepts/tag/`
 
@@ -102,7 +103,7 @@ card. Its parts, in order:
 | 32.0 to 39.5 | the brief | today's items, each with a next step (`brief` in `data.js`) |
 | 39.5 to 50.0 | Ask your Peer | "Where does the Brazil launch stand?" typed, "Thinking...", the answer with sources, Confidence: High, as of Nov 15, 7:02 AM |
 | 50.0 to 57.5 | the trust note | the tag holds up the rules card (`rules` in `data.js`, six rules); end on a calm frame |
-| 57.5 to 67.5 | the return | a later visit, refresh, forget my Peer: the tag goes back to a plain label |
+| 57.5 to 67.5 | the return | a later visit, a fresh read, then the erase: the tag goes back to a plain label |
 | 67.5 to 71.0 | end card (runtime) | |
 
 - **Order of work** (the week's usage is tight): (1) `mascot.js` and one still of it; (2) the film's

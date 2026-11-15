@@ -221,7 +221,7 @@ export function renderPaper(P, t, S) {
   P.nav.forEach((n, i) => cls(n, "on", i === S.active));
   put(P.spotT, S.tagAway ? 1 : 0);
 
-  // ---- the landing hero: out as the room comes in, back after "forget my Peer".
+  // ---- the landing hero: out as the room comes in, back after the erase.
   const H = P.hero;
   const early = t < 30;
   const heroOut = ease.inOutCubic(prog(t, ROOM_IN[0] - 0.05, ROOM_IN[0] + 0.4));
