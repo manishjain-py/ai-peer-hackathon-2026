@@ -1,0 +1,42 @@
+<!doctype html>
+<!-- Made by render.mjs from shared/index.template.html. Do not edit the copy in a build folder. -->
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>{{TITLE}}</title>
+    <link rel="stylesheet" href="shared/base.css" />{{SCENE_CSS}}
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./shared/vendor/three.module.min.js",
+          "three/addons/": "./shared/vendor/addons/"
+        }
+      }
+    </script>
+    <script>
+      // The renderer waits for this promise before it draws its first frame.
+      window.__hf = window.__hf || {};
+      window.__hf.buildReady = window.__hf.buildReady || {};
+      window.__hf.buildReady.concept = new Promise(function (resolve) {
+        window.__conceptReady = resolve;
+      });
+    </script>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="concept"
+      data-start="0"
+      data-duration="{{SECONDS}}"
+      data-width="1920"
+      data-height="1080"
+      data-fps="30"
+      data-no-timeline
+    >
+      <div id="stage"></div>
+      <div id="boot-error">The concept's script did not run</div>
+    </div>
+    <script type="module" src="shared/runtime.js"></script>
+  </body>
+</html>

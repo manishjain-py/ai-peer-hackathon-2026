@@ -1,0 +1,5 @@
+# Made by render.mjs: rebuilt by one command, never committed.
+/.build/
+# Renders are committed one by one, by name (git add -f).
+/renders/*
+!/renders/.gitkeep

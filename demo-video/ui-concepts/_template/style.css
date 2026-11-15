@@ -1,0 +1,5 @@
+.tpl-gl { position: absolute; inset: 0; }
+.tpl-cards { position: absolute; left: 1080px; top: 260px; display: flex; flex-direction: column; gap: 18px; }
+.tpl-card { width: 640px; padding: 22px 26px; border-radius: 18px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16);
+  color: #eef2f5; font: 500 22px/1.35 "Inter", sans-serif; backdrop-filter: blur(14px); }
+.tpl-card small { display: block; margin-top: 8px; color: #b7f4cf; font: 600 16px/1 "Manrope", sans-serif; }
