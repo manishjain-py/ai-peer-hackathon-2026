@@ -1,0 +1,26 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "Keep everything in image 1 exactly as it is: the same sunlit room, the same camera position and framing, the same warm light, and the same man sitting up in bed holding his phone, who has not moved. Change two things. First: the laptop on the desk is open and its screen glows soft mint. Second: a faint double of the man, made of soft mint light (#b7f4cf), stands in front of the desk beside the chair, turned toward the man in bed and smiling at him warmly with closed lips. He is an exact copy of the man shown in image 2 and image 3, who is also the man in the bed: the same face, the same short dark hair and trimmed beard, the same warm medium-brown skin, the same dark charcoal T-shirt and the same loose dark grey pyjama trousers. His face and skin keep their own natural brown colour and his clothes keep their own dark colours; only the light is pale mint-green (#b7f4cf). He glows softly from within and is slightly see-through, with soft edges and no drawn outline. He is in the middle of going back into the laptop: his body from the chest down is turning into a stream of soft mint light and glowing particles that flows into the laptop's screen. The man in bed has looked up from his phone toward him, with a small, rested smile. It must read as friendly, advanced technology, never as a ghost or a spirit: no mist, no smoke, no dark shadows, nothing spooky. There are exactly two people: the solid man in bed and the faint man of light. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+    "image_urls": [
+      "file:demo-video/shots/stills/morning-wake-b.png",
+      "file:demo-video/look/characters/a-portrait.jpg",
+      "file:demo-video/look/characters/a-full.jpg"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.09,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.09,
+    "estimate": true,
+    "basis": "WP1 and WP3 paid 6 to 9 cents for a 2K picture on this model (demo-video/ledger/wp3.csv)"
+  },
+  "output": "demo-video/look/peer-entrance/b-laptop-3-back",
+  "note": "Concept B (Ram's look, from the laptop), still 3: in the morning he smiles and goes back into the laptop"
+}

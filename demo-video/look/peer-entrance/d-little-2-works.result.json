@@ -1,0 +1,29 @@
+{
+ "request_id": "01a1db89-a700-7ee3-b9af-78546acf404e",
+ "billable_units_header": "0.084619713",
+ "inputs_sent": {
+  "prompt": "Keep everything in image 1 exactly as it is: the same room, the same camera position and framing, the same night light, and the same man asleep in the bed, who has not moved. Change two things. First: the laptop on the desk is open and its screen glows soft white, lighting the desk. Second: on the desk in front of the laptop sits a small friendly character that is the app icon shown in image 2 come to life: a soft, very rounded mint-green cube (#b7f4cf) about the size of a hand, made of frosted, softly glowing material, with the same dark double arch and the same two small dark dots of image 2 on its front, which read as its face, and two tiny stubby arms. It glows softly from within. Simple, premium 3D design, like the mascot of a high-end tech brand, not childish. It is busy at work: its tiny arms rest on the laptop's keyboard as if typing and it looks up at the screen, focused and content; the screen's light falls on it. The sleeper is untouched. It must read as friendly, advanced technology, never as a ghost or a spirit: no mist, no smoke, no dark shadows, nothing spooky. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab278aa/5mKUmqMddPBC5VkS0VsfA_night-phone-lit.png",
+   "https://v3b.fal.media/files/b/0ab278ab/SWj4_wcRyiQd9eRrHItY__peer-mark.png"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab278ab/OgZ0KTWXCKyR_GTYE0XB4_hgLU29mz.png",
+    "content_type": "image/png",
+    "file_name": "OgZ0KTWXCKyR_GTYE0XB4_hgLU29mz.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

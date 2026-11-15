@@ -286,3 +286,102 @@ Still weak, plainly:
    so the voice starts 0.86 s into the take), not measured.
 4. The card texts are invented placeholders; the card and the label are small at 1080p.
 5. The private render's product screens, and the note on them, were not looked at by this session.
+
+## Draft 3, Phase A and B (ai-peer-video-wp2-4, 2026-11-14)
+
+From Manish's view of Draft 2 (`DESIGN.md` V19; the order: `../docs/FEEDBACK-DRAFT-2-2026-11-14.md`).
+
+- **Phase A, the Peer's entrance (samples for Manish).** Research with links:
+  `../research/peer-entrance-2026-11-14.md`. Four concepts on WP3's room, one board each in
+  `../look/peer-entrance/boards/` (it appears, it works at the desk, it goes back, and its one face
+  on a card, a Zoom tile and a Slack reply): D the little Peer (the app's mark come alive) out of
+  the laptop, recommended; A Ram's look out of the phone; B Ram's look out of the laptop; C a night
+  owl out of the phone (flagged: Duolingo, Harry Potter). Two 5 s motion tests (Kling 4.0, key
+  frames): `../look/peer-entrance/motion/peer-motion-tests.mp4` (D, then A). Sent to Manish by the
+  controller at 19:44 UTC. Spent $3.01 (`../ledger/wp2-4.csv`, 19 calls).
+- **Phase B, the four product screens by code** (`screens.json`, `src/scenes/screens.js`,
+  `src/screens.css`), all data made up for an Airbnb payments case (Ram owns host payout
+  retries): the meeting as a Zoom gallery of four (Amara, Daniel, Vikram from the hook's stills,
+  and the Peer as a labelled AI tile with sound rings, a join notice and Zoom-style live captions);
+  Slack (Daniel's question at 4:02 AM, the Peer's reply with three sources, "Ram's call", sent on
+  behalf of Ram); the change (1,284 changes stream past, one locks: Payments Risk lowers Brazil's
+  fraud threshold; the card says why it matters, the rest is left out); the brief on Ram's phone
+  (what I did, what I learned, the one decision, with the buttons). Each has the chapter card and
+  labels the private cut has, and a "Made-up data" note. The push-in lands on the Zoom window.
+- **Four new meeting lines** (m1 to m4: the Peer says it is an AI, gives the update, colleague 1
+  asks about Brazil, the Peer leaves it for Ram), by the controller's yes; ElevenLabs plan, about 620
+  characters with the re-takes, no per-call bill. m1 now says "I'm an AI" (the first two takes were
+  heard as "and AI"). Speech-to-text: m2 and m3 exact; m1 and m4 differ only in spelling Ram as
+  "Rom"/"Rahm". They play with Zoom-style captions on the screen (the film's captions leave them
+  out) and a light call filter in the mix.
+- **Left for Phase C and D:** Manish's pick; the entrance and the return as AI shots; the cards,
+  the tag and `assets/screens/peer-face.png` take the chosen face; the music before 32 s; Draft 3.
+
+## Draft 3, two Phase B fixes (ai-peer-video-wp2-5, 2026-11-14)
+
+- **The push-in's landing (30.0 to 32.4 s).** It went bright mint, then a dark empty window, then
+  the dimmed Zoom: a jump from light to dark. Now the laptop's screen holds the Zoom window itself
+  (a second copy of the meeting scene's picture, `windowContent` in `src/scenes/screens.js`): it
+  comes up through the screen's light as the screen turns (31.0 to 31.6 s), lands lit, and darkens
+  with the chapter card (`windowDim`, one curve shared by both scenes). No mark on this landing (the
+  Peer's tile joins at the lower right at 33.6 s). The private build's landing is unchanged. Frame
+  change at the cut, 32.0 s: 1.16 (its neighbours 1.34 and 0.95).
+- **The brief's phone and the captions (94.5 to 100.5 s).** The phone overlapped the caption box.
+  It is now 0.9 of its size, centred at 41.1% of the height: about 40 px clear above it and above
+  a one-line caption.
+- Check renders in lane wp25 only; no paid call.
+
+## Draft 3, Phase C with A, so far (ai-peer-video-wp2-5, 2026-11-15)
+
+Manish picked A, Ram's look out of his phone (V20; `../docs/FEEDBACK-PHASE-A-2026-11-15.md`).
+
+- **The entrance** (`../shots/reveal-a/`): the phone's ribbon, he is formed by 18.0 s (before
+  "I'm Ram's AI Peer"), steps to the chair (20.0), then Draft 2's desk clip from 4.2 s only (its
+  start shows threads to the sleeper): sit 23.0, work 26.5, push-in 30.0. Two Kling 4.0 shots at
+  1080p on key frames made on that clip's own room, tone-matched.
+- **The return** (`../shots/return-a/`, `morning-return`, 104.5 to 108.0): he smiles, flows into
+  the phone in Ram's hand, the phone glows.
+- **One face:** Ram's portrait with the mark as a badge on the cards, the tag, Zoom and Slack.
+- **Zoom:** all three colleagues are webcam stills; Amara says m3 in a lip-synced clip.
+- **The big world of information** (`proof-change`, by a builder helper: `src/scenes/world.js`,
+  `src/world.css`, `world.json`): the flood of email, Slack, tickets, code, docs and the web with
+  counters; the Peer listens and draws it in; the one change (Brazil's fraud threshold) opens with
+  why it matters and drops into "Your morning brief", the rest left out; it ends warm for the
+  sunrise cut. All outside names are invented and still need a quick check.
+- **Music** unchanged on purpose (its quiet bars sit on the sleeper; the new cuts sit on its bar
+  lines). Spent $3.74 (`../ledger/wp2-5.csv`, 12 calls).
+- **Left** (`../docs/handoffs/HANDOFF-2026-11-15-ai-peer-video-wp2-6.md`): the phone as the clear
+  source of the ribbon, the Zoom colleagues moving, then Draft 3.
+
+## Draft 3, Phase C finished and Draft 3 (ai-peer-video-wp2-6, 2026-11-15)
+
+- **The phone is the clear source** (the controller's point). In the sleeper close-up the phone
+  on the bedside table lights up mint-white at 14.2 s, right after "I'm the one who's up", with
+  its buzz (`hook-sleeper-lit-v1.mp4`, made by code: `../tools/phone_glow.py` finds the dark
+  phone and follows the camera's drift). In the wide, `reveal-phone` now ends at 18.0: after that
+  its ribbon arched over Ram's head back into the phone. `reveal-gather` (18.0 to 23.0, one Kling
+  4.0 take, `../shots/reveal-a/requests/k-gather.json`) draws the last of the ribbon into him low
+  over the floor, then he steps to the chair and lands on Draft 2's desk clip at 4.2 s. The cause
+  of the arch was key frame e2 itself: it had sparkles over Ram's head (so had the walk's first
+  1.5 s), so a take that ended on it sent the light back there. Its middle key frame is
+  `e2-clean.png` (e2 with that corner from e0). It replaces `reveal-walk`, whose small step toward
+  the camera goes with it. A first take ending on e2 (`k-settle-r1`) still arched and is not used.
+- **The Zoom colleagues move** for the whole meeting (V20): six MiniMax H3 listening takes at
+  768P (`../shots/meeting-listen/`), each starting and ending on the person's tile still, played
+  back to back; Amara's talking clip stays on top for m3. A tile clip may now have its own time
+  (`"at"`, slot seconds) and a tile plays all its clips.
+- **The big world:** the nine invented outside names were searched on the web: none is a real
+  organisation; "Lumeira Pay" sat close to two real payment firms (Lumepay, Lumon Pay), so it is
+  now "Orvalla Pay". Ten nearer web pages drift in from the left and right edges, so the web
+  outside the company reads clearly. The open card no longer fades over the brief's list: it
+  drops in solid and gives way to the brief's own card once they lie on top of each other.
+- **Money:** `../ledger/wp2-6.csv`, $3.42 (8 calls: two Kling takes, six H3 takes).
+- **Draft 3** (`renders/draft-03.mp4`, public, no real recording in it): 2:00.0, 1920x1080 at
+  30 fps, -14.1 LUFS, true peak -1.8 dBTP, every line at least 15.0 dB above the music (lowest
+  p11 15.0, m2 15.3). The speech check on the whole mix hears 18 of 19 lines word for word; h3,
+  "Does he ever sleep?", came out as "Does he have a sleep?". The line is unchanged since Draft
+  1, the music sits 22.8 dB under it, and the same line cut from the mix is heard right while the
+  voice stem alone is heard wrong: the model's slip on the laughing delivery, not the mix.
+  Looked at one sheet of 20 frames across the 2:00.
+- **Left as they are:** Vikram's name is partly under the Zoom caption bar while the Peer speaks;
+  the tag is small on the wide shots; the music is unchanged (nobody has heard it).

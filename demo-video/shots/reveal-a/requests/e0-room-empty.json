@@ -1,0 +1,24 @@
+{
+ "endpoint": "google/nano-banana-2.1/edit",
+ "inputs": {
+  "prompt": "Keep everything in image 1 exactly as it is: the same bedroom at night, the same camera position and framing, the same night light, the same man asleep in the bed, who has not moved, the same bedside lamp, the same phone glowing mint on the bedside table, the same desk, chair, window, curtains and floor. Change one thing only: the man made of mint light standing at the desk chair is gone. The chair and the desk are empty, and the room is exactly as it would be without him: no glow, no light, no particles where he stood. There is exactly one person in the room, the man asleep in the bed. Photorealistic. Nothing written anywhere.",
+  "image_urls": [
+   "file:demo-video/shots/reveal-a/keys/desk-at-4.2s.png"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "expect": {
+  "units": 0.09,
+  "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+  "unit_price": 1.0,
+  "cost_usd": 0.09,
+  "estimate": true,
+  "basis": "wp2-5's stills on this model cost 7.6 to 8.5 cents (demo-video/ledger/wp2-5.csv)"
+ },
+ "output": "demo-video/shots/reveal-a/e0-room-empty",
+ "note": "Phase C (A, V20): key frame E0, the night room of Draft 2's desk clip with the double removed; the phone glows"
+}

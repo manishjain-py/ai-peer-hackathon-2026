@@ -1,0 +1,23 @@
+{
+ "endpoint": "kling/v4/image-to-video",
+ "inputs": {
+  "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed and never moves. A man lies asleep in the bed on the left and does not move at any time. On the right, in front of the window beside the desk, stands a man made of soft mint light; a glowing ribbon of mint light still runs low across the floor to his feet. First the whole ribbon flows into him: it streams along the floor toward him and is drawn up into his legs and body, and the loop beside the desk curls in to him as well; his legs become whole and the last sparkles fade at his feet. The light stays low on the floor and never rises over the bed; nothing moves toward the bed, the bedside table or the sleeping man. Then, calm and complete and softly glowing, he turns to the desk, takes one easy step to the chair, rests one hand on the desk and takes the back of the chair with the other, about to pull it out and sit. Smooth, natural, unhurried motion, like a premium advertising film. Nothing spooky, no mist, no smoke, no text.",
+  "start_image_url": "file:demo-video/shots/reveal-a/keys/s0-at-3.0s-2752.png",
+  "middle_image_urls": [
+   "file:demo-video/shots/reveal-a/keys/e2-clean.png"
+  ],
+  "end_image_url": "file:demo-video/shots/reveal-a/keys/desk-at-4.2s-2k.png",
+  "duration": 5,
+  "resolution": "1080p"
+ },
+ "expect": {
+  "units": 7.4841,
+  "unit": "billed unit (fal.ai)",
+  "unit_price": 0.157,
+  "cost_usd": 1.175,
+  "estimate": true,
+  "basis": "wp2-5's k-entrance on this route: 5 s at 1080p billed 7.4841 units at $0.157 = $1.175 (demo-video/ledger/wp2-5.csv)"
+ },
+ "output": "demo-video/shots/reveal-a/k-gather-r1",
+ "note": "Phase C (A, V20), wp2-6: 18.0 to 23.0 in one take: the ribbon's tail flows into him (no light over Ram's head, no sparkles: middle key e2-clean), then he steps to the chair, landing on Draft 2's desk clip at 4.2 s; replaces k-settle-r1 and the walk (route K)"
+}

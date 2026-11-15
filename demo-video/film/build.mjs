@@ -132,6 +132,11 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
   const narration = readJson(path.join(FILM, "audio", "narration.json"));
   const productPath = path.join(FILM, "product.json");
   const product = fs.existsSync(productPath) ? readJson(productPath) : { sources: {}, slots: {} };
+  // Draft 3 (V19): the public film draws the product screens by code with made-up data (screens.json)
+  const screensPath = path.join(FILM, "screens.json");
+  const screens = variant !== "private" && fs.existsSync(screensPath) ? readJson(screensPath) : null;
+  const script = readJson(path.join(FILM, "audio", "script.json"));
+  const captionOf = Object.fromEntries(script.lines.map((l) => [l.id, l.caption || null]));
   const { fps, seconds } = shots;
   // What tools/pull_shots.mjs brought from WP3 is laid over each slot.
   const pulledPath = path.join(FILM, "shots.pulled.json");
@@ -139,8 +144,11 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
   // A slot may play a stretch of another slot's clip ("from_shot": that slot's id): it takes that
   // clip and what WP3 gave with it. "in_s" is where in the clip a slot starts (in place of WP3's
   // use_from_s) and "rate" how fast it plays.
+  // "from_shot" may also name a source that no slot plays whole ("sources" in shots.json): a clip
+  // whose stretches other slots borrow, with what WP3 gave with it under that name.
+  const source = (id) => (shots.sources && shots.sources[id] ? { id, ...shots.sources[id] } : null);
   shots.slots = shots.slots.map((s) => {
-    const from = s.from_shot ? shots.slots.find((x) => x.id === s.from_shot) : s;
+    const from = s.from_shot ? shots.slots.find((x) => x.id === s.from_shot) || source(s.from_shot) : s;
     if (!from) throw new Error(`slot ${s.id}: from_shot ${s.from_shot} is not a slot`);
     const m = { ...s, clip: from.clip };
     // "own_clip": a clip made for the film itself, not WP3's: nothing of WP3's is laid over it
@@ -274,6 +282,37 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
         }
       } else if (variant === "private") {
         slot.slateNote = "<b>Product screen.</b> No recording of this yet.";
+      } else if (screens && screens.slots[s.id]) {
+        let sc = screens.slots[s.id];
+        // the big world of information (V20): world.json draws its slot once it is "ready"
+        // (FILM_WORLD=1 in the environment uses it before that, for its own check renders)
+        const worldPath = path.join(FILM, "world.json");
+        if (fs.existsSync(worldPath)) {
+          const w = readJson(worldPath);
+          if (w.slot === s.id && (w.ready || process.env.FILM_WORLD === "1")) sc = { ...sc, ...w, kind: "world" };
+        }
+        slot.use = "scene";
+        slot.scene = "screens";
+        slot.window = sc.kind === "brief" || sc.full ? { x: 0, y: 0, w: shots.width, h: shots.height } : screens.window;
+        // clips over a person's tile: a lip-synced one timed by the line said ("line", "line_at"), or
+        // one at its own time in the slot ("at", slot seconds; "in", where in the clip it starts),
+        // such as a loop of the person listening. Later clips in the list lie on top.
+        const clips = (sc.clips || []).map((c, ci) => {
+          let start;
+          if (c.at != null) start = s.start + c.at;
+          else {
+            const at = shots.narration[c.line];
+            if (at == null) { problems.push(`slot ${s.id}: a tile clip names the line ${c.line}, which has no start`); return null; }
+            start = at - c.line_at;
+          }
+          if (!fs.existsSync(path.join(FILM, c.file))) { problems.push(`slot ${s.id}: the tile clip ${c.file} is missing`); return null; }
+          const v = { id: `v-${s.id}-tile-${ci}`, src: c.file, start: r3(start), length: c.length, mediaStart: c.in || 0, rate: 1 };
+          media.push(v);
+          return { who: c.who, video: v.id, start: v.start, length: v.length };
+        }).filter(Boolean);
+        slot.screen = { ...sc, clips, people: screens.people, peer_face: screens.peer_face, note: screens.note };
+        for (const l of sc.labels || []) labels.push({ slot: s.id, start: r3(s.start + l.at), length: l.length, text: l.text });
+        if (sc.chapter) chapters.push({ slot: s.id, start: s.start, length: sc.chapter.length, hour: sc.chapter.hour, text: sc.chapter.text });
       }
     }
     return slot;
@@ -303,7 +342,7 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
     copies.push({ from: still.file, to });
     const xs = quad.map((c) => c[0]), ys = quad.map((c) => c[1]);
     const bx = Math.min(...xs), by = Math.min(...ys), bw = Math.max(...xs) - bx, bh = Math.max(...ys) - by;
-    const lands = after.use === "scene" && after.scene === "product" ? "product" : "slate";
+    const lands = after.use === "scene" && (after.scene === "product" || after.scene === "screens") ? "product" : "slate";
     slot.pushin = {
       still: to, quad, lands,
       sharp: before.last_still || null,   // WP3's sharper still of the same frame, if it gave one
@@ -360,7 +399,7 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
     if (start == null) problems.push(`line ${n.id} has no start time in shots.json`);
     const slot = shots.slots.find((s) => s.line === n.id);
     if (slot && slot.clip && slot.line_at_s != null) start = r3(slot.start + slot.line_at_s - (slot.use_from_s || 0));
-    return { id: n.id, part: n.part, speaker: n.speaker, text: n.text, start, seconds: n.seconds, words: n.words, rms_dbfs: n.rms_dbfs, file: path.join(FILM, n.file) };
+    return { id: n.id, part: n.part, speaker: n.speaker, text: n.text, caption: captionOf[n.id] || undefined, start, seconds: n.seconds, words: n.words, rms_dbfs: n.rms_dbfs, file: path.join(FILM, n.file) };
   });
   lines.push(...sceneLines);
   lines.sort((a, b) => a.start - b.start);

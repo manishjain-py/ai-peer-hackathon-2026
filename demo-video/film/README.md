@@ -35,10 +35,11 @@ Before a draft render, bring WP3's newest clips in: `node demo-video/film/tools/
 | `audio/narration.json`, `audio/lines/` | Made by `tools/voice.py`: one WAV per line with word timings. |
 | `audio/mix.json` | The music bed and the sound effects, and where they sit. |
 | `product.json` | How each product recording is cut: which seconds, where the zoom goes, the labels. |
+| `screens.json`, `src/scenes/screens.js`, `src/screens.css` | Draft 3 (V19): the four product screens of the public film drawn by code with made-up data (a Zoom meeting, Slack, one change from across the company, the morning brief on Ram's phone). A public build draws them in place of the slates; a private build still uses `product.json` and the recordings. The Peer's face on them is one file, `assets/screens/peer-face.png`. Lines said inside a screen carry `"caption": "screen"` in `audio/script.json`: the screen captions them, and the mix gives them a light call sound. |
 | `build.mjs` | Checks that the timeline holds (parts and slots tile, no two lines touch) and writes a self-contained project folder. |
 | `render.mjs` | Build, check the page, capture the picture, mix the sound, join, measure. |
 | `src/film.js` | The page: one scene per slot, overlays, captions. `src/scenes/`, `src/overlays/`. |
-| `src/scenes/pushin.js` | The push-in: from the last frame of the shot before it, through the laptop's screen, into the product's window. Needs the screen's four corners: WP3's `screen_quad`, or `hand_quads` in `shots.json`. |
+| `src/scenes/pushin.js` | The push-in: from the last frame of the shot before it, through the laptop's screen, into the product's window. On the public film the laptop already shows the Zoom screen drawn by code (`screens.js`, `windowContent`): it comes up through the screen's light as the screen turns, and the push lands on it lit. Needs the screen's four corners: WP3's `screen_quad`, or `hand_quads` in `shots.json`. |
 | `src/overlays/tag.js` | The "AI Peer" tag on the double's chest. It follows WP3's `tag_track`, or a track made here. |
 | `tools/tag_track.py` | Makes that track from a few hand-set keys in `shots.json` (`tag_keys`) by following the chest light, into `assets/tags/`. Run it again when the keys or the clip change. |
 | `tools/pull_shots.mjs` | Copies WP3's current clips (and tag tracks, stills, screen corners) from its manifest. |

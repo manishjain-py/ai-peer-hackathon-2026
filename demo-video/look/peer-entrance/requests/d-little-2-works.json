@@ -1,0 +1,25 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "Keep everything in image 1 exactly as it is: the same room, the same camera position and framing, the same night light, and the same man asleep in the bed, who has not moved. Change two things. First: the laptop on the desk is open and its screen glows soft white, lighting the desk. Second: on the desk in front of the laptop sits a small friendly character that is the app icon shown in image 2 come to life: a soft, very rounded mint-green cube (#b7f4cf) about the size of a hand, made of frosted, softly glowing material, with the same dark double arch and the same two small dark dots of image 2 on its front, which read as its face, and two tiny stubby arms. It glows softly from within. Simple, premium 3D design, like the mascot of a high-end tech brand, not childish. It is busy at work: its tiny arms rest on the laptop's keyboard as if typing and it looks up at the screen, focused and content; the screen's light falls on it. The sleeper is untouched. It must read as friendly, advanced technology, never as a ghost or a spirit: no mist, no smoke, no dark shadows, nothing spooky. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+    "image_urls": [
+      "file:demo-video/shots/stills/night-phone-lit.png",
+      "file:demo-video/look/peer-entrance/peer-mark.png"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.09,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.09,
+    "estimate": true,
+    "basis": "WP1 and WP3 paid 6 to 9 cents for a 2K picture on this model (demo-video/ledger/wp3.csv)"
+  },
+  "output": "demo-video/look/peer-entrance/d-little-2-works",
+  "note": "Concept D (the little Peer, from the laptop), still 2: it works at the laptop"
+}

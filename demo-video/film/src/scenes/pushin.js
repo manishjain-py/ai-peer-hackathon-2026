@@ -2,12 +2,15 @@
 // product. It is made from one still (the last frame of the shot before it) and the four
 // corners of the laptop's screen in that frame. The room rushes past with the blur of a real
 // camera move, the screen's light blooms, and the screen turns to face us: it becomes the
-// product's window, dark, where the next scene picks it up. In a build without recordings the
-// screen opens onto the slate that follows instead.
+// product's window, dark, where the next scene picks it up. On the public film's screens drawn
+// by code (screens.js) the laptop already shows that screen: it comes up through the light as
+// the screen turns, and the push lands on it lit. In a build with neither, the screen opens onto
+// the slate that follows.
 import { el, show, ramp, ease, lerp, clamp, px } from "../lib.js";
 import { centre, area, pushLine } from "../camera.js";
 import { markSvg } from "../mark.js";
 import { createSlate } from "./slate.js";
+import { windowContent, windowDim } from "./screens.js";
 
 const COPIES = 9;         // exposures inside one frame's shutter: the blur of the move
 const SHUTTER = 1 / 50;   // seconds the shutter is open
@@ -18,6 +21,7 @@ const MOVE = [0.05, 1.7];
 const TURN = [0.95, 1.72];
 const ROOM_OUT = [1.05, 1.5];
 const SETTLE = [1.5, 1.93];
+const REVEAL = [0.95, 1.6];   // the screen drawn by code comes up through the light as it turns
 
 /**
  * The CSS matrix that lays a w x h box (origin at its top left) onto four points, given
@@ -41,6 +45,7 @@ export async function create(slot, film) {
   const W = film.width, H = film.height;
   const next = film.slots[film.slots.findIndex((s) => s.id === slot.id) + 1];
   const product = P.lands === "product";
+  const drawn = product && next.scene === "screens";   // the screen that follows is drawn by code
   const win = P.window;
   // The zoom S that brings the screen to the size of where it lands, and the one point F of the
   // picture that a straight push toward it leaves in place (src/camera.js, shared with a shot
@@ -94,11 +99,14 @@ export async function create(slot, film) {
   const bloom = el("div.pbloom");
 
   // 4. the screen itself
-  // On the product's window the Peer's mark waits where its call tile will show it.
+  // On the product's window the Peer's mark waits where its call tile will show it. On a screen
+  // drawn by code the laptop shows that screen itself, darkened as the next scene darkens it.
   const light = el("div.plight");
-  const mark = product ? el("div.pmark", { html: markSvg({ size: 190 }) }) : null;
-  const ember = product ? el("div.pember") : null;   // mint in the glass while the light goes down, so it never reads grey
-  const screen = el(`div.pscreen${product ? ".pwin" : ""}`, {}, product ? el("div.pdim") : null, ember, light, mark);
+  const content = drawn ? await windowContent(next, film, { copy: true }) : null;
+  const shade = drawn ? el("div.pshade") : null;
+  const mark = product && !drawn ? el("div.pmark", { html: markSvg({ size: 190 }) }) : null;
+  const ember = product && !drawn ? el("div.pember") : null;   // mint in the glass while the light goes down, so it never reads grey
+  const screen = el(`div.pscreen${product ? ".pwin" : ""}`, {}, product ? el("div.pdim") : null, content && content.node, shade, ember, light, mark);
   Object.assign(screen.style, { left: "0", top: "0", width: px(win.w), height: px(win.h) });
   const [r0, g0, b0] = P.tint;
 
@@ -136,7 +144,12 @@ export async function create(slot, film) {
     const warm = ease.out(ramp(u, 0.2, 1.1));   // from the clip's own screen colour to the Peer's mint-white
     light.style.background = `radial-gradient(120% 120% at 50% 45%, rgb(${Math.round(lerp(r0, 244, warm))},${Math.round(lerp(g0, 255, warm))},${Math.round(lerp(b0, 249, warm))}) 0%, ` +
       `rgb(${Math.round(lerp(r0, 214, warm))},${Math.round(lerp(g0, 248, warm))},${Math.round(lerp(b0, 229, warm))}) 100%)`;
-    if (product) {
+    if (drawn) {
+      // the light gives way to the screen as it turns; it lands lit, and darkens with the card
+      light.style.opacity = 1 - ease.inOut(ramp(u, REVEAL[0], REVEAL[1]));
+      content.render(t);
+      shade.style.opacity = windowDim(next.screen, t - next.start, true);
+    } else if (product) {
       // the light settles as the window lands: the dark glass stays, the mark glows a moment
       const lit = 1 - ease.inOut(ramp(u, SETTLE[0], SETTLE[1]));
       light.style.opacity = lit;

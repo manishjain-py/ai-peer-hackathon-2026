@@ -1,0 +1,108 @@
+{
+ "what": "m1",
+ "voice_id": "XrExE9yKIg1WjnnlVkGX",
+ "voice": "Matilda",
+ "model": "eleven_multilingual_v2",
+ "text": "Hi everyone. I'm Ram's AI Peer. I'm an AI, here for Ram while he sleeps.",
+ "spoken": "Hi everyone. I'm Rahm's AI Peer. I'm an AI, here for Rahm while he sleeps.",
+ "request_sha": "a1e1d400b76afc57",
+ "request": {
+  "text": "Hi everyone. I'm Rahm's AI Peer. I'm an AI, here for Rahm while he sleeps.",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.6,
+   "similarity_boost": 0.75,
+   "style": 0,
+   "use_speaker_boost": true,
+   "speed": 1.0
+  },
+  "seed": 14112026,
+  "next_text": "His update: the payout retry fix is done, and in review. Failed payouts are down to zero point four percent."
+ },
+ "request_id": "GZfOC73XxYM5Jx5Uj4Pu",
+ "character_cost": "36",
+ "generated_utc": "2026-11-14 19:50:39",
+ "file": "m1.wav",
+ "seconds": 5.38,
+ "raw_seconds": 5.991,
+ "trimmed_front": 0.02,
+ "peak_dbfs": -1.47,
+ "rms_dbfs": -21.45,
+ "words": [
+  {
+   "w": "Hi",
+   "s": 0.0,
+   "e": 0.212
+  },
+  {
+   "w": "everyone.",
+   "s": 0.27,
+   "e": 0.746
+  },
+  {
+   "w": "I'm",
+   "s": 0.955,
+   "e": 1.141
+  },
+  {
+   "w": "Ram's",
+   "s": 1.211,
+   "e": 1.501
+  },
+  {
+   "w": "AI",
+   "s": 1.559,
+   "e": 1.78
+  },
+  {
+   "w": "Peer.",
+   "s": 1.872,
+   "e": 2.29
+  },
+  {
+   "w": "I'm",
+   "s": 2.801,
+   "e": 3.022
+  },
+  {
+   "w": "an",
+   "s": 3.068,
+   "e": 3.126
+  },
+  {
+   "w": "AI,",
+   "s": 3.208,
+   "e": 3.742
+  },
+  {
+   "w": "here",
+   "s": 3.893,
+   "e": 4.078
+  },
+  {
+   "w": "for",
+   "s": 4.113,
+   "e": 4.218
+  },
+  {
+   "w": "Ram",
+   "s": 4.276,
+   "e": 4.473
+  },
+  {
+   "w": "while",
+   "s": 4.531,
+   "e": 4.682
+  },
+  {
+   "w": "he",
+   "s": 4.717,
+   "e": 4.763
+  },
+  {
+   "w": "sleeps.",
+   "s": 4.81,
+   "e": 5.971
+  }
+ ]
+}

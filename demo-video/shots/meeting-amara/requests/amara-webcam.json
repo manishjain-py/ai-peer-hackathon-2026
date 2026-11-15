@@ -1,0 +1,24 @@
+{
+ "endpoint": "google/nano-banana-2.1/edit",
+ "inputs": {
+  "prompt": "Image 1 shows a woman standing in a bright open-plan office by day, holding her phone. Make a new photo of the same woman on a video call, exactly as her laptop's webcam sees her. She sits at her desk in the same bright office, facing the camera straight on, at eye level. The framing is a typical webcam picture: her head and shoulders and the top of her chest, her face a little above the centre of the picture, with a little space above her head. She looks at her screen, just below the camera lens, with a calm, friendly and attentive face, her lips closed. She is exactly the same woman as in image 1: the same face, the same dark hair pulled back in a bun, the same small gold earrings, the same dark brown skin and the same mustard-yellow crew-neck sweater. Her hands are out of the picture and there is no phone. Behind her, softly out of focus, the same office: tall windows with daylight, green plants, desks. Soft daylight falls on her face from the windows to one side. It looks like a real frame from a video call: natural colours, a little soft, an ordinary laptop camera, not a film still. Nothing written anywhere.",
+  "image_urls": [
+   "file:demo-video/shots/stills/hook-1.png"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "expect": {
+  "units": 0.09,
+  "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+  "unit_price": 1.0,
+  "cost_usd": 0.09,
+  "estimate": true,
+  "basis": "WP1, WP3 and wp2-4 paid 6 to 9 cents for a 2K picture on this model (demo-video/ledger/wp2-4.csv)"
+ },
+ "output": "demo-video/shots/meeting-amara/amara-webcam",
+ "note": "Draft 3: Amara's Zoom tile as her laptop's webcam sees her (the controller's yes, up to $2 for her lips in m3, inside Phase C's $25)"
+}

@@ -1,0 +1,25 @@
+{
+ "request_id": "01a1dbb9-c59e-7f00-878b-1c1ec0555c4f",
+ "billable_units_header": "16.0",
+ "inputs_sent": {
+  "prompt": "A woman sits at her desk in a bright office by day, on a video call, seen by her laptop's webcam. From 0 to 1.0 seconds she listens to the call, looking at her screen just below the lens with a calm, friendly face, and blinks once. At 1.0 seconds she starts to speak and says in a friendly, upbeat voice, in British English: \"Great. Can we switch it on for Brazil this week?\" Her lips move in exact sync with the words, with a short pause after \"Great\", and she speaks every word clearly, with small natural head movements; her eyebrows lift a little on the question. After the line she closes her lips, keeps looking at her screen and waits for the answer with a small, attentive nod. Her acting is natural and understated, like a real person on a video call. Her hands stay out of the picture. Nobody enters the picture and nobody walks past behind her. The camera is a fixed laptop webcam: the framing does not change at all. One continuous shot with no cuts, no zoom, no pan, no music, no subtitles and no text.",
+  "image_url": "https://v3b.fal.media/files/b/0ab279e6/ApL1uGumkENsUQ81gJpWN_amara-webcam-crop.png",
+  "target_audio_url": "https://v3b.fal.media/files/b/0ab279e6/g6YJKGlBenzthrF9ljoKa_m3-at-1.0s.wav",
+  "seed": 113,
+  "duration": 5.0,
+  "resolution": "1080P",
+  "prompt_expansion_mode": "balanced"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab279e6/x9Xg_LDipDbr6PD-x2YaT_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "x9Xg_LDipDbr6PD-x2YaT_minimax-h3.mp4",
+   "file_size": 9747138
+  },
+  "expanded_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: <Picture 1> This is a live-action, cinematic shot captured from a fixed laptop webcam perspective. The scene opens on S1, a Black woman with dark hair pulled back, wearing a mustard-yellow sweater, sitting at her desk in a bright, sunlit modern office. The background shows a softly-focused office space with indoor plants and large windows letting in diffused natural light. From 00:00 to 01:00, S1 listens intently, looking at the screen just below the camera lens with a calm, friendly expression; she blinks once naturally. At 01:00, S1 begins to speak with a friendly, upbeat demeanor. S1 (female, mid-30s, clear British English accent) says <d>[English] Great. Can we switch it on for Brazil this week?</d> Her lips move in perfect synchronization with the dialogue, with a short natural pause after \"Great\". She makes small head movements and her eyebrows lift slightly as she asks the question. From 04:00 to 05:00, she closes her lips, maintains her gaze on the screen, and waits for a response with a small, attentive nod. The camera remains completely static as a fixed webcam throughout the entire shot, with no cuts, zooms, or movements.\n\noverall_soundscape: The ambient sound of a quiet office, featuring the distant, muffled hum of air conditioning and the faint clicking of keyboards nearby. S1 speaks clearly with a crisp British accent, followed by the soft sound of her breathing and the subtle rustle of her sweater as she nods.\n\nnon_diegetic_music: N/A",
+  "timings": {
+   "inference": 2.7384610659937607
+  }
+ }
+}

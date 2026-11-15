@@ -1,7 +1,7 @@
 {
  "about": "Made by tools/voice.py from audio/script.json. Do not edit by hand.",
  "model": "eleven_multilingual_v2",
- "total_seconds": 37.53,
+ "total_seconds": 55.66,
  "lines": [
   {
    "id": "h1",
@@ -885,6 +885,332 @@
      "w": "there.",
      "s": 0.887,
      "e": 1.503
+    }
+   ]
+  },
+  {
+   "id": "m1",
+   "part": "proof",
+   "speaker": "peer",
+   "voice": "Matilda",
+   "text": "Hi everyone. I'm Ram's AI Peer. I'm an AI, here for Ram while he sleeps.",
+   "file": "audio/lines/m1.wav",
+   "seconds": 5.38,
+   "words_per_second": 2.51,
+   "peak_dbfs": -1.47,
+   "rms_dbfs": -21.45,
+   "words": [
+    {
+     "w": "Hi",
+     "s": 0.0,
+     "e": 0.212
+    },
+    {
+     "w": "everyone.",
+     "s": 0.27,
+     "e": 0.746
+    },
+    {
+     "w": "I'm",
+     "s": 0.955,
+     "e": 1.141
+    },
+    {
+     "w": "Ram's",
+     "s": 1.211,
+     "e": 1.501
+    },
+    {
+     "w": "AI",
+     "s": 1.559,
+     "e": 1.78
+    },
+    {
+     "w": "Peer.",
+     "s": 1.872,
+     "e": 2.29
+    },
+    {
+     "w": "I'm",
+     "s": 2.801,
+     "e": 3.022
+    },
+    {
+     "w": "an",
+     "s": 3.068,
+     "e": 3.126
+    },
+    {
+     "w": "AI,",
+     "s": 3.208,
+     "e": 3.742
+    },
+    {
+     "w": "here",
+     "s": 3.893,
+     "e": 4.078
+    },
+    {
+     "w": "for",
+     "s": 4.113,
+     "e": 4.218
+    },
+    {
+     "w": "Ram",
+     "s": 4.276,
+     "e": 4.473
+    },
+    {
+     "w": "while",
+     "s": 4.531,
+     "e": 4.682
+    },
+    {
+     "w": "he",
+     "s": 4.717,
+     "e": 4.763
+    },
+    {
+     "w": "sleeps.",
+     "s": 4.81,
+     "e": 5.971
+    }
+   ]
+  },
+  {
+   "id": "m2",
+   "part": "proof",
+   "speaker": "peer",
+   "voice": "Matilda",
+   "text": "His update: the payout retry fix is done and in review. Failed payouts are down to 0.4%.",
+   "file": "audio/lines/m2.wav",
+   "seconds": 7.19,
+   "words_per_second": 2.3,
+   "peak_dbfs": -2.71,
+   "rms_dbfs": -22.09,
+   "words": [
+    {
+     "w": "His",
+     "s": 0.0,
+     "e": 0.434
+    },
+    {
+     "w": "update:",
+     "s": 0.434,
+     "e": 0.868
+    },
+    {
+     "w": "the",
+     "s": 0.868,
+     "e": 1.302
+    },
+    {
+     "w": "payout",
+     "s": 1.302,
+     "e": 1.736
+    },
+    {
+     "w": "retry",
+     "s": 1.736,
+     "e": 2.171
+    },
+    {
+     "w": "fix",
+     "s": 2.171,
+     "e": 2.605
+    },
+    {
+     "w": "is",
+     "s": 2.605,
+     "e": 3.039
+    },
+    {
+     "w": "done",
+     "s": 3.039,
+     "e": 3.473
+    },
+    {
+     "w": "and",
+     "s": 3.473,
+     "e": 3.907
+    },
+    {
+     "w": "in",
+     "s": 3.907,
+     "e": 4.341
+    },
+    {
+     "w": "review.",
+     "s": 4.341,
+     "e": 4.775
+    },
+    {
+     "w": "Failed",
+     "s": 4.775,
+     "e": 5.209
+    },
+    {
+     "w": "payouts",
+     "s": 5.209,
+     "e": 5.644
+    },
+    {
+     "w": "are",
+     "s": 5.644,
+     "e": 6.078
+    },
+    {
+     "w": "down",
+     "s": 6.078,
+     "e": 6.512
+    },
+    {
+     "w": "to",
+     "s": 6.512,
+     "e": 6.946
+    },
+    {
+     "w": "0.4%.",
+     "s": 6.946,
+     "e": 7.38
+    }
+   ]
+  },
+  {
+   "id": "m3",
+   "part": "proof",
+   "speaker": "colleague-1",
+   "voice": "Alice",
+   "text": "Great. Can we switch it on for Brazil this week?",
+   "file": "audio/lines/m3.wav",
+   "seconds": 2.73,
+   "words_per_second": 3.47,
+   "peak_dbfs": -1.78,
+   "rms_dbfs": -20.89,
+   "words": [
+    {
+     "w": "Great.",
+     "s": 0.0,
+     "e": 0.471
+    },
+    {
+     "w": "Can",
+     "s": 0.622,
+     "e": 0.761
+    },
+    {
+     "w": "we",
+     "s": 0.808,
+     "e": 0.877
+    },
+    {
+     "w": "switch",
+     "s": 0.912,
+     "e": 1.167
+    },
+    {
+     "w": "it",
+     "s": 1.214,
+     "e": 1.284
+    },
+    {
+     "w": "on",
+     "s": 1.33,
+     "e": 1.434
+    },
+    {
+     "w": "for",
+     "s": 1.493,
+     "e": 1.597
+    },
+    {
+     "w": "Brazil",
+     "s": 1.643,
+     "e": 1.969
+    },
+    {
+     "w": "this",
+     "s": 2.038,
+     "e": 2.189
+    },
+    {
+     "w": "week?",
+     "s": 2.247,
+     "e": 2.886
+    }
+   ]
+  },
+  {
+   "id": "m4",
+   "part": "proof",
+   "speaker": "peer",
+   "voice": "Matilda",
+   "text": "That's Ram's call, so it's at the top of his morning brief.",
+   "file": "audio/lines/m4.wav",
+   "seconds": 2.829,
+   "words_per_second": 4.24,
+   "peak_dbfs": -2.28,
+   "rms_dbfs": -20.79,
+   "words": [
+    {
+     "w": "That's",
+     "s": 0.0,
+     "e": 0.24
+    },
+    {
+     "w": "Ram's",
+     "s": 0.298,
+     "e": 0.589
+    },
+    {
+     "w": "call,",
+     "s": 0.635,
+     "e": 1.03
+    },
+    {
+     "w": "so",
+     "s": 1.157,
+     "e": 1.274
+    },
+    {
+     "w": "it's",
+     "s": 1.332,
+     "e": 1.436
+    },
+    {
+     "w": "at",
+     "s": 1.459,
+     "e": 1.517
+    },
+    {
+     "w": "the",
+     "s": 1.552,
+     "e": 1.622
+    },
+    {
+     "w": "top",
+     "s": 1.657,
+     "e": 1.9
+    },
+    {
+     "w": "of",
+     "s": 1.947,
+     "e": 1.993
+    },
+    {
+     "w": "his",
+     "s": 2.04,
+     "e": 2.133
+    },
+    {
+     "w": "morning",
+     "s": 2.179,
+     "e": 2.423
+    },
+    {
+     "w": "brief.",
+     "s": 2.469,
+     "e": 2.829
     }
    ]
   }

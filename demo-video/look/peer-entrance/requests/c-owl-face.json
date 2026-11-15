@@ -1,0 +1,24 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "Make a new picture: a portrait of the same owl made of soft mint light that flies in image 1, seen from the front, its head and upper body filling the square picture, looking straight at the camera with a kind, wide-awake expression: the same fine threads of mint light for feathers, the same soft white face disc and big dark eyes. A plain deep teal-black background (#0e1f24), soft mint rim light, centred, suitable as a round profile picture. Nothing written anywhere.",
+    "image_urls": [
+      "file:demo-video/look/peer-entrance/c-owl-3-back.png"
+    ],
+    "aspect_ratio": "1:1",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.09,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.09,
+    "estimate": true,
+    "basis": "WP1 and WP3 paid 6 to 9 cents for a 2K picture on this model (demo-video/ledger/wp3.csv)"
+  },
+  "output": "demo-video/look/peer-entrance/c-owl-face",
+  "note": "Concept C: the owl's face, as the Peer's avatar (square), from the owl of c-owl-3-back"
+}

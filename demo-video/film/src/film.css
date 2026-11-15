@@ -208,6 +208,7 @@ html, body {
 .pushin .plight { position: absolute; inset: 0; }
 .pushin .pember { position: absolute; inset: 0; background: radial-gradient(90% 90% at 50% 45%, rgb(88, 172, 150) 0%, rgb(30, 84, 84) 100%); }
 .pushin .pmark { position: absolute; left: 50%; top: 45%; width: 190px; height: 190px; margin: -95px 0 0 -95px; }
+.pushin .pshade { position: absolute; inset: 0; background: #0a171b; pointer-events: none; }   /* as .pdim, over a screen drawn by code */
 
 /* ---- the "AI Peer" tag on the double's chest (sizes in em: the overlay sets the font size) ----------- */
 #tag .tagpill { position: absolute; left: 0; top: 0; display: flex; align-items: center; gap: 0.36em;
@@ -215,7 +216,7 @@ html, body {
   background: rgba(10, 23, 27, 0.8); border: 0.075em solid rgba(183, 244, 207, 0.8);
   color: var(--mint); font-weight: 800; letter-spacing: 0.01em; }
 #tag .tagpill .tmk { display: flex; }
-#tag .tagpill svg { display: block; width: 1.2em; height: 1.2em; }
+#tag .tagpill svg, #tag .tagpill img { display: block; width: 1.2em; height: 1.2em; }
 
 /* ---- the end card ---------------------------------------------------------------------------------- */
 .endcard { background: var(--ink); }
@@ -237,7 +238,7 @@ html, body {
 #notes .ncard.left { left: 96px; }
 #notes .ncard.right { right: 96px; }
 #notes .nhead { display: flex; align-items: center; gap: 12px; font-size: 27px; font-weight: 800; color: var(--mint); }
-#notes .nmark svg { display: block; width: 38px; height: 38px; }
+#notes .nmark svg, #notes .nmark img { display: block; width: 38px; height: 38px; }
 #notes .nwhen { margin-left: auto; font-size: 22px; font-weight: 600; color: rgba(246, 244, 238, 0.6); }
 #notes .ntext { margin-top: 12px; font-size: 32px; font-weight: 600; line-height: 1.3; letter-spacing: -0.01em; }
 #notes .nsleep { position: absolute; left: 96px; top: 84px; display: flex; align-items: baseline; gap: 16px;

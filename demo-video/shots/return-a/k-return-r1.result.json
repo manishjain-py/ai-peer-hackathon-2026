@@ -1,0 +1,22 @@
+{
+ "request_id": "01a1dd66-4c08-7523-99bf-2a2261852822",
+ "billable_units_header": "5.9873",
+ "inputs_sent": {
+  "prompt": "A locked-off wide shot of a sunlit bedroom in the morning. The camera is fixed and never moves. A man sits up in bed holding his phone and reads it; he barely moves. A faint double of him, made of soft mint light, stands beside the desk and gives him a small, warm smile. Then the double flows into a ribbon of soft mint light that streams across the room and into the phone in the man's hands, and is gone; the phone's screen glows softly. Smooth, gentle, elegant motion, like a premium advertising film. Nothing spooky, no mist, no smoke, no text.",
+  "start_image_url": "https://v3b.fal.media/files/b/0ab284de/Qh2BqEin25xmH3oiO4JTi_r0-tm.png",
+  "middle_image_urls": [
+   "https://v3b.fal.media/files/b/0ab284d2/yXQxi9alIQ1b1DyJ78Dv4_a-phone-3-back.png"
+  ],
+  "end_image_url": "https://v3b.fal.media/files/b/0ab284de/KuZMSDEPrFW8KZSmXzmJr_r2-tm.png",
+  "duration": 4,
+  "resolution": "1080p"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab284f6/4oaPlJd2mGIPtbKzVHCqY_output.mp4",
+   "content_type": "video/mp4",
+   "file_name": "output.mp4",
+   "file_size": 2339719
+  }
+ }
+}

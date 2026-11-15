@@ -1,0 +1,23 @@
+{
+ "endpoint": "kling/v4/image-to-video",
+ "inputs": {
+  "prompt": "A locked-off wide shot of a sunlit bedroom in the morning. The camera is fixed and never moves. A man sits up in bed holding his phone and reads it; he barely moves. A faint double of him, made of soft mint light, stands beside the desk and gives him a small, warm smile. Then the double flows into a ribbon of soft mint light that streams across the room and into the phone in the man's hands, and is gone; the phone's screen glows softly. Smooth, gentle, elegant motion, like a premium advertising film. Nothing spooky, no mist, no smoke, no text.",
+  "start_image_url": "file:demo-video/shots/return-a/keys/r0-tm.png",
+  "middle_image_urls": [
+   "file:demo-video/look/peer-entrance/a-phone-3-back.png"
+  ],
+  "end_image_url": "file:demo-video/shots/return-a/keys/r2-tm.png",
+  "duration": 4,
+  "resolution": "1080p"
+ },
+ "expect": {
+  "units": 4,
+  "unit": "second of video",
+  "unit_price": 0.235,
+  "cost_usd": 0.94,
+  "estimate": true,
+  "basis": "wp2-5's Kling 4.0 shots at 1080p cost $0.235 a second (demo-video/ledger/wp2-5.csv)"
+ },
+ "output": "demo-video/shots/return-a/k-return-r1",
+ "note": "Phase C (A, V20): the return: he smiles, then flows back into the phone in Ram's hand (route K, key frames r0, a-phone-3-back, r2)"
+}

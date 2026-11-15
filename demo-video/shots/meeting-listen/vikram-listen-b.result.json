@@ -1,0 +1,25 @@
+{
+ "request_id": "01a1dd91-0aec-7d90-b8f7-7806690d889f",
+ "billable_units_header": "16.0",
+ "inputs_sent": {
+  "prompt": "An older man sits at his desk at home in the evening, on a video call, seen by his laptop's webcam. He listens to a colleague giving an update: he looks at his screen just below the lens with a warm, attentive face and blinks naturally. He rubs his chin once with a thoughtful look, then lowers his hand out of the picture and gives a small nod. His lips stay closed: he does not speak at any time. Small natural movements only, like a real person listening on a video call. His hands stay out of the picture. Nobody enters the picture and nobody walks past behind him. The camera is a fixed laptop webcam: the framing does not change at all. At the end he is back in the same pose as at the start, looking at his screen. One continuous shot with no cuts, no zoom, no pan, no music, no subtitles and no text.",
+  "image_url": "https://v3b.fal.media/files/b/0ab285f6/LtKZyMSFM5MweDQt-SuJP_vikram-webcam-crop.png",
+  "end_image_url": "https://v3b.fal.media/files/b/0ab285f6/LtKZyMSFM5MweDQt-SuJP_vikram-webcam-crop.png",
+  "seed": 311,
+  "duration": 10,
+  "resolution": "768P",
+  "prompt_expansion_mode": "balanced"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab285f7/7UAmyseUu6e8ZeXhHU1AG_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "7UAmyseUu6e8ZeXhHU1AG_minimax-h3.mp4",
+   "file_size": 9708008
+  },
+  "expanded_prompt": "How the reference pictures align with the target video \u2014 Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 1) aligns with the 10.00-second mark of the target video.\n\nintegrated_multimodal_description: [Shot 1] Cinematic, live-action, Static Shot from the perspective of a laptop webcam. An older man (S1) in his 60s with salt-and-pepper hair, a mustache, wearing glasses and a green knit cardigan over a white collared shirt, is sitting at his desk in a dimly lit home office during the evening. The background shows a warm, cozy interior with a bookshelf, a glowing lamp casting soft light, and indoor plants. The video begins with <Picture 1>, showing S1 looking directly at the screen just below the camera lens with a warm, attentive expression and a slight smile. He blinks naturally, listening intently to a colleague on the video call. At 00:03.000, S1 raises his hand into the frame to gently rub his chin with a thoughtful, focused look as he processes information. At 00:06.500, he slowly lowers his hand back out of the frame and gives a small, respectful nod of acknowledgment. His lips remain closed throughout the entire sequence. By 00:09.000, he returns to his initial posture, looking steadily at the screen with the same warm and attentive expression seen at the start, converging on <Picture 2>. The camera remains perfectly fixed with no movement or framing changes.\n\noverall_soundscape: The quiet ambiance of a peaceful room at night, featuring the faint, muffled sound of a voice coming from the laptop speakers during a video call. The soft rustle of the cardigan fabric is heard as he rubs his chin, accompanied by the subtle, rhythmic breathing of the man.\n\nnon_diegetic_music: N/A",
+  "timings": {
+   "inference": 4.558892896999964
+  }
+ }
+}

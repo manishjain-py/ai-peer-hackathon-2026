@@ -1,0 +1,19 @@
+{
+ "request_id": "01a1dd5a-969a-74d0-82e2-f250315c8327",
+ "billable_units_header": "4.4904",
+ "inputs_sent": {
+  "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed and never moves. A man lies asleep in the bed and does not move at any time. A man made of soft mint light stands in front of the window beside the desk. He turns to the desk, takes one easy step to the chair, rests one hand on the desk and takes the back of the chair with the other, about to pull it out and sit. His light glows softly and evenly. No ribbons and no threads: nothing connects him to anyone. Smooth, natural, unhurried motion, like a premium advertising film. Nothing spooky, no mist, no smoke, no text.",
+  "start_image_url": "https://v3b.fal.media/files/b/0ab2847b/tEDrOPzQRFXFl1_PVP9Jf_e2-tm.png",
+  "end_image_url": "https://v3b.fal.media/files/b/0ab28465/0B3wF5oogyG_8NGDiXkIc_desk-at-4.2s.png",
+  "duration": 3,
+  "resolution": "1080p"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab284a4/eyQMOiM3SHyPTWNYkuib__output.mp4",
+   "content_type": "video/mp4",
+   "file_name": "output.mp4",
+   "file_size": 3120601
+  }
+ }
+}

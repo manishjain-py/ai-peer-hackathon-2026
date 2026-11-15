@@ -1,0 +1,28 @@
+{
+ "request_id": "01a1db92-7964-7623-abe2-756de9e8287b",
+ "billable_units_header": "0.073032360",
+ "inputs_sent": {
+  "prompt": "Make a new picture: a portrait of the same owl made of soft mint light that flies in image 1, seen from the front, its head and upper body filling the square picture, looking straight at the camera with a kind, wide-awake expression: the same fine threads of mint light for feathers, the same soft white face disc and big dark eyes. A plain deep teal-black background (#0e1f24), soft mint rim light, centred, suitable as a round profile picture. Nothing written anywhere.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab278e4/_ux08NSNQZXnlJodATlSU_c-owl-3-back.png"
+  ],
+  "aspect_ratio": "1:1",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab278e5/LOgC2XBrwULssTXjYFqbv_swthUAAG.png",
+    "content_type": "image/png",
+    "file_name": "LOgC2XBrwULssTXjYFqbv_swthUAAG.png",
+    "file_size": null,
+    "width": 2048,
+    "height": 2048
+   }
+  ],
+  "description": ""
+ }
+}

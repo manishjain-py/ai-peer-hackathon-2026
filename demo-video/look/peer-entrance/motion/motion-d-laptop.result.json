@@ -1,0 +1,22 @@
+{
+ "request_id": "01a1db90-d95e-7562-8265-909c4fd79dba",
+ "billable_units_header": "5.0",
+ "inputs_sent": {
+  "prompt": "A locked-off closer shot of a wooden desk in a bedroom at night. The camera is fixed and never moves. An open laptop on the desk glows soft white. After a moment the screen glows brighter, and a small, soft, rounded mint character with the app's face pushes out through the glowing screen as if through a doorway of light, climbs out over the keyboard, hops down onto the desk beside the laptop, turns to the camera and lifts one tiny arm in a small, cheerful hello. Its soft glow lights the desk. Playful, smooth motion, like a premium 3D animated brand film. Nothing spooky.",
+  "start_image_url": "https://v3b.fal.media/files/b/0ab278c8/d_Rtn3qjujDZG5BievdKW_d-desk-empty.png",
+  "middle_image_urls": [
+   "https://v3b.fal.media/files/b/0ab278d9/hgNjYe8MlLUynBrx0dJ_3_d-desk-half.png"
+  ],
+  "end_image_url": "https://v3b.fal.media/files/b/0ab278da/DkZqN1MtXhK04Ab_eNcmV_d-desk-out.png",
+  "duration": 5,
+  "resolution": "720p"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab278ee/ElamML59pmV0pOsaOhB4q_output.mp4",
+   "content_type": "video/mp4",
+   "file_name": "output.mp4",
+   "file_size": 1440611
+  }
+ }
+}

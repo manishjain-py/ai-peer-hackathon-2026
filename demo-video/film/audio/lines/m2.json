@@ -1,0 +1,118 @@
+{
+ "what": "m2",
+ "voice_id": "XrExE9yKIg1WjnnlVkGX",
+ "voice": "Matilda",
+ "model": "eleven_multilingual_v2",
+ "text": "His update: the payout retry fix is done and in review. Failed payouts are down to 0.4%.",
+ "spoken": "His update: the payout retry fix is done, and in review. Failed payouts are down to zero point four percent.",
+ "request_sha": "8d12de0bb480ffd5",
+ "request": {
+  "text": "His update: the payout retry fix is done, and in review. Failed payouts are down to zero point four percent.",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.6,
+   "similarity_boost": 0.75,
+   "style": 0,
+   "use_speaker_boost": true,
+   "speed": 1.0
+  },
+  "seed": 14112026,
+  "previous_text": "Hi everyone. I'm Rahm's AI Peer. I'm an AI, here for Rahm while he sleeps."
+ },
+ "request_id": "wMDdZfYgybX7Th1sLHhX",
+ "character_cost": "52",
+ "generated_utc": "2026-11-14 19:50:40",
+ "file": "m2.wav",
+ "seconds": 7.19,
+ "raw_seconds": 7.43,
+ "trimmed_front": 0.05,
+ "peak_dbfs": -2.71,
+ "rms_dbfs": -22.09,
+ "words": [
+  {
+   "w": "His",
+   "s": 0.0,
+   "e": 0.434
+  },
+  {
+   "w": "update:",
+   "s": 0.434,
+   "e": 0.868
+  },
+  {
+   "w": "the",
+   "s": 0.868,
+   "e": 1.302
+  },
+  {
+   "w": "payout",
+   "s": 1.302,
+   "e": 1.736
+  },
+  {
+   "w": "retry",
+   "s": 1.736,
+   "e": 2.171
+  },
+  {
+   "w": "fix",
+   "s": 2.171,
+   "e": 2.605
+  },
+  {
+   "w": "is",
+   "s": 2.605,
+   "e": 3.039
+  },
+  {
+   "w": "done",
+   "s": 3.039,
+   "e": 3.473
+  },
+  {
+   "w": "and",
+   "s": 3.473,
+   "e": 3.907
+  },
+  {
+   "w": "in",
+   "s": 3.907,
+   "e": 4.341
+  },
+  {
+   "w": "review.",
+   "s": 4.341,
+   "e": 4.775
+  },
+  {
+   "w": "Failed",
+   "s": 4.775,
+   "e": 5.209
+  },
+  {
+   "w": "payouts",
+   "s": 5.209,
+   "e": 5.644
+  },
+  {
+   "w": "are",
+   "s": 5.644,
+   "e": 6.078
+  },
+  {
+   "w": "down",
+   "s": 6.078,
+   "e": 6.512
+  },
+  {
+   "w": "to",
+   "s": 6.512,
+   "e": 6.946
+  },
+  {
+   "w": "0.4%.",
+   "s": 6.946,
+   "e": 7.38
+  }
+ ]
+}

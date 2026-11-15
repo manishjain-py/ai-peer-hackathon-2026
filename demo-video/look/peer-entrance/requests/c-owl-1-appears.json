@@ -1,0 +1,24 @@
+{
+  "endpoint": "google/nano-banana-2.1/edit",
+  "inputs": {
+    "prompt": "Keep everything in image 1 exactly as it is: the same room, the same camera position and framing, the same night light, and the same man asleep in the bed, who has not moved. The phone on the bedside table glows mint. Add one new element: a small owl made of soft mint light (#b7f4cf), about 20 centimetres tall, round and fluffy, its feathers drawn in fine threads of mint light, with a soft white face disc and big, calm, dark eyes with tiny mint highlights. It is a premium, almost photographic creature of light: not a cartoon, not bright green, with no orange beak or feet. It is stepping out of the phone's glowing screen as if out of a lit doorway: its head and body are out, its wings half open, its feet still at the screen's edge. It looks curious, kind and wide awake, gazing toward the desk. The sleeper is untouched and does not wake. It must read as friendly, advanced technology, never as a ghost or a spirit: no mist, no smoke, no dark shadows, nothing spooky. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+    "image_urls": [
+      "file:demo-video/shots/stills/night-phone-lit.png"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png",
+    "num_images": 1,
+    "thinking_level": "high"
+  },
+  "expect": {
+    "units": 0.09,
+    "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+    "unit_price": 1.0,
+    "cost_usd": 0.09,
+    "estimate": true,
+    "basis": "WP1 and WP3 paid 6 to 9 cents for a 2K picture on this model (demo-video/ledger/wp3.csv)"
+  },
+  "output": "demo-video/look/peer-entrance/c-owl-1-appears",
+  "note": "Concept C (a night owl of light, from the phone), still 1: it steps out of the phone's screen"
+}
