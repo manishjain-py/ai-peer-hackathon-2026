@@ -6,7 +6,14 @@ read-in at 15:02 UTC. It took over from ai-peer-video-controller-3 (hand-off
 `handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-3.md`), which was closed at 15:01 UTC.
 Other sessions message the controller by its name.
 
-## Where we are (2026-11-14 20:52 UTC)
+## Where we are (2026-11-15 03:50 UTC)
+
+**03:50 UTC: Manish picked the Peer: A, Ram's look out of his phone (V20).** His words and the
+order: `FEEDBACK-PHASE-A-2026-11-15.md`. The made-up screens are good, but the Zoom colleagues
+must move like real people while the Peer speaks; Slack is fine for now; the "one change in a
+thousand" part becomes the big world of information (emails, Slack, other sources, the web)
+that the Peer consolidates into the brief, read as part of Draft 3. Nothing else needs him now.
+ai-peer-video-wp2-5 has his words and goes on with Phase C (cap $25) and Phase D (Draft 3).
 
 **20:52 UTC: ai-peer-video-wp2-5 waits, idle, for Manish's pick; "which Peer?" is still open.**
 While waiting it fixed the two weak points (the push-in now lands on the Zoom window itself;
@@ -284,6 +291,11 @@ still running is the worker ai-peer-video-wp2-3 (window 3974, PID 16635) with it
 
 ## Needs Manish
 
+**Answered 2026-11-15 03:41 UTC: A, Ram's look out of his phone (V20)**, after the items were
+re-sent at his request at 02:34 UTC; in full in `FEEDBACK-PHASE-A-2026-11-15.md`. No question
+is open. Later, from him: whether his real recordings (planned for Tuesday 17 November) replace
+the made-up Zoom and Slack screens; he said he will look at Zoom and Slack in more detail later.
+
 **Asked 2026-11-14 19:44 UTC: which Peer for Draft 3?** D, the little Peer from the laptop
 (recommended), A Ram's look from the phone, B Ram's look from the laptop, or C a night owl from
 the phone; any look from either place. Sent with the four boards and the motion clip to the
@@ -545,3 +557,4 @@ and 7 still hold.
 | 2026-11-14 19:47 | ai-peer-video-controller-4 | Phase A came from ai-peer-video-wp2-4 (four boards, one motion clip, research with links). Checked one picture of all four boards and eight frames of the clip; sent them at 19:44 UTC to the Attention group and the session, asking which Peer (D recommended). Said yes to four made-up voice lines in the Zoom meeting from the ElevenLabs plan. Money $34.26 of $100. |
 | 2026-11-14 20:03 | ai-peer-video-wp2-4 | Draft 3, Phases A and B: research, four concept boards and two motion tests (sent to Manish by the controller at 19:44 UTC); the four product screens by code with made-up Airbnb payments data and four meeting lines; a preview render checked by numbers, one sheet and speech-to-text. $3.01 spent. Handed off at about 40% context to ai-peer-video-wp2-5. | Waiting on Manish's pick; Phases C and D next |
 | 2026-11-14 20:12 | ai-peer-video-controller-4 | Phase B came from ai-peer-video-wp2-4 (hand-off at 39%, `10864dd`); closed it at 20:05 UTC after the checks. Looked at one sheet of its public preview (33 to 109 s) and sent Manish the screens part (0:30 to 1:44) as a 720p clip at 20:06 UTC. Launched ai-peer-video-wp2-5 at 20:07 UTC (window 4262): the pick-independent weak points first, then Phases C and D. |
+| 2026-11-15 03:50 | ai-peer-video-controller-4 | Re-sent everything for review to the Attention group at 02:34 UTC at Manish's request. He picked A at 03:41 UTC (V20): Ram's look out of his phone; Zoom colleagues must move; the change part becomes the big world of information. Wrote `FEEDBACK-PHASE-A-2026-11-15.md` and V20; passed his words to ai-peer-video-wp2-5. |
