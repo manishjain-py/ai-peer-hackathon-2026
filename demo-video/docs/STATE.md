@@ -7,7 +7,10 @@ it took over from ai-peer-video-controller-5 (closed at 16:58 UTC). Read next: t
 `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7.md`. A new Mac or a take-over: `START-HERE.md`
 at the repo root. Other sessions message the controller by its name.
 
-## Where we are (2026-11-15 18:48 UTC)
+## Where we are (2026-11-15 18:53 UTC)
+
+**18:53 UTC: Manish picked idea C, the paper-card glide (V29).** His words: "C". Passed to
+ai-peer-video-wp7-3 word for word at 18:53 UTC; it builds the Tag's v2 (read in at 7.7%).
 
 **18:48 UTC: ai-peer-video-wp7-3 builds the Tag's v2; Manish picks a transition idea.**
 wp7-2 made five ideas for the tag's move from the phone to the laptop (A screen to screen, B a
@@ -594,6 +597,9 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 video 1 (the Attention group and the session of ai-peer-video-controller-6). Record his words at
 once (`FEEDBACK-BLENDED-2026-11-15.md`, V27 onwards) and pass them to ai-peer-video-wp7-2.
 
+**Answered 2026-11-15 18:53 UTC (V29): "C"**, the paper-card glide. Next from him: his view of
+the Tag's v2.
+
 **Asked 2026-11-15 18:44 UTC: which of the five transition ideas for the Tag (A, B, C, E, F),
 or a mix?** The Attention group (the sheet, five clips with captions, one text line with the
 controller's pick, F, and A as runner-up) and the session of ai-peer-video-controller-6. Record his
@@ -1039,3 +1045,4 @@ and 7 still hold.
 | 2026-11-15 18:32 | ai-peer-video-controller-6 | Manish: the same changes for the Tag, only the Tag for now (V28); redirected ai-peer-video-wp7-2 at 18:32 UTC; recorded word for word. | Waiting on the Tag's transition ideas |
 | 2026-11-15 18:47 | ai-peer-video-wp7-2 | V27, then V28 (the Tag only): built five transition ideas for the Tag by code (screen to screen, a ribbon of light, a paper-card glide, a match cut, a badge on the lid; the engine's new opt-in keys; both v1 configs unchanged), delivered at 18:43 UTC (`5c34cdb`, privacy 0 and 0); wrote the hand-off for ai-peer-video-wp7-3 (the v2 plan). Context 33%. | Stopped; wp7-3 builds blended-tag-v2 |
 | 2026-11-15 18:48 | ai-peer-video-controller-6 | Checked and sent wp7-2's five Tag transition ideas to Manish (18:44 UTC); wp7-2 handed off at 33% and was closed; launched ai-peer-video-wp7-3 (window 5612, PID 98609) for the Tag's v2; `stall-wp7-3` armed. | Waiting on his pick and on v2 |
+| 2026-11-15 18:53 | ai-peer-video-controller-6 | Manish picked transition idea C (V29); passed to ai-peer-video-wp7-3 word for word; recorded. | Waiting on the Tag's v2 |
