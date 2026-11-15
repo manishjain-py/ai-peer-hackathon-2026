@@ -91,6 +91,9 @@ def timeline(slots, narration, new_lines, labels, mascot, V, slot, keep, d3, r3)
              ("morning", "The morning", T["wake"], r3(T["earth"] - T["wake"])), ("close", "The close", T["earth"], r3(T["film"] - T["earth"]))]
 
     out = [s for s in slots if s["part"] in ("hook", "entrance")]
+    for s in out:   # the hook's message cards name no sender before the reveal (layer-tag-v2/src/overlays/notes.js)
+        if s.get("card"):
+            s["card"]["from"] = ""
     h2 = next(s for s in out if s["id"] == "hook-2")
     h2["line"] = "h2b"
     if HOOK2:

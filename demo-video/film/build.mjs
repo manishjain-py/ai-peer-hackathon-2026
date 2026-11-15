@@ -250,7 +250,9 @@ export function readFilm({ variant = "public", withScenes = [], cut } = {}) {
     } else if (s.kind === "code") {
       // A scene by code is used once it is listed as ready in shots.json (or asked for with --with).
       const ready = (shots.scenes_ready || []).includes(s.scene) || withScenes.includes(s.scene);
-      if (ready && fs.existsSync(path.join(FILM, "src", "scenes", `${s.scene}.js`))) slot.use = "scene";
+      // WP7 v2: a cut's layer may bring a scene of its own (its file is laid over src/ in the build).
+      const has = (root) => fs.existsSync(path.join(root, "src", "scenes", `${s.scene}.js`));
+      if (ready && (has(FILM) || (C ? C.layers : []).some(has))) slot.use = "scene";
     } else if (s.kind === "product") {
       const cut = product.slots[s.id];
       slot.slateNote = "<b>Product screen.</b> A real recording, kept on this Mac only: the private render shows it.";

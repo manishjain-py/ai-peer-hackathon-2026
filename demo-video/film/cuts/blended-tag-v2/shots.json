@@ -77,7 +77,8 @@
    "card": {
     "side": "left",
     "at": 0.9,
-    "text": "Yes, the numbers are final. The sheet is in our team folder."
+    "text": "Yes, the numbers are final. The sheet is in our team folder.",
+    "from": ""
    }
   },
   {
@@ -95,7 +96,8 @@
    "card": {
     "side": "right",
     "at": 1.4,
-    "text": "Your update: the new screens are done, and the review is now on Thursday."
+    "text": "Your update: the new screens are done, and the review is now on Thursday.",
+    "from": ""
    }
   },
   {
