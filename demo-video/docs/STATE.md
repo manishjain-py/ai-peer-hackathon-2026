@@ -320,7 +320,7 @@ set-ups: ask Manish before spending on them.
 |---|---|---|---|---|---|---|
 | ai-peer-video-controller-5 | 5570 | https://claude.ai/code/session_01Nfn5hAQtMCLhcAz7Z5MUzm | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | The live controller since 13:21 UTC on 15 November; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 14002, transcript `886d5eab-f5fa-4248-ad50-268c2aa3f990` |
 | ai-peer-video-controller-4 (closed 13:24 UTC, 15 November) | 3977 | https://claude.ai/code/session_01Nfn5h9pvSF58rFbV1QBNt4 | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | Controller from 15:02 UTC on 14 November to its hand-off at 13:21 UTC on 15 November; PID 35776, transcript `4754b08d-f4fe-4f30-aeee-6e92a6cbb597` |
-| ai-peer-video-wp6 | 5567 | https://claude.ai/code/session_01Nfn5h6rbZhFxCgZXTT1Tc4 | `~/repos/ai-peer-video-wp6` (made by the worker; launched in the shared checkout, with `CLAUDE_NO_IDLE_PING=1`) | `video-wp6-wow-concepts` (made by the worker) | none yet | WP6 (V22): wow concepts for the AI Peer's own screens, 4 to 5 walkthrough videos for Manish's review (brief `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp6.md`); one research helper and up to three builder helpers allowed; up to $10. Launched 13:19 UTC by ai-peer-video-controller-4; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 11478, transcript `fe5edd36-f7f3-42c4-b2e1-c1e44643bb08`. |
+| ai-peer-video-wp6 (closed 16:32 UTC, 15 November) | 5567 | https://claude.ai/code/session_01Nfn5h6rbZhFxCgZXTT1Tc4 | `~/repos/ai-peer-video-wp6` (made by the worker; launched in the shared checkout, with `CLAUDE_NO_IDLE_PING=1`) | `video-wp6-wow-concepts` (made by the worker) | none yet | WP6 (V22): wow concepts for the AI Peer's own screens, 4 to 5 walkthrough videos for Manish's review (brief `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp6.md`); one research helper and up to three builder helpers allowed; up to $10. Launched 13:19 UTC by ai-peer-video-controller-4; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 11478, transcript `fe5edd36-f7f3-42c4-b2e1-c1e44643bb08`. |
 | ai-peer-video-wp2-6 (closed 13:19 UTC) | 5463 | https://claude.ai/code/session_01Nfn5h7P58JmNpKzMeZUkXV | `~/repos/ai-peer-video-wp2` | `video-wp2-4-draft3` (merged as PR 12) | PR 12 | Finished Draft 3 (merged `bb81fc5`); idle since 05:09 UTC. |
 | ai-peer-video-wp2-5 (closed 04:22 UTC) | 4262 | https://claude.ai/code/session_01Nfn5h6QvikG661dFstmjvc | `~/repos/ai-peer-video-wp2` | `video-wp2-4-draft3` | none | Phase C with A so far: the entrance from the phone, the face, the return into the phone, the big-world scene (by its helper); hand-off at 42%. |
 | ai-peer-video-wp2-3 (closed 15:11 UTC) | 3974 | https://claude.ai/code/session_01Nfn5h9MEoFU1Ck7fUPKdS2 | `~/repos/ai-peer-video-wp2` (launched in the shared checkout, with `CLAUDE_NO_IDLE_PING=1`) | `video-wp2-3-quicker-rise` | none yet for Draft 2 (round 3 was PR 10) | Draft 2 (V16, V17; the order by message at 14:51 UTC), then its dated hand-off and a stop (40.1% context at 15:00 UTC); before that, round 3 (PR 10); brief `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-3.md` plus the Earth report; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 16635, transcript `d1cb4441-b9a9-4aa3-ba40-ccfe560894d3`. No helper without the controller's yes (C13). |
@@ -349,6 +349,11 @@ sub-agent ended, no `user` record after its question. ai-peer-video-controller-3
 PID 12154), by ai-peer-video-controller-4 at 15:01 UTC, at its own request after its late
 message: its screen idle (an unsent bug-report draft about the refused inline command, whose
 lesson is filed), its only child `caffeinate`, no sub-agent record in its last 15 minutes.
+ai-peer-video-wp6 (window 5567, PID 11478), by ai-peer-video-controller-5 at 16:32 UTC on 15
+November after its last message (Manish's pick passed on word for word): its last record a
+turn's end at 16:31:59 UTC, an empty input line, its only child `caffeinate`, no sub-agent
+record in 10 minutes, its worktree `~/repos/ai-peer-video-wp6` clean at `45bb7ca` (merged as
+PR 13; kept), its stall wait stopped at 16:09 UTC.
 ai-peer-video-controller-4 (window 3977, PID 35776), by ai-peer-video-controller-5 at 13:24
 UTC on 15 November after its hand-off (`1271230` on `main`): its last record a turn's end at
 13:22:13 UTC (its reply to Manish), an empty input line, no child process, no sub-agent folder,
@@ -560,6 +565,20 @@ complete for a fresh Mac (a start-here guide, the ways of working, the lessons, 
 scripts, the files outside git that matter; real company content stays out); (2) one fresh
 worker, WP7 on Opus 5.5: study both videos in depth, plan the blend, build the two blended
 videos as new files (Draft 3 untouched), send both to him. The paragraph below is older.
+
+WP6's notes on Little Peer for the next worker (its last message, 16:31 UTC, word for word):
+"the mascot is drawn in demo-video/ui-concepts/little-peer/peer.js (SVG, draw(pose) per frame);
+how it moves is motion-core.js (hops, squash, eyes, trails) and motion.js (poseAt(t), its
+choreography); every beat time and place is in tl.js (T = 70) and must match "seconds" in
+concept.json. A part only: node demo-video/ui-concepts/render.mjs little-peer --from 5 --to 28
+--quality draft --sheet 16 (the setup); a new length means moving the beats in tl.js; for a film
+without the series title and end cards, add "framing": false to concept.json (runtime switch,
+used by _overview/). Its text comes from shared/data.js (made-up, privacy-checked); a still of the
+mascot can be grabbed with ffmpeg -ss <t> from renders/little-peer.mp4 (for example 19.7 s);
+stalls of a few seconds per render are normal."
+
+Manish at 16:26:46 UTC (shown to the controller only at 16:32): "Giving you the tag video in a
+minute": the video itself, which came at 16:28:59 UTC. The question about its code stays open.
 
 **Now (16:12 UTC, 15 November), ai-peer-video-controller-5:** wait for Manish's pick of
 the wow concepts (Needs Manish). When it comes: his words in a feedback file and V23, word for
