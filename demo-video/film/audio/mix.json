@@ -19,6 +19,7 @@
     {"id": "change-1", "file": "audio/sfx/change-1.wav", "at": 53.85, "gain_db": -12, "event_s": 54.0, "sync_s": 0.15, "note": "soft swish with a faint tick on the cut at 54.0"},
     {"id": "change-2", "file": "audio/sfx/change-2.wav", "at": 71.85, "gain_db": -13, "event_s": 72.0, "sync_s": 0.15, "note": "the same, a little brighter, on the cut at 72.0"},
     {"id": "tap", "file": "audio/sfx/tap.wav", "at": 103.54, "gain_db": -10, "event_s": 103.54, "sync_s": 0, "note": "his one tap on the phone: WP3's manifest gives tap_at_s 4.04 for morning-brief-final-v4 (use_from_s 1.0), so the tap lands 3.04 s into the slot that starts at 100.5"},
+    {"id": "return", "file": "audio/sfx/rise.wav", "at": 104.3, "gain_db": -19, "event_s": 106.6, "sync_s": 2.3, "note": "Draft 3 (V20): the reveal's shimmer, quieter, under the return: loudest about 2.3 s in (film 106.6), as the ribbon flows into the phone (105.7 to 107.4); gone by about 108.7"},
     {"id": "lights", "file": "audio/sfx/lights.wav", "at": 112.4, "gain_db": -15, "event_s": 112.4, "sync_s": 0, "note": "lights come on across the planet: loudest about 1.3 s in (film 113.7), gone by 115.6"},
     {"id": "end", "file": "audio/sfx/end.wav", "at": 116.0, "gain_db": -15, "event_s": 116.0, "sync_s": 0, "note": "one warm chime on D with the end card; silent by 119.8"}
   ],

@@ -1,0 +1,28 @@
+{
+ "request_id": "01a1dd64-f3bc-7911-a377-af272c4f0048",
+ "billable_units_header": "0.073367607",
+ "inputs_sent": {
+  "prompt": "Keep everything in image 1 exactly as it is: the same sunlit bedroom in the morning, the same camera position and framing, the same warm light, and the same man sitting up in bed holding his phone, who has not moved. Change two things. First: the double made of mint light and the ribbon of light are gone, with no light or particles left in the air, so there is exactly one person in the room, the man in the bed; where the double stood, the room is exactly as it would be without him. Second: the screen of the phone in the man's hands glows softly mint (#b7f4cf), as if the light has just flowed into it. Photorealistic. Nothing written anywhere.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab284d2/yXQxi9alIQ1b1DyJ78Dv4_a-phone-3-back.png"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab284d6/kU63VghXp7MHcqxEI05Wi_mSiQM8ta.png",
+    "content_type": "image/png",
+    "file_name": "kU63VghXp7MHcqxEI05Wi_mSiQM8ta.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}

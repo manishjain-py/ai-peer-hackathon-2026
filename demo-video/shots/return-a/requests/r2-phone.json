@@ -1,0 +1,24 @@
+{
+ "endpoint": "google/nano-banana-2.1/edit",
+ "inputs": {
+  "prompt": "Keep everything in image 1 exactly as it is: the same sunlit bedroom in the morning, the same camera position and framing, the same warm light, and the same man sitting up in bed holding his phone, who has not moved. Change two things. First: the double made of mint light and the ribbon of light are gone, with no light or particles left in the air, so there is exactly one person in the room, the man in the bed; where the double stood, the room is exactly as it would be without him. Second: the screen of the phone in the man's hands glows softly mint (#b7f4cf), as if the light has just flowed into it. Photorealistic. Nothing written anywhere.",
+  "image_urls": [
+   "file:demo-video/look/peer-entrance/a-phone-3-back.png"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "expect": {
+  "units": 0.09,
+  "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+  "unit_price": 1.0,
+  "cost_usd": 0.09,
+  "estimate": true,
+  "basis": "wp2-5's stills on this model cost 6.8 to 8.7 cents (demo-video/ledger/wp2-5.csv)"
+ },
+ "output": "demo-video/shots/return-a/r2-phone",
+ "note": "Phase C (A, V20): the return's last key frame: the double is gone, back in the phone, whose screen glows (from a-phone-3-back)"
+}

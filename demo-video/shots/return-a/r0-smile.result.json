@@ -1,0 +1,30 @@
+{
+ "request_id": "01a1dd64-632f-7123-a7b4-043c16f4f0ae",
+ "billable_units_header": "0.079785804",
+ "inputs_sent": {
+  "prompt": "Keep everything in image 1 exactly as it is: the same sunlit bedroom in the morning, the same camera position and framing, the same warm light, the same man sitting up in bed holding his phone, who has not moved, and the same faint double of him made of soft mint light standing beside the desk, in the same place. Change one thing: the ribbon of light between the double and the phone is gone, with no light or particles left in the air. The double stands whole, turned toward the man in the bed, and gives him a small, warm smile, lips closed. He is an exact copy of the man shown in image 2 and image 3, who is also the man in the bed: the same face, the same short dark hair and trimmed beard, the same warm medium-brown skin, the same dark charcoal T-shirt and the same loose dark grey pyjama trousers. His face and skin keep their own natural brown colour and his clothes keep their own dark colours; only the light is pale mint-green (#b7f4cf). He glows softly from within and is slightly see-through, with soft edges and no drawn outline. It must read as friendly, advanced technology, never as a ghost or a spirit. Photorealistic, like a frame from a premium advertising film. Nothing written anywhere.",
+  "image_urls": [
+   "https://v3b.fal.media/files/b/0ab284d2/yXQxi9alIQ1b1DyJ78Dv4_a-phone-3-back.png",
+   "https://v3b.fal.media/files/b/0ab278c3/59_zGOpWWF_4X9VSmsdYc_a-portrait.jpg",
+   "https://v3b.fal.media/files/b/0ab278c3/lszvxFMxfHN1vjAzXB4rV_a-full.jpg"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "result": {
+  "images": [
+   {
+    "url": "https://v3b.fal.media/files/b/0ab284d2/b_G0sonibcJ8J7YYgc0nW_QlfMwmqL.png",
+    "content_type": "image/png",
+    "file_name": "b_G0sonibcJ8J7YYgc0nW_QlfMwmqL.png",
+    "file_size": null,
+    "width": 2752,
+    "height": 1536
+   }
+  ],
+  "description": ""
+ }
+}
