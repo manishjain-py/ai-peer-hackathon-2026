@@ -7,7 +7,15 @@ it took over from ai-peer-video-controller-5 (closed at 16:58 UTC). Read next: t
 `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7.md`. A new Mac or a take-over: `START-HERE.md`
 at the repo root. Other sessions message the controller by its name.
 
-## Where we are (2026-11-15 18:02 UTC)
+## Where we are (2026-11-15 18:06 UTC)
+
+**18:06 UTC: WP7 is merged; both blends are on main and wait on Manish's view.** PR #14 was
+squash-merged by ai-peer-video-wp7-2 as `83906fd`, its branch deleted (checked by the controller:
+the PR state, `ls-remote`, `privacy-check.sh 83906fd 0ba3506` 0 and 0, both renders and sheets in
+git). Item 8 is in it: Draft 3's `shots.json` reads `../shots/manifest.json`, Draft 3's build
+byte-identical. Tagged `blended-v1` (`83906fd`). wp7-2 is idle for his views (context 20.3%;
+its worktree detached at `a78dc70`, clean); `stall-wp7-2` stopped at 18:06 UTC. Money: WP7
+$0.00; the total stays $41.43 of $100. Week 77% at 18:04 UTC.
 
 **18:02 UTC: blended video 2, Tag, is with Manish; both blends now wait on his view.**
 ai-peer-video-wp7-2 fixed the tag's labels first (`0ca3b73`, privacy check 0 and 0, confirmed by
@@ -478,7 +486,6 @@ Still running:
 | What | PID | Log | Stop command |
 |---|---|---|---|
 | The usage wait (`usage`: the whole week past 85%) | 80587 | `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log` | `kill 80587` |
-| The stall wait (`stall-wp7-2`: ai-peer-video-wp7-2 silent for 25 minutes, or PID 36089 gone) | 36344 | `~/.ai-peer/demo-video-private/controller/waits.log` | `kill 36344` |
 
 `usage` was started by ai-peer-video-controller-6 at 16:58 UTC on 15 November; `stall-wp7` (16:58
 UTC) was stopped at 17:42 UTC before WP7 closed, and `stall-wp7-2` started at 17:44 UTC;
@@ -551,7 +558,8 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 | 2026-11-14/15 | fal.ai (WP2-5, Draft 3, finished) | Webcam stills and Amara's lip-sync clip; the two entrance shots and the return from the phone, with their stills | $3.74 (12 calls, `demo-video/ledger/wp2-5.csv`, on its branch; inside Phase C's $25) |
 | 2026-11-15 | fal.ai (WP2-6, Draft 3, finished) | The phone's entrance take (`reveal-gather`, plus one unused take) and six webcam listening takes for the Zoom colleagues | $3.42 (8 calls, `demo-video/ledger/wp2-6.csv`, on `main` since PR 12) |
 | 2026-11-15 | none (WP6, finished) | Five concept videos, all made by code (three.js and the film's renderer); no paid call, no ledger file | $0.00 |
-| | **Total of the $100 cap** | | **$41.43** (WP1 $6.60, WP3 $23.10, WP2 $0.94, WP2-3 $0.62, WP2-4 $3.01, WP2-5 $3.74, WP2-6 $3.42; the last three on `main` since PR 12) |
+| 2026-11-15 | none (WP7, finished) | The two blended videos, Little Peer and Tag, all by code; the seven new lines on the ElevenLabs plan | $0.00 |
+| | **Total of the $100 cap** | | **$41.43** (WP1 $6.60, WP3 $23.10, WP2 $0.94, WP2-3 $0.62, WP2-4 $3.01, WP2-5 $3.74, WP2-6 $3.42; the last three on `main` since PR 12; WP6 and WP7 $0; the ledger rows sum to $41.41, the 2 cents are rounding) |
 
 ## Needs Manish
 
@@ -666,6 +674,12 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
+
+**Now (18:06 UTC, 15 November), ai-peer-video-controller-6:** both blends are merged and
+with Manish. Wait for his views (he answers in the controller's session). His words: a
+`FEEDBACK-BLENDED-2026-11-15.md` file and V27 onwards at once, then word for word to
+ai-peer-video-wp7-2 (idle, window 5605, PID 36089); re-arm `stall-wp7-2` when it works again.
+Only the usage wait runs.
 
 **Now (18:02 UTC, 15 November), ai-peer-video-controller-6:** wait for Manish's views of
 both blends and for wp7-2's merge sha. When wp7-2 goes idle, stop `stall-wp7-2`. His words: a
@@ -965,3 +979,4 @@ and 7 still hold.
 | 2026-11-15 17:44 | ai-peer-video-controller-6 | WP7 pushed its tag helper's work (`99aa9b0`) and stopped; closed it at 17:43 UTC; privacy check: 4 files with real terms (the tag's labels among them); launched ai-peer-video-wp7-2 (window 5605, PID 36089) with the fix first; `stall-wp7-2` armed. | Waiting on the tag blend and Manish's view of Little Peer |
 | 2026-11-15 18:02 | ai-peer-video-controller-6 | Checked wp7-2's label fix (0 and 0) and its Tag blend (one sheet, privacy 0 and 0); sent the Tag blend to Manish at 18:02 UTC; approved item 8 and the PR (squash merge). | Waiting on Manish's views of both blends |
 | 2026-11-15 18:05 | ai-peer-video-wp7-2 | Read in at 7.4%. Replaced the tag's matched labels with made-up ones (three buttons, two captions) and reworded the other matched lines (11 lines in 4 files); re-rendered `tag.mp4`, `tag-sheet.png`, `tag-clean.mp4` (privacy 0 and 0). Built the tag blend: its own mascot table in `make_cut.py` (0.6 of Little Peer's scale; a plain tag out of the phone, eyes and legs keyed in; it folds back into a plain tag before going back into the phone), `legs` and `eyes` keys in `engine.js`; delivered `blended-tag-v1.mp4` at 18:01 UTC. Item 8 done (`shots.json`'s relative manifest path, Draft 3 byte-identical). PR #14 squash-merged as `83906fd`, branch deleted. Context 20.3%. | Idle; Manish's views come through the controller |
+| 2026-11-15 18:06 | ai-peer-video-controller-6 | Checked wp7-2's merge of PR #14 (`83906fd`, branch deleted, privacy 0 and 0), tagged `blended-v1`, stopped `stall-wp7-2`, added WP7's $0.00 to Money spent. | Waiting on Manish's views of both blends |
