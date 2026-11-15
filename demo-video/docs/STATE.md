@@ -1,14 +1,44 @@
 # AI Peer demo video: state
 
-Live controller: **ai-peer-video-controller-4** (Opus 5.5, max effort; Terminal window 3977 on
-Mac 48 GB, PID 35776, https://claude.ai/code/session_01Nfn5h9pvSF58rFbV1QBNt4), since its
-read-in at 15:02 UTC. It took over from ai-peer-video-controller-3 (hand-off
-`handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-3.md`), which was closed at 15:01 UTC.
+Live controller: **ai-peer-video-controller-5** (Opus 5.5; Terminal window 5570 on Mac 48 GB,
+PID 14002, https://claude.ai/code/session_01Nfn5hAQtMCLhcAz7Z5MUzm, transcript
+`886d5eab-f5fa-4248-ad50-268c2aa3f990`), since 13:21 UTC on 15 November, from the hand-off
+`handoffs/HANDOFF-2026-11-15-ai-peer-video-controller-4.md`. ai-peer-video-controller-4 (window
+3977, PID 35776) was closed at 13:24 UTC.
 Other sessions message the controller by its name.
 
-## Where we are (2026-11-15 13:35 UTC)
+## Where we are (2026-11-15 15:37 UTC)
 
-**13:35 UTC: Draft 3 is approved for now (V21); the new work is WP6, wow concepts for the AI
+**15:37 UTC: the week passed 70% at 15:35 UTC** (the alarm; 67% at 14:44, so about 3.5 points
+an hour with WP6 and its helpers at work). At that pace 85% comes about 19:50 UTC and 93%
+about 22:10 UTC today. The alarm is re-armed at 85% (PID 48212). ai-peer-video-wp6 was told and
+asked to finish the last three concepts well before 85% and to say when it expects the set.
+Its context: 26.6% at 15:30 UTC, from its transcript. Its answer: four of five concepts are
+done and pushed (Constellation too, `86dc7bc` at 15:29 UTC; Little Peer, Glass & Light, Tiny
+Company); only The Notebook still builds (since 14:42 UTC); the full set, with its order and
+the overview picture, by about 16:30 UTC. $0.00 of its $10.
+
+**14:46 UTC: WP6 has two of its five concepts done** (branch `video-wp6-wow-concepts` at
+`0c89f25`; the kit at `fc1df34`, the research note at `da729e4`), each sheet checked by the
+worker: Glass & Light (64 s, `demo-video/ui-concepts/renders/glass-and-light.mp4`; one function
+change, by the worker: answers name which sentence came from which source, and the setup
+streams each item it reads; Manish asked for the same functionality, so the caption must say
+so) and Tiny Company (70 s, `demo-video/ui-concepts/renders/tiny-company.mp4`; no function
+change). Being built: Little Peer, Constellation, The Notebook. WP6 sends the full set with its
+order and one overview picture when all five are in. $0.00 of its $10. Context of WP6, from its
+transcript: 25.3% at 14:44 UTC (21.9% at 13:39 UTC). Week: 67% at 14:44 UTC (64% at 13:38: about 2.7
+points an hour with WP6 at work); at that pace 85% comes about 21:30 UTC today and 93% about
+00:30 UTC on Monday 16 November, well before the reset (Monday 22:59 UTC). No question is open
+for Manish.
+
+**13:25 UTC: ai-peer-video-controller-5 has taken over** (Opus 5.5, window 5570). It told
+ai-peer-video-wp6 its name at 13:23 UTC, started its two waits (`usage` at 70%, `stall-wp6`;
+see "Still running") and closed ai-peer-video-controller-4's window 3977 at 13:24 UTC after the
+checks (see "Closed"). WP6 runs (PID 11478, launched 13:19 UTC); nothing of it is proven yet.
+Usage log, last line: `2026-11-15T13:18:59Z week=63 fable=66 session=?`. No question is open
+for Manish; next from him is his review of WP6's concepts.
+
+**13:18 UTC: Draft 3 is approved for now (V21); the new work is WP6, wow concepts for the AI
 Peer's own screens (V22; `BRIEF-UI-WOW-2026-11-15.md`).** Manish: "draft 3 looks good. next
 task". He shared an 81-second silent walkthrough of the product running at his company and
 asked for his 4 to 5 best "wow" visual ideas for its screens, same functionality, each as an
@@ -247,8 +277,10 @@ set-ups: ask Manish before spending on them.
 
 | Session | Window | Session URL | Worktree | Branch | PR | Job |
 |---|---|---|---|---|---|---|
-| ai-peer-video-controller-4 | 3977 | https://claude.ai/code/session_01Nfn5h9pvSF58rFbV1QBNt4 | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | The live controller since 15:02 UTC; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 35776, transcript `4754b08d-f4fe-4f30-aeee-6e92a6cbb597` |
-| ai-peer-video-wp2-6 | 5463 | https://claude.ai/code/session_01Nfn5h7P58JmNpKzMeZUkXV | `~/repos/ai-peer-video-wp2` (launched in the shared checkout, with `CLAUDE_NO_IDLE_PING=1`) | `video-wp2-4-draft3` (pushed at `1a510e0`, not merged) | none yet (one PR at Phase D) | Finishes Draft 3 (brief `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp2-6.md`): the phone as the clear source of the ribbon, the Zoom colleagues moving (V20), a check of the invented outside names, then Phase D (Draft 3, PR, merge). Up to $21 (Phase C's $25 less wp2-5's $3.74). Launched 04:23 UTC by ai-peer-video-controller-4; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 60593, transcript `78fd5479-bd69-4fff-952b-529663e8dfab`. No helper without the controller's yes (C13). |
+| ai-peer-video-controller-5 | 5570 | https://claude.ai/code/session_01Nfn5hAQtMCLhcAz7Z5MUzm | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | The live controller since 13:21 UTC on 15 November; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 14002, transcript `886d5eab-f5fa-4248-ad50-268c2aa3f990` |
+| ai-peer-video-controller-4 (closed 13:24 UTC, 15 November) | 3977 | https://claude.ai/code/session_01Nfn5h9pvSF58rFbV1QBNt4 | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | Controller from 15:02 UTC on 14 November to its hand-off at 13:21 UTC on 15 November; PID 35776, transcript `4754b08d-f4fe-4f30-aeee-6e92a6cbb597` |
+| ai-peer-video-wp6 | 5567 | https://claude.ai/code/session_01Nfn5h6rbZhFxCgZXTT1Tc4 | `~/repos/ai-peer-video-wp6` (made by the worker; launched in the shared checkout, with `CLAUDE_NO_IDLE_PING=1`) | `video-wp6-wow-concepts` (made by the worker) | none yet | WP6 (V22): wow concepts for the AI Peer's own screens, 4 to 5 walkthrough videos for Manish's review (brief `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp6.md`); one research helper and up to three builder helpers allowed; up to $10. Launched 13:19 UTC by ai-peer-video-controller-4; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 11478, transcript `fe5edd36-f7f3-42c4-b2e1-c1e44643bb08`. |
+| ai-peer-video-wp2-6 (closed 13:19 UTC) | 5463 | https://claude.ai/code/session_01Nfn5h7P58JmNpKzMeZUkXV | `~/repos/ai-peer-video-wp2` | `video-wp2-4-draft3` (merged as PR 12) | PR 12 | Finished Draft 3 (merged `bb81fc5`); idle since 05:09 UTC. |
 | ai-peer-video-wp2-5 (closed 04:22 UTC) | 4262 | https://claude.ai/code/session_01Nfn5h6QvikG661dFstmjvc | `~/repos/ai-peer-video-wp2` | `video-wp2-4-draft3` | none | Phase C with A so far: the entrance from the phone, the face, the return into the phone, the big-world scene (by its helper); hand-off at 42%. |
 | ai-peer-video-wp2-3 (closed 15:11 UTC) | 3974 | https://claude.ai/code/session_01Nfn5h9MEoFU1Ck7fUPKdS2 | `~/repos/ai-peer-video-wp2` (launched in the shared checkout, with `CLAUDE_NO_IDLE_PING=1`) | `video-wp2-3-quicker-rise` | none yet for Draft 2 (round 3 was PR 10) | Draft 2 (V16, V17; the order by message at 14:51 UTC), then its dated hand-off and a stop (40.1% context at 15:00 UTC); before that, round 3 (PR 10); brief `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-3.md` plus the Earth report; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 16635, transcript `d1cb4441-b9a9-4aa3-ba40-ccfe560894d3`. No helper without the controller's yes (C13). |
 | ai-peer-video-controller-1 | 2952 | https://claude.ai/code/session_01Nfn5h5eNL9YLJMnBQpKKMf | the same checkout | main | none | Handed off at 11:30 UTC; nothing of its own still runs. Its second-by-second watch of the September film is `DRAFT07-WATCH.md` (committed by controller-2). Other sessions message it as `learnlikemagic-f7`; PID 38022. Manish opened its window himself: ask him before closing it. |
@@ -276,6 +308,16 @@ sub-agent ended, no `user` record after its question. ai-peer-video-controller-3
 PID 12154), by ai-peer-video-controller-4 at 15:01 UTC, at its own request after its late
 message: its screen idle (an unsent bug-report draft about the refused inline command, whose
 lesson is filed), its only child `caffeinate`, no sub-agent record in its last 15 minutes.
+ai-peer-video-controller-4 (window 3977, PID 35776), by ai-peer-video-controller-5 at 13:24
+UTC on 15 November after its hand-off (`1271230` on `main`): its last record a turn's end at
+13:22:13 UTC (its reply to Manish), an empty input line, no child process, no sub-agent folder,
+its two waits already stopped (PIDs 11671 and 92972 gone).
+ai-peer-video-wp2-6 (window 5463, PID 60593), by ai-peer-video-controller-4 at 13:19 UTC on 15
+November, once Manish had said "draft 3 looks good": idle since 05:09 UTC (its last record a
+turn's end), the input line "send me a 720p copy of draft 3" Claude Code's own suggestion (no
+such `user` record), no child process, no sub-agent record in 30 minutes; its stall wait was
+stopped at 05:08 UTC. Its worktree `~/repos/ai-peer-video-wp2` is kept (music and raw takes
+outside git).
 ai-peer-video-wp2-5 (window 4262, PID 61062), by ai-peer-video-controller-4 at 04:22 UTC on 15
 November after its hand-off message (`1744557` on `main`): its screen idle with an empty input
 line, its only child `caffeinate`, its builder helper ended (last record an answer, at 04:20
@@ -295,14 +337,15 @@ Still running:
 
 | What | PID | Log | Stop command |
 |---|---|---|---|
-| Wait `usage`: the whole week passes 70% (checked every 5 minutes; Fable's threshold is 101, out of reach). The 50% alarm rang at 01:57 UTC on 15 November with the video idle: about 1.3 points an hour from the account's other sessions since 22:03 UTC; the week resets Monday 16 November 22:59 UTC (Tuesday 17 November 04:29 India time, read from `/usage` at 04:55 UTC on 15 November) | 92972 | `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log` | `kill 92972` |
+| Wait `stall-wp6`: the worker silent for 25 minutes, or PID 11478 gone (stop it before closing window 5567; stop it while the worker waits, idle, for Manish) | 14497 | `~/.ai-peer/demo-video-private/controller/waits.log` | `kill 14497` |
+| Wait `usage`: the whole week passes 85% (re-armed at 15:36 UTC on 15 November, after the 70% alarm rang at 15:35 UTC; checked every 5 minutes; Fable's threshold is 101, out of reach). The 50% alarm rang at 01:57 UTC on 15 November with the video idle: about 1.3 points an hour from the account's other sessions since 22:03 UTC; the week resets Monday 16 November 22:59 UTC (Tuesday 17 November 04:29 India time, read from `/usage` at 04:55 UTC on 15 November) | 48212 | `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log` | `kill 48212` |
 
-The three waits were started by ai-peer-video-controller-4 at 15:01 UTC (the commands are in
-controller-3's hand-off, "Your waits"); `draft2` was met at about 15:06 UTC and `stall-wp2-3`
-was stopped at 15:10 UTC before the worker's window was closed, so only `usage` runs. They are runs of `demo-video/tools/wait-for.sh` in the
-controller's own background; the usage alarm's test is `demo-video/tools/usage-check.sh`. The
-logs are `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log`. The one thing
-still running is the worker ai-peer-video-wp2-3 (window 3974, PID 16635) with its renders.
+Both waits were started by ai-peer-video-controller-5 at 13:23 UTC on 15 November, with the
+commands in controller-4's hand-off ("Your waits"). They are runs of
+`demo-video/tools/wait-for.sh` in the controller's own background; the usage alarm's test is
+`demo-video/tools/usage-check.sh`. The logs are
+`~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log`. The one session at work
+is the worker ai-peer-video-wp6 (window 5567, PID 11478).
 
 ## Packages (each line is written by its own worker only)
 
@@ -339,6 +382,19 @@ still running is the worker ai-peer-video-wp2-3 (window 3974, PID 16635) with it
   MiniMax H3 Max Turbo, with the colleagues' mouths following WP2's recordings. Open for the
   controller: no clip was watched in motion or heard; the delivered files carry no colour tag (the
   report says what to check); the tap in `morning-brief` and the nod are small.
+- WP6, wow concepts for the AI Peer's own screens (`ai-peer-video-wp6`, brief
+  `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp6.md`, cap $10): **in progress** since 13:19 UTC.
+  Worktree `/Users/manishjain/repos/ai-peer-video-wp6`, branch `video-wp6-wow-concepts`. The kit is
+  pushed (`fc1df34`): `demo-video/ui-concepts/render.mjs` renders one concept folder frame by frame
+  with the film's renderer (page check, mp4, small sheets); `shared/` holds the runtime (title card,
+  captions, end card), the made-up story (`data.js`: Ram), today's page in generic words, fonts and
+  three.js. `demo-video/ui-concepts/BUILDERS.md` is the builders' one shared brief, with five
+  concepts: Little Peer (a character does the work), Glass & Light (the page in 3D glass, read by a
+  living light), Tiny Company (an isometric miniature with a courier), Constellation (a 3D star map
+  of his work), The Notebook (paper, light ink, footnotes). Builders for little-peer,
+  glass-and-light and tiny-company started at 13:37 UTC; one read-only research helper (web) since
+  13:27. The recording was looked at once (one sheet of 20 frames, kept in the private folder);
+  nothing from it is in the worktree. Spent $0.00.
 
 ## Money spent
 
@@ -432,7 +488,10 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 
 ## Next
 
-**Now (19:25 UTC), ai-peer-video-controller-4:** (1) ai-peer-video-wp2-4 works on the order in
+**Now (13:21 UTC, 15 November), for ai-peer-video-controller-5:** follow "Next step, exactly" in
+`handoffs/HANDOFF-2026-11-15-ai-peer-video-controller-4.md`: your name here and to
+ai-peer-video-wp6; your waits; WP6's events and its concepts to Manish; usage (85% and 93%);
+the ledgers. Older paragraph, kept: **Now (19:25 UTC), ai-peer-video-controller-4:** (1) ai-peer-video-wp2-4 works on the order in
 `FEEDBACK-DRAFT-2-2026-11-14.md`; read its context at each event (it reports at 40%). (2) Phase
 A's concepts and samples: look at one board, then send them to Manish (the Attention group with
 the files, one text line with the options and the recommendation; the same in the session) and
@@ -526,6 +585,21 @@ and 7 still hold.
 - See `DESIGN.md` section 0.
 
 ## Lessons
+
+- **A weekday worked out by hand put the weekly reset a day early.** The controller turned
+  "Monday 17 November 04:30 India time" into Sunday 23:00 UTC, but 17 November 2026 is a
+  Tuesday; `/usage` says "resets Nov 17 at 4:29am (Asia/Calcutta)", which is Monday 16 November
+  22:59 UTC. A worker noticed it. Read the reset line from `/usage` itself, and convert with
+  `date`, never by hand.
+- **An idle worker sets off its own stall alarm.** The wait `stall-wp*` reads silence as a
+  stall, so a worker that waits for Manish would send a false "silent" line. Stop the wait while
+  the worker waits on Manish; re-arm it when the work resumes.
+- **An unquoted heredoc ran the backticks of a Markdown edit.** Two commit ids in STATE.md became
+  empty strings, and the commit still went out. Quote every heredoc (`<<'EOF'`) and pass values
+  through the environment (shared lesson `gotcha_unquoted_heredoc_runs_backticks.md`).
+- **A controller's big context costs the shared week.** At 36% (364k tokens) each of its calls
+  re-reads its whole context. Under a tight week, hand a waiting controller's follow-up to a
+  fresh one early (the skill's 150k mark), not only at 45%.
 
 - **Usage: four or five max-effort sessions that read pictures burn about 10% of the week an
   hour** (measured 10:10 to 12:34 UTC on 14 November: 0% to 20%, Fable 39%), twice to five
@@ -634,3 +708,7 @@ and 7 still hold.
 | 2026-11-15 04:26 | ai-peer-video-controller-4 | wp2-5 handed off at 42% (entrance, face, return and the big-world scene in; $3.74). Closed it at 04:22 UTC after the checks; looked at the big-world sheet; launched ai-peer-video-wp2-6 at 04:23 UTC (window 5463) to finish Draft 3. Money $38.01 of $100. |
 | 2026-11-15 05:08 | ai-peer-video-wp2-6 | Finished Phase C and Draft 3: the phone lights up in the close-up and its ribbon's tail now flows into the Peer (no light near Ram); the Zoom colleagues move for the whole meeting (six H3 listening takes); the big world's outside names checked (one renamed), its web louder, its card drops in clean. Rendered Draft 3 (public, 2:00.0, -14.1 LUFS, 18 of 19 lines by the speech check), merged PR 12 (`bb81fc5`). $3.42 (ledger wp2-6). |
 | 2026-11-15 05:12 | ai-peer-video-controller-4 | Draft 3 came from ai-peer-video-wp2-6 (PR 12, `bb81fc5`). Checked that it is the public build, its numbers and one 30-frame sheet; sent Manish a 720p copy at 05:09 UTC (Attention group and session) asking for his view. Stopped the idle worker's stall wait. Money $41.43 of $100. |
+| 2026-11-15 13:20 | ai-peer-video-controller-4 | Manish: "draft 3 looks good" (V21), and a new task (V22): wow concepts for the AI Peer's own screens, from his walkthrough recording (real company content: copied to the private folder, kept out of git). Wrote `BRIEF-UI-WOW-2026-11-15.md` and WP6's brief; closed ai-peer-video-wp2-6 at 13:19 UTC; launched ai-peer-video-wp6 at 13:19 UTC (window 5567). Usage 63% (13:13 UTC). Corrected a typed time in "Where we are" (13:35 to 13:18). |
+| 2026-11-15 13:21 | ai-peer-video-controller-4 | Handed off at 36% context to ai-peer-video-controller-5 (Opus 5.5), early because of the tight week (63% at 13:13 UTC): `handoffs/HANDOFF-2026-11-15-ai-peer-video-controller-4.md`. Stopped its waits; added four lessons; filed one shared lesson (unquoted heredocs). WP6 runs (ai-peer-video-wp6). |
+| 2026-11-15 13:25 | ai-peer-video-controller-5 | Took over from ai-peer-video-controller-4 (Opus 5.5, window 5570, PID 14002). Told ai-peer-video-wp6 its name; started the waits `usage` (70%) and `stall-wp6`; closed controller-4's window 3977 after the checks. No question open for Manish. |
+| 2026-11-15 13:39 | ai-peer-video-wp6 | Read in (STATE, the WP6 brief, its hand-off); made the worktree and branch; looked at the recording once (one sheet, private folder only); built and proved the concepts kit (a 12 s test rendered in 8 s; pushed `fc1df34`); wrote `BUILDERS.md` with five concepts; started one research helper and three builders. | In progress; $0.00 of $10 |
