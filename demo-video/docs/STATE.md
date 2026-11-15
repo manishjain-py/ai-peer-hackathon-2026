@@ -383,18 +383,20 @@ is the worker ai-peer-video-wp6 (window 5567, PID 11478).
   controller: no clip was watched in motion or heard; the delivered files carry no colour tag (the
   report says what to check); the tap in `morning-brief` and the nod are small.
 - WP6, wow concepts for the AI Peer's own screens (`ai-peer-video-wp6`, brief
-  `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp6.md`, cap $10): **in progress** since 13:19 UTC.
-  Worktree `/Users/manishjain/repos/ai-peer-video-wp6`, branch `video-wp6-wow-concepts`. The kit is
-  pushed (`fc1df34`): `demo-video/ui-concepts/render.mjs` renders one concept folder frame by frame
-  with the film's renderer (page check, mp4, small sheets); `shared/` holds the runtime (title card,
-  captions, end card), the made-up story (`data.js`: Ram), today's page in generic words, fonts and
-  three.js. `demo-video/ui-concepts/BUILDERS.md` is the builders' one shared brief, with five
-  concepts: Little Peer (a character does the work), Glass & Light (the page in 3D glass, read by a
-  living light), Tiny Company (an isometric miniature with a courier), Constellation (a 3D star map
-  of his work), The Notebook (paper, light ink, footnotes). Builders for little-peer,
-  glass-and-light and tiny-company started at 13:37 UTC; one read-only research helper (web) since
-  13:27. The recording was looked at once (one sheet of 20 frames, kept in the private folder);
-  nothing from it is in the worktree. Spent $0.00.
+  `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp6.md`, cap $10): **done**, merged as PR 13 on
+  2026-11-15 at 16:10 UTC (merge commit `ff352f0`), delivered to the controller at 16:07 UTC. Five
+  concepts, each an end-to-end walkthrough drawn in code with made-up data (Ram), numbered in the
+  worker's order: 1 Glass & Light (64 s), 2 Little Peer (70 s), 3 Constellation (70 s), 4 Tiny
+  Company (70 s), 5 The Notebook (70 s). Watch `demo-video/ui-concepts/renders/<name>.mp4`; all five
+  on one picture: `demo-video/ui-concepts/renders/overview.png`. Read
+  `demo-video/ui-concepts/README.md` (the pitches, the order, what each changes: four need setup to
+  stream each item it reads, three need answers to name each sentence's source; Tiny Company changes
+  nothing) and `REPORT.md` (checks, weak points, traps). Research:
+  `demo-video/research/ui-wow-inspiration-2026-11-15.md`. Privacy: the first shared data held some
+  of the product's own wording seen in the walkthrough; rewritten and re-rendered (`5503e2e`); a grep
+  against the private term list (`~/.ai-peer/demo-video-private/ui-wow/real-terms.txt`) finds nothing
+  in WP6's files. Built by five builder helpers (three at most at once) and one research helper.
+  Spent $0.00. **Open for Manish:** his view of the five.
 
 ## Money spent
 
@@ -712,3 +714,4 @@ and 7 still hold.
 | 2026-11-15 13:21 | ai-peer-video-controller-4 | Handed off at 36% context to ai-peer-video-controller-5 (Opus 5.5), early because of the tight week (63% at 13:13 UTC): `handoffs/HANDOFF-2026-11-15-ai-peer-video-controller-4.md`. Stopped its waits; added four lessons; filed one shared lesson (unquoted heredocs). WP6 runs (ai-peer-video-wp6). |
 | 2026-11-15 13:25 | ai-peer-video-controller-5 | Took over from ai-peer-video-controller-4 (Opus 5.5, window 5570, PID 14002). Told ai-peer-video-wp6 its name; started the waits `usage` (70%) and `stall-wp6`; closed controller-4's window 3977 after the checks. No question open for Manish. |
 | 2026-11-15 13:39 | ai-peer-video-wp6 | Read in (STATE, the WP6 brief, its hand-off); made the worktree and branch; looked at the recording once (one sheet, private folder only); built and proved the concepts kit (a 12 s test rendered in 8 s; pushed `fc1df34`); wrote `BUILDERS.md` with five concepts; started one research helper and three builders. | In progress; $0.00 of $10 |
+| 2026-11-15 16:12 | ai-peer-video-wp6 | Five concepts built and checked (each final sheet seen); privacy: the product's own wording found in the shared data, rewritten, four concepts re-rendered; numbered 1 to 5 in my order, overview picture, README and REPORT; privacy grep clean on WP6's files; delivered to ai-peer-video-controller-5 at 16:07; PR 13 merged (`ff352f0`). | Done; $0.00 of $10; context 33% |
