@@ -260,21 +260,18 @@ still running is the worker ai-peer-video-wp2-3 (window 3974, PID 16635) with it
   (Kling 4.0 key frames) for one take through several poses, route P's code only as a finishing
   tool; settle the look of the double in the stills first.
 - WP2, the film in code (`ai-peer-video-wp2`, `ai-peer-video-wp2-2`, `ai-peer-video-wp2-3`,
-  `ai-peer-video-wp2-4`, next `ai-peer-video-wp2-5`; first brief `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2.md`):
-  **Draft 3 in progress** on branch `video-wp2-4-draft3` (pushed at `538edf2`, not merged; one PR at
-  Phase D), by the order in `FEEDBACK-DRAFT-2-2026-11-14.md`. **Phase A done** (ai-peer-video-wp2-4):
-  research `demo-video/research/peer-entrance-2026-11-14.md`; four boards in
-  `demo-video/look/peer-entrance/boards/` (D the little Peer out of the laptop, recommended; A Ram's
-  look out of the phone; B out of the laptop; C a night owl out of the phone) and the clip
-  `demo-video/look/peer-entrance/motion/peer-motion-tests.mp4`, with Manish since 19:44 UTC.
-  **Phase B done:** the four product screens by code with made-up data (`demo-video/film/screens.json`,
-  `src/scenes/screens.js`), four meeting lines m1 to m4 (the controller's yes), no slate left in a
-  public build; a preview in lane wp24 (2:00.0, -14.1 LUFS, every line 15.0 to 25.6 dB above the
-  music, m1 to m4 heard with no error). Spent $3.01 (`demo-video/ledger/wp2-4.csv`, Phase A cap $8).
-  Read `demo-video/film/REPORT.md`, "Draft 3, Phase A and B". **Open:** Manish's pick, then Phase C
-  (the entrance and the return, cap $25) and Phase D (Draft 3). Earlier: Draft 2 PR 11 (`5a7970f`),
-  round 3 PR 10, Draft 1 PR 9. `ai-peer-video-wp2-4` handed off at about 40% context:
-  `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-5.md`.
+  `ai-peer-video-wp2-4`, `ai-peer-video-wp2-5`, next `ai-peer-video-wp2-6`; first brief `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2.md`):
+  **Draft 3 in progress** on branch `video-wp2-4-draft3` (pushed at `1a510e0`, not merged; one PR at Phase D), by
+  `FEEDBACK-DRAFT-2-2026-11-14.md` and Manish's pick A (`FEEDBACK-PHASE-A-2026-11-15.md`, V20). Phases A and B done
+  (ai-peer-video-wp2-4). **Phase C with A, so far** (ai-peer-video-wp2-5): the entrance (the phone's ribbon, he is
+  formed by 18.0 s, steps to the chair; Draft 2's desk clip from 4.2 s only), the return into the phone in Ram's hand
+  (104.5 to 108.0), Ram's face with the badge on the cards, tag, Zoom and Slack, webcam stills for the three Zoom
+  colleagues with Amara saying m3 in a lip-synced clip, the two Phase B fixes (the push-in lands on the lit Zoom; the
+  brief's phone clears the captions), and the big world of information in `proof-change` (a builder helper's scene,
+  switched on). Music unchanged on purpose. Spent $3.74 (`demo-video/ledger/wp2-5.csv`, 12 calls; wp2-4's $3.01 before).
+  Read `demo-video/film/REPORT.md`, "Draft 3, Phase C with A, so far". **Open:** the phone as the clear source of the
+  ribbon (the controller's point), the Zoom colleagues moving, then Phase D (Draft 3). `ai-peer-video-wp2-5` handed off
+  at about 42% context: `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp2-6.md`.
 - WP3, the nine AI shots with people (`ai-peer-video-wp3`, brief
   `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp3.md`, cap $60): **done**, merged as PR 8 on
   2026-11-14 13:20 UTC (merge commit 839a455). Spent $23.10 (95 calls, `demo-video/ledger/wp3.csv`).
@@ -567,3 +564,4 @@ and 7 still hold.
 | 2026-11-14 20:03 | ai-peer-video-wp2-4 | Draft 3, Phases A and B: research, four concept boards and two motion tests (sent to Manish by the controller at 19:44 UTC); the four product screens by code with made-up Airbnb payments data and four meeting lines; a preview render checked by numbers, one sheet and speech-to-text. $3.01 spent. Handed off at about 40% context to ai-peer-video-wp2-5. | Waiting on Manish's pick; Phases C and D next |
 | 2026-11-14 20:12 | ai-peer-video-controller-4 | Phase B came from ai-peer-video-wp2-4 (hand-off at 39%, `10864dd`); closed it at 20:05 UTC after the checks. Looked at one sheet of its public preview (33 to 109 s) and sent Manish the screens part (0:30 to 1:44) as a 720p clip at 20:06 UTC. Launched ai-peer-video-wp2-5 at 20:07 UTC (window 4262): the pick-independent weak points first, then Phases C and D. |
 | 2026-11-15 03:50 | ai-peer-video-controller-4 | Re-sent everything for review to the Attention group at 02:34 UTC at Manish's request. He picked A at 03:41 UTC (V20): Ram's look out of his phone; Zoom colleagues must move; the change part becomes the big world of information. Wrote `FEEDBACK-PHASE-A-2026-11-15.md` and V20; passed his words to ai-peer-video-wp2-5. |
+| 2026-11-15 04:21 | ai-peer-video-wp2-5 | Phase C with A so far, on `video-wp2-4-draft3` at `1a510e0`: the Phase B fixes, webcam tiles and Amara's lip-synced m3, the entrance out of the phone (two Kling shots) and the return into it (one), Ram's face everywhere, and the big world scene (a builder helper, reviewed and switched on); $3.74 of Phase C's $25. Handed off at about 42% context: `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp2-6.md` (first: the phone as the ribbon's clear source; then the Zoom colleagues moving; then Draft 3). |
