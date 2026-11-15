@@ -7,7 +7,33 @@ PID 14002, https://claude.ai/code/session_01Nfn5hAQtMCLhcAz7Z5MUzm, transcript
 3977, PID 35776) was closed at 13:24 UTC.
 Other sessions message the controller by its name.
 
-## Where we are (2026-11-15 15:37 UTC)
+## Where we are (2026-11-15 16:12 UTC)
+
+**16:12 UTC: WP6's five concepts are with Manish; his pick is the open question.**
+ai-peer-video-wp6 delivered them with its order and an overview picture; PR 13 merged at
+16:08 UTC (`ff352f0`; WP6's content at `0da0985`). In the worker's order (each 64 to 70 s,
+1920x1080, silent with captions, in `demo-video/ui-concepts/renders/`; pitches in
+`demo-video/ui-concepts/README.md`, checks and weak points in its `REPORT.md`): 1 Glass &
+Light (the most shippable), 2 Little Peer, 3 Constellation (the most cinematic), 4 Tiny
+Company, 5 The Notebook. Four carry a small function change (answers name each sentence's
+source; the setup shows each item as it reads it; Tiny Company has none), which goes beyond
+Manish's "same functionality"; the captions say so. The controller's privacy check at
+`0da0985`: the worker's private list of 67 real terms from the walkthrough
+(`~/.ai-peer/demo-video-private/ui-wow/real-terms.txt`, outside git) has no hit in any of the
+260 files WP6 changed (`git grep -i -F -f`; the whole tree has hits in 119 files at both the
+base `c3100fd` and the head, all older files: `film/`, `docs/build/`, the brief); no file WP6
+changed is an exact copy of a private file (sha256 against the recording and its frames); the
+five renders match the commit's LFS ids. The controller looked at one picture (the overview,
+at 1100 px). Sent at 16:10 UTC to the Attention group (the overview as a photo, the five
+videos each with a caption, one text line asking which he likes, with the worker's order,
+which the controller backs) and in the session (`SendUserFile`; each file under 30 MiB).
+Manish had also asked ai-peer-video-wp6 in its own session at 16:09 UTC ("Send these to me
+on Telegram.", a `user` record in its transcript), so the worker sent the same six files to
+the Attention group at 16:10 to 16:11 UTC too: he has them twice. His answer may come in
+either session; the worker passes it on word for word.
+WP6 waits idle in its worktree (context 33.2% at 16:07 UTC; $0.00 of $10, no paid call); its
+stall wait was stopped at 16:09 UTC and is re-armed when it works again. Week: 71% at 16:06
+UTC.
 
 **15:37 UTC: the week passed 70% at 15:35 UTC** (the alarm; 67% at 14:44, so about 3.5 points
 an hour with WP6 and its helpers at work). At that pace 85% comes about 19:50 UTC and 93%
@@ -337,15 +363,15 @@ Still running:
 
 | What | PID | Log | Stop command |
 |---|---|---|---|
-| Wait `stall-wp6`: the worker silent for 25 minutes, or PID 11478 gone (stop it before closing window 5567; stop it while the worker waits, idle, for Manish) | 14497 | `~/.ai-peer/demo-video-private/controller/waits.log` | `kill 14497` |
 | Wait `usage`: the whole week passes 85% (re-armed at 15:36 UTC on 15 November, after the 70% alarm rang at 15:35 UTC; checked every 5 minutes; Fable's threshold is 101, out of reach). The 50% alarm rang at 01:57 UTC on 15 November with the video idle: about 1.3 points an hour from the account's other sessions since 22:03 UTC; the week resets Monday 16 November 22:59 UTC (Tuesday 17 November 04:29 India time, read from `/usage` at 04:55 UTC on 15 November) | 48212 | `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log` | `kill 48212` |
 
-Both waits were started by ai-peer-video-controller-5 at 13:23 UTC on 15 November, with the
-commands in controller-4's hand-off ("Your waits"). They are runs of
-`demo-video/tools/wait-for.sh` in the controller's own background; the usage alarm's test is
-`demo-video/tools/usage-check.sh`. The logs are
-`~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log`. The one session at work
-is the worker ai-peer-video-wp6 (window 5567, PID 11478).
+The usage wait was started by ai-peer-video-controller-5 at 13:23 UTC on 15 November and
+re-armed at 85% at 15:36 UTC. Its `stall-wp6` wait was stopped at 16:09 UTC while WP6 waits,
+idle, for Manish; re-arm it, with the command in controller-4's hand-off ("Your waits"), when
+WP6 works again. They are runs of `demo-video/tools/wait-for.sh` in the controller's own
+background; the usage alarm's test is `demo-video/tools/usage-check.sh`. The logs are
+`~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log`. ai-peer-video-wp6
+(window 5567, PID 11478) waits idle.
 
 ## Packages (each line is written by its own worker only)
 
@@ -409,9 +435,21 @@ is the worker ai-peer-video-wp6 (window 5567, PID 11478).
 | 2026-11-14 | fal.ai (WP2-4, Draft 3, in progress) | Phase A: the stills of four concept boards and two motion tests | $3.01 so far, by the worker's message at 19:42 UTC (`demo-video/ledger/wp2-4.csv`, on its branch; caps $8 for Phase A, $25 for Phase C) |
 | 2026-11-14/15 | fal.ai (WP2-5, Draft 3, finished) | Webcam stills and Amara's lip-sync clip; the two entrance shots and the return from the phone, with their stills | $3.74 (12 calls, `demo-video/ledger/wp2-5.csv`, on its branch; inside Phase C's $25) |
 | 2026-11-15 | fal.ai (WP2-6, Draft 3, finished) | The phone's entrance take (`reveal-gather`, plus one unused take) and six webcam listening takes for the Zoom colleagues | $3.42 (8 calls, `demo-video/ledger/wp2-6.csv`, on `main` since PR 12) |
+| 2026-11-15 | none (WP6, finished) | Five concept videos, all made by code (three.js and the film's renderer); no paid call, no ledger file | $0.00 |
 | | **Total of the $100 cap** | | **$41.43** (WP1 $6.60, WP3 $23.10, WP2 $0.94, WP2-3 $0.62, WP2-4 $3.01, WP2-5 $3.74, WP2-6 $3.42; the last three on `main` since PR 12) |
 
 ## Needs Manish
+
+**Asked 2026-11-15 16:10 UTC: which of the five wow concepts does he like?** (his review,
+V22.) Sent to the Attention group (the overview, the five videos with captions, one text
+line) and in the session of ai-peer-video-controller-5 (window 5570). The worker's order,
+which the controller backs: 1 Glass & Light, 2 Little Peer, 3 Constellation, 4 Tiny Company,
+5 The Notebook; four add a small function change (answers show each sentence's source).
+He may answer in ai-peer-video-wp6's session (he spoke to it at 16:09 UTC); the worker then
+sends his words to the controller word for word, with the time.
+Record his words at once (`FEEDBACK-WOW-2026-11-15.md` beside the other feedback files, and
+V23 in `DESIGN.md`), then pass them to ai-peer-video-wp6 word for word and re-arm its stall
+wait.
 
 **Answered 2026-11-15 13:14 UTC: his view of Draft 3 (V21): "draft 3 looks good."** With it
 came the next task (V22, WP6). Next from him: his review of WP6's concepts. Later: whether his
@@ -489,6 +527,12 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
+
+**Now (16:12 UTC, 15 November), ai-peer-video-controller-5:** wait for Manish's pick of
+the wow concepts (Needs Manish). When it comes: his words in a feedback file and V23, word for
+word to ai-peer-video-wp6, `stall-wp6` re-armed. Usage: the alarm rings at 85% (the worker then
+stops at a clean step); at 93% all video work pauses and Manish is told on the Attention
+group. Worker context: read it at each event; it hands off by 45% to ai-peer-video-wp6-2.
 
 **Now (13:21 UTC, 15 November), for ai-peer-video-controller-5:** follow "Next step, exactly" in
 `handoffs/HANDOFF-2026-11-15-ai-peer-video-controller-4.md`: your name here and to
@@ -715,3 +759,4 @@ and 7 still hold.
 | 2026-11-15 13:25 | ai-peer-video-controller-5 | Took over from ai-peer-video-controller-4 (Opus 5.5, window 5570, PID 14002). Told ai-peer-video-wp6 its name; started the waits `usage` (70%) and `stall-wp6`; closed controller-4's window 3977 after the checks. No question open for Manish. |
 | 2026-11-15 13:39 | ai-peer-video-wp6 | Read in (STATE, the WP6 brief, its hand-off); made the worktree and branch; looked at the recording once (one sheet, private folder only); built and proved the concepts kit (a 12 s test rendered in 8 s; pushed `fc1df34`); wrote `BUILDERS.md` with five concepts; started one research helper and three builders. | In progress; $0.00 of $10 |
 | 2026-11-15 16:12 | ai-peer-video-wp6 | Five concepts built and checked (each final sheet seen); privacy: the product's own wording found in the shared data, rewritten, four concepts re-rendered; numbered 1 to 5 in my order, overview picture, README and REPORT; privacy grep clean on WP6's files; delivered to ai-peer-video-controller-5 at 16:07; PR 13 merged (`ff352f0`). | Done; $0.00 of $10; context 33% |
+| 2026-11-15 16:12 | ai-peer-video-controller-5 | WP6 delivered five concepts (PR 13 merged by the worker, `ff352f0`). Privacy check at `0da0985` (no real term in WP6's 260 files, no exact copy of a private file); looked at the overview; sent the overview and five videos with captions plus one question to the Attention group and the session at 16:10 UTC. Stopped `stall-wp6` (worker idle for Manish). Week 71%. |
