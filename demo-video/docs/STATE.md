@@ -514,7 +514,7 @@ Still running:
 | The usage wait (`usage`: the whole week past 85%) | 80587 | `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log` | `kill 80587` |
 
 `usage` was started by ai-peer-video-controller-6 at 16:58 UTC on 15 November; `stall-wp7` (16:58
-UTC) was stopped at 17:42 UTC before WP7 closed, `stall-wp7-2` ran from 17:44 to 18:46 UTC (stopped while wp7-2 idled, 18:16 to 18:21), and
+UTC) was stopped at 17:42 UTC before WP7 closed, `stall-wp7-2` ran from 17:44 to 18:46 UTC (stopped while wp7-2 idled, 18:05 to 18:23, by waits.log), and
 `stall-wp7-3` started at 18:48 UTC;
 ai-peer-video-controller-5 stopped its own at its hand-off. They are runs of `demo-video/tools/wait-for.sh` in the controller's own
 background; the usage alarm's test is `demo-video/tools/usage-check.sh`. The logs are
