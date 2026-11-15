@@ -1,0 +1,24 @@
+{
+ "request_id": "01a1e09d-41ac-76d3-a297-4433488ecb63",
+ "billable_units_header": "12.8",
+ "inputs_sent": {
+  "prompt": "A man sits at a small wooden desk in a bedroom in warm sunrise light, seen from behind his left shoulder. He reads the open laptop in front of him and types a few words, then rests his hands and keeps reading, with a calm, contented, small closed-lip smile and one slow blink. Small, natural, relaxed movements only: his breathing, his eyes, his fingers. The laptop's screen stays a plain, softly glowing light cream with no text. The phone lies still on the desk. The curtains sway very slightly. The camera is locked on a tripod and does not move. One continuous shot with no cuts, no zoom, no music, no subtitles and no text.",
+  "image_url": "https://v3b.fal.media/files/b/0ab299f0/BGjyn_SYw7i8esjikC5eA_morning-desk-still-1.png",
+  "duration": 4.0,
+  "resolution": "1080P",
+  "prompt_expansion_mode": "balanced",
+  "seed": 41126
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab299f0/YOnqidLTq1MPi1eTc96qJ_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "YOnqidLTq1MPi1eTc96qJ_minimax-h3.mp4",
+   "file_size": 5025102
+  },
+  "expanded_prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: <Picture 1> Cinematic, live-action, Static Shot from behind the left shoulder of a man (S1) with dark hair and a light beard, sitting at a small wooden desk. The room is bathed in the warm, golden glow of a sunrise streaming through a window. S1 is facing an open laptop, screen of which glows with a soft, plain light cream light containing no visible text. A smartphone lies still on the desk next to the laptop. S1 wears a dark grey t-shirt. He gently types a few words on the keyboard with relaxed fingers, then stops and rests his hands flat on the desk. He continues to read the screen, his expression calm and contented, wearing a small closed-lip smile and performing one slow, deliberate blink. His movements are minimal and natural: his chest subtly rises and falls with steady breathing. In the background, the sheer white curtains sway very slightly in a gentle breeze. The camera remains completely locked on a tripod throughout the entire duration, with no cuts or zooms.\n\noverall_soundscape: The soundscape captures the quiet atmosphere of a morning, characterized by the soft, rhythmic click-clack of fingers hitting a laptop keyboard followed by the silence of hands resting. A very faint, airy whisper of wind moves the curtains is audible alongside the subtle, peaceful sound of calm breathing.\n\nnon_diegetic_music: N/A",
+  "timings": {
+   "inference": 2.3724872220009274
+  }
+ }
+}

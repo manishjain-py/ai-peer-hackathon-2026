@@ -1,0 +1,20 @@
+{
+ "endpoint": "minimax/h3-max-turbo/image-to-video",
+ "inputs": {
+  "prompt": "A man sits at a small wooden desk in a bedroom in warm sunrise light, seen from behind his left shoulder. He reads the open laptop in front of him and types a few words, then rests his hands and keeps reading, with a calm, contented, small closed-lip smile and one slow blink. Small, natural, relaxed movements only: his breathing, his eyes, his fingers. The laptop's screen stays a plain, softly glowing light cream with no text. The phone lies still on the desk. The curtains sway very slightly. The camera is locked on a tripod and does not move. One continuous shot with no cuts, no zoom, no music, no subtitles and no text.",
+  "image_url": "file:demo-video/shots/morning-desk/morning-desk-still-1.png",
+  "duration": 4.0,
+  "resolution": "1080P",
+  "prompt_expansion_mode": "balanced",
+  "seed": 41126
+ },
+ "expect": {
+  "units": 4.0,
+  "unit": "second of video at 1080P",
+  "unit_price": 0.056,
+  "cost_usd": 0.224,
+  "basis": "the dry run of hook-2-raw-v2t1 on 2026-11-15: live base $0.0175 per second, 1080P 3.2 times ($0.056)"
+ },
+ "output": "demo-video/shots/morning-desk/morning-desk-raw-t1",
+ "note": "WP7 v2 (V27 item 7): the morning desk shot made live from morning-desk-still-1 (Ram reads the laptop; camera locked)"
+}

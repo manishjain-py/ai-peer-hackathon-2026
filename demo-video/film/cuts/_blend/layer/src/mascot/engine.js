@@ -12,7 +12,8 @@
 //   start: [x, y, g]  where it stands at the slot's start (g: how far above its ground it floats),
 //   moves: [{ t0, t1, to: [x, y, g], h, kind: "hop" | "zip" | "glide" }]  (motion-core's makeBody),
 //   pop:  { at, dur, from: [x, y] }   it grows out of a point (the phone), with a burst,
-//   dive: { at, dur, to: [x, y] }     it shrinks into a point (the phone, the screen), with a flash,
+//   dive: { at, dur, to: [x, y], flash }  it shrinks into a point (the phone, the screen), with a flash
+//                                      (flash: its strength, 1 if not given; WP7 v2's daylight desk uses 0.25),
 //   enter: u   it is not there before u (for one that hops in from outside the frame),
 //   look: [[u, [lx, ly]], ...], happy: [[u, v]], badge: [[u, v]], wave: [[a, b], ...],
 //   blinks: [u, ...], trail: [[t0, t1], ...], glow: aura 0..1, light: light spill 0..1,
@@ -30,7 +31,7 @@ const S = (tag, attrs, parent) => {
 };
 
 /** Piecewise keys [[u, value]] with an easing; a value is a number or an array. */
-function keyed(list, u, e = ease.inOutSine) {
+export function keyed(list, u, e = ease.inOutSine) {
   if (!list || !list.length) return null;
   if (u <= list[0][0]) return list[0][1];
   for (let i = 1; i < list.length; i++) {
@@ -60,7 +61,7 @@ async function loadMascot(name) {
           x: p.x, y: p.y, s: p.s, alpha: p.alpha, sx: p.sx, sy: p.sy,
           // it has no arms: its wave is a happy rock about its feet
           rot: p.rot + 7 * (p.wave || 0) * Math.sin(p.u * 2 * Math.PI * 1.7),
-          walk: p.walk, stride: p.stride ?? 0, legs: p.legs ?? 1, lift: 0, look: p.look, blink: p.blink, eyes: p.eyes ?? 1,
+          walk: p.stride && p.base ? p.dist / (m.STRIDE * p.base) : p.walk, stride: p.stride ?? 0, legs: p.legs ?? 1, lift: 0, look: p.look, blink: p.blink, eyes: p.eyes ?? 1,
           happy: p.happy, glow: p.badge, shadow: p.shadowOpacity,
         });
       },
@@ -111,13 +112,33 @@ export async function createMascot(slot, film) {
   layer.append(spill);
   const svg = S("svg", { width: 1920, height: 1080, viewBox: "0 0 1920 1080", style: "position:absolute;left:0;top:0;overflow:visible" });
   layer.append(svg);
+  // WP7 v2, the transition ideas (all opt-in; a slot without these keys draws as before). Behind the
+  // mascot: the screen it wakes ("wake") and the ribbon of light it rides ("ribbon"). The mascot in
+  // its own group, which a screen can clip ("clip": a polygon of plate pixels). In front of it: the
+  // glowing message it folds into ("msg"), which may unfold onto a screen.
+  const underG = S("g", {}, svg);
+  const wakeDark = S("polygon", { fill: "#050c0d", opacity: 0 }, underG);
+  const wakeGlow = S("polygon", { fill: "#dffcef", opacity: 0, style: "mix-blend-mode:screen", filter: "blur(12px)" }, underG);
+  const ribbonGlow = S("path", { fill: "none", stroke: "#8ff0c4", "stroke-linecap": "round", "stroke-linejoin": "round", opacity: 0, style: "mix-blend-mode:screen", filter: "blur(9px)" }, underG);
+  const ribbonCore = S("path", { fill: "none", stroke: "#f2fff8", "stroke-linecap": "round", "stroke-linejoin": "round", opacity: 0 }, underG);
+  const bodyG = S("g", {}, svg);
+  let clipPoly = null;
+  if (M.clip) {
+    const cp = S("clipPath", { id: `mclip-${slot.id}` }, svg);
+    clipPoly = S("polygon", {}, cp);
+    bodyG.setAttribute("clip-path", `url(#mclip-${slot.id})`);
+  }
   const sparkG = S("g", {}, svg);
   const sparks = Array.from({ length: 90 }, () => S("path", { d: STAR, opacity: 0 }, sparkG));
   const flash = S("circle", { r: 1, fill: "#e9fff2", opacity: 0, style: "mix-blend-mode:screen" }, svg);
-  const draw = mascot.build(svg);
+  const draw = mascot.build(bodyG);
   // sparkles in front of the body
   svg.appendChild(sparkG);
   svg.appendChild(flash);
+  const cardG = S("g", { opacity: 0, style: "filter: drop-shadow(0 0 16px rgba(170,255,215,0.9))" }, svg);
+  const cardBody = S("polygon", { fill: "#effff7", stroke: "#a9efcd", "stroke-width": 2, "stroke-linejoin": "round" }, cardG);
+  const cardFold = S("polyline", { fill: "none", stroke: "#6fcfa4", "stroke-width": 3, "stroke-linejoin": "round", "stroke-linecap": "round" }, cardG);
+  const pts = (P) => P.map((p) => `${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(" ");
 
   const body = makeBody(M.start, (M.moves || []).map((m) => ({ ...m })));
   const base = M.s ?? 1;
@@ -128,6 +149,12 @@ export async function createMascot(slot, film) {
     const a = keyed(M.anchor, u, (k) => k);
     const r = a[2] / a0[2];
     return [a[0] + (x - a0[0]) * r, a[1] + (y - a0[1]) * r, r];
+  };
+
+  // the tag's feet step on a glide unless the move says "step": false (it surfs or glides like a card)
+  const stepping = (u) => {
+    const mv = (M.moves || []).find((m) => u >= m.t0 && u <= m.t1);
+    return mv && mv.kind === "glide" && mv.step !== false ? 1 : 0;
   };
 
   function render(t) {
@@ -168,8 +195,28 @@ export async function createMascot(slot, film) {
         sx *= 1 - 0.2 * Math.sin(Math.PI * k);
         if (k >= 1) alpha = 0;
         flashAt = to;
-        flashA = Math.sin(Math.PI * prog(u, at + dur * 0.6, at + dur + 0.45));
+        flashA = Math.sin(Math.PI * prog(u, at + dur * 0.6, at + dur + 0.45)) * (M.dive.flash ?? 1);
         burst(out, u, at + dur * 0.85, to, { n: 16, speed: 160, size: 11, seed: 77 });
+      }
+    }
+    if (M.fade) alpha *= keyed(M.fade, u) ?? 1;
+    // it folds into a glowing message (a card with an envelope's fold), which may unfold onto a screen
+    let cardA = 0, cardPts = null, foldA = 0;
+    if (M.msg && u >= M.msg.at) {
+      const { at, dur = 0.35, w = 150, h = 96, unfold, quad } = M.msg;
+      const k = prog(u, at, at + dur);
+      alpha *= 1 - ease.inOutSine(k);
+      sx *= 1 + 0.4 * k; sy *= 1 - 0.6 * k;
+      cardA = ease.outCubic(k);
+      const g = (0.35 + 0.65 * ease.outCubic(k)) * base;
+      const cx = x, cy = y - 60 * base;
+      cardPts = [[cx - (w * g) / 2, cy - (h * g) / 2], [cx + (w * g) / 2, cy - (h * g) / 2], [cx + (w * g) / 2, cy + (h * g) / 2], [cx - (w * g) / 2, cy + (h * g) / 2]];
+      foldA = 1;
+      if (unfold && quad) {
+        const q = ease.inOutSine(prog(u, unfold[0], unfold[1]));
+        cardPts = cardPts.map((p, i) => [lerp(p[0], quad[i][0], q), lerp(p[1], quad[i][1], q)]);
+        foldA = 1 - q;
+        cardA *= 1 - prog(u, unfold[1], unfold[1] + 0.4);
       }
     }
     for (const [t0, t1] of M.trail || []) {
@@ -191,8 +238,47 @@ export async function createMascot(slot, film) {
       u, x: px, y: py, s, alpha, rot, sx, sy, sway, look, blink, happy, badge, wave,
       aura: (M.glow ?? 0.55) * alpha, ground: gy, air: air * r, shadowOpacity: (M.shadow ?? 0.45) * alpha * (grow > 0.3 ? 1 : 0),
       // the tag's feet step only on a glide; legs and eyes are keyed (0: a plain flat tag), else 1
-      walk: u * 2.2, stride: b.kind === "glide" ? 1 : 0, legs: keyed(M.legs, u) ?? 1, eyes: keyed(M.eyes, u) ?? 1,
+      walk: u * 2.2, stride: stepping(u), dist: Math.abs(x - (M.start ? M.start[0] : x)), base, legs: keyed(M.legs, u) ?? 1, eyes: keyed(M.eyes, u) ?? 1,
     });
+
+    // WP7 v2: the screen it wakes, the ribbon it rides, the screen that clips it, its message
+    if (M.wake) {
+      const { at, dur = 0.5, quad, dark = true } = M.wake;
+      const k = prog(u, at, at + dur);
+      const P = pts(quad.map((p) => place(u, p[0], p[1])));
+      wakeDark.setAttribute("points", P); wakeGlow.setAttribute("points", P);
+      wakeDark.setAttribute("opacity", dark ? (0.94 * (1 - ease.inOutSine(k))).toFixed(3) : "0");
+      wakeGlow.setAttribute("opacity", (0.8 * Math.sin(Math.PI * prog(u, at, at + dur * 1.8))).toFixed(3));
+    }
+    if (M.ribbon) {
+      const { t0, t1, lead = 0.3, fade = 0.7, lift = 0 } = M.ribbon;
+      const end = Math.min(t1, u + lead);
+      const a = u < t0 - lead ? 0 : 1 - prog(u, t1, t1 + fade);
+      if (a > 0.001 && end > t0) {
+        const P = [];
+        for (let tb = t0; tb < end; tb += 1 / 60) {
+          const q = body(tb);
+          P.push(place(u, q.x, q.y - mascot.height * lift * base));
+        }
+        const q = body(end);
+        P.push(place(u, q.x, q.y - mascot.height * lift * base));
+        const d = "M" + P.map((p) => `${p[0].toFixed(1)} ${p[1].toFixed(1)}`).join(" L");
+        ribbonGlow.setAttribute("d", d); ribbonCore.setAttribute("d", d);
+        ribbonGlow.setAttribute("stroke-width", (30 * Math.max(0.5, base)).toFixed(1));
+        ribbonCore.setAttribute("stroke-width", (8 * Math.max(0.5, base)).toFixed(1));
+        ribbonGlow.setAttribute("opacity", (0.85 * a).toFixed(3));
+        ribbonCore.setAttribute("opacity", (0.95 * a).toFixed(3));
+      } else { ribbonGlow.setAttribute("opacity", "0"); ribbonCore.setAttribute("opacity", "0"); }
+    }
+    if (clipPoly) clipPoly.setAttribute("points", pts(M.clip.map((p) => place(u, p[0], p[1]))));
+    if (cardPts && cardA > 0.001) {
+      const P = cardPts.map((p) => place(u, p[0], p[1]));
+      cardBody.setAttribute("points", pts(P));
+      const mid = [(P[0][0] + P[1][0] + P[2][0] + P[3][0]) / 4, 0.45 * (P[0][1] + P[1][1]) / 2 + 0.55 * (P[2][1] + P[3][1]) / 2];
+      cardFold.setAttribute("points", pts([P[0], mid, P[1]]));
+      cardFold.setAttribute("opacity", foldA.toFixed(3));
+      cardG.setAttribute("opacity", cardA.toFixed(3));
+    } else cardG.setAttribute("opacity", "0");
 
     // the light it gives off
     const L = (M.light ?? 0.5) * alpha * Math.min(1, grow + 0.2);

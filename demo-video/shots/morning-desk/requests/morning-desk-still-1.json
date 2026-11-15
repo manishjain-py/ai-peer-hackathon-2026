@@ -1,0 +1,25 @@
+{
+ "endpoint": "google/nano-banana-2.1/edit",
+ "inputs": {
+  "prompt": "A new, closer camera angle in the bedroom of image 1, in the same warm sunrise light through the same sheer curtains: the man of image 2, in the same dark charcoal T-shirt he wears in image 1, now sits on the wooden chair at the small wooden desk by the wall, working. The camera is behind him and to his left, at desk height, a medium shot: we see his left shoulder, the back and side of his head and a little of his face in profile, calm and contented, reading. The open laptop stands on the desk to the right of his head, its screen turned a little toward the camera so the whole screen is clearly visible and nothing covers it: a plain, softly glowing, light cream screen with no text. His slim dark smartphone lies flat on the desk to the right of the laptop, screen up and dark, with a clear empty patch of desk between the laptop and the phone. Keep the same room, the same pale blue-green wall, the same wooden desk and chair and the same warm morning light as image 1. Photorealistic, cinematic, natural, no text, no logos.",
+  "image_urls": [
+   "file:demo-video/shots/stills/morning-wake-b.png",
+   "file:demo-video/look/characters/a-portrait.jpg"
+  ],
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "output_format": "png",
+  "num_images": 1,
+  "thinking_level": "high"
+ },
+ "expect": {
+  "units": 0.09,
+  "unit": "USD (the endpoint bills in units of 1 dollar, by tokens)",
+  "unit_price": 1.0,
+  "cost_usd": 0.09,
+  "estimate": true,
+  "basis": "WP1 paid 6 to 8.5 cents for a 2K picture on this model (demo-video/ledger/wp1.csv)"
+ },
+ "output": "demo-video/shots/morning-desk/morning-desk-still-1",
+ "note": "WP7 v2 (V27 item 7): Ram at the desk in the sunrise reading the laptop, his phone on the desk; first frame of the morning desk shot"
+}

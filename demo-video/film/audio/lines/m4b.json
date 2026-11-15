@@ -1,0 +1,113 @@
+{
+ "what": "m4b",
+ "voice_id": "XrExE9yKIg1WjnnlVkGX",
+ "voice": "Matilda",
+ "model": "eleven_multilingual_v2",
+ "text": "That's Ram's call. I'll put it in his morning brief, and he'll get back to you.",
+ "spoken": "That's Rahm's call. I'll put it in his morning brief, and he'll get back to you.",
+ "request_sha": "5a4bcd4384626306",
+ "request": {
+  "text": "That's Rahm's call. I'll put it in his morning brief, and he'll get back to you.",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.6,
+   "similarity_boost": 0.75,
+   "style": 0,
+   "use_speaker_boost": true,
+   "speed": 1.0
+  },
+  "seed": 14112026,
+  "next_text": "A question from another time zone doesn't have to wait a day."
+ },
+ "request_id": "XLBe64uvSQrFeUwecRsx",
+ "character_cost": "39",
+ "generated_utc": "2026-11-15 19:01:47",
+ "file": "m4b.wav",
+ "seconds": 4.21,
+ "raw_seconds": 4.69,
+ "trimmed_front": 0.05,
+ "peak_dbfs": -1.26,
+ "rms_dbfs": -21.54,
+ "words": [
+  {
+   "w": "That's",
+   "s": 0.0,
+   "e": 0.24
+  },
+  {
+   "w": "Ram's",
+   "s": 0.298,
+   "e": 0.577
+  },
+  {
+   "w": "call.",
+   "s": 0.623,
+   "e": 1.076
+  },
+  {
+   "w": "I'll",
+   "s": 1.401,
+   "e": 1.575
+  },
+  {
+   "w": "put",
+   "s": 1.61,
+   "e": 1.75
+  },
+  {
+   "w": "it",
+   "s": 1.784,
+   "e": 1.854
+  },
+  {
+   "w": "in",
+   "s": 1.9,
+   "e": 1.97
+  },
+  {
+   "w": "his",
+   "s": 2.04,
+   "e": 2.144
+  },
+  {
+   "w": "morning",
+   "s": 2.214,
+   "e": 2.469
+  },
+  {
+   "w": "brief,",
+   "s": 2.516,
+   "e": 2.899
+  },
+  {
+   "w": "and",
+   "s": 3.015,
+   "e": 3.154
+  },
+  {
+   "w": "he'll",
+   "s": 3.201,
+   "e": 3.34
+  },
+  {
+   "w": "get",
+   "s": 3.375,
+   "e": 3.468
+  },
+  {
+   "w": "back",
+   "s": 3.514,
+   "e": 3.7
+  },
+  {
+   "w": "to",
+   "s": 3.758,
+   "e": 3.816
+  },
+  {
+   "w": "you.",
+   "s": 3.874,
+   "e": 4.64
+  }
+ ]
+}

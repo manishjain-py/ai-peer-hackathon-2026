@@ -1,0 +1,25 @@
+{
+ "request_id": "01a1e098-4f33-76d0-b89a-fd2fe682a92e",
+ "billable_units_header": "19.200000000000003",
+ "inputs_sent": {
+  "prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] Cinematic, live-action, Static Shot. A middle-aged man (S1) with short light brown hair, wearing a dark blue button-down shirt, sits in a modern, minimalist meeting room during the late afternoon. He is positioned at a wooden table with an open notebook and a black mug in front of him. The warm, golden light of sunset filters through blinds in the background, creating soft highlights and deep shadows. From 00:00 to 00:0.8, S1 looks intently at an off-screen screen located to the right of the frame, his expression focused and his lips closed as he reads; his eyebrows rise slightly in surprise. At 00:0.9, he begins to speak while his eyes remain fixed on the off-screen source, speaking with a surprised, pleased tone: <d>[English]Ram's out of office...</d> His lips close briefly for a natural pause. At 00:2.000, he turns his head toward a point just beside the camera on the right side, avoiding direct contact with the lens, and continues speaking: <d>[English]but the update I needed is already here.</d> His lips move in perfect synchronization with the words, closing cleanly after the final word. He gives one small, subtle nod, his eyebrows settling, and he keeps a faint, pleased, closed-lip smile with soft eyes. The camera remains completely locked on a tripod throughout the shot, capturing the documentary-style performance.\n\noverall_soundscape: The quiet atmosphere of a still room. The man speaks in a calm, natural voice with a clear American accent, surprised and pleased. There is the faint rustle of his shirt as he turns his head and the subtle silence between his words.\n\nnon_diegetic_music: N/A",
+  "image_url": "https://v3b.fal.media/files/b/0ab299cf/Q1bmS2V52F-mUNF9IRKB__hook-2.png",
+  "target_audio_url": "https://v3b.fal.media/files/b/0ab299cf/dUGwhXR4kjbNVfrRgbB5C_hook-2-h2b-line-at-0.9s.wav",
+  "seed": 224,
+  "duration": 6.0,
+  "resolution": "1080P",
+  "prompt_expansion_mode": "disabled"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab299d0/riVT11gNC1geAgrHLkchs_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "riVT11gNC1geAgrHLkchs_minimax-h3.mp4",
+   "file_size": 8720812
+  },
+  "expanded_prompt": null,
+  "timings": {
+   "inference": 3.9727345439996498
+  }
+ }
+}

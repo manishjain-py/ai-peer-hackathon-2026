@@ -1,0 +1,216 @@
+{
+ "about": "WP7 v2, the Tag blend's version 2: the film's music bed re-cut from the same take (Lyria 3.5, b2) to v2's timeline (cuts/blended-tag-v2/shots.json): the hook, the entrance and the walkthrough's first form as in v1 (0 to 54); the groove's second form to the Zoom cut (69.4, a thin bar at 68), Zoom on the second form, the thin bar at the Slack cut (92.2), Slack on the second form's last phrase; the dreamy part for the whole morning (100 to 110: the wake, the desk, the laptop brief); then v1's own last ten seconds: the fill (110), the take's rise under p11 as the globe pulls out (112), the finale's last bars and ring-out under the end card (114 to 120), and the end card's accent. bed.wav, bed-blended-v1.wav and Draft 3 are untouched. Remake: uv run --quiet demo-video/film/audio/music/tools/make_bed.py demo-video/film/audio/music/bed-blended-v2.edl.json",
+ "source": {
+  "file": "demo-video/film/audio/music/takes/lyria35-b2.mp3",
+  "bpm": 119.9973,
+  "first_bar_s": 0.067,
+  "measured_by": "tools/beatfit.py fit: 119.9973 BPM, first bar line at 0.067 s, the beat wanders 1.5 ms at most over the take"
+ },
+ "segments": [
+  {
+   "film_bar": 1,
+   "src_bar": 1,
+   "bars": 7,
+   "note": "0-14: the hook and the sleeper on the take's light intro"
+  },
+  {
+   "film_bar": 8,
+   "src_bar": 9,
+   "bars": 3,
+   "note": "14-20: the dreamy part as the tag glides across the room to the desk (idea C)"
+  },
+  {
+   "film_bar": 11,
+   "src_bar": 16,
+   "bars": 1,
+   "note": "20-22: the take's fill on the push-in into the laptop"
+  },
+  {
+   "film_bar": 12,
+   "src_bar": 17,
+   "bars": 16,
+   "note": "22-54: the walkthrough on the main groove's first form, as the take wrote it"
+  },
+  {
+   "film_bar": 28,
+   "src_bar": 36,
+   "bars": 7,
+   "note": "54-68: the groove's second form from its fourth bar"
+  },
+  {
+   "film_bar": 35,
+   "src_bar": 33,
+   "bars": 1,
+   "note": "68-70: one thin bar, the drums step back at the cut to Zoom (69.4)"
+  },
+  {
+   "film_bar": 36,
+   "src_bar": 34,
+   "bars": 11,
+   "note": "70-92: Zoom on the second form"
+  },
+  {
+   "film_bar": 47,
+   "src_bar": 33,
+   "bars": 1,
+   "note": "92-94: the thin bar again, at the cut to Slack (92.2)"
+  },
+  {
+   "film_bar": 48,
+   "src_bar": 44,
+   "bars": 3,
+   "note": "94-100: Slack on the second form's last phrase"
+  },
+  {
+   "film_bar": 51,
+   "src_bar": 9,
+   "bars": 5,
+   "guard_ms": 45,
+   "note": "100-110: the morning on the dreamy part: Ram wakes, the desk, the brief on the laptop (its soft hit starts 31 ms early, so the join ends 45 ms before the bar)"
+  },
+  {
+   "film_bar": 56,
+   "src_bar": 16,
+   "bars": 1,
+   "note": "110-112: the dreamy part's own fill, as the brief ends and the globe begins (111.0)"
+  },
+  {
+   "film_bar": 57,
+   "src_bar": 52,
+   "bars": 1,
+   "note": "112-114: the take's own rise into its finale, under p11 as the camera rises to the Earth"
+  },
+  {
+   "film_bar": 58,
+   "src_bar": 56,
+   "bars": 3,
+   "note": "114-120: the finale's last bars and its ring-out under the end card (115.7), as in v1 and Draft 3's last 6 s"
+  }
+ ],
+ "layers": [
+  {
+   "film_s": 116.5,
+   "src_bar": 2,
+   "src_beats": 4,
+   "gain_db": 5.5,
+   "fade_in_ms": 3,
+   "fade_out_ms": 120,
+   "note": "the end card's accent, on the ring-out, 0.8 s after the card appears at 115.7 (as in v1)"
+  }
+ ],
+ "gain": [
+  [
+   0,
+   3.3
+  ],
+  [
+   11.9,
+   3.3
+  ],
+  [
+   12.0,
+   1.8
+  ],
+  [
+   13.9,
+   1.8
+  ],
+  [
+   14.0,
+   -3.0
+  ],
+  [
+   19.9,
+   -3.0
+  ],
+  [
+   20.0,
+   3.0
+  ],
+  [
+   21.95,
+   3.0
+  ],
+  [
+   22.0,
+   -3.0
+  ],
+  [
+   69.35,
+   -3.0
+  ],
+  [
+   69.4,
+   -4.0
+  ],
+  [
+   99.95,
+   -4.0
+  ],
+  [
+   100.0,
+   -1.3
+  ],
+  [
+   109.95,
+   -1.3
+  ],
+  [
+   110.0,
+   0.0
+  ],
+  [
+   111.45,
+   0.0
+  ],
+  [
+   111.55,
+   -4.0
+  ],
+  [
+   114.0,
+   -4.0
+  ],
+  [
+   114.5,
+   3.5
+  ],
+  [
+   115.95,
+   3.5
+  ],
+  [
+   116.05,
+   0.0
+  ],
+  [
+   121.0,
+   0.0
+  ]
+ ],
+ "gain_note": "dB against the take, straight lines between the points: as v1 to 54; the walkthrough held under its lines; Zoom and Slack a little lower (dense speech); the morning's dreamy part and its fill; the rise held under p11 (111.6 to 114.0) and opened for the finale as the lights come on (114.0 to 114.5); Draft 3's own ending level under p12 and the end card",
+ "eq": {
+  "highpass_hz": 30,
+  "low_shelf": [
+   100,
+   -4.0
+  ],
+  "high_shelf": [
+   6000,
+   2.0
+  ]
+ },
+ "end": {
+  "silent_by_s": 119.6,
+  "fade_s": 1.0
+ },
+ "peak_dbfs": -1.5,
+ "seconds": 120.0,
+ "out": "demo-video/film/audio/music/bed-blended-v2.wav",
+ "crossfade_ms": 15,
+ "limit": {
+  "reduce_peaks_db": 4.0,
+  "attack_ms": 1.5,
+  "release_ms": 80
+ }
+}

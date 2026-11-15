@@ -1,0 +1,921 @@
+{
+ "about": "WP7, the blended video with Tag (DESIGN V24): Draft 3's story with the Tag walkthrough as its main demo part. Times are film seconds. Written by cuts/_blend/make_cut.py (edit that, not this file). Draft 3's own shots.json is untouched.",
+ "fps": 30,
+ "width": 1920,
+ "height": 1080,
+ "seconds": 119.6,
+ "bpm": 120,
+ "scenes_ready": [
+  "endcard",
+  "pushin"
+ ],
+ "overlays_ready": [
+  "chips",
+  "notes"
+ ],
+ "names": {
+  "employee": "Ram",
+  "peer": "Ram's AI Peer",
+  "night_time": "1:58 AM",
+  "peer_face": "assets/screens/peer-face-tag.png",
+  "mascot": "tag",
+  "about": "The Peer is the version's mascot (V24): its face on the hook's cards, the Zoom tile and Slack; the mascot itself over the plates."
+ },
+ "parts": [
+  {
+   "id": "hook",
+   "title": "The hook",
+   "start": 0.0,
+   "length": 14.0
+  },
+  {
+   "id": "entrance",
+   "title": "The entrance",
+   "start": 14.0,
+   "length": 8.0
+  },
+  {
+   "id": "walkthrough",
+   "title": "The walkthrough",
+   "start": 22.0,
+   "length": 53.0
+  },
+  {
+   "id": "night",
+   "title": "The night",
+   "start": 75.0,
+   "length": 29.6
+  },
+  {
+   "id": "morning",
+   "title": "The morning",
+   "start": 104.6,
+   "length": 10.6
+  },
+  {
+   "id": "close",
+   "title": "The close",
+   "start": 115.2,
+   "length": 4.4
+  }
+ ],
+ "slots": [
+  {
+   "id": "hook-1",
+   "part": "hook",
+   "start": 0.0,
+   "length": 3.5,
+   "kind": "ai",
+   "shows": "Daytime, a bright office. A colleague looks up from her phone, surprised: Ram's AI Peer has answered her, and it is 2 AM where he lives.",
+   "line": "h1",
+   "clip": "assets/shots/hook-1-ram-r1.mp4",
+   "own_clip": true,
+   "in_s": 0.4,
+   "line_in_s": 0.86,
+   "card": {
+    "side": "left",
+    "at": 0.9,
+    "text": "Yes, the numbers are final. The sheet is in our team folder."
+   }
+  },
+  {
+   "id": "hook-2",
+   "part": "hook",
+   "start": 3.5,
+   "length": 4.5,
+   "kind": "ai",
+   "shows": "Late afternoon, another city, a small meeting room. A colleague reads his update, surprised and pleased: Ram is out of office, and his AI Peer sent it.",
+   "line": "h2",
+   "clip": "assets/shots/hook-2-ram-r1.mp4",
+   "own_clip": true,
+   "in_s": 0.4,
+   "line_in_s": 0.86,
+   "card": {
+    "side": "right",
+    "at": 1.4,
+    "text": "Your update: the new screens are done, and the review is now on Thursday."
+   }
+  },
+  {
+   "id": "hook-3",
+   "part": "hook",
+   "start": 8.0,
+   "length": 2.0,
+   "kind": "ai",
+   "shows": "Evening, a third place, a home desk under a lamp. A colleague leans back, half laughing, and asks if he ever sleeps.",
+   "line": "h3",
+   "clip": "assets/shots/hook-3-final-v1.mp4"
+  },
+  {
+   "id": "hook-sleeper",
+   "part": "hook",
+   "start": 10.0,
+   "length": 4.0,
+   "kind": "ai",
+   "shows": "Ram asleep; the phone on the bedside table lights up and the mascot climbs out of it, looks at him, and hops away toward the desk.",
+   "clip": "assets/shots/hook-sleeper-lit-v1.mp4",
+   "sleeper_label": true,
+   "in_s": 1.8,
+   "rate": 0.8,
+   "mascot": {
+    "s": 0.57,
+    "anchor": [
+     [
+      2.25,
+      [
+       385,
+       975,
+       1.0
+      ]
+     ],
+     [
+      3.875,
+      [
+       360,
+       1005,
+       1.077
+      ]
+     ]
+    ],
+    "start": [
+     395,
+     1100,
+     0
+    ],
+    "moves": [
+     {
+      "t0": 2.45,
+      "t1": 2.9,
+      "to": [
+       395,
+       966,
+       0
+      ],
+      "h": 0,
+      "kind": "glide",
+      "step": false
+     },
+     {
+      "t0": 3.45,
+      "t1": 3.9,
+      "to": [
+       470,
+       1110,
+       0
+      ],
+      "h": 0,
+      "kind": "glide",
+      "step": false
+     }
+    ],
+    "look": [
+     [
+      2.5,
+      [
+       0.3,
+       -0.7
+      ]
+     ],
+     [
+      2.9,
+      [
+       0.7,
+       -0.8
+      ]
+     ],
+     [
+      3.3,
+      [
+       1,
+       0.3
+      ]
+     ]
+    ],
+    "happy": [
+     [
+      3.1,
+      0
+     ],
+     [
+      3.3,
+      0.8
+     ]
+    ],
+    "blinks": [
+     3.2
+    ],
+    "badge": [
+     [
+      2.4,
+      0
+     ],
+     [
+      2.65,
+      1
+     ],
+     [
+      3.3,
+      0.3
+     ]
+    ],
+    "glow": 0.65,
+    "light": 0.65,
+    "shadow": 0.4,
+    "trail": [],
+    "eyes": [
+     [
+      2.95,
+      0
+     ],
+     [
+      3.1,
+      1.3
+     ],
+     [
+      3.22,
+      1
+     ]
+    ],
+    "legs": [
+     [
+      3.08,
+      0
+     ],
+     [
+      3.3,
+      1
+     ],
+     [
+      3.36,
+      1
+     ],
+     [
+      3.46,
+      0
+     ]
+    ],
+    "clip": [
+     [
+      -400,
+      -400
+     ],
+     [
+      2400,
+      -400
+     ],
+     [
+      2400,
+      968
+     ],
+     [
+      -400,
+      968
+     ]
+    ]
+   }
+  },
+  {
+   "id": "entrance-room",
+   "part": "entrance",
+   "start": 14.0,
+   "length": 1.8,
+   "kind": "ai",
+   "own_clip": true,
+   "clip": "cuts/_blend/plates/night-room-v1.mp4",
+   "clip_seconds": 4.0,
+   "mascot": {
+    "s": 0.3,
+    "start": [
+     150,
+     832,
+     0
+    ],
+    "fade": [
+     [
+      0,
+      0
+     ]
+    ],
+    "glow": 0,
+    "light": 0,
+    "shadow": 0,
+    "moves": [
+     {
+      "t0": 0.15,
+      "t1": 1.25,
+      "to": [
+       1590,
+       626,
+       0
+      ],
+      "h": 300,
+      "kind": "glide",
+      "step": false
+     }
+    ],
+    "ribbon": {
+     "t0": 0.15,
+     "t1": 1.25,
+     "lead": 0.3,
+     "fade": 0.45
+    },
+    "wake": {
+     "at": 1.2,
+     "dur": 0.5,
+     "quad": [
+      [
+       1530,
+       618
+      ],
+      [
+       1662,
+       620
+      ],
+      [
+       1664,
+       646
+      ],
+      [
+       1526,
+       644
+      ]
+     ],
+     "dark": false
+    }
+   },
+   "push": {
+    "to_scale": 1.05,
+    "fx": 0.62,
+    "fy": 0.62
+   },
+   "shows": "The dark room: a streak of the phone's light runs to the shut laptop, which glows."
+  },
+  {
+   "id": "entrance-desk",
+   "part": "entrance",
+   "start": 15.8,
+   "length": 4.2,
+   "kind": "ai",
+   "own_clip": true,
+   "clip": "cuts/_blend/plates/night-desk-v1.mp4",
+   "clip_seconds": 4.0,
+   "mascot": {
+    "s": 0.45,
+    "clip": [
+     [
+      1293,
+      486
+     ],
+     [
+      1475,
+      504
+     ],
+     [
+      1383,
+      757
+     ],
+     [
+      1211,
+      718
+     ]
+    ],
+    "start": [
+     1150,
+     722,
+     0
+    ],
+    "moves": [
+     {
+      "t0": 0.7,
+      "t1": 1.35,
+      "to": [
+       1312,
+       694,
+       0
+      ],
+      "h": 0,
+      "kind": "glide"
+     }
+    ],
+    "wake": {
+     "at": 0.2,
+     "dur": 0.55,
+     "quad": [
+      [
+       1293,
+       486
+      ],
+      [
+       1475,
+       504
+      ],
+      [
+       1383,
+       757
+      ],
+      [
+       1211,
+       718
+      ]
+     ]
+    },
+    "look": [
+     [
+      1.3,
+      [
+       1,
+       0
+      ]
+     ],
+     [
+      1.5,
+      [
+       0,
+       0.1
+      ]
+     ]
+    ],
+    "happy": [
+     [
+      1.4,
+      0.5
+     ],
+     [
+      1.7,
+      0.95
+     ]
+    ],
+    "wave": [
+     [
+      1.8,
+      3.0
+     ]
+    ],
+    "blinks": [
+     2.4
+    ],
+    "badge": [
+     [
+      1.5,
+      1
+     ],
+     [
+      3.0,
+      0.4
+     ]
+    ],
+    "glow": 0.45,
+    "light": 0.35,
+    "shadow": 0
+   },
+   "camera": {
+    "to_scale": 1.15
+   },
+   "shows": "The laptop's screen wakes; the tag walks in at its edge, inside the screen, and says it is Ram's AI Peer.",
+   "rate": 0.952
+  },
+  {
+   "id": "entrance-pushin",
+   "part": "entrance",
+   "start": 20.0,
+   "length": 2.0,
+   "kind": "code",
+   "scene": "pushin",
+   "clip": null,
+   "hand_quads": {
+    "about": "The lit screen's corners in night-desk-v1.mp4, clockwise from the top left, as fractions of the frame.",
+    "night-desk-v1.mp4": [
+     [
+      0.6734,
+      0.45
+     ],
+     [
+      0.7682,
+      0.4667
+     ],
+     [
+      0.7203,
+      0.7009
+     ],
+     [
+      0.6307,
+      0.6648
+     ]
+    ]
+   },
+   "mascot": {
+    "s": 0.45,
+    "clip": [
+     [
+      1293,
+      486
+     ],
+     [
+      1475,
+      504
+     ],
+     [
+      1383,
+      757
+     ],
+     [
+      1211,
+      718
+     ]
+    ],
+    "start": [
+     1312,
+     694,
+     0
+    ],
+    "look": [
+     [
+      0,
+      [
+       0,
+       0.1
+      ]
+     ],
+     [
+      0.6,
+      [
+       0.3,
+       -0.2
+      ]
+     ]
+    ],
+    "happy": [
+     [
+      0,
+      0.8
+     ]
+    ],
+    "glow": 0.45,
+    "light": 0.3,
+    "shadow": 0
+   },
+   "shows": "The camera goes into the screen, where the tag already is."
+  },
+  {
+   "id": "walk-click",
+   "part": "walkthrough",
+   "start": 22.0,
+   "length": 2.7,
+   "kind": "ai",
+   "own_clip": true,
+   "clip": "../ui-concepts/renders/tag-clean.mp4",
+   "clip_seconds": 71.0,
+   "in_s": 2.8,
+   "rate": 1.0,
+   "shows": "The Tag walkthrough: click."
+  },
+  {
+   "id": "walk-setup",
+   "part": "walkthrough",
+   "start": 24.7,
+   "length": 18.7,
+   "kind": "ai",
+   "own_clip": true,
+   "clip": "../ui-concepts/renders/tag-clean.mp4",
+   "clip_seconds": 71.0,
+   "in_s": 5.5,
+   "rate": 1.043,
+   "shows": "The Tag walkthrough: setup.",
+   "labels": [
+    {
+     "at": 5.9,
+     "length": 3.6,
+     "text": "Slack, Code and Tickets: connect once, with your own sign-in"
+    },
+    {
+     "at": 14.2,
+     "length": 2.5,
+     "text": "It writes up what it found, with a source for each fact"
+    },
+    {
+     "at": 16.9,
+     "length": 1.7,
+     "text": "Then it drafts your first brief"
+    }
+   ]
+  },
+  {
+   "id": "walk-learned",
+   "part": "walkthrough",
+   "start": 43.4,
+   "length": 6.8,
+   "kind": "ai",
+   "own_clip": true,
+   "clip": "../ui-concepts/renders/tag-clean.mp4",
+   "clip_seconds": 71.0,
+   "in_s": 25.0,
+   "rate": 1.029,
+   "shows": "The Tag walkthrough: learned."
+  },
+  {
+   "id": "walk-brief",
+   "part": "walkthrough",
+   "start": 50.2,
+   "length": 7.2,
+   "kind": "ai",
+   "own_clip": true,
+   "clip": "../ui-concepts/renders/tag-clean.mp4",
+   "clip_seconds": 71.0,
+   "in_s": 32.0,
+   "rate": 1.042,
+   "shows": "The Tag walkthrough: brief."
+  },
+  {
+   "id": "walk-ask",
+   "part": "walkthrough",
+   "start": 57.4,
+   "length": 10.2,
+   "kind": "ai",
+   "own_clip": true,
+   "clip": "../ui-concepts/renders/tag-clean.mp4",
+   "clip_seconds": 71.0,
+   "in_s": 39.5,
+   "rate": 1.029,
+   "shows": "The Tag walkthrough: ask."
+  },
+  {
+   "id": "walk-rules",
+   "part": "walkthrough",
+   "start": 67.6,
+   "length": 7.4,
+   "kind": "ai",
+   "own_clip": true,
+   "clip": "../ui-concepts/renders/tag-clean.mp4",
+   "clip_seconds": 71.0,
+   "in_s": 50.0,
+   "rate": 1.014,
+   "shows": "The Tag walkthrough: rules."
+  },
+  {
+   "id": "proof-meeting",
+   "part": "night",
+   "start": 75.0,
+   "length": 21.6,
+   "kind": "product",
+   "scene": "product",
+   "clock": "2 AM",
+   "clip": null,
+   "shows": "Draft 3's Zoom meeting at 2 AM: the Peer joins as a labelled AI, gives Ram's update, and leaves Brazil to Ram."
+  },
+  {
+   "id": "proof-slack",
+   "part": "night",
+   "start": 96.6,
+   "length": 8.0,
+   "kind": "product",
+   "scene": "product",
+   "clock": "4 AM",
+   "clip": null,
+   "shows": "Draft 3's Slack at 4 AM: Daniel's question, answered with its sources, no promise made."
+  },
+  {
+   "id": "morning-wake",
+   "part": "morning",
+   "start": 104.6,
+   "length": 2.6,
+   "kind": "ai",
+   "shows": "The same room at sunrise, warm light through the window. He wakes rested, sits up and picks up his phone.",
+   "clip": "assets/shots/morning-wake-final-v3.mp4",
+   "in_s": 1.5,
+   "rate": 1.2,
+   "mascot": {
+    "s": 0.33,
+    "start": [
+     1495,
+     634,
+     0
+    ],
+    "look": [
+     [
+      0,
+      [
+       -1,
+       0
+      ]
+     ]
+    ],
+    "happy": [
+     [
+      0,
+      0.7
+     ]
+    ],
+    "wave": [
+     [
+      0.6,
+      2.3
+     ]
+    ],
+    "blinks": [
+     0.4,
+     1.9
+    ],
+    "glow": 0.25,
+    "light": 0.15,
+    "shadow": 0.5,
+    "badge": [
+     [
+      0,
+      0.3
+     ]
+    ]
+   }
+  },
+  {
+   "id": "morning-product-brief",
+   "part": "morning",
+   "start": 107.2,
+   "length": 4.4,
+   "kind": "product",
+   "scene": "product",
+   "clip": null,
+   "shows": "Draft 3's morning brief on Ram's phone: what the Peer did, what it learned, the one decision."
+  },
+  {
+   "id": "morning-brief",
+   "part": "morning",
+   "start": 111.6,
+   "length": 3.6,
+   "kind": "ai",
+   "shows": "Ram reads the brief and decides with one tap; the mascot, perched on his phone, waves and goes back into it.",
+   "clip": "assets/shots/morning-brief-final-v4.mp4",
+   "in_s": 1.4,
+   "mascot": {
+    "s": 0.372,
+    "anchor": [
+     [
+      0.1,
+      [
+       634,
+       486,
+       1.0
+      ]
+     ],
+     [
+      3.4,
+      [
+       626,
+       488,
+       1.0
+      ]
+     ]
+    ],
+    "start": [
+     -160,
+     760,
+     0
+    ],
+    "moves": [
+     {
+      "t0": 0.12,
+      "t1": 0.74,
+      "to": [
+       636,
+       484,
+       0
+      ],
+      "h": 230,
+      "kind": "hop"
+     }
+    ],
+    "dive": {
+     "at": 2.82,
+     "dur": 0.4,
+     "to": [
+      628,
+      560
+     ]
+    },
+    "look": [
+     [
+      0.7,
+      [
+       0.3,
+       -0.3
+      ]
+     ],
+     [
+      0.9,
+      [
+       0.9,
+       -0.7
+      ]
+     ],
+     [
+      2.5,
+      [
+       0.9,
+       -0.6
+      ]
+     ],
+     [
+      2.7,
+      [
+       0,
+       0.6
+      ]
+     ]
+    ],
+    "happy": [
+     [
+      0.8,
+      0.5
+     ],
+     [
+      1.0,
+      0.95
+     ]
+    ],
+    "wave": [
+     [
+      1.1,
+      2.2
+     ]
+    ],
+    "blinks": [
+     1.7
+    ],
+    "badge": [
+     [
+      0.8,
+      0.3
+     ],
+     [
+      2.75,
+      1
+     ]
+    ],
+    "glow": 0.35,
+    "light": 0.25,
+    "shadow": 0.3,
+    "trail": [
+     [
+      0.12,
+      0.74
+     ]
+    ],
+    "legs": [
+     [
+      2.6,
+      1
+     ],
+     [
+      2.76,
+      0
+     ]
+    ],
+    "eyes": [
+     [
+      2.64,
+      1
+     ],
+     [
+      2.8,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "close-endcard",
+   "part": "close",
+   "start": 115.2,
+   "length": 4.4,
+   "kind": "code",
+   "scene": "endcard",
+   "clip": null,
+   "shows": "The AI Peer mark, the line \"More room for your best work.\", and \"Built for real this week\"."
+  }
+ ],
+ "narration": {
+  "about": "Where each spoken line starts, in film seconds.",
+  "h1": 0.46,
+  "h2": 3.96,
+  "h3": 8.4,
+  "p01": 10.3,
+  "p02": 17.35,
+  "n01": 22.2,
+  "n02": 25.0,
+  "p03": 34.6,
+  "n03": 44.0,
+  "n04": 50.8,
+  "n05": 57.8,
+  "n06": 63.8,
+  "p05": 68.4,
+  "n07": 70.5,
+  "m1": 76.9,
+  "m2": 82.7,
+  "m3": 90.3,
+  "m4": 93.45,
+  "p06": 98.4,
+  "p08": 104.9,
+  "p10": 107.6,
+  "p11": 111.9,
+  "p12": 115.6
+ }
+}

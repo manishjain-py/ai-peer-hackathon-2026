@@ -26,6 +26,17 @@ from pathlib import Path
 FILM = Path(__file__).resolve().parents[2]
 WHICH = sys.argv[1] if len(sys.argv) > 1 else "little-peer"
 CUT = f"blended-{WHICH}"
+# WP7 v2: --idea <x> writes a transition idea instead (cuts/_blend/ideas.py) as cuts/idea-<version>-<x>/
+IDEA = sys.argv[sys.argv.index("--idea") + 1] if "--idea" in sys.argv else None
+if IDEA:
+    CUT = f"idea-{WHICH}-{IDEA}"
+# WP7 v2 (V27, V28, V29): --v2 writes the Tag blend's version 2 as cuts/blended-tag-v2/ (the "v2" block
+# below); without it every output is as before.
+V2 = "--v2" in sys.argv
+if V2:
+    if WHICH != "tag" or IDEA:
+        raise SystemExit("v2 is the Tag blend only (V28), without --idea")
+    CUT = f"blended-{WHICH}-v2"
 OUT = FILM / "cuts" / CUT
 r3 = lambda x: round(x + 1e-9, 3)
 
@@ -175,12 +186,8 @@ def keep(id_, **kw):
     s.update(kw)
     return s
 
-slots = [
-    keep("hook-1", start=0.0, length=3.5),
-    keep("hook-2", start=3.5, length=4.5),
-    keep("hook-3", start=8.0, length=2.0),
-    keep("hook-sleeper", start=10.0, length=4.0, in_s=1.8, rate=0.8, mascot=MASCOT["hook-sleeper"],
-         shows="Ram asleep; the phone on the bedside table lights up and the mascot climbs out of it, looks at him, and hops away toward the desk."),
+HOOK_M, HOOK_EXTRA, P02 = MASCOT["hook-sleeper"], {}, None
+ENTRANCE = [
     slot("entrance-room", "entrance", 14.0, 3.0, kind="ai", own_clip=True, clip="cuts/_blend/plates/night-room-v1.mp4", clip_seconds=4.0,
          push={"to_scale": 1.06, "fx": 0.78, "fy": 0.58}, mascot=MASCOT["entrance-room"],
          shows="The dark room (the still night-phone-lit.png): the mascot hops from the phone over the bed to the desk, a trail of light behind it."),
@@ -191,6 +198,19 @@ slots = [
          hand_quads={"about": "The lit screen's corners in night-desk-v1.mp4, clockwise from the top left, as fractions of the frame (measured by its brightness).",
                      "night-desk-v1.mp4": QUAD},
          shows="The camera follows the mascot through the laptop's screen into the product."),
+]
+if IDEA or V2:
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import ideas
+    HOOK_M, HOOK_EXTRA, ENTRANCE, P02 = ideas.make(WHICH, IDEA or "c", MASCOT, QUAD, slot)
+
+slots = [
+    keep("hook-1", start=0.0, length=3.5),
+    keep("hook-2", start=3.5, length=4.5),
+    keep("hook-3", start=8.0, length=2.0),
+    keep("hook-sleeper", start=10.0, length=4.0, in_s=1.8, rate=0.8, mascot=HOOK_M, **HOOK_EXTRA,
+         shows="Ram asleep; the phone on the bedside table lights up and the mascot climbs out of it, looks at him, and hops away toward the desk."),
+    *ENTRANCE,
 ]
 for sid, start, length, t_in, rate in V["walk"]:
     s = slot(sid, "walkthrough", start, length, kind="ai", own_clip=True, clip=V["clip"], clip_seconds=V["clip_seconds"], in_s=t_in, rate=rate,
@@ -220,6 +240,8 @@ NARRATION = {
     "n01": 22.2, "n02": 25.0, "p03": 34.6, "n03": 44.0, "n04": 50.8, "n05": 57.8, "n06": 63.8, "p05": 68.4, "n07": 70.5,
     "m1": 76.9, "m2": 82.7, "m3": 90.3, "m4": 93.45, "p06": 98.4, "p08": 104.9, "p10": 107.6, "p11": 111.9, "p12": 115.6,
 }
+if P02 is not None:
+    NARRATION["p02"] = P02
 NEW_LINES = [
     ("n01", "Setting me up takes one click.", None),
     ("n02", "I read only what Ram can already see, signed in as him.", "I read only what Rahm can already see, signed in as him."),
@@ -232,6 +254,12 @@ NEW_LINES = [
 PART_OF = {"h1": "hook", "h2": "hook", "h3": "hook", "p01": "hook", "p02": "entrance", "p03": "walkthrough", "p05": "walkthrough",
            "m1": "night", "m2": "night", "m3": "night", "m4": "night", "p06": "night", "p08": "morning", "p10": "morning",
            "p11": "morning", "p12": "close"}
+
+NEW_META = {}
+if V2:
+    import v2
+    SECONDS, PARTS, slots, NARRATION, NEW_META = v2.timeline(slots, NARRATION, NEW_LINES, LABELS, MASCOT, V, slot, keep, d3, r3)
+    PART_OF["p11"] = "close"   # over the globe now
 
 shots = {
     "about": f"WP7, the blended video with {V['title']} (DESIGN V24): Draft 3's story with the {V['title']} walkthrough as its main demo part. "
@@ -265,6 +293,8 @@ sl["camera"] = [{"t": 0, "s": 1, "fx": 0.5, "fy": 0.5}, {"t": 2.8, "s": 1, "fx":
 br["scroll"] = [{"t": 0, "y": 0}, {"t": 0.6, "y": 0}, {"t": 1.5, "y": 330}, {"t": 2.2, "y": 330}, {"t": 3.0, "y": 700}]
 br["highlight"] = [2.9, 4.4]
 sc["slots"] = {"proof-meeting": z, "proof-slack": sl, "morning-product-brief": br}
+if V2:
+    v2.screens(sc, r3)
 
 # ------------------------------------------------------------------ the lines: Draft 3's reused, new ones made
 by_id = {l["id"]: l for l in script["lines"]}
@@ -279,6 +309,7 @@ for lid in sorted(NARRATION, key=lambda k: NARRATION[k]):
         l = {"id": lid, "part": "walkthrough", "speaker": "peer", "text": text}
         if spoken:
             l["spoken"] = spoken
+        l.update(NEW_META.get(lid, {}))
     lines.append(l)
 sc_script = {k: v for k, v in script.items() if k not in ("lines", "samples")}
 sc_script["about"] = ("WP7: the blended video's spoken script. Lines marked reuse are Draft 3's own audio (audio/lines/), never made again; "
@@ -321,6 +352,11 @@ cut = {
         {"from": "../../../ui-concepts/shared/kit.js", "to": "src/mascot/shared/kit.js"},
     ],
 }
+
+if V2:
+    v2.mix_and_cut(m, cut, moved, r3)
+    shots["about"] = ("WP7 v2, the Tag blend's version 2 (DESIGN V27, V28, V29): " + shots["about"])
+    shots["scenes_ready"] = shots["scenes_ready"] + ["earth", "tagbrief"]
 
 OUT.mkdir(parents=True, exist_ok=True)
 for name, data in (("cut.json", cut), ("shots.json", shots), ("screens.json", sc), ("script.json", sc_script), ("mix.json", m)):
