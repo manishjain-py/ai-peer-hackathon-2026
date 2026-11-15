@@ -7,7 +7,20 @@ PID 14002, https://claude.ai/code/session_01Nfn5hAQtMCLhcAz7Z5MUzm, transcript
 3977, PID 35776) was closed at 13:24 UTC.
 Other sessions message the controller by its name.
 
-## Where we are (2026-11-15 16:37 UTC)
+## Where we are (2026-11-15 16:48 UTC)
+
+**16:48 UTC: WP7's plan is approved** (its message at about 16:50 UTC; context 13%, $0.00).
+Both blends share one skeleton, about 1:59: the hook with the three colleagues (13 s); the
+mascot out of the bedside phone, by code over the film's night plates (9 s); the product
+walkthrough, the main part (53 s: the setup steps, What I learned, the brief, Ask, the rules;
+p03 plus about six new lines in the same voice); Zoom at 2 AM (21 s, the mascot's face on
+its tile); Slack at 4 AM (8 s); the morning brief and the mascot back into the phone (10 s);
+the end card. Cut from Draft 3: Ram's look (the double), the big world of information (its
+one change stays in the briefs), the Earth, line p07. Each blend is its own config under a new
+`--cut` option; without it the build makes Draft 3 exactly as now (proved before and after).
+The tag walkthrough is rebuilt by code in `demo-video/ui-concepts/tag/` with Ram's made-up
+data, the film's stretch first. The controller's notes: deliver Little Peer as soon as it is
+done; name each cut, the big world plainly (Manish asked for it in V20).
 
 **16:41 UTC: the repo is complete for a fresh Mac (V25).** `START-HERE.md` at the root
 (what is where, the tags, setting up a Mac, taking over as the controller, how we work, what
