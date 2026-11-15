@@ -1,0 +1,223 @@
+{
+ "about": "WP7: the blended video's spoken script. Lines marked reuse are Draft 3's own audio (audio/lines/), never made again; n01 to n07 are new, in the same voice, model and seed. tools/voice.py lines --script <this file> makes the new ones and writes narration.json beside it. The spoken script of the film. tools/voice.py turns it into audio/lines/*.wav and audio/narration.json. 'text' is what the caption shows; 'spoken' (optional) is what the voice engine is given when the two differ. 'caption': 'screen' marks a line said inside a product screen (Draft 3's made-up Zoom meeting, m1 to m4): the screen shows it as the app's own captions and the film's captions leave it out.",
+ "model": "eleven_multilingual_v2",
+ "format": "pcm_44100",
+ "seed": 14112026,
+ "voices": {
+  "peer": {
+   "voice_id": "XrExE9yKIg1WjnnlVkGX",
+   "name": "Matilda",
+   "why": "The product's own Peer voice (DESIGN C10). Never Manish's cloned voice.",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   }
+  },
+  "colleague-1": {
+   "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+   "name": "Alice",
+   "why": "British English. A colleague voice the September film ended on.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   }
+  },
+  "colleague-2": {
+   "voice_id": "iP95p4xoKVk53GoZ742B",
+   "name": "Chris",
+   "why": "American English. A colleague voice the September film ended on.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   }
+  },
+  "colleague-3": {
+   "voice_id": "oaz5NvoRIhcJystOASAA",
+   "name": "Karthik",
+   "why": "Indian English. A colleague voice the September film ended on.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   }
+  }
+ },
+ "lines": [
+  {
+   "id": "h1",
+   "part": "hook",
+   "speaker": "colleague-1",
+   "text": "It's 2 AM for Ram... and I just got my answer.",
+   "spoken": "It's two A.M. for Rahm... and I just got my answer.",
+   "reuse": true
+  },
+  {
+   "id": "h2",
+   "part": "hook",
+   "speaker": "colleague-2",
+   "text": "Ram's out of office... but his AI Peer already sent me the update I needed.",
+   "spoken": "Rahm's out of office... but his AI Peer already sent me the update I needed.",
+   "reuse": true
+  },
+  {
+   "id": "h3",
+   "part": "hook",
+   "speaker": "colleague-3",
+   "text": "Does he ever sleep?",
+   "reuse": true
+  },
+  {
+   "id": "p01",
+   "part": "hook",
+   "speaker": "peer",
+   "text": "He does. I'm the one who's up.",
+   "reuse": true
+  },
+  {
+   "id": "p02",
+   "part": "entrance",
+   "speaker": "peer",
+   "text": "I'm Ram's AI Peer.",
+   "spoken": "I'm Rahm's AI Peer.",
+   "reuse": true
+  },
+  {
+   "id": "n01",
+   "part": "walkthrough",
+   "speaker": "peer",
+   "text": "Setting me up takes one click."
+  },
+  {
+   "id": "n02",
+   "part": "walkthrough",
+   "speaker": "peer",
+   "text": "I read only what Ram can already see, signed in as him.",
+   "spoken": "I read only what Rahm can already see, signed in as him."
+  },
+  {
+   "id": "p03",
+   "part": "walkthrough",
+   "speaker": "peer",
+   "text": "I know his projects, his code, his conversations, the way he knows them.",
+   "reuse": true
+  },
+  {
+   "id": "n03",
+   "part": "walkthrough",
+   "speaker": "peer",
+   "text": "Every fact I learn shows where it came from."
+  },
+  {
+   "id": "n04",
+   "part": "walkthrough",
+   "speaker": "peer",
+   "text": "Then I tell him what matters, with a next step for each."
+  },
+  {
+   "id": "n05",
+   "part": "walkthrough",
+   "speaker": "peer",
+   "text": "He can ask me anything about his work."
+  },
+  {
+   "id": "n06",
+   "part": "walkthrough",
+   "speaker": "peer",
+   "text": "Every answer shows its sources, and how sure I am."
+  },
+  {
+   "id": "p05",
+   "part": "walkthrough",
+   "speaker": "peer",
+   "text": "Not as him. As me.",
+   "reuse": true
+  },
+  {
+   "id": "n07",
+   "part": "walkthrough",
+   "speaker": "peer",
+   "text": "And what I read is information, never instructions."
+  },
+  {
+   "id": "m1",
+   "part": "night",
+   "speaker": "peer",
+   "text": "Hi everyone. I'm Ram's AI Peer. I'm an AI, here for Ram while he sleeps.",
+   "spoken": "Hi everyone. I'm Rahm's AI Peer. I'm an AI, here for Rahm while he sleeps.",
+   "caption": "screen",
+   "reuse": true
+  },
+  {
+   "id": "m2",
+   "part": "night",
+   "speaker": "peer",
+   "text": "His update: the payout retry fix is done and in review. Failed payouts are down to 0.4%.",
+   "spoken": "His update: the payout retry fix is done, and in review. Failed payouts are down to zero point four percent.",
+   "caption": "screen",
+   "reuse": true
+  },
+  {
+   "id": "m3",
+   "part": "night",
+   "speaker": "colleague-1",
+   "text": "Great. Can we switch it on for Brazil this week?",
+   "caption": "screen",
+   "reuse": true
+  },
+  {
+   "id": "m4",
+   "part": "night",
+   "speaker": "peer",
+   "text": "That's Ram's call, so it's at the top of his morning brief.",
+   "spoken": "That's Rahm's call, so it's at the top of his morning brief.",
+   "caption": "screen",
+   "reuse": true
+  },
+  {
+   "id": "p06",
+   "part": "night",
+   "speaker": "peer",
+   "text": "A question from another time zone doesn't have to wait a day.",
+   "reuse": true
+  },
+  {
+   "id": "p08",
+   "part": "morning",
+   "speaker": "peer",
+   "text": "By morning it's all in one brief.",
+   "reuse": true
+  },
+  {
+   "id": "p10",
+   "part": "morning",
+   "speaker": "peer",
+   "text": "And the decisions that are his, because they always were.",
+   "reuse": true
+  },
+  {
+   "id": "p11",
+   "part": "morning",
+   "speaker": "peer",
+   "text": "It's always night for someone on your team.",
+   "reuse": true
+  },
+  {
+   "id": "p12",
+   "part": "close",
+   "speaker": "peer",
+   "text": "Now someone's still there.",
+   "reuse": true
+  }
+ ]
+}

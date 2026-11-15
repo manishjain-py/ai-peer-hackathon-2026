@@ -10,6 +10,8 @@
 //   --at a,b,c          also write <name>-at.png: the frames at these seconds of the render, 320 px wide
 //   --workers N         renderer workers (default 4, so three renders can run side by side)
 //   --no-check          skip the page check (not advised: the renderer exits 0 on a dead page)
+//   --no-framing        no title card, corner tag, end card or captions (a clip for the film, WP7)
+//   --crf N             how hard the H.264 file is packed (default: draft 28, looks 23, delivery 20)
 //
 // A concept folder holds concept.json ({ number, title, line, change, seconds }), scene.js (the
 // scene module, see shared/runtime.js) and anything else it needs (style.css, assets). The build
@@ -29,7 +31,8 @@ function parse(argv) {
   for (let i = 0; i < argv.length; i++) {
     const k = argv[i];
     if (k === "--no-check") a.noCheck = true;
-    else if (["--from", "--to", "--quality", "--name", "--sheet", "--at", "--workers"].includes(k)) a[k.slice(2)] = argv[++i];
+    else if (k === "--no-framing") a.noFraming = true;
+    else if (["--from", "--to", "--quality", "--name", "--sheet", "--at", "--workers", "--crf"].includes(k)) a[k.slice(2)] = argv[++i];
     else if (k.startsWith("--")) throw new Error(`unknown option ${k}`);
     else a._.push(k);
   }
@@ -66,9 +69,11 @@ function preflight(project, tmp) {
   }
 }
 
-function build(concept) {
+function build(concept, { noFraming = false } = {}) {
   const src = path.join(HERE, concept);
   const meta = JSON.parse(fs.readFileSync(path.join(src, "concept.json"), "utf8"));
+  // --no-framing (WP7): no title card, corner tag, end card or captions, for a clip the film plays.
+  if (noFraming) meta.framing = false;
   for (const k of ["number", "title", "line", "seconds"]) if (meta[k] == null) throw new Error(`concept.json needs "${k}"`);
   if (!fs.existsSync(path.join(src, "scene.js"))) throw new Error(`${concept}/scene.js is missing`);
   const out = path.join(HERE, ".build", concept);
@@ -113,7 +118,7 @@ function main() {
   const args = parse(process.argv.slice(2));
   const concept = (args._[0] || "").replace(/\/+$/, "");
   if (!concept || !fs.existsSync(path.join(HERE, concept))) throw new Error(`name a concept folder in ${HERE}`);
-  const { out, meta } = build(concept);
+  const { out, meta } = build(concept, { noFraming: args.noFraming });
   const tmp = path.join(HERE, ".build", `${concept}-tmp`);
   fs.rmSync(tmp, { recursive: true, force: true });
   fs.mkdirSync(tmp, { recursive: true });
@@ -137,7 +142,7 @@ function main() {
   }
   // Every render is packed to H.264 yuv420p with fast start, so it plays everywhere; delivery is packed harder.
   const file = path.join(renders, `${name}.mp4`);
-  const crf = quality === "delivery" ? "20" : quality === "draft" ? "28" : "23";
+  const crf = args.crf || (quality === "delivery" ? "20" : quality === "draft" ? "28" : "23");
   execFileSync("ffmpeg", ["-hide_banner", "-nostdin", "-loglevel", "error", "-y", "-i", raw, "-c:v", "libx264", "-preset", "slow",
     "-crf", crf, "-pix_fmt", "yuv420p", "-profile:v", "high", "-movflags", "+faststart", "-an", file]);
   fs.rmSync(raw, { force: true });

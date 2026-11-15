@@ -9,7 +9,7 @@
   "overlays_ready": ["chips", "tag", "notes"],
   "names": { "employee": "Ram", "peer": "Ram's AI Peer", "night_time": "1:58 AM", "peer_face": "assets/screens/peer-face.png",
     "about": "Draft 2 (V17). Spoken as Rahm (audio/script.json, spoken). night_time is the sleeper's label in the hook; the night clock of the proof starts from it. peer_face (Draft 3, V20): the Peer's one face, Ram's portrait with the mark as a badge, on the hook's cards and the tag (the screens take it from screens.json)." },
-  "wp3_manifest": "/Users/manishjain/repos/ai-peer-video-wp3/demo-video/shots/manifest.json",
+  "wp3_manifest": "../shots/manifest.json",
   "parts": [
     { "id": "hook", "title": "The hook", "start": 0, "length": 15 },
     { "id": "reveal", "title": "The reveal", "start": 15, "length": 17 },

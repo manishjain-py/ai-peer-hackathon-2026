@@ -14,6 +14,8 @@
 //                          (for a helper working beside other renders)
 //            --with a,b    also use these scenes or overlays though shots.json does not list
 //                          them as ready yet
+//            --cut NAME    render another cut of the film (cuts/NAME/cut.json: its own timeline,
+//                          screens, lines and mix; WP7's blended videos); the file is NAME.mp4
 //
 // Steps: build the project (build.mjs) -> check that the page runs -> capture the picture with
 // HyperFrames (pinned) -> mix the sound with ffmpeg -> join -> probe and measure the result.
@@ -21,7 +23,7 @@ import { execFileSync, spawnSync } from "node:child_process";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { build, FILM, PRIVATE, runHome } from "./build.mjs";
+import { build, cutConfig, FILM, PRIVATE, runHome } from "./build.mjs";
 import { ffprobe, measure, mix, voiceOverMusic } from "./tools/mix.mjs";
 
 const HYPERFRAMES = "hyperframes@0.9.45";
@@ -34,7 +36,7 @@ function parse(argv) {
     else if (k === "--no-check") a.noCheck = true;
     else if (k === "--no-sound") a.noSound = true;
     else if (k === "--prove-guard") a.proveGuard = true;
-    else if (["--part", "--from", "--to", "--name", "--quality", "--workers", "--lane", "--with", "--crf"].includes(k)) a[k.slice(2)] = argv[++i];
+    else if (["--part", "--from", "--to", "--name", "--quality", "--workers", "--lane", "--with", "--crf", "--cut"].includes(k)) a[k.slice(2)] = argv[++i];
     else throw new Error(`unknown option ${k}`);
   }
   return a;
@@ -132,9 +134,10 @@ function main() {
   }
   const t0 = Date.now();
   if (args.lane && variant === "private") throw new Error("a private render has no lanes");
-  const b = build({ variant, lane: args.lane, withScenes: args.with ? args.with.split(",") : [] });
+  if (args.cut && variant === "private") throw new Error("a cut is a public film: no private render of it");
+  const b = build({ variant, lane: args.lane, withScenes: args.with ? args.with.split(",") : [], cut: args.cut });
   const { film } = b;
-  const home = runHome(variant, args.lane);
+  const home = runHome(variant, args.lane, args.cut);
   const work = path.join(home, "work");
   const tmp = variant === "private" ? path.join(PRIVATE, "tmp") : undefined;
   const renders = variant === "private" || args.lane ? path.join(home, "renders") : path.join(FILM, "renders");
@@ -148,7 +151,7 @@ function main() {
   } else if (args.from != null || args.to != null) {
     from = Number(args.from ?? 0); to = Number(args.to ?? film.seconds); label = `-${from}-${to}`;
   }
-  const name = (args.name || (variant === "private" ? "film" : "film-slates")) + label;
+  const name = (args.name || (variant === "private" ? "film" : args.cut || "film-slates")) + label;
   const count = (u) => film.slots.filter((s) => s.use === u).length;
   console.log(`film: ${film.seconds} s, ${film.slots.length} slots (${count("clip")} clips, ${count("scene")} by code, ${count("slate")} slates), ${b.lines.length} spoken lines, ${variant}`);
   for (const n of b.notes) console.log("note: " + n);
@@ -172,7 +175,8 @@ function main() {
   }
 
   // ---- the sound -----------------------------------------------------------------------------------
-  const mixPath = path.join(FILM, "audio", "mix.json");
+  const C = cutConfig(args.cut);
+  const mixPath = C && C.mix ? C.mix : path.join(FILM, "audio", "mix.json");
   const cfg = fs.existsSync(mixPath) ? JSON.parse(fs.readFileSync(mixPath, "utf8")) : {};
   const abs = (p) => (path.isAbsolute(p) ? p : path.join(FILM, p));
   const plan = {

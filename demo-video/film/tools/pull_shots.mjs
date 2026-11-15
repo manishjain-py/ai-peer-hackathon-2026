@@ -19,12 +19,14 @@ const check = process.argv.includes("--check");
 
 const shotsText = fs.readFileSync(shotsPath, "utf8");
 const shots = JSON.parse(shotsText);
-if (!fs.existsSync(shots.wp3_manifest)) {
-  console.log(`no manifest at ${shots.wp3_manifest}: nothing to pull`);
+// A relative "wp3_manifest" is read from this film folder (the repo copy: ../shots/manifest.json).
+const manifestPath = path.resolve(FILM, shots.wp3_manifest);
+if (!fs.existsSync(manifestPath)) {
+  console.log(`no manifest at ${manifestPath}: nothing to pull`);
   process.exit(0);
 }
-const manifest = JSON.parse(fs.readFileSync(shots.wp3_manifest, "utf8"));
-const root = path.resolve(path.dirname(shots.wp3_manifest), "..", "..");   // WP3's worktree root
+const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+const root = path.resolve(path.dirname(manifestPath), "..", "..");   // the repo root (or WP3's worktree root)
 const pulled = { about: "Made by tools/pull_shots.mjs from WP3's manifest. Do not edit by hand.", manifest_updated_utc: manifest.updated_utc, slots: {} };
 let text = shotsText;
 const dest = path.join(FILM, "assets", "shots");

@@ -1,0 +1,94 @@
+{
+ "what": "n04",
+ "voice_id": "XrExE9yKIg1WjnnlVkGX",
+ "voice": "Matilda",
+ "model": "eleven_multilingual_v2",
+ "text": "Then I tell him what matters, with a next step for each.",
+ "spoken": "Then I tell him what matters, with a next step for each.",
+ "request_sha": "e77ae2c12e9eb2ee",
+ "request": {
+  "text": "Then I tell him what matters, with a next step for each.",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.6,
+   "similarity_boost": 0.75,
+   "style": 0,
+   "use_speaker_boost": true,
+   "speed": 1.0
+  },
+  "seed": 14112026,
+  "previous_text": "Every fact I learn shows where it came from.",
+  "next_text": "He can ask me anything about his work."
+ },
+ "request_id": "e9F1wO81rmOXCg4nLLoC",
+ "character_cost": "27",
+ "generated_utc": "2026-11-15 17:11:13",
+ "file": "n04.wav",
+ "seconds": 3.16,
+ "raw_seconds": 3.669,
+ "trimmed_front": 0.04,
+ "peak_dbfs": -1.07,
+ "rms_dbfs": -21.74,
+ "words": [
+  {
+   "w": "Then",
+   "s": 0.0,
+   "e": 0.146
+  },
+  {
+   "w": "I",
+   "s": 0.204,
+   "e": 0.227
+  },
+  {
+   "w": "tell",
+   "s": 0.308,
+   "e": 0.482
+  },
+  {
+   "w": "him",
+   "s": 0.552,
+   "e": 0.645
+  },
+  {
+   "w": "what",
+   "s": 0.691,
+   "e": 0.831
+  },
+  {
+   "w": "matters,",
+   "s": 0.889,
+   "e": 1.539
+  },
+  {
+   "w": "with",
+   "s": 1.69,
+   "e": 1.852
+  },
+  {
+   "w": "a",
+   "s": 1.887,
+   "e": 1.91
+  },
+  {
+   "w": "next",
+   "s": 1.969,
+   "e": 2.178
+  },
+  {
+   "w": "step",
+   "s": 2.212,
+   "e": 2.456
+  },
+  {
+   "w": "for",
+   "s": 2.526,
+   "e": 2.63
+  },
+  {
+   "w": "each.",
+   "s": 2.7,
+   "e": 3.629
+  }
+ ]
+}

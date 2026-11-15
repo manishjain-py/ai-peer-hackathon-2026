@@ -1,0 +1,94 @@
+{
+ "what": "n02",
+ "voice_id": "XrExE9yKIg1WjnnlVkGX",
+ "voice": "Matilda",
+ "model": "eleven_multilingual_v2",
+ "text": "I read only what Ram can already see, signed in as him.",
+ "spoken": "I read only what Rahm can already see, signed in as him.",
+ "request_sha": "12db777c938cb3fb",
+ "request": {
+  "text": "I read only what Rahm can already see, signed in as him.",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.6,
+   "similarity_boost": 0.75,
+   "style": 0,
+   "use_speaker_boost": true,
+   "speed": 1.0
+  },
+  "seed": 14112026,
+  "previous_text": "Setting me up takes one click.",
+  "next_text": "I know his projects, his code, his conversations, the way he knows them."
+ },
+ "request_id": "lLqVxODcfLhchLEBjO1Y",
+ "character_cost": "27",
+ "generated_utc": "2026-11-15 17:11:11",
+ "file": "n02.wav",
+ "seconds": 3.18,
+ "raw_seconds": 3.762,
+ "trimmed_front": 0.04,
+ "peak_dbfs": -2.64,
+ "rms_dbfs": -21.76,
+ "words": [
+  {
+   "w": "I",
+   "s": 0.0,
+   "e": 0.064
+  },
+  {
+   "w": "read",
+   "s": 0.157,
+   "e": 0.32
+  },
+  {
+   "w": "only",
+   "s": 0.378,
+   "e": 0.575
+  },
+  {
+   "w": "what",
+   "s": 0.622,
+   "e": 0.761
+  },
+  {
+   "w": "Ram",
+   "s": 0.808,
+   "e": 1.028
+  },
+  {
+   "w": "can",
+   "s": 1.086,
+   "e": 1.191
+  },
+  {
+   "w": "already",
+   "s": 1.237,
+   "e": 1.481
+  },
+  {
+   "w": "see,",
+   "s": 1.539,
+   "e": 1.934
+  },
+  {
+   "w": "signed",
+   "s": 2.143,
+   "e": 2.468
+  },
+  {
+   "w": "in",
+   "s": 2.514,
+   "e": 2.572
+  },
+  {
+   "w": "as",
+   "s": 2.619,
+   "e": 2.7
+  },
+  {
+   "w": "him.",
+   "s": 2.758,
+   "e": 3.722
+  }
+ ]
+}
