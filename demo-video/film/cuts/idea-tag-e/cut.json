@@ -1,0 +1,25 @@
+{
+ "about": "WP7: the blended video with Tag. Read by build.mjs and render.mjs (--cut idea-tag-e); written by cuts/_blend/make_cut.py.",
+ "shots": "shots.json",
+ "narration": "narration.json",
+ "screens": "screens.json",
+ "script": "script.json",
+ "mix": "mix.json",
+ "layers": [
+  "../_blend/layer"
+ ],
+ "copies": [
+  {
+   "from": "../../../ui-concepts/tag/mascot.js",
+   "to": "src/mascot/tag/mascot.js"
+  },
+  {
+   "from": "../../../ui-concepts/little-peer/motion-core.js",
+   "to": "src/mascot/little-peer/motion-core.js"
+  },
+  {
+   "from": "../../../ui-concepts/shared/kit.js",
+   "to": "src/mascot/shared/kit.js"
+  }
+ ]
+}

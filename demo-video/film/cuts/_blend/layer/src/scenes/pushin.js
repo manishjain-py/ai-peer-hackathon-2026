@@ -11,6 +11,7 @@
 // may also land on a clip (P.lands "clip", P.landing: that clip's first frame). The laptop then
 // shows that frame, it comes up through the light as the screen turns, and the push lands on it,
 // where the clip picks up. Everything else is the film's own push-in, unchanged.
+import { createMascot } from "../mascot/engine.js";
 import { el, show, ramp, ease, lerp, clamp, px } from "../lib.js";
 import { centre, area, pushLine } from "../camera.js";
 import { markSvg } from "../mark.js";
@@ -108,6 +109,13 @@ export async function create(slot, film) {
   // clip's frame and let it give way as the camera begins to move.
   const first = P.sharp ? await load(P.still) : null;
   if (first) room.append(first);
+  // WP7 v2: a mascot that stays in the room (it never dives in) rides the push with the room
+  const mascot = slot.mascot ? await createMascot(slot, film) : null;
+  const mwrap = mascot ? el("div.pmascot", {}, mascot.el) : null;
+  if (mwrap) {
+    Object.assign(mwrap.style, { position: "absolute", left: "0", top: "0", width: "1920px", height: "1080px", transformOrigin: "0 0" });
+    room.append(mwrap);
+  }
 
   // 3. the light of the screen, spilling
   const bloom = el("div.pbloom");
@@ -143,6 +151,7 @@ export async function create(slot, film) {
     // a little softness joins the exposures into one streak
     const soft = Math.min(7, (speed * SHUTTER * 520) / COPIES);
     room.style.filter = soft > 0.25 ? `blur(${soft.toFixed(2)}px)` : "none";
+    if (mwrap) { mwrap.style.transform = at(s); mascot.render(t); }
     if (first) {
       first.style.transform = at(s);
       first.style.opacity = 1 - ease.inOut(ramp(u, 0, 0.32));

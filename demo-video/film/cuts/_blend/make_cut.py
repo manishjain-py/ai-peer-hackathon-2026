@@ -26,6 +26,10 @@ from pathlib import Path
 FILM = Path(__file__).resolve().parents[2]
 WHICH = sys.argv[1] if len(sys.argv) > 1 else "little-peer"
 CUT = f"blended-{WHICH}"
+# WP7 v2: --idea <x> writes a transition idea instead (cuts/_blend/ideas.py) as cuts/idea-<version>-<x>/
+IDEA = sys.argv[sys.argv.index("--idea") + 1] if "--idea" in sys.argv else None
+if IDEA:
+    CUT = f"idea-{WHICH}-{IDEA}"
 OUT = FILM / "cuts" / CUT
 r3 = lambda x: round(x + 1e-9, 3)
 
@@ -175,12 +179,8 @@ def keep(id_, **kw):
     s.update(kw)
     return s
 
-slots = [
-    keep("hook-1", start=0.0, length=3.5),
-    keep("hook-2", start=3.5, length=4.5),
-    keep("hook-3", start=8.0, length=2.0),
-    keep("hook-sleeper", start=10.0, length=4.0, in_s=1.8, rate=0.8, mascot=MASCOT["hook-sleeper"],
-         shows="Ram asleep; the phone on the bedside table lights up and the mascot climbs out of it, looks at him, and hops away toward the desk."),
+HOOK_M, HOOK_EXTRA, P02 = MASCOT["hook-sleeper"], {}, None
+ENTRANCE = [
     slot("entrance-room", "entrance", 14.0, 3.0, kind="ai", own_clip=True, clip="cuts/_blend/plates/night-room-v1.mp4", clip_seconds=4.0,
          push={"to_scale": 1.06, "fx": 0.78, "fy": 0.58}, mascot=MASCOT["entrance-room"],
          shows="The dark room (the still night-phone-lit.png): the mascot hops from the phone over the bed to the desk, a trail of light behind it."),
@@ -191,6 +191,19 @@ slots = [
          hand_quads={"about": "The lit screen's corners in night-desk-v1.mp4, clockwise from the top left, as fractions of the frame (measured by its brightness).",
                      "night-desk-v1.mp4": QUAD},
          shows="The camera follows the mascot through the laptop's screen into the product."),
+]
+if IDEA:
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import ideas
+    HOOK_M, HOOK_EXTRA, ENTRANCE, P02 = ideas.make(WHICH, IDEA, MASCOT, QUAD, slot)
+
+slots = [
+    keep("hook-1", start=0.0, length=3.5),
+    keep("hook-2", start=3.5, length=4.5),
+    keep("hook-3", start=8.0, length=2.0),
+    keep("hook-sleeper", start=10.0, length=4.0, in_s=1.8, rate=0.8, mascot=HOOK_M, **HOOK_EXTRA,
+         shows="Ram asleep; the phone on the bedside table lights up and the mascot climbs out of it, looks at him, and hops away toward the desk."),
+    *ENTRANCE,
 ]
 for sid, start, length, t_in, rate in V["walk"]:
     s = slot(sid, "walkthrough", start, length, kind="ai", own_clip=True, clip=V["clip"], clip_seconds=V["clip_seconds"], in_s=t_in, rate=rate,
@@ -220,6 +233,8 @@ NARRATION = {
     "n01": 22.2, "n02": 25.0, "p03": 34.6, "n03": 44.0, "n04": 50.8, "n05": 57.8, "n06": 63.8, "p05": 68.4, "n07": 70.5,
     "m1": 76.9, "m2": 82.7, "m3": 90.3, "m4": 93.45, "p06": 98.4, "p08": 104.9, "p10": 107.6, "p11": 111.9, "p12": 115.6,
 }
+if P02 is not None:
+    NARRATION["p02"] = P02
 NEW_LINES = [
     ("n01", "Setting me up takes one click.", None),
     ("n02", "I read only what Ram can already see, signed in as him.", "I read only what Rahm can already see, signed in as him."),

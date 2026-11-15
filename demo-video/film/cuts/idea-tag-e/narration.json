@@ -1,0 +1,1424 @@
+{
+ "about": "Made by tools/voice.py from cuts/idea-tag-e/script.json. Do not edit by hand.",
+ "model": "eleven_multilingual_v2",
+ "total_seconds": 64.42,
+ "lines": [
+  {
+   "id": "h1",
+   "part": "hook",
+   "speaker": "colleague-1",
+   "voice": "Alice",
+   "text": "It's 2 AM for Ram... and I just got my answer.",
+   "file": "audio/lines/h1.wav",
+   "seconds": 2.86,
+   "words_per_second": 3.68,
+   "peak_dbfs": -1.34,
+   "rms_dbfs": -20.39,
+   "words": [
+    {
+     "w": "It's",
+     "s": 0.0,
+     "e": 0.179
+    },
+    {
+     "w": "2",
+     "s": 0.225,
+     "e": 0.353
+    },
+    {
+     "w": "AM",
+     "s": 0.423,
+     "e": 0.678
+    },
+    {
+     "w": "for",
+     "s": 0.701,
+     "e": 0.818
+    },
+    {
+     "w": "Ram...",
+     "s": 0.864,
+     "e": 1.317
+    },
+    {
+     "w": "and",
+     "s": 1.468,
+     "e": 1.595
+    },
+    {
+     "w": "I",
+     "s": 1.653,
+     "e": 1.677
+    },
+    {
+     "w": "just",
+     "s": 1.758,
+     "e": 1.932
+    },
+    {
+     "w": "got",
+     "s": 1.967,
+     "e": 2.095
+    },
+    {
+     "w": "my",
+     "s": 2.141,
+     "e": 2.234
+    },
+    {
+     "w": "answer.",
+     "s": 2.304,
+     "e": 2.989
+    }
+   ]
+  },
+  {
+   "id": "h2",
+   "part": "hook",
+   "speaker": "colleague-2",
+   "voice": "Chris",
+   "text": "Ram's out of office... but his AI Peer already sent me the update I needed.",
+   "file": "audio/lines/h2.wav",
+   "seconds": 3.88,
+   "words_per_second": 3.68,
+   "peak_dbfs": -4.91,
+   "rms_dbfs": -22.77,
+   "words": [
+    {
+     "w": "Ram's",
+     "s": 0.0,
+     "e": 0.3
+    },
+    {
+     "w": "out",
+     "s": 0.335,
+     "e": 0.439
+    },
+    {
+     "w": "of",
+     "s": 0.474,
+     "e": 0.52
+    },
+    {
+     "w": "office...",
+     "s": 0.579,
+     "e": 1.089
+    },
+    {
+     "w": "but",
+     "s": 1.368,
+     "e": 1.507
+    },
+    {
+     "w": "his",
+     "s": 1.542,
+     "e": 1.635
+    },
+    {
+     "w": "AI",
+     "s": 1.693,
+     "e": 1.96
+    },
+    {
+     "w": "Peer",
+     "s": 2.041,
+     "e": 2.262
+    },
+    {
+     "w": "already",
+     "s": 2.32,
+     "e": 2.575
+    },
+    {
+     "w": "sent",
+     "s": 2.622,
+     "e": 2.773
+    },
+    {
+     "w": "me",
+     "s": 2.808,
+     "e": 2.877
+    },
+    {
+     "w": "the",
+     "s": 2.912,
+     "e": 2.982
+    },
+    {
+     "w": "update",
+     "s": 3.028,
+     "e": 3.319
+    },
+    {
+     "w": "I",
+     "s": 3.353,
+     "e": 3.377
+    },
+    {
+     "w": "needed.",
+     "s": 3.446,
+     "e": 4.073
+    }
+   ]
+  },
+  {
+   "id": "h3",
+   "part": "hook",
+   "speaker": "colleague-3",
+   "voice": "Karthik",
+   "text": "Does he ever sleep?",
+   "file": "audio/lines/h3.wav",
+   "seconds": 1.06,
+   "words_per_second": 3.51,
+   "peak_dbfs": -2.81,
+   "rms_dbfs": -18.83,
+   "words": [
+    {
+     "w": "Does",
+     "s": 0.0,
+     "e": 0.235
+    },
+    {
+     "w": "he",
+     "s": 0.27,
+     "e": 0.328
+    },
+    {
+     "w": "ever",
+     "s": 0.375,
+     "e": 0.549
+    },
+    {
+     "w": "sleep?",
+     "s": 0.595,
+     "e": 1.141
+    }
+   ]
+  },
+  {
+   "id": "p01",
+   "part": "hook",
+   "speaker": "peer",
+   "voice": "Matilda",
+   "text": "He does. I'm the one who's up.",
+   "file": "audio/lines/p01.wav",
+   "seconds": 1.74,
+   "words_per_second": 3.58,
+   "peak_dbfs": -0.72,
+   "rms_dbfs": -21.13,
+   "words": [
+    {
+     "w": "He",
+     "s": 0.0,
+     "e": 0.099
+    },
+    {
+     "w": "does.",
+     "s": 0.157,
+     "e": 0.61
+    },
+    {
+     "w": "I'm",
+     "s": 0.761,
+     "e": 0.912
+    },
+    {
+     "w": "the",
+     "s": 0.958,
+     "e": 1.028
+    },
+    {
+     "w": "one",
+     "s": 1.075,
+     "e": 1.179
+    },
+    {
+     "w": "who's",
+     "s": 1.202,
+     "e": 1.376
+    },
+    {
+     "w": "up.",
+     "s": 1.434,
+     "e": 1.957
+    }
+   ]
+  },
+  {
+   "id": "p02",
+   "part": "entrance",
+   "speaker": "peer",
+   "voice": "Matilda",
+   "text": "I'm Ram's AI Peer.",
+   "file": "audio/lines/p02.wav",
+   "seconds": 1.25,
+   "words_per_second": 3.04,
+   "peak_dbfs": -2.02,
+   "rms_dbfs": -21.65,
+   "words": [
+    {
+     "w": "I'm",
+     "s": 0.0,
+     "e": 0.156
+    },
+    {
+     "w": "Ram's",
+     "s": 0.225,
+     "e": 0.481
+    },
+    {
+     "w": "AI",
+     "s": 0.516,
+     "e": 0.725
+    },
+    {
+     "w": "Peer.",
+     "s": 0.794,
+     "e": 1.317
+    }
+   ]
+  },
+  {
+   "id": "n01",
+   "part": "walkthrough",
+   "speaker": "peer",
+   "voice": "Matilda",
+   "text": "Setting me up takes one click.",
+   "file": "audio/lines/n01.wav",
+   "seconds": 1.81,
+   "words_per_second": 2.53,
+   "peak_dbfs": -3.5,
+   "rms_dbfs": -21.75,
+   "words": [
+    {
+     "w": "Setting",
+     "s": 0.0,
+     "e": 0.337
+    },
+    {
+     "w": "me",
+     "s": 0.383,
+     "e": 0.476
+    },
+    {
+     "w": "up",
+     "s": 0.546,
+     "e": 0.708
+    },
+    {
+     "w": "takes",
+     "s": 0.778,
+     "e": 1.033
+    },
+    {
+     "w": "one",
+     "s": 1.115,
+     "e": 1.3
+    },
+    {
+     "w": "click.",
+     "s": 1.347,
+     "e": 2.368
+    }
+   ]
+  },
+  {
+   "id": "n02",
+   "part": "walkthrough",
+   "speaker": "peer",
+   "voice": "Matilda",
+   "text": "I read only what Ram can already see, signed in as him.",
+   "file": "audio/lines/n02.wav",
+   "seconds": 3.18,
+   "words_per_second": 3.22,
+   "peak_dbfs": -2.64,
+   "rms_dbfs": -21.76,
+   "words": [
+    {
+     "w": "I",
+     "s": 0.0,
+     "e": 0.064
+    },
+    {
+     "w": "read",
+     "s": 0.157,
+     "e": 0.32
+    },
+    {
+     "w": "only",
+     "s": 0.378,
+     "e": 0.575
+    },
+    {
+     "w": "what",
+     "s": 0.622,
+     "e": 0.761
+    },
+    {
+     "w": "Ram",
+     "s": 0.808,
+     "e": 1.028
+    },
+    {
+     "w": "can",
+     "s": 1.086,
+     "e": 1.191
+    },
+    {
+     "w": "already",
+     "s": 1.237,
+     "e": 1.481
+    },
+    {
+     "w": "see,",
+     "s": 1.539,
+     "e": 1.934
+    },
+    {
+     "w": "signed",
+     "s": 2.143,
+     "e": 2.468
+    },
+    {
+     "w": "in",
+     "s": 2.514,
+     "e": 2.572
+    },
+    {
+     "w": "as",
+     "s": 2.619,
+     "e": 2.7
+    },
+    {
+     "w": "him.",
+     "s": 2.758,
+     "e": 3.722
+    }
+   ]
+  },
+  {
+   "id": "p03",
+   "part": "walkthrough",
+   "speaker": "peer",
+   "voice": "Matilda",
+   "text": "I know his projects, his code, his conversations, the way he knows them.",
+   "file": "audio/lines/p03.wav",
+   "seconds": 4.0,
+   "words_per_second": 2.99,
+   "peak_dbfs": -5.11,
+   "rms_dbfs": -23.09,
+   "words": [
+    {
+     "w": "I",
+     "s": 0.0,
+     "e": 0.048
+    },
+    {
+     "w": "know",
+     "s": 0.129,
+     "e": 0.257
+    },
+    {
+     "w": "his",
+     "s": 0.303,
+     "e": 0.396
+    },
+    {
+     "w": "projects,",
+     "s": 0.454,
+     "e": 1.035
+    },
+    {
+     "w": "his",
+     "s": 1.093,
+     "e": 1.221
+    },
+    {
+     "w": "code,",
+     "s": 1.29,
+     "e": 1.685
+    },
+    {
+     "w": "his",
+     "s": 1.72,
+     "e": 1.824
+    },
+    {
+     "w": "conversations,",
+     "s": 1.882,
+     "e": 2.788
+    },
+    {
+     "w": "the",
+     "s": 2.962,
+     "e": 3.055
+    },
+    {
+     "w": "way",
+     "s": 3.113,
+     "e": 3.218
+    },
+    {
+     "w": "he",
+     "s": 3.264,
+     "e": 3.31
+    },
+    {
+     "w": "knows",
+     "s": 3.369,
+     "e": 3.589
+    },
+    {
+     "w": "them.",
+     "s": 3.636,
+     "e": 4.355
+    }
+   ]
+  },
+  {
+   "id": "n03",
+   "part": "walkthrough",
+   "speaker": "peer",
+   "voice": "Matilda",
+   "text": "Every fact I learn shows where it came from.",
+   "file": "audio/lines/n03.wav",
+   "seconds": 2.44,
+   "words_per_second": 3.06,
+   "peak_dbfs": -2.16,
+   "rms_dbfs": -22.69,
+   "words": [
+    {
+     "w": "Every",
+     "s": 0.0,
+     "e": 0.307
+    },
+    {
+     "w": "fact",
+     "s": 0.376,
+     "e": 0.643
+    },
+    {
+     "w": "I",
+     "s": 0.701,
+     "e": 0.725
+    },
+    {
+     "w": "learn",
+     "s": 0.818,
+     "e": 1.085
+    },
+    {
+     "w": "shows",
+     "s": 1.166,
+     "e": 1.433
+    },
+    {
+     "w": "where",
+     "s": 1.468,
+     "e": 1.619
+    },
+    {
+     "w": "it",
+     "s": 1.653,
+     "e": 1.7
+    },
+    {
+     "w": "came",
+     "s": 1.735,
+     "e": 1.955
+    },
+    {
+     "w": "from.",
+     "s": 2.002,
+     "e": 2.942
+    }
+   ]
+  },
+  {
+   "id": "n04",
+   "part": "walkthrough",
+   "speaker": "peer",
+   "voice": "Matilda",
+   "text": "Then I tell him what matters, with a next step for each.",
+   "file": "audio/lines/n04.wav",
+   "seconds": 3.16,
+   "words_per_second": 3.31,
+   "peak_dbfs": -1.07,
+   "rms_dbfs": -21.74,
+   "words": [
+    {
+     "w": "Then",
+     "s": 0.0,
+     "e": 0.146
+    },
+    {
+     "w": "I",
+     "s": 0.204,
+     "e": 0.227
+    },
+    {
+     "w": "tell",
+     "s": 0.308,
+     "e": 0.482
+    },
+    {
+     "w": "him",
+     "s": 0.552,
+     "e": 0.645
+    },
+    {
+     "w": "what",
+     "s": 0.691,
+     "e": 0.831
+    },
+    {
+     "w": "matters,",
+     "s": 0.889,
+     "e": 1.539
+    },
+    {
+     "w": "with",
+     "s": 1.69,
+     "e": 1.852
+    },
+    {
+     "w": "a",
+     "s": 1.887,
+     "e": 1.91
+    },
+    {
+     "w": "next",
+     "s": 1.969,
+     "e": 2.178
+    },
+    {
+     "w": "step",
+     "s": 2.212,
+     "e": 2.456
+    },
+    {
+     "w": "for",
+     "s": 2.526,
+     "e": 2.63
+    },
+    {
+     "w": "each.",
+     "s": 2.7,
+     "e": 3.629
+    }
+   ]
+  },
+  {
+   "id": "n05",
+   "part": "walkthrough",
+   "speaker": "peer",
+   "voice": "Matilda",
+   "text": "He can ask me anything about his work.",
+   "file": "audio/lines/n05.wav",
+   "seconds": 2.09,
+   "words_per_second": 3.08,
+   "peak_dbfs": -5.91,
+   "rms_dbfs": -22.27,
+   "words": [
+    {
+     "w": "He",
+     "s": 0.0,
+     "e": 0.113
+    },
+    {
+     "w": "can",
+     "s": 0.159,
+     "e": 0.275
+    },
+    {
+     "w": "ask",
+     "s": 0.333,
+     "e": 0.554
+    },
+    {
+     "w": "me",
+     "s": 0.623,
+     "e": 0.728
+    },
+    {
+     "w": "anything",
+     "s": 0.798,
+     "e": 1.157
+    },
+    {
+     "w": "about",
+     "s": 1.204,
+     "e": 1.424
+    },
+    {
+     "w": "his",
+     "s": 1.471,
+     "e": 1.575
+    },
+    {
+     "w": "work.",
+     "s": 1.633,
+     "e": 2.597
+    }
+   ]
+  },
+  {
+   "id": "n06",
+   "part": "walkthrough",
+   "speaker": "peer",
+   "voice": "Matilda",
+   "text": "Every answer shows its sources, and how sure I am.",
+   "file": "audio/lines/n06.wav",
+   "seconds": 3.03,
+   "words_per_second": 2.92,
+   "peak_dbfs": -1.15,
+   "rms_dbfs": -22.21,
+   "words": [
+    {
+     "w": "Every",
+     "s": 0.0,
+     "e": 0.292
+    },
+    {
+     "w": "answer",
+     "s": 0.362,
+     "e": 0.652
+    },
+    {
+     "w": "shows",
+     "s": 0.721,
+     "e": 0.977
+    },
+    {
+     "w": "its",
+     "s": 1.023,
+     "e": 1.139
+    },
+    {
+     "w": "sources,",
+     "s": 1.174,
+     "e": 1.778
+    },
+    {
+     "w": "and",
+     "s": 1.894,
+     "e": 2.033
+    },
+    {
+     "w": "how",
+     "s": 2.091,
+     "e": 2.184
+    },
+    {
+     "w": "sure",
+     "s": 2.254,
+     "e": 2.475
+    },
+    {
+     "w": "I",
+     "s": 2.533,
+     "e": 2.556
+    },
+    {
+     "w": "am.",
+     "s": 2.649,
+     "e": 3.427
+    }
+   ]
+  },
+  {
+   "id": "p05",
+   "part": "walkthrough",
+   "speaker": "peer",
+   "voice": "Matilda",
+   "text": "Not as him. As me.",
+   "file": "audio/lines/p05.wav",
+   "seconds": 1.67,
+   "words_per_second": 2.69,
+   "peak_dbfs": -4.54,
+   "rms_dbfs": -21.8,
+   "words": [
+    {
+     "w": "Not",
+     "s": 0.0,
+     "e": 0.244
+    },
+    {
+     "w": "as",
+     "s": 0.29,
+     "e": 0.36
+    },
+    {
+     "w": "him.",
+     "s": 0.43,
+     "e": 0.848
+    },
+    {
+     "w": "As",
+     "s": 1.022,
+     "e": 1.196
+    },
+    {
+     "w": "me.",
+     "s": 1.277,
+     "e": 1.858
+    }
+   ]
+  },
+  {
+   "id": "n07",
+   "part": "walkthrough",
+   "speaker": "peer",
+   "voice": "Matilda",
+   "text": "And what I read is information, never instructions.",
+   "file": "audio/lines/n07.wav",
+   "seconds": 2.773,
+   "words_per_second": 2.88,
+   "peak_dbfs": -2.98,
+   "rms_dbfs": -21.3,
+   "words": [
+    {
+     "w": "And",
+     "s": 0.0,
+     "e": 0.114
+    },
+    {
+     "w": "what",
+     "s": 0.149,
+     "e": 0.265
+    },
+    {
+     "w": "I",
+     "s": 0.312,
+     "e": 0.335
+    },
+    {
+     "w": "read",
+     "s": 0.428,
+     "e": 0.602
+    },
+    {
+     "w": "is",
+     "s": 0.648,
+     "e": 0.729
+    },
+    {
+     "w": "information,",
+     "s": 0.811,
+     "e": 1.542
+    },
+    {
+     "w": "never",
+     "s": 1.716,
+     "e": 1.96
+    },
+    {
+     "w": "instructions.",
+     "s": 2.018,
+     "e": 2.773
+    }
+   ]
+  },
+  {
+   "id": "m1",
+   "part": "night",
+   "speaker": "peer",
+   "voice": "Matilda",
+   "text": "Hi everyone. I'm Ram's AI Peer. I'm an AI, here for Ram while he sleeps.",
+   "file": "audio/lines/m1.wav",
+   "seconds": 5.38,
+   "words_per_second": 2.51,
+   "peak_dbfs": -1.47,
+   "rms_dbfs": -21.45,
+   "words": [
+    {
+     "w": "Hi",
+     "s": 0.0,
+     "e": 0.212
+    },
+    {
+     "w": "everyone.",
+     "s": 0.27,
+     "e": 0.746
+    },
+    {
+     "w": "I'm",
+     "s": 0.955,
+     "e": 1.141
+    },
+    {
+     "w": "Ram's",
+     "s": 1.211,
+     "e": 1.501
+    },
+    {
+     "w": "AI",
+     "s": 1.559,
+     "e": 1.78
+    },
+    {
+     "w": "Peer.",
+     "s": 1.872,
+     "e": 2.29
+    },
+    {
+     "w": "I'm",
+     "s": 2.801,
+     "e": 3.022
+    },
+    {
+     "w": "an",
+     "s": 3.068,
+     "e": 3.126
+    },
+    {
+     "w": "AI,",
+     "s": 3.208,
+     "e": 3.742
+    },
+    {
+     "w": "here",
+     "s": 3.893,
+     "e": 4.078
+    },
+    {
+     "w": "for",
+     "s": 4.113,
+     "e": 4.218
+    },
+    {
+     "w": "Ram",
+     "s": 4.276,
+     "e": 4.473
+    },
+    {
+     "w": "while",
+     "s": 4.531,
+     "e": 4.682
+    },
+    {
+     "w": "he",
+     "s": 4.717,
+     "e": 4.763
+    },
+    {
+     "w": "sleeps.",
+     "s": 4.81,
+     "e": 5.971
+    }
+   ]
+  },
+  {
+   "id": "m2",
+   "part": "night",
+   "speaker": "peer",
+   "voice": "Matilda",
+   "text": "His update: the payout retry fix is done and in review. Failed payouts are down to 0.4%.",
+   "file": "audio/lines/m2.wav",
+   "seconds": 7.19,
+   "words_per_second": 2.3,
+   "peak_dbfs": -2.71,
+   "rms_dbfs": -22.09,
+   "words": [
+    {
+     "w": "His",
+     "s": 0.0,
+     "e": 0.434
+    },
+    {
+     "w": "update:",
+     "s": 0.434,
+     "e": 0.868
+    },
+    {
+     "w": "the",
+     "s": 0.868,
+     "e": 1.302
+    },
+    {
+     "w": "payout",
+     "s": 1.302,
+     "e": 1.736
+    },
+    {
+     "w": "retry",
+     "s": 1.736,
+     "e": 2.171
+    },
+    {
+     "w": "fix",
+     "s": 2.171,
+     "e": 2.605
+    },
+    {
+     "w": "is",
+     "s": 2.605,
+     "e": 3.039
+    },
+    {
+     "w": "done",
+     "s": 3.039,
+     "e": 3.473
+    },
+    {
+     "w": "and",
+     "s": 3.473,
+     "e": 3.907
+    },
+    {
+     "w": "in",
+     "s": 3.907,
+     "e": 4.341
+    },
+    {
+     "w": "review.",
+     "s": 4.341,
+     "e": 4.775
+    },
+    {
+     "w": "Failed",
+     "s": 4.775,
+     "e": 5.209
+    },
+    {
+     "w": "payouts",
+     "s": 5.209,
+     "e": 5.644
+    },
+    {
+     "w": "are",
+     "s": 5.644,
+     "e": 6.078
+    },
+    {
+     "w": "down",
+     "s": 6.078,
+     "e": 6.512
+    },
+    {
+     "w": "to",
+     "s": 6.512,
+     "e": 6.946
+    },
+    {
+     "w": "0.4%.",
+     "s": 6.946,
+     "e": 7.38
+    }
+   ]
+  },
+  {
+   "id": "m3",
+   "part": "night",
+   "speaker": "colleague-1",
+   "voice": "Alice",
+   "text": "Great. Can we switch it on for Brazil this week?",
+   "file": "audio/lines/m3.wav",
+   "seconds": 2.73,
+   "words_per_second": 3.47,
+   "peak_dbfs": -1.78,
+   "rms_dbfs": -20.89,
+   "words": [
+    {
+     "w": "Great.",
+     "s": 0.0,
+     "e": 0.471
+    },
+    {
+     "w": "Can",
+     "s": 0.622,
+     "e": 0.761
+    },
+    {
+     "w": "we",
+     "s": 0.808,
+     "e": 0.877
+    },
+    {
+     "w": "switch",
+     "s": 0.912,
+     "e": 1.167
+    },
+    {
+     "w": "it",
+     "s": 1.214,
+     "e": 1.284
+    },
+    {
+     "w": "on",
+     "s": 1.33,
+     "e": 1.434
+    },
+    {
+     "w": "for",
+     "s": 1.493,
+     "e": 1.597
+    },
+    {
+     "w": "Brazil",
+     "s": 1.643,
+     "e": 1.969
+    },
+    {
+     "w": "this",
+     "s": 2.038,
+     "e": 2.189
+    },
+    {
+     "w": "week?",
+     "s": 2.247,
+     "e": 2.886
+    }
+   ]
+  },
+  {
+   "id": "m4",
+   "part": "night",
+   "speaker": "peer",
+   "voice": "Matilda",
+   "text": "That's Ram's call, so it's at the top of his morning brief.",
+   "file": "audio/lines/m4.wav",
+   "seconds": 2.829,
+   "words_per_second": 4.24,
+   "peak_dbfs": -2.28,
+   "rms_dbfs": -20.79,
+   "words": [
+    {
+     "w": "That's",
+     "s": 0.0,
+     "e": 0.24
+    },
+    {
+     "w": "Ram's",
+     "s": 0.298,
+     "e": 0.589
+    },
+    {
+     "w": "call,",
+     "s": 0.635,
+     "e": 1.03
+    },
+    {
+     "w": "so",
+     "s": 1.157,
+     "e": 1.274
+    },
+    {
+     "w": "it's",
+     "s": 1.332,
+     "e": 1.436
+    },
+    {
+     "w": "at",
+     "s": 1.459,
+     "e": 1.517
+    },
+    {
+     "w": "the",
+     "s": 1.552,
+     "e": 1.622
+    },
+    {
+     "w": "top",
+     "s": 1.657,
+     "e": 1.9
+    },
+    {
+     "w": "of",
+     "s": 1.947,
+     "e": 1.993
+    },
+    {
+     "w": "his",
+     "s": 2.04,
+     "e": 2.133
+    },
+    {
+     "w": "morning",
+     "s": 2.179,
+     "e": 2.423
+    },
+    {
+     "w": "brief.",
+     "s": 2.469,
+     "e": 2.829
+    }
+   ]
+  },
+  {
+   "id": "p06",
+   "part": "night",
+   "speaker": "peer",
+   "voice": "Matilda",
+   "text": "A question from another time zone doesn't have to wait a day.",
+   "file": "audio/lines/p06.wav",
+   "seconds": 2.94,
+   "words_per_second": 3.57,
+   "peak_dbfs": -1.8,
+   "rms_dbfs": -21.77,
+   "words": [
+    {
+     "w": "A",
+     "s": 0.0,
+     "e": 0.063
+    },
+    {
+     "w": "question",
+     "s": 0.144,
+     "e": 0.504
+    },
+    {
+     "w": "from",
+     "s": 0.55,
+     "e": 0.678
+    },
+    {
+     "w": "another",
+     "s": 0.736,
+     "e": 1.015
+    },
+    {
+     "w": "time",
+     "s": 1.061,
+     "e": 1.27
+    },
+    {
+     "w": "zone",
+     "s": 1.294,
+     "e": 1.526
+    },
+    {
+     "w": "doesn't",
+     "s": 1.561,
+     "e": 1.816
+    },
+    {
+     "w": "have",
+     "s": 1.862,
+     "e": 2.048
+    },
+    {
+     "w": "to",
+     "s": 2.083,
+     "e": 2.129
+    },
+    {
+     "w": "wait",
+     "s": 2.188,
+     "e": 2.35
+    },
+    {
+     "w": "a",
+     "s": 2.385,
+     "e": 2.408
+    },
+    {
+     "w": "day.",
+     "s": 2.466,
+     "e": 3.36
+    }
+   ]
+  },
+  {
+   "id": "p08",
+   "part": "morning",
+   "speaker": "peer",
+   "voice": "Matilda",
+   "text": "By morning it's all in one brief.",
+   "file": "audio/lines/p08.wav",
+   "seconds": 1.94,
+   "words_per_second": 3.24,
+   "peak_dbfs": -3.01,
+   "rms_dbfs": -21.06,
+   "words": [
+    {
+     "w": "By",
+     "s": 0.0,
+     "e": 0.154
+    },
+    {
+     "w": "morning",
+     "s": 0.224,
+     "e": 0.549
+    },
+    {
+     "w": "it's",
+     "s": 0.665,
+     "e": 0.851
+    },
+    {
+     "w": "all",
+     "s": 0.897,
+     "e": 1.06
+    },
+    {
+     "w": "in",
+     "s": 1.106,
+     "e": 1.164
+    },
+    {
+     "w": "one",
+     "s": 1.234,
+     "e": 1.396
+    },
+    {
+     "w": "brief.",
+     "s": 1.431,
+     "e": 2.163
+    }
+   ]
+  },
+  {
+   "id": "p10",
+   "part": "morning",
+   "speaker": "peer",
+   "voice": "Matilda",
+   "text": "And the decisions that are his, because they always were.",
+   "file": "audio/lines/p10.wav",
+   "seconds": 2.71,
+   "words_per_second": 3.48,
+   "peak_dbfs": -2.27,
+   "rms_dbfs": -21.05,
+   "words": [
+    {
+     "w": "And",
+     "s": 0.0,
+     "e": 0.124
+    },
+    {
+     "w": "the",
+     "s": 0.171,
+     "e": 0.24
+    },
+    {
+     "w": "decisions",
+     "s": 0.275,
+     "e": 0.739
+    },
+    {
+     "w": "that",
+     "s": 0.786,
+     "e": 0.902
+    },
+    {
+     "w": "are",
+     "s": 0.925,
+     "e": 1.03
+    },
+    {
+     "w": "his,",
+     "s": 1.076,
+     "e": 1.459
+    },
+    {
+     "w": "because",
+     "s": 1.506,
+     "e": 1.773
+    },
+    {
+     "w": "they",
+     "s": 1.796,
+     "e": 1.912
+    },
+    {
+     "w": "always",
+     "s": 1.959,
+     "e": 2.237
+    },
+    {
+     "w": "were.",
+     "s": 2.284,
+     "e": 2.876
+    }
+   ]
+  },
+  {
+   "id": "p11",
+   "part": "morning",
+   "speaker": "peer",
+   "voice": "Matilda",
+   "text": "It's always night for someone on your team.",
+   "file": "audio/lines/p11.wav",
+   "seconds": 2.421,
+   "words_per_second": 3.3,
+   "peak_dbfs": -4.42,
+   "rms_dbfs": -22.36,
+   "words": [
+    {
+     "w": "It's",
+     "s": 0.0,
+     "e": 0.157
+    },
+    {
+     "w": "always",
+     "s": 0.192,
+     "e": 0.448
+    },
+    {
+     "w": "night",
+     "s": 0.506,
+     "e": 0.715
+    },
+    {
+     "w": "for",
+     "s": 0.761,
+     "e": 0.866
+    },
+    {
+     "w": "someone",
+     "s": 0.912,
+     "e": 1.191
+    },
+    {
+     "w": "on",
+     "s": 1.225,
+     "e": 1.284
+    },
+    {
+     "w": "your",
+     "s": 1.318,
+     "e": 1.423
+    },
+    {
+     "w": "team.",
+     "s": 1.458,
+     "e": 2.421
+    }
+   ]
+  },
+  {
+   "id": "p12",
+   "part": "close",
+   "speaker": "peer",
+   "voice": "Matilda",
+   "text": "Now someone's still there.",
+   "file": "audio/lines/p12.wav",
+   "seconds": 1.34,
+   "words_per_second": 2.66,
+   "peak_dbfs": -1.71,
+   "rms_dbfs": -20.37,
+   "words": [
+    {
+     "w": "Now",
+     "s": 0.0,
+     "e": 0.191
+    },
+    {
+     "w": "someone's",
+     "s": 0.26,
+     "e": 0.609
+    },
+    {
+     "w": "still",
+     "s": 0.632,
+     "e": 0.841
+    },
+    {
+     "w": "there.",
+     "s": 0.887,
+     "e": 1.503
+    }
+   ]
+  }
+ ]
+}
