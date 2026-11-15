@@ -1,0 +1,17 @@
+.ov { position: absolute; inset: 0; padding: 54px 70px; color: #eef2f6;
+  background: radial-gradient(120% 90% at 50% 0%, #17233a 0%, #0b0f17 60%); font-family: "Inter", sans-serif; }
+.ov-h { font: 400 60px/1 "Instrument Serif", serif; letter-spacing: -0.01em; }
+.ov-s { margin-top: 12px; font: 500 21px/1.3 "Manrope", sans-serif; color: #9fb0c3; }
+.ov-grid { position: absolute; left: 70px; right: 70px; top: 166px; bottom: 10px; display: grid;
+  grid-template-columns: repeat(6, 1fr); grid-template-rows: 1fr 1fr; gap: 26px 30px; }
+.ov-t { grid-column: span 2; display: flex; flex-direction: column; }
+.ov-t.b1 { grid-column: 2 / span 2; }
+.ov-t.b2 { grid-column: 4 / span 2; }
+.ov-img { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden;
+  box-shadow: 0 14px 40px rgba(0,0,0,.45); border: 1px solid rgba(255,255,255,.12); }
+.ov-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ov-n { position: absolute; left: 12px; top: 12px; width: 40px; height: 40px; border-radius: 50%;
+  background: #b7f4cf; color: #0d2a20; display: grid; place-items: center; font: 800 21px/1 "Manrope", sans-serif; }
+.ov-name { margin-top: 10px; font: 400 30px/1 "Instrument Serif", serif; }
+.ov-line { margin-top: 5px; font: 500 16px/1.3 "Inter", sans-serif; color: #c9d3de; }
+.ov-chg { margin-top: 4px; font: 600 14px/1.3 "Manrope", sans-serif; color: #b7f4cf; }
