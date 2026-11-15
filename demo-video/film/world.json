@@ -135,10 +135,10 @@
     ["NOTICE", "Nova Terra Payments Authority", "Consultation on card fraud checks opens"],
     ["NEWS", "The Morning Abacus", "Card networks update dispute rules for 2027"],
     ["NEWS", "Harbourline Travel Wire", "Short-stay rules debated in three cities"],
-    ["STATUS", "Lumeira Pay status", "Elevated error rates in Mexico"],
+    ["STATUS", "Orvalla Pay status", "Elevated error rates in Mexico"],
     ["NEWS", "Quayside Courier", "Currency swings hit cross-border payouts"],
     ["NEWS", "The Ledger Lantern", "Fraud models get stricter in new markets"],
-    ["STATUS", "Lumeira Pay status", "All systems normal"],
+    ["STATUS", "Orvalla Pay status", "All systems normal"],
     ["NOTICE", "Coastal Union Trade Office", "Tax form deadlines move for hosts"]
   ],
   "pick": {

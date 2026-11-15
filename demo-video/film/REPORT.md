@@ -352,3 +352,29 @@ Manish picked A, Ram's look out of his phone (V20; `../docs/FEEDBACK-PHASE-A-202
   lines). Spent $3.74 (`../ledger/wp2-5.csv`, 12 calls).
 - **Left** (`../docs/handoffs/HANDOFF-2026-11-15-ai-peer-video-wp2-6.md`): the phone as the clear
   source of the ribbon, the Zoom colleagues moving, then Draft 3.
+
+## Draft 3, Phase C finished and Draft 3 (ai-peer-video-wp2-6, 2026-11-15)
+
+- **The phone is the clear source** (the controller's point). In the sleeper close-up the phone
+  on the bedside table lights up mint-white at 14.2 s, right after "I'm the one who's up", with
+  its buzz (`hook-sleeper-lit-v1.mp4`, made by code: `../tools/phone_glow.py` finds the dark
+  phone and follows the camera's drift). In the wide, `reveal-phone` now ends at 18.0: after that
+  its ribbon arched over Ram's head back into the phone. `reveal-gather` (18.0 to 23.0, one Kling
+  4.0 take, `../shots/reveal-a/requests/k-gather.json`) draws the last of the ribbon into him low
+  over the floor, then he steps to the chair and lands on Draft 2's desk clip at 4.2 s. The cause
+  of the arch was key frame e2 itself: it had sparkles over Ram's head (so had the walk's first
+  1.5 s), so a take that ended on it sent the light back there. Its middle key frame is
+  `e2-clean.png` (e2 with that corner from e0). It replaces `reveal-walk`, whose small step toward
+  the camera goes with it. A first take ending on e2 (`k-settle-r1`) still arched and is not used.
+- **The Zoom colleagues move** for the whole meeting (V20): six MiniMax H3 listening takes at
+  768P (`../shots/meeting-listen/`), each starting and ending on the person's tile still, played
+  back to back; Amara's talking clip stays on top for m3. A tile clip may now have its own time
+  (`"at"`, slot seconds) and a tile plays all its clips.
+- **The big world:** the nine invented outside names were searched on the web: none is a real
+  organisation; "Lumeira Pay" sat close to two real payment firms (Lumepay, Lumon Pay), so it is
+  now "Orvalla Pay". Ten nearer web pages drift in from the left and right edges, so the web
+  outside the company reads clearly. The open card no longer fades over the brief's list: it
+  drops in solid and gives way to the brief's own card once they lie on top of each other.
+- **Money:** `../ledger/wp2-6.csv`, $3.42 (8 calls: two Kling takes, six H3 takes).
+- **Left as they are:** Vikram's name is partly under the Zoom caption bar while the Peer speaks;
+  the tag is small on the wide shots; the music is unchanged (nobody has heard it).

@@ -287,6 +287,17 @@ function layout(S) {
   });
   const fibres = Array.from({ length: 18 }, () => [Math.floor(rnd() * net.length), rnd(), R(0.3, 0.55)]);
   const dust = Array.from({ length: 1500 }, () => [R(-5200, 5200), R(-3200, 3200), R(-1200, 9000), R(0.6, 1.8), rnd() * 6.283, R(0.4, 1.6)]);
+  // a few pages of the web, nearer and larger, drifting in from the left and right edges, so the
+  // web outside the company reads as clearly as its own streams (wp2-6). Made last, so their random
+  // numbers leave everything above where it was.
+  for (let i = 0; i < 10; i++) {
+    const side = i % 2 ? 1 : -1;
+    const y = R(-900, 700), z = R(500, 1500);
+    const A = [side * R(2300, 2900), y, z];
+    const Bp = [side * R(1100, 1600), y + R(-150, 150), z - R(150, 450)];
+    add(A, [(A[0] + Bp[0]) / 2, (A[1] + Bp[1]) / 2 - 70, (A[2] + Bp[2]) / 2], Bp, pickOf(webs), R(6.5, 9.5), R(1.2, 1.5));
+    items[items.length - 1].fog = 0.6;
+  }
   return { items, tags, net, edges, fibres, dust };
 }
 
@@ -580,12 +591,14 @@ export function world(S, film, slot) {
     const ib = ease.inOut(ramp(local, B.brief[0] + 0.3, B.brief[1]));
     const ox = lerp(x, SLOT.x, ib), oy = lerp(y, SLOT.y, ib), ow = lerp(wd, SLOT.w, ib);
     open.style.transform = `translate(${px(ox)}, ${px(oy)}) scale(${(ow / OPEN.w).toFixed(4)})`;
-    open.style.opacity = (ramp(ok, 0.2, 0.62) * (1 - ramp(ib, 0.55, 0.95))).toFixed(3);
+    // it stays solid while it drops, and gives way to the brief's own card only once they lie on
+    // top of each other (wp2-6: an earlier fade showed its text over the brief's list)
+    open.style.opacity = (ramp(ok, 0.2, 0.62) * (1 - ramp(ib, 0.84, 0.99))).toFixed(3);
     one.style.opacity = (ease.out(ramp(local, B.open[1] + 0.05, B.open[1] + 0.45)) * (1 - ramp(local, B.brief[0] - 0.2, B.brief[0] + 0.3))).toFixed(3);
     const bin = ease.out(ramp(local, B.brief[0], B.brief[0] + 0.8));
     brief.style.opacity = bin.toFixed(3);
     brief.style.transform = `translateX(${lerp(80, 0, bin).toFixed(1)}px) scale(${(lerp(0.97, 1, bin) * lerp(1, 1.03, smooth(ramp(local, B.brief[1], 18)))).toFixed(4)})`;
-    slotCard.style.opacity = ramp(ib, 0.5, 0.9).toFixed(3);
+    slotCard.style.opacity = ramp(ib, 0.8, 0.97).toFixed(3);
     left.style.opacity = ease.out(ramp(local, B.brief[1] - 0.2, B.brief[1] + 0.3)).toFixed(3);
     leftNum.textContent = fmt(Bf.left_out * ease.out(ramp(local, B.brief[1] - 0.2, B.brief[1] + 0.6)));
 
