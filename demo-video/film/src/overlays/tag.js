@@ -61,13 +61,24 @@ export async function create(film) {
   const TEXT = (film.names && film.names.peer) || "AI Peer";   // "Ram's AI Peer" (shots.json names)
   const ems = 0.36 + 1.2 + 0.36 + ctx.measureText(TEXT).width / 100 + 0.62 + 0.15;
 
+  // the Peer's one face (V20: Ram's portrait with the mark as a badge), else the mark
+  const loads = [];
+  const face = () => {
+    const src = film.names && film.names.peer_face;
+    if (!src) return el("span", { html: markSvg({ size: 100 }) });
+    const img = new Image();
+    img.src = src;
+    loads.push(img.decode());
+    return img;
+  };
   const tags = film.slots.filter((s) => s.use === "clip" && (s.tagTrack || s.tagKeys)).map((slot) => {
-    const pill = el("div.tagpill", {}, el("span.tmk", { html: markSvg({ size: 100 }) }), el("span", { text: TEXT }));
+    const pill = el("div.tagpill", {}, el("span.tmk", {}, face()), el("span", { text: TEXT }));
     layer.append(pill);
     const windows = slot.tagShow || [{ from: 0, to: slot.length, in: 0.3, out: 0.25 }];
     return { slot, pill, windows };
   });
 
+  await Promise.all(loads);
   return {
     el: layer,
     render(t) {

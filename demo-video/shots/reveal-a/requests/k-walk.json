@@ -1,0 +1,20 @@
+{
+ "endpoint": "kling/v4/image-to-video",
+ "inputs": {
+  "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed and never moves. A man lies asleep in the bed and does not move at any time. A man made of soft mint light stands in front of the window beside the desk. He turns to the desk, takes one easy step to the chair, rests one hand on the desk and takes the back of the chair with the other, about to pull it out and sit. His light glows softly and evenly. No ribbons and no threads: nothing connects him to anyone. Smooth, natural, unhurried motion, like a premium advertising film. Nothing spooky, no mist, no smoke, no text.",
+  "start_image_url": "file:demo-video/shots/reveal-a/keys/e2-tm.png",
+  "end_image_url": "file:demo-video/shots/reveal-a/keys/desk-at-4.2s.png",
+  "duration": 3,
+  "resolution": "1080p"
+ },
+ "expect": {
+  "units": 3,
+  "unit": "second of video",
+  "unit_price": 0.157,
+  "cost_usd": 0.471,
+  "estimate": true,
+  "basis": "wp2-4's motion tests on this route cost $0.785 for 5 s at 720p (demo-video/ledger/wp2-4.csv); 1080p may cost more: the dry run shows the live price"
+ },
+ "output": "demo-video/shots/reveal-a/k-walk-r1",
+ "note": "Phase C (A, V20): he steps from where he formed to the desk chair, ending on Draft 2's desk clip at 4.2 s (route K)"
+}

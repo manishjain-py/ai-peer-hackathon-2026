@@ -144,8 +144,11 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
   // A slot may play a stretch of another slot's clip ("from_shot": that slot's id): it takes that
   // clip and what WP3 gave with it. "in_s" is where in the clip a slot starts (in place of WP3's
   // use_from_s) and "rate" how fast it plays.
+  // "from_shot" may also name a source that no slot plays whole ("sources" in shots.json): a clip
+  // whose stretches other slots borrow, with what WP3 gave with it under that name.
+  const source = (id) => (shots.sources && shots.sources[id] ? { id, ...shots.sources[id] } : null);
   shots.slots = shots.slots.map((s) => {
-    const from = s.from_shot ? shots.slots.find((x) => x.id === s.from_shot) : s;
+    const from = s.from_shot ? shots.slots.find((x) => x.id === s.from_shot) || source(s.from_shot) : s;
     if (!from) throw new Error(`slot ${s.id}: from_shot ${s.from_shot} is not a slot`);
     const m = { ...s, clip: from.clip };
     // "own_clip": a clip made for the film itself, not WP3's: nothing of WP3's is laid over it

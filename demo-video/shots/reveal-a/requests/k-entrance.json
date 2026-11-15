@@ -1,0 +1,23 @@
+{
+ "endpoint": "kling/v4/image-to-video",
+ "inputs": {
+  "prompt": "A locked-off wide shot of a bedroom at night. The camera is fixed and never moves. A man lies asleep in the bed and does not move at any time. The phone on the bedside table glows mint. After a moment a ribbon of soft mint light streams out of the phone's screen and sweeps low across the room in front of the bed to the open floor in front of the window, beside the desk. There, out of the ribbon's glowing particles, a man made of soft mint light builds up, from his head and shoulders down to his bare feet, while the ribbon fades away behind him. He stands upright, calm and friendly, and looks toward the desk. Smooth, slow, elegant motion, like a premium advertising film. Nothing spooky, no mist, no smoke, no text.",
+  "start_image_url": "file:demo-video/shots/reveal-a/keys/e0-tm.png",
+  "middle_image_urls": [
+   "file:demo-video/shots/reveal-a/keys/e1-tm.png"
+  ],
+  "end_image_url": "file:demo-video/shots/reveal-a/keys/e2-tm.png",
+  "duration": 5,
+  "resolution": "1080p"
+ },
+ "expect": {
+  "units": 5,
+  "unit": "second of video",
+  "unit_price": 0.157,
+  "cost_usd": 0.785,
+  "estimate": true,
+  "basis": "wp2-4's motion tests on this route cost $0.785 for 5 s at 720p (demo-video/ledger/wp2-4.csv); 1080p may cost more: the dry run shows the live price"
+ },
+ "output": "demo-video/shots/reveal-a/k-entrance-r1",
+ "note": "Phase C (A, V20): the entrance, the phone's ribbon and he takes shape (motion test A on Draft 2's desk-clip room, route K, final quality)"
+}
