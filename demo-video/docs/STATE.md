@@ -329,6 +329,7 @@ set-ups: ask Manish before spending on them.
 |---|---|---|---|---|---|---|
 | ai-peer-video-controller-5 | 5570 | https://claude.ai/code/session_01Nfn5hAQtMCLhcAz7Z5MUzm | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | The live controller since 13:21 UTC on 15 November; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 14002, transcript `886d5eab-f5fa-4248-ad50-268c2aa3f990` |
 | ai-peer-video-controller-4 (closed 13:24 UTC, 15 November) | 3977 | https://claude.ai/code/session_01Nfn5h9pvSF58rFbV1QBNt4 | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | Controller from 15:02 UTC on 14 November to its hand-off at 13:21 UTC on 15 November; PID 35776, transcript `4754b08d-f4fe-4f30-aeee-6e92a6cbb597` |
+| ai-peer-video-wp7 | 5589 | https://claude.ai/code/session_01Nfn5h6qqRLyRxrh3ochTLm | `~/repos/ai-peer-video-wp7` (made by the worker; launched in the shared checkout, with `CLAUDE_NO_IDLE_PING=1`) | `video-wp7-blended` (made by the worker) | none yet | WP7 (V24, V26): the two blended videos (brief `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7.md`); launched at 16:38 UTC; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 64154, transcript `b1fb5e1a-9984-4180-84d3-3d2f7c327445` |
 | ai-peer-video-wp6 (closed 16:32 UTC, 15 November) | 5567 | https://claude.ai/code/session_01Nfn5h6rbZhFxCgZXTT1Tc4 | `~/repos/ai-peer-video-wp6` (made by the worker; launched in the shared checkout, with `CLAUDE_NO_IDLE_PING=1`) | `video-wp6-wow-concepts` (made by the worker) | none yet | WP6 (V22): wow concepts for the AI Peer's own screens, 4 to 5 walkthrough videos for Manish's review (brief `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp6.md`); one research helper and up to three builder helpers allowed; up to $10. Launched 13:19 UTC by ai-peer-video-controller-4; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 11478, transcript `fe5edd36-f7f3-42c4-b2e1-c1e44643bb08`. |
 | ai-peer-video-wp2-6 (closed 13:19 UTC) | 5463 | https://claude.ai/code/session_01Nfn5h7P58JmNpKzMeZUkXV | `~/repos/ai-peer-video-wp2` | `video-wp2-4-draft3` (merged as PR 12) | PR 12 | Finished Draft 3 (merged `bb81fc5`); idle since 05:09 UTC. |
 | ai-peer-video-wp2-5 (closed 04:22 UTC) | 4262 | https://claude.ai/code/session_01Nfn5h6QvikG661dFstmjvc | `~/repos/ai-peer-video-wp2` | `video-wp2-4-draft3` | none | Phase C with A so far: the entrance from the phone, the face, the return into the phone, the big-world scene (by its helper); hand-off at 42%. |
@@ -392,12 +393,14 @@ Still running:
 
 | What | PID | Log | Stop command |
 |---|---|---|---|
+| Wait `stall-wp7`: the worker silent for 25 minutes, or PID 64154 gone (stop it before closing window 5589, and while the worker waits, idle, for Manish) | 64554 | `~/.ai-peer/demo-video-private/controller/waits.log` | `kill 64554` |
 | Wait `usage`: the whole week passes 85% (re-armed at 15:36 UTC on 15 November, after the 70% alarm rang at 15:35 UTC; checked every 5 minutes; Fable's threshold is 101, out of reach). The 50% alarm rang at 01:57 UTC on 15 November with the video idle: about 1.3 points an hour from the account's other sessions since 22:03 UTC; the week resets Monday 16 November 22:59 UTC (Tuesday 17 November 04:29 India time, read from `/usage` at 04:55 UTC on 15 November) | 48212 | `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log` | `kill 48212` |
 
 The usage wait was started by ai-peer-video-controller-5 at 13:23 UTC on 15 November and
 re-armed at 85% at 15:36 UTC. Its `stall-wp6` wait was stopped at 16:09 UTC while WP6 waits,
 idle, for Manish; re-arm it, with the command in controller-4's hand-off ("Your waits"), when
-WP6 works again. They are runs of `demo-video/tools/wait-for.sh` in the controller's own
+WP6 works again. `stall-wp7` was started at 16:38 UTC for ai-peer-video-wp7 (window 5589,
+PID 64154). They are runs of `demo-video/tools/wait-for.sh` in the controller's own
 background; the usage alarm's test is `demo-video/tools/usage-check.sh`. The logs are
 `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log`. ai-peer-video-wp6
 (window 5567, PID 11478) waits idle.
