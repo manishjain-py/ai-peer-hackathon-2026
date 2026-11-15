@@ -376,5 +376,12 @@ Manish picked A, Ram's look out of his phone (V20; `../docs/FEEDBACK-PHASE-A-202
   outside the company reads clearly. The open card no longer fades over the brief's list: it
   drops in solid and gives way to the brief's own card once they lie on top of each other.
 - **Money:** `../ledger/wp2-6.csv`, $3.42 (8 calls: two Kling takes, six H3 takes).
+- **Draft 3** (`renders/draft-03.mp4`, public, no real recording in it): 2:00.0, 1920x1080 at
+  30 fps, -14.1 LUFS, true peak -1.8 dBTP, every line at least 15.0 dB above the music (lowest
+  p11 15.0, m2 15.3). The speech check on the whole mix hears 18 of 19 lines word for word; h3,
+  "Does he ever sleep?", came out as "Does he have a sleep?". The line is unchanged since Draft
+  1, the music sits 22.8 dB under it, and the same line cut from the mix is heard right while the
+  voice stem alone is heard wrong: the model's slip on the laughing delivery, not the mix.
+  Looked at one sheet of 20 frames across the 2:00.
 - **Left as they are:** Vikram's name is partly under the Zoom caption bar while the Peer speaks;
   the tag is small on the wide shots; the music is unchanged (nobody has heard it).
