@@ -7,7 +7,20 @@ PID 14002, https://claude.ai/code/session_01Nfn5hAQtMCLhcAz7Z5MUzm, transcript
 3977, PID 35776) was closed at 13:24 UTC.
 Other sessions message the controller by its name.
 
-## Where we are (2026-11-15 13:25 UTC)
+## Where we are (2026-11-15 14:46 UTC)
+
+**14:46 UTC: WP6 has two of its five concepts done** (branch `video-wp6-wow-concepts` at
+`0c89f25`; the kit at `fc1df34`, the research note at `da729e4`), each sheet checked by the
+worker: Glass & Light (64 s, `demo-video/ui-concepts/renders/glass-and-light.mp4`; one function
+change, by the worker: answers name which sentence came from which source, and the setup
+streams each item it reads; Manish asked for the same functionality, so the caption must say
+so) and Tiny Company (70 s, `demo-video/ui-concepts/renders/tiny-company.mp4`; no function
+change). Being built: Little Peer, Constellation, The Notebook. WP6 sends the full set with its
+order and one overview picture when all five are in. $0.00 of its $10. Context of WP6, from its
+transcript: 25.3% at 14:44 UTC (21.9% at 13:39 UTC). Week: 67% at 14:44 UTC (64% at 13:38: about 2.7
+points an hour with WP6 at work); at that pace 85% comes about 21:30 UTC today and 93% about
+00:30 UTC on Monday 16 November, well before the reset (Monday 22:59 UTC). No question is open
+for Manish.
 
 **13:25 UTC: ai-peer-video-controller-5 has taken over** (Opus 5.5, window 5570). It told
 ai-peer-video-wp6 its name at 13:23 UTC, started its two waits (`usage` at 70%, `stall-wp6`;
