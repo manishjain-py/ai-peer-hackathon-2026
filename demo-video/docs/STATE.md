@@ -7,7 +7,13 @@ it took over from ai-peer-video-controller-5 (closed at 16:58 UTC). Read next: t
 `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7.md`. A new Mac or a take-over: `START-HERE.md`
 at the repo root. Other sessions message the controller by its name.
 
-## Where we are (2026-11-15 18:23 UTC)
+## Where we are (2026-11-15 18:32 UTC)
+
+**18:32 UTC: only the Tag blend is worked on now (V28).** Manish at 18:31 UTC: "All Same
+feedback for tag blended video. And lets only work on tag for now. Not on little peer." The
+eight changes of V27 go to the Tag (ideas for its phone-to-laptop move first, then
+`blended-tag-v2`); Little Peer waits, its v1 kept. Passed to ai-peer-video-wp7-2 at 18:32 UTC,
+with one tag seed added (it clips onto the laptop's lid like a name badge). Week 77% at 18:29 UTC.
 
 **18:23 UTC: Manish's view of the Little Peer blend is in (V27); wp7-2 makes the transition
 ideas, then v2.** His words at 18:20 UTC, word for word, in `FEEDBACK-BLENDED-2026-11-15.md`
@@ -577,6 +583,10 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 video 1 (the Attention group and the session of ai-peer-video-controller-6). Record his words at
 once (`FEEDBACK-BLENDED-2026-11-15.md`, V27 onwards) and pass them to ai-peer-video-wp7-2.
 
+**Answered 2026-11-15 18:31 UTC (V28): the same changes for the Tag blend; only the Tag for
+now, not Little Peer.** His words in `FEEDBACK-BLENDED-TAG-2026-11-15.md`. Next from him: his pick
+of the tag's transition ideas.
+
 **Answered 2026-11-15 18:20 UTC (V27): liked overall, eight changes; ideas for the phone-to-laptop
 move first.** His words in `FEEDBACK-BLENDED-2026-11-15.md`. Next from him: his pick of those
 ideas, and his view of the Tag blend.
@@ -688,6 +698,11 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
+
+**Now (18:32 UTC, 15 November), ai-peer-video-controller-6:** wp7-2 makes the transition
+ideas for the Tag (not Little Peer, V28). When they come: one small sheet, the privacy check,
+then all to Manish on the Attention group (each clip with its caption, then one text line asking
+his pick) and in the session; his pick to wp7-2 word for word; then `blended-tag-v2`.
 
 **Now (18:23 UTC, 15 November), ai-peer-video-controller-6:** wp7-2 makes the transition
 ideas. When they come: one small sheet, the privacy check, then all of them to Manish on the
@@ -1000,3 +1015,4 @@ and 7 still hold.
 | 2026-11-15 18:05 | ai-peer-video-wp7-2 | Read in at 7.4%. Replaced the tag's matched labels with made-up ones (three buttons, two captions) and reworded the other matched lines (11 lines in 4 files); re-rendered `tag.mp4`, `tag-sheet.png`, `tag-clean.mp4` (privacy 0 and 0). Built the tag blend: its own mascot table in `make_cut.py` (0.6 of Little Peer's scale; a plain tag out of the phone, eyes and legs keyed in; it folds back into a plain tag before going back into the phone), `legs` and `eyes` keys in `engine.js`; delivered `blended-tag-v1.mp4` at 18:01 UTC. Item 8 done (`shots.json`'s relative manifest path, Draft 3 byte-identical). PR #14 squash-merged as `83906fd`, branch deleted. Context 20.3%. | Idle; Manish's views come through the controller |
 | 2026-11-15 18:06 | ai-peer-video-controller-6 | Checked wp7-2's merge of PR #14 (`83906fd`, branch deleted, privacy 0 and 0), tagged `blended-v1`, stopped `stall-wp7-2`, added WP7's $0.00 to Money spent. | Waiting on Manish's views of both blends |
 | 2026-11-15 18:23 | ai-peer-video-controller-6 | Recorded Manish's view of the Little Peer blend word for word (V27, `FEEDBACK-BLENDED-2026-11-15.md`) and passed it to ai-peer-video-wp7-2 with the order: transition ideas first, then v2; `stall-wp7-2` re-armed. | Waiting on the ideas and his Tag view |
+| 2026-11-15 18:32 | ai-peer-video-controller-6 | Manish: the same changes for the Tag, only the Tag for now (V28); redirected ai-peer-video-wp7-2 at 18:32 UTC; recorded word for word. | Waiting on the Tag's transition ideas |
