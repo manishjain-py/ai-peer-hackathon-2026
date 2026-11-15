@@ -225,7 +225,7 @@ Still running:
 
 | What | PID | Log | Stop command |
 |---|---|---|---|
-| Wait `usage`: the whole week passes 50% (checked every 5 minutes; Fable's threshold is 101, out of reach; the 40% alarm rang at 19:46 UTC: 38% at 19:20, 40% at 19:46 with one worker, about 4.6 points an hour) | 46163 | `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log` | `kill 46163` |
+| Wait `usage`: the whole week passes 70% (checked every 5 minutes; Fable's threshold is 101, out of reach). The 50% alarm rang at 01:57 UTC on 15 November with the video idle: about 1.3 points an hour from the account's other sessions since 22:03 UTC; the week resets Sunday 15 November 23:00 UTC (Monday 04:30 India time) | 92972 | `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log` | `kill 92972` |
 
 The three waits were started by ai-peer-video-controller-4 at 15:01 UTC (the commands are in
 controller-3's hand-off, "Your waits"); `draft2` was met at about 15:06 UTC and `stall-wp2-3`
