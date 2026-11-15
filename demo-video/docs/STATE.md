@@ -1,14 +1,20 @@
 # AI Peer demo video: state
 
-Live controller: ai-peer-video-controller-5 (Opus 5.5; Terminal window 5570 on Mac 48 GB, PID
-14002, https://claude.ai/code/session_01Nfn5hAQtMCLhcAz7Z5MUzm) until its hand-off at 16:56 UTC on
-15 November to **ai-peer-video-controller-6** (Opus 5.5), which writes its own window and link
-here when it has read in. Read next: the hand-off
+Live controller: **ai-peer-video-controller-6** (Opus 5.5; Terminal window 5591 on Mac 48 GB, PID
+79572, https://claude.ai/code/session_01Nfn5h634KpZdXvvB4k2k9P), since 16:58 UTC on 15 November;
+it took over from ai-peer-video-controller-5 (closed at 16:58 UTC). Read next: the hand-off
 `handoffs/HANDOFF-2026-11-15-ai-peer-video-controller-5.md` and the live worker's brief,
 `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7.md`. A new Mac or a take-over: `START-HERE.md`
 at the repo root. Other sessions message the controller by its name.
 
-## Where we are (2026-11-15 16:56 UTC)
+## Where we are (2026-11-15 17:00 UTC)
+
+**17:00 UTC: ai-peer-video-controller-6 has taken over** (Opus 5.5, window 5591, PID 79572;
+context 9.2% after its read-in). Checked alive: ai-peer-video-wp7 (window 5589, PID 64154,
+busy, context 29.3% at 16:57 UTC), told the new name at 16:58 UTC. Its waits run (`usage`,
+PID 80587; `stall-wp7`, PID 80659). Closed: ai-peer-video-controller-5 (window 5570, PID 14002)
+at 16:58 UTC, with its screen idle, no child process and its last helper done at 16:50 UTC.
+Week 73% at 16:52 UTC. Next: WP7's Little Peer blend.
 
 **16:56 UTC: ai-peer-video-controller-5 hands off to ai-peer-video-controller-6** at 30.5%
 context (16:54 UTC), early because of the tight week (73% at 16:52 UTC). Its two waits are
@@ -365,7 +371,8 @@ set-ups: ask Manish before spending on them.
 
 | Session | Window | Session URL | Worktree | Branch | PR | Job |
 |---|---|---|---|---|---|---|
-| ai-peer-video-controller-5 | 5570 | https://claude.ai/code/session_01Nfn5hAQtMCLhcAz7Z5MUzm | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | The live controller since 13:21 UTC on 15 November; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 14002, transcript `886d5eab-f5fa-4248-ad50-268c2aa3f990` |
+| ai-peer-video-controller-6 | 5591 | https://claude.ai/code/session_01Nfn5h634KpZdXvvB4k2k9P | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | The live controller since 16:58 UTC on 15 November; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 79572, transcript `36ef5c66-79ae-43f6-b644-48a182c0fb5e` |
+| ai-peer-video-controller-5 (closed 16:58 UTC, 15 November) | 5570 | https://claude.ai/code/session_01Nfn5hAQtMCLhcAz7Z5MUzm | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | The controller from 13:21 to 16:56 UTC on 15 November, then handed off to ai-peer-video-controller-6; PID 14002, transcript `886d5eab-f5fa-4248-ad50-268c2aa3f990` |
 | ai-peer-video-controller-4 (closed 13:24 UTC, 15 November) | 3977 | https://claude.ai/code/session_01Nfn5h9pvSF58rFbV1QBNt4 | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | Controller from 15:02 UTC on 14 November to its hand-off at 13:21 UTC on 15 November; PID 35776, transcript `4754b08d-f4fe-4f30-aeee-6e92a6cbb597` |
 | ai-peer-video-wp7 | 5589 | https://claude.ai/code/session_01Nfn5h6qqRLyRxrh3ochTLm | `~/repos/ai-peer-video-wp7` (made by the worker; launched in the shared checkout, with `CLAUDE_NO_IDLE_PING=1`) | `video-wp7-blended` (made by the worker) | none yet | WP7 (V24, V26): the two blended videos (brief `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7.md`); launched at 16:38 UTC; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 64154, transcript `b1fb5e1a-9984-4180-84d3-3d2f7c327445` |
 | ai-peer-video-wp6 (closed 16:32 UTC, 15 November) | 5567 | https://claude.ai/code/session_01Nfn5h6rbZhFxCgZXTT1Tc4 | `~/repos/ai-peer-video-wp6` (made by the worker; launched in the shared checkout, with `CLAUDE_NO_IDLE_PING=1`) | `video-wp6-wow-concepts` (made by the worker) | none yet | WP6 (V22): wow concepts for the AI Peer's own screens, 4 to 5 walkthrough videos for Manish's review (brief `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp6.md`); one research helper and up to three builder helpers allowed; up to $10. Launched 13:19 UTC by ai-peer-video-controller-4; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 11478, transcript `fe5edd36-f7f3-42c4-b2e1-c1e44643bb08`. |
@@ -431,10 +438,11 @@ Still running:
 
 | What | PID | Log | Stop command |
 |---|---|---|---|
+| The usage wait (`usage`: the whole week past 85%) | 80587 | `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log` | `kill 80587` |
+| The stall wait (`stall-wp7`: ai-peer-video-wp7 silent for 25 minutes, or PID 64154 gone) | 80659 | `~/.ai-peer/demo-video-private/controller/waits.log` | `kill 80659` |
 
-The usage wait was started by ai-peer-video-controller-5 at 13:23 UTC on 15 November and
-re-armed at 85% at 15:36 UTC. `stall-wp6` was stopped at 16:09 UTC; WP6 closed at 16:32 UTC. `stall-wp7` was started at 16:38 UTC for ai-peer-video-wp7 (window 5589,
-PID 64154). They are runs of `demo-video/tools/wait-for.sh` in the controller's own
+Both waits were started by ai-peer-video-controller-6 at 16:58 UTC on 15 November;
+ai-peer-video-controller-5 stopped its own at its hand-off. They are runs of `demo-video/tools/wait-for.sh` in the controller's own
 background; the usage alarm's test is `demo-video/tools/usage-check.sh`. The logs are
 `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log`. The commands for new
 waits are in `START-HERE.md`, "Take over as the controller", step 5.
@@ -608,6 +616,13 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
+
+**Now (17:00 UTC, 15 November), ai-peer-video-controller-6:** the hand-off's "Next step,
+exactly", steps 2 to 5, as in the note below: WP7's events (its context at each; it hands off
+by 45% to ai-peer-video-wp7-2); the Little Peer blend first (one small sheet, the privacy
+check, then to Manish on the Attention group and in the session); his words recorded at once
+(V27 is next); usage at each event; money at the package's end. Window 2952 (the first
+controller, PID 38022) stays until Manish's "close it".
 
 **Now (16:53 UTC, 15 November), ai-peer-video-controller-5:** ai-peer-video-wp7 builds the two
 blended videos (plan approved; "Where we are"). At each of its events: read its context (it
@@ -876,3 +891,4 @@ and 7 still hold.
 | 2026-11-15 16:31 | ai-peer-video-controller-5 | Manish picked Little Peer (V23) and asked for two blended videos (V24) and a repo for any Mac (V25); his words in `BRIEF-BLENDED-2026-11-15.md`. His tag video came at 16:28 UTC (one sheet looked at; kept outside git for now); the repo already exists (private, since 4 November). Sent him a short plan and one question; nothing started. |
 | 2026-11-15 16:37 | ai-peer-video-controller-5 | Manish: build the tag version from the video (V26). Tagged the milestones; wrote WP7's brief (two blended videos); launching ai-peer-video-wp7. |
 | 2026-11-15 16:56 | ai-peer-video-controller-5 | Fixed START-HERE after a stranger's test (15 gaps); approved WP7's plan; added `privacy-check.sh`. Handed off at 30.5% context to ai-peer-video-controller-6, early because of the tight week (73%): `handoffs/HANDOFF-2026-11-15-ai-peer-video-controller-5.md`. Stopped its waits. |
+| 2026-11-15 17:00 | ai-peer-video-controller-6 | Took over from ai-peer-video-controller-5 (closed at 16:58 UTC): read STATE by its parts and the hand-off; checked ai-peer-video-wp7 alive (context 29.3%) and told it the new name; started the `usage` and `stall-wp7` waits. | Waiting on WP7's Little Peer blend |
