@@ -34,6 +34,9 @@ The concept film that started the idea lives in `film/`.
 
 ## How we work (hackathon-light)
 
+- **The demo video** follows `demo-video/AGENTS.md` and `demo-video/docs/DESIGN.md` section 0
+  where they differ from this list: one worker at a time; workers stop at 85% of the week and
+  all video work pauses at 93%; its hand-offs are in `demo-video/docs/handoffs/`.
 - **The repo is the only memory.** Commit and push code, state, decisions and next
   steps as you go. Nothing may depend on a chat transcript or one laptop.
 - **Move fast.** No unit tests, CI, code review or quality gate. Done means the scene
@@ -54,7 +57,8 @@ The concept film that started the idea lives in `film/`.
 
 ## Hard rules
 
-- Secrets only in `~/.ai-peer/.env`: never in git, chat or Telegram.
+- Secrets only in `~/.ai-peer/.env` (the demo video's `FAL_KEY` and `STABILITY_API_KEY`
+  live in the shell profile; the table is in `START-HERE.md`): never in git, chat or Telegram.
 - Peer runtime data (memory, mail, Slack content, transcripts) lives in `~/.ai-peer/`,
   never in git.
 - The Peer is read-only on Learn Like Magic code and never touches LLM production

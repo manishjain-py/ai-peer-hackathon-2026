@@ -10,6 +10,7 @@ originals are in `~/claude-config` on his Macs; refresh these copies when they c
 | `skills/mac-terminal-control/` | `~/.claude/skills/mac-terminal-control/` | Opening, reading and closing Terminal windows that run Claude sessions (`scripts/mac-term.sh`) |
 | `skills/notify/` | `~/.claude/skills/notify/` | Telegram lines to Manish: `tg-attention.sh` (asks and blockers), `tg-notify.sh` (routine); the token stays outside git |
 | `lessons/` | `~/claude-config/lessons/` | The shared lessons; `INDEX.md` lists them in one line each |
+| `settings-snippet.json` | `~/.claude/settings.json` (a part) | The bypass permission mode the sessions run in, cross-session messages accepted, the idle ping to Telegram; merge it into `~/.claude/settings.json` on a new Mac |
 | `manish-global-CLAUDE.md` | `~/.claude/CLAUDE.md` | Manish's global instructions for every session (plain language, a TLDR at the end, routine calls taken by the session) |
 
 Install on a new Mac: `mkdir -p ~/.claude/skills && cp -R skills/* ~/.claude/skills/` from this

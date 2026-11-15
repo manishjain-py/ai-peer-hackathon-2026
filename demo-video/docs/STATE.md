@@ -5,11 +5,26 @@ PID 14002, https://claude.ai/code/session_01Nfn5hAQtMCLhcAz7Z5MUzm, transcript
 `886d5eab-f5fa-4248-ad50-268c2aa3f990`), since 13:21 UTC on 15 November, from the hand-off
 `handoffs/HANDOFF-2026-11-15-ai-peer-video-controller-4.md`. ai-peer-video-controller-4 (window
 3977, PID 35776) was closed at 13:24 UTC.
-Other sessions message the controller by its name.
+Other sessions message the controller by its name. A new Mac or a take-over: `START-HERE.md`
+at the repo root. Read next: the last controller hand-off,
+`handoffs/HANDOFF-2026-11-15-ai-peer-video-controller-4.md`, and the live worker's brief,
+`handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7.md`.
 
-## Where we are (2026-11-15 16:48 UTC)
+## Where we are (2026-11-15 16:53 UTC)
 
-**16:48 UTC: WP7's plan is approved** (its message at about 16:50 UTC; context 13%, $0.00).
+**16:53 UTC: `START-HERE.md` fixed after a stranger's test.** A fresh read-only helper
+followed it on a plain export of `6b47347` and found 15 gaps (it could not have taken over).
+Fixed: a current "Now" in Next; one Mac at a time, and how a live worker's successor starts
+from its branch on another Mac; the one private file current work needs (the tag video) and
+what must never leave this Mac; the settings snippet (bypass mode, cross-session messages, the
+idle ping) in `docs/ways-of-working/`; current wait commands with `$HOME`; who does the setup;
+the project's resume skill and `AGENTS.md` now route to it; a secrets table; the missing tools
+(uv, Node 22, Chrome, jq, the Automation permission); the lessons path; the exact parts of
+STATE to read; stale lines here. Still open: `demo-video/film/shots.json` reads WP3's
+manifest from a worktree outside git, so the film does not build on a fresh Mac yet (asked of
+ai-peer-video-wp7).
+
+**16:48 UTC: WP7's plan is approved** (its message at about 16:48 UTC; context 13%, $0.00).
 Both blends share one skeleton, about 1:59: the hook with the three colleagues (13 s); the
 mascot out of the bedside phone, by code over the film's night plates (9 s); the product
 walkthrough, the main part (53 s: the setup steps, What I learned, the brief, Ask, the rules;
@@ -416,13 +431,11 @@ Still running:
 | Wait `usage`: the whole week passes 85% (re-armed at 15:36 UTC on 15 November, after the 70% alarm rang at 15:35 UTC; checked every 5 minutes; Fable's threshold is 101, out of reach). The 50% alarm rang at 01:57 UTC on 15 November with the video idle: about 1.3 points an hour from the account's other sessions since 22:03 UTC; the week resets Monday 16 November 22:59 UTC (Tuesday 17 November 04:29 India time, read from `/usage` at 04:55 UTC on 15 November) | 48212 | `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log` | `kill 48212` |
 
 The usage wait was started by ai-peer-video-controller-5 at 13:23 UTC on 15 November and
-re-armed at 85% at 15:36 UTC. Its `stall-wp6` wait was stopped at 16:09 UTC while WP6 waits,
-idle, for Manish; re-arm it, with the command in controller-4's hand-off ("Your waits"), when
-WP6 works again. `stall-wp7` was started at 16:38 UTC for ai-peer-video-wp7 (window 5589,
+re-armed at 85% at 15:36 UTC. `stall-wp6` was stopped at 16:09 UTC; WP6 closed at 16:32 UTC. `stall-wp7` was started at 16:38 UTC for ai-peer-video-wp7 (window 5589,
 PID 64154). They are runs of `demo-video/tools/wait-for.sh` in the controller's own
 background; the usage alarm's test is `demo-video/tools/usage-check.sh`. The logs are
-`~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log`. ai-peer-video-wp6
-(window 5567, PID 11478) waits idle.
+`~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log`. The commands for new
+waits are in `START-HERE.md`, "Take over as the controller", step 5.
 
 ## Packages (each line is written by its own worker only)
 
@@ -514,7 +527,8 @@ He may answer in ai-peer-video-wp6's session (he spoke to it at 16:09 UTC); the 
 sends his words to the controller word for word, with the time.
 Record his words at once (`FEEDBACK-WOW-2026-11-15.md` beside the other feedback files, and
 V23 in `DESIGN.md`), then pass them to ai-peer-video-wp6 word for word and re-arm its stall
-wait.
+wait. (Answered at 16:26 UTC: his words are in `BRIEF-BLENDED-2026-11-15.md` and V23; no
+FEEDBACK-WOW file was written.)
 
 **Answered 2026-11-15 13:14 UTC: his view of Draft 3 (V21): "draft 3 looks good."** With it
 came the next task (V22, WP6). Next from him: his review of WP6's concepts. Later: whether his
@@ -592,6 +606,17 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
+
+**Now (16:53 UTC, 15 November), ai-peer-video-controller-5:** ai-peer-video-wp7 builds the two
+blended videos (plan approved; "Where we are"). At each of its events: read its context (it
+tells at 40% and hands off by 45% to ai-peer-video-wp7-2) and the usage log (the alarm rings
+at 85%: the worker stops at its next clean step; at 93% all video work pauses and Manish is
+told on the Attention group). When a blend arrives: one small sheet; check it is a public
+build with made-up data only; send it to Manish (the Attention group: the video with a
+caption that names the Draft 3 parts cut, then one text line; the same in the session);
+record his words (a feedback file and a V row) and pass them on word for word. Money: sum
+the ledgers at the package's end; tell him at $50 and $80. The controller hands off early
+(about 30% context, the tight week) to ai-peer-video-controller-6. The notes below are older.
 
 **Now (16:31 UTC, 15 November), ai-peer-video-controller-5:** wait for his video and his go.
 Then: (1) git tags for every milestone (Drafts 1 to 3, the wow concepts) and the repo made

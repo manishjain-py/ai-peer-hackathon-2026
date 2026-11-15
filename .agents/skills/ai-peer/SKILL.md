@@ -18,6 +18,10 @@ first if it was loaded through a link; the project root is the folder that holds
 
 ## Resume selectively
 
+0. A new Mac or a take-over: `START-HERE.md` first. The live work since 14 November is the
+   demo video: `demo-video/AGENTS.md`, then `demo-video/docs/STATE.md`; a session started as
+   its controller carries on from that file's "Next". The product build closed on this repo
+   on 7 November (`docs/build/STATE.md`).
 1. Read root `AGENTS.md`, then `docs/build/STATE.md` (the build's live state).
 2. Film work instead (the concept film, its video source or renders): read
    `film/AGENTS.md`, then `film/docs/progress/current-state.md`.
