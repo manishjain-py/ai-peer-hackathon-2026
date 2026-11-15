@@ -7,7 +7,16 @@ PID 14002, https://claude.ai/code/session_01Nfn5hAQtMCLhcAz7Z5MUzm, transcript
 3977, PID 35776) was closed at 13:24 UTC.
 Other sessions message the controller by its name.
 
-## Where we are (2026-11-15 14:46 UTC)
+## Where we are (2026-11-15 15:37 UTC)
+
+**15:37 UTC: the week passed 70% at 15:35 UTC** (the alarm; 67% at 14:44, so about 3.5 points
+an hour with WP6 and its helpers at work). At that pace 85% comes about 19:50 UTC and 93%
+about 22:10 UTC today. The alarm is re-armed at 85% (PID 48212). ai-peer-video-wp6 was told and
+asked to finish the last three concepts well before 85% and to say when it expects the set.
+Its context: 26.6% at 15:30 UTC, from its transcript. Its answer: four of five concepts are
+done and pushed (Constellation too, `86dc7bc` at 15:29 UTC; Little Peer, Glass & Light, Tiny
+Company); only The Notebook still builds (since 14:42 UTC); the full set, with its order and
+the overview picture, by about 16:30 UTC. $0.00 of its $10.
 
 **14:46 UTC: WP6 has two of its five concepts done** (branch `video-wp6-wow-concepts` at
 `0c89f25`; the kit at `fc1df34`, the research note at `da729e4`), each sheet checked by the
@@ -329,7 +338,7 @@ Still running:
 | What | PID | Log | Stop command |
 |---|---|---|---|
 | Wait `stall-wp6`: the worker silent for 25 minutes, or PID 11478 gone (stop it before closing window 5567; stop it while the worker waits, idle, for Manish) | 14497 | `~/.ai-peer/demo-video-private/controller/waits.log` | `kill 14497` |
-| Wait `usage`: the whole week passes 70% (checked every 5 minutes; Fable's threshold is 101, out of reach). The 50% alarm rang at 01:57 UTC on 15 November with the video idle: about 1.3 points an hour from the account's other sessions since 22:03 UTC; the week resets Monday 16 November 22:59 UTC (Tuesday 17 November 04:29 India time, read from `/usage` at 04:55 UTC on 15 November) | 14431 | `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log` | `kill 14431` |
+| Wait `usage`: the whole week passes 85% (re-armed at 15:36 UTC on 15 November, after the 70% alarm rang at 15:35 UTC; checked every 5 minutes; Fable's threshold is 101, out of reach). The 50% alarm rang at 01:57 UTC on 15 November with the video idle: about 1.3 points an hour from the account's other sessions since 22:03 UTC; the week resets Monday 16 November 22:59 UTC (Tuesday 17 November 04:29 India time, read from `/usage` at 04:55 UTC on 15 November) | 48212 | `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log` | `kill 48212` |
 
 Both waits were started by ai-peer-video-controller-5 at 13:23 UTC on 15 November, with the
 commands in controller-4's hand-off ("Your waits"). They are runs of
