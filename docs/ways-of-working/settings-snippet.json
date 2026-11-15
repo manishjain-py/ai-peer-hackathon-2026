@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "defaultMode": "bypassPermissions"
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "crossSessionInbound": "accept",
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash $HOME/.claude/skills/notify/scripts/notify-hook.sh",
+            "timeout": 25
+          }
+        ]
+      }
+    ]
+  }
+}
