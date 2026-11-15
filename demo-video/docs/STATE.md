@@ -6,7 +6,21 @@ read-in at 15:02 UTC. It took over from ai-peer-video-controller-3 (hand-off
 `handoffs/HANDOFF-2026-11-14-ai-peer-video-controller-3.md`), which was closed at 15:01 UTC.
 Other sessions message the controller by its name.
 
-## Where we are (2026-11-15 04:26 UTC)
+## Where we are (2026-11-15 04:58 UTC)
+
+**Correction, 04:56 UTC (ai-peer-video-controller-4):** the week does not reset on 15 November
+at 23:00 UTC, as the controller wrote here and told Manish and the workers. `/usage` at 04:55
+UTC says: "Current week (all models): 52% used · resets Nov 17 at 4:29am (Asia/Calcutta)", that
+is Monday 16 November 22:59 UTC, about 42 hours away. ai-peer-video-wp2-6 noticed it first. At
+the overnight pace of the account's other sessions (about 1.3 points an hour) the week would
+reach about 95% before the reset even without the video. The video's part: Draft 3 (a few
+points), then idle until Manish's feedback. The controller pauses the video's sessions at 93%
+and tells Manish, who may move the work to another subscription.
+
+**04:58 UTC: wp2-6 at work.** The phone now lights up at 14.2 s in the sleeper close-up (by
+code), and a new take, `reveal-gather` (18.0 to 23.0 s), draws the last of the ribbon into him
+low over the floor; no light goes near Ram (its sheet of 11 to 24 s seen by the worker). Ledger
+wp2-6 $1.88 of $21.26. Next: the Zoom colleagues moving, the outside names, Draft 3.
 
 **04:26 UTC: Draft 3 is close; ai-peer-video-wp2-6 finishes it.** ai-peer-video-wp2-5 put in the
 entrance from the phone (a ribbon streams out of the phone on the nightstand; he is formed by
@@ -32,7 +46,7 @@ entrance from the phone (Draft 2's walk had threads to the sleeper for 3.5 s, so
 builder sub-agent on Opus 5.5 for the big-world scene: new files only (`src/scenes/world.js`,
 `src/world.css`, `world.json`), its own render lane, public builds only, no paid call, nothing
 sent anywhere; wp2-5 wires it in after looking at its final sheet. If the week passes 85%, the
-worker stops at its next clean step (reset 15 November 23:00 UTC).
+worker stops at its next clean step (the reset: see the correction at 04:56 UTC).
 
 **20:52 UTC: ai-peer-video-wp2-5 waits, idle, for Manish's pick; "which Peer?" is still open.**
 While waiting it fixed the two weak points (the push-in now lands on the Zoom window itself;
@@ -163,7 +177,7 @@ every shot, then the finals. No film exists yet. The controller waits with backg
 
 **Usage alarm (read 12:34 UTC):** week (all models) 20%, week (Fable) 39%; one hour earlier 10%
 and 19%; 0% at 10:10 UTC. The video burns about 10% of the whole week and 20% of Fable's week
-an hour. The week resets Monday 17 November 04:30 India time. At this pace Fable ends at about
+an hour. The week resets Tuesday 17 November 04:29 India time (Monday 16 November 22:59 UTC; corrected 15 November 04:56 UTC). At this pace Fable ends at about
 15:30 UTC and the whole week at about 20:30 UTC today, which would also stop Learn Like Magic's
 sessions. Manish was asked (Needs Manish 1). Context at 12:34 UTC: the controller 40%, WP2-2
 25%, WP3 33%.
@@ -257,7 +271,7 @@ Still running:
 | What | PID | Log | Stop command |
 |---|---|---|---|
 | Wait `stall-wp2-6`: the worker silent for 25 minutes, or PID 60593 gone (stop it before closing window 5463) | 60910 | `~/.ai-peer/demo-video-private/controller/waits.log` | `kill 60910` |
-| Wait `usage`: the whole week passes 70% (checked every 5 minutes; Fable's threshold is 101, out of reach). The 50% alarm rang at 01:57 UTC on 15 November with the video idle: about 1.3 points an hour from the account's other sessions since 22:03 UTC; the week resets Sunday 15 November 23:00 UTC (Monday 04:30 India time) | 92972 | `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log` | `kill 92972` |
+| Wait `usage`: the whole week passes 70% (checked every 5 minutes; Fable's threshold is 101, out of reach). The 50% alarm rang at 01:57 UTC on 15 November with the video idle: about 1.3 points an hour from the account's other sessions since 22:03 UTC; the week resets Monday 16 November 22:59 UTC (Tuesday 17 November 04:29 India time, read from `/usage` at 04:55 UTC on 15 November) | 92972 | `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log` | `kill 92972` |
 
 The three waits were started by ai-peer-video-controller-4 at 15:01 UTC (the commands are in
 controller-3's hand-off, "Your waits"); `draft2` was met at about 15:06 UTC and `stall-wp2-3`
