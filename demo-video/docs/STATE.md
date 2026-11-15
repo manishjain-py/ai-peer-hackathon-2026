@@ -7,7 +7,16 @@ PID 14002, https://claude.ai/code/session_01Nfn5hAQtMCLhcAz7Z5MUzm, transcript
 3977, PID 35776) was closed at 13:24 UTC.
 Other sessions message the controller by its name.
 
-## Where we are (2026-11-15 16:31 UTC)
+## Where we are (2026-11-15 16:37 UTC)
+
+**16:37 UTC: WP7 starts, the two blended videos (V24, V26).** Manish at 16:34 UTC: "For now
+let's build from the video" (the tag version is rebuilt by code from his video). With no
+objection to the plan, the existing private repo is completed rather than a new one (V25).
+Git tags pin each milestone: `draft-01` (`1813ac4`), `draft-02` (`5a7970f`), `draft-03`
+(`bb81fc5`), `wow-concepts-v1` (`ff352f0`). The brief:
+`handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7.md` (Little Peer first, then the tag; a plan
+message before building; up to two helpers and $10). The controller completes the repo for
+a fresh Mac meanwhile.
 
 **16:31 UTC: Manish picked Little Peer (V23) and gave the next task (V24, V25; his words:
 `BRIEF-BLENDED-2026-11-15.md`).** Two "blended videos": Draft 3's story with a product
@@ -460,6 +469,9 @@ background; the usage alarm's test is `demo-video/tools/usage-check.sh`. The log
 
 ## Needs Manish
 
+**Answered 2026-11-15 16:34 UTC: "For now let's build from the video" (V26).** No question is
+open. Next from him: his view of each blended video as it comes.
+
 **Asked 2026-11-15 16:31 UTC: does the code or project that made the tag video exist on his
 other Mac (then the worker builds from it at full size instead of rebuilding the 848x528
 video by code), and his go on the plan** (the session of ai-peer-video-controller-5 and the
@@ -813,3 +825,4 @@ and 7 still hold.
 | 2026-11-15 16:12 | ai-peer-video-wp6 | Five concepts built and checked (each final sheet seen); privacy: the product's own wording found in the shared data, rewritten, four concepts re-rendered; numbered 1 to 5 in my order, overview picture, README and REPORT; privacy grep clean on WP6's files; delivered to ai-peer-video-controller-5 at 16:07; PR 13 merged (`ff352f0`). | Done; $0.00 of $10; context 33% |
 | 2026-11-15 16:12 | ai-peer-video-controller-5 | WP6 delivered five concepts (PR 13 merged by the worker, `ff352f0`). Privacy check at `0da0985` (no real term in WP6's 260 files, no exact copy of a private file); looked at the overview; sent the overview and five videos with captions plus one question to the Attention group and the session at 16:10 UTC. Stopped `stall-wp6` (worker idle for Manish). Week 71%. |
 | 2026-11-15 16:31 | ai-peer-video-controller-5 | Manish picked Little Peer (V23) and asked for two blended videos (V24) and a repo for any Mac (V25); his words in `BRIEF-BLENDED-2026-11-15.md`. His tag video came at 16:28 UTC (one sheet looked at; kept outside git for now); the repo already exists (private, since 4 November). Sent him a short plan and one question; nothing started. |
+| 2026-11-15 16:37 | ai-peer-video-controller-5 | Manish: build the tag version from the video (V26). Tagged the milestones; wrote WP7's brief (two blended videos); launching ai-peer-video-wp7. |
