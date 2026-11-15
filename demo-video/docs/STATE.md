@@ -7,7 +7,18 @@ it took over from ai-peer-video-controller-5 (closed at 16:58 UTC). Read next: t
 `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7.md`. A new Mac or a take-over: `START-HERE.md`
 at the repo root. Other sessions message the controller by its name.
 
-## Where we are (2026-11-15 18:53 UTC)
+## Where we are (2026-11-15 18:56 UTC)
+
+**18:56 UTC: the Tag's v2 plan is approved (the controller's call), with up to $3.50.**
+ai-peer-video-wp7-3's plan, about 119.3 s: the hook's new second line ("Ram's out of office...
+but the update I needed is already here.") with one new lip-sync take; idea C; the walkthrough
+cut to about 47.5 s (setup, ask and rules 1.1 to 1.25 times faster); Zoom with the new line
+("That's Ram's call. I'll put it in his morning brief, and he'll get back to you."); Slack
+zoomed; the morning: Ram at the desk reading the laptop, the tag folds back into his phone on the
+desk (V19), then a tag-themed brief on the laptop; Draft 3's globe with p11; the end card with the
+tag as the logo; the tag mark everywhere in the tag cut; a re-cut of the same music. Money: the
+lip-sync take (cap $3) and about $0.35 for the desk shot (a picture edit and a 4 s take), from
+the film's made-up stills only; ledger `demo-video/ledger/wp7-3.csv`; total so far $41.43.
 
 **18:53 UTC: Manish picked idea C, the paper-card glide (V29).** His words: "C". Passed to
 ai-peer-video-wp7-3 word for word at 18:53 UTC; it builds the Tag's v2 (read in at 7.7%).
@@ -1046,3 +1057,4 @@ and 7 still hold.
 | 2026-11-15 18:47 | ai-peer-video-wp7-2 | V27, then V28 (the Tag only): built five transition ideas for the Tag by code (screen to screen, a ribbon of light, a paper-card glide, a match cut, a badge on the lid; the engine's new opt-in keys; both v1 configs unchanged), delivered at 18:43 UTC (`5c34cdb`, privacy 0 and 0); wrote the hand-off for ai-peer-video-wp7-3 (the v2 plan). Context 33%. | Stopped; wp7-3 builds blended-tag-v2 |
 | 2026-11-15 18:48 | ai-peer-video-controller-6 | Checked and sent wp7-2's five Tag transition ideas to Manish (18:44 UTC); wp7-2 handed off at 33% and was closed; launched ai-peer-video-wp7-3 (window 5612, PID 98609) for the Tag's v2; `stall-wp7-3` armed. | Waiting on his pick and on v2 |
 | 2026-11-15 18:53 | ai-peer-video-controller-6 | Manish picked transition idea C (V29); passed to ai-peer-video-wp7-3 word for word; recorded. | Waiting on the Tag's v2 |
+| 2026-11-15 18:56 | ai-peer-video-controller-6 | Approved ai-peer-video-wp7-3's v2 plan for the Tag and up to $3.50 (lip-sync take and the desk shot; made-up stills only). | v2 in progress |
