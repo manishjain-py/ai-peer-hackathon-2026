@@ -290,7 +290,7 @@ function brief(S, film, slot) {
 }
 
 const BUILD = { zoom, slack, change, brief };
-const FULL = new Set(["brief"]);   // drawn over the whole frame, not in a window
+const FULL = new Set(["brief"]);   // drawn over the whole frame, not in a window (or a screen's "full": true)
 
 /** Waits for the pictures a node shows as backgrounds: nothing may load while frames are captured. */
 function picturesReady(node) {
@@ -339,10 +339,12 @@ export async function create(slot, film) {
   const S = slot.screen;
   const W = slot.window;
   const start = slot.start, length = slot.length;
-  if (FULL.has(S.kind)) {
+  // the big world of information (world.js, V20) loads only when a slot draws it
+  if (S.kind === "world" && !BUILD.world) BUILD.world = (await import("./world.js")).world;
+  if (FULL.has(S.kind) || S.full === true) {
     const built = BUILD[S.kind](S, film, slot);
     await picturesReady(built.node);
-    const node = el("div.scene.screens.morning", {}, built.node);
+    const node = el(`div.scene.screens.${S.kind === "brief" ? "morning" : "full"}`, {}, built.node);
     return { el: node, render: (t) => built.render(t - start, t) };
   }
   const landed = !!slot.landed;

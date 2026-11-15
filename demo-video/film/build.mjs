@@ -280,10 +280,17 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
       } else if (variant === "private") {
         slot.slateNote = "<b>Product screen.</b> No recording of this yet.";
       } else if (screens && screens.slots[s.id]) {
-        const sc = screens.slots[s.id];
+        let sc = screens.slots[s.id];
+        // the big world of information (V20): world.json draws its slot once it is "ready"
+        // (FILM_WORLD=1 in the environment uses it before that, for its own check renders)
+        const worldPath = path.join(FILM, "world.json");
+        if (fs.existsSync(worldPath)) {
+          const w = readJson(worldPath);
+          if (w.slot === s.id && (w.ready || process.env.FILM_WORLD === "1")) sc = { ...sc, ...w, kind: "world" };
+        }
         slot.use = "scene";
         slot.scene = "screens";
-        slot.window = sc.kind === "brief" ? { x: 0, y: 0, w: shots.width, h: shots.height } : screens.window;
+        slot.window = sc.kind === "brief" || sc.full ? { x: 0, y: 0, w: shots.width, h: shots.height } : screens.window;
         // a tile that talks: a lip-synced clip played over a person's tile, timed by the line said
         const clips = (sc.clips || []).map((c, ci) => {
           const at = shots.narration[c.line];

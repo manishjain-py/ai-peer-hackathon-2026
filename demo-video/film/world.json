@@ -1,0 +1,5 @@
+{
+  "about": "The big world of information (V20), drawn by src/scenes/world.js in place of the change screen in the public film. Made-up data only: every name, team, sender, subject and site is invented. Times are seconds from the slot's start. The build uses this file once ready is true; FILM_WORLD=1 uses it before that.",
+  "slot": "proof-change",
+  "ready": false
+}
