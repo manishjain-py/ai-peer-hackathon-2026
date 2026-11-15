@@ -7,7 +7,13 @@ it took over from ai-peer-video-controller-5 (closed at 16:58 UTC). Read next: t
 `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7.md`. A new Mac or a take-over: `START-HERE.md`
 at the repo root. Other sessions message the controller by its name.
 
-## Where we are (2026-11-15 19:48 UTC)
+## Where we are (2026-11-15 19:50 UTC)
+
+**19:50 UTC: the Tag's v2 is merged (PR #15, `f6c21b4`, tagged `blended-tag-v2`) and with
+Manish.** Checked by the controller: the PR state, the branch deleted, `privacy-check.sh f6c21b4
+7aac137` 0 and 0, the render and sheet in git. ai-peer-video-wp7-3 is idle for his view (context
+35.2%: one round of small changes, or a hand-off to ai-peer-video-wp7-4 for a bigger one);
+`stall-wp7-3` stopped at 19:50 UTC. Money: $42.08 of $100. Week 79% at 19:46 UTC.
 
 **19:48 UTC: the Tag's version 2 is with Manish; his view is the open question.**
 ai-peer-video-wp7-3 delivered `demo-video/film/renders/blended-tag-v2.mp4` on `video-wp7-v2` at
@@ -534,7 +540,6 @@ Still running:
 
 | What | PID | Log | Stop command |
 |---|---|---|---|
-| The stall wait (`stall-wp7-3`: ai-peer-video-wp7-3 silent for 25 minutes, or PID 98609 gone) | 98837 | `~/.ai-peer/demo-video-private/controller/waits.log` | `kill 98837` |
 | The usage wait (`usage`: the whole week past 85%) | 80587 | `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log` | `kill 80587` |
 
 `usage` was started by ai-peer-video-controller-6 at 16:58 UTC on 15 November; `stall-wp7` (16:58
@@ -610,7 +615,8 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 | 2026-11-15 | fal.ai (WP2-6, Draft 3, finished) | The phone's entrance take (`reveal-gather`, plus one unused take) and six webcam listening takes for the Zoom colleagues | $3.42 (8 calls, `demo-video/ledger/wp2-6.csv`, on `main` since PR 12) |
 | 2026-11-15 | none (WP6, finished) | Five concept videos, all made by code (three.js and the film's renderer); no paid call, no ledger file | $0.00 |
 | 2026-11-15 | none (WP7, finished) | The two blended videos, Little Peer and Tag, all by code; the seven new lines on the ElevenLabs plan | $0.00 |
-| | **Total of the $100 cap** | | **$41.43** (WP1 $6.60, WP3 $23.10, WP2 $0.94, WP2-3 $0.62, WP2-4 $3.01, WP2-5 $3.74, WP2-6 $3.42; the last three on `main` since PR 12; WP6 and WP7 $0; the ledger rows sum to $41.41, the 2 cents are rounding) |
+| 2026-11-15 | fal.ai (WP7-3, the Tag's v2, finished) | One lip-sync take for the hook's new second line, and the morning desk shot (a picture edit and a 4 s take) | $0.65 (3 rows of `demo-video/ledger/wp7-3.csv`, on `main` since PR 15) |
+| | **Total of the $100 cap** | | **$42.08** (WP7-3 $0.65 since 15 November; before it $41.43: WP1 $6.60, WP3 $23.10, WP2 $0.94, WP2-3 $0.62, WP2-4 $3.01, WP2-5 $3.74, WP2-6 $3.42; the last three on `main` since PR 12; WP6 and WP7 $0; the ledger rows sum to $41.41, the 2 cents are rounding) |
 
 ## Needs Manish
 
@@ -1075,3 +1081,4 @@ and 7 still hold.
 | 2026-11-15 18:56 | ai-peer-video-controller-6 | Approved ai-peer-video-wp7-3's v2 plan for the Tag and up to $3.50 (lip-sync take and the desk shot; made-up stills only). | v2 in progress |
 | 2026-11-15 19:48 | ai-peer-video-controller-6 | Checked the Tag's v2 (privacy 0 and 0, ledger $0.65, one sheet) and sent it to Manish at 19:48 UTC; approved wp7-3's PR and squash merge. | Waiting on his view of v2 |
 | 2026-11-15 19:49 | ai-peer-video-wp7-3 | Built the Tag's v2 from V27, V28 and V29: h2b and m4b on the ElevenLabs plan, both heard clean by speech-to-text (h2b took three tries: one was heard with an extra "no", one began "Prom's"; Draft 3's h2 as the control was clean); a new hook-2 lip-sync take; idea C; Slack in a full-frame window; a new morning desk shot (one still edit, one take); the brief on the laptop and the tag as the logo (one builder helper); Draft 3's globe on a time map; `bed-blended-v2`. Delivered 19:47 UTC; PR #15 squash-merged as `f6c21b4`, branch deleted. $0.6506. | Idle for Manish's view of v2 |
+| 2026-11-15 19:50 | ai-peer-video-controller-6 | Checked the merge of PR #15 (`f6c21b4`), tagged `blended-tag-v2`, stopped `stall-wp7-3` (wp7-3 idle at 35.2%), added WP7-3's $0.65 to Money spent ($42.08). | Waiting on his view of v2 |
