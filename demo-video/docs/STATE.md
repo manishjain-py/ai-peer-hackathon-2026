@@ -7,7 +7,22 @@ it took over from ai-peer-video-controller-5 (closed at 16:58 UTC). Read next: t
 `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7.md`. A new Mac or a take-over: `START-HERE.md`
 at the repo root. Other sessions message the controller by its name.
 
-## Where we are (2026-11-15 17:00 UTC)
+## Where we are (2026-11-15 17:26 UTC)
+
+**17:25 UTC: blended video 1, Little Peer, is with Manish; his view is the open question.**
+WP7 delivered it at 17:20 UTC: `demo-video/film/renders/blended-little-peer-v1.mp4` on branch
+`video-wp7-blended` at `c6ec840` (LFS; 119.6 s, 1080p, -14.3 LUFS, every line 15.4 dB or more
+over the music; Draft 3's build still byte-identical). The controller looked at one 16-frame
+sheet (hook, Little Peer out of the phone, the walkthrough, Zoom with its face on the tile,
+Slack, the morning, its return, end card) and checked it: a public build (`--cut`, render in
+the worktree, no private path in the cut), made-up data, `privacy-check.sh c6ec840 c6cfe05`:
+0 exact private copies, and 1 changed file holding real terms, `ui-concepts/BUILDERS-WP7.md`
+(4 lines: two phrases new to git and a job title already on main; a helper's notes, not a
+source of the video, whose own sources hold 0). Sent: a 720p copy (17.8 MB) to the Attention
+group with a caption naming the cut parts, one text line, and the same in the session.
+ai-peer-video-wp7-2 rewrites those 4 lines first, and the PR is squash-merged and its branch
+deleted, so the phrases never reach main. WP7 handed off at 44.5% (`5dc5ddf`); it waits for its
+tag helper, then sends the head sha and stops; then the controller launches wp7-2.
 
 **17:00 UTC: ai-peer-video-controller-6 has taken over** (Opus 5.5, window 5591, PID 79572;
 context 9.2% after its read-in). Checked alive: ai-peer-video-wp7 (window 5589, PID 64154,
@@ -515,6 +530,11 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 
 ## Needs Manish
 
+**Asked 2026-11-15 17:25 UTC: what does he think of blended video 1, Little Peer?** The
+Attention group (the 720p video with its caption, then one text line) and the session of
+ai-peer-video-controller-6 (window 5591). Record his words at once: `FEEDBACK-BLENDED-2026-11-15.md`
+in `demo-video/docs/` and V27 in `DESIGN.md` section 0; pass them word for word to the live worker.
+
 **Answered 2026-11-15 16:34 UTC: "For now let's build from the video" (V26).** No question is
 open. Next from him: his view of each blended video as it comes.
 
@@ -617,6 +637,13 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
+
+**Now (17:26 UTC, 15 November), ai-peer-video-controller-6:** wait for Manish's view of
+the Little Peer blend and for WP7's head sha (after its tag helper reports). Then close WP7
+(stop `stall-wp7` first) and launch ai-peer-video-wp7-2 on Opus 5.5 with `CLAUDE_NO_IDLE_PING=1`;
+its kickoff names `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7-2.md` and adds the privacy
+task (the 4 lines of `BUILDERS-WP7.md`, a squash merge); re-arm the stall wait on its PID and
+transcript. Then the tag blend comes to the controller and goes to Manish the same way.
 
 **Now (17:00 UTC, 15 November), ai-peer-video-controller-6:** the hand-off's "Next step,
 exactly", steps 2 to 5, as in the note below: WP7's events (its context at each; it hands off
@@ -894,3 +921,4 @@ and 7 still hold.
 | 2026-11-15 16:56 | ai-peer-video-controller-5 | Fixed START-HERE after a stranger's test (15 gaps); approved WP7's plan; added `privacy-check.sh`. Handed off at 30.5% context to ai-peer-video-controller-6, early because of the tight week (73%): `handoffs/HANDOFF-2026-11-15-ai-peer-video-controller-5.md`. Stopped its waits. |
 | 2026-11-15 17:00 | ai-peer-video-controller-6 | Took over from ai-peer-video-controller-5 (closed at 16:58 UTC): read STATE by its parts and the hand-off; checked ai-peer-video-wp7 alive (context 29.3%) and told it the new name; started the `usage` and `stall-wp7` waits. | Waiting on WP7's Little Peer blend |
 | 2026-11-15 17:22 | ai-peer-video-wp7 | Read in, plan approved; built the film's --cut option (Draft 3 byte-identical), the shared blend timeline, Little Peer over the night plates by code, 7 new lines, the music re-cut; delivered `blended-little-peer-v1.mp4` at 17:20 UTC; a builder helper rebuilds the tag concept. Handed off at 44.5% context. | The tag blend goes to ai-peer-video-wp7-2 |
+| 2026-11-15 17:26 | ai-peer-video-controller-6 | Checked and sent blended video 1, Little Peer (one sheet; public build; privacy check 0 private copies, 1 helper notes file with 4 real-term lines, fixed next by wp7-2) to Manish on the Attention group and in the session. WP7 handed off at 44.5%. | Waiting on Manish's view and WP7's head sha |
