@@ -330,3 +330,25 @@ From Manish's view of Draft 2 (`DESIGN.md` V19; the order: `../docs/FEEDBACK-DRA
   It is now 0.9 of its size, centred at 41.1% of the height: about 40 px clear above it and above
   a one-line caption.
 - Check renders in lane wp25 only; no paid call.
+
+## Draft 3, Phase C with A, so far (ai-peer-video-wp2-5, 2026-11-15)
+
+Manish picked A, Ram's look out of his phone (V20; `../docs/FEEDBACK-PHASE-A-2026-11-15.md`).
+
+- **The entrance** (`../shots/reveal-a/`): the phone's ribbon, he is formed by 18.0 s (before
+  "I'm Ram's AI Peer"), steps to the chair (20.0), then Draft 2's desk clip from 4.2 s only (its
+  start shows threads to the sleeper): sit 23.0, work 26.5, push-in 30.0. Two Kling 4.0 shots at
+  1080p on key frames made on that clip's own room, tone-matched.
+- **The return** (`../shots/return-a/`, `morning-return`, 104.5 to 108.0): he smiles, flows into
+  the phone in Ram's hand, the phone glows.
+- **One face:** Ram's portrait with the mark as a badge on the cards, the tag, Zoom and Slack.
+- **Zoom:** all three colleagues are webcam stills; Amara says m3 in a lip-synced clip.
+- **The big world of information** (`proof-change`, by a builder helper: `src/scenes/world.js`,
+  `src/world.css`, `world.json`): the flood of email, Slack, tickets, code, docs and the web with
+  counters; the Peer listens and draws it in; the one change (Brazil's fraud threshold) opens with
+  why it matters and drops into "Your morning brief", the rest left out; it ends warm for the
+  sunrise cut. All outside names are invented and still need a quick check.
+- **Music** unchanged on purpose (its quiet bars sit on the sleeper; the new cuts sit on its bar
+  lines). Spent $3.74 (`../ledger/wp2-5.csv`, 12 calls).
+- **Left** (`../docs/handoffs/HANDOFF-2026-11-15-ai-peer-video-wp2-6.md`): the phone as the clear
+  source of the ribbon, the Zoom colleagues moving, then Draft 3.
