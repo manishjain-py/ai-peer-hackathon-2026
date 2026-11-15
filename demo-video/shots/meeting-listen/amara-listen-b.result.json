@@ -1,0 +1,25 @@
+{
+ "request_id": "01a1dd91-0a2e-7dc1-ac2b-a841f39bedc9",
+ "billable_units_header": "8.0",
+ "inputs_sent": {
+  "prompt": "A woman sits at her desk in a bright office by day, on a video call, seen by her laptop's webcam. She listens to a colleague giving an update: she looks at her screen just below the lens with a calm, interested face and blinks naturally. She listens closely, gives a small nod, and smiles slightly. Her lips stay closed: she does not speak at any time. Small natural movements only, like a real person listening on a video call. Her hands stay out of the picture. Nobody enters the picture and nobody walks past behind her. The camera is a fixed laptop webcam: the framing does not change at all. At the end she is back in the same pose as at the start, looking at her screen. One continuous shot with no cuts, no zoom, no pan, no music, no subtitles and no text.",
+  "image_url": "https://v3b.fal.media/files/b/0ab279e6/ApL1uGumkENsUQ81gJpWN_amara-webcam-crop.png",
+  "end_image_url": "https://v3b.fal.media/files/b/0ab279e6/ApL1uGumkENsUQ81gJpWN_amara-webcam-crop.png",
+  "seed": 111,
+  "duration": 5,
+  "resolution": "768P",
+  "prompt_expansion_mode": "balanced"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab285f7/lcU_PJJou5jEEFbQXNBHA_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "lcU_PJJou5jEEFbQXNBHA_minimax-h3.mp4",
+   "file_size": 5028668
+  },
+  "expanded_prompt": "How the reference pictures align with the target video \u2014 Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 1) aligns with the 5.00-second mark of the target video.\n\nintegrated_multimodal_description: [Shot 1] Cinematic, live-action, Static Shot from the perspective of a laptop webcam. The scene features a Black woman (S1) in her 30s with short dark hair, wearing a mustard-yellow textured sweater, sitting at a desk in a bright, modern office. The background is softly blurred, showing a professional work environment with natural light coming from large windows and indoor plants. S1 is looking slightly downward at the laptop screen just below the camera lens, her expression calm and engaged during a video call. Throughout the five-second duration, S1 listens intently, blinking naturally and occasionally shifting her gaze minutely as if processing information. She gives a small, slow nod of agreement and allows a subtle, warm smile to play across her face, though her lips remain closed throughout the entire sequence. Her hands are out of the frame, and the background remains clear and still with no other people entering or moving. By the end of the shot, S1 has returned to her initial neutral pose, looking at the screen with the same composed expression seen in the first frame.\n\noverall_soundscape: The quiet ambience of a professional office is audible, featuring the faint, distant hum of air conditioning and the occasional soft muffled click of a keyboard from a far distance. The subtle, rhythmic sound of gentle breathing and the slight rustle of the sweater fabric are barely present.\n\nnon_diegetic_music: N/A",
+  "timings": {
+   "inference": 1.5162243309999894
+  }
+ }
+}

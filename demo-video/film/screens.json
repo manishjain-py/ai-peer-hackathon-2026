@@ -16,7 +16,19 @@
       "tiles": ["amara", "daniel", "vikram", "peer"],
       "join_at": 1.6,
       "speakers": { "m1": "peer", "m2": "peer", "m3": "amara", "m4": "peer" },
-      "clips": [{ "who": "amara", "file": "assets/screens/amara-m3.mp4", "line": "m3", "line_at": 1.0, "length": 5.0, "about": "Amara says m3 on her webcam: a lip-synced clip (minimax/h3-max-turbo, demo-video/shots/meeting-amara/), played over her tile from 1.0 s before her line; the tile's still is its first frame" }],
+      "clips_note": "Draft 3 (V20): nobody is frozen while the Peer speaks. Each colleague plays listening takes back to back for the whole meeting (minimax/h3-max-turbo at 768P, made by wp2-6 in demo-video/shots/meeting-listen/, shrunk to 960x540): each starts and ends on the person's tile still, so they join with no jump. 'at' is in slot seconds. Later clips lie on top: Amara's talking clip comes last.",
+      "clips": [
+        { "who": "amara", "file": "assets/screens/amara-listen-a.mp4", "at": 0.0, "length": 10.0 },
+        { "who": "amara", "file": "assets/screens/amara-listen-b.mp4", "at": 10.0, "length": 5.0 },
+        { "who": "amara", "file": "assets/screens/amara-listen-a.mp4", "at": 19.7, "length": 2.8 },
+        { "who": "daniel", "file": "assets/screens/daniel-listen-a.mp4", "at": 0.0, "length": 10.0 },
+        { "who": "daniel", "file": "assets/screens/daniel-listen-b.mp4", "at": 10.0, "length": 10.0 },
+        { "who": "daniel", "file": "assets/screens/daniel-listen-a.mp4", "at": 20.0, "length": 2.5 },
+        { "who": "vikram", "file": "assets/screens/vikram-listen-b.mp4", "at": 0.0, "length": 10.0 },
+        { "who": "vikram", "file": "assets/screens/vikram-listen-a.mp4", "at": 10.0, "length": 10.0 },
+        { "who": "vikram", "file": "assets/screens/vikram-listen-b.mp4", "at": 20.0, "length": 2.5 },
+        { "who": "amara", "file": "assets/screens/amara-m3.mp4", "line": "m3", "line_at": 1.0, "length": 5.0, "about": "Amara says m3 on her webcam: a lip-synced clip (minimax/h3-max-turbo, demo-video/shots/meeting-amara/), played over her tile from 1.0 s before her line; the tile's still is its first frame" }
+      ],
       "camera": [{ "t": 0, "s": 1, "fx": 0.5, "fy": 0.5 }, { "t": 2.0, "s": 1, "fx": 0.5, "fy": 0.5 }, { "t": 15.0, "s": 1.045, "fx": 0.56, "fy": 0.56 }, { "t": 22.0, "s": 1.07, "fx": 0.6, "fy": 0.6 }]
     },
     "proof-slack": {

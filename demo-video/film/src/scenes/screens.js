@@ -90,15 +90,18 @@ function zoom(S, film, slot, opts = {}) {
     } else {
       const p = S.people[id];
       const img = el("div.zimg", { style: { backgroundImage: `url("${p.tile}")` } });
-      // a tile that talks: the person's lip-synced clip over the still while it plays (it starts
-      // on the still's own frame); the push-in's copy of this window goes without it
-      const clip = opts.copy ? null : (S.clips || []).find((c) => c.who === id) || null;
-      const host = clip ? document.getElementById("host-" + clip.video) : null;
-      if (clip && !host) throw new Error(`no video ${clip.video} on the page`);
-      if (host) img.append(host);
+      // the person's clips over the still while each plays (listening loops and a lip-synced line,
+      // each starting on the still's own frame); the push-in's copy of this window goes without them
+      const clips = opts.copy ? [] : (S.clips || []).filter((c) => c.who === id);
+      const hosts = clips.map((c) => {
+        const host = document.getElementById("host-" + c.video);
+        if (!host) throw new Error(`no video ${c.video} on the page`);
+        img.append(host);
+        return host;
+      });
       const mic = el("span", { html: ICON.micOff });
       tile = el("div.ztile", {}, img, el("div.zname", {}, mic, el("span", { text: p.name })));
-      tiles.push({ id, tile, img, mic, i, clip, host });
+      tiles.push({ id, tile, img, mic, i, clips, hosts });
     }
     Object.assign(tile.style, { left: px(x), top: px(y), width: px(tw), height: px(th) });
     tile.append(el("div.zactive"));
@@ -130,11 +133,11 @@ function zoom(S, film, slot, opts = {}) {
         const s = 1.035 + 0.012 * Math.sin(local * 0.31 + T.i * 1.9);
         T.img.style.transform = `scale(${s.toFixed(4)}) translate(${(3 * Math.sin(local * 0.23 + T.i)).toFixed(2)}px, ${(2 * Math.cos(local * 0.19 + T.i * 2)).toFixed(2)}px)`;
         T.mic.innerHTML = lit ? ICON.micOn : ICON.micOff;
-        if (T.host) {
-          const v = envelope(t, T.clip.start, T.clip.start + T.clip.length, 0.12, 0.3, ease.inOut, ease.inOut);
-          show(T.host, v > 0);
-          T.host.style.opacity = v.toFixed(3);
-        }
+        T.clips.forEach((c, ci) => {
+          const v = envelope(t, c.start, c.start + c.length, 0.12, 0.3, ease.inOut, ease.inOut);
+          show(T.hosts[ci], v > 0);
+          T.hosts[ci].style.opacity = v.toFixed(3);
+        });
       }
     }
     const tv = envelope(local, S.join_at, S.join_at + 4.4, 0.35, 0.4);

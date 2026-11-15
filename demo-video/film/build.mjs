@@ -294,12 +294,19 @@ export function readFilm({ variant = "public", withScenes = [] } = {}) {
         slot.use = "scene";
         slot.scene = "screens";
         slot.window = sc.kind === "brief" || sc.full ? { x: 0, y: 0, w: shots.width, h: shots.height } : screens.window;
-        // a tile that talks: a lip-synced clip played over a person's tile, timed by the line said
+        // clips over a person's tile: a lip-synced one timed by the line said ("line", "line_at"), or
+        // one at its own time in the slot ("at", slot seconds; "in", where in the clip it starts),
+        // such as a loop of the person listening. Later clips in the list lie on top.
         const clips = (sc.clips || []).map((c, ci) => {
-          const at = shots.narration[c.line];
-          if (at == null) { problems.push(`slot ${s.id}: a tile clip names the line ${c.line}, which has no start`); return null; }
+          let start;
+          if (c.at != null) start = s.start + c.at;
+          else {
+            const at = shots.narration[c.line];
+            if (at == null) { problems.push(`slot ${s.id}: a tile clip names the line ${c.line}, which has no start`); return null; }
+            start = at - c.line_at;
+          }
           if (!fs.existsSync(path.join(FILM, c.file))) { problems.push(`slot ${s.id}: the tile clip ${c.file} is missing`); return null; }
-          const v = { id: `v-${s.id}-tile-${ci}`, src: c.file, start: r3(at - c.line_at), length: c.length, mediaStart: 0, rate: 1 };
+          const v = { id: `v-${s.id}-tile-${ci}`, src: c.file, start: r3(start), length: c.length, mediaStart: c.in || 0, rate: 1 };
           media.push(v);
           return { who: c.who, video: v.id, start: v.start, length: v.length };
         }).filter(Boolean);

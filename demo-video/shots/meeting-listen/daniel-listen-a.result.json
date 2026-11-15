@@ -1,0 +1,25 @@
+{
+ "request_id": "01a1dd90-1b53-7811-a2c2-8676c6878649",
+ "billable_units_header": "16.0",
+ "inputs_sent": {
+  "prompt": "A man sits at a table in a small meeting room in late-afternoon light, on a video call, seen by his laptop's webcam. He listens to a colleague giving an update: he looks at his screen just below the lens with a calm, attentive face and blinks naturally. Now and then he gives a small nod; around the middle he glances down at his notes for a moment and looks back up. His lips stay closed: he does not speak at any time. Small natural movements only, like a real person listening on a video call. His hands stay out of the picture. Nobody enters the picture and nobody walks past behind him. The camera is a fixed laptop webcam: the framing does not change at all. At the end he is back in the same pose as at the start, looking at his screen. One continuous shot with no cuts, no zoom, no pan, no music, no subtitles and no text.",
+  "image_url": "https://v3b.fal.media/files/b/0ab285f0/28ZS-4ClJ2tVSqYFWTwcK_daniel-webcam-crop.png",
+  "end_image_url": "https://v3b.fal.media/files/b/0ab285f0/28ZS-4ClJ2tVSqYFWTwcK_daniel-webcam-crop.png",
+  "seed": 210,
+  "duration": 10,
+  "resolution": "768P",
+  "prompt_expansion_mode": "balanced"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab285f1/VYyiIp2TORv-oRzVw1Th7_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "VYyiIp2TORv-oRzVw1Th7_minimax-h3.mp4",
+   "file_size": 7183459
+  },
+  "expanded_prompt": "How the reference pictures align with the target video \u2014 Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 1) aligns with the 10.00-second mark of the target video.\n\nintegrated_multimodal_description: [Shot 1] Cinematic live-action shot from a fixed laptop webcam perspective. A man (S1) in his late 40s with short brown hair and light stubble sits at a table in a small modern meeting room. He wears a dark navy button-down shirt. The scene is bathed in the warm, golden glow of late-afternoon sunlight streaming through large windows behind him, creating soft rim lighting on his shoulders and highlighting the texture of his shirt. S1 looks directly at the laptop screen just below the camera lens, maintaining a calm, attentive expression as if listening to a video call. Throughout the shot, he blinks naturally and gives a subtle, slow nod every occasionally to show engagement. At 00:04.500, S1 glances down briefly at some notes on the table (out of frame) for two seconds, his eyes tracking movement below. At 00:07.000, he returns his gaze back to the screen, regaining his initial neutral and focused posture. His lips remain closed for the entire duration, and he does not speak. The camera remains perfectly static with no zoom, pan, or movement, and the background of the office with plants and glass partitions remains still.\n\noverall_soundscape: The faint, ambient hum of a quiet office ventilation system is layered with the distant, muffled sound of a colleague's voice coming from the laptop speakers. Soft, rhythmic rustling of S1's shirt is heard as he shifts his weight slightly.\n\nnon_diegetic_music: N/A",
+  "timings": {
+   "inference": 4.588106519000121
+  }
+ }
+}
