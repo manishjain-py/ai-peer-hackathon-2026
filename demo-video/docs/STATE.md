@@ -497,6 +497,7 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
   against the private term list (`~/.ai-peer/demo-video-private/ui-wow/real-terms.txt`) finds nothing
   in WP6's files. Built by five builder helpers (three at most at once) and one research helper.
   Spent $0.00. **Open for Manish:** his view of the five.
+- WP7, the two blended videos (`ai-peer-video-wp7`, then `ai-peer-video-wp7-2`; brief `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7.md`, cap $10): **the Little Peer blend delivered** at 17:20 UTC, `demo-video/film/renders/blended-little-peer-v1.mp4` (119.6 s; branch `video-wp7-blended` at `c6ec840`, no PR yet), made by `node demo-video/film/render.mjs --cut blended-little-peer` from `demo-video/film/cuts/` (Draft 3's build byte-identical). **The tag blend is left** to ai-peer-video-wp7-2: `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7-2.md`. $0.00 spent.
 
 ## Money spent
 
@@ -892,3 +893,4 @@ and 7 still hold.
 | 2026-11-15 16:37 | ai-peer-video-controller-5 | Manish: build the tag version from the video (V26). Tagged the milestones; wrote WP7's brief (two blended videos); launching ai-peer-video-wp7. |
 | 2026-11-15 16:56 | ai-peer-video-controller-5 | Fixed START-HERE after a stranger's test (15 gaps); approved WP7's plan; added `privacy-check.sh`. Handed off at 30.5% context to ai-peer-video-controller-6, early because of the tight week (73%): `handoffs/HANDOFF-2026-11-15-ai-peer-video-controller-5.md`. Stopped its waits. |
 | 2026-11-15 17:00 | ai-peer-video-controller-6 | Took over from ai-peer-video-controller-5 (closed at 16:58 UTC): read STATE by its parts and the hand-off; checked ai-peer-video-wp7 alive (context 29.3%) and told it the new name; started the `usage` and `stall-wp7` waits. | Waiting on WP7's Little Peer blend |
+| 2026-11-15 17:22 | ai-peer-video-wp7 | Read in, plan approved; built the film's --cut option (Draft 3 byte-identical), the shared blend timeline, Little Peer over the night plates by code, 7 new lines, the music re-cut; delivered `blended-little-peer-v1.mp4` at 17:20 UTC; a builder helper rebuilds the tag concept. Handed off at 44.5% context. | The tag blend goes to ai-peer-video-wp7-2 |
