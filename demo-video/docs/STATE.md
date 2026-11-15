@@ -14,6 +14,14 @@ must move like real people while the Peer speaks; Slack is fine for now; the "on
 thousand" part becomes the big world of information (emails, Slack, other sources, the web)
 that the Peer consolidates into the brief, read as part of Draft 3. Nothing else needs him now.
 ai-peer-video-wp2-5 has his words and goes on with Phase C (cap $25) and Phase D (Draft 3).
+At 03:56 UTC the controller approved wp2-5's Phase C plan: two new route-K shots for the
+entrance from the phone (Draft 2's walk had threads to the sleeper for 3.5 s, so it goes), Draft
+2's sit-down and work shots kept, one route-K shot for the return into the phone, webcam
+"listening" clips for the three colleagues, about $6 to $9. It also said yes (C13) to one
+builder sub-agent on Opus 5.5 for the big-world scene: new files only (`src/scenes/world.js`,
+`src/world.css`, `world.json`), its own render lane, public builds only, no paid call, nothing
+sent anywhere; wp2-5 wires it in after looking at its final sheet. If the week passes 85%, the
+worker stops at its next clean step (reset 15 November 23:00 UTC).
 
 **20:52 UTC: ai-peer-video-wp2-5 waits, idle, for Manish's pick; "which Peer?" is still open.**
 While waiting it fixed the two weak points (the push-in now lands on the Zoom window itself;
