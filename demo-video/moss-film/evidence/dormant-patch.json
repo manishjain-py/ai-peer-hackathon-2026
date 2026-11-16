@@ -1,0 +1,14 @@
+{
+  "frame_ranges": [
+    [
+      318,
+      420
+    ],
+    [
+      3129,
+      3192
+    ]
+  ],
+  "reason": "Respect original eye/wake/fold state keys with the same Moss avatar; body unchanged wherever eyes>=1",
+  "assembly": "Lossless intermediate; unaffected captured frames retained; full fresh render remains the default"
+}

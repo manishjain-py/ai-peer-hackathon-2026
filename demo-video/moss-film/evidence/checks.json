@@ -1,0 +1,101 @@
+{
+  "base_sha256": "7756283021b7237605337f079e435babb25143c2fb1d9023e6b70204a952b039",
+  "base_audio_packet_hash": "cc8181065648afbeb122463327333b1a3d6b982e119c984077a78a5239c4296c",
+  "base_audio_packet_count": 5608,
+  "base_decoded_audio_hash": "SHA256=d9fac1adab5b33b730c7ca85a6de3c3b3d96b5d97da4227d4e045417559df02e",
+  "files": [
+    {
+      "file": "film/renders/blended-moss-v1.mp4",
+      "sha256": "c6672bd1b42b09b5c66c4dbd55bdb2f37ef5dbac6e79594f061f3fc5cb4f2941",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "start_time": "0.000000",
+            "duration": "119.600000",
+            "nb_read_frames": "3588",
+            "side_data_list": [
+              {}
+            ]
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "start_time": "0.000000",
+            "duration": "119.600000",
+            "nb_read_frames": "5607"
+          }
+        ],
+        "format": {
+          "duration": "119.600000",
+          "size": "355832892"
+        }
+      },
+      "audio_packet_hash": "cc8181065648afbeb122463327333b1a3d6b982e119c984077a78a5239c4296c",
+      "audio_packet_count": 5608,
+      "decoded_audio_hash": "SHA256=d9fac1adab5b33b730c7ca85a6de3c3b3d96b5d97da4227d4e045417559df02e",
+      "full_decode": "passed"
+    },
+    {
+      "file": "film/renders/blended-moss-v1-720p.mp4",
+      "sha256": "0348b89c4c99b315cc0a7b4221db71823b01572796b7c97b3ae8b4ab2fab0651",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "30/1",
+            "start_time": "0.000000",
+            "duration": "119.600000",
+            "nb_read_frames": "3588",
+            "side_data_list": [
+              {}
+            ]
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "start_time": "0.000000",
+            "duration": "119.600000",
+            "nb_read_frames": "5607"
+          }
+        ],
+        "format": {
+          "duration": "119.600000",
+          "size": "20516672"
+        }
+      },
+      "audio_packet_hash": "cc8181065648afbeb122463327333b1a3d6b982e119c984077a78a5239c4296c",
+      "audio_packet_count": 5608,
+      "decoded_audio_hash": "SHA256=d9fac1adab5b33b730c7ca85a6de3c3b3d96b5d97da4227d4e045417559df02e",
+      "full_decode": "passed"
+    }
+  ],
+  "invariants": {
+    "slot_count": 20,
+    "all_slot_times_camera_keys": true,
+    "all_six_walk_spans": true,
+    "original_audio_configuration": true,
+    "walk_data_layout_style_timeline": true,
+    "base_master_unchanged": true
+  },
+  "privacy": "Only existing public fictional sources and generic generated Moss artwork. No private-term-list scan claimed.",
+  "new_cost_usd": 0.4,
+  "project_cost_usd": 49.306079
+}
