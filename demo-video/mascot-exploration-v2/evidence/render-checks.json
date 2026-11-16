@@ -1,0 +1,1712 @@
+{
+  "checked_at": "2026-11-16T14:48:55.271799+00:00",
+  "auditions": 25,
+  "exports": 50,
+  "frames_per_audition": 699,
+  "audition_video_seconds": 23.3,
+  "quick_look_frames": 2250,
+  "quick_look_seconds": 75,
+  "original_master_unchanged_sha256": "7756283021b7237605337f079e435babb25143c2fb1d9023e6b70204a952b039",
+  "records": [
+    {
+      "file": "renders/01-miso.mp4",
+      "full_decode": "pass",
+      "sha256": "b73423cc5f86531ac2fc0bbba4bfa20822b6696b8faf2a45663cdd1510df35ed",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4219521"
+      }
+    },
+    {
+      "file": "renders/01-miso-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "2c96ef69a9f70d4f5b7f92ebc8824d0a7d83e9795f4f0aac1f0221d918a6e66e",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7729539"
+      }
+    },
+    {
+      "file": "renders/02-tavi.mp4",
+      "full_decode": "pass",
+      "sha256": "18362e7cbd2f7d4bd43376604cf806bd11492d9dd2df8183ff6532fadbbda58a",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4193190"
+      }
+    },
+    {
+      "file": "renders/02-tavi-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "1378439d613530e4a9aabef689589463d3bcd70f379b662bf4cdfb02a1a3361a",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7576437"
+      }
+    },
+    {
+      "file": "renders/03-mallow.mp4",
+      "full_decode": "pass",
+      "sha256": "1549747e71e04f12b03bf8485aae40999a43ddd53535da08a2c3aeaa9863cf21",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4375733"
+      }
+    },
+    {
+      "file": "renders/03-mallow-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "3b77c071c574d2443a2f617fdb9b1d835f94891d28a2c714f045f9af9ae136ed",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "8026221"
+      }
+    },
+    {
+      "file": "renders/04-pipkin.mp4",
+      "full_decode": "pass",
+      "sha256": "e7d5e46b36f358727fcc05e393b453a72bc6dc4af57edab5a5ff10c1dc466984",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4215930"
+      }
+    },
+    {
+      "file": "renders/04-pipkin-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "0e0fbeccfed74590061998fd0c4c8d4603935bb470476636f187f1063aaebf73",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7628538"
+      }
+    },
+    {
+      "file": "renders/05-nori.mp4",
+      "full_decode": "pass",
+      "sha256": "68075e487548e8f58a7c42a7b7c756d62aa68559d7be61a455e299fa91eb5dc3",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4128684"
+      }
+    },
+    {
+      "file": "renders/05-nori-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "c9ab70d7a8eb59b3c967025f63ba6a06479205a0b6791de50a9dbfb38806cd59",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7553201"
+      }
+    },
+    {
+      "file": "renders/06-bram.mp4",
+      "full_decode": "pass",
+      "sha256": "6bb5c478b0c2784dc9eb2fbbeda837379e173870ba4bc04e7aa067be63780974",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4258448"
+      }
+    },
+    {
+      "file": "renders/06-bram-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "be02b0eae440af92e6bb0bf5927a764c046e61a46b9b634f2179df4c5da4d889",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7737319"
+      }
+    },
+    {
+      "file": "renders/07-pogo.mp4",
+      "full_decode": "pass",
+      "sha256": "3c85eeaffd4603373cf16172119c4055eb37cefdde08d023e0c323ce7c2dbdab",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4207066"
+      }
+    },
+    {
+      "file": "renders/07-pogo-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "f7f67d8ec806f59ba0c45e6036da79c3cf9915374c42a94c8ff5d1667b00afa9",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7539413"
+      }
+    },
+    {
+      "file": "renders/08-clover.mp4",
+      "full_decode": "pass",
+      "sha256": "da9b9ad96a071ac93b71f76db68e9f49d596cf75866117146bcecef11e73dad0",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4297693"
+      }
+    },
+    {
+      "file": "renders/08-clover-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "80736ea976297cc2dd158ec70ebec3843683b1ed2e64def81a02857a6abfee9c",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7682810"
+      }
+    },
+    {
+      "file": "renders/09-lumi.mp4",
+      "full_decode": "pass",
+      "sha256": "0b0421bb0fe0ef7559d7e1589de5134e7be1b83bde4f1d51465c8ffadbf0fa93",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4418229"
+      }
+    },
+    {
+      "file": "renders/09-lumi-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "e39945d42af2e68ee7c573631dc267c25122eebebde32ca3f962259f4ea1b9fe",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7833943"
+      }
+    },
+    {
+      "file": "renders/10-fable.mp4",
+      "full_decode": "pass",
+      "sha256": "f20a64f289621360efc609d6f14c7f612add6c3a9211303352121963ae08252b",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4260769"
+      }
+    },
+    {
+      "file": "renders/10-fable-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "301763f85540b62a9269c57e983395eb089fc84c4c6f263ddec1a4f73fe6f5f4",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7646870"
+      }
+    },
+    {
+      "file": "renders/11-sora.mp4",
+      "full_decode": "pass",
+      "sha256": "6c6de4b7d42b2e717abed51557eb4b2c22bfa02278832daea17bebc12addacb4",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4218853"
+      }
+    },
+    {
+      "file": "renders/11-sora-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "c6c9a03b1594d3c41ff9369625ea569395ecd159c017fd1349131f6da71edd7c",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7821000"
+      }
+    },
+    {
+      "file": "renders/12-peeko.mp4",
+      "full_decode": "pass",
+      "sha256": "dd7a8b7ec32346245ca9b288781937476a5cdc32ad20c74fc28f8e8540bf0d67",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4242000"
+      }
+    },
+    {
+      "file": "renders/12-peeko-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "f3607e169ab0f108d6eceee1c77e68283e749ba2d238a9926794846d7526a266",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7758873"
+      }
+    },
+    {
+      "file": "renders/13-wisp.mp4",
+      "full_decode": "pass",
+      "sha256": "6289a31ef4847be2e01558dff9e66980320de7300f4d0c0088b65fb5f4073c5b",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4314344"
+      }
+    },
+    {
+      "file": "renders/13-wisp-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "4adc94070289f451c49d7f22a2d4d3a2122038bcc931c3b106d48eb0d329f493",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7696033"
+      }
+    },
+    {
+      "file": "renders/14-orbit.mp4",
+      "full_decode": "pass",
+      "sha256": "49ff985b2941a0f2d0e6dc333019fc8e57079c918a6ad30a0f63fabe22dc2f54",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4203795"
+      }
+    },
+    {
+      "file": "renders/14-orbit-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "44ea52ddc11cd8fd0c10de323bfb4bad6f31c0dbca85ec3b2ac9726700bc4817",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7577858"
+      }
+    },
+    {
+      "file": "renders/15-dew.mp4",
+      "full_decode": "pass",
+      "sha256": "2793ed92435bae0e3044c08bc63cb22b5e58f8c6ce937f8692113f24e12d389c",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4141068"
+      }
+    },
+    {
+      "file": "renders/15-dew-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "374219a20aa0dcd7d85cfb6350645f660653f4e5b8bf04b118f2ff863077941f",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7491036"
+      }
+    },
+    {
+      "file": "renders/16-ember.mp4",
+      "full_decode": "pass",
+      "sha256": "100e9b434568931548e7d83321ab04262ca2509c7abe298a6da7afe0e9e5f022",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4230803"
+      }
+    },
+    {
+      "file": "renders/16-ember-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "b7e6b4ad7af07905a55175b18a48690e3b37fce0df2f4cd9fb4def2f12d3c003",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7648069"
+      }
+    },
+    {
+      "file": "renders/17-pebble.mp4",
+      "full_decode": "pass",
+      "sha256": "10e02769e274c1a4247c32fe37ac5dce7a98a183c35ea3a3f11d572fff4ec161",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4282727"
+      }
+    },
+    {
+      "file": "renders/17-pebble-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "93a6fd22f17a3f2aa9b426fab9dd09f6d90b146b30d714c18c5d4288a53e9cb1",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7858468"
+      }
+    },
+    {
+      "file": "renders/18-bento.mp4",
+      "full_decode": "pass",
+      "sha256": "5ce3afe5528d1cecf6a8ec5d3eea10f290e4ef6f6ac3bf5d39c17ba840c37bcc",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4395673"
+      }
+    },
+    {
+      "file": "renders/18-bento-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "0453dc2108de49066badc7dfc70a3e01a0be44634912015a0bfd0f3cff056e89",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7944551"
+      }
+    },
+    {
+      "file": "renders/19-manta.mp4",
+      "full_decode": "pass",
+      "sha256": "15281406abd1ba15673e7668f31da1bd63608a943bedecbdd78739986178c052",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4258584"
+      }
+    },
+    {
+      "file": "renders/19-manta-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "9d89ef61b4b2b1117a230833ef7e3ff9d91dbdbd8e106795a8ac086d2af678e1",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7799568"
+      }
+    },
+    {
+      "file": "renders/20-tess.mp4",
+      "full_decode": "pass",
+      "sha256": "2629c947f4eded7d3fd0e218b8f8fdbc49ec6515b0a8e37464c7e98647b47862",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4659591"
+      }
+    },
+    {
+      "file": "renders/20-tess-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "99d8899d5c4d6a7cbad331574798260fcc7dbbcc4dae6afcd31a6e805f6eb64f",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "8494631"
+      }
+    },
+    {
+      "file": "renders/21-pollen.mp4",
+      "full_decode": "pass",
+      "sha256": "c3712f43f5366415d6c2bcef01c09bbb3c8bcc1021e35c9c1a58bf488aba5f28",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4249772"
+      }
+    },
+    {
+      "file": "renders/21-pollen-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "abcb4320a3d5a070ea170f63c9d266ea6ed9a016dd9e2bedc7f80f7ff206cdcf",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7759542"
+      }
+    },
+    {
+      "file": "renders/22-quill.mp4",
+      "full_decode": "pass",
+      "sha256": "f0328a8c4775deae90cb051d31248a10aae21bb16746c7fc1385a4c0bfbde27a",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4296562"
+      }
+    },
+    {
+      "file": "renders/22-quill-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "a15c5993a02fb60790258b6ca131fcf321faf08e14179ec0e1574478600f6040",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7756903"
+      }
+    },
+    {
+      "file": "renders/23-fenn.mp4",
+      "full_decode": "pass",
+      "sha256": "543a9386f1930b5cad5b8ff2d547d9c8742ab099d35686268af506656ffd7b25",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4223514"
+      }
+    },
+    {
+      "file": "renders/23-fenn-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "8593a79e97d906983c2b3501e5393f3f1e1dc443f91a4994e5d735d609c23c24",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7670987"
+      }
+    },
+    {
+      "file": "renders/24-noodle.mp4",
+      "full_decode": "pass",
+      "sha256": "aca827c65acc8c1556815d188e8548695766c932776fd524248a4d78fb4983fa",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4279197"
+      }
+    },
+    {
+      "file": "renders/24-noodle-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "9fe301956f1b049877d92a4281adcdcc849547b392b7e73c304d634aa8f8004b",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7768981"
+      }
+    },
+    {
+      "file": "renders/25-moss.mp4",
+      "full_decode": "pass",
+      "sha256": "c8bf7e586668b163f923e5386ac492e98ef6ecf50da139a0eece01f9b3e01931",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.317000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.317000",
+        "size": "4150562"
+      }
+    },
+    {
+      "file": "renders/25-moss-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "f105766d21796e91680e199a739e364a6bd178d5ebca65337ed724a736ab99ba",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "23.300000",
+          "nb_read_frames": "699",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "23.300000",
+          "nb_read_frames": "1093"
+        }
+      ],
+      "format": {
+        "duration": "23.300000",
+        "size": "7647020"
+      }
+    },
+    {
+      "file": "renders/quick-look-75s-1080p.mp4",
+      "full_decode": "pass",
+      "sha256": "4ff5fc561e99f46cfb8cf069311270d1e63935f8dca06a2d402823db9cc5df28",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "30/1",
+          "duration": "75.000000",
+          "nb_read_frames": "2250",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "75.000000",
+          "nb_read_frames": "3516"
+        }
+      ],
+      "format": {
+        "duration": "75.000000",
+        "size": "10205045"
+      }
+    },
+    {
+      "file": "renders/quick-look-75s.mp4",
+      "full_decode": "pass",
+      "sha256": "15e042557c4a0ec44ec75ef759fd2fa4f5328f21d56c0bbf49b3983d70f2a68f",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "30/1",
+          "duration": "75.000000",
+          "nb_read_frames": "2250",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "duration": "75.000000",
+          "nb_read_frames": "3516"
+        }
+      ],
+      "format": {
+        "duration": "75.000000",
+        "size": "5280184"
+      }
+    }
+  ],
+  "motion_alpha_checks": [
+    {
+      "id": "miso",
+      "frames": 124,
+      "minimum_mean_alpha": 60.0596,
+      "empty_frames": 0
+    },
+    {
+      "id": "tavi",
+      "frames": 124,
+      "minimum_mean_alpha": 72.5916,
+      "empty_frames": 0
+    },
+    {
+      "id": "mallow",
+      "frames": 124,
+      "minimum_mean_alpha": 77.5962,
+      "empty_frames": 0
+    },
+    {
+      "id": "pipkin",
+      "frames": 124,
+      "minimum_mean_alpha": 67.6436,
+      "empty_frames": 0
+    },
+    {
+      "id": "bram",
+      "frames": 124,
+      "minimum_mean_alpha": 66.6794,
+      "empty_frames": 0
+    },
+    {
+      "id": "pogo",
+      "frames": 124,
+      "minimum_mean_alpha": 81.0825,
+      "empty_frames": 0
+    },
+    {
+      "id": "clover",
+      "frames": 124,
+      "minimum_mean_alpha": 62.3748,
+      "empty_frames": 0
+    },
+    {
+      "id": "lumi",
+      "frames": 124,
+      "minimum_mean_alpha": 57.9961,
+      "empty_frames": 0
+    },
+    {
+      "id": "fable",
+      "frames": 124,
+      "minimum_mean_alpha": 71.4211,
+      "empty_frames": 0
+    },
+    {
+      "id": "sora",
+      "frames": 124,
+      "minimum_mean_alpha": 56.5183,
+      "empty_frames": 0
+    },
+    {
+      "id": "peeko",
+      "frames": 124,
+      "minimum_mean_alpha": 54.0178,
+      "empty_frames": 0
+    },
+    {
+      "id": "wisp",
+      "frames": 124,
+      "minimum_mean_alpha": 52.1929,
+      "empty_frames": 0
+    },
+    {
+      "id": "orbit",
+      "frames": 124,
+      "minimum_mean_alpha": 63.9312,
+      "empty_frames": 0
+    },
+    {
+      "id": "ember",
+      "frames": 124,
+      "minimum_mean_alpha": 67.7258,
+      "empty_frames": 0
+    },
+    {
+      "id": "pebble",
+      "frames": 124,
+      "minimum_mean_alpha": 80.9678,
+      "empty_frames": 0
+    },
+    {
+      "id": "bento",
+      "frames": 124,
+      "minimum_mean_alpha": 73.5649,
+      "empty_frames": 0
+    },
+    {
+      "id": "manta",
+      "frames": 124,
+      "minimum_mean_alpha": 63.2095,
+      "empty_frames": 0
+    },
+    {
+      "id": "tess",
+      "frames": 124,
+      "minimum_mean_alpha": 69.0315,
+      "empty_frames": 0
+    },
+    {
+      "id": "pollen",
+      "frames": 124,
+      "minimum_mean_alpha": 64.1379,
+      "empty_frames": 0
+    },
+    {
+      "id": "quill",
+      "frames": 124,
+      "minimum_mean_alpha": 72.4268,
+      "empty_frames": 0
+    },
+    {
+      "id": "fenn",
+      "frames": 124,
+      "minimum_mean_alpha": 42.1479,
+      "empty_frames": 0
+    },
+    {
+      "id": "noodle",
+      "frames": 124,
+      "minimum_mean_alpha": 66.5303,
+      "empty_frames": 0
+    },
+    {
+      "id": "moss",
+      "frames": 124,
+      "minimum_mean_alpha": 72.5173,
+      "empty_frames": 0
+    }
+  ]
+}

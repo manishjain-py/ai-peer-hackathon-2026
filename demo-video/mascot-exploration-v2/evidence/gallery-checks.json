@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-16T14:29:25.354Z",
+  "checked_at": "2026-11-16T14:48:43.626Z",
   "cards": 25,
   "shortlist_cards": 1,
   "translucent_cards": 2,
@@ -8,6 +8,12 @@
     "width": 1280,
     "height": 720
   },
+  "quick_look": {
+    "duration": 75,
+    "width": 1280,
+    "height": 720
+  },
+  "linked_files": 200,
   "mobile_horizontal_overflow": false,
   "page_errors": []
 }

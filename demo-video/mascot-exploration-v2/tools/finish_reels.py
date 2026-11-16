@@ -8,7 +8,8 @@ def probe(file): return json.loads(run(['ffprobe','-v','error','-count_frames','
 parts=[]
 for c in concepts:
  stem=f"{c['number']:02d}-{c['id']}";dest=CACHE/f'{stem}-intro.mp4'
- run(['ffmpeg','-hide_banner','-loglevel','error','-y','-i',str(OUT/f'{stem}-1080p.mp4'),'-t','3','-an','-c:v','libx264','-preset','fast','-crf','20','-pix_fmt','yuv420p',str(dest)])
+ if not dest.exists() or dest.stat().st_mtime<(OUT/f'{stem}-1080p.mp4').stat().st_mtime:
+  run(['ffmpeg','-hide_banner','-loglevel','error','-y','-i',str(OUT/f'{stem}-1080p.mp4'),'-t','3','-an','-c:v','libx264','-preset','fast','-crf','20','-pix_fmt','yuv420p',str(dest)])
  parts.append(f"file '{dest}'")
 (CACHE/'intros.txt').write_text('\n'.join(parts)+'\n')
 bed=ROOT.parent/'film/audio/music/bed-blended-v2.wav'
@@ -28,5 +29,15 @@ for file in [master,OUT/'quick-look-75s.mp4']:
  run(['ffmpeg','-hide_banner','-loglevel','error','-i',str(file),'-f','null','-']);info=probe(file);v=next(x for x in info['streams'] if x['codec_type']=='video');assert int(v['nb_read_frames'])==2250
  records.append({'file':str(file.relative_to(ROOT)),'full_decode':'pass','sha256':hashlib.sha256(file.read_bytes()).hexdigest(),**info})
 original=ROOT.parent/'film/renders/blended-tag-v2.mp4';original_hash=hashlib.sha256(original.read_bytes()).hexdigest();assert original_hash=='7756283021b7237605337f079e435babb25143c2fb1d9023e6b70204a952b039'
-report={'checked_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'auditions':25,'exports':50,'frames_per_audition':699,'audition_video_seconds':23.3,'quick_look_frames':2250,'quick_look_seconds':75,'original_master_unchanged_sha256':original_hash,'records':records}
+motion_alpha=[]
+meta=json.loads((ROOT/'render-metadata.json').read_text())
+for c in concepts:
+ m=meta[c['id']]
+ if not m['motion']:continue
+ file=ROOT/'motion'/f"{m['stem']}.webm"
+ raw=run(['ffmpeg','-hide_banner','-loglevel','error','-c:v','libvpx-vp9','-i',str(file),'-vf','alphaextract,scale=64:64','-pix_fmt','gray','-f','rawvideo','-']).stdout
+ values=[sum(raw[i:i+4096])/4096 for i in range(0,len(raw),4096)]
+ assert min(values)>4,(file,min(values))
+ motion_alpha.append({'id':c['id'],'frames':len(values),'minimum_mean_alpha':round(min(values),4),'empty_frames':0})
+report={'checked_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'auditions':25,'exports':50,'frames_per_audition':699,'audition_video_seconds':23.3,'quick_look_frames':2250,'quick_look_seconds':75,'original_master_unchanged_sha256':original_hash,'records':records,'motion_alpha_checks':motion_alpha}
 (ROOT/'evidence'/'render-checks.json').write_text(json.dumps(report,indent=2)+'\n');print('All 50 audition exports and both quick-look exports fully decode; frame counts, duration, compact copy sizes and original master hash pass.')
