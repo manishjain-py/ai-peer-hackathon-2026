@@ -1,0 +1,20 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "The exact single hand-felted woodland companion in the reference performs this specific activity: Lower the raised paw smoothly within the first half second, then keep both paws calmly down. Look slightly left as if noticing someone finish an action, give one small warm closed-mouth smile and ONE gentle slow acknowledgment nod, then return upright and settle in a relaxed satisfied pose. No wave, no thumbs up, no big bounce, no speech mouth movement. Nod happens after the first second, not immediately. Animate actual eyes, head and hands; preserve EXACT identity, green felt wool texture, cream face and belly, curled sprout, ears, amber pendant, all proportions and scale. Feet stay planted in the same central position and size. Entire body stays inside the generous existing margins. Completely locked camera, no pan/zoom/reframing. Background perfectly uniform pure magenta #FF00FF, no floor, shadow or scenery. No new objects, text, sound or music. One continuous five-second shot.",
+    "image_url": "file:demo-video/mascot-exploration-v2/images/25-moss-chroma.png",
+    "duration": 5,
+    "resolution": "768P",
+    "prompt_expansion_mode": "disabled",
+    "seed": 16112674
+  },
+  "expect": {
+    "units": 5,
+    "unit": "seconds at768p",
+    "unit_price": 0.04,
+    "cost_usd": 0.2,
+    "basis": "Existing verified fal endpoint; conservative rate"
+  },
+  "output": "demo-video/moss-acting/assets/moss-acknowledge-source",
+  "note": "Generic selected Moss artwork only; V35 acting, no company/product material"
+}

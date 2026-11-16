@@ -1,0 +1,982 @@
+{
+ "about": "Moss context-specific acting V2 (V35); same story, UI, timing and audio",
+ "fps": 30,
+ "width": 1920,
+ "height": 1080,
+ "seconds": 119.6,
+ "bpm": 120,
+ "scenes_ready": [
+  "endcard",
+  "pushin",
+  "earth",
+  "tagbrief"
+ ],
+ "overlays_ready": [
+  "chips",
+  "notes"
+ ],
+ "names": {
+  "employee": "Ram",
+  "peer": "Ram's AI Peer",
+  "night_time": "1:58 AM",
+  "peer_face": "assets/screens/peer-face-moss.png",
+  "mascot": "tag",
+  "about": "The Peer is the version's mascot (V24): its face on the hook's cards, the Zoom tile and Slack; the mascot itself over the plates."
+ },
+ "parts": [
+  {
+   "id": "hook",
+   "title": "The hook",
+   "start": 0.0,
+   "length": 14.0
+  },
+  {
+   "id": "entrance",
+   "title": "The entrance",
+   "start": 14.0,
+   "length": 8.0
+  },
+  {
+   "id": "walkthrough",
+   "title": "The walkthrough",
+   "start": 22.0,
+   "length": 47.4
+  },
+  {
+   "id": "night",
+   "title": "The night",
+   "start": 69.4,
+   "length": 30.6
+  },
+  {
+   "id": "morning",
+   "title": "The morning",
+   "start": 100.0,
+   "length": 11.0
+  },
+  {
+   "id": "close",
+   "title": "The close",
+   "start": 111.0,
+   "length": 8.6
+  }
+ ],
+ "slots": [
+  {
+   "id": "hook-1",
+   "part": "hook",
+   "start": 0.0,
+   "length": 3.5,
+   "kind": "ai",
+   "shows": "Daytime, a bright office. A colleague looks up from her phone, surprised: Ram's AI Peer has answered her, and it is 2 AM where he lives.",
+   "line": "h1",
+   "clip": "assets/shots/hook-1-ram-r1.mp4",
+   "own_clip": true,
+   "in_s": 0.4,
+   "line_in_s": 0.86,
+   "card": {
+    "side": "left",
+    "at": 0.9,
+    "text": "Yes, the numbers are final. The sheet is in our team folder.",
+    "from": ""
+   }
+  },
+  {
+   "id": "hook-2",
+   "part": "hook",
+   "start": 3.5,
+   "length": 4.5,
+   "kind": "ai",
+   "shows": "Late afternoon, another city, a small meeting room. A colleague reads his update, surprised and pleased: Ram is out of office, and the update he needed is already here.",
+   "line": "h2b",
+   "clip": "assets/shots/hook-2-h2b-v2t1.mp4",
+   "own_clip": true,
+   "in_s": 0.4,
+   "line_in_s": 0.9,
+   "card": {
+    "side": "right",
+    "at": 1.4,
+    "text": "Your update: the new screens are done, and the review is now on Thursday.",
+    "from": ""
+   }
+  },
+  {
+   "id": "hook-3",
+   "part": "hook",
+   "start": 8.0,
+   "length": 2.0,
+   "kind": "ai",
+   "shows": "Evening, a third place, a home desk under a lamp. A colleague leans back, half laughing, and asks if he ever sleeps.",
+   "line": "h3",
+   "clip": "assets/shots/hook-3-final-v1.mp4"
+  },
+  {
+   "id": "hook-sleeper",
+   "part": "hook",
+   "start": 10.0,
+   "length": 4.0,
+   "kind": "ai",
+   "shows": "Ram asleep; the phone on the bedside table lights up and the mascot climbs out of it, looks at him, and hops away toward the desk.",
+   "clip": "assets/shots/hook-sleeper-lit-v1.mp4",
+   "sleeper_label": true,
+   "in_s": 1.8,
+   "rate": 0.8,
+   "mascot": {
+    "s": 0.57,
+    "anchor": [
+     [
+      2.25,
+      [
+       385,
+       975,
+       1.0
+      ]
+     ],
+     [
+      3.875,
+      [
+       360,
+       1005,
+       1.077
+      ]
+     ]
+    ],
+    "start": [
+     395,
+     966,
+     0
+    ],
+    "pop": {
+     "at": 2.45,
+     "dur": 0.55,
+     "from": [
+      385,
+      990
+     ]
+    },
+    "moves": [],
+    "look": [
+     [
+      2.5,
+      [
+       0.3,
+       -0.7
+      ]
+     ],
+     [
+      2.9,
+      [
+       0.7,
+       -0.8
+      ]
+     ],
+     [
+      3.3,
+      [
+       1,
+       -0.2
+      ]
+     ]
+    ],
+    "happy": [
+     [
+      3.1,
+      0
+     ],
+     [
+      3.3,
+      0.8
+     ]
+    ],
+    "blinks": [
+     3.42
+    ],
+    "badge": [
+     [
+      2.4,
+      0
+     ],
+     [
+      2.65,
+      1
+     ],
+     [
+      3.3,
+      0.3
+     ]
+    ],
+    "glow": 0.65,
+    "light": 0.65,
+    "shadow": 0.4,
+    "trail": [],
+    "eyes": [
+     [
+      2.95,
+      0
+     ],
+     [
+      3.1,
+      1.3
+     ],
+     [
+      3.22,
+      1
+     ]
+    ],
+    "legs": [
+     [
+      3.08,
+      0
+     ],
+     [
+      3.32,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "id": "entrance-room",
+   "part": "entrance",
+   "start": 14.0,
+   "length": 3.2,
+   "kind": "ai",
+   "own_clip": true,
+   "clip": "cuts/_blend/plates/night-room-v1.mp4",
+   "clip_seconds": 4.0,
+   "mascot": {
+    "s": 0.3,
+    "start": [
+     150,
+     840,
+     0
+    ],
+    "moves": [
+     {
+      "t0": 0.45,
+      "t1": 2.65,
+      "to": [
+       1488,
+       634,
+       0
+      ],
+      "h": 170,
+      "kind": "glide",
+      "step": false
+     }
+    ],
+    "legs": [
+     [
+      0.3,
+      1
+     ],
+     [
+      0.5,
+      0
+     ],
+     [
+      2.35,
+      0
+     ],
+     [
+      2.6,
+      1
+     ]
+    ],
+    "trail": [
+     [
+      0.45,
+      2.65
+     ]
+    ],
+    "look": [
+     [
+      0,
+      [
+       1,
+       -0.2
+      ]
+     ],
+     [
+      2.6,
+      [
+       1,
+       0.2
+      ]
+     ],
+     [
+      2.95,
+      [
+       1,
+       0.5
+      ]
+     ]
+    ],
+    "happy": [
+     [
+      0,
+      0.7
+     ],
+     [
+      2.7,
+      0.9
+     ]
+    ],
+    "blinks": [
+     0.2,
+     2.9
+    ],
+    "glow": 0.7,
+    "light": 0.7,
+    "shadow": 0.4
+   },
+   "view": [
+    [
+     0,
+     [
+      330,
+      770,
+      2.0
+     ]
+    ],
+    [
+     0.4,
+     [
+      330,
+      770,
+      2.0
+     ]
+    ],
+    [
+     2.7,
+     [
+      1440,
+      600,
+      1.6
+     ]
+    ],
+    [
+     3.2,
+     [
+      1480,
+      610,
+      1.7
+     ]
+    ]
+   ],
+   "shows": "The dark room, the camera following: the tag tucks its legs and glides like a paper card to the desk."
+  },
+  {
+   "id": "entrance-desk",
+   "part": "entrance",
+   "start": 17.2,
+   "length": 2.8,
+   "kind": "ai",
+   "own_clip": true,
+   "clip": "cuts/_blend/plates/night-desk-v1.mp4",
+   "clip_seconds": 4.0,
+   "mascot": {
+    "s": 0.63,
+    "start": [
+     1060,
+     792,
+     0
+    ],
+    "moves": [
+     {
+      "t0": 0.15,
+      "t1": 0.42,
+      "to": [
+       1118,
+       790,
+       0
+      ],
+      "h": 28,
+      "kind": "hop"
+     }
+    ],
+    "wake": {
+     "at": 0.42,
+     "dur": 0.5,
+     "quad": [
+      [
+       1293,
+       486
+      ],
+      [
+       1475,
+       504
+      ],
+      [
+       1383,
+       757
+      ],
+      [
+       1211,
+       718
+      ]
+     ]
+    },
+    "look": [
+     [
+      0,
+      [
+       0.9,
+       -0.4
+      ]
+     ],
+     [
+      0.75,
+      [
+       0.9,
+       -0.4
+      ]
+     ],
+     [
+      0.95,
+      [
+       0,
+       0.1
+      ]
+     ]
+    ],
+    "happy": [
+     [
+      0.5,
+      0.6
+     ],
+     [
+      1.0,
+      0.95
+     ]
+    ],
+    "wave": [
+     [
+      1.1,
+      2.2
+     ]
+    ],
+    "blinks": [
+     1.6
+    ],
+    "badge": [
+     [
+      0.9,
+      1
+     ],
+     [
+      2.2,
+      0.4
+     ]
+    ],
+    "glow": 0.5,
+    "light": 0.5,
+    "shadow": 0.45
+   },
+   "camera": {
+    "to_scale": 1.15
+   },
+   "shows": "It taps the laptop awake and says it is Ram's AI Peer."
+  },
+  {
+   "id": "entrance-pushin",
+   "part": "entrance",
+   "start": 20.0,
+   "length": 2.0,
+   "kind": "code",
+   "scene": "pushin",
+   "clip": null,
+   "hand_quads": {
+    "about": "The lit screen's corners in night-desk-v1.mp4, clockwise from the top left, as fractions of the frame.",
+    "night-desk-v1.mp4": [
+     [
+      0.6734,
+      0.45
+     ],
+     [
+      0.7682,
+      0.4667
+     ],
+     [
+      0.7203,
+      0.7009
+     ],
+     [
+      0.6307,
+      0.6648
+     ]
+    ]
+   },
+   "mascot": {
+    "s": 0.63,
+    "look": [
+     [
+      0,
+      [
+       0.9,
+       -0.45
+      ]
+     ]
+    ],
+    "happy": [
+     [
+      0,
+      0.7
+     ]
+    ],
+    "glow": 0.5,
+    "light": 0.45,
+    "shadow": 0.45,
+    "start": [
+     1118,
+     790,
+     0
+    ]
+   },
+   "shows": "The camera goes into the screen; the tag stays beside the laptop."
+  },
+  {
+   "id": "walk-click",
+   "part": "walkthrough",
+   "start": 22.0,
+   "length": 2.6,
+   "kind": "ai",
+   "own_clip": true,
+   "clip": "../ui-concepts/renders/moss-clean-v2.mp4",
+   "clip_seconds": 58.0,
+   "in_s": 2.8,
+   "rate": 1.038,
+   "shows": "The Moss walkthrough: click."
+  },
+  {
+   "id": "walk-setup",
+   "part": "walkthrough",
+   "start": 24.6,
+   "length": 16.0,
+   "kind": "ai",
+   "own_clip": true,
+   "clip": "../ui-concepts/renders/moss-clean-v2.mp4",
+   "clip_seconds": 58.0,
+   "in_s": 5.5,
+   "rate": 1.219,
+   "shows": "The Moss walkthrough: setup.",
+   "labels": [
+    {
+     "at": 5.05,
+     "length": 3.1,
+     "text": "Slack, Code and Tickets: connect once, with your own sign-in"
+    },
+    {
+     "at": 12.6,
+     "length": 1.9,
+     "text": "It writes up what it found, with a source for each fact"
+    },
+    {
+     "at": 14.6,
+     "length": 1.4,
+     "text": "Then it drafts your first brief"
+    }
+   ]
+  },
+  {
+   "id": "walk-learned",
+   "part": "walkthrough",
+   "start": 40.6,
+   "length": 6.4,
+   "kind": "ai",
+   "own_clip": true,
+   "clip": "../ui-concepts/renders/moss-clean-v2.mp4",
+   "clip_seconds": 58.0,
+   "in_s": 25.0,
+   "rate": 1.094,
+   "shows": "The Moss walkthrough: learned."
+  },
+  {
+   "id": "walk-brief",
+   "part": "walkthrough",
+   "start": 47.0,
+   "length": 6.8,
+   "kind": "ai",
+   "own_clip": true,
+   "clip": "../ui-concepts/renders/moss-clean-v2.mp4",
+   "clip_seconds": 58.0,
+   "in_s": 32.0,
+   "rate": 1.103,
+   "shows": "The Moss walkthrough: brief."
+  },
+  {
+   "id": "walk-ask",
+   "part": "walkthrough",
+   "start": 53.8,
+   "length": 9.0,
+   "kind": "ai",
+   "own_clip": true,
+   "clip": "../ui-concepts/renders/moss-clean-v2.mp4",
+   "clip_seconds": 58.0,
+   "in_s": 39.5,
+   "rate": 1.167,
+   "shows": "The Moss walkthrough: ask."
+  },
+  {
+   "id": "walk-rules",
+   "part": "walkthrough",
+   "start": 62.8,
+   "length": 6.6,
+   "kind": "ai",
+   "own_clip": true,
+   "clip": "../ui-concepts/renders/moss-clean-v2.mp4",
+   "clip_seconds": 58.0,
+   "in_s": 50.0,
+   "rate": 1.136,
+   "shows": "The Moss walkthrough: rules."
+  },
+  {
+   "id": "proof-meeting",
+   "part": "night",
+   "start": 69.4,
+   "length": 22.8,
+   "kind": "product",
+   "scene": "product",
+   "clock": "2 AM",
+   "clip": null,
+   "shows": "Draft 3's Zoom meeting at 2 AM: the Peer joins as a labelled AI, gives Ram's update, and puts Brazil in Ram's morning brief for him to answer."
+  },
+  {
+   "id": "proof-slack",
+   "part": "night",
+   "start": 92.2,
+   "length": 7.8,
+   "kind": "product",
+   "scene": "product",
+   "clock": "4 AM",
+   "clip": null,
+   "shows": "Draft 3's Slack at 4 AM, closer on the message: Daniel's question, answered with its sources, no promise made."
+  },
+  {
+   "id": "morning-wake",
+   "part": "morning",
+   "start": 100.0,
+   "length": 2.2,
+   "kind": "ai",
+   "shows": "Sunrise: Ram wakes and sits up; on the desk by the window the tag waves.",
+   "clip": "assets/shots/morning-wake-final-v3.mp4",
+   "in_s": 1.5,
+   "rate": 1.2,
+   "mascot": {
+    "s": 0.33,
+    "start": [
+     1495,
+     634,
+     0
+    ],
+    "look": [
+     [
+      0,
+      [
+       -1,
+       0
+      ]
+     ]
+    ],
+    "happy": [
+     [
+      0,
+      0.7
+     ]
+    ],
+    "wave": [
+     [
+      0.6,
+      2.3
+     ]
+    ],
+    "blinks": [
+     0.4,
+     1.9
+    ],
+    "glow": 0.25,
+    "light": 0.15,
+    "shadow": 0.5,
+    "badge": [
+     [
+      0,
+      0.3
+     ]
+    ]
+   }
+  },
+  {
+   "id": "morning-desk",
+   "part": "morning",
+   "start": 102.2,
+   "length": 3.4,
+   "kind": "ai",
+   "clip": "assets/shots/morning-desk-t1.mp4",
+   "shows": "Ram at the desk in the sunrise, reading the laptop; the tag beside it waves, folds back into a plain tag and slips into his phone on the desk (V19: back where it came from); the camera goes to the screen.",
+   "own_clip": true,
+   "clip_seconds": 4.0,
+   "in_s": 0.3,
+   "view": [
+    [
+     0,
+     [
+      960,
+      540,
+      1.0
+     ]
+    ],
+    [
+     2.3,
+     [
+      960,
+      540,
+      1.0
+     ]
+    ],
+    [
+     3.4,
+     [
+      1180,
+      600,
+      1.3
+     ]
+    ]
+   ],
+   "mascot": {
+    "s": 0.44,
+    "start": [
+     1650,
+     815,
+     0
+    ],
+    "moves": [
+     {
+      "t0": 1.45,
+      "t1": 1.8,
+      "to": [
+       1540,
+       893,
+       0
+      ],
+      "h": 60,
+      "kind": "hop"
+     }
+    ],
+    "dive": {
+     "at": 2.1,
+     "dur": 0.4,
+     "to": [
+      1530,
+      900
+     ],
+     "flash": 0.25
+    },
+    "look": [
+     [
+      0,
+      [
+       -1,
+       -0.4
+      ]
+     ],
+     [
+      1.3,
+      [
+       -1,
+       -0.4
+      ]
+     ],
+     [
+      1.45,
+      [
+       -0.3,
+       0.5
+      ]
+     ]
+    ],
+    "happy": [
+     [
+      0,
+      0.6
+     ],
+     [
+      0.4,
+      0.95
+     ]
+    ],
+    "wave": [
+     [
+      0.3,
+      1.3
+     ]
+    ],
+    "blinks": [
+     0.9
+    ],
+    "legs": [
+     [
+      1.85,
+      1
+     ],
+     [
+      2.0,
+      0
+     ]
+    ],
+    "eyes": [
+     [
+      1.9,
+      1
+     ],
+     [
+      2.05,
+      0
+     ]
+    ],
+    "badge": [
+     [
+      0,
+      0.3
+     ],
+     [
+      2.0,
+      1
+     ]
+    ],
+    "glow": 0.25,
+    "light": 0.15,
+    "shadow": 0.5,
+    "trail": [
+     [
+      1.45,
+      1.8
+     ]
+    ]
+   }
+  },
+  {
+   "id": "morning-laptop",
+   "part": "morning",
+   "start": 105.6,
+   "length": 5.4,
+   "kind": "code",
+   "scene": "tagbrief",
+   "clip": null,
+   "brief": {
+    "time": "7:02",
+    "greeting": "Good morning, Ram",
+    "lead": "Four things happened while you slept. One needs you.",
+    "sections": [
+     {
+      "title": "What I did",
+      "accent": "green",
+      "cards": [
+       {
+        "cat": "Meeting \u00b7 2:00 AM",
+        "title": "Gave your update at the Host Payouts sync",
+        "why": "Amara asked about Brazil. I left that decision for you."
+       },
+       {
+        "cat": "Slack \u00b7 4:03 AM",
+        "title": "Answered Daniel in #host-payouts",
+        "why": "Tuesday's failures came from a bank outage, with sources. I promised nothing."
+       }
+      ]
+     },
+     {
+      "title": "What I learned",
+      "accent": "blue",
+      "cards": [
+       {
+        "cat": "Payments Risk \u00b7 6:04 AM",
+        "title": "Brazil's fraud threshold drops on Thursday",
+        "why": "About 3% more payouts will be held. They will look like retry failures."
+       }
+      ]
+     },
+     {
+      "title": "Needs you",
+      "accent": "amber",
+      "cards": [
+       {
+        "cat": "Decision",
+        "title": "Switch on payout retry for Brazil this week?",
+        "why": "Amara needs your answer for the 9:00 launch review.",
+        "buttons": [
+         "Yes, this week",
+         "Not yet"
+        ],
+        "decision": true
+       }
+      ]
+     }
+    ]
+   },
+   "click": 4.2,
+   "shows": "The morning brief on the laptop, in the tag's own look: what it did overnight, what it learned, the one decision lit; he clicks his answer."
+  },
+  {
+   "id": "close-earth",
+   "part": "close",
+   "start": 111.0,
+   "length": 4.7,
+   "kind": "code",
+   "scene": "earth",
+   "clip": null,
+   "warp": {
+    "about": "film seconds -> Draft 3's globe seconds (its scene runs 108.0 to 120.0; its end card came at 116.0)",
+    "points": [
+     [
+      111.0,
+      108.0
+     ],
+     [
+      115.7,
+      116.0
+     ],
+     [
+      119.6,
+      120.0
+     ]
+    ]
+   },
+   "shows": "The camera pulls out of one lit window, over the city, up to the Earth from space. On the night side, mint lights come on across the dark cities."
+  },
+  {
+   "id": "close-endcard",
+   "part": "close",
+   "start": 115.7,
+   "length": 3.9,
+   "kind": "code",
+   "scene": "endcard",
+   "clip": null,
+   "shows": "The tag as the AI Peer's mark, the line \"More room for your best work.\", over the lit horizon."
+  }
+ ],
+ "narration": {
+  "about": "Where each spoken line starts, in film seconds.",
+  "h1": 0.46,
+  "h2b": 4.0,
+  "h3": 8.4,
+  "p01": 10.3,
+  "p02": 18.2,
+  "n01": 22.2,
+  "n02": 24.9,
+  "p03": 33.07,
+  "n03": 41.1,
+  "n04": 47.5,
+  "n05": 54.2,
+  "n06": 59.45,
+  "p05": 63.5,
+  "n07": 65.4,
+  "m1": 71.3,
+  "m2": 77.1,
+  "m3": 84.7,
+  "m4b": 87.85,
+  "p06": 94.0,
+  "p08": 100.3,
+  "p10": 107.2,
+  "p11": 111.6,
+  "p12": 116.1
+ }
+}

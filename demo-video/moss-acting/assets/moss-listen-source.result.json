@@ -1,0 +1,24 @@
+{
+ "request_id": "01a1e59f-22e1-7c63-acd5-72e7684c3479",
+ "billable_units_header": "8.0",
+ "inputs_sent": {
+  "prompt": "The exact single hand-felted woodland companion in the reference performs this specific activity: Lower the raised paw smoothly within the first half second. Then keep both paws relaxed down. Listen carefully with curious attentive eyes: turn the head slightly toward the left as if following a colleague, gently tilt one ear toward them, blink once, then return the gaze forward. Stay interested and still; NO nodding agreement, NO wave, NO mouth speech, NO paw to chin. End calm and attentive. Animate actual eyes, head and hands; preserve EXACT identity, green felt wool texture, cream face and belly, curled sprout, ears, amber pendant, all proportions and scale. Feet stay planted in the same central position and size. Entire body stays inside the generous existing margins. Completely locked camera, no pan/zoom/reframing. Background perfectly uniform pure magenta #FF00FF, no floor, shadow or scenery. No new objects, text, sound or music. One continuous five-second shot.",
+  "image_url": "https://v3b.fal.media/files/b/0ab2bac1/O_XU7nS6Vyf6kdAFbquZO_25-moss-chroma.png",
+  "duration": 5,
+  "resolution": "768P",
+  "prompt_expansion_mode": "disabled",
+  "seed": 16112672
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab2bac1/nKkrZKEzq7L3e65iHSbHg_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "nKkrZKEzq7L3e65iHSbHg_minimax-h3.mp4",
+   "file_size": 3269942
+  },
+  "expanded_prompt": null,
+  "timings": {
+   "inference": 2.2728755950083723
+  }
+ }
+}
