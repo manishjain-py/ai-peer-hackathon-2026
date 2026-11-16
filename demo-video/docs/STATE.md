@@ -1,11 +1,11 @@
 # AI Peer demo video: state
 
-Current requested work (Codex, 16 November 2026, 13:01 UTC): **V32 complete: twelve mascot
-alternatives delivered to Telegram** (overview, twelve numbered videos, recommendation).
-PR 16 merged as `083bef7`; checkpoint `mascot-options-v1`. Gallery:
-`demo-video/mascot-options/index.html`. Delivery record: `MASCOT-DELIVERY-2026-11-16.md`.
-The implementation worker finished. Await Manish's number or shortlist; the approved Tag v2
-full film remains unchanged. New paid spend $0; Codex weekly usage 11% at 12:55 UTC.
+Current requested work (Codex, 16 November 2026): **Round 2 mascot exploration (V33)**,
+24 generated-art directions with a happy, warm personality. Gemini/fal.ai permitted; Learn
+Like Magic's generation workflow inspected read-only. One worker (`mascot_previews`) in the
+managed `generated-mascots` worktree, branch `codex/generated-mascots`. Brief:
+`BRIEF-GENERATED-MASCOTS-2026-11-16.md`. New generation cap $15 inside the existing $100;
+prior recorded spend $42.08. The approved film and all twelve V32 previews stay intact.
 
 Previous recorded controller on the source Mac (historical session details, not checked live
 on this Mac): ai-peer-video-controller-7 (Opus 5.5; Terminal window 5771 on Mac 48 GB, PID 13541,
@@ -14,7 +14,15 @@ November from ai-peer-video-controller-6 (window 5591, closed at 12:20 UTC). Rea
 hand-off, `handoffs/HANDOFF-2026-11-16-ai-peer-video-controller-6.md` (no worker is live). A new Mac or a
 take-over: `START-HERE.md` at the repo root. Other sessions message the controller by its name.
 
-## Where we are (2026-11-16 13:01 UTC)
+## Where we are (2026-11-16)
+
+**Round 2 started at Manish's request (V33).** He wants a broader creative exploration using
+image generation, with 20–25 happy, good-vibe mascots that fit the whole walkthrough. This round
+will produce 24 directions. The worker verified Learn Like Magic's direct Gemini generation
+and separate sticker-cutout workflow by reading its code; provider availability and one small
+original-character spike come before bulk generation. No company/private content is needed.
+The first twelve previews are delivered and retained; no final replacement has been chosen.
+
 
 **13:01 UTC, 16 November: all twelve mascot options delivered (V32), PR 16 merged.** Folio,
 Swift, Sable, Nox, Loop, Pip, Cairn, Luma, North, Manta, Tandem and Post each have a 23.3-second
@@ -683,6 +691,10 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 
 ## Needs Manish
 
+**Round 2 (V33):** no question while the new set is being made. Show the generated directions
+and in-demo previews on Telegram when ready; then Manish chooses. The earlier V32 shortlist
+is historical and does not limit this exploration.
+
 **16 November, 12:59 UTC, V32:** all twelve mascot previews and the overview are on Telegram.
 Await Manish's preferred number or shortlist. Recommendation: 01 Folio; alternatives 08 Luma,
 04 Nox. The approved full Tag film is unchanged.
@@ -826,6 +838,10 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
+
+**Now (16 November, V33), Codex:** verify the generation route with a small spike, inspect the
+first raster character, then generate 24 varied directions and in-demo previews. Record costs,
+review the outputs and send the set to Telegram. Keep the approved film intact. Older notes follow.
 
 **Now (16 November, 13:01 UTC, V32), Codex:** the requested exploration and Telegram delivery
 are complete. Await Manish's choice or feedback. Record it in DESIGN, then scope full-film
