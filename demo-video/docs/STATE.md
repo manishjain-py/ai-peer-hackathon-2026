@@ -18,6 +18,12 @@ take-over: `START-HERE.md` at the repo root. Other sessions message the controll
 
 ## Where we are (2026-11-16)
 
+**18:27 UTC, Moss acting plan and notebook artwork accepted.** The controller checked
+the exact-time map against the narration, then inspected the new generic notebook/pencil
+keyframe. It preserves Moss's chosen felt identity. Real writing motion is the next proof;
+the full movie is not yet accepted. Record: `MOSS-ACTING-ACCEPTANCE-2026-11-16.md`.
+Gemini artwork cost $0.059070; project total $49.365149 before the pending $0.20 motion.
+
 **Moss acting controller takeover:** the V35 brief and v1 acceptance are read. The sole
 worker uses managed worktree `moss-acting`, branch `codex/moss-acting-v2`, from
 `handoffs/BRIEF-2026-11-16-moss-acting-worker.md`. Exact-time acting map and a real
@@ -707,7 +713,11 @@ Still running:
 | What | PID | Log | Stop command |
 |---|---|---|---|
 
-Nothing runs since 02:32 UTC on 16 November: the usage wait was stopped when no worker was left.
+Current V35 worker: Codex `moss_acting_builder` under `moss_acting_controller`; managed
+worktree `moss-acting`, branch `codex/moss-acting-v2`. No Claude session or shell usage watcher
+was launched; the controller checks Codex usage at milestones. The lines below are history.
+
+Nothing ran after 02:32 UTC on 16 November until the later Codex packages: the usage wait was stopped when no worker was left.
 Before: `usage` was started by ai-peer-video-controller-6 at 16:58 UTC on 15 November; `stall-wp7` (16:58
 UTC) was stopped at 17:42 UTC before WP7 closed, `stall-wp7-2` ran from 17:44 to 18:46 UTC (stopped while wp7-2 idled, 18:05 to 18:23, by waits.log), and
 `stall-wp7-3` started at 18:48 UTC;
@@ -784,7 +794,8 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 | 2026-11-15 | fal.ai (WP7-3, the Tag's v2, finished) | One lip-sync take for the hook's new second line, and the morning desk shot (a picture edit and a 4 s take) | $0.65 (3 rows of `demo-video/ledger/wp7-3.csv`, on `main` since PR 15) |
 | 2026-11-16 | Gemini + fal.ai (Round 2 mascot assets) | 25 generated masters, 25 cutouts, 23 selected character animations plus pilots; ledgers on `codex/generated-mascots` | $6.826079 (Gemini $1.566079 estimated from usage; fal $5.26 conservatively logged) |
 | 2026-11-16 | fal.ai (Moss full-film gestures) | Two five-second generic-character gestures: attentive/thinking and presenting; `demo-video/moss-film/ledger/fal.csv` | $0.40 conservatively logged |
-| | **Total of the $100 cap** | | **$49.31** (prior recorded $42.08 + Round 2 $6.826079 + Moss $0.40 = $49.306079) |
+| 2026-11-16 | Gemini + fal.ai (Moss acting v2, in progress) | Generic notebook keyframe; live per-call ledger in `demo-video/moss-acting/ledger/` | $0.059070 completed; $0.20 motion pending at 18:27 UTC |
+| | **Total of the $100 cap** | | **$49.365149 completed**, plus pending motion reservation $0.20; V35 allocation up to $10 |
 
 ## Needs Manish
 
