@@ -19,6 +19,14 @@ take-over: `START-HERE.md` at the repo root. Other sessions message the controll
 
 ## Where we are (2026-11-16)
 
+**14:40 UTC, 16 November: sixteen in-demo previews delivered.** The controller inspected
+encoded sheets for 01–15 and 25 and accepted their silhouettes, matte edges, avatars and original
+scene context. Those videos are on Telegram: pilots 05/25 (23060–23061), 01–04 (23062–23065),
+06–10 (23066–23070), 11–15 (23071–23075). The portrait album is 23055–23059. Receipts:
+`delivery/mascot-round2-2026-11-16.json`. Remaining: 16–24, the 75-second quick-look reel, final
+PR/gallery/evidence. The renderer fixed a local server delay caused by synchronous encoding;
+accepted files stayed unchanged. No new generation or spend; project total stays about $48.91.
+
 **14:18 UTC, 16 November: the asset phase is complete and handed off.** The source worker
 pushed `bff5a1f` (135 LFS objects, 297 MB), with all 25 masters/cutouts, 23 selected generated
 and despilled VP9-alpha motions, prompts, requests, metadata and ledgers. All 23 alpha clips
