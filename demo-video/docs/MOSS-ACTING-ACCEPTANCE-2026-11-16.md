@@ -35,3 +35,15 @@ Keyframe accepted; actual writing motion and matte proof remain to be inspected.
 
 Only public fictional source and generic Moss art are used. No direct audio listening
 or unavailable private-term-list scan is claimed. No unit tests or CI are required.
+
+## Notebook motion checkpoint
+
+At 18:29 UTC, the controller inspected all ten half-second samples in
+`moss-acting/evidence/notebook-pilot.jpg`. The action has real wrist/pencil changes,
+downward page attention and return glances, with a consistent body/prop identity and
+clean wool edges over dark green. Accepted for integration. The remaining listening,
+reassurance and acknowledgment batch was released only after that inspection.
+
+Generation finished by 18:31 UTC: $0.859070 new, $50.165149 project total. Required
+$50 informational Telegram notice is confirmed as 23097; no new approval was needed.
+Light-matte and in-context proofs remain ahead of final acceptance.
