@@ -17,6 +17,13 @@ take-over: `START-HERE.md` at the repo root. Other sessions message the controll
 
 ## Where we are (2026-11-16)
 
+**15:17 UTC, 16 November: the fresh Codex Moss controller has taken over.** One implementation
+worker is being started on `codex/blended-moss` in the managed `moss-film` worktree, from
+`handoffs/BRIEF-2026-11-16-moss-film-worker.md`. Its first checkpoint is the entire source-rebuilt
+walkthrough, before the complete movie render. Controller retains final visual acceptance,
+delivery and merge. No private inputs are needed; new generation remains capped at $10.
+Codex weekly usage 14% at takeover.
+
 **15:11 UTC, 16 November: Manish chose Moss for a complete blended movie (V34).** His "MOS"
 means Round 2 option 25, Moss. The new deliverable is the full two-minute cut, including a
 Moss version of the entire product walkthrough, all room appearances, avatars and logos.
