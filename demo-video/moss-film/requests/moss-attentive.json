@@ -1,0 +1,20 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "A single original hand-felted woodland companion performs attentive thinking, while standing in exactly the same central position and size. Begin with its little hands calmly down; NO greeting wave. It turns its head gently to its right as if scanning something, then down and left with curious attentive eyes; briefly raises one paw to its chin in a thoughtful pose, then gives a pleased small nod and relaxed smile. Clearly animate the actual face, head, eyes and limbs. Preserve the exact original wool texture, face, ears, body proportions, green colours and amber charm. Feet stay planted. Entire character stays within the existing generous margins. Completely locked camera with no reframing. Background stays perfectly uniform pure magenta #FF00FF, no floor, shadows or objects. No text, no sound. One continuous five-second shot, ending in a calm neutral pose.",
+    "image_url": "file:demo-video/mascot-exploration-v2/images/25-moss-chroma.png",
+    "duration": 5,
+    "resolution": "768P",
+    "prompt_expansion_mode": "disabled",
+    "seed": 16112651
+  },
+  "expect": {
+    "units": 5,
+    "unit": "seconds at768p",
+    "unit_price": 0.04,
+    "cost_usd": 0.2,
+    "basis": "Conservative official rate verified16November; same endpoint as accepted Round2"
+  },
+  "output": "demo-video/moss-film/assets/moss-attentive-source",
+  "note": "Generic selected Moss character art only; V34 full-film gesture. No product/company content."
+}

@@ -1,0 +1,51 @@
+{
+ "about": "Moss full-film V1. Build with demo-video/moss-film/render.mjs; original timeline preserved.",
+ "shots": "shots.json",
+ "narration": "narration.json",
+ "screens": "screens.json",
+ "script": "script.json",
+ "mix": "mix.json",
+ "layers": [
+  "../_blend/layer",
+  "../_blend/layer-tag-v2",
+  "../../../moss-film/layer"
+ ],
+ "copies": [
+  {
+   "from": "../../../ui-concepts/moss/mascot.js",
+   "to": "src/mascot/tag/mascot.js"
+  },
+  {
+   "from": "../../../ui-concepts/little-peer/motion-core.js",
+   "to": "src/mascot/little-peer/motion-core.js"
+  },
+  {
+   "from": "../../../ui-concepts/shared/kit.js",
+   "to": "src/mascot/shared/kit.js"
+  },
+  {
+   "from": "../../src/scenes/earth.js",
+   "to": "src/scenes/earth-d3.js"
+  },
+  {
+   "from": "../../../mascot-exploration-v2/motion/25-moss.webm",
+   "to": "src/mascot/tag/moss-assets/wave.webm"
+  },
+  {
+   "from": "../../../mascot-exploration-v2/avatars/25-moss.png",
+   "to": "src/mascot/tag/moss-assets/avatar.png"
+  },
+  {
+   "from": "../../../moss-film/assets/moss-attentive.webm",
+   "to": "src/mascot/tag/moss-assets/attentive.webm"
+  },
+  {
+   "from": "../../../moss-film/assets/moss-present.webm",
+   "to": "src/mascot/tag/moss-assets/present.webm"
+  },
+  {
+   "from": "../../../mascot-exploration-v2/avatars/25-moss.png",
+   "to": "assets/screens/peer-face-moss.png"
+  }
+ ]
+}

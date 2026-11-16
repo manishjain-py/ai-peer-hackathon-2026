@@ -1,0 +1,24 @@
+{
+ "request_id": "01a1e4f1-4998-71d2-939f-71b7c46d62e3",
+ "billable_units_header": "8.0",
+ "inputs_sent": {
+  "prompt": "A single original hand-felted woodland companion performs attentive thinking, while standing in exactly the same central position and size. Begin with its little hands calmly down; NO greeting wave. It turns its head gently to its right as if scanning something, then down and left with curious attentive eyes; briefly raises one paw to its chin in a thoughtful pose, then gives a pleased small nod and relaxed smile. Clearly animate the actual face, head, eyes and limbs. Preserve the exact original wool texture, face, ears, body proportions, green colours and amber charm. Feet stay planted. Entire character stays within the existing generous margins. Completely locked camera with no reframing. Background stays perfectly uniform pure magenta #FF00FF, no floor, shadows or objects. No text, no sound. One continuous five-second shot, ending in a calm neutral pose.",
+  "image_url": "https://v3b.fal.media/files/b/0ab2b64d/gp9tN-xD1baxR0vNUUXGM_25-moss-chroma.png",
+  "duration": 5,
+  "resolution": "768P",
+  "prompt_expansion_mode": "disabled",
+  "seed": 16112651
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab2b64e/nD0t-VpEXAuLnBYDFR5l8_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "nD0t-VpEXAuLnBYDFR5l8_minimax-h3.mp4",
+   "file_size": 3467334
+  },
+  "expanded_prompt": null,
+  "timings": {
+   "inference": 0.6786726469999849
+  }
+ }
+}
