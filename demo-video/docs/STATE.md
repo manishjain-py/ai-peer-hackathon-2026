@@ -16,6 +16,18 @@ take-over: `START-HERE.md` at the repo root. Other sessions message the controll
 
 ## Where we are (2026-11-16)
 
+**Round 2 artwork milestone:** all 25 generated masters and their provider-made transparent
+cutouts are complete. The controller inspected the felt pilot and varied clay, opalescent and
+wood directions, then the six-material sheet. Moss's second animation pilot has a clear wave,
+closed-eye smile and head tilt; a faint magenta edge is being removed before final compositing.
+Twenty-three character-motion takes are being generated; Nori (05) and Dew (15) retain their
+provider-alpha stills to preserve translucent details, with the method stated honestly. The
+original Moss image and early six-material sheet were sent to Telegram (16 November, about
+13:56 UTC and shortly afterwards). All25 overview, in-demo reels and final delivery remain.
+The generation worker will finish, push a dated handoff, and stop before a fresh rendering worker
+continues on the same worktree/branch. Current logged total at the artwork milestone was about
+$45.31 including the previous $42.08; generation cost updates continue in the round's ledgers.
+
 **Generation premise proved:** the existing Gemini account generated an original 2048px felt
 woodland companion successfully; the controller inspected it and approved the richer art
 direction. Keep that pilot as #25 Moss alongside the 24 planned directions. A provider cutout
