@@ -1,0 +1,20 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "The exact single hand-felted woodland companion in the reference performs real careful note-taking with its little blank notebook and wooden pencil. First glance up and to its left toward something it is reading, then look down at the notebook and visibly write two short strokes with its right paw and pencil tip moving across the page. Pause the pencil, glance back up to the left, return eyes down and write two more small strokes, then lift the pencil slightly and look up with a calm thoughtful expression. The notebook stays steadily supported in its left paw at the same position throughout. Actual head, eyes, wrist and pencil movement, no greeting wave. Keep the notebook completely blank without legible writing. Preserve EXACT identity, green felt wool, cream face and belly, sprout, round ears, amber charm, proportions and scale. Feet stay planted at the same central position. Entire body and props remain inside existing margins. Completely locked camera, no zoom/pan/reframing. Background remains perfectly flat pure magenta #FF00FF, no shadows or floor or scenery. No extra objects, text, sound, music. One continuous five-second performance.",
+    "image_url": "file:demo-video/moss-acting/assets/moss-notebook-keyframe.png",
+    "duration": 5,
+    "resolution": "768P",
+    "prompt_expansion_mode": "disabled",
+    "seed": 16112671
+  },
+  "expect": {
+    "units": 5,
+    "unit": "seconds at768p",
+    "unit_price": 0.04,
+    "cost_usd": 0.2,
+    "basis": "Existing verified fal endpoint and conservative official rate used in V34"
+  },
+  "output": "demo-video/moss-acting/assets/moss-notebook-source",
+  "note": "Generic selected Moss artwork and notebook only; no UI/company/person content"
+}

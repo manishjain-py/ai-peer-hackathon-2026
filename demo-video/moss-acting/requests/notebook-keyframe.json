@@ -1,0 +1,30 @@
+{
+  "model": "gemini-nano-banana-2.1",
+  "reserve_usd": 0.12,
+  "output": "assets/moss-notebook-keyframe.png",
+  "references": [
+    "../mascot-exploration-v2/images/25-moss-chroma.png"
+  ],
+  "body": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Use case: identity-preserve. Asset type: animation keyframe for the SAME selected hand-felted woodland companion in the reference. Change ONLY its arm pose, gaze and add a small generic notebook and short wooden pencil. It holds the small open ivory notebook in its left paw against its lower chest/belly and a pencil in its right paw, tip touching the page, poised to write. Its eyes glance down at the page with focused, kind concentration; mouth a tiny calm smile. Preserve EXACT original forest-green felt wool, cream face and belly, sage curled fern sprout, round ears, dark glossy eyes, amber pendant, broad face, pear-shaped body and all proportions. The charm remains visible above the notebook. Full body and all limbs visible, same central position and scale as reference, same square canvas and generous margins. Locked frontal three-quarter camera. Background perfectly uniform pure magenta #FF00FF, no gradients, no floor/shadow. No printed or readable text, symbols, logos, new clothing, extra limbs or scenery. Notebook is small, simple and blank, about one quarter the body width. Do not redesign or enlarge the character."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseModalities": [
+        "TEXT",
+        "IMAGE"
+      ],
+      "maxOutputTokens": 8192,
+      "imageConfig": {
+        "aspectRatio": "1:1",
+        "imageSize": "2K"
+      }
+    }
+  }
+}

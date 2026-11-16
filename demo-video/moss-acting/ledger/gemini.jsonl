@@ -1,0 +1,1 @@
+{"time_utc": "2026-11-16T18:26:16.510796+00:00", "provider": "Google Gemini API", "model": "gemini-nano-banana-2.1", "request": "requests/notebook-keyframe.json", "output": "assets/moss-notebook-keyframe.png", "cost_usd": 0.05907, "cost_basis": "Provider token usage x official Google standard pricing; estimate, not invoice", "status": "completed", "reserved_usd": 0.12}
