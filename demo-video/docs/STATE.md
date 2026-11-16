@@ -17,6 +17,13 @@ take-over: `START-HERE.md` at the repo root. Other sessions message the controll
 
 ## Where we are (2026-11-16)
 
+**Moss gesture milestone, 16 November:** the sole builder proved an identity-preserving
+attentive/thinking gesture, inspected by the controller, then generated a presenting action
+for the brief/rules. Both use only the selected generic Moss artwork. The additive walkthrough
+and cut are being wired; first full walkthrough proof comes before final rendering. New spend
+$0.40 conservatively logged in `demo-video/moss-film/ledger/fal.csv`; project total $49.306079,
+still below the $50 notification mark. No new voice/music is needed.
+
 **15:17 UTC, 16 November: the fresh Codex Moss controller has taken over.** One implementation
 worker is being started on `codex/blended-moss` in the managed `moss-film` worktree, from
 `handoffs/BRIEF-2026-11-16-moss-film-worker.md`. Its first checkpoint is the entire source-rebuilt
@@ -753,7 +760,8 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 | 2026-11-15 | none (WP7, finished) | The two blended videos, Little Peer and Tag, all by code; the seven new lines on the ElevenLabs plan | $0.00 |
 | 2026-11-15 | fal.ai (WP7-3, the Tag's v2, finished) | One lip-sync take for the hook's new second line, and the morning desk shot (a picture edit and a 4 s take) | $0.65 (3 rows of `demo-video/ledger/wp7-3.csv`, on `main` since PR 15) |
 | 2026-11-16 | Gemini + fal.ai (Round 2 mascot assets) | 25 generated masters, 25 cutouts, 23 selected character animations plus pilots; ledgers on `codex/generated-mascots` | $6.826079 (Gemini $1.566079 estimated from usage; fal $5.26 conservatively logged) |
-| | **Total of the $100 cap** | | **$48.91** (prior recorded $42.08 + Round 2 $6.826079 = $48.906079; no paid calls pending at the asset handoff) |
+| 2026-11-16 | fal.ai (Moss full-film gestures) | Two five-second generic-character gestures: attentive/thinking and presenting; `demo-video/moss-film/ledger/fal.csv` | $0.40 conservatively logged |
+| | **Total of the $100 cap** | | **$49.31** (prior recorded $42.08 + Round 2 $6.826079 + Moss $0.40 = $49.306079) |
 
 ## Needs Manish
 
