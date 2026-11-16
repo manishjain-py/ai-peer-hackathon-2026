@@ -1,0 +1,31 @@
+{
+  "version": "blended-moss-v2",
+  "status": "delivered",
+  "video": {
+    "confirmed": true,
+    "message_id": 23099,
+    "chat_id": -5506416790,
+    "date_utc": "2026-11-16T18:48:56+00:00",
+    "caption": "Moss \u2014 full blended film v2. 1:59.6, with context-specific expressions and activities throughout. Same story, UI, timing, narration and music; earlier versions preserved. Ready for your review.",
+    "file": "film/renders/blended-moss-v2-720p.mp4",
+    "sha256": "5100a99eac405bc9e91c6f770fd938e66e6267e4e6a4ec0a89ece17ed2a885f3",
+    "file_size": 20719169,
+    "width": 1280,
+    "height": 720,
+    "telegram_duration": 120,
+    "supports_streaming_requested": true
+  },
+  "actual_movie_seconds": 119.6,
+  "frames": 3588,
+  "new_cost_usd": 0.85907,
+  "project_cost_usd": 50.165149,
+  "controller_acceptance": "passed",
+  "approved_as_final_by_user": false,
+  "review_message": {
+    "confirmed": true,
+    "message_id": 23100,
+    "chat_id": -5506416790,
+    "date_utc": "2026-11-16T18:49:13+00:00",
+    "text": "The full Moss v2 is above. Moss now scans and takes notes while reading, listens while Ram types, thinks before answering, records the meeting question for Ram, and acknowledges his actual click. The original narration, music and timing are preserved. Ready for your review."
+  }
+}
