@@ -1,6 +1,6 @@
 # Moss full-film acceptance, 16 November 2026
 
-Controller checklist for V34. Status: implementation under way; no final acceptance claimed.
+Controller checklist for V34. Status: source walkthrough accepted; complete-film encode and final acceptance pending.
 
 ## Fixed reference
 
@@ -37,3 +37,21 @@ Do not claim direct audio listening or the unavailable private-term scan.
 
 Controller findings, any fixes, exact delivered files and hashes, audio proof, Telegram
 confirmation, total spend, PR/merge/tag and final main state are added after the actual walk.
+
+## Source and walkthrough checkpoint
+
+Controller inspected the two new gesture pilots and both dark-green matte sheets: the
+chosen felt identity stays consistent, with usable thought and presentation action and clean
+wool edges. Additional cost is $0.40; project total $49.306079.
+
+The controller reviewed `moss-film/evidence/walk-source-1.jpg` through `-4.jpg`, then the
+encoded walkthrough sheets `walk-encoded-1.jpg` through `-3.jpg` after fixes. The source
+preview is 54.700 seconds, 1,641 frames, 1280×720 at 30 fps, covering concept 2.8–57.5s.
+It includes every setup source, learned, brief, Ask and rules stage. Fixed before acceptance:
+landing text clearance, badge following the hopping body, final calm-text spacing and a
+presentation gesture directed toward the rules card.
+
+Full-film source sheets 1, 4, 5 and 6 were also inspected: hook chips, room/desk, Zoom, Slack,
+morning phone return, native paper brief, globe and endcard use Moss consistently. A final
+rules-resting-pose collision with the unchanged film caption lane was identified and is
+being cleared before final encoding. Source proof acceptance is not final movie acceptance.
