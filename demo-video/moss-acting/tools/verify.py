@@ -33,6 +33,10 @@ for f in ['script.json','mix.json','narration.json']:
  assert (DEMO/'film/cuts/blended-tag-v2'/f).read_bytes()==(DEMO/'film/cuts/blended-moss-v2'/f).read_bytes()
 for f in ['paper.js','room.js','style.css','tl.js','u.js','data-extra.js']:
  assert (DEMO/'ui-concepts/tag'/f).read_bytes()==(DEMO/'ui-concepts/moss-v2'/f).read_bytes(),f
+assert (DEMO/'film/cuts/blended-moss-v1/screens.json').read_bytes()==(DEMO/'film/cuts/blended-moss-v2/screens.json').read_bytes()
+for f in ['scene.js','concept.json']:
+ assert (DEMO/'ui-concepts/moss'/f).read_bytes()==(DEMO/'ui-concepts/moss-v2'/f).read_bytes(),f
+result['v1_master_unchanged']=True
 result['invariants']={'slot_count':20,'all_slot_times_camera_keys':True,'all_six_walk_spans':True,'original_audio_configuration':True,'walk_data_layout_style_timeline':True,'base_master_unchanged':True}
 result['privacy']='Only existing public fictional sources and generic generated Moss artwork. No private-term-list scan claimed.'
 result['new_cost_usd']=0.859070;result['project_cost_usd']=50.165149
