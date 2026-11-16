@@ -1,14 +1,12 @@
 # AI Peer demo video: state
 
-Current requested work (Codex, 16 November 2026, 14:55 UTC): **V33 complete**. All 25 generated
-mascot directions, enlarged portraits, 25 in-demo previews and the 75-second quick-look have
-been delivered to Telegram. PR 17 merged as `716b229`; checkpoint `generated-mascots-v1`.
-Gallery: `demo-video/mascot-exploration-v2/index.html`. Full delivery record:
-`GENERATED-MASCOTS-DELIVERY-2026-11-16.md`; receipts: `delivery/mascot-round2-2026-11-16.json`.
-No worker, render or paid call is running. Await Manish's selection. Controller's pick: 22 Quill;
-other favorites: 03 Mallow, 25 Moss, 16 Ember. The approved Tag master and prior options remain.
-Round cost $6.826079; project total $48.906079 of $100. Codex weekly usage: 13%; controller
-context 46.8% at this clean completion. Read the completion handoff before further work.
+Current requested work (Codex, 16 November 2026, 15:11 UTC): **Moss selected for the full
+blended film (V34)**. Create `blended-moss-v1`, replacing Tag everywhere, including the entire
+source-rebuilt product walkthrough. Keep the approved story/timing/audio/theme; preserve the
+Tag master. Brief: `BRIEF-MOSS-FULL-FILM-2026-11-16.md`. A fresh successor controller owns the
+new task with one implementation worker; the parent chat relays progress/results. Current
+project spend $48.906079; controller allocation up to $10 new generation within $100 total,
+with a notification when crossing $50. Codex weekly usage 13% at 15:11 UTC.
 
 Previous recorded controller on the source Mac (historical session details, not checked live
 on this Mac): ai-peer-video-controller-7 (Opus 5.5; Terminal window 5771 on Mac 48 GB, PID 13541,
@@ -18,6 +16,13 @@ hand-off, `handoffs/HANDOFF-2026-11-16-ai-peer-video-controller-6.md` (no worker
 take-over: `START-HERE.md` at the repo root. Other sessions message the controller by its name.
 
 ## Where we are (2026-11-16)
+
+**15:11 UTC, 16 November: Manish chose Moss for a complete blended movie (V34).** His "MOS"
+means Round 2 option 25, Moss. The new deliverable is the full two-minute cut, including a
+Moss version of the entire product walkthrough, all room appearances, avatars and logos.
+This is a new version for review; the approved Tag v2 stays intact. His exact words and scope
+are in `BRIEF-MOSS-FULL-FILM-2026-11-16.md`. The earlier exploration is complete and delivered.
+A fresh successor controller takes the new task from the saved handoff, with one worker.
 
 **14:55 UTC, 16 November: Round 2 complete and delivered (V33).** All 25 generated-art options
 have both 720p and 1080p scene previews, plus the 75-second quick-look in both resolutions:
@@ -745,6 +750,10 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 
 ## Needs Manish
 
+**V34, 16 November 15:11 UTC:** no clarification needed. Moss25 is selected for the full-film
+trial. Deliver the complete Moss cut for review; do not ask him to select another mascot.
+Older notes follow.
+
 **V33 delivered, 16 November 14:52 UTC:** choose a Round 2 number or shortlist after reviewing
 the Telegram set or gallery. Recommendation: 22 Quill; alternatives 03 Mallow, 25 Moss,
 16 Ember. No choice is assumed. The notes below are historical.
@@ -896,6 +905,11 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
+
+**Now (V34), successor controller:** build and deliver the complete Moss blended film from
+`BRIEF-MOSS-FULL-FILM-2026-11-16.md`, including the full source-rebuilt walkthrough. One worker,
+a new cut/version, preserved approved source, manual visual walk, PR and Telegram delivery.
+Older notes follow.
 
 **Now (16 November 14:55 UTC), Codex:** V33 is complete. Await Manish's choice or feedback;
 record his exact words as the next DESIGN decision. Full-film integration is a new step after
