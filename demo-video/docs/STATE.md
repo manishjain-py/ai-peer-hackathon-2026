@@ -14,7 +14,7 @@ November from ai-peer-video-controller-6 (window 5591, closed at 12:20 UTC). Rea
 hand-off, `handoffs/HANDOFF-2026-11-16-ai-peer-video-controller-6.md` (no worker is live). A new Mac or a
 take-over: `START-HERE.md` at the repo root. Other sessions message the controller by its name.
 
-## Where we are (2026-11-16 12:21 UTC)
+## Where we are (2026-11-16 12:40 UTC)
 
 **12:40 UTC, 16 November: mascot exploration started at Manish's request (V32).** The approved
 119.6-second Tag film is the base. Twelve distinct code-native alternatives will be shown in
@@ -673,6 +673,9 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 
 ## Needs Manish
 
+**16 November, V32:** no choice needed during creation. The controller will send all twelve
+mascot previews and a recommendation to Telegram; Manish chooses after reviewing them.
+
 **Answered 2026-11-16 12:15 UTC (V31): the Tag version is the final video, not Little Peer; then
 a hand-off to a new controller.** Done. No question is open.
 
@@ -812,6 +815,10 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
+
+**Now (16 November, V32), Codex:** complete and visually inspect twelve mascot preview reels,
+record public-source provenance and media checks, send all options to Telegram, then await
+Manish's selection. The approved Tag v2 master remains unchanged. Older notes follow.
 
 **Now (12:21 UTC, 16 November), ai-peer-video-controller-7:** nothing runs and nothing is
 pending. Wait for Manish's next word. For new video work: the hand-off's "Next step, exactly",
