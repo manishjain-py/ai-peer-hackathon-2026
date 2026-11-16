@@ -46,4 +46,32 @@ clean rendered source clip as before.
 
 ## Final encoded checks
 
-The final encoded master/720p walk and media evidence are recorded below when complete.
+Completed and accepted by the controller on16November. The worker inspected all seven
+`film-encoded-*.jpg` sheets (73actual encoded frames), all four `transitions-encoded-*.jpg`
+sheets (42scene/patch boundary frames), and the12-frame `send-encoded-1.jpg` sheet. All20shot
+slots are covered, including the hook portraits, dormant/wake states, room glide/laptop wake,
+full walkthrough, Zoom/Slack identity, morning return to phone, native brief, globe and mark.
+
+The encoded result retains the accepted caption clearance and full UI content. The worst
+reading pans are in frame; body and AI badge remain visible. The rules card shows all six
+rules, its presenter points toward it, and the calm sentence clears the narration. Phone
+return/wake and patched boundaries are continuous, with no new black frame or stale mascot.
+
+`evidence/checks.json` confirms both exports decode fully:119.600seconds,3588frames,30fps,
+1920×1080 and1280×720 respectively. The1080p file is355,832,892bytes; the720p file is20,516,672
+bytes. Every one of the5608AAC packets, including packet timestamps/durations, matches the
+approved Tagv2 soundtrack; decoded audio SHA256 matches too. No remix or audio re-encode.
+All20shot settings (other than allowed character-source descriptors), six walkthrough
+in-points/rates/lengths, narration/script/music configuration and original UI data/style/timeline
+pass comparison. Approved Tagv2 SHA256 remains7756283021b7237605337f079e435babb25143c2fb1d9023e6b70204a952b039.
+
+Final movie hashes:
+
+- blended-moss-v1.mp4: `c6672bd1b42b09b5c66c4dbd55bdb2f37ef5dbac6e79594f061f3fc5cb4f2941`
+- blended-moss-v1-720p.mp4: `0348b89c4c99b315cc0a7b4221db71823b01572796b7c97b3ae8b4ab2fab0651`
+
+New generation cost$0.40; project total$49.306079. No paid call, renderer or local server
+remains active. This is a candidate full film for Manish's review; Tagv2 stays the last
+approved film until he says otherwise. Generated actions are not lip-sync; final audio is
+verified by identity/hash, not claimed direct listening. Private-term-list scan unavailable;
+all inputs are the existing public fictional sources or generic Moss art.

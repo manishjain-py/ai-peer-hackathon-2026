@@ -30,7 +30,7 @@ Turbo path: attentive eye/head movement with a paw-to-chin thought, and an open-
 presentation/nod. Their prompts, provider response metadata, original takes and alpha
 sprites are in `requests/`, `assets/` and `ledger/fal.csv`. No product screens, person or
 company details, or private recordings were sent to a provider. The generic selected
-Moss art is the sole uploaded reference. No new image design or voice/music was generated.
+Moss art is the sole uploaded reference. No new image design, voice or music is used in the film.
 
 The existing imagegen skill was read; Manish's explicit Gemini/fal authorization determines
 the provider route. New cost is **$0.40**, conservatively recorded at $0.20 per five-second
