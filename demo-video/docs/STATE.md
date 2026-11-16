@@ -4,7 +4,7 @@ Current requested work (Codex, 16 November 2026, 18:17 UTC): **Moss context-spec
 pass (V35)**. Build `blended-moss-v2` from the delivered full v1, with purposeful expressions
 and activities at each scene/beat (including note-taking while reading and thinking when
 appropriate). Preserve the story, UI, timing, audio and earlier versions. Brief:
-`BRIEF-MOSS-ACTING-2026-11-16.md`. A fresh successor controller and one worker own the package;
+`BRIEF-MOSS-ACTING-2026-11-16.md`. Codex controller `moss_acting_controller` and one implementation worker own the package;
 the parent chat relays progress/results. Current project spend $49.306079; up to $10 new
 generation within the $100 cap, with the $50 Telegram notification when crossed. Weekly
 Codex usage 17% at 18:17 UTC.
@@ -17,6 +17,12 @@ hand-off, `handoffs/HANDOFF-2026-11-16-ai-peer-video-controller-6.md` (no worker
 take-over: `START-HERE.md` at the repo root. Other sessions message the controller by its name.
 
 ## Where we are (2026-11-16)
+
+**Moss acting controller takeover:** the V35 brief and v1 acceptance are read. The sole
+worker uses managed worktree `moss-acting`, branch `codex/moss-acting-v2`, from
+`handoffs/BRIEF-2026-11-16-moss-acting-worker.md`. Exact-time acting map and a real
+notebook/pen pilot precede integration; controller owns visual acceptance and delivery.
+Codex weekly usage is 17%; new spend is zero at takeover.
 
 **18:17 UTC, 16 November: Manish requested a careful Moss acting pass (V35).** Expressions
 and activities should match what Moss is doing throughout the movie: note-taking during source
