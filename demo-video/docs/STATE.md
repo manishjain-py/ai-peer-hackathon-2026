@@ -5,8 +5,8 @@ pass (V35)**. Build `blended-moss-v2` from the delivered full v1, with purposefu
 and activities at each scene/beat (including note-taking while reading and thinking when
 appropriate). Preserve the story, UI, timing, audio and earlier versions. Brief:
 `BRIEF-MOSS-ACTING-2026-11-16.md`. Codex controller `moss_acting_controller` and one implementation worker own the package;
-the parent chat relays progress/results. Current project spend $49.306079; up to $10 new
-generation within the $100 cap, with the $50 Telegram notification when crossed. Weekly
+the parent chat relays progress/results. Current project spend $50.165149, including V35 $0.859070; up to $10 V35 generation
+within the $100 cap. The $50 Telegram milestone is sent (23097). Weekly
 Codex usage 17% at 18:17 UTC.
 
 Previous recorded controller on the source Mac (historical session details, not checked live
@@ -17,6 +17,19 @@ hand-off, `handoffs/HANDOFF-2026-11-16-ai-peer-video-controller-6.md` (no worker
 take-over: `START-HERE.md` at the repo root. Other sessions message the controller by its name.
 
 ## Where we are (2026-11-16)
+
+**18:31 UTC, Moss actions generated; $50 milestone sent.** The controller accepted all ten
+notebook pilot frames: visible pencil/wrist activity, source/page glances and clean dark-matte
+felt edges. Listening, reassurance and acknowledgment actions are generated and integrated;
+light-matte and contrasting in-context proof come next. No further generation is planned.
+New spend $0.859070; project total $50.165149. Telegram cost milestone 23097 is confirmed;
+receipt `delivery/moss-acting-cost-milestone-2026-11-16.json`.
+
+**18:27 UTC, Moss acting plan and notebook artwork accepted.** The controller checked
+the exact-time map against the narration, then inspected the new generic notebook/pencil
+keyframe. It preserves Moss's chosen felt identity. Real writing motion is the next proof;
+the full movie is not yet accepted. Record: `MOSS-ACTING-ACCEPTANCE-2026-11-16.md`.
+Gemini artwork cost $0.059070; project total $49.365149 before the pending $0.20 motion.
 
 **Moss acting controller takeover:** the V35 brief and v1 acceptance are read. The sole
 worker uses managed worktree `moss-acting`, branch `codex/moss-acting-v2`, from
@@ -707,7 +720,11 @@ Still running:
 | What | PID | Log | Stop command |
 |---|---|---|---|
 
-Nothing runs since 02:32 UTC on 16 November: the usage wait was stopped when no worker was left.
+Current V35 worker: Codex `moss_acting_builder` under `moss_acting_controller`; managed
+worktree `moss-acting`, branch `codex/moss-acting-v2`. No Claude session or shell usage watcher
+was launched; the controller checks Codex usage at milestones. The lines below are history.
+
+Nothing ran after 02:32 UTC on 16 November until the later Codex packages: the usage wait was stopped when no worker was left.
 Before: `usage` was started by ai-peer-video-controller-6 at 16:58 UTC on 15 November; `stall-wp7` (16:58
 UTC) was stopped at 17:42 UTC before WP7 closed, `stall-wp7-2` ran from 17:44 to 18:46 UTC (stopped while wp7-2 idled, 18:05 to 18:23, by waits.log), and
 `stall-wp7-3` started at 18:48 UTC;
@@ -784,7 +801,8 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 | 2026-11-15 | fal.ai (WP7-3, the Tag's v2, finished) | One lip-sync take for the hook's new second line, and the morning desk shot (a picture edit and a 4 s take) | $0.65 (3 rows of `demo-video/ledger/wp7-3.csv`, on `main` since PR 15) |
 | 2026-11-16 | Gemini + fal.ai (Round 2 mascot assets) | 25 generated masters, 25 cutouts, 23 selected character animations plus pilots; ledgers on `codex/generated-mascots` | $6.826079 (Gemini $1.566079 estimated from usage; fal $5.26 conservatively logged) |
 | 2026-11-16 | fal.ai (Moss full-film gestures) | Two five-second generic-character gestures: attentive/thinking and presenting; `demo-video/moss-film/ledger/fal.csv` | $0.40 conservatively logged |
-| | **Total of the $100 cap** | | **$49.31** (prior recorded $42.08 + Round 2 $6.826079 + Moss $0.40 = $49.306079) |
+| 2026-11-16 | Gemini + fal.ai (Moss acting v2) | Generic notebook keyframe and four five-second actions; per-call ledger in `demo-video/moss-acting/ledger/` | $0.859070 (Gemini $0.059070 estimate; fal $0.80 conservative); no further generation planned |
+| | **Total of the $100 cap** | | **$50.165149**; V35 $0.859070 of its $10 allocation. $50 notice sent (Telegram 23097). |
 
 ## Needs Manish
 

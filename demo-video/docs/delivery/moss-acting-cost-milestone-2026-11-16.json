@@ -1,0 +1,11 @@
+{
+  "event": "project_cost_crossed_50",
+  "confirmed": true,
+  "message_id": 23097,
+  "chat_id": -5506416790,
+  "date_utc": "2026-11-16T18:31:03+00:00",
+  "text": "Moss acting update: the notebook, listening, reassurance and acknowledgment actions are generated. This pass has used $0.86; the project total is now $50.17 of the approved $100 cap. The $50 milestone is crossed; no more generation is planned. I\u2019m checking the actions inside the full film next.",
+  "new_cost_usd": 0.85907,
+  "project_cost_usd": 50.165149,
+  "ledger": "demo-video/moss-acting/ledger/"
+}
