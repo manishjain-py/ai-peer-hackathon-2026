@@ -1,13 +1,19 @@
 # AI Peer demo video: state
 
-Live controller: ai-peer-video-controller-6 (Opus 5.5; Terminal window 5591 on Mac 48 GB, PID 79572,
-https://claude.ai/code/session_01Nfn5h634KpZdXvvB4k2k9P) until its hand-off at 12:18 UTC on 16
-November to **ai-peer-video-controller-7** (Opus 5.5), which writes its own window and link here
-when it has read in; controller-6 then closes its own window. Read next: the hand-off
-`handoffs/HANDOFF-2026-11-16-ai-peer-video-controller-6.md` (no worker is live). A new Mac or a take-over: `START-HERE.md`
-at the repo root. Other sessions message the controller by its name.
+Live controller: ai-peer-video-controller-7 (Opus 5.5; Terminal window 5771 on Mac 48 GB, PID 13541,
+https://claude.ai/code/session_01Nfn5h6N8JUSFGLBrqXFoYp), since its take-over at 12:21 UTC on 16
+November from ai-peer-video-controller-6 (window 5591, closed at 12:20 UTC). Read next: the newest
+hand-off, `handoffs/HANDOFF-2026-11-16-ai-peer-video-controller-6.md` (no worker is live). A new Mac or a
+take-over: `START-HERE.md` at the repo root. Other sessions message the controller by its name.
 
-## Where we are (2026-11-16 12:18 UTC)
+## Where we are (2026-11-16 12:21 UTC)
+
+**12:21 UTC, 16 November: ai-peer-video-controller-7 has taken over** (Opus 5.5, window 5771,
+PID 13541; context 8.1% after the read-in). ai-peer-video-controller-6 (window 5591, PID 79572)
+closed itself at 12:20 UTC, as its hand-off said (checked: the process is gone and the window is
+no longer listed). Nothing runs and no question is open; the final video is the Tag's version 2
+(V30, V31). Waiting for Manish's next word. Week 81% at 12:16 UTC (controller-6's read; it resets
+on Monday 16 November at 22:59 UTC).
 
 **12:18 UTC, 16 November: the Tag version is the final video (V31); ai-peer-video-controller-6
 hands off to ai-peer-video-controller-7.** Manish at 12:15 UTC: "And also, one decision that I
@@ -792,6 +798,10 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 
 ## Next
 
+**Now (12:21 UTC, 16 November), ai-peer-video-controller-7:** nothing runs and nothing is
+pending. Wait for Manish's next word. For new video work: the hand-off's "Next step, exactly",
+step 3. The notes below are older.
+
 **Now (12:18 UTC, 16 November), ai-peer-video-controller-7:** follow
 `handoffs/HANDOFF-2026-11-16-ai-peer-video-controller-6.md`, "Next step, exactly": take over,
 check that window 5591 is gone, greet Manish, wait for his next word. Nothing runs and nothing
@@ -1143,3 +1153,4 @@ and 7 still hold.
 | 2026-11-16 02:33 | ai-peer-video-controller-6 | Manish approved the Tag's version 2 (V30) and asked for the docs to be brought up to date and everything committed and pushed: done (STATE, DESIGN, START-HERE, README, demo-video/AGENTS.md); every worktree checked; wp7-3 closed; the usage wait stopped. | Nothing runs; no question open |
 | 2026-11-16 12:03 | ai-peer-video-controller-6 | On Manish's question, closed the first controller's window 2952 (idle since 14 November); no other session or process of this work was left. | Only the controller is open |
 | 2026-11-16 12:18 | ai-peer-video-controller-6 | Manish chose the Tag version as the final video (V31) and asked for a hand-off: docs brought up to date, `HANDOFF-2026-11-16-ai-peer-video-controller-6.md` written; launching ai-peer-video-controller-7, then closing its own window. | Handed off |
+| 2026-11-16 12:21 | ai-peer-video-controller-7 | Took over from ai-peer-video-controller-6 (read STATE by its parts and the hand-off); checked that controller-6's window 5591 closed itself at 12:20 UTC; greeted Manish. | Waiting for his next word |
