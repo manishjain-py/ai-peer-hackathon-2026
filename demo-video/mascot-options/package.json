@@ -1,0 +1,16 @@
+{
+  "name": "ai-peer-mascot-options",
+  "private": true,
+  "type": "module",
+  "description": "Twelve original mascot auditions in the approved Tag film",
+  "scripts": {
+    "render": "node render.mjs --all",
+    "overview": "node render.mjs --sheet"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "playwright": "1.62.1"
+  }
+}

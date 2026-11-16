@@ -39,9 +39,9 @@ The sound is cut from the corresponding intervals of the approved movie, without
 
 ## How it is built
 
-`mascots.js` draws every character in SVG using a common pose interface compatible with the existing `tag/mascot.js`. Shapes, folds, highlights, face movement and secondary motion are code-native. `concepts.json` holds the names and ideas. `render.mjs` calls the existing public-film builder into `.build/film/`, then replaces only the mascot module, avatar and mark **in that disposable build**. It seeks the original scene functions and source footage at the source times above in local headless Chrome, captures 1080p frames, and packs them with ffmpeg. No approved source or master is edited.
+`mascots.js` draws every character in SVG using the existing tag's anchors and the pose fields needed by the sampled scenes. The audition adapter is not yet a replacement for the tag's full setup and rules-card transformation. Shapes, folds, highlights, face movement and secondary motion are code-native. `concepts.json` holds the names and ideas. `render.mjs` calls the existing public-film builder into `.build/film/`, then replaces only the mascot module, avatar and mark **in that disposable build**. It seeks the original scene functions and source footage at the source times above in local headless Chrome, captures 1080p frames, and packs them with ffmpeg. No approved source or master is edited.
 
-Rebuild requirements: Node, Playwright, Google Chrome, ffmpeg/ffprobe, and the repo's demo-video Git LFS assets. The renderer first tries a local Playwright install, then the Codex bundled runtime; `CODEX_NODE_MODULES` can supply another package directory. No paid service is called.
+Rebuild requirements: Node 22+, Playwright, Google Chrome, ffmpeg/ffprobe, and the repo's demo-video Git LFS assets. Run `npm install --prefix demo-video/mascot-options` for the local renderer dependency (or use the bundled runtime below). The renderer first tries a local Playwright install, then the Codex bundled runtime; `CODEX_NODE_MODULES` can supply another package directory. No paid service is called.
 
 ```sh
 node demo-video/mascot-options/render.mjs --sheet --probe folio pip
@@ -49,7 +49,13 @@ node demo-video/mascot-options/render.mjs folio
 node demo-video/mascot-options/render.mjs --all
 ```
 
+The 1080p delivery files use H.264 CRF25 with the slow preset; high-rate frame-capture intermediates stay in the ignored cache. The 720p copies use CRF22.
+
 `--probe` writes portraits and source-scene contact sheets only. `--sheet` writes the twelve-character overview. One or more IDs render selected reels. All outputs go to `renders/`; disposable caches are ignored. Independent selected-ID processes may render concurrently after the initial build exists.
+
+## After a mascot is chosen
+
+Integrate only the chosen character across the complete film: re-render the existing setup walkthrough with that character, retain the rules card while adapting its transition, check every avatar and logo, then render the full unchanged 119.6-second timeline. The preserved source and audition rig make that work straightforward; it is intentionally not done for twelve unchosen options.
 
 ## Provenance and checks
 
