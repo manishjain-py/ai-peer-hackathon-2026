@@ -1,0 +1,12 @@
+import {createRequire} from 'node:module';import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';
+const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const {chromium}=createRequire('/Users/manishjain/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/package.json')('playwright');
+const browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});
+const page=await browser.newPage({viewport:{width:1440,height:1100}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.goto('file://'+ROOT+'/index.html');await page.evaluate(()=>document.fonts.ready);await page.screenshot({path:ROOT+'/evidence/gallery-desktop.png'});
+await page.locator('[data-save="moss"]').click();await page.locator('[data-filter="saved"]').click();const saved=await page.locator('.card').count();
+await page.locator('[data-play="moss"]').click();await page.locator('video').evaluate(v=>new Promise(r=>{if(v.readyState>=1)r();else v.addEventListener('loadedmetadata',r,{once:true})}));
+const video=await page.locator('video').evaluate(v=>({duration:v.duration,width:v.videoWidth,height:v.videoHeight}));await page.screenshot({path:ROOT+'/evidence/gallery-player.png'});await page.locator('.close').click();
+await page.locator('[data-filter="translucent"]').click();const translucent=await page.locator('.card').count();await page.locator('[data-filter="all"]').click();
+await page.evaluate(()=>{localStorage.clear();location.reload()});await page.waitForLoadState('load');await page.setViewportSize({width:390,height:1200});await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:ROOT+'/evidence/gallery-mobile.png'});
+const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);const result={checked_at:new Date().toISOString(),cards:await page.locator('.card').count(),shortlist_cards:saved,translucent_cards:translucent,video,mobile_horizontal_overflow:overflow,page_errors:errors};fs.writeFileSync(ROOT+'/evidence/gallery-checks.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));await browser.close();
