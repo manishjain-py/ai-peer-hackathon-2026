@@ -1,12 +1,27 @@
 # AI Peer demo video: state
 
-Live controller: ai-peer-video-controller-7 (Opus 5.5; Terminal window 5771 on Mac 48 GB, PID 13541,
+Current requested work (Codex, 16 November 2026, 12:40 UTC): **12 mascot alternatives for the
+approved Tag film**, V32. One implementation worker (`mascot_previews`) in the managed
+`mascot-options` worktree on `codex/mascot-options`; the controller reviews and delivers all
+options to Telegram. Brief: `BRIEF-MASCOT-OPTIONS-2026-11-16.md`; worker brief:
+`handoffs/HANDOFF-2026-11-16-mascot-options.md`. No paid generation planned. The approved
+film stays intact until Manish chooses. Codex weekly usage: 10% used at 12:38 UTC.
+
+Previous recorded controller on the source Mac (historical session details, not checked live
+on this Mac): ai-peer-video-controller-7 (Opus 5.5; Terminal window 5771 on Mac 48 GB, PID 13541,
 https://claude.ai/code/session_01Nfn5h6N8JUSFGLBrqXFoYp), since its take-over at 12:21 UTC on 16
 November from ai-peer-video-controller-6 (window 5591, closed at 12:20 UTC). Read next: the newest
 hand-off, `handoffs/HANDOFF-2026-11-16-ai-peer-video-controller-6.md` (no worker is live). A new Mac or a
 take-over: `START-HERE.md` at the repo root. Other sessions message the controller by its name.
 
 ## Where we are (2026-11-16 12:21 UTC)
+
+**12:40 UTC, 16 November: mascot exploration started at Manish's request (V32).** The approved
+119.6-second Tag film is the base. Twelve distinct code-native alternatives will be shown in
+short in-demo reels and a numbered overview, with the same story, scene layouts and audio.
+Only public repository assets and new code are needed. Telegram delivery is explicitly
+requested. The private term-list check from the source Mac is unavailable here; provenance,
+visible text and outputs will be reviewed directly. No private recordings are opened.
 
 **12:21 UTC, 16 November: ai-peer-video-controller-7 has taken over** (Opus 5.5, window 5771,
 PID 13541; context 8.1% after the read-in). ai-peer-video-controller-6 (window 5591, PID 79572)
