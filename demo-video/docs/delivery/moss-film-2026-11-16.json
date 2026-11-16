@@ -1,0 +1,29 @@
+{
+  "version": "blended-moss-v1",
+  "status": "delivered",
+  "video": {
+    "confirmed": true,
+    "message_id": 23091,
+    "chat_id": -5506416790,
+    "date_utc": "2026-11-16T16:12:14+00:00",
+    "caption": "Moss \u2014 full blended film v1. 1:59.6, with Moss throughout the walkthrough, meeting, Slack, morning and ending. Same story, timing, voice and music as Tag v2. Ready for your review; the approved Tag version is preserved.",
+    "file_size": 20516672,
+    "telegram_duration": 120,
+    "file": "film/renders/blended-moss-v1-720p.mp4",
+    "sha256": "0348b89c4c99b315cc0a7b4221db71823b01572796b7c97b3ae8b4ab2fab0651",
+    "metadata_corrected": true,
+    "width": 1280,
+    "height": 720,
+    "metadata_updated_utc": "2026-11-16T16:13:04.921573+00:00"
+  },
+  "review_message": {
+    "confirmed": true,
+    "message_id": 23092,
+    "chat_id": -5506416790,
+    "date_utc": "2026-11-16T16:13:15+00:00",
+    "text": "The complete Moss version is above, ready for your review. Moss now appears throughout the full walkthrough and film, with distinct reading and presenting gestures. The original story, timing, voice and music are preserved, and Tag v2 is kept unchanged."
+  },
+  "actual_movie_seconds": 119.6,
+  "new_cost_usd": 0.4,
+  "project_cost_usd": 49.306079
+}
