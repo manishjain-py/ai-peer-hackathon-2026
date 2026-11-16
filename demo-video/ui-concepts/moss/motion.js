@@ -27,19 +27,21 @@ export function buildMotion(ctx) {
     return [x, yy, 1.08 * cam(t)[2]];
   };
   const inputTop = (t, dx = 0) => { const [x, y] = S([1450 + dx, ASKP.input.y], t); return [x, y, 1.1 * cam(t)[2]]; };
-  const roomX0 = CARD.cx + ROOM.dx;
-  const BY_BTN = [1090, 850, 1.4];
+  const roomX0 = CARD.cx + ROOM.dx + 735;
+  const readFeet = 810;
+  const writingSpot = [1800, 810, 1.15];
+  const BY_BTN = [1200, 835, 1.3];
   const ANS_FLOOR = [1706, 1014, 1.2];
-  const RS = [RULES.spot.x, RULES.spot.feet, RULES.spot.s];
+  const RS = [RULES.spot.x, RULES.spot.feet - 110, RULES.spot.s];
 
   // ---------------------------------------------------------------- hops (frame px)
   // from / to: [x, y, s] or functions of t; h: the arc's height; ground: whether the shadow
   // travels with it (false when it hops between levels).
   const HOPS = [
-    { a: 2.32, b: 2.78, from: () => [SPOT.cx, SPOT.feet, 0.92], to: () => [780, 960, 1.15], h: 120, amp: 0.2 },
-    { a: 4.66, b: 5.22, from: () => BY_BTN, to: () => [roomX0, ROOM.feet, ROOM.s], h: 300, amp: 0.26, level: true },
-    { a: S3.hop[0], b: S3.hop[1], from: () => [roomX0, ROOM.feet, ROOM.s], to: () => [RIDE.x0, PANEL.railY, 1.15], h: 170, amp: 0.2, level: true },
-    { a: S4.hop[0], b: S4.hop[1], from: () => [RIDE.x1, PANEL.railY, 1.15], to: (t) => briefTop(t), h: 150, amp: 0.22, level: true },
+    { a: 2.32, b: 2.78, from: () => [SPOT.cx, SPOT.feet, 0.92], to: () => [1150, 835, 1.15], h: 120, amp: 0.2 },
+    { a: 4.66, b: 5.22, from: () => BY_BTN, to: () => [roomX0, readFeet, ROOM.s], h: 300, amp: 0.26, level: true },
+    { a: S3.hop[0], b: S3.hop[1], from: () => [roomX0, readFeet, ROOM.s], to: () => writingSpot, h: 170, amp: 0.2, level: true },
+    { a: S4.hop[0], b: S4.hop[1], from: () => writingSpot, to: (t) => briefTop(t), h: 150, amp: 0.22, level: true },
     { a: ASK.hop[0], b: ASK.hop[1], from: (t) => briefTop(ASK.hop[0]), to: (t) => inputTop(t), h: 130, amp: 0.2, level: true },
     { a: ASK.jump[0], b: ASK.jump[1], from: (t) => inputTop(t, ASK.pace.reduce((s, p) => s + p[2], 0)), to: () => ANS_FLOOR, h: 110, amp: 0.24, level: true },
     { a: 50.12, b: 50.75, from: () => ANS_FLOOR, to: () => RS, h: 230, amp: 0.24 },
@@ -94,7 +96,7 @@ export function buildMotion(ctx) {
     SRC.forEach((id, i) => { if (i > 0) k += ease.inOutCubic(prog(t, READ[id].pan[0] + 0.02, READ[id].pan[1] - 0.03)); });
     return k;
   };
-  const roomX = (t) => roomX0 + (tagK(t) - panK(t)) * CARD.gap;
+  const roomX = (t) => roomX0 + 90 * Math.tanh(((tagK(t) - panK(t)) * CARD.gap) / 90);
   // The pans are quicker than any walk, so it scurries at a steady 7.5 steps a second.
   const roomWalk = (t) => {
     let w = 0;
@@ -124,7 +126,7 @@ export function buildMotion(ctx) {
     }
     if (t < 3.86) {
       const k = ease.inOutSine(prog(t, 2.78, 3.86));
-      const A = [780, 960, 1.15], B = BY_BTN;
+      const A = [1150, 835, 1.15], B = BY_BTN;
       const x = lerp(A[0], B[0], k), y = lerp(A[1], B[1], k), s = lerp(A[2], B[2], k);
       const dist = Math.hypot(B[0] - A[0], B[1] - A[1]) * k;
       const st = Math.min(prog(t, 2.78, 2.9), 1 - prog(t, 3.66, 3.86));
@@ -141,7 +143,7 @@ export function buildMotion(ctx) {
     }
     // ---- step 1 and 2: in the room
     if (t < S3.hop[0]) {
-      const x = roomX(t), y = ROOM.feet, s = ROOM.s;
+      const x = roomX(t), y = readFeet, s = ROOM.s;
       const st = roomStride(t);
       const pose = Object.assign(p, { x, y, s, walk: roomWalk(t), stride: st, rot: 5 * st, bob: 1.3 });
       const e = eyeOf(pose);
@@ -176,11 +178,11 @@ export function buildMotion(ctx) {
     }
     // ---- step 3: it rides the rail and writes each line as it passes.
     if (t < S4.hop[0]) {
-      const x = t < S3.ride[0] ? RIDE.x0 : rideX(t);
+      const x = writingSpot[0];
       const ride = Math.min(prog(t, S3.ride[0] - 0.05, S3.ride[0] + 0.15), 1 - prog(t, S3.ride[1] - 0.1, S3.ride[1] + 0.1));
       const settle = wob(t, S3.ride[1], 5, 2.6, 6);
       return Object.assign(p, {
-        x: x + settle, y: PANEL.railY, s: 1.15, legs: 1 - 0.55 * ride, walk: 7 * Math.max(0, t - S3.ride[0]), stride: 0.45 * ride,
+        x: x + settle * .2, y: writingSpot[1], s: 1.15, legs: 1 - 0.55 * ride, walk: 7 * Math.max(0, t - S3.ride[0]), stride: 0.45 * ride,
         rot: 4 * ride - settle * 0.5, look: t < S3.ride[0] ? [0.2, -1] : [0.15, -1], happy: 0.3 * ride,
       });
     }
@@ -257,7 +259,7 @@ export function buildMotion(ctx) {
     if (t < RET.cut[0] + 0.22) {
       const [x, y, s] = RS;
       const side = ease.inOutCubic(prog(t, 50.9, 51.7)) * (1 - ease.inOutCubic(prog(t, 55.0, 55.75)));
-      return Object.assign(p, { x: x + 635 * side, y: y - 80 * side - 120 * ease.inOutCubic(prog(t, 55.0, 55.75)), s: s * (1 - .12 * side),
+      return Object.assign(p, { x: x + 635 * side, y: y + 30 * side - 10 * ease.inOutCubic(prog(t, 55.0, 55.75)), s: s * (1 - .12 * side),
         action: 'present', actionTime: Math.min(4.8, Math.max(0, (t - 50.75) * .85)),
         alpha: 1 - prog(t, RET.cut[0], RET.cut[0] + .2) });
     }
@@ -303,8 +305,8 @@ export function buildMotion(ctx) {
     // Purposeful character acting: greet once, scan sources, think during Ask, present the brief.
     if (!p.action) {
       if (t < 5.5) { p.action = 'wave'; p.actionTime = Math.max(0, t - 2.8); }
-      else if (t < 22) { p.action = 'attentive'; p.actionTime = 1.0 + (3.8 - Math.abs(((t - 5.5) % 7.6) - 3.8)); }
-      else if (t < 39.5) { p.action = 'present'; p.actionTime = 1.0 + (3.8 - Math.abs(((t - 22) % 7.6) - 3.8)); }
+      else if (t < 19.5) { p.action = 'attentive'; p.actionTime = 1.0 + (3.8 - Math.abs(((t - 5.5) % 7.6) - 3.8)); }
+      else if (t < 39.5) { p.action = 'present'; p.actionTime = 1.0 + (3.8 - Math.abs(((t - 19.5) % 7.6) - 3.8)); }
       else if (t < 45.8) { p.action = 'attentive'; p.actionTime = Math.min(4.8, .8 + (t - 39.5) * .7); }
       else if (t < 50.12) { p.action = 'present'; p.actionTime = Math.min(4.8, (t - 45.8) * 1.1); }
       else { p.action = 'wave'; p.actionTime = Math.min(4.8, Math.max(0, t - 55.5)); }

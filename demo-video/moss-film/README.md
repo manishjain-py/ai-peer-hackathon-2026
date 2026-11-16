@@ -11,7 +11,7 @@ The complete Tag walkthrough is rebuilt as `../ui-concepts/moss/`: landing and s
 all six source cards and sign-in steps, learned context, the brief, Ask and rules. Its
 fictional data, words, camera keys and section times are the same. Moss is slightly shorter
 in the dense UI than in room scenes, and its landing position clears the page copy.
-The AI identity badge rises with the character during jumps. For rules, Moss moves beside
+The AI identity badge rises with the character during jumps. Reading/writing poses sit beside the source/fact cards above the original caption lane; bounded pan movement keeps the whole body and badge in frame, and visual source links follow that pose. For rules, Moss moves beside
 a separate green card: the original card bounds, six rules, appearance timing and text
 remain. Presentation artwork is mirrored to point toward the content; badge text stays
 normal. The calm read-only sentence is separated from the badge, and their final pose clears the unchanged film-caption lane. The original dormant/wake/fold timing uses the same Moss avatar mark before it opens into the full body.
@@ -54,6 +54,8 @@ rendering. Do not rerun generation merely to rebuild a movie.
 ```sh
 git lfs checkout 'demo-video/**'
 node demo-video/moss-film/render.mjs --probe
+# Optional dense pre-encode composition proof, with the original film captions:
+node demo-video/moss-film/render.mjs --film --live-walk-probe --probe
 node demo-video/moss-film/render.mjs
 node demo-video/moss-film/render.mjs --film --probe
 node demo-video/moss-film/render.mjs --film
