@@ -1,6 +1,6 @@
 # Moss full-film acceptance, 16 November 2026
 
-Controller checklist for V34. Status: source walkthrough accepted; complete-film encode and final acceptance pending.
+Controller checklist for V34. Status: complete caption-aware source walkthrough accepted; final export validation pending.
 
 ## Fixed reference
 
@@ -55,3 +55,24 @@ Full-film source sheets 1, 4, 5 and 6 were also inspected: hook chips, room/desk
 morning phone return, native paper brief, globe and endcard use Moss consistently. A final
 rules-resting-pose collision with the unchanged film caption lane was identified and is
 being cleared before final encoding. Source proof acceptance is not final movie acceptance.
+
+## Complete caption-aware walk
+
+Before the final walkthrough encode, the controller reviewed all 15 revised
+`moss-film/evidence/caption-review-*.jpg` sheets: 173 time points across film 22–69.4s,
+covering every narration/label entry, middle and exit plus source-card pans. The earlier
+caption collision is resolved with a mascot-only route beside the cards and above the
+fixed caption lane; the badge and visual source line follow that displayed position.
+Pans stay within the frame. Landing, Ask/rules hops and final calm pose are also clear.
+
+The first dense proof had an iframe measurement issue: the page was initialized hidden,
+so its measured card/text sizes were zero. This was a review-view bug, not a change to
+UI data or reveal logic. Visible initialization fixed it. The controller accepted the
+revised facts and four-item brief against `ui-preservation-comparison.jpg` at film
+40.7, 47.6 and 50.2 seconds. Original UI source files remain byte-identical except the
+mascot choreography/adapter/scene integration needed for this replacement.
+
+Dormant-state encoded proof also passed: Moss's identity mark wakes into its full body
+by 13.6s, returns to the phone around 104.5–104.8s and wakes in the morning brief by
+106.3s. Original state timing is retained. All remaining work is final encoded
+scene review, media/audio proof, delivery and repository wrap-up.
