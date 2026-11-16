@@ -1,6 +1,6 @@
 # Moss acting v2: controller acceptance record
 
-V35 revision of the full Moss film. In progress; this is not final movie acceptance.
+V35 revision of the full Moss film. Final encoded movie accepted and delivered; repository merge/checkpoint wrap-up follows.
 Controller: Codex `moss_acting_controller`. One implementation worker: `moss_acting_builder`.
 
 ## Accepted performance plan and first artwork
@@ -73,3 +73,33 @@ sent as an early preview to Telegram (23098, 18:37:32 UTC), with full v2 explici
 still in progress. Receipt: `delivery/moss-acting-preview-2026-11-16.json`.
 These checkpoints authorize the complete walkthrough/full-film render; they do not
 replace final encoded full-movie acceptance.
+
+## Final encoded acceptance and full-film delivery
+
+Accepted at 18:48 UTC on 16 November. The controller inspected all eight final
+`film-encoded-*` sheets (86 scene frames), all six `transitions-encoded-*` sheets
+(64 scene/action boundaries) and both `send-encoded-*` sheets (22 frames from the
+720p copy). Purposeful activity, identity, notebook visibility, badge travel, frame
+bounds, caption clearance, separate rules card and original phone wake/return pass.
+No material issue remained.
+
+`checks.json` confirms both complete decodes and exact 119.600-second / 3,588-frame /
+30fps output at 1920x1080 and 1280x720. All 5,608 AAC packet payloads, timestamps,
+durations and decoded audio hash match the original. The preserved Moss v1 master
+SHA256 remains `c6672bd1b42b09b5c66c4dbd55bdb2f37ef5dbac6e79594f061f3fc5cb4f2941`;
+Tag v2 remains `7756283021b7237605337f079e435babb25143c2fb1d9023e6b70204a952b039`.
+All 20 film slot/camera settings, six walkthrough spans, audio/script configuration
+and original UI data/layout/timeline pass comparison. The source walkthrough is
+58.000s, 1,740 frames at 1080p.
+
+Final SHA256: 1080p `acf0d9aa68f86f085c24a698f095e5606cf86b23b29db1f83965d6029aaac2b4`;
+720p `5100a99eac405bc9e91c6f770fd938e66e6267e4e6a4ec0a89ece17ed2a885f3`.
+Full movie reached Attention as video 23099 at 18:48:56 UTC and review text 23100
+at 18:49:13 UTC. Telegram reports correct 1280x720 and rounded 120-second metadata;
+streaming support was requested at send time. Receipt:
+`delivery/moss-acting-film-2026-11-16.json`. No duplicate v1 was sent.
+
+Only generic selected Moss art/descriptions went to providers; outgoing prompts
+were inspected by the controller. Character motions are generated/composed, with
+no speech lip-sync. No direct audio listening or unavailable private-term scan is
+claimed. New cost $0.859070, project total $50.165149; no further paid call is pending.

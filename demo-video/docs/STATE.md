@@ -18,6 +18,13 @@ take-over: `START-HERE.md` at the repo root. Other sessions message the controll
 
 ## Where we are (2026-11-16)
 
+**18:49 UTC, full Moss v2 accepted and delivered.** The 119.600s / 3,588-frame exports
+pass full decode and exact original audio checks. Controller accepted 86 encoded scene
+frames, 64 boundaries and 22 send-copy frames. Full video 23099 and review text 23100
+reached Attention with correct metadata. LFS/source push, single PR and checkpoint wrap-up
+remain in progress; the completed video is ready for Manish's review. Cost $0.859070 new,
+$50.165149 total. Record: `MOSS-ACTING-ACCEPTANCE-2026-11-16.md`.
+
 **18:37 UTC, Moss performance proof accepted and preview delivered.** The controller
 accepted 30 corrected scene points, 32 encoded temporal frames and all 173 full-film
 caption-aware walkthrough points. A meeting-caption overlap was fixed by raising only
