@@ -1,0 +1,5 @@
+.build/
+ledger/.*.lock
+ledger/.*.pending.json
+ledger/*.uploads.json
+ledger/.*.uploads.json

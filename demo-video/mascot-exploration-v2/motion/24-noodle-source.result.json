@@ -1,0 +1,24 @@
+{
+ "request_id": "01a1e4b0-6283-7261-871a-2e4e3e56026b",
+ "billable_units_header": "8.0",
+ "inputs_sent": {
+  "prompt": "A single original friendly character its long cloth tail gently curls and relaxes, one soft hand gives two visible waves, it tilts its head inquisitively and gives a delighted blink. Clearly visible expressive animation WITHIN the character: actual eyes, face, head and limbs move, not just sliding the whole still. Preserve the beautiful original identity, colours, material and every design feature. The body remains in exactly the same central position and same size; feet stay planted or hovering at the original height. Entire character, wings, tail and crest stay inside the existing generous margins. Completely locked camera: no zoom, pan, camera shake or reframing. Background remains perfectly uniform solid pure magenta #FF00FF throughout, no gradients, no floor, no cast shadows or scenery. No new objects, no text, no sound or music. Friendly thoughtful acting, mature and reassuring rather than frantic. One continuous five-second shot, returning close to the original relaxed pose at the end.",
+  "image_url": "https://v3b.fal.media/files/b/0ab2b4a4/i-kS7SH3f6yzH2SyZ9n-Z_24-noodle-chroma.png",
+  "duration": 5,
+  "resolution": "768P",
+  "prompt_expansion_mode": "disabled",
+  "seed": 16112624
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab2b4a4/clhTPcYYs5wXOsYA3pd8x_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "clhTPcYYs5wXOsYA3pd8x_minimax-h3.mp4",
+   "file_size": 4769239
+  },
+  "expanded_prompt": null,
+  "timings": {
+   "inference": 0.8036271009999609
+  }
+ }
+}

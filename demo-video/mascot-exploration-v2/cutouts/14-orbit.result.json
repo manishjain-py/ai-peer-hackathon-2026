@@ -1,0 +1,22 @@
+{
+ "request_id": "01a1e4aa-57fe-7d01-b288-fbea76f8b763",
+ "billable_units_header": null,
+ "inputs_sent": {
+  "image_url": "https://v3b.fal.media/files/b/0ab2b47c/IRESl5-PhQA4B6DvzhrpU_14-orbit.png",
+  "model": "General Use (Heavy)",
+  "operating_resolution": "2048x2048",
+  "output_format": "png",
+  "refine_foreground": true
+ },
+ "result": {
+  "image": {
+   "url": "https://v3b.fal.media/files/b/0ab2b47d/jH9wIDTAvPfsVDGgc8n56_9vYqfCif.png",
+   "content_type": "image/png",
+   "file_name": "jH9wIDTAvPfsVDGgc8n56_9vYqfCif.png",
+   "file_size": null,
+   "width": 2048,
+   "height": 2048
+  },
+  "mask_image": null
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "request_id": "01a1e4a8-45a3-7d32-b78e-f9a465439f9f",
+ "billable_units_header": "8.0",
+ "inputs_sent": {
+  "prompt": "A single charming felt character gives a clearly visible friendly greeting. Its raised paw moves down and up in a relaxed wave twice, with visible wrist and elbow movement. It closes both eyes in a warm blink, opens them with a bigger happy smile, tilts its head about ten degrees toward its raised paw, then settles back into its original relaxed pose. Its ears and wool tuft follow through softly; its belly breathes. Keep the same beautiful character identity and fine wool texture. Feet remain planted in the same spot, entire full body and tuft stay inside frame. Locked camera, same framing and same size, no zoom or pan. Perfectly uniform solid pure magenta #FF00FF background throughout, no shadows or scenery. No text, no sound, no music. Natural friendly acting, expressive movement within the character, not sliding the whole still image. One continuous five-second shot.",
+  "image_url": "https://v3b.fal.media/files/b/0ab2b44b/qMEDc3V30SM54aRGJBwgv_spike-moss-chroma.png",
+  "duration": 5,
+  "resolution": "768P",
+  "prompt_expansion_mode": "disabled",
+  "seed": 16112602
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab2b46f/NqF8MIieW119eBIgSAZKs_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "NqF8MIieW119eBIgSAZKs_minimax-h3.mp4",
+   "file_size": 3631737
+  },
+  "expanded_prompt": null,
+  "timings": {
+   "inference": 0.8073684069995579
+  }
+ }
+}

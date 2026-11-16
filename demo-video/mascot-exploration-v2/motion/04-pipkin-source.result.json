@@ -1,0 +1,24 @@
+{
+ "request_id": "01a1e4ad-86c7-77d3-bb67-a92a2a2b970e",
+ "billable_units_header": "8.0",
+ "inputs_sent": {
+  "prompt": "A single original friendly character its large ears twitch independently, it leans its head curiously toward the viewer, gives a small happy hand wave and a blink, then settles. Clearly visible expressive animation WITHIN the character: actual eyes, face, head and limbs move, not just sliding the whole still. Preserve the beautiful original identity, colours, material and every design feature. The body remains in exactly the same central position and same size; feet stay planted or hovering at the original height. Entire character, wings, tail and crest stay inside the existing generous margins. Completely locked camera: no zoom, pan, camera shake or reframing. Background remains perfectly uniform solid pure magenta #FF00FF throughout, no gradients, no floor, no cast shadows or scenery. No new objects, no text, no sound or music. Friendly thoughtful acting, mature and reassuring rather than frantic. One continuous five-second shot, returning close to the original relaxed pose at the end.",
+  "image_url": "https://v3b.fal.media/files/b/0ab2b491/d7Z4Vs9PwJ2GJzY7dnx-7_04-pipkin-chroma.png",
+  "duration": 5,
+  "resolution": "768P",
+  "prompt_expansion_mode": "disabled",
+  "seed": 16112604
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab2b492/rOqhJL_iyOUsLyJsNOkqU_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "rOqhJL_iyOUsLyJsNOkqU_minimax-h3.mp4",
+   "file_size": 2705719
+  },
+  "expanded_prompt": null,
+  "timings": {
+   "inference": 0.6831399730001522
+  }
+ }
+}

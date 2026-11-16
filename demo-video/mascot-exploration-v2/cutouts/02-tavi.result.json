@@ -1,0 +1,22 @@
+{
+ "request_id": "01a1e4a9-0722-7ab1-901e-14f201aa5b3d",
+ "billable_units_header": null,
+ "inputs_sent": {
+  "image_url": "https://v3b.fal.media/files/b/0ab2b474/mLdnkwjMWbYlc1s0QpHkW_02-tavi.png",
+  "model": "General Use (Heavy)",
+  "operating_resolution": "2048x2048",
+  "output_format": "png",
+  "refine_foreground": true
+ },
+ "result": {
+  "image": {
+   "url": "https://v3b.fal.media/files/b/0ab2b474/pHk5hFTPC3AlEURLB0PHO_6wqHoa2Z.png",
+   "content_type": "image/png",
+   "file_name": "pHk5hFTPC3AlEURLB0PHO_6wqHoa2Z.png",
+   "file_size": null,
+   "width": 2048,
+   "height": 2048
+  },
+  "mask_image": null
+ }
+}

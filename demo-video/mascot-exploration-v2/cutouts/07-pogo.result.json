@@ -1,0 +1,22 @@
+{
+ "request_id": "01a1e4a9-aed8-7f20-88d5-b42a0824ee21",
+ "billable_units_header": null,
+ "inputs_sent": {
+  "image_url": "https://v3b.fal.media/files/b/0ab2b478/qyIe9AITx2AL2vk5xfMec_07-pogo.png",
+  "model": "General Use (Heavy)",
+  "operating_resolution": "2048x2048",
+  "output_format": "png",
+  "refine_foreground": true
+ },
+ "result": {
+  "image": {
+   "url": "https://v3b.fal.media/files/b/0ab2b478/23sSOwwoIbHPIa5hfl56u_Ac2PzIyj.png",
+   "content_type": "image/png",
+   "file_name": "23sSOwwoIbHPIa5hfl56u_Ac2PzIyj.png",
+   "file_size": null,
+   "width": 2048,
+   "height": 2048
+  },
+  "mask_image": null
+ }
+}

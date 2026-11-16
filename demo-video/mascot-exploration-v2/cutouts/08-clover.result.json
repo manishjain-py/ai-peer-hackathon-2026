@@ -1,0 +1,22 @@
+{
+ "request_id": "01a1e4a9-aeb6-7d63-890b-b8a0cd192c80",
+ "billable_units_header": null,
+ "inputs_sent": {
+  "image_url": "https://v3b.fal.media/files/b/0ab2b478/OlgF2627aMuvoBapZVveS_08-clover.png",
+  "model": "General Use (Heavy)",
+  "operating_resolution": "2048x2048",
+  "output_format": "png",
+  "refine_foreground": true
+ },
+ "result": {
+  "image": {
+   "url": "https://v3b.fal.media/files/b/0ab2b478/LpWK3v_ycsSUx-f1hgYWU_HDtQoDgP.png",
+   "content_type": "image/png",
+   "file_name": "LpWK3v_ycsSUx-f1hgYWU_HDtQoDgP.png",
+   "file_size": null,
+   "width": 2048,
+   "height": 2048
+  },
+  "mask_image": null
+ }
+}

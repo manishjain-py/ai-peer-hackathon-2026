@@ -1,0 +1,27 @@
+{
+  "model": "gemini-nano-banana-2.1",
+  "reserve_usd": 0.12,
+  "output": "images/spike-moss.png",
+  "body": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Use case: stylized-concept. Create one entirely original premium 3D mascot for a thoughtful, happy personal AI teammate. A tiny woodland companion made of hand-felted forest-green wool, warm ivory face and belly, small rounded ears, one softly curled fern-like tuft, soft rounded paws and a small amber ceramic charm. A new imaginary species with appealing proportions: pear-shaped little body, broad gentle face, bright intelligent dark eyes with subtle highlights, naturally joyful closed-mouth smile, relaxed welcoming posture and one paw offering a small open-hand wave. Make it emotionally expressive and beautifully crafted, like a bespoke stop-motion feature character, with exquisite fine felt fibres, tactile seams, soft subsurface light and rounded sculptural forms. Adult-friendly premium design, confident and kind, not a baby toy, not a generic sphere with eyes. Mostly deep forest green, warm ivory and sage mint, a restrained amber accent. Full body, front three-quarter view, 65 percent of the square image height, generous clear margin on all sides. Plain perfectly uniform light gray studio background, no floor shadow, no scenery, no extra props, no platform, no cast shadow, no floating particles, no text, no letters, no logos, no watermark, no other character. Studio character development still, high-end craftsmanship, warm inviting personality. Preserve an easy-to-recognize silhouette at small UI-avatar scale. No human likeness, no existing branded character."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseModalities": [
+        "TEXT",
+        "IMAGE"
+      ],
+      "maxOutputTokens": 8192,
+      "imageConfig": {
+        "aspectRatio": "1:1",
+        "imageSize": "2K"
+      }
+    }
+  }
+}

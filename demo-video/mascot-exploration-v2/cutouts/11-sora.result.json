@@ -1,0 +1,22 @@
+{
+ "request_id": "01a1e4aa-1e55-7150-9ec7-c07270bee3fa",
+ "billable_units_header": null,
+ "inputs_sent": {
+  "image_url": "https://v3b.fal.media/files/b/0ab2b47b/KSEXJAEFre9-xDDRpAN9t_11-sora.png",
+  "model": "General Use (Heavy)",
+  "operating_resolution": "2048x2048",
+  "output_format": "png",
+  "refine_foreground": true
+ },
+ "result": {
+  "image": {
+   "url": "https://v3b.fal.media/files/b/0ab2b47b/lzD9MeZETfD8PJ44wJzUV_nkZSpkAX.png",
+   "content_type": "image/png",
+   "file_name": "lzD9MeZETfD8PJ44wJzUV_nkZSpkAX.png",
+   "file_size": null,
+   "width": 2048,
+   "height": 2048
+  },
+  "mask_image": null
+ }
+}

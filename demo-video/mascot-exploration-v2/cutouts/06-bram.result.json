@@ -1,0 +1,22 @@
+{
+ "request_id": "01a1e4a9-78c3-7dd0-af80-a383fb43821b",
+ "billable_units_header": null,
+ "inputs_sent": {
+  "image_url": "https://v3b.fal.media/files/b/0ab2b477/leo4iQNrZm8IdstV1J_55_06-bram.png",
+  "model": "General Use (Heavy)",
+  "operating_resolution": "2048x2048",
+  "output_format": "png",
+  "refine_foreground": true
+ },
+ "result": {
+  "image": {
+   "url": "https://v3b.fal.media/files/b/0ab2b477/u0rBZNuANF7GQs-pWy_CA_YzveBCJp.png",
+   "content_type": "image/png",
+   "file_name": "u0rBZNuANF7GQs-pWy_CA_YzveBCJp.png",
+   "file_size": null,
+   "width": 2048,
+   "height": 2048
+  },
+  "mask_image": null
+ }
+}

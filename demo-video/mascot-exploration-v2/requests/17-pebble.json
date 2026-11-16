@@ -1,0 +1,27 @@
+{
+  "model": "gemini-nano-banana-2.1",
+  "reserve_usd": 0.12,
+  "output": "images/17-pebble.png",
+  "body": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Create ONE entirely original premium character design for a happy, thoughtful personal AI teammate. SUBJECT: an entirely original moss-backed river-stone garden spirit, asymmetric smooth dark green river-pebble body, a warm cream stone face, one very small curled fern and fine real-looking moss growing across its back as a little cloak, small rounded stone limbs. Cheerful thoughtful face with bright dark eyes and a gentle smile, one hand resting on cheek in curiosity. Premium tactile garden sculpture with beautiful stone and moss detail, not resembling any existing animation character, not Totoro. Full body in a balanced front three-quarter view, entire head, limbs, wings and tail fully visible, body occupies about 65 percent of square canvas with generous clean margins. Warm inviting expression and intelligent expressive face, aesthetically beautiful and emotionally engaging, adult-friendly rather than babyish. Each material must look convincingly tactile and meticulously crafted: a premium animated feature character / designer art-toy level of finish. Forest green, warm cream and sage mint with restrained honey/amber or muted apricot accents; harmonious, not dull monochrome. Soft cinematic studio lighting, fine controlled highlights, deep material detail. Plain perfectly uniform light gray backdrop, no floor shadow, no cast shadows, no platform, no scenery, no additional props or objects, no floating particles. NO WORDS, NO TEXT, NO LETTERS, NO LOGOS, NO WATERMARK. One character only. Do not imitate any existing branded mascot, no human likeness, no generic helmet robot, no simple ball with eyes. Square character development master."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseModalities": [
+        "TEXT",
+        "IMAGE"
+      ],
+      "maxOutputTokens": 8192,
+      "imageConfig": {
+        "aspectRatio": "1:1",
+        "imageSize": "2K"
+      }
+    }
+  }
+}

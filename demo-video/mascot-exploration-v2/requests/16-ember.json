@@ -1,0 +1,27 @@
+{
+  "model": "gemini-nano-banana-2.1",
+  "reserve_usd": 0.12,
+  "output": "images/16-ember.png",
+  "body": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Create ONE entirely original premium character design for a happy, thoughtful personal AI teammate. SUBJECT: a living glowing lantern-seed companion, warm ivory ceramic seed-shaped face and belly with an amber light within, wrapped in a forest-green velvety protective hood shaped like two overlapping leaves, tiny rounded ceramic hands and feet. Happy reassuring eyes, small smile, head tilted and hands comfortably open. Mixed glazed ceramic, soft velvet and subtle translucent amber, meticulously crafted premium character, no smoke or fire or sparks. Full body in a balanced front three-quarter view, entire head, limbs, wings and tail fully visible, body occupies about 65 percent of square canvas with generous clean margins. Warm inviting expression and intelligent expressive face, aesthetically beautiful and emotionally engaging, adult-friendly rather than babyish. Each material must look convincingly tactile and meticulously crafted: a premium animated feature character / designer art-toy level of finish. Forest green, warm cream and sage mint with restrained honey/amber or muted apricot accents; harmonious, not dull monochrome. Soft cinematic studio lighting, fine controlled highlights, deep material detail. Plain perfectly uniform light gray backdrop, no floor shadow, no cast shadows, no platform, no scenery, no additional props or objects, no floating particles. NO WORDS, NO TEXT, NO LETTERS, NO LOGOS, NO WATERMARK. One character only. Do not imitate any existing branded mascot, no human likeness, no generic helmet robot, no simple ball with eyes. Square character development master."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseModalities": [
+        "TEXT",
+        "IMAGE"
+      ],
+      "maxOutputTokens": 8192,
+      "imageConfig": {
+        "aspectRatio": "1:1",
+        "imageSize": "2K"
+      }
+    }
+  }
+}
