@@ -9,7 +9,7 @@ the approved Tag film and the first twelve options remain preserved.
 
 ## Controller's reading and working scope (V33)
 
-- Create **24 new generated-art mascot directions**. The earlier code-only choice is no
+- Create **25 generated-art mascot directions**. The earlier code-only choice is no
   longer a constraint. The requested Google/Gemini workflow is inspected read-only in Learn
   Like Magic; Gemini or fal.ai may generate the art. "Fyle.ai" is read as fal.ai in this context.
 - Aim for happy, reassuring, expressive, attractive companions with materially different
@@ -18,7 +18,7 @@ the approved Tag film and the first twelve options remain preserved.
 - A single character must work in the room, throughout the product walkthrough, as the Zoom
   avatar and as the logo. It remains clearly labelled as AI in the demo.
 - Produce a numbered overview, individual assets and in-demo motion previews for review,
-  continuing the original Telegram-delivery request. Label these **Round 2, 01–24** so they
+  continuing the original Telegram-delivery request. Label these **Round 2, 01–25** so they
   cannot be confused with the first twelve. No full-length replacement is selected yet.
 - Preserve the approved story, layout, dialogue, timing and music in the sample scenes.
   Code may composite and animate generated art; it must not substitute geometric drawings
@@ -37,11 +37,12 @@ controller caps this round at **$15 of new paid generation**, within V3's existi
 the prior recorded total is $42.08. Every paid call goes in the round's ledger. Tell Manish
 if the total crosses $50, as C5 requires. No subscription purchase is authorized or planned.
 Inspect the first raster result before bulk generation. Test character animation/cutout quality
-on one or two examples before scaling it to all twenty-four.
+on one or two examples before scaling it to all twenty-five.
 
 ## Art-direction seeds
 
 These are starting directions, refined through generated results rather than locked designs.
+The first Gemini pilot was strong enough to retain as option 25, within the requested 20–25.
 
 | # | Name | Direction |
 |---|---|---|
@@ -69,6 +70,7 @@ These are starting directions, refined through generated results rather than loc
 | 22 | Quill | Ceramic hedgehog with folded-paper-leaf quills |
 | 23 | Fenn | Small glazed fawn with leaf ears, elegant legs and tiny gold branches |
 | 24 | Noodle | Folded-cloth gecko with a curled tail and soft green fingers |
+| 25 | Moss | The successful pilot: a hand-felted woodland companion with a fern curl and amber pendant |
 
 ## Work and proof
 

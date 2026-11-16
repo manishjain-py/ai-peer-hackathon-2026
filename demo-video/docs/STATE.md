@@ -1,7 +1,7 @@
 # AI Peer demo video: state
 
 Current requested work (Codex, 16 November 2026): **Round 2 mascot exploration (V33)**,
-24 generated-art directions with a happy, warm personality. Gemini/fal.ai permitted; Learn
+25 generated-art directions with a happy, warm personality. Gemini/fal.ai permitted; Learn
 Like Magic's generation workflow inspected read-only. One worker (`mascot_previews`) in the
 managed `generated-mascots` worktree, branch `codex/generated-mascots`. Brief:
 `BRIEF-GENERATED-MASCOTS-2026-11-16.md`. New generation cap $15 inside the existing $100;
@@ -16,9 +16,15 @@ take-over: `START-HERE.md` at the repo root. Other sessions message the controll
 
 ## Where we are (2026-11-16)
 
+**Generation premise proved:** the existing Gemini account generated an original 2048px felt
+woodland companion successfully; the controller inspected it and approved the richer art
+direction. Keep that pilot as #25 Moss alongside the 24 planned directions. A provider cutout
+and one or two animation pilots are checked before scaling motion work. The original film and
+company/private content are not sent to generators.
+
 **Round 2 started at Manish's request (V33).** He wants a broader creative exploration using
 image generation, with 20–25 happy, good-vibe mascots that fit the whole walkthrough. This round
-will produce 24 directions. The worker verified Learn Like Magic's direct Gemini generation
+will produce 25 directions (24 planned plus the successful felt pilot). The worker verified Learn Like Magic's direct Gemini generation
 and separate sticker-cutout workflow by reading its code; provider availability and one small
 original-character spike come before bulk generation. No company/private content is needed.
 The first twelve previews are delivered and retained; no final replacement has been chosen.
@@ -840,7 +846,7 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 ## Next
 
 **Now (16 November, V33), Codex:** verify the generation route with a small spike, inspect the
-first raster character, then generate 24 varied directions and in-demo previews. Record costs,
+first raster character, then generate 25 varied directions and in-demo previews. Record costs,
 review the outputs and send the set to Telegram. Keep the approved film intact. Older notes follow.
 
 **Now (16 November, 13:01 UTC, V32), Codex:** the requested exploration and Telegram delivery
