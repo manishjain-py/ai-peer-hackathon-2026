@@ -1,13 +1,13 @@
 # AI Peer demo video: state
 
-Current completed work (Codex, 16 November 2026, 16:20 UTC): **Moss full blended film delivered
-(V34)**. `demo-video/film/renders/blended-moss-v1.mp4` is the complete 119.600-second 1080p
-movie; the `-720p` copy is on Telegram (video 23091, review text 23092). Full walkthrough,
-all film appearances and marks use Moss. Original audio/timing/UI are preserved. PR 18 is
-merged (`2996671`), checkpoint `blended-moss-v1`. Tag v2 stays the last approved full film;
-Moss awaits Manish's review. Nothing runs. New spend $0.40, project $49.306079. Weekly usage
-16% at completion. Read `MOSS-FILM-DELIVERY-2026-11-16.md`, then the controller handoff
-`handoffs/HANDOFF-2026-11-16-moss-film-controller-complete.md` for the clean next starting point.
+Current requested work (Codex, 16 November 2026, 18:17 UTC): **Moss context-specific acting
+pass (V35)**. Build `blended-moss-v2` from the delivered full v1, with purposeful expressions
+and activities at each scene/beat (including note-taking while reading and thinking when
+appropriate). Preserve the story, UI, timing, audio and earlier versions. Brief:
+`BRIEF-MOSS-ACTING-2026-11-16.md`. A fresh successor controller and one worker own the package;
+the parent chat relays progress/results. Current project spend $49.306079; up to $10 new
+generation within the $100 cap, with the $50 Telegram notification when crossed. Weekly
+Codex usage 17% at 18:17 UTC.
 
 Previous recorded controller on the source Mac (historical session details, not checked live
 on this Mac): ai-peer-video-controller-7 (Opus 5.5; Terminal window 5771 on Mac 48 GB, PID 13541,
@@ -17,6 +17,13 @@ hand-off, `handoffs/HANDOFF-2026-11-16-ai-peer-video-controller-6.md` (no worker
 take-over: `START-HERE.md` at the repo root. Other sessions message the controller by its name.
 
 ## Where we are (2026-11-16)
+
+**18:17 UTC, 16 November: Manish requested a careful Moss acting pass (V35).** Expressions
+and activities should match what Moss is doing throughout the movie: note-taking during source
+reading and thinking at other appropriate moments are his examples. The controller will map
+scene intentions and action beats before generation, inspect contrasting in-context proofs,
+then create the full `blended-moss-v2` for review. This is a new revision; v1 stays preserved.
+Exact words and scope: `BRIEF-MOSS-ACTING-2026-11-16.md`.
 
 **16:20 UTC, 16 November: Moss full film complete and delivered (V34).** The 119.600-second
 1080p master and 720p copy pass the complete visual/media walk. The controller accepted
@@ -775,6 +782,10 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 
 ## Needs Manish
 
+**V35, 16 November 18:17 UTC:** no clarification needed. Build the context-specific acting
+revision and deliver the full new movie for review. Routine performance choices belong to
+this task; do not pause for an extra storyboard approval. Older notes follow.
+
 **V34 delivered, 16 November:** review the complete Moss movie on Telegram (23091). No
 implementation decision or clarification is open. Tag v2 remains approved until his feedback.
 Older notes follow.
@@ -934,6 +945,11 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
+
+**Now (V35), successor controller:** read `BRIEF-MOSS-ACTING-2026-11-16.md`; map the exact
+scene/acting beats, produce and inspect the needed Moss actions, then build and deliver the
+full `blended-moss-v2`. Preserve v1's caption/placement fixes and exact audio/timing. Older
+notes follow.
 
 **Now: V34 is complete.** Nothing runs. Await Manish's feedback on the full Moss movie.
 Start from `MOSS-FILM-DELIVERY-2026-11-16.md` and the latest controller handoff. Do not resume
