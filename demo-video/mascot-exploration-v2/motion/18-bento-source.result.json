@@ -1,0 +1,24 @@
+{
+ "request_id": "01a1e4af-714a-7943-a50e-99dc68c2dcc5",
+ "billable_units_header": "8.0",
+ "inputs_sent": {
+  "prompt": "A single original friendly character its bamboo shell segments flex subtly with breathing, it tilts its snout curiously, gives a cheerful blink and a small front-paw greeting, then settles. Clearly visible expressive animation WITHIN the character: actual eyes, face, head and limbs move, not just sliding the whole still. Preserve the beautiful original identity, colours, material and every design feature. The body remains in exactly the same central position and same size; feet stay planted or hovering at the original height. Entire character, wings, tail and crest stay inside the existing generous margins. Completely locked camera: no zoom, pan, camera shake or reframing. Background remains perfectly uniform solid pure magenta #FF00FF throughout, no gradients, no floor, no cast shadows or scenery. No new objects, no text, no sound or music. Friendly thoughtful acting, mature and reassuring rather than frantic. One continuous five-second shot, returning close to the original relaxed pose at the end.",
+  "image_url": "https://v3b.fal.media/files/b/0ab2b49e/e4imUshmSXpG6vc7YfZVv_18-bento-chroma.png",
+  "duration": 5,
+  "resolution": "768P",
+  "prompt_expansion_mode": "disabled",
+  "seed": 16112618
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab2b49e/5dBuq-GSxIQveGvyccUtx_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "5dBuq-GSxIQveGvyccUtx_minimax-h3.mp4",
+   "file_size": 3423613
+  },
+  "expanded_prompt": null,
+  "timings": {
+   "inference": 0.6811723099999654
+  }
+ }
+}

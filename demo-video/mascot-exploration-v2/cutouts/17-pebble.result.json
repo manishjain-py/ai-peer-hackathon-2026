@@ -1,0 +1,22 @@
+{
+ "request_id": "01a1e4aa-c4e1-7e91-8a82-f39a71462478",
+ "billable_units_header": null,
+ "inputs_sent": {
+  "image_url": "https://v3b.fal.media/files/b/0ab2b47f/d5CXykNT_64jEvDptViu7_17-pebble.png",
+  "model": "General Use (Heavy)",
+  "operating_resolution": "2048x2048",
+  "output_format": "png",
+  "refine_foreground": true
+ },
+ "result": {
+  "image": {
+   "url": "https://v3b.fal.media/files/b/0ab2b47f/jWDOWGZfL0NW2bdiV1T95_A9P9hrcs.png",
+   "content_type": "image/png",
+   "file_name": "jWDOWGZfL0NW2bdiV1T95_A9P9hrcs.png",
+   "file_size": null,
+   "width": 2048,
+   "height": 2048
+  },
+  "mask_image": null
+ }
+}

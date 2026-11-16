@@ -1,0 +1,20 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "A single original friendly character its knitted lobes gently bounce with a soft breath, it gives a lively mitten wave and a delighted closed-eye smile, then settles. Clearly visible expressive animation WITHIN the character: actual eyes, face, head and limbs move, not just sliding the whole still. Preserve the beautiful original identity, colours, material and every design feature. The body remains in exactly the same central position and same size; feet stay planted or hovering at the original height. Entire character, wings, tail and crest stay inside the existing generous margins. Completely locked camera: no zoom, pan, camera shake or reframing. Background remains perfectly uniform solid pure magenta #FF00FF throughout, no gradients, no floor, no cast shadows or scenery. No new objects, no text, no sound or music. Friendly thoughtful acting, mature and reassuring rather than frantic. One continuous five-second shot, returning close to the original relaxed pose at the end.",
+    "image_url": "file:demo-video/mascot-exploration-v2/images/03-mallow-chroma.png",
+    "duration": 5,
+    "resolution": "768P",
+    "prompt_expansion_mode": "disabled",
+    "seed": 16112603
+  },
+  "expect": {
+    "units": 5,
+    "unit": "seconds at768p",
+    "unit_price": 0.04,
+    "cost_usd": 0.2,
+    "basis": "Official fal standard rates2026-11-16; conservative vs accountlivebase"
+  },
+  "output": "demo-video/mascot-exploration-v2/motion/03-mallow-source",
+  "note": "Generic generated character-only video; no company/product scene uploaded"
+}

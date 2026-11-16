@@ -1,0 +1,21 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "One cheerful felt woodland companion remains in exactly the same place, same size, same full-body framing. The camera is completely locked, no pan, no zoom, no reframing. The character smiles warmly, blinks once, gives one gentle small wave with the already raised paw, tilts its head inquisitively, then returns precisely to the starting pose. Subtle breathing and soft ear movement, beautiful stop-motion craftsmanship, expressive and intelligent, no exaggerated dancing. Preserve the full body and the feet, colours, material texture, every design detail. The background remains perfectly uniform pure chroma MAGENTA #FF00FF at every pixel around the character, no cast shadows, no objects, no gradient, no floor, no text, no sound, no music. Start and end in the same pose for a seamless idle loop.",
+    "image_url": "file:demo-video/mascot-exploration-v2/images/spike-moss-chroma.png",
+    "end_image_url": "file:demo-video/mascot-exploration-v2/images/spike-moss-chroma.png",
+    "duration": 4,
+    "resolution": "768P",
+    "prompt_expansion_mode": "disabled",
+    "seed": 16112601
+  },
+  "expect": {
+    "units": 4,
+    "unit": "seconds at768p",
+    "unit_price": 0.04,
+    "cost_usd": 0.16,
+    "basis": "Official fal standard rates effective2026-11-16, conservative vs account live base"
+  },
+  "output": "demo-video/mascot-exploration-v2/images/spike-moss-motion",
+  "note": "Character-only generated animation and solid chroma background; no private or company scene sent"
+}

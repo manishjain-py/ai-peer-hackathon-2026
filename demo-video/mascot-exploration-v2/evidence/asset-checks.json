@@ -1,0 +1,848 @@
+{
+  "checked_at": "2026-11-16T14:12:55.699328+00:00",
+  "masters": 25,
+  "alpha_cutouts": 25,
+  "generated_motion_clips": 23,
+  "in_demo_renders_complete": false,
+  "records": [
+    {
+      "id": "miso",
+      "number": 1,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "c465ee67e7f2637ebc2bade1de5dc73455192d5e3cd3b306fe44615e4ac9b83e",
+      "cutout_sha256": "ed27187a04dc4af5ea31a65859f46ccd900c153bdee88cd6f96d4604964001a6",
+      "alpha_bbox": [
+        269,
+        238,
+        1623,
+        1896
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    },
+    {
+      "id": "tavi",
+      "number": 2,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "53b2259bbba38e2e5f662c46e1eb71900aafc3054fbe75573fdeaa5cec045598",
+      "cutout_sha256": "f7cd5ebd55231ed6570d2a1b594c1824a242fcb6cfd828a9f6deb0f452339ede",
+      "alpha_bbox": [
+        550,
+        254,
+        1605,
+        1846
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    },
+    {
+      "id": "mallow",
+      "number": 3,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "cb347da479360936790c0823b2577157834bbe276fb721b8f44849f664fc6881",
+      "cutout_sha256": "31f1d30eb5b170d37c1849b58843e976f77290861745bef87ea204cad9c7c359",
+      "alpha_bbox": [
+        230,
+        249,
+        1822,
+        1785
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    },
+    {
+      "id": "pipkin",
+      "number": 4,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "eb7cba69f9ecf5ed04569fe94e1c3d1653ba6efeab818dd371902a3ce97bf254",
+      "cutout_sha256": "516e1b1f4ec0e32327947580c48eb640270e2ab54bbe9b5729bebcd28240fb3f",
+      "alpha_bbox": [
+        363,
+        219,
+        1609,
+        1851
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    },
+    {
+      "id": "nori",
+      "number": 5,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "70ff9f81fbd3db064bcf2bc2e6532d6907852cd03cd709d2774800cf0458cba4",
+      "cutout_sha256": "1f5b11433ff04b50865c2478cb54b9071a2ccb8e7682c6c36b511285d12adf58",
+      "alpha_bbox": [
+        349,
+        229,
+        1875,
+        1835
+      ],
+      "motion": "Provider-alpha still; Nori/Dew translucent exceptions"
+    },
+    {
+      "id": "bram",
+      "number": 6,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "7392a8dfb02ba662a773fd5a29fe36d619e594ca7603910a32acb44ddda59ccf",
+      "cutout_sha256": "3fe03befdc2f055111136895e93737e5ac79a587907e4ed92b651b1ec91fb162",
+      "alpha_bbox": [
+        206,
+        279,
+        1606,
+        1841
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    },
+    {
+      "id": "pogo",
+      "number": 7,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "c4500be8e161d718a4b6966c5ae4a8ba64aa8c8a4eaa1c741e117532443df5c3",
+      "cutout_sha256": "63d334bd07ecb0608d3d3f0f456c7a5c89a07558704b91d72d64d6d45a9d6c40",
+      "alpha_bbox": [
+        199,
+        180,
+        1653,
+        1885
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    },
+    {
+      "id": "clover",
+      "number": 8,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "8e14964a414f54cac3e6f7c7a112265dd42a4d78d49d110081839cd833a1f95c",
+      "cutout_sha256": "9457abf65381938043157352940611a884cd2b6bc29deec9c3240657cbf177bc",
+      "alpha_bbox": [
+        402,
+        184,
+        1664,
+        1873
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    },
+    {
+      "id": "lumi",
+      "number": 9,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "bfa6362c78c4c789f2b71fbec986a4f93aa0eb3761e69f64ec60e7c8b597048c",
+      "cutout_sha256": "5a32d9cd7f8ba2706dfba76900591d61b8b60f1fafba51829573fbb7fd7ba4d8",
+      "alpha_bbox": [
+        216,
+        359,
+        1784,
+        1745
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    },
+    {
+      "id": "fable",
+      "number": 10,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "e1333339339a080b93c55d01e35f3301ad6894038c4996f1b9828cd721a110f7",
+      "cutout_sha256": "5471f6b0e099abb8d78114298f3a8fac50fdc6a07d4e2aa15eecb2773392c203",
+      "alpha_bbox": [
+        264,
+        196,
+        1683,
+        1842
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    },
+    {
+      "id": "sora",
+      "number": 11,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "64f9976814834a7117127b82d52ab5c8cade50de10a6453c69b25ffeed795322",
+      "cutout_sha256": "e12d6d0b6b00f031c34542010ca1b35148d1696c7a4181205a59173255a0eb3a",
+      "alpha_bbox": [
+        427,
+        362,
+        1836,
+        1738
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    },
+    {
+      "id": "peeko",
+      "number": 12,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "96dbbc2619af985583ab0793ddb0e670a08a3e5656bb6a1bf982d4c12489177d",
+      "cutout_sha256": "21a2c5d1f60f604b475b57df82699f4166c794b11d5d550fbd89b56c872093bd",
+      "alpha_bbox": [
+        586,
+        136,
+        1495,
+        1907
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    },
+    {
+      "id": "wisp",
+      "number": 13,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "3c0e7b7c5d3f15187dd508c81d67abe12fed169626c06ab7a10e002f93c8d10c",
+      "cutout_sha256": "78e9f9714782a8f9bd8001e5034883ec2d00351348b8fc3cc67ab16aaeb96a2e",
+      "alpha_bbox": [
+        207,
+        450,
+        1905,
+        1580
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    },
+    {
+      "id": "orbit",
+      "number": 14,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "316e92a3017d2f3fbbf91ac72807621a50d8dadc7ce10e8420d520d5efe8d148",
+      "cutout_sha256": "d97f63bf97f1bdde6f2fa915ec3944130e16005b9f9413742cdea2595ec72159",
+      "alpha_bbox": [
+        404,
+        282,
+        1693,
+        1787
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    },
+    {
+      "id": "dew",
+      "number": 15,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "c90af844f722705d3e1d37b232bd91efee180f7af9baf045ba52a8aa71e08705",
+      "cutout_sha256": "0457511688b9a5bf5dbec3035851fe5cbf6ea5e66a8f0156518f40bf64bcd2dd",
+      "alpha_bbox": [
+        650,
+        247,
+        1504,
+        1804
+      ],
+      "motion": "Provider-alpha still; Nori/Dew translucent exceptions"
+    },
+    {
+      "id": "ember",
+      "number": 16,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "3144a49dd2b5e885a05e094ef42d7ed6c40d991c8ec122e03d0b118a1b909e96",
+      "cutout_sha256": "9dfc99bb880014f188f6a67ef2498f3d935b29e80c5971dfb0e6837c2e04689c",
+      "alpha_bbox": [
+        390,
+        239,
+        1668,
+        1810
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    },
+    {
+      "id": "pebble",
+      "number": 17,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "dc4f78b1045a9725bb815847a7b73de44aa2908b0d7d2f7e923460294cf730e2",
+      "cutout_sha256": "cac0c8b7cacd0f6a7aca55f26f421352c17d02315c47ff60551abd44211403d4",
+      "alpha_bbox": [
+        346,
+        308,
+        1653,
+        1815
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    },
+    {
+      "id": "bento",
+      "number": 18,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "22434f5b1addf2aa4fddbe4d328a6a16e21df052b8a7ee67bab21fba28978864",
+      "cutout_sha256": "a8df5dfd722a4d2e892b6981404d1543f6d220a2e3104c5cd36e946a7b13dcaf",
+      "alpha_bbox": [
+        170,
+        462,
+        1828,
+        1581
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    },
+    {
+      "id": "manta",
+      "number": 19,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "1281814dd330004dca95b1d17cbfda1b2667872def5a1f02c29a8a4faaf6ee3d",
+      "cutout_sha256": "9080c718cbd2b87f61ab3cfc7ed0a018c3b836987556f9e86e60efe3d2f93094",
+      "alpha_bbox": [
+        234,
+        207,
+        1803,
+        1841
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    },
+    {
+      "id": "tess",
+      "number": 20,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "f1626343e01e696b15689c31b8de4408e767232e717a311c346e204483f7c1d3",
+      "cutout_sha256": "74a959e67e3232be1c7618d2d319c977b9ba0a50152723c7520e1ca15afb6f0b",
+      "alpha_bbox": [
+        178,
+        380,
+        1897,
+        1710
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    },
+    {
+      "id": "pollen",
+      "number": 21,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "05a36bce61e2127a40d17430dd65d88c14c15370df7ae9a390cd71acd1df0b47",
+      "cutout_sha256": "4264aef0d3af5d755acf4531616a6244a1a0efbb2b66f681c5f6b394bf0c79eb",
+      "alpha_bbox": [
+        230,
+        272,
+        1677,
+        1829
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    },
+    {
+      "id": "quill",
+      "number": 22,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "8e196ae12bf247f28c8c16791d915ca76a7e06ec1b50346c21684f1094dc26c4",
+      "cutout_sha256": "68f1ba034f2d7436c4fd64b372f9eaebeb3e6781fca8f6523b0c62d5e5c7f6e6",
+      "alpha_bbox": [
+        429,
+        287,
+        1612,
+        1777
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    },
+    {
+      "id": "fenn",
+      "number": 23,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "32ad61c723e783aef9303f7a070aafaa4325576da9cedd2557616cfc24989779",
+      "cutout_sha256": "045d69ec8f485769a856e48bc0c6478f193ac8b4b673e950ec2bc3c7108de84f",
+      "alpha_bbox": [
+        499,
+        193,
+        1532,
+        1870
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    },
+    {
+      "id": "noodle",
+      "number": 24,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "195214f9ba17212ed3701cb16252cec13877d1de3da0a2e89b5d5ce6e9944b52",
+      "cutout_sha256": "90cfd6701112fbb8b2f0abd56ad93b8149cd59d47465f9a4a4021ed4d8f89d09",
+      "alpha_bbox": [
+        234,
+        181,
+        1824,
+        1900
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    },
+    {
+      "id": "moss",
+      "number": 25,
+      "master_size": [
+        2048,
+        2048
+      ],
+      "master_sha256": "a2aee111b87c1a79eaf6e97e223dff0ec9b1e108492e9d860b9475fe17935386",
+      "cutout_sha256": "38eb524dac944f9338e528db77f6151a95a3b1e7834197508d81c9e9c75ed959",
+      "alpha_bbox": [
+        365,
+        152,
+        1595,
+        1871
+      ],
+      "motion": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 768,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "tags": {
+              "alpha_mode": "1"
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.167000"
+        }
+      },
+      "motion_decode": "pass"
+    }
+  ]
+}

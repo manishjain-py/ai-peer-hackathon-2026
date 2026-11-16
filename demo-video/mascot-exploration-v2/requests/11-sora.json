@@ -1,0 +1,27 @@
+{
+  "model": "gemini-nano-banana-2.1",
+  "reserve_usd": 0.12,
+  "output": "images/11-sora.png",
+  "body": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Create ONE entirely original premium character design for a happy, thoughtful personal AI teammate. SUBJECT: a round sculptural origami finch with a broad elegant fan of folded tail feathers in sage and deep forest green, warm cream round chest, tiny amber beak, expressive very dark eyes, folded wings held slightly open. Curiously cheerful head tilt, one small lifted foot. Hand-folded cotton paper with real material thickness and fibres, dimensional premium miniature, original warm non-cartoon silhouette. Full body in a balanced front three-quarter view, entire head, limbs, wings and tail fully visible, body occupies about 65 percent of square canvas with generous clean margins. Warm inviting expression and intelligent expressive face, aesthetically beautiful and emotionally engaging, adult-friendly rather than babyish. Each material must look convincingly tactile and meticulously crafted: a premium animated feature character / designer art-toy level of finish. Forest green, warm cream and sage mint with restrained honey/amber or muted apricot accents; harmonious, not dull monochrome. Soft cinematic studio lighting, fine controlled highlights, deep material detail. Plain perfectly uniform light gray backdrop, no floor shadow, no cast shadows, no platform, no scenery, no additional props or objects, no floating particles. NO WORDS, NO TEXT, NO LETTERS, NO LOGOS, NO WATERMARK. One character only. Do not imitate any existing branded mascot, no human likeness, no generic helmet robot, no simple ball with eyes. Square character development master."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseModalities": [
+        "TEXT",
+        "IMAGE"
+      ],
+      "maxOutputTokens": 8192,
+      "imageConfig": {
+        "aspectRatio": "1:1",
+        "imageSize": "2K"
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+ "request_id": "01a1e4ab-31e3-7c61-a8c2-f75176c320d8",
+ "billable_units_header": null,
+ "inputs_sent": {
+  "image_url": "https://v3b.fal.media/files/b/0ab2b482/p74pkfWAwHSTJpqB54NL5_21-pollen.png",
+  "model": "General Use (Heavy)",
+  "operating_resolution": "2048x2048",
+  "output_format": "png",
+  "refine_foreground": true
+ },
+ "result": {
+  "image": {
+   "url": "https://v3b.fal.media/files/b/0ab2b482/m1GtCgWjN87D17gI-ILbJ_Bxpxvjco.png",
+   "content_type": "image/png",
+   "file_name": "m1GtCgWjN87D17gI-ILbJ_Bxpxvjco.png",
+   "file_size": null,
+   "width": 2048,
+   "height": 2048
+  },
+  "mask_image": null
+ }
+}

@@ -1,0 +1,202 @@
+[
+  {
+    "number": 1,
+    "id": "miso",
+    "name": "Miso",
+    "line": "An otter who makes work feel lighter.",
+    "description": "luxurious hand-felted cream sea otter with a tiny forest-green knitted shoulder wrap, wonderfully sculpted whiskered muzzle, expressive warm brown eyes, small rounded ears, an elegant long tapering tail curled beside its feet; upright little body and a confident cheerful welcoming wave. Gentle open smile, one paw resting on belly. Rich fine felt fibres and tiny hand stitches, bespoke stop-motion hero",
+    "motion_method": "generated character video, alpha keyed"
+  },
+  {
+    "number": 2,
+    "id": "tavi",
+    "name": "Tavi",
+    "line": "Calm confidence, always by your side.",
+    "description": "soft-clay capybara companion in warm sandy cream, broad softly rectangular snout, small rounded green ears, glossy deep brown intelligent eyes, chunky grounded shape with very short legs; wears a narrow forest-green soft fabric neckerchief. A wonderfully warm closed smile, head slightly tilted, little paws together in an attentive listening pose. Handmade clay surface with subtle tool marks, sculpted not furry, premium stop-motion character",
+    "motion_method": "generated character video, alpha keyed"
+  },
+  {
+    "number": 3,
+    "id": "mallow",
+    "name": "Mallow",
+    "line": "A lighter kind of teammate.",
+    "description": "a living knitted cream cloud companion, asymmetrical sculptural cloud with three different-sized rounded lobes, soft springy knitted texture, two deep-forest-green knitted boot feet and a short sage tuft. Bright mischievously kind eyes of slightly different height, joyful open smile with no teeth, one tiny mitten arm raised in a little greeting. A buoyant character silhouette with airy negative space, premium textile sculpture, no rain or weather props",
+    "motion_method": "generated character video, alpha keyed"
+  },
+  {
+    "number": 4,
+    "id": "pipkin",
+    "name": "Pipkin",
+    "line": "Little ears. A wonderful listener.",
+    "description": "warm ivory glazed porcelain dormouse with very large rounded ears with glossy forest-green inner bowls, delicate amber nose, dark expressive eyes with visible brow contours, long elegant curled tail with a tiny green tip, slim little body with a rounded belly. Curious happy leaning-forward pose with one paw near its cheek. Fine artisanal porcelain, subtle glaze pooling at curves, beautiful satin highlights, not fluffy",
+    "motion_method": "generated character video, alpha keyed"
+  },
+  {
+    "number": 5,
+    "id": "nori",
+    "name": "Nori",
+    "line": "Curious about everything that matters.",
+    "description": "a translucent opalescent mint axolotl companion with six delicate paperlike gill fronds in mint and restrained blush-amber, rounded snout, warm delighted intelligent eyes, little soft paws, broad flowing translucent tail. A gleeful curious expression, arms gently opened in welcome. Light softly passes through the fins, finely sculpted glasslike skin and matte paper gills create a tactile mixed-material creature. Premium 3D animation hero, original proportions",
+    "motion_method": "provider-alpha still; subtle composed movement to preserve translucent material"
+  },
+  {
+    "number": 6,
+    "id": "bram",
+    "name": "Bram",
+    "line": "A small dragon with a generous heart.",
+    "description": "a tiny friendly hand-carved pale ash-wood dragon, gentle long rounded snout, no teeth, two tiny amber horn buds, small deep-green inset eyes, sculpted wooden belly rings, curled tail and beautifully folded forest-green paper wings. A cheerful proud helpful stance, one paw waving. Visible elegant wood grain and careful joinery, matte paper fibre wings, high-end miniature puppet. Expressive curious face, not fierce",
+    "motion_method": "generated character video, alpha keyed"
+  },
+  {
+    "number": 7,
+    "id": "pogo",
+    "name": "Pogo",
+    "line": "Good energy, wherever you need it.",
+    "description": "a tactile felt red-panda-like imaginary companion reimagined in cream, deep forest green and muted apricot, broad expressive cheeks, alert rounded triangular ears, rich fluffy tail with soft green and cream rings, amber-brown intelligent eyes. One foot raised slightly and head tilted in a happy playful greeting, endearing smile, not dancing wildly. Bespoke premium felt stop-motion craft, beautifully groomed dense fibres, no props",
+    "motion_method": "generated character video, alpha keyed"
+  },
+  {
+    "number": 8,
+    "id": "clover",
+    "name": "Clover",
+    "line": "A little optimism, quietly at work.",
+    "description": "a glazed botanical leaf sprite with an asymmetrical crest made of four differently sized deep-green leaves growing like an elegant hair tuft, cream pear-shaped ceramic belly and little sculpted leaf arms. Big but mature curious dark eyes and a bright sincere smile. A subtle helpful reaching gesture with one leaf hand. Satin ceramic with glossy leaf surfaces, delicate visible leaf veins, premium miniature sculptural character, not a potted plant",
+    "motion_method": "generated character video, alpha keyed"
+  },
+  {
+    "number": 9,
+    "id": "lumi",
+    "name": "Lumi",
+    "line": "Someone keeps the light on.",
+    "description": "a porcelain lantern moth, a little warm amber glowing core inside a cream ceramic chest, delicate expressive dark eyes, two short curled green antennae, four large sculpted folded-paper wings in forest green and warm cream with elegant veining. Floating relaxed upright pose, tiny ceramic feet and gentle happy open arms. Bespoke high-end stop-motion mixed-media character with beautiful translucent light within, no halo, no particles",
+    "motion_method": "generated character video, alpha keyed"
+  },
+  {
+    "number": 10,
+    "id": "fable",
+    "name": "Fable",
+    "line": "Clever context, a kind little face.",
+    "description": "a high-craft three-dimensional folded-paper fox, warm ivory muzzle and chest, deep forest-green body, muted copper inside angular folded ears, broad sculptural folded tail curving beside body. Original friendly proportions, clever warm eyes integrated into layered paper, cheerful closed smile, a small polite one-paw wave. Visible premium cotton-paper fibres and crisp believable dimensional folds, elegant studio sculpture, not flat vector and not realistic fur",
+    "motion_method": "generated character video, alpha keyed"
+  },
+  {
+    "number": 11,
+    "id": "sora",
+    "name": "Sora",
+    "line": "A little bird, a wider perspective.",
+    "description": "a round sculptural origami finch with a broad elegant fan of folded tail feathers in sage and deep forest green, warm cream round chest, tiny amber beak, expressive very dark eyes, folded wings held slightly open. Curiously cheerful head tilt, one small lifted foot. Hand-folded cotton paper with real material thickness and fibres, dimensional premium miniature, original warm non-cartoon silhouette",
+    "motion_method": "generated character video, alpha keyed"
+  },
+  {
+    "number": 12,
+    "id": "peeko",
+    "name": "Peeko",
+    "line": "Always keeps your place.",
+    "description": "a living finely woven bookmark-ribbon character, tall slender flexible silhouette that curls softly at the top like a quiff and sweeps into a loop at its lower end, forest-green woven front with warm ivory reverse and restrained gold edging. Tiny mitten-like helpful hands emerging naturally from the woven sides, expressive friendly eyes embedded in a sculpted folded face near upper end and a cheerful small smile. One hand waves, the other offers an open palm. Premium textile puppet with complex beautiful weave and soft material folds, not a flat strip with pasted eyes",
+    "motion_method": "generated character video, alpha keyed"
+  },
+  {
+    "number": 13,
+    "id": "wisp",
+    "name": "Wisp",
+    "line": "A soft landing for a busy mind.",
+    "description": "a small floating cloud-whale companion, soft ivory porcelain cloudlike mass with an asymmetrical rounded back, opalescent mint fins and a broad satin porcelain tail, expressive clever dark eyes above a warm smile on rounded snout. Slightly turned toward viewer, one little fin raised as a greeting. Beautiful glazed ceramic with subtle warmth, confident gentle personality, elegant sculptural proportions, no water or droplets",
+    "motion_method": "generated character video, alpha keyed"
+  },
+  {
+    "number": 14,
+    "id": "orbit",
+    "name": "Orbit",
+    "line": "Your world, held together.",
+    "description": "a pearlescent ivory moon-bean companion with a softly asymmetrical bean-shaped body and a slanted deep forest-green ceramic ring that naturally splits into two helpful arms. Subtle warm golden freckles on one cheek, bright intelligent dark eyes and a delighted gentle smile. One ring-arm raised in welcome, other relaxed. Premium hand-glazed porcelain and polished green stone, sculptural high-end 3D character, compact readable silhouette, no space background",
+    "motion_method": "generated character video, alpha keyed"
+  },
+  {
+    "number": 15,
+    "id": "dew",
+    "name": "Dew",
+    "line": "Clear thinking, a warm presence.",
+    "description": "a small translucent mint water-drop creature with a softly curved teardrop head tapering into a delicate curl, a warm amber seed visible within its chest, tiny rounded liquid-glass hands and feet. Joyful calm face with expressive deep green eyes and a gentle smile, leaning curiously toward viewer. Thick art-glass material with visible internal refraction and beautifully soft highlights, opaque enough face to read at small size, premium original 3D character, no puddle",
+    "motion_method": "provider-alpha still; subtle composed movement to preserve translucent material"
+  },
+  {
+    "number": 16,
+    "id": "ember",
+    "name": "Ember",
+    "line": "A reassuring glow after hours.",
+    "description": "a living glowing lantern-seed companion, warm ivory ceramic seed-shaped face and belly with an amber light within, wrapped in a forest-green velvety protective hood shaped like two overlapping leaves, tiny rounded ceramic hands and feet. Happy reassuring eyes, small smile, head tilted and hands comfortably open. Mixed glazed ceramic, soft velvet and subtle translucent amber, meticulously crafted premium character, no smoke or fire or sparks",
+    "motion_method": "generated character video, alpha keyed"
+  },
+  {
+    "number": 17,
+    "id": "pebble",
+    "name": "Pebble",
+    "line": "Steady company through a busy day.",
+    "description": "an entirely original moss-backed river-stone garden spirit, asymmetric smooth dark green river-pebble body, a warm cream stone face, one very small curled fern and fine real-looking moss growing across its back as a little cloak, small rounded stone limbs. Cheerful thoughtful face with bright dark eyes and a gentle smile, one hand resting on cheek in curiosity. Premium tactile garden sculpture with beautiful stone and moss detail, not resembling any existing animation character, not Totoro",
+    "motion_method": "generated character video, alpha keyed"
+  },
+  {
+    "number": 18,
+    "id": "bento",
+    "name": "Bento",
+    "line": "Thoughtful, tucked into every detail.",
+    "description": "a friendly bamboo-coil armadillo, long low rounded body with overlapping pale bamboo bands and a spiral arrangement of warm wooden shell segments, soft cream ceramic snout and small forest-green ears, bright deep brown intelligent eyes, stubby rounded wooden feet and curved tail. Curious happy head lifted toward viewer, subtle smile. Premium hand-carved wood and porcelain craft, visible natural bamboo grain, beautifully engineered flexible shell, no mechanical robot parts",
+    "motion_method": "generated character video, alpha keyed"
+  },
+  {
+    "number": 19,
+    "id": "manta",
+    "name": "Manta",
+    "line": "A graceful way to stay in the flow.",
+    "description": "a flowing cream silk ray companion with broad sculptural wings, deep forest-green velvet underside, long elegant ribbon tail and an expressive raised central face. Bright kind dark eyes and joyful closed smile, one silk wing gently raised in a graceful greeting. Real luxurious silk folds and fine thread edges, premium fluid mixed-media 3D character, full width and full tail visible, no water",
+    "motion_method": "generated character video, alpha keyed"
+  },
+  {
+    "number": 20,
+    "id": "tess",
+    "name": "Tess",
+    "line": "Makes the connections feel effortless.",
+    "description": "a tactile woven ribbon-knot creature, a single thick forest-green and cream woven ribbon loops into a beautifully intricate open knot framing a small expressive face, two ends become soft helpful hand-like folds, asymmetrical airy silhouette. Warm curious dark eyes and a cheerful smile integrated into the central folded fabric, one ribbon end raised in welcome. Premium artisanal textile sculpture with detailed herringbone weave and realistic thickness, soft dimensional forms not flat logo art",
+    "motion_method": "generated character video, alpha keyed"
+  },
+  {
+    "number": 21,
+    "id": "pollen",
+    "name": "Pollen",
+    "line": "A bright little burst of useful energy.",
+    "description": "a fuzzy hand-felted bee companion in muted forest green, honey amber and warm cream bands, a charming rounded abdomen, tiny soft feet, two delicate folded-paper wings and gently curved antennae. Intelligent playful dark eyes and a delighted open smile without teeth, tiny paws raised in a friendly greeting. Bespoke stop-motion wool character with exquisite fuzzy craft and translucent paper wings, no stinger visible, no floral background",
+    "motion_method": "generated character video, alpha keyed"
+  },
+  {
+    "number": 22,
+    "id": "quill",
+    "name": "Quill",
+    "line": "A little sharp thinking, softly delivered.",
+    "description": "a cheerful ceramic hedgehog with a warm cream rounded face and belly, tiny amber nose, deep friendly expressive eyes, and an extravagant but neat crest of individually folded sage and forest-green paper leaves instead of sharp quills. Small rounded ceramic hands and feet, curious leaning pose with one hand waving. Premium mixed porcelain and cotton-paper sculpture, wonderful tactile detail, no sharp spikes",
+    "motion_method": "generated character video, alpha keyed"
+  },
+  {
+    "number": 23,
+    "id": "fenn",
+    "name": "Fenn",
+    "line": "Gentle attention, a confident step.",
+    "description": "a glazed tiny fawn companion with warm ivory ceramic body, elegant longer slender legs, broad expressive forest-green leaf ears and two very tiny gold twig-like antler buds. Softly sculpted warm face, bright thoughtful dark eyes, curious head tilt and a joyful subtle smile, one front hoof lifted politely. Original high-end sculptural proportions, restrained ceramic glaze and delicate gold detail, fully visible slender legs, graceful not babyish",
+    "motion_method": "generated character video, alpha keyed"
+  },
+  {
+    "number": 24,
+    "id": "noodle",
+    "name": "Noodle",
+    "line": "Curiosity with a playful little twist.",
+    "description": "a folded-cloth gecko companion in deep forest green and soft mint with an ivory underbelly, long elegantly curled ribbonlike tail, four expressive soft green hands and feet with rounded finger pads, slightly asymmetrical wide curious head. Bright intelligent amber-brown eyes and cheerful sincere smile, one hand raised in greeting while body has a gentle S-curve. Premium fabric puppet made of supple woven cloth with beautiful seams and folds, not plastic or flat cartoon",
+    "motion_method": "generated character video, alpha keyed"
+  },
+  {
+    "number": 25,
+    "id": "moss",
+    "name": "Moss",
+    "line": "A little woodland warmth beside you.",
+    "description": "The approved pilot: hand-felted forest-green woodland companion with an ivory face and amber charm.",
+    "motion_method": "generated character video (Moss pilot v2), alpha keyed"
+  }
+]

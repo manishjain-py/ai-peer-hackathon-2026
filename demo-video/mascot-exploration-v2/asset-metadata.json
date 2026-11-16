@@ -1,0 +1,577 @@
+[
+  {
+    "id": "miso",
+    "number": 1,
+    "name": "Miso",
+    "image": "images/01-miso.png",
+    "cutout": "cutouts/01-miso.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      269,
+      238,
+      1623,
+      1896
+    ],
+    "anchor_original_pixels": [
+      946.0,
+      1896
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "tavi",
+    "number": 2,
+    "name": "Tavi",
+    "image": "images/02-tavi.png",
+    "cutout": "cutouts/02-tavi.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      550,
+      254,
+      1605,
+      1846
+    ],
+    "anchor_original_pixels": [
+      1077.5,
+      1846
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "mallow",
+    "number": 3,
+    "name": "Mallow",
+    "image": "images/03-mallow.png",
+    "cutout": "cutouts/03-mallow.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      230,
+      249,
+      1822,
+      1785
+    ],
+    "anchor_original_pixels": [
+      1026.0,
+      1785
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "pipkin",
+    "number": 4,
+    "name": "Pipkin",
+    "image": "images/04-pipkin.png",
+    "cutout": "cutouts/04-pipkin.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      363,
+      219,
+      1609,
+      1851
+    ],
+    "anchor_original_pixels": [
+      986.0,
+      1851
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "nori",
+    "number": 5,
+    "name": "Nori",
+    "image": "images/05-nori.png",
+    "cutout": "cutouts/05-nori.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      349,
+      229,
+      1875,
+      1835
+    ],
+    "anchor_original_pixels": [
+      1112.0,
+      1835
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "bram",
+    "number": 6,
+    "name": "Bram",
+    "image": "images/06-bram.png",
+    "cutout": "cutouts/06-bram.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      206,
+      279,
+      1606,
+      1841
+    ],
+    "anchor_original_pixels": [
+      906.0,
+      1841
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "pogo",
+    "number": 7,
+    "name": "Pogo",
+    "image": "images/07-pogo.png",
+    "cutout": "cutouts/07-pogo.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      199,
+      180,
+      1653,
+      1885
+    ],
+    "anchor_original_pixels": [
+      926.0,
+      1885
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "clover",
+    "number": 8,
+    "name": "Clover",
+    "image": "images/08-clover.png",
+    "cutout": "cutouts/08-clover.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      402,
+      184,
+      1664,
+      1873
+    ],
+    "anchor_original_pixels": [
+      1033.0,
+      1873
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "lumi",
+    "number": 9,
+    "name": "Lumi",
+    "image": "images/09-lumi.png",
+    "cutout": "cutouts/09-lumi.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      216,
+      359,
+      1784,
+      1745
+    ],
+    "anchor_original_pixels": [
+      1000.0,
+      1745
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "fable",
+    "number": 10,
+    "name": "Fable",
+    "image": "images/10-fable.png",
+    "cutout": "cutouts/10-fable.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      264,
+      196,
+      1683,
+      1842
+    ],
+    "anchor_original_pixels": [
+      973.5,
+      1842
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "sora",
+    "number": 11,
+    "name": "Sora",
+    "image": "images/11-sora.png",
+    "cutout": "cutouts/11-sora.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      427,
+      362,
+      1836,
+      1738
+    ],
+    "anchor_original_pixels": [
+      1131.5,
+      1738
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "peeko",
+    "number": 12,
+    "name": "Peeko",
+    "image": "images/12-peeko.png",
+    "cutout": "cutouts/12-peeko.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      586,
+      136,
+      1495,
+      1907
+    ],
+    "anchor_original_pixels": [
+      1040.5,
+      1907
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "wisp",
+    "number": 13,
+    "name": "Wisp",
+    "image": "images/13-wisp.png",
+    "cutout": "cutouts/13-wisp.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      207,
+      450,
+      1905,
+      1580
+    ],
+    "anchor_original_pixels": [
+      1056.0,
+      1580
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "orbit",
+    "number": 14,
+    "name": "Orbit",
+    "image": "images/14-orbit.png",
+    "cutout": "cutouts/14-orbit.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      404,
+      282,
+      1693,
+      1787
+    ],
+    "anchor_original_pixels": [
+      1048.5,
+      1787
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "dew",
+    "number": 15,
+    "name": "Dew",
+    "image": "images/15-dew.png",
+    "cutout": "cutouts/15-dew.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      650,
+      247,
+      1504,
+      1804
+    ],
+    "anchor_original_pixels": [
+      1077.0,
+      1804
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "ember",
+    "number": 16,
+    "name": "Ember",
+    "image": "images/16-ember.png",
+    "cutout": "cutouts/16-ember.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      390,
+      239,
+      1668,
+      1810
+    ],
+    "anchor_original_pixels": [
+      1029.0,
+      1810
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "pebble",
+    "number": 17,
+    "name": "Pebble",
+    "image": "images/17-pebble.png",
+    "cutout": "cutouts/17-pebble.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      346,
+      308,
+      1653,
+      1815
+    ],
+    "anchor_original_pixels": [
+      999.5,
+      1815
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "bento",
+    "number": 18,
+    "name": "Bento",
+    "image": "images/18-bento.png",
+    "cutout": "cutouts/18-bento.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      170,
+      462,
+      1828,
+      1581
+    ],
+    "anchor_original_pixels": [
+      999.0,
+      1581
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "manta",
+    "number": 19,
+    "name": "Manta",
+    "image": "images/19-manta.png",
+    "cutout": "cutouts/19-manta.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      234,
+      207,
+      1803,
+      1841
+    ],
+    "anchor_original_pixels": [
+      1018.5,
+      1841
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "tess",
+    "number": 20,
+    "name": "Tess",
+    "image": "images/20-tess.png",
+    "cutout": "cutouts/20-tess.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      178,
+      380,
+      1897,
+      1710
+    ],
+    "anchor_original_pixels": [
+      1037.5,
+      1710
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "pollen",
+    "number": 21,
+    "name": "Pollen",
+    "image": "images/21-pollen.png",
+    "cutout": "cutouts/21-pollen.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      230,
+      272,
+      1677,
+      1829
+    ],
+    "anchor_original_pixels": [
+      953.5,
+      1829
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "quill",
+    "number": 22,
+    "name": "Quill",
+    "image": "images/22-quill.png",
+    "cutout": "cutouts/22-quill.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      429,
+      287,
+      1612,
+      1777
+    ],
+    "anchor_original_pixels": [
+      1020.5,
+      1777
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "fenn",
+    "number": 23,
+    "name": "Fenn",
+    "image": "images/23-fenn.png",
+    "cutout": "cutouts/23-fenn.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      499,
+      193,
+      1532,
+      1870
+    ],
+    "anchor_original_pixels": [
+      1015.5,
+      1870
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "noodle",
+    "number": 24,
+    "name": "Noodle",
+    "image": "images/24-noodle.png",
+    "cutout": "cutouts/24-noodle.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      234,
+      181,
+      1824,
+      1900
+    ],
+    "anchor_original_pixels": [
+      1029.0,
+      1900
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  },
+  {
+    "id": "moss",
+    "number": 25,
+    "name": "Moss",
+    "image": "images/25-moss.png",
+    "cutout": "cutouts/25-moss.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_bbox": [
+      365,
+      152,
+      1595,
+      1871
+    ],
+    "anchor_original_pixels": [
+      980.0,
+      1871
+    ],
+    "recommended_scene_height": 180,
+    "avatar_note": "Crop face/upper body deliberately for48\u201364px; full body stays in hero/room/UI companion."
+  }
+]

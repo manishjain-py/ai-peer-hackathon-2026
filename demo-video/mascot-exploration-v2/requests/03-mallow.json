@@ -1,0 +1,27 @@
+{
+  "model": "gemini-nano-banana-2.1",
+  "reserve_usd": 0.12,
+  "output": "images/03-mallow.png",
+  "body": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Create ONE entirely original premium character design for a happy, thoughtful personal AI teammate. SUBJECT: a living knitted cream cloud companion, asymmetrical sculptural cloud with three different-sized rounded lobes, soft springy knitted texture, two deep-forest-green knitted boot feet and a short sage tuft. Bright mischievously kind eyes of slightly different height, joyful open smile with no teeth, one tiny mitten arm raised in a little greeting. A buoyant character silhouette with airy negative space, premium textile sculpture, no rain or weather props. Full body in a balanced front three-quarter view, entire head, limbs, wings and tail fully visible, body occupies about 65 percent of square canvas with generous clean margins. Warm inviting expression and intelligent expressive face, aesthetically beautiful and emotionally engaging, adult-friendly rather than babyish. Each material must look convincingly tactile and meticulously crafted: a premium animated feature character / designer art-toy level of finish. Forest green, warm cream and sage mint with restrained honey/amber or muted apricot accents; harmonious, not dull monochrome. Soft cinematic studio lighting, fine controlled highlights, deep material detail. Plain perfectly uniform light gray backdrop, no floor shadow, no cast shadows, no platform, no scenery, no additional props or objects, no floating particles. NO WORDS, NO TEXT, NO LETTERS, NO LOGOS, NO WATERMARK. One character only. Do not imitate any existing branded mascot, no human likeness, no generic helmet robot, no simple ball with eyes. Square character development master."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseModalities": [
+        "TEXT",
+        "IMAGE"
+      ],
+      "maxOutputTokens": 8192,
+      "imageConfig": {
+        "aspectRatio": "1:1",
+        "imageSize": "2K"
+      }
+    }
+  }
+}

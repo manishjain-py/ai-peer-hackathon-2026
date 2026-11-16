@@ -1,0 +1,19 @@
+{
+  "endpoint": "fal-ai/birefnet",
+  "inputs": {
+    "image_url": "file:demo-video/mascot-exploration-v2/images/04-pipkin.png",
+    "model": "General Use (Heavy)",
+    "operating_resolution": "2048x2048",
+    "output_format": "png",
+    "refine_foreground": true
+  },
+  "expect": {
+    "units": 1,
+    "unit": "image",
+    "unit_price": 0.02,
+    "cost_usd": 0.02,
+    "basis": "Conservative compute allowance; live base $0.000575/compute second"
+  },
+  "output": "demo-video/mascot-exploration-v2/cutouts/04-pipkin",
+  "note": "Original generic generated mascot; no private input"
+}

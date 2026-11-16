@@ -1,0 +1,22 @@
+{
+ "request_id": "01a1e4ab-3453-7592-a46d-290c6db52a96",
+ "billable_units_header": null,
+ "inputs_sent": {
+  "image_url": "https://v3b.fal.media/files/b/0ab2b482/Kd6H3i7IYdZymHNerPN6p_22-quill.png",
+  "model": "General Use (Heavy)",
+  "operating_resolution": "2048x2048",
+  "output_format": "png",
+  "refine_foreground": true
+ },
+ "result": {
+  "image": {
+   "url": "https://v3b.fal.media/files/b/0ab2b482/O3jU10WHc3s0eG4ymp0XG_e7XPDeoj.png",
+   "content_type": "image/png",
+   "file_name": "O3jU10WHc3s0eG4ymp0XG_e7XPDeoj.png",
+   "file_size": null,
+   "width": 2048,
+   "height": 2048
+  },
+  "mask_image": null
+ }
+}

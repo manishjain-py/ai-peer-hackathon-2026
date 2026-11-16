@@ -1,0 +1,25 @@
+{
+ "request_id": "01a1e4a2-c596-7d82-a47e-4591f046d58f",
+ "billable_units_header": "6.4",
+ "inputs_sent": {
+  "prompt": "One cheerful felt woodland companion remains in exactly the same place, same size, same full-body framing. The camera is completely locked, no pan, no zoom, no reframing. The character smiles warmly, blinks once, gives one gentle small wave with the already raised paw, tilts its head inquisitively, then returns precisely to the starting pose. Subtle breathing and soft ear movement, beautiful stop-motion craftsmanship, expressive and intelligent, no exaggerated dancing. Preserve the full body and the feet, colours, material texture, every design detail. The background remains perfectly uniform pure chroma MAGENTA #FF00FF at every pixel around the character, no cast shadows, no objects, no gradient, no floor, no text, no sound, no music. Start and end in the same pose for a seamless idle loop.",
+  "image_url": "https://v3b.fal.media/files/b/0ab2b44b/qMEDc3V30SM54aRGJBwgv_spike-moss-chroma.png",
+  "end_image_url": "https://v3b.fal.media/files/b/0ab2b44b/qMEDc3V30SM54aRGJBwgv_spike-moss-chroma.png",
+  "duration": 4,
+  "resolution": "768P",
+  "prompt_expansion_mode": "disabled",
+  "seed": 16112601
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab2b44b/rcDnLVHi2KTdQ5u3srI6q_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "rcDnLVHi2KTdQ5u3srI6q_minimax-h3.mp4",
+   "file_size": 2850913
+  },
+  "expanded_prompt": null,
+  "timings": {
+   "inference": 0.6222120989987161
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+  "model": "gemini-nano-banana-2.1",
+  "http_status": 200,
+  "elapsed_seconds": 26.73,
+  "usage": {
+    "promptTokenCount": 302,
+    "candidatesTokenCount": 2186,
+    "totalTokenCount": 3796,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 302
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "IMAGE",
+        "tokenCount": 1680
+      }
+    ],
+    "thoughtsTokenCount": 1308,
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-nano-banana-2.1",
+  "responseId": "UQz7apuNCaOcjuMP3u-F6Aw",
+  "image_mime": "image/jpeg",
+  "error_status": null,
+  "finishReasons": [
+    "STOP"
+  ]
+}

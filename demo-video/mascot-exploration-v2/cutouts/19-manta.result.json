@@ -1,0 +1,22 @@
+{
+ "request_id": "01a1e4aa-fafc-7a01-a580-dcdbc8d25ba2",
+ "billable_units_header": null,
+ "inputs_sent": {
+  "image_url": "https://v3b.fal.media/files/b/0ab2b481/RS0i7AlcEHQn-AnSIZe-W_19-manta.png",
+  "model": "General Use (Heavy)",
+  "operating_resolution": "2048x2048",
+  "output_format": "png",
+  "refine_foreground": true
+ },
+ "result": {
+  "image": {
+   "url": "https://v3b.fal.media/files/b/0ab2b481/qa3xPDXdSGnDG88ylUJNI_3eZdStQ0.png",
+   "content_type": "image/png",
+   "file_name": "qa3xPDXdSGnDG88ylUJNI_3eZdStQ0.png",
+   "file_size": null,
+   "width": 2048,
+   "height": 2048
+  },
+  "mask_image": null
+ }
+}

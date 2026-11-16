@@ -1,0 +1,20 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "A single charming felt character gives a clearly visible friendly greeting. Its raised paw moves down and up in a relaxed wave twice, with visible wrist and elbow movement. It closes both eyes in a warm blink, opens them with a bigger happy smile, tilts its head about ten degrees toward its raised paw, then settles back into its original relaxed pose. Its ears and wool tuft follow through softly; its belly breathes. Keep the same beautiful character identity and fine wool texture. Feet remain planted in the same spot, entire full body and tuft stay inside frame. Locked camera, same framing and same size, no zoom or pan. Perfectly uniform solid pure magenta #FF00FF background throughout, no shadows or scenery. No text, no sound, no music. Natural friendly acting, expressive movement within the character, not sliding the whole still image. One continuous five-second shot.",
+    "image_url": "file:demo-video/mascot-exploration-v2/images/spike-moss-chroma.png",
+    "duration": 5,
+    "resolution": "768P",
+    "prompt_expansion_mode": "disabled",
+    "seed": 16112602
+  },
+  "expect": {
+    "units": 5,
+    "unit": "seconds at768p",
+    "unit_price": 0.04,
+    "cost_usd": 0.2,
+    "basis": "Official fal standard rates effective2026-11-16, conservative vs account live base"
+  },
+  "output": "demo-video/mascot-exploration-v2/images/spike-moss-motion-v2",
+  "note": "Second motion pilot: a more visible gesture; same generic generated character only"
+}

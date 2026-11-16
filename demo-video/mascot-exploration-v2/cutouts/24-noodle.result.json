@@ -1,0 +1,22 @@
+{
+ "request_id": "01a1e4ab-6ba9-7233-afd1-f9550312a4fe",
+ "billable_units_header": null,
+ "inputs_sent": {
+  "image_url": "https://v3b.fal.media/files/b/0ab2b483/-uP2tpP2vqKFOvzldEH8g_24-noodle.png",
+  "model": "General Use (Heavy)",
+  "operating_resolution": "2048x2048",
+  "output_format": "png",
+  "refine_foreground": true
+ },
+ "result": {
+  "image": {
+   "url": "https://v3b.fal.media/files/b/0ab2b484/0zWWt9hTofq7jukv-hz5a_B0WqgSHb.png",
+   "content_type": "image/png",
+   "file_name": "0zWWt9hTofq7jukv-hz5a_B0WqgSHb.png",
+   "file_size": null,
+   "width": 2048,
+   "height": 2048
+  },
+  "mask_image": null
+ }
+}
