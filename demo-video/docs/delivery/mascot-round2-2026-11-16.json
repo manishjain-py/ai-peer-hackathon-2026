@@ -1,0 +1,140 @@
+{
+  "date": "2026-11-16",
+  "destination": "Established Telegram Attention group",
+  "status": "in_progress",
+  "early_photos": [
+    {
+      "file": "images/spike-moss.png",
+      "confirmed": true,
+      "sent_at_utc": "2026-11-16T13:56:28Z"
+    },
+    {
+      "file": "evidence/early-six.jpg",
+      "confirmed": true
+    },
+    {
+      "file": "renders/overview.jpg",
+      "confirmed": true,
+      "sent_at_utc": "2026-11-16T14:10:39Z"
+    }
+  ],
+  "albums": [
+    {
+      "type": "portrait_album",
+      "files": [
+        "group-1.jpg",
+        "group-2.jpg",
+        "group-3.jpg",
+        "group-4.jpg",
+        "group-5.jpg"
+      ],
+      "message_ids": [
+        23055,
+        23056,
+        23057,
+        23058,
+        23059
+      ],
+      "sent_at_utc": "2026-11-16T14:18:17.365658+00:00",
+      "confirmed": true
+    },
+    {
+      "type": "first_scene_previews",
+      "files": [
+        "25-moss.mp4",
+        "05-nori.mp4"
+      ],
+      "message_ids": [
+        23060,
+        23061
+      ],
+      "sent_at_utc": "2026-11-16T14:26:19.150888+00:00",
+      "confirmed": true
+    },
+    {
+      "type": "scene_previews_01_04",
+      "files": [
+        "01-miso.mp4",
+        "02-tavi.mp4",
+        "03-mallow.mp4",
+        "04-pipkin.mp4"
+      ],
+      "message_ids": [
+        23062,
+        23063,
+        23064,
+        23065
+      ],
+      "sent_at_utc": "2026-11-16T14:29:46.251391+00:00",
+      "confirmed": true
+    },
+    {
+      "type": "scene_previews_06_10",
+      "files": [
+        "06-bram.mp4",
+        "07-pogo.mp4",
+        "08-clover.mp4",
+        "09-lumi.mp4",
+        "10-fable.mp4"
+      ],
+      "message_ids": [
+        23066,
+        23067,
+        23068,
+        23069,
+        23070
+      ],
+      "sent_at_utc": "2026-11-16T14:34:40.091633+00:00",
+      "confirmed": true
+    },
+    {
+      "type": "scene_previews_11_15",
+      "files": [
+        "11-sora.mp4",
+        "12-peeko.mp4",
+        "13-wisp.mp4",
+        "14-orbit.mp4",
+        "15-dew.mp4"
+      ],
+      "message_ids": [
+        23071,
+        23072,
+        23073,
+        23074,
+        23075
+      ],
+      "sent_at_utc": "2026-11-16T14:39:59.013101+00:00",
+      "confirmed": true
+    }
+  ],
+  "delivered_scene_options": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    25
+  ],
+  "remaining_scene_options": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "quick_look_sent": false
+}

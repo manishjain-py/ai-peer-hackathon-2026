@@ -1,11 +1,14 @@
 # AI Peer demo video: state
 
-Current requested work (Codex, 16 November 2026): **Round 2 mascot exploration (V33)**,
-25 generated-art directions with a happy, warm personality. Gemini/fal.ai permitted; Learn
-Like Magic's generation workflow inspected read-only. One worker (`mascot_previews`) in the
-managed `generated-mascots` worktree, branch `codex/generated-mascots`. Brief:
-`BRIEF-GENERATED-MASCOTS-2026-11-16.md`. New generation cap $15 inside the existing $100;
-prior recorded spend $42.08. The approved film and all twelve V32 previews stay intact.
+Current requested work (Codex, 16 November 2026): **Round 2 mascot exploration (V33)**.
+All 25 generated masters/cutouts and 23 chosen character-motion takes are complete and pushed
+on `codex/generated-mascots` at `bff5a1f`. The still overview and all five enlarged groups are
+on Telegram. A fresh sole worker, `generated_mascot_renderer`, continues in the managed
+`generated-mascots` worktree to build 25 in-demo auditions, the 75-second quick-look reel and
+the gallery. Handoff: `demo-video/docs/handoffs/HANDOFF-2026-11-16-generated-mascots-render.md`
+on that branch. Brief: `BRIEF-GENERATED-MASCOTS-2026-11-16.md`. No paid calls pending.
+Round cost $6.826079; project total $48.906079 of $100. The approved film and V32 previews stay
+intact. Codex weekly usage: 12% at 14:08 UTC.
 
 Previous recorded controller on the source Mac (historical session details, not checked live
 on this Mac): ai-peer-video-controller-7 (Opus 5.5; Terminal window 5771 on Mac 48 GB, PID 13541,
@@ -16,6 +19,26 @@ take-over: `START-HERE.md` at the repo root. Other sessions message the controll
 
 ## Where we are (2026-11-16)
 
+**14:40 UTC, 16 November: sixteen in-demo previews delivered.** The controller inspected
+encoded sheets for 01–15 and 25 and accepted their silhouettes, matte edges, avatars and original
+scene context. Those videos are on Telegram: pilots 05/25 (23060–23061), 01–04 (23062–23065),
+06–10 (23066–23070), 11–15 (23071–23075). The portrait album is 23055–23059. Receipts:
+`delivery/mascot-round2-2026-11-16.json`. Remaining: 16–24, the 75-second quick-look reel, final
+PR/gallery/evidence. The renderer fixed a local server delay caused by synchronous encoding;
+accepted files stayed unchanged. No new generation or spend; project total stays about $48.91.
+
+**14:18 UTC, 16 November: the asset phase is complete and handed off.** The source worker
+pushed `bff5a1f` (135 LFS objects, 297 MB), with all 25 masters/cutouts, 23 selected generated
+and despilled VP9-alpha motions, prompts, requests, metadata and ledgers. All 23 alpha clips
+decode. The controller accepted the full overview and the corrected dark-background despill
+sample. Nori (05) and Dew (15) retain provider-alpha stills for their translucent materials.
+The source worker finished; `generated_mascot_renderer` is the sole worker, on the same branch
+and worktree, from its dated handoff. No new paid call is pending. The all-25 overview was
+sent at 14:10 UTC; the five enlarged groups at 14:18 UTC (Telegram 23055–23059). Remaining:
+25 comparable scene auditions, a 75-second quick-look reel, gallery, final media walk and
+Telegram video delivery. Logged new cost $6.826079 (Gemini estimate $1.566079, fal conservative
+ledger $5.26); overall $48.906079, below the $50 notification mark.
+
 **Round 2 artwork milestone:** all 25 generated masters and their provider-made transparent
 cutouts are complete. The controller inspected the felt pilot and varied clay, opalescent and
 wood directions, then the six-material sheet. Moss's second animation pilot has a clear wave,
@@ -23,7 +46,7 @@ closed-eye smile and head tilt; a faint magenta edge is being removed before fin
 Twenty-three character-motion takes are being generated; Nori (05) and Dew (15) retain their
 provider-alpha stills to preserve translucent details, with the method stated honestly. The
 original Moss image and early six-material sheet were sent to Telegram (16 November, about
-13:56 UTC and shortly afterwards). All25 overview, in-demo reels and final delivery remain.
+13:56 UTC and shortly afterwards). The full overview, in-demo reels and final delivery remain.
 The generation worker will finish, push a dated handoff, and stop before a fresh rendering worker
 continues on the same worktree/branch. Current logged total at the artwork milestone was about
 $45.31 including the previous $42.08; generation cost updates continue in the round's ledgers.
@@ -705,7 +728,8 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 | 2026-11-15 | none (WP6, finished) | Five concept videos, all made by code (three.js and the film's renderer); no paid call, no ledger file | $0.00 |
 | 2026-11-15 | none (WP7, finished) | The two blended videos, Little Peer and Tag, all by code; the seven new lines on the ElevenLabs plan | $0.00 |
 | 2026-11-15 | fal.ai (WP7-3, the Tag's v2, finished) | One lip-sync take for the hook's new second line, and the morning desk shot (a picture edit and a 4 s take) | $0.65 (3 rows of `demo-video/ledger/wp7-3.csv`, on `main` since PR 15) |
-| | **Total of the $100 cap** | | **$42.08** (WP7-3 $0.65 since 15 November; before it $41.43: WP1 $6.60, WP3 $23.10, WP2 $0.94, WP2-3 $0.62, WP2-4 $3.01, WP2-5 $3.74, WP2-6 $3.42; the last three on `main` since PR 12; WP6 and WP7 $0; the ledger rows sum to $41.41, the 2 cents are rounding) |
+| 2026-11-16 | Gemini + fal.ai (Round 2 mascot assets) | 25 generated masters, 25 cutouts, 23 selected character animations plus pilots; ledgers on `codex/generated-mascots` | $6.826079 (Gemini $1.566079 estimated from usage; fal $5.26 conservatively logged) |
+| | **Total of the $100 cap** | | **$48.91** (prior recorded $42.08 + Round 2 $6.826079 = $48.906079; no paid calls pending at the asset handoff) |
 
 ## Needs Manish
 
@@ -857,9 +881,10 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 
 ## Next
 
-**Now (16 November, V33), Codex:** verify the generation route with a small spike, inspect the
-first raster character, then generate 25 varied directions and in-demo previews. Record costs,
-review the outputs and send the set to Telegram. Keep the approved film intact. Older notes follow.
+**Now (16 November, V33), Codex:** finish the 25 in-demo audition reels and 75-second quick-look
+reel using the saved generated assets. Inspect the encoded videos, complete the gallery/evidence,
+merge the single package PR and send the remaining videos to Telegram. The still set is already
+delivered. Keep the approved film intact; wait for Manish's selection after review. Older notes follow.
 
 **Now (16 November, 13:01 UTC, V32), Codex:** the requested exploration and Telegram delivery
 are complete. Await Manish's choice or feedback. Record it in DESIGN, then scope full-film
