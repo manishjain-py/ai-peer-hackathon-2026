@@ -18,6 +18,13 @@ take-over: `START-HERE.md` at the repo root. Other sessions message the controll
 
 ## Where we are (2026-11-16)
 
+**18:37 UTC, Moss performance proof accepted and preview delivered.** The controller
+accepted 30 corrected scene points, 32 encoded temporal frames and all 173 full-film
+caption-aware walkthrough points. A meeting-caption overlap was fixed by raising only
+Moss inside its tile. The 14.7s silent preview reached Attention (23098); it is labelled
+as an early look, with the complete v2 still in progress. The full source and film renders
+are next. Original audio remains unchanged. New spend stays $0.859070; total $50.165149.
+
 **18:31 UTC, Moss actions generated; $50 milestone sent.** The controller accepted all ten
 notebook pilot frames: visible pencil/wrist activity, source/page glances and clean dark-matte
 felt edges. Listening, reassurance and acknowledgment actions are generated and integrated;

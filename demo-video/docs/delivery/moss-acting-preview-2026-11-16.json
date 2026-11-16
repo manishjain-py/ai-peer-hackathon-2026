@@ -1,0 +1,20 @@
+{
+  "kind": "acting_preview_not_final",
+  "confirmed": true,
+  "message_id": 23098,
+  "chat_id": -5506416790,
+  "date_utc": "2026-11-16T18:37:32+00:00",
+  "caption": "Moss acting preview \u2014 14.7 seconds, silent. Reading and noting facts, thinking before an answer, recording the meeting question for Ram, and acknowledging his click. The full 1:59.6 v2 is still being rendered with the original narration and music. No approval needed to continue; this is an early look.",
+  "file": "moss-acting/evidence/acting-in-context.mp4",
+  "sha256": "19da292d09127c10b8fcce1e5491759ce2b039398b30502975641104a6e8b7ce",
+  "file_size": 1852293,
+  "actual_seconds": 14.7,
+  "frames": 441,
+  "silent": true,
+  "width": 1280,
+  "height": 720,
+  "telegram_duration": 15,
+  "supports_streaming_requested": true,
+  "new_cost_usd": 0.85907,
+  "project_cost_usd": 50.165149
+}
