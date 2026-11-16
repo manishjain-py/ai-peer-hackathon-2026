@@ -1,14 +1,14 @@
 # AI Peer demo video: state
 
-Current requested work (Codex, 16 November 2026): **Round 2 mascot exploration (V33)**.
-All 25 generated masters/cutouts and 23 chosen character-motion takes are complete and pushed
-on `codex/generated-mascots` at `bff5a1f`. The still overview and all five enlarged groups are
-on Telegram. A fresh sole worker, `generated_mascot_renderer`, continues in the managed
-`generated-mascots` worktree to build 25 in-demo auditions, the 75-second quick-look reel and
-the gallery. Handoff: `demo-video/docs/handoffs/HANDOFF-2026-11-16-generated-mascots-render.md`
-on that branch. Brief: `BRIEF-GENERATED-MASCOTS-2026-11-16.md`. No paid calls pending.
-Round cost $6.826079; project total $48.906079 of $100. The approved film and V32 previews stay
-intact. Codex weekly usage: 12% at 14:08 UTC.
+Current requested work (Codex, 16 November 2026, 14:55 UTC): **V33 complete**. All 25 generated
+mascot directions, enlarged portraits, 25 in-demo previews and the 75-second quick-look have
+been delivered to Telegram. PR 17 merged as `716b229`; checkpoint `generated-mascots-v1`.
+Gallery: `demo-video/mascot-exploration-v2/index.html`. Full delivery record:
+`GENERATED-MASCOTS-DELIVERY-2026-11-16.md`; receipts: `delivery/mascot-round2-2026-11-16.json`.
+No worker, render or paid call is running. Await Manish's selection. Controller's pick: 22 Quill;
+other favorites: 03 Mallow, 25 Moss, 16 Ember. The approved Tag master and prior options remain.
+Round cost $6.826079; project total $48.906079 of $100. Codex weekly usage: 13%; controller
+context 46.8% at this clean completion. Read the completion handoff before further work.
 
 Previous recorded controller on the source Mac (historical session details, not checked live
 on this Mac): ai-peer-video-controller-7 (Opus 5.5; Terminal window 5771 on Mac 48 GB, PID 13541,
@@ -18,6 +18,18 @@ hand-off, `handoffs/HANDOFF-2026-11-16-ai-peer-video-controller-6.md` (no worker
 take-over: `START-HERE.md` at the repo root. Other sessions message the controller by its name.
 
 ## Where we are (2026-11-16)
+
+**14:55 UTC, 16 November: Round 2 complete and delivered (V33).** All 25 generated-art options
+have both 720p and 1080p scene previews, plus the 75-second quick-look in both resolutions:
+52 exports, all fully decoded and checked. The controller accepted all 25 encoded scene sheets
+and the quick-look; the final four videos were sent at 14:48 UTC, the quick-look confirmed by
+14:52 UTC, and the recommendation sent at 14:52:43 UTC (23086). PR 17 is merged (`716b229`),
+with all art, prompts, motion assets, code, gallery and evidence saved. The approved master hash
+and earlier source files are unchanged. No additional spend during rendering; total $48.906079.
+The controller recommends 22 Quill, with 03 Mallow, 25 Moss and 16 Ember as alternatives; Manish
+has not selected one. Nothing runs. Next: his choice or feedback. Full record:
+`GENERATED-MASCOTS-DELIVERY-2026-11-16.md`; handoff:
+`handoffs/HANDOFF-2026-11-16-generated-mascots-complete.md`.
 
 **14:40 UTC, 16 November: sixteen in-demo previews delivered.** The controller inspected
 encoded sheets for 01–15 and 25 and accepted their silhouettes, matte edges, avatars and original
@@ -733,6 +745,10 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 
 ## Needs Manish
 
+**V33 delivered, 16 November 14:52 UTC:** choose a Round 2 number or shortlist after reviewing
+the Telegram set or gallery. Recommendation: 22 Quill; alternatives 03 Mallow, 25 Moss,
+16 Ember. No choice is assumed. The notes below are historical.
+
 **Round 2 (V33):** no question while the new set is being made. Show the generated directions
 and in-demo previews on Telegram when ready; then Manish chooses. The earlier V32 shortlist
 is historical and does not limit this exploration.
@@ -880,6 +896,11 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
+
+**Now (16 November 14:55 UTC), Codex:** V33 is complete. Await Manish's choice or feedback;
+record his exact words as the next DESIGN decision. Full-film integration is a new step after
+that choice. Preserve both explorations and the approved Tag master. No active task remains.
+The notes below are historical.
 
 **Now (16 November, V33), Codex:** finish the 25 in-demo audition reels and 75-second quick-look
 reel using the saved generated assets. Inspect the encoded videos, complete the gallery/evidence,
@@ -1248,3 +1269,4 @@ and 7 still hold.
 | 2026-11-16 12:18 | ai-peer-video-controller-6 | Manish chose the Tag version as the final video (V31) and asked for a hand-off: docs brought up to date, `HANDOFF-2026-11-16-ai-peer-video-controller-6.md` written; launching ai-peer-video-controller-7, then closing its own window. | Handed off |
 | 2026-11-16 12:21 | ai-peer-video-controller-7 | Took over from ai-peer-video-controller-6 (read STATE by its parts and the hand-off); checked that controller-6's window 5591 closed itself at 12:20 UTC; greeted Manish. | Waiting for his next word |
 | 2026-11-16 | Codex controller + mascot_previews | V32: twelve original code-native mascot options, 23.3-second in-demo reels, gallery and evidence; PR 16 merged; overview and all twelve videos sent to Telegram | Await Manish's choice; approved Tag v2 unchanged; $0 new spend |
+| 2026-11-16 | Codex controller, mascot_previews, generated_mascot_renderer | V33: 25 generated-art mascots, 23 generated motion takes, 52 preview exports, gallery and provenance; PR 17 merged; all options and quick-look delivered to Telegram | Await selection; approved film unchanged; round $6.826079, project $48.906079 |

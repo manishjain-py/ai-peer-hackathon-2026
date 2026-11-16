@@ -15,7 +15,7 @@ Like Magic as the test company.
 - The concept film (Draft 07, 4:23) and its docs: [film/](film/README.md)
 - The 2-minute demo video (November 2026): [demo-video/](demo-video/AGENTS.md); the final video is
   `demo-video/film/renders/blended-tag-v2.mp4`, the Tag version
-- Twelve new [mascot previews](demo-video/mascot-options/index.html) (16 November): delivered to Telegram; awaiting your choice. The approved full film is unchanged.
+- Latest: [25 generated mascot directions and previews](demo-video/mascot-exploration-v2/index.html) (16 November, Round 2), delivered to Telegram and awaiting your choice. The [first twelve code-native options](demo-video/mascot-options/index.html) and approved full film are preserved.
 
 Clone note: film media is in Git LFS and skipped by default. Fetch it with
 `git lfs pull --include="film/**" --exclude=""`.

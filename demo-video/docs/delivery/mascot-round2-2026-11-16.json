@@ -1,7 +1,7 @@
 {
   "date": "2026-11-16",
   "destination": "Established Telegram Attention group",
-  "status": "in_progress",
+  "status": "complete",
   "early_photos": [
     {
       "file": "images/spike-moss.png",
@@ -105,6 +105,48 @@
       ],
       "sent_at_utc": "2026-11-16T14:39:59.013101+00:00",
       "confirmed": true
+    },
+    {
+      "type": "scene_previews_16_20",
+      "files": [
+        "16-ember.mp4",
+        "17-pebble.mp4",
+        "18-bento.mp4",
+        "19-manta.mp4",
+        "20-tess.mp4"
+      ],
+      "message_ids": [
+        23076,
+        23077,
+        23078,
+        23079,
+        23080
+      ],
+      "sent_at_utc": "2026-11-16T14:46:03.265133+00:00",
+      "confirmed": true
+    },
+    {
+      "type": "scene_previews_21_24",
+      "files": [
+        "21-pollen.mp4",
+        "22-quill.mp4",
+        "23-fenn.mp4",
+        "24-noodle.mp4"
+      ],
+      "message_ids": [
+        23081,
+        23082,
+        23083,
+        23084
+      ],
+      "sent_at_utc": "2026-11-16T14:48:53.582502+00:00",
+      "confirmed": true
+    },
+    {
+      "type": "final_recommendation",
+      "message_id": 23086,
+      "sent_at_utc": "2026-11-16T14:52:43.543461+00:00",
+      "confirmed": true
     }
   ],
   "delivered_scene_options": [
@@ -123,9 +165,6 @@
     13,
     14,
     15,
-    25
-  ],
-  "remaining_scene_options": [
     16,
     17,
     18,
@@ -134,7 +173,24 @@
     21,
     22,
     23,
-    24
+    24,
+    25
   ],
-  "quick_look_sent": false
+  "remaining_scene_options": [],
+  "quick_look_sent": true,
+  "quick_look": {
+    "file": "renders/quick-look-75s.mp4",
+    "confirmed_at_utc": "2026-11-16T14:52:18Z",
+    "confirmed": true
+  },
+  "recommendation": {
+    "pick": 22,
+    "shortlist": [
+      22,
+      3,
+      25,
+      16
+    ],
+    "user_selection": null
+  }
 }

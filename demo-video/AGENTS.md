@@ -7,6 +7,10 @@ The final video (16 November 2026): `film/renders/blended-tag-v2.mp4`, the Tag v
 `blended-tag-v2` (V30, V31; Little Peer is not used). Earlier cuts and every checkpoint:
 `../START-HERE.md`, "Checkpoints".
 
+Latest exploration (16 November, V33): `mascot-exploration-v2/index.html`, 25 generated-art
+mascots with in-demo previews and a quick-look reel, delivered to Telegram. Await Manish's
+selection; the approved Tag film and first twelve code-native options remain unchanged.
+
 ## Start here
 
 1. `docs/STATE.md`: where we are, live sessions, money spent, what needs Manish, next.
