@@ -1,0 +1,14 @@
+{
+  "frame_ranges": [
+    [
+      600,
+      1341
+    ],
+    [
+      1341,
+      2082
+    ]
+  ],
+  "reason": "Caption-safe Moss walkthrough and its matching push-in landing frame; all outside frames preserved",
+  "assembly": "Lossless intermediate; unaffected captured frames retained; full fresh render remains the default"
+}

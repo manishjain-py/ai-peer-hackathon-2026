@@ -4,7 +4,7 @@ from pathlib import Path
 import json,subprocess
 HERE=Path(__file__).resolve().parents[1];DEMO=HERE.parent
 video=DEMO/'film/renders/blended-moss-v1.mp4'
-times=json.loads((HERE/'evidence/film-source-times.json').read_text())['times']
+times=sorted(set(json.loads((HERE/'evidence/film-source-times.json').read_text())['times']+[28.5,28.518,32.764,34.569]))
 shots=json.loads((DEMO/'film/cuts/blended-moss-v1/shots.json').read_text())['slots']
 bounds=sorted({round(t+d,6) for t in [s['start'] for s in shots[1:]]+[104.3,106.4] for d in [-1/30,1/30]})
 for name,points in [('film-encoded',times),('transitions-encoded',bounds)]:

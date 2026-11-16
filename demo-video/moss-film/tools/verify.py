@@ -23,8 +23,9 @@ for f,size in zip(files,[(1920,1080),(1280,720)]):
 old=json.loads((DEMO/'film/cuts/blended-tag-v2/shots.json').read_text());new=json.loads((DEMO/'film/cuts/blended-moss-v1/shots.json').read_text())
 assert len(old['slots'])==len(new['slots'])==20
 for a,b in zip(old['slots'],new['slots']):
- for k in ['id','start','length','in_s','rate','mascot']:
-  assert a.get(k)==b.get(k),(a['id'],k)
+ aa={k:v for k,v in a.items() if k not in ['clip','clip_seconds','shows']}
+ bb={k:v for k,v in b.items() if k not in ['clip','clip_seconds','shows']}
+ assert aa==bb,a['id']
  if b['id'].startswith('walk-'):assert b['clip']=='../ui-concepts/renders/moss-clean-v1.mp4'
 for f in ['script.json','mix.json','narration.json']:
  assert (DEMO/'film/cuts/blended-tag-v2'/f).read_bytes()==(DEMO/'film/cuts/blended-moss-v1'/f).read_bytes()
