@@ -47,3 +47,29 @@ reassurance and acknowledgment batch was released only after that inspection.
 Generation finished by 18:31 UTC: $0.859070 new, $50.165149 project total. Required
 $50 informational Telegram notice is confirmed as 23097; no new approval was needed.
 Light-matte and in-context proofs remain ahead of final acceptance.
+
+## Context and full caption-composition acceptance
+
+At 18:37 UTC, the controller accepted all 30 corrected `acting-proof-*` source
+frames and 32 `context-encoded-*` temporal frames. Setup has source/page glances
+and notebook writing; Ask has settled listening, a separate thought pause, then
+measured presentation. The meeting changes from listening to thought, reassurance
+and note-taking only for the deferral. The morning nod follows Ram's actual click.
+The new listen/acknowledgment clips skip their inherited greeting frames.
+
+One issue was caught and fixed before the long render: the meeting's two-line caption
+covered the notebook. Moving only Moss upward inside the original tile leaves the
+notebook clear at 91.5s and about 17 pixels of sprout clearance above. Original
+colleagues, tiles and captions remain. The notebook light matte and three other
+action sheets also passed identity/edge inspection.
+
+All 15 `caption-review-*` sheets (173 points) passed the controller's full
+walkthrough inspection in the original film caption composition. All source pans,
+caption/label arrivals and exits, Ask movement and rules-card transitions retain
+clearance. Badge travel, frame bounds, separate rules card and quiet finish pass.
+
+The silent 14.700s / 441-frame / 1280x720 performance reel fully decodes and was
+sent as an early preview to Telegram (23098, 18:37:32 UTC), with full v2 explicitly
+still in progress. Receipt: `delivery/moss-acting-preview-2026-11-16.json`.
+These checkpoints authorize the complete walkthrough/full-film render; they do not
+replace final encoded full-movie acceptance.
