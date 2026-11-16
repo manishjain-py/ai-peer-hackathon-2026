@@ -1,0 +1,610 @@
+{
+  "miso": {
+    "number": 1,
+    "name": "Miso",
+    "stem": "01-miso",
+    "motion": true,
+    "bounds": [
+      100,
+      85,
+      616,
+      710
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      498,
+      130,
+      1476,
+      1108
+    ],
+    "face": [
+      0.53,
+      0.23,
+      0.59
+    ]
+  },
+  "tavi": {
+    "number": 2,
+    "name": "Tavi",
+    "stem": "02-tavi",
+    "motion": true,
+    "bounds": [
+      206,
+      86,
+      602,
+      692
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      513,
+      182,
+      1516,
+      1185
+    ],
+    "face": [
+      0.44,
+      0.27,
+      0.63
+    ]
+  },
+  "mallow": {
+    "number": 3,
+    "name": "Mallow",
+    "stem": "03-mallow",
+    "motion": true,
+    "bounds": [
+      88,
+      95,
+      696,
+      674
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      459,
+      372,
+      1657,
+      1570
+    ],
+    "face": [
+      0.52,
+      0.47,
+      0.78
+    ]
+  },
+  "pipkin": {
+    "number": 4,
+    "name": "Pipkin",
+    "stem": "04-pipkin",
+    "motion": true,
+    "bounds": [
+      108,
+      54,
+      610,
+      694
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      406,
+      170,
+      1516,
+      1280
+    ],
+    "face": [
+      0.48,
+      0.31,
+      0.68
+    ]
+  },
+  "nori": {
+    "number": 5,
+    "name": "Nori",
+    "stem": "05-nori",
+    "motion": false,
+    "bounds": [
+      349,
+      229,
+      1875,
+      1835
+    ],
+    "dimension": 2048,
+    "avatar_crop": [
+      554,
+      213,
+      1518,
+      1177
+    ],
+    "face": [
+      0.45,
+      0.29,
+      0.6
+    ]
+  },
+  "bram": {
+    "number": 6,
+    "name": "Bram",
+    "stem": "06-bram",
+    "motion": true,
+    "bounds": [
+      68,
+      102,
+      624,
+      690
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      615,
+      162,
+      1505,
+      1052
+    ],
+    "face": [
+      0.61,
+      0.21,
+      0.57
+    ]
+  },
+  "pogo": {
+    "number": 7,
+    "name": "Pogo",
+    "stem": "07-pogo",
+    "motion": true,
+    "bounds": [
+      50,
+      62,
+      618,
+      706
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      375,
+      112,
+      1535,
+      1271
+    ],
+    "face": [
+      0.52,
+      0.3,
+      0.68
+    ]
+  },
+  "clover": {
+    "number": 8,
+    "name": "Clover",
+    "stem": "08-clover",
+    "motion": true,
+    "bounds": [
+      152,
+      42,
+      664,
+      702
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      463,
+      404,
+      1477,
+      1417
+    ],
+    "face": [
+      0.45,
+      0.43,
+      0.6
+    ]
+  },
+  "lumi": {
+    "number": 9,
+    "name": "Lumi",
+    "stem": "09-lumi",
+    "motion": true,
+    "bounds": [
+      70,
+      120,
+      668,
+      672
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      598,
+      387,
+      1402,
+      1191
+    ],
+    "face": [
+      0.5,
+      0.31,
+      0.58
+    ]
+  },
+  "fable": {
+    "number": 10,
+    "name": "Fable",
+    "stem": "10-fable",
+    "motion": true,
+    "bounds": [
+      61,
+      74,
+      630,
+      690
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      518,
+      147,
+      1571,
+      1200
+    ],
+    "face": [
+      0.55,
+      0.29,
+      0.64
+    ]
+  },
+  "sora": {
+    "number": 11,
+    "name": "Sora",
+    "stem": "11-sora",
+    "motion": true,
+    "bounds": [
+      140,
+      128,
+      694,
+      726
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      305,
+      396,
+      1254,
+      1346
+    ],
+    "face": [
+      0.25,
+      0.37,
+      0.69
+    ],
+    "motion_range": [
+      2.9,
+      4.9
+    ]
+  },
+  "peeko": {
+    "number": 12,
+    "name": "Peeko",
+    "stem": "12-peeko",
+    "motion": true,
+    "bounds": [
+      222,
+      50,
+      588,
+      722
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      527,
+      154,
+      1554,
+      1181
+    ],
+    "face": [
+      0.5,
+      0.3,
+      0.58
+    ]
+  },
+  "wisp": {
+    "number": 13,
+    "name": "Wisp",
+    "stem": "13-wisp",
+    "motion": true,
+    "bounds": [
+      69,
+      146,
+      720,
+      600
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      321,
+      473,
+      1315,
+      1467
+    ],
+    "face": [
+      0.36,
+      0.46,
+      0.88
+    ]
+  },
+  "orbit": {
+    "number": 14,
+    "name": "Orbit",
+    "stem": "14-orbit",
+    "motion": true,
+    "bounds": [
+      150,
+      100,
+      634,
+      674
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      412,
+      207,
+      1375,
+      1170
+    ],
+    "face": [
+      0.38,
+      0.27,
+      0.64
+    ]
+  },
+  "dew": {
+    "number": 15,
+    "name": "Dew",
+    "stem": "15-dew",
+    "motion": false,
+    "bounds": [
+      650,
+      247,
+      1504,
+      1804
+    ],
+    "dimension": 2048,
+    "avatar_crop": [
+      496,
+      333,
+      1539,
+      1376
+    ],
+    "face": [
+      0.43,
+      0.39,
+      0.67
+    ]
+  },
+  "ember": {
+    "number": 16,
+    "name": "Ember",
+    "stem": "16-ember",
+    "motion": true,
+    "bounds": [
+      147,
+      87,
+      635,
+      678
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      442,
+      278,
+      1463,
+      1299
+    ],
+    "face": [
+      0.44,
+      0.35,
+      0.65
+    ]
+  },
+  "pebble": {
+    "number": 17,
+    "name": "Pebble",
+    "stem": "17-pebble",
+    "motion": true,
+    "bounds": [
+      132,
+      118,
+      674,
+      680
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      584,
+      331,
+      1624,
+      1370
+    ],
+    "face": [
+      0.58,
+      0.36,
+      0.69
+    ]
+  },
+  "bento": {
+    "number": 18,
+    "name": "Bento",
+    "stem": "18-bento",
+    "motion": true,
+    "bounds": [
+      54,
+      166,
+      698,
+      593
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      938,
+      568,
+      1889,
+      1519
+    ],
+    "face": [
+      0.75,
+      0.52,
+      0.85
+    ]
+  },
+  "manta": {
+    "number": 19,
+    "name": "Manta",
+    "stem": "19-manta",
+    "motion": true,
+    "bounds": [
+      48,
+      66,
+      720,
+      740
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      601,
+      133,
+      1499,
+      1032
+    ],
+    "face": [
+      0.52,
+      0.23,
+      0.55
+    ],
+    "motion_range": [
+      0.05,
+      1.65
+    ]
+  },
+  "tess": {
+    "number": 20,
+    "name": "Tess",
+    "stem": "20-tess",
+    "motion": true,
+    "bounds": [
+      68,
+      144,
+      712,
+      653
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      576,
+      513,
+      1533,
+      1471
+    ],
+    "face": [
+      0.51,
+      0.46,
+      0.72
+    ]
+  },
+  "pollen": {
+    "number": 21,
+    "name": "Pollen",
+    "stem": "21-pollen",
+    "motion": true,
+    "bounds": [
+      86,
+      68,
+      635,
+      682
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      460,
+      311,
+      1534,
+      1385
+    ],
+    "face": [
+      0.53,
+      0.37,
+      0.69
+    ]
+  },
+  "quill": {
+    "number": 22,
+    "name": "Quill",
+    "stem": "22-quill",
+    "motion": true,
+    "bounds": [
+      162,
+      104,
+      613,
+      666
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      462,
+      458,
+      1460,
+      1457
+    ],
+    "face": [
+      0.45,
+      0.45,
+      0.67
+    ]
+  },
+  "fenn": {
+    "number": 23,
+    "name": "Fenn",
+    "stem": "23-fenn",
+    "motion": true,
+    "bounds": [
+      188,
+      72,
+      604,
+      702
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      585,
+      118,
+      1508,
+      1040
+    ],
+    "face": [
+      0.53,
+      0.23,
+      0.55
+    ]
+  },
+  "noodle": {
+    "number": 24,
+    "name": "Noodle",
+    "stem": "24-noodle",
+    "motion": true,
+    "bounds": [
+      88,
+      60,
+      694,
+      712
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      731,
+      86,
+      1677,
+      1032
+    ],
+    "face": [
+      0.61,
+      0.22,
+      0.55
+    ]
+  },
+  "moss": {
+    "number": 25,
+    "name": "Moss",
+    "stem": "25-moss",
+    "motion": true,
+    "bounds": [
+      130,
+      58,
+      596,
+      702
+    ],
+    "dimension": 768,
+    "avatar_crop": [
+      429,
+      161,
+      1580,
+      1312
+    ],
+    "face": [
+      0.52,
+      0.34,
+      0.67
+    ]
+  }
+}
