@@ -62,4 +62,6 @@ Controller sent the required $50 notification; receipt is in the shared delivery
 No direct audio listening or unavailable private-term-list scan is claimed. Existing
 fictional sources and generic art are the sole inputs. All audio is stream-copied and
 compared by packet/timing and decoded hashes. See `MANUAL-REVIEW.md` and `evidence/checks.json`
-for the final visual/media acceptance, recorded only after verification.
+for the completed visual/media acceptance. The controller accepted 86 final scene frames,
+64 scene/action boundaries and 22 send-copy frames; both exports fully decode and exactly
+preserve all 5,608 original AAC packets/timing and the decoded audio hash.

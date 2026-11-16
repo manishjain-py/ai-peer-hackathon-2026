@@ -15,7 +15,7 @@ v1=DEMO/'film/renders/blended-moss-v1.mp4'
 assert sha(v1)=='c6672bd1b42b09b5c66c4dbd55bdb2f37ef5dbac6e79594f061f3fc5cb4f2941'
 baseline=sha(base);assert baseline=='7756283021b7237605337f079e435babb25143c2fb1d9023e6b70204a952b039'
 ba,bn=packets(base);bp=pcm(base)
-result={'base_sha256':baseline,'base_audio_packet_hash':ba,'base_audio_packet_count':bn,'base_decoded_audio_hash':bp,'files':[]}
+result={'v1_sha256':sha(v1),'base_sha256':baseline,'base_audio_packet_hash':ba,'base_audio_packet_count':bn,'base_decoded_audio_hash':bp,'files':[]}
 for f,size in zip(files,[(1920,1080),(1280,720)]):
  data=json.loads(run(['ffprobe','-v','error','-count_frames','-show_entries','format=duration,size:stream=index,codec_name,codec_type,width,height,r_frame_rate,nb_read_frames,start_time,duration','-of','json',str(f)]))
  v=next(s for s in data['streams'] if s['codec_type']=='video');assert(v['width'],v['height'])==size;assert int(v['nb_read_frames'])==3588;assert v['r_frame_rate']=='30/1';assert abs(float(v['duration'])-119.6)<.001
@@ -36,6 +36,10 @@ for f in ['paper.js','room.js','style.css','tl.js','u.js','data-extra.js']:
 assert (DEMO/'film/cuts/blended-moss-v1/screens.json').read_bytes()==(DEMO/'film/cuts/blended-moss-v2/screens.json').read_bytes()
 for f in ['scene.js','concept.json']:
  assert (DEMO/'ui-concepts/moss'/f).read_bytes()==(DEMO/'ui-concepts/moss-v2'/f).read_bytes(),f
+source=DEMO/'ui-concepts/renders/moss-clean-v2.mp4'
+sp=json.loads(run(['ffprobe','-v','error','-count_frames','-show_entries','stream=width,height,r_frame_rate,nb_read_frames,duration','-of','json',str(source)]))
+assert sp['streams'][0]['nb_read_frames']=='1740' and sp['streams'][0]['duration']=='58.000000'
+result['walkthrough_source']={'file':str(source.relative_to(DEMO)),'sha256':sha(source),'probe':sp}
 result['v1_master_unchanged']=True
 result['invariants']={'slot_count':20,'all_slot_times_camera_keys':True,'all_six_walk_spans':True,'original_audio_configuration':True,'walk_data_layout_style_timeline':True,'base_master_unchanged':True}
 result['privacy']='Only existing public fictional sources and generic generated Moss artwork. No private-term-list scan claimed.'
