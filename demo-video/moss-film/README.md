@@ -14,7 +14,7 @@ in the dense UI than in room scenes, and its landing position clears the page co
 The AI identity badge rises with the character during jumps. For rules, Moss moves beside
 a separate green card: the original card bounds, six rules, appearance timing and text
 remain. Presentation artwork is mirrored to point toward the content; badge text stays
-normal. The calm read-only sentence is separated from the badge.
+normal. The calm read-only sentence is separated from the badge, and their final pose clears the unchanged film-caption lane. The original dormant/wake/fold timing uses the same Moss avatar mark before it opens into the full body.
 
 Every full-film appearance uses Moss: room entrance and laptop wake/glide, small portraits,
 Zoom, Slack, morning room/desk, return to phone, native morning brief, globe captions and
@@ -58,6 +58,7 @@ node demo-video/moss-film/render.mjs
 node demo-video/moss-film/render.mjs --film --probe
 node demo-video/moss-film/render.mjs --film
 python3 demo-video/moss-film/tools/verify.py
+python3 demo-video/moss-film/tools/encoded_proof.py
 ```
 
 First the renderer produces the 58-second clean source clip at

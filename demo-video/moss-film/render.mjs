@@ -45,15 +45,30 @@ async function seek(page,t){await page.evaluate(async ({t,isFilm})=>{
  await Promise.all(actors.map(v=>seekVideo(v,+v.dataset.at||.04)));
  },{t,isFilm});if(page.errors.length)throw new Error(page.errors.join('\n'));}
 const walkTimes=[2.8,4.3,5.8,6.9,8.9,10.9,11.5,12.4,13.9,14.9,16.2,17.1,18.5,19.7,20.8,22.5,23.9,25.7,28,30.6,33.5,36.5,39.9,41.8,43.7,45.7,47.4,48.6,50.35,50.9,51.4,51.9,53.5,54.9,55.4,56.3,57.45];
-const filmTimes=[1.8,5.6,9.1,12.8,14.2,15.6,16.8,17.2,18.6,19.7,20.3,21.7,22.2,23.8,25.3,27,29,31,33,35,37,39.4,40.7,42.2,45.2,47.6,50.2,53.5,54.6,56.8,59,60.8,62.2,63.5,64.2,64.7,65.8,67,67.7,68.5,69.3,70,73,76.5,80,85,90,94.8,97.5,100.2,101.5,102.9,103.3,103.9,104.5,105.1,105.5,105.7,107.2,108.6,110.5,111.1,113.4,115.8,117.6,119.4];
+const filmTimes=[1.8,5.6,9.1,12.8,13.6,14.2,15.6,16.8,17.2,18.6,19.7,20.3,21.7,22.2,23.8,25.3,27,29,31,33,35,37,39.4,40.7,42.2,45.2,47.6,50.2,53.5,54.6,56.8,59,60.8,62.2,63.5,64.2,64.7,65.8,67,67.7,68.5,69.3,70,73,76.5,80,85,90,94.8,97.5,100.2,101.5,102.9,103.3,103.9,104.5,104.8,105.1,105.5,105.7,106.3,107.2,108.6,110.5,111.1,113.4,115.8,117.6,119.4];
 async function board(page){const times=isFilm?filmTimes:walkTimes,dir=path.join(CACHE,isFilm?'film-probes':'walk-probes');fs.mkdirSync(dir,{recursive:true});for(let i=0;i<times.length;i++){await seek(page,times[i]);await page.screenshot({path:path.join(dir,`f${String(i).padStart(3,'0')}.jpg`),type:'jpeg',quality:92});}
  const data={kind:isFilm?'film-source':'walk-source',times,files:times.map((t,i)=>`f${String(i).padStart(3,'0')}.jpg`)};fs.writeFileSync(path.join(EVIDENCE,isFilm?'film-source-times.json':'walk-source-times.json'),JSON.stringify(data,null,2)+'\n');
  await execAsync('uv',['run','--quiet','--with','pillow','python',path.join(HERE,'tools/sheets.py'),dir,path.join(EVIDENCE,isFilm?'film-source':'walk-source'),JSON.stringify(times)]);}
 async function encodeSegment(browser,url,start,end,out){const page=await init(browser,url);const writer=spawn('ffmpeg',['-hide_banner','-loglevel','error','-nostdin','-y','-f','image2pipe','-framerate',String(FPS),'-vcodec','mjpeg','-i','pipe:0','-an','-c:v','libx264','-preset','fast','-crf','18','-pix_fmt','yuv420p','-movflags','+faststart',out],{stdio:['pipe','ignore','pipe']});let err='';writer.stderr.on('data',x=>err+=x);const finished=once(writer,'close');for(let i=start;i<end;i++){await seek(page,i/FPS);const buf=await page.screenshot({type:'jpeg',quality:96});if(!writer.stdin.write(buf))await once(writer.stdin,'drain');if(i%300===0)console.log(`${isFilm?'film':'walk'} frame ${i}/${end}`);}writer.stdin.end();const[code]=await finished;if(code!==0)throw new Error(err);await page.close();}
 async function main(){prepare();const{srv,url}=await serve();const browser=await PW.chromium.launch({executablePath:CHROME,headless:true,args:['--disable-background-networking','--disable-component-update','--no-first-run','--hide-scrollbars']});try{const link=url+`/${isFilm?'film':'walk'}/index.html`;const p=await init(browser,link);await board(p);await p.close();console.log('source probes ready');if(probeOnly)return;
+ const patch=args.includes('--patch-dormant');
  const frames=isFilm?3588:1740,mid=Math.floor(frames/2);const parts=[path.join(CACHE,(isFilm?'film':'walk')+'-part1.mp4'),path.join(CACHE,(isFilm?'film':'walk')+'-part2.mp4')];
- await Promise.all([args.includes('--reuse-first')&&fs.existsSync(parts[0])?Promise.resolve():encodeSegment(browser,link,0,mid,parts[0]),encodeSegment(browser,link,mid,frames,parts[1])]);
- const list=path.join(CACHE,(isFilm?'film':'walk')+'-concat.txt');fs.writeFileSync(list,parts.map(p=>`file '${p}'`).join('\n')+'\n');const raw=path.join(CACHE,(isFilm?'film':'walk')+'-picture.mp4');await execAsync('ffmpeg',['-hide_banner','-loglevel','error','-y','-f','concat','-safe','0','-i',list,'-c','copy',raw]);
+ const raw=path.join(CACHE,(isFilm?'film':'walk')+'-picture.mp4');
+ if(patch){
+  if(!isFilm||!fs.existsSync(raw))throw new Error('--patch-dormant requires an existing full film picture');
+  // Only p.eyes<1 changes pixels. These ranges completely cover all such film states.
+  const spans=[[318,420],[3129,3192]],patches=spans.map((_,i)=>path.join(CACHE,'dormant-'+i+'.mp4'));
+  await Promise.all(spans.map(([a,b],i)=>encodeSegment(browser,link,a,b,patches[i])));
+  const changed=path.join(CACHE,'film-picture-patched.mp4');
+  const fc='[0:v]trim=start_frame=0:end_frame=318,setpts=PTS-STARTPTS[v0];[1:v]setpts=PTS-STARTPTS[v1];[0:v]trim=start_frame=420:end_frame=3129,setpts=PTS-STARTPTS[v2];[2:v]setpts=PTS-STARTPTS[v3];[0:v]trim=start_frame=3192:end_frame=3588,setpts=PTS-STARTPTS[v4];[v0][v1][v2][v3][v4]concat=n=5:v=1:a=0[v]';
+  await execAsync('ffmpeg',['-hide_banner','-loglevel','error','-y','-i',raw,'-i',patches[0],'-i',patches[1],'-filter_complex',fc,'-map','[v]','-c:v','libx264','-preset','fast','-crf','0','-pix_fmt','yuv420p','-r','30','-an',changed]);
+  fs.renameSync(raw,path.join(CACHE,'film-picture-before-dormant.mp4'));fs.renameSync(changed,raw);
+  fs.writeFileSync(path.join(EVIDENCE,'dormant-patch.json'),JSON.stringify({frame_ranges:spans,reason:'Respect original eye/wake/fold state keys with the same Moss avatar; body unchanged wherever eyes>=1',assembly:'Lossless intermediate; unaffected captured frames retained; full fresh render remains the default'},null,2)+'\n');
+ }else{
+  await Promise.all([args.includes('--reuse-first')&&fs.existsSync(parts[0])?Promise.resolve():encodeSegment(browser,link,0,mid,parts[0]),encodeSegment(browser,link,mid,frames,parts[1])]);
+  const list=path.join(CACHE,(isFilm?'film':'walk')+'-concat.txt');fs.writeFileSync(list,parts.map(p=>`file '${p}'`).join('\n')+'\n');await execAsync('ffmpeg',['-hide_banner','-loglevel','error','-y','-f','concat','-safe','0','-i',list,'-c','copy',raw]);
+ }
+
  if(isFilm){const master=path.join(FILM,'renders/blended-moss-v1.mp4');await execAsync('ffmpeg',['-hide_banner','-loglevel','error','-y','-i',raw,'-i',MASTER,'-map','0:v:0','-map','1:a:0','-c:v','libx264','-preset','slow','-crf','22','-c:a','copy','-movflags','+faststart',master]);await execAsync('ffmpeg',['-hide_banner','-loglevel','error','-y','-i',master,'-vf','scale=1280:720','-c:v','libx264','-preset','slow','-crf','23','-c:a','copy','-movflags','+faststart',path.join(FILM,'renders/blended-moss-v1-720p.mp4')]);}
  else{const walk=path.join(UI,'renders/moss-clean-v1.mp4');fs.copyFileSync(raw,walk);await execAsync('ffmpeg',['-hide_banner','-loglevel','error','-y','-ss','2.8','-to','57.5','-i',walk,'-vf','scale=1280:720','-c:v','libx264','-crf','23','-an','-movflags','+faststart',path.join(EVIDENCE,'moss-walkthrough-preview.mp4')]);}
  console.log(isFilm?'full film exports ready':'full walkthrough ready');
