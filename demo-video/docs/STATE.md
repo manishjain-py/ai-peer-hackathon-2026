@@ -7,7 +7,14 @@ it took over from ai-peer-video-controller-5 (closed at 16:58 UTC). Read next: t
 `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7.md`. A new Mac or a take-over: `START-HERE.md`
 at the repo root. Other sessions message the controller by its name.
 
-## Where we are (2026-11-16 02:33 UTC)
+## Where we are (2026-11-16 12:03 UTC)
+
+**12:03 UTC, 16 November: the first controller's window is closed.** Manish at 12:02 UTC asked
+which inactive sessions of this work could be closed. ai-peer-video-controller-1 (window 2952,
+PID 38022; its session name `learnlikemagic-f7`, started in the learnlikemagic folder) had no work
+since 14 November 11:46 UTC, sat idle at its prompt and had one child (its own Playwright helper):
+closed at 12:03 UTC, on his question. Left open: only ai-peer-video-controller-6. The other open
+windows (codex-factories-controller-91, telugu-stores-6) are Learn Like Magic work and stay.
 
 **02:33 UTC, 16 November: the Tag's version 2 is approved (V30); everything is in git and
 pushed.** Manish at 02:29 UTC: "Yeah, looks very good. Let's commit and push all the changes."
@@ -495,7 +502,7 @@ set-ups: ask Manish before spending on them.
 | ai-peer-video-wp2-6 (closed 13:19 UTC) | 5463 | https://claude.ai/code/session_01Nfn5h7P58JmNpKzMeZUkXV | `~/repos/ai-peer-video-wp2` | `video-wp2-4-draft3` (merged as PR 12) | PR 12 | Finished Draft 3 (merged `bb81fc5`); idle since 05:09 UTC. |
 | ai-peer-video-wp2-5 (closed 04:22 UTC) | 4262 | https://claude.ai/code/session_01Nfn5h6QvikG661dFstmjvc | `~/repos/ai-peer-video-wp2` | `video-wp2-4-draft3` | none | Phase C with A so far: the entrance from the phone, the face, the return into the phone, the big-world scene (by its helper); hand-off at 42%. |
 | ai-peer-video-wp2-3 (closed 15:11 UTC) | 3974 | https://claude.ai/code/session_01Nfn5h9MEoFU1Ck7fUPKdS2 | `~/repos/ai-peer-video-wp2` (launched in the shared checkout, with `CLAUDE_NO_IDLE_PING=1`) | `video-wp2-3-quicker-rise` | none yet for Draft 2 (round 3 was PR 10) | Draft 2 (V16, V17; the order by message at 14:51 UTC), then its dated hand-off and a stop (40.1% context at 15:00 UTC); before that, round 3 (PR 10); brief `handoffs/HANDOFF-2026-11-14-ai-peer-video-wp2-3.md` plus the Earth report; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 16635, transcript `d1cb4441-b9a9-4aa3-ba40-ccfe560894d3`. No helper without the controller's yes (C13). |
-| ai-peer-video-controller-1 | 2952 | https://claude.ai/code/session_01Nfn5h5eNL9YLJMnBQpKKMf | the same checkout | main | none | Handed off at 11:30 UTC; nothing of its own still runs. Its second-by-second watch of the September film is `DRAFT07-WATCH.md` (committed by controller-2). Other sessions message it as `learnlikemagic-f7`; PID 38022. Manish opened its window himself: ask him before closing it. |
+| ai-peer-video-controller-1 (closed 12:03 UTC, 16 November) | 2952 | https://claude.ai/code/session_01Nfn5h5eNL9YLJMnBQpKKMf | the same checkout | main | none | Handed off at 11:30 UTC; nothing of its own still runs. Its second-by-second watch of the September film is `DRAFT07-WATCH.md` (committed by controller-2). Other sessions message it as `learnlikemagic-f7`; PID 38022. Manish opened its window himself: ask him before closing it. |
 
 Closed: ai-peer-video-wp1 (window 3962, PID 41753), by the controller at 11:52 UTC after its
 report, with its screen idle, no child process, no sub-agent and a clean, merged worktree
@@ -1107,3 +1114,4 @@ and 7 still hold.
 | 2026-11-15 19:49 | ai-peer-video-wp7-3 | Built the Tag's v2 from V27, V28 and V29: h2b and m4b on the ElevenLabs plan, both heard clean by speech-to-text (h2b took three tries: one was heard with an extra "no", one began "Prom's"; Draft 3's h2 as the control was clean); a new hook-2 lip-sync take; idea C; Slack in a full-frame window; a new morning desk shot (one still edit, one take); the brief on the laptop and the tag as the logo (one builder helper); Draft 3's globe on a time map; `bed-blended-v2`. Delivered 19:47 UTC; PR #15 squash-merged as `f6c21b4`, branch deleted. $0.6506. | Idle for Manish's view of v2 |
 | 2026-11-15 19:50 | ai-peer-video-controller-6 | Checked the merge of PR #15 (`f6c21b4`), tagged `blended-tag-v2`, stopped `stall-wp7-3` (wp7-3 idle at 35.2%), added WP7-3's $0.65 to Money spent ($42.08). | Waiting on his view of v2 |
 | 2026-11-16 02:33 | ai-peer-video-controller-6 | Manish approved the Tag's version 2 (V30) and asked for the docs to be brought up to date and everything committed and pushed: done (STATE, DESIGN, START-HERE, README, demo-video/AGENTS.md); every worktree checked; wp7-3 closed; the usage wait stopped. | Nothing runs; no question open |
+| 2026-11-16 12:03 | ai-peer-video-controller-6 | On Manish's question, closed the first controller's window 2952 (idle since 14 November); no other session or process of this work was left. | Only the controller is open |
