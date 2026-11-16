@@ -3,6 +3,10 @@
 A new 2-minute "wow" demo video for the AI Peer hackathon project, started 2026-11-14.
 It is a new film, separate from the September concept film in `../film/`.
 
+The approved video (16 November 2026): `film/renders/blended-tag-v2.mp4`, tag `blended-tag-v2`
+(V30). Earlier cuts and every checkpoint: `../START-HERE.md`, "Checkpoints". Little Peer's
+version 2 waits for Manish's word (V28).
+
 ## Start here
 
 1. `docs/STATE.md`: where we are, live sessions, money spent, what needs Manish, next.

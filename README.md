@@ -13,6 +13,8 @@ Like Magic as the test company.
 - Decisions and design: [docs/build/DESIGN.md](docs/build/DESIGN.md)
 - Agent instructions: [AGENTS.md](AGENTS.md)
 - The concept film (Draft 07, 4:23) and its docs: [film/](film/README.md)
+- The 2-minute demo video (November 2026): [demo-video/](demo-video/AGENTS.md); the approved cut is
+  `demo-video/film/renders/blended-tag-v2.mp4`
 
 Clone note: film media is in Git LFS and skipped by default. Fetch it with
 `git lfs pull --include="film/**" --exclude=""`.

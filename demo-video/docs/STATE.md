@@ -7,7 +7,21 @@ it took over from ai-peer-video-controller-5 (closed at 16:58 UTC). Read next: t
 `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7.md`. A new Mac or a take-over: `START-HERE.md`
 at the repo root. Other sessions message the controller by its name.
 
-## Where we are (2026-11-15 19:50 UTC)
+## Where we are (2026-11-16 02:33 UTC)
+
+**02:33 UTC, 16 November: the Tag's version 2 is approved (V30); everything is in git and
+pushed.** Manish at 02:29 UTC: "Yeah, looks very good. Let's commit and push all the changes."
+(in full in `FEEDBACK-TAG-V2-2026-11-16.md`). The approved video:
+`demo-video/film/renders/blended-tag-v2.mp4` (PR 15, `f6c21b4`, tag `blended-tag-v2`). Docs brought
+up to date: this file, `DESIGN.md` V30, `START-HERE.md` (the new tags, the fixed shot manifest,
+what stays outside git), `README.md` and `demo-video/AGENTS.md` (where the approved video is).
+Checked before the push: every worktree is clean and pushed. Outside git on purpose: 7 unused
+takes in the wp2 worktree (about 71 MB: five music takes, two raw hook takes) and 84 unused raw
+AI-shot takes in the wp3 worktree (about 207 MB), all made-up and unused, listed in
+`START-HERE.md`. The product's old worktree `ai-peer-wp1` holds one tracker commit that is
+already on `main`. ai-peer-video-wp7-3 was closed at 02:31 UTC (idle since 19:50 UTC, worktree
+clean); the usage wait was stopped at 02:32 UTC: no session but the controller runs. Little
+Peer's version 2 waits for his word (V28). Week 80% at 02:27 UTC.
 
 **19:50 UTC: the Tag's v2 is merged (PR #15, `f6c21b4`, tagged `blended-tag-v2`) and with
 Manish.** Checked by the controller: the PR state, the branch deleted, `privacy-check.sh f6c21b4
@@ -474,7 +488,7 @@ set-ups: ask Manish before spending on them.
 | ai-peer-video-controller-6 | 5591 | https://claude.ai/code/session_01Nfn5h634KpZdXvvB4k2k9P | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | The live controller since 16:58 UTC on 15 November; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 79572, transcript `36ef5c66-79ae-43f6-b644-48a182c0fb5e` |
 | ai-peer-video-controller-5 (closed 16:58 UTC, 15 November) | 5570 | https://claude.ai/code/session_01Nfn5hAQtMCLhcAz7Z5MUzm | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | The controller from 13:21 to 16:56 UTC on 15 November, then handed off to ai-peer-video-controller-6; PID 14002, transcript `886d5eab-f5fa-4248-ad50-268c2aa3f990` |
 | ai-peer-video-controller-4 (closed 13:24 UTC, 15 November) | 3977 | https://claude.ai/code/session_01Nfn5h9pvSF58rFbV1QBNt4 | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | Controller from 15:02 UTC on 14 November to its hand-off at 13:21 UTC on 15 November; PID 35776, transcript `4754b08d-f4fe-4f30-aeee-6e92a6cbb597` |
-| ai-peer-video-wp7-3 | 5612 | https://claude.ai/code/session_01Nfn5h86jPoToz2dw3r3sDJ | `~/repos/ai-peer-video-wp7` (WP7's) | `video-wp7-v2` (from `5c34cdb`) | none yet | The Tag blend's v2 (V27, V28; brief `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7-3.md`); launched at 18:48 UTC in the shared checkout with `CLAUDE_NO_IDLE_PING=1`; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 98609, transcript `d6e90b9b-a334-4734-bd4a-9776eefa38cb` |
+| ai-peer-video-wp7-3 (closed 02:31 UTC, 16 November) | 5612 | https://claude.ai/code/session_01Nfn5h86jPoToz2dw3r3sDJ | `~/repos/ai-peer-video-wp7` (WP7's) | `video-wp7-v2` (from `5c34cdb`) | none yet | The Tag blend's v2 (V27, V28; brief `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7-3.md`); launched at 18:48 UTC in the shared checkout with `CLAUDE_NO_IDLE_PING=1`; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 98609, transcript `d6e90b9b-a334-4734-bd4a-9776eefa38cb` |
 | ai-peer-video-wp7-2 (closed 18:47 UTC, 15 November) | 5605 | https://claude.ai/code/session_01Nfn5h8c7EDMHH7MkgdcPC8 | `~/repos/ai-peer-video-wp7` (WP7's) | `video-wp7-blended` (from `99aa9b0`) | none yet | WP7's tag blend, then the PR (brief `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7-2.md` plus the privacy fix in its kickoff); launched at 17:43 UTC in the shared checkout with `CLAUDE_NO_IDLE_PING=1`; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 36089, transcript `42575111-74b7-4ccd-9767-e61735348fd6` |
 | ai-peer-video-wp7 (closed 17:43 UTC, 15 November) | 5589 | https://claude.ai/code/session_01Nfn5h6qqRLyRxrh3ochTLm | `~/repos/ai-peer-video-wp7` (made by the worker; launched in the shared checkout, with `CLAUDE_NO_IDLE_PING=1`) | `video-wp7-blended` (made by the worker) | none yet | WP7 (V24, V26): the two blended videos (brief `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7.md`); launched at 16:38 UTC; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 64154, transcript `b1fb5e1a-9984-4180-84d3-3d2f7c327445` |
 | ai-peer-video-wp6 (closed 16:32 UTC, 15 November) | 5567 | https://claude.ai/code/session_01Nfn5h6rbZhFxCgZXTT1Tc4 | `~/repos/ai-peer-video-wp6` (made by the worker; launched in the shared checkout, with `CLAUDE_NO_IDLE_PING=1`) | `video-wp6-wow-concepts` (made by the worker) | none yet | WP6 (V22): wow concepts for the AI Peer's own screens, 4 to 5 walkthrough videos for Manish's review (brief `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp6.md`); one research helper and up to three builder helpers allowed; up to $10. Launched 13:19 UTC by ai-peer-video-controller-4; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 11478, transcript `fe5edd36-f7f3-42c4-b2e1-c1e44643bb08`. |
@@ -540,9 +554,9 @@ Still running:
 
 | What | PID | Log | Stop command |
 |---|---|---|---|
-| The usage wait (`usage`: the whole week past 85%) | 80587 | `~/.ai-peer/demo-video-private/controller/waits.log` and `usage.log` | `kill 80587` |
 
-`usage` was started by ai-peer-video-controller-6 at 16:58 UTC on 15 November; `stall-wp7` (16:58
+Nothing runs since 02:32 UTC on 16 November: the usage wait was stopped when no worker was left.
+Before: `usage` was started by ai-peer-video-controller-6 at 16:58 UTC on 15 November; `stall-wp7` (16:58
 UTC) was stopped at 17:42 UTC before WP7 closed, `stall-wp7-2` ran from 17:44 to 18:46 UTC (stopped while wp7-2 idled, 18:05 to 18:23, by waits.log), and
 `stall-wp7-3` started at 18:48 UTC;
 ai-peer-video-controller-5 stopped its own at its hand-off. They are runs of `demo-video/tools/wait-for.sh` in the controller's own
@@ -619,6 +633,10 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 | | **Total of the $100 cap** | | **$42.08** (WP7-3 $0.65 since 15 November; before it $41.43: WP1 $6.60, WP3 $23.10, WP2 $0.94, WP2-3 $0.62, WP2-4 $3.01, WP2-5 $3.74, WP2-6 $3.42; the last three on `main` since PR 12; WP6 and WP7 $0; the ledger rows sum to $41.41, the 2 cents are rounding) |
 
 ## Needs Manish
+
+**Answered 2026-11-16 02:29 UTC (V30): the Tag's version 2 "looks very good"; bring the docs up to
+date, then commit and push everything.** Done. No question is open; Little Peer's version 2 waits
+for his word (V28).
 
 **Asked 2026-11-15 18:02 UTC: what does he think of blended video 2, Tag?** The same way as
 video 1 (the Attention group and the session of ai-peer-video-controller-6). Record his words at
@@ -752,6 +770,12 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
+
+**Now (02:33 UTC, 16 November), ai-peer-video-controller-6:** nothing runs. Wait for Manish's
+next word (Little Peer's version 2 waits, V28). For new work: one fresh worker on Opus 5.5 with a
+dated brief and its stall wait, and the usage wait re-armed (`START-HERE.md`, "Take over as the
+controller", step 5). The week resets on Monday 16 November at 22:59 UTC (80% at 02:27 UTC; workers
+stop at 85%). The controller hands off at its next natural point.
 
 **Now (18:48 UTC, 15 November), ai-peer-video-controller-6:** wp7-3 builds the Tag's v2
 (the seven other changes first). Wait for Manish's pick of the transition idea; pass it on word
@@ -1082,3 +1106,4 @@ and 7 still hold.
 | 2026-11-15 19:48 | ai-peer-video-controller-6 | Checked the Tag's v2 (privacy 0 and 0, ledger $0.65, one sheet) and sent it to Manish at 19:48 UTC; approved wp7-3's PR and squash merge. | Waiting on his view of v2 |
 | 2026-11-15 19:49 | ai-peer-video-wp7-3 | Built the Tag's v2 from V27, V28 and V29: h2b and m4b on the ElevenLabs plan, both heard clean by speech-to-text (h2b took three tries: one was heard with an extra "no", one began "Prom's"; Draft 3's h2 as the control was clean); a new hook-2 lip-sync take; idea C; Slack in a full-frame window; a new morning desk shot (one still edit, one take); the brief on the laptop and the tag as the logo (one builder helper); Draft 3's globe on a time map; `bed-blended-v2`. Delivered 19:47 UTC; PR #15 squash-merged as `f6c21b4`, branch deleted. $0.6506. | Idle for Manish's view of v2 |
 | 2026-11-15 19:50 | ai-peer-video-controller-6 | Checked the merge of PR #15 (`f6c21b4`), tagged `blended-tag-v2`, stopped `stall-wp7-3` (wp7-3 idle at 35.2%), added WP7-3's $0.65 to Money spent ($42.08). | Waiting on his view of v2 |
+| 2026-11-16 02:33 | ai-peer-video-controller-6 | Manish approved the Tag's version 2 (V30) and asked for the docs to be brought up to date and everything committed and pushed: done (STATE, DESIGN, START-HERE, README, demo-video/AGENTS.md); every worktree checked; wp7-3 closed; the usage wait stopped. | Nothing runs; no question open |

@@ -13,6 +13,7 @@ recordings, which stay out of git by rule.
 |---|---|
 | Project rules for every agent | `AGENTS.md` (Claude Code loads it through `CLAUDE.md`) |
 | The live work (November 2026): the 2-minute demo video | `demo-video/AGENTS.md`, then `demo-video/docs/STATE.md` (the tracker) |
+| The approved demo video (16 November 2026) | `demo-video/film/renders/blended-tag-v2.mp4` (V30; the checkpoints below) |
 | The demo video's decisions and Manish's words | `demo-video/docs/DESIGN.md` section 0 |
 | Briefs and hand-offs between sessions, dated, never edited | `demo-video/docs/handoffs/` |
 | The product, the generic AI Peer | `docs/build/STATE.md`: its build closed on this repo on 7 November and goes on, from a hand-off package, on Manish's company Mac |
@@ -31,6 +32,8 @@ the root `AGENTS.md`: one worker at a time (V15, C13), the 85% and 93% usage mar
 | `draft-02` | Draft 2 (PR 11): Ram, the quicker reveal |
 | `draft-03` | Draft 3 (PR 12): the approved base (V21); the Peer comes out of Ram's phone |
 | `wow-concepts-v1` | The five "wow" concepts for the product's screens (PR 13); Manish liked Little Peer (V23) |
+| `blended-v1` | The two blended videos, Little Peer and Tag, version 1 (PR 14) |
+| `blended-tag-v2` | The Tag blended video, version 2 (PR 15): his eight changes (V27, V28) and transition C (V29); approved on 16 November (V30) |
 
 - Go back to one: `git worktree add ../ai-peer-at-draft-03 draft-03` (a separate folder;
   `main` stays as it is).
@@ -73,8 +76,9 @@ the root `AGENTS.md`: one worker at a time (V15, C13), the 85% and 93% usage mar
    | Gemini and OpenAI keys | Learn Like Magic's own set-ups | nothing | no; ask Manish before any use |
 
 6. **Private files** (never in git, rule C8), in `~/.ai-peer/demo-video-private/`:
-   - The one file current work needs: `bases/tag-walkthrough-2026-11-15.mp4`, the tag video
-     Manish made (WP7's tag blend). Copy it by AirDrop from the 48 GB Mac, or ask Manish for it.
+   - Current work needs no private file: the tag is rebuilt by code in
+     `demo-video/ui-concepts/tag/`. The tag video Manish made (`bases/tag-walkthrough-2026-11-15.mp4`)
+     stays on the 48 GB Mac as the reference, out of git and sent nowhere.
    - The company walkthrough recording (`ui-wow/`) and the full renders with real recordings
      (`renders/`) never leave the 48 GB Mac. Public builds and every git artifact work without
      them.
@@ -145,17 +149,15 @@ The full recipe is `docs/ways-of-working/skills/big-initiative/SKILL.md`; this r
 
 ## Known limits on another Mac
 
-- `demo-video/film/shots.json` reads WP3's shot manifest from
-  `/Users/manishjain/repos/ai-peer-video-wp3/` (a worktree outside git), so the film does not
-  build on a fresh Mac until it reads the repo's own `demo-video/shots/manifest.json` (asked of
-  ai-peer-video-wp7 on 15 November; STATE says when it is done).
+- Fixed on 15 November (PR 14): `demo-video/film/shots.json` reads the repo's own
+  `demo-video/shots/manifest.json`, so the film builds on a fresh Mac.
 - Older docs and briefs name `/Users/manishjain/...` paths: on a Mac with another user name,
   read them as `$HOME/...`.
 
-## Outside git on Manish's 48 GB Mac (2026-11-15)
+## Outside git on Manish's 48 GB Mac (2026-11-16)
 
 | Where | What | Why it is not in git |
 |---|---|---|
 | `~/.ai-peer/demo-video-private/` | The full renders with real recordings, the company walkthrough, the tag video, caches (about 6 GB) | Private by rule, or rebuilt by code |
 | `~/repos/ai-peer-video-wp2` (worktree) | Unused music takes, the Earth helper's raw files, render caches (about 19 GB) | Unused takes and caches; the final music is in git |
-| `~/repos/ai-peer-video-wp3` (worktree) | About 89 unused raw takes of the AI shots (about 207 MB), and the shot manifest the film reads today | Unused takes; every final shot is in git |
+| `~/repos/ai-peer-video-wp3` (worktree) | About 84 unused raw takes of the AI shots (about 207 MB) | Unused takes; every final shot is in git |
