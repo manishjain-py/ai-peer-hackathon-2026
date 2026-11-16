@@ -1,6 +1,6 @@
 # Moss acting v2: controller acceptance record
 
-V35 revision of the full Moss film. Final encoded movie accepted and delivered; repository merge/checkpoint wrap-up follows.
+V35 revision of the full Moss film. Final encoded movie accepted, delivered and merged; checkpoint pushed.
 Controller: Codex `moss_acting_controller`. One implementation worker: `moss_acting_builder`.
 
 ## Accepted performance plan and first artwork
@@ -103,3 +103,7 @@ Only generic selected Moss art/descriptions went to providers; outgoing prompts
 were inspected by the controller. Character motions are generated/composed, with
 no speech lip-sync. No direct audio listening or unavailable private-term scan is
 claimed. New cost $0.859070, project total $50.165149; no further paid call is pending.
+
+PR 19 merged as `8846d1bbb138c0a0b8bcf8b24bba9a808d6e7cee`; checkpoint `blended-moss-v2` is pushed. All selected
+source/media/evidence and the immutable worker handoff are saved. Worker finished; no
+render, server or paid request remains. Final delivery record: `MOSS-ACTING-DELIVERY-2026-11-16.md`.

@@ -7,10 +7,11 @@ The last approved full video (16 November 2026): `film/renders/blended-tag-v2.mp
 `blended-tag-v2` (V30, V31; Little Peer is not used). Earlier cuts and every checkpoint:
 `../START-HERE.md`, "Checkpoints".
 
-Latest complete cut (16 November, V34): `film/renders/blended-moss-v1.mp4`, 119.600 seconds,
-Moss throughout the full walkthrough and film; delivered to Telegram for Manish's review.
-See `docs/MOSS-FILM-DELIVERY-2026-11-16.md`. Nothing runs. Tag v2 remains approved until his
-feedback. Round 2's 25 generated directions and the first twelve options are preserved.
+Latest complete cut (16 November UTC, V35): `film/renders/blended-moss-v2.mp4`, 119.600
+seconds, with purposeful reading/note-taking, listening, thought, reassurance and handoff.
+Delivered to Telegram for Manish's review; source/evidence saved, PR 19 merged and checkpoint
+`blended-moss-v2` pushed. See `docs/MOSS-ACTING-DELIVERY-2026-11-16.md`. Nothing runs.
+V1 and all earlier work remain preserved; Tag v2 remains approved until his feedback.
 
 ## Start here
 

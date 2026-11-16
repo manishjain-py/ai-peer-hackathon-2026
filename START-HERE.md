@@ -14,7 +14,7 @@ recordings, which stay out of git by rule.
 | Project rules for every agent | `AGENTS.md` (Claude Code loads it through `CLAUDE.md`) |
 | The live work (November 2026): the 2-minute demo video | `demo-video/AGENTS.md`, then `demo-video/docs/STATE.md` (the tracker) |
 | The last approved full demo video (16 November 2026) | `demo-video/film/renders/blended-tag-v2.mp4`: the Tag version (V30, V31; Little Peer is not used) |
-| Latest complete movie for review (16 November 2026) | `demo-video/film/renders/blended-moss-v1.mp4`: Moss replaces Tag throughout the full 119.600-second film (V34), including the entire rebuilt walkthrough. Telegram copy `blended-moss-v1-720p.mp4`; delivery note `demo-video/docs/MOSS-FILM-DELIVERY-2026-11-16.md`. Tag v2 remains the last approved movie. |
+| Latest complete movie for review (16 November 2026 UTC) | `demo-video/film/renders/blended-moss-v2.mp4`: the full 119.600-second film with context-specific acting, including real notebook activity, listening, thought and handoff (V35). Telegram copy `blended-moss-v2-720p.mp4`; delivery note `demo-video/docs/MOSS-ACTING-DELIVERY-2026-11-16.md`. V1 is preserved; Tag v2 remains the last approved movie. |
 | Preserved mascot exploration (16 November 2026) | `demo-video/mascot-exploration-v2/index.html`: 25 generated-art directions, individual in-demo previews and a 75-second quick-look, all delivered to Telegram (V33); `demo-video/docs/GENERATED-MASCOTS-DELIVERY-2026-11-16.md`. The first twelve code-native options remain in `demo-video/mascot-options/`. |
 | The demo video's decisions and Manish's words | `demo-video/docs/DESIGN.md` section 0 |
 | Briefs and hand-offs between sessions, dated, never edited | `demo-video/docs/handoffs/` |
@@ -39,6 +39,7 @@ the root `AGENTS.md`: one worker at a time (V15, C13), the 85% and 93% usage mar
 | `mascot-options-v1` | Twelve mascot alternatives inside the same Tag film scenes (PR 16), delivered to Telegram on 16 November (V32); the approved full film is unchanged and the choice is pending |
 | `generated-mascots-v1` | Round 2: 25 Gemini-generated directions, 23 fal.ai character animations, 25 in-demo previews and a 75-second quick-look (PR 17), delivered 16 November (V33); Moss selected for the V34 full-film trial |
 | `blended-moss-v1` | Complete 119.600-second Moss film (PR 18, `2996671`): full source walkthrough and every mascot appearance/mark replaced, original audio/timing preserved; delivered for review on 16 November (V34) |
+| `blended-moss-v2` | Complete 119.600-second Moss acting revision (PR 19, `8846d1b`): exact-time purposeful activity, notebook/pen source reading, meeting deferral and post-click acknowledgment; original story/UI/timing/audio preserved, delivered 16 November UTC (V35) |
 
 - Go back to one: `git worktree add ../ai-peer-at-draft-03 draft-03` (a separate folder;
   `main` stays as it is).

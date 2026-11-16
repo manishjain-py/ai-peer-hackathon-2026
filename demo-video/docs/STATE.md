@@ -1,13 +1,14 @@
 # AI Peer demo video: state
 
-Current requested work (Codex, 16 November 2026, 18:17 UTC): **Moss context-specific acting
-pass (V35)**. Build `blended-moss-v2` from the delivered full v1, with purposeful expressions
-and activities at each scene/beat (including note-taking while reading and thinking when
-appropriate). Preserve the story, UI, timing, audio and earlier versions. Brief:
-`BRIEF-MOSS-ACTING-2026-11-16.md`. Codex controller `moss_acting_controller` and one implementation worker own the package;
-the parent chat relays progress/results. Current project spend $50.165149, including V35 $0.859070; up to $10 V35 generation
-within the $100 cap. The $50 Telegram milestone is sent (23097). Weekly
-Codex usage 17% at 18:17 UTC.
+Current status (Codex, 16 November 2026 UTC): **Moss acting v2 complete and delivered
+(V35)**. The full `blended-moss-v2` is 119.600s / 3,588 frames, with context-specific
+activity and exact original audio. PR 19 merged as `8846d1b`; checkpoint `blended-moss-v2`
+is pushed. Full Telegram video 23099 and review 23100 are confirmed. Source, prompts,
+selected assets, ledger and evidence are saved. Nothing runs; no further work starts
+before Manish's feedback. Latest handoff:
+`handoffs/HANDOFF-2026-11-16-moss-acting-controller-complete.md`; delivery:
+`MOSS-ACTING-DELIVERY-2026-11-16.md`. New cost $0.859070, project $50.165149 of $100;
+$50 milestone sent (23097). Codex weekly usage 18% at final verification.
 
 Previous recorded controller on the source Mac (historical session details, not checked live
 on this Mac): ai-peer-video-controller-7 (Opus 5.5; Terminal window 5771 on Mac 48 GB, PID 13541,
@@ -17,6 +18,14 @@ hand-off, `handoffs/HANDOFF-2026-11-16-ai-peer-video-controller-6.md` (no worker
 take-over: `START-HERE.md` at the repo root. Other sessions message the controller by its name.
 
 ## Where we are (2026-11-16)
+
+**2026-11-16 18:54 UTC, Moss acting v2 complete, delivered and saved.** PR 19 is merged (`8846d1b`),
+checkpoint `blended-moss-v2` is pushed, and all source/media/evidence are in git/LFS. Full
+video 23099 and review 23100 reached Attention with correct metadata. The controller
+accepted 173 caption-aware source points, 86 final scene frames, 64 boundaries and 22
+send-copy frames; complete decodes and exact original audio pass. One notebook keyframe
+and four new actions cost $0.859070; total $50.165149. Worker finished, nothing runs.
+Next is Manish's review. Full record: `MOSS-ACTING-DELIVERY-2026-11-16.md`.
 
 **18:49 UTC, full Moss v2 accepted and delivered.** The 119.600s / 3,588-frame exports
 pass full decode and exact original audio checks. Controller accepted 86 encoded scene
@@ -734,9 +743,9 @@ Still running:
 | What | PID | Log | Stop command |
 |---|---|---|---|
 
-Current V35 worker: Codex `moss_acting_builder` under `moss_acting_controller`; managed
-worktree `moss-acting`, branch `codex/moss-acting-v2`. No Claude session or shell usage watcher
-was launched; the controller checks Codex usage at milestones. The lines below are history.
+V35 complete: `moss_acting_builder` finished; no render, server, generation request,
+Claude session or shell watcher runs. The controller finished delivery, merge and checkpoint.
+Retained checkouts are synced to final main. The lines below are history.
 
 Nothing ran after 02:32 UTC on 16 November until the later Codex packages: the usage wait was stopped when no worker was left.
 Before: `usage` was started by ai-peer-video-controller-6 at 16:58 UTC on 15 November; `stall-wp7` (16:58
@@ -819,6 +828,10 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 | | **Total of the $100 cap** | | **$50.165149**; V35 $0.859070 of its $10 allocation. $50 notice sent (Telegram 23097). |
 
 ## Needs Manish
+
+**V35 delivered, 16 November UTC:** review full Moss acting v2 on Telegram (23099).
+No clarification or implementation task remains. Tag v2 is the last user-approved film
+until he says otherwise. Older notes follow.
 
 **V35, 16 November 18:17 UTC:** no clarification needed. Build the context-specific acting
 revision and deliver the full new movie for review. Routine performance choices belong to
@@ -983,6 +996,10 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
+
+**V35 complete:** await Manish's review of the full `blended-moss-v2`. No new
+render, generation or product work starts without his next request. Read the latest
+controller completion handoff and delivery note. Older notes follow.
 
 **Now (V35), successor controller:** read `BRIEF-MOSS-ACTING-2026-11-16.md`; map the exact
 scene/acting beats, produce and inspect the needed Moss actions, then build and deliver the
@@ -1211,6 +1228,11 @@ and 7 still hold.
 - See `DESIGN.md` section 0.
 
 ## Lessons
+
+- **A new prop needs caption clearance inside its actual scene.** In V35, the Zoom
+  tile's two-line caption partly covered Moss's notebook. The short in-context proof
+  caught it before the full render; raising only Moss 43px preserved the UI and left
+  notebook/sprout clearance. Inspect props at caption maxima, not only an isolated pilot.
 
 - **A builder's notes carried the private tag video's labels onto the screen.** WP7 described
   Manish's tag video to its builder helper in `ui-concepts/BUILDERS-WP7.md`, with two of its

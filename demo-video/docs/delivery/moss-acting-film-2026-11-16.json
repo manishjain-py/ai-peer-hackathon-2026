@@ -27,5 +27,11 @@
     "chat_id": -5506416790,
     "date_utc": "2026-11-16T18:49:13+00:00",
     "text": "The full Moss v2 is above. Moss now scans and takes notes while reading, listens while Ram types, thinks before answering, records the meeting question for Ram, and acknowledges his actual click. The original narration, music and timing are preserved. Ready for your review."
-  }
+  },
+  "pull_request": "https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/19",
+  "merge_sha": "8846d1bbb138c0a0b8bcf8b24bba9a808d6e7cee",
+  "checkpoint": "blended-moss-v2",
+  "source_saved": true,
+  "master_file": "film/renders/blended-moss-v2.mp4",
+  "master_sha256": "acf0d9aa68f86f085c24a698f095e5606cf86b23b29db1f83965d6029aaac2b4"
 }
