@@ -1,6 +1,6 @@
 # Round 2: 25 generated mascot directions
 
-Requested by Manish on 16 November 2026 (DESIGN V33). The first twelve code-drawn options were too constrained. This round uses original AI-generated raster character design, then generated character acting where suitable. The approved Tag v2 film remains the base; no full-film replacement has been chosen.
+Requested by Manish on 16 November 2026 (DESIGN V33). The first twelve code-drawn options were too constrained. This round uses original AI-generated raster character design, then generated character acting where suitable. The approved Tag v2 film remains the base. Manish selected Moss (25) for the complete V34 trial, now delivered as `../film/renders/blended-moss-v1.mp4`; see `../docs/MOSS-FILM-DELIVERY-2026-11-16.md`. Tag v2 stays approved until his review.
 
 **The collection is complete:** 25 comparable 23.3-second in-demo auditions, 720p send copies and 1080p masters, a 75-second quick-look reel, and a local shortlist gallery. Open `index.html`. `renders/overview.jpg` and `renders/group-1.jpg` through `group-5.jpg` show all 25 options. `concepts.json` contains names, personalities and individual art directions. Master art is in `images/NN-name.png`, true-alpha cutouts in `cutouts/NN-name.png`. `asset-metadata.json` records their bounds and anchors.
 

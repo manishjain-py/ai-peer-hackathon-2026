@@ -1,12 +1,13 @@
 # AI Peer demo video: state
 
-Current requested work (Codex, 16 November 2026, 15:11 UTC): **Moss selected for the full
-blended film (V34)**. Create `blended-moss-v1`, replacing Tag everywhere, including the entire
-source-rebuilt product walkthrough. Keep the approved story/timing/audio/theme; preserve the
-Tag master. Brief: `BRIEF-MOSS-FULL-FILM-2026-11-16.md`. A fresh successor controller owns the
-new task with one implementation worker; the parent chat relays progress/results. Current
-project spend $48.906079; controller allocation up to $10 new generation within $100 total,
-with a notification when crossing $50. Codex weekly usage 13% at 15:11 UTC.
+Current completed work (Codex, 16 November 2026, 16:20 UTC): **Moss full blended film delivered
+(V34)**. `demo-video/film/renders/blended-moss-v1.mp4` is the complete 119.600-second 1080p
+movie; the `-720p` copy is on Telegram (video 23091, review text 23092). Full walkthrough,
+all film appearances and marks use Moss. Original audio/timing/UI are preserved. PR 18 is
+merged (`2996671`), checkpoint `blended-moss-v1`. Tag v2 stays the last approved full film;
+Moss awaits Manish's review. Nothing runs. New spend $0.40, project $49.306079. Weekly usage
+16% at completion. Read `MOSS-FILM-DELIVERY-2026-11-16.md`, then the controller handoff
+`handoffs/HANDOFF-2026-11-16-moss-film-controller-complete.md` for the clean next starting point.
 
 Previous recorded controller on the source Mac (historical session details, not checked live
 on this Mac): ai-peer-video-controller-7 (Opus 5.5; Terminal window 5771 on Mac 48 GB, PID 13541,
@@ -16,6 +17,15 @@ hand-off, `handoffs/HANDOFF-2026-11-16-ai-peer-video-controller-6.md` (no worker
 take-over: `START-HERE.md` at the repo root. Other sessions message the controller by its name.
 
 ## Where we are (2026-11-16)
+
+**16:20 UTC, 16 November: Moss full film complete and delivered (V34).** The 119.600-second
+1080p master and 720p copy pass the complete visual/media walk. The controller accepted
+173 caption-aware source points, 73 encoded scene frames, 42 boundary frames and 12 send
+frames; all 5,608 AAC packets/timing and decoded audio hashes match Tag v2. Video 23091
+and review text 23092 reached Telegram. PR 18 merged as `2996671`, checkpoint `blended-moss-v1`.
+All source/assets/evidence are saved; Tag v2 is preserved and remains the last approved film.
+New cost $0.40, total $49.306079; no pending paid call or worker. Next: Manish's review.
+Full record: `MOSS-FILM-DELIVERY-2026-11-16.md`. Older notes below are history.
 
 **Moss gesture milestone, 16 November:** the sole builder proved an identity-preserving
 attentive/thinking gesture, inspected by the controller, then generated a presenting action
@@ -765,6 +775,10 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 
 ## Needs Manish
 
+**V34 delivered, 16 November:** review the complete Moss movie on Telegram (23091). No
+implementation decision or clarification is open. Tag v2 remains approved until his feedback.
+Older notes follow.
+
 **V34, 16 November 15:11 UTC:** no clarification needed. Moss25 is selected for the full-film
 trial. Deliver the complete Moss cut for review; do not ask him to select another mascot.
 Older notes follow.
@@ -920,6 +934,10 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
+
+**Now: V34 is complete.** Nothing runs. Await Manish's feedback on the full Moss movie.
+Start from `MOSS-FILM-DELIVERY-2026-11-16.md` and the latest controller handoff. Do not resume
+product work or generate another variant without a new request. Older next-step notes follow.
 
 **Now (V34), successor controller:** build and deliver the complete Moss blended film from
 `BRIEF-MOSS-FULL-FILM-2026-11-16.md`, including the full source-rebuilt walkthrough. One worker,
@@ -1299,3 +1317,5 @@ and 7 still hold.
 | 2026-11-16 12:21 | ai-peer-video-controller-7 | Took over from ai-peer-video-controller-6 (read STATE by its parts and the hand-off); checked that controller-6's window 5591 closed itself at 12:20 UTC; greeted Manish. | Waiting for his next word |
 | 2026-11-16 | Codex controller + mascot_previews | V32: twelve original code-native mascot options, 23.3-second in-demo reels, gallery and evidence; PR 16 merged; overview and all twelve videos sent to Telegram | Await Manish's choice; approved Tag v2 unchanged; $0 new spend |
 | 2026-11-16 | Codex controller, mascot_previews, generated_mascot_renderer | V33: 25 generated-art mascots, 23 generated motion takes, 52 preview exports, gallery and provenance; PR 17 merged; all options and quick-look delivered to Telegram | Await selection; approved film unchanged; round $6.826079, project $48.906079 |
+
+| 2026-11-16 | Codex moss_film_controller + moss_film_builder | V34: full Moss replacement, source walkthrough, two purposeful gestures, complete encoded walk/audio proof; PR 18 merged and checkpoint saved; full video delivered to Telegram | Review pending; Tag v2 preserved; $0.40 new spend; $49.306079 total; nothing runs |

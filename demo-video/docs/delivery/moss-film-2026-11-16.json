@@ -25,5 +25,10 @@
   },
   "actual_movie_seconds": 119.6,
   "new_cost_usd": 0.4,
-  "project_cost_usd": 49.306079
+  "project_cost_usd": 49.306079,
+  "pull_request": "https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/18",
+  "merge_sha": "299667167883b94f28b5220e08581fb3ba7d99cb",
+  "checkpoint": "blended-moss-v1",
+  "controller_acceptance": "passed",
+  "approved_as_final_by_user": false
 }

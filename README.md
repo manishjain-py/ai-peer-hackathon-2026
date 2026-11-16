@@ -13,9 +13,9 @@ Like Magic as the test company.
 - Decisions and design: [docs/build/DESIGN.md](docs/build/DESIGN.md)
 - Agent instructions: [AGENTS.md](AGENTS.md)
 - The concept film (Draft 07, 4:23) and its docs: [film/](film/README.md)
-- The 2-minute demo video (November 2026): [demo-video/](demo-video/AGENTS.md); the final video is
-  `demo-video/film/renders/blended-tag-v2.mp4`, the Tag version
-- Latest: [25 generated mascot directions and previews](demo-video/mascot-exploration-v2/index.html) (16 November, Round 2), delivered to Telegram and awaiting your choice. The [first twelve code-native options](demo-video/mascot-options/index.html) and approved full film are preserved.
+- The 2-minute demo video (November 2026): [demo-video/](demo-video/AGENTS.md).
+- Latest: [the complete Moss movie](demo-video/film/renders/blended-moss-v1.mp4) (1:59.6), delivered for review on 16 November. [Delivery record](demo-video/docs/MOSS-FILM-DELIVERY-2026-11-16.md). The last approved full movie remains `demo-video/film/renders/blended-tag-v2.mp4`.
+- The [25 generated directions](demo-video/mascot-exploration-v2/index.html), [first twelve code-native options](demo-video/mascot-options/index.html), and every earlier film are preserved.
 
 Clone note: film media is in Git LFS and skipped by default. Fetch it with
 `git lfs pull --include="film/**" --exclude=""`.

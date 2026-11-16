@@ -1,6 +1,6 @@
 # Moss full-film acceptance, 16 November 2026
 
-Controller checklist for V34. Status: complete caption-aware source walkthrough accepted; final export validation pending.
+Controller checklist for V34. Status: final exports accepted, delivered and merged.
 
 ## Fixed reference
 
@@ -76,3 +76,20 @@ Dormant-state encoded proof also passed: Moss's identity mark wakes into its ful
 by 13.6s, returns to the phone around 104.5–104.8s and wakes in the morning brief by
 106.3s. Original state timing is retained. All remaining work is final encoded
 scene review, media/audio proof, delivery and repository wrap-up.
+
+## Final controller acceptance
+
+Accepted on 16 November at 16:20 UTC. The controller inspected all seven `film-encoded-*`
+sheets (73 frames), four `transitions-encoded-*` sheets (42 boundary frames), and the
+12-frame `send-encoded-1.jpg`. All 20 scene slots are covered. The completed encoded cut
+retains the accepted caption clearance, source/fact/brief content, AI labels, room/phone
+choreography and Moss marks. No material issue remained.
+
+`checks.json` confirms both complete decodes, 3,588 frames at 30 fps, 119.600 seconds,
+1080p/720p dimensions, identical original 5,608 audio packets including timing and decoded
+audio hash, unchanged Tag v2 master, and source/UI invariants. The controller also
+recursively compared all cut JSON changes independently: only variant descriptions,
+Moss portrait and rebuilt walkthrough source references differ.
+
+Telegram delivered video 23091 and review text 23092. PR 18 merged as `299667167883b94f28b5220e08581fb3ba7d99cb`;
+checkpoint `blended-moss-v1`. See `MOSS-FILM-DELIVERY-2026-11-16.md` and the delivery receipt.

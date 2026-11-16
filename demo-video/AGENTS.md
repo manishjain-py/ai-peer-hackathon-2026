@@ -3,13 +3,14 @@
 A new 2-minute "wow" demo video for the AI Peer hackathon project, started 2026-11-14.
 It is a new film, separate from the September concept film in `../film/`.
 
-The final video (16 November 2026): `film/renders/blended-tag-v2.mp4`, the Tag version, tag
+The last approved full video (16 November 2026): `film/renders/blended-tag-v2.mp4`, the Tag version, tag
 `blended-tag-v2` (V30, V31; Little Peer is not used). Earlier cuts and every checkpoint:
 `../START-HERE.md`, "Checkpoints".
 
-Latest exploration (16 November, V33): `mascot-exploration-v2/index.html`, 25 generated-art
-mascots with in-demo previews and a quick-look reel, delivered to Telegram. Await Manish's
-selection; the approved Tag film and first twelve code-native options remain unchanged.
+Latest complete cut (16 November, V34): `film/renders/blended-moss-v1.mp4`, 119.600 seconds,
+Moss throughout the full walkthrough and film; delivered to Telegram for Manish's review.
+See `docs/MOSS-FILM-DELIVERY-2026-11-16.md`. Nothing runs. Tag v2 remains approved until his
+feedback. Round 2's 25 generated directions and the first twelve options are preserved.
 
 ## Start here
 
