@@ -1,13 +1,24 @@
 # AI Peer demo video: state
 
-Live controller: **ai-peer-video-controller-6** (Opus 5.5; Terminal window 5591 on Mac 48 GB, PID
-79572, https://claude.ai/code/session_01Nfn5h634KpZdXvvB4k2k9P), since 16:58 UTC on 15 November;
-it took over from ai-peer-video-controller-5 (closed at 16:58 UTC). Read next: the hand-off
-`handoffs/HANDOFF-2026-11-15-ai-peer-video-controller-5.md` and the live worker's brief,
-`handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7.md`. A new Mac or a take-over: `START-HERE.md`
+Live controller: ai-peer-video-controller-6 (Opus 5.5; Terminal window 5591 on Mac 48 GB, PID 79572,
+https://claude.ai/code/session_01Nfn5h634KpZdXvvB4k2k9P) until its hand-off at 12:18 UTC on 16
+November to **ai-peer-video-controller-7** (Opus 5.5), which writes its own window and link here
+when it has read in; controller-6 then closes its own window. Read next: the hand-off
+`handoffs/HANDOFF-2026-11-16-ai-peer-video-controller-6.md` (no worker is live). A new Mac or a take-over: `START-HERE.md`
 at the repo root. Other sessions message the controller by its name.
 
-## Where we are (2026-11-16 12:03 UTC)
+## Where we are (2026-11-16 12:18 UTC)
+
+**12:18 UTC, 16 November: the Tag version is the final video (V31); ai-peer-video-controller-6
+hands off to ai-peer-video-controller-7.** Manish at 12:15 UTC: "And also, one decision that I
+made was that we are not going with the little peer version, we will go with the tag version."
+(in full in `FEEDBACK-FINAL-CHOICE-2026-11-16.md`). The final video:
+`demo-video/film/renders/blended-tag-v2.mp4` (tag `blended-tag-v2`); Little Peer is not used. Docs
+brought up to date (this file, `DESIGN.md` V31, `START-HERE.md`, `README.md`,
+`demo-video/AGENTS.md`). At his request ("please do the handoff note, hand off to a new session
+and close yourself too"): the hand-off `handoffs/HANDOFF-2026-11-16-ai-peer-video-controller-6.md`;
+controller-6 (context 32%) launches controller-7 right after this commit, then closes its own
+window. Nothing runs. Week 81% at 12:16 UTC (resets Monday 16 November 22:59 UTC).
 
 **12:03 UTC, 16 November: the first controller's window is closed.** Manish at 12:02 UTC asked
 which inactive sessions of this work could be closed. ai-peer-video-controller-1 (window 2952,
@@ -492,7 +503,7 @@ set-ups: ask Manish before spending on them.
 
 | Session | Window | Session URL | Worktree | Branch | PR | Job |
 |---|---|---|---|---|---|---|
-| ai-peer-video-controller-6 | 5591 | https://claude.ai/code/session_01Nfn5h634KpZdXvvB4k2k9P | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | The live controller since 16:58 UTC on 15 November; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 79572, transcript `36ef5c66-79ae-43f6-b644-48a182c0fb5e` |
+| ai-peer-video-controller-6 (hands off 12:18 UTC, 16 November, then closes itself) | 5591 | https://claude.ai/code/session_01Nfn5h634KpZdXvvB4k2k9P | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | The live controller since 16:58 UTC on 15 November; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 79572, transcript `36ef5c66-79ae-43f6-b644-48a182c0fb5e` |
 | ai-peer-video-controller-5 (closed 16:58 UTC, 15 November) | 5570 | https://claude.ai/code/session_01Nfn5hAQtMCLhcAz7Z5MUzm | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | The controller from 13:21 to 16:56 UTC on 15 November, then handed off to ai-peer-video-controller-6; PID 14002, transcript `886d5eab-f5fa-4248-ad50-268c2aa3f990` |
 | ai-peer-video-controller-4 (closed 13:24 UTC, 15 November) | 3977 | https://claude.ai/code/session_01Nfn5h9pvSF58rFbV1QBNt4 | `~/repos/ai-peer-hackathon-2026` (docs only) | main | none | Controller from 15:02 UTC on 14 November to its hand-off at 13:21 UTC on 15 November; PID 35776, transcript `4754b08d-f4fe-4f30-aeee-6e92a6cbb597` |
 | ai-peer-video-wp7-3 (closed 02:31 UTC, 16 November) | 5612 | https://claude.ai/code/session_01Nfn5h86jPoToz2dw3r3sDJ | `~/repos/ai-peer-video-wp7` (WP7's) | `video-wp7-v2` (from `5c34cdb`) | none yet | The Tag blend's v2 (V27, V28; brief `handoffs/HANDOFF-2026-11-15-ai-peer-video-wp7-3.md`); launched at 18:48 UTC in the shared checkout with `CLAUDE_NO_IDLE_PING=1`; Opus 5.5 (`claude-opus-5-5[1m]`), max effort, PID 98609, transcript `d6e90b9b-a334-4734-bd4a-9776eefa38cb` |
@@ -641,6 +652,9 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 
 ## Needs Manish
 
+**Answered 2026-11-16 12:15 UTC (V31): the Tag version is the final video, not Little Peer; then
+a hand-off to a new controller.** Done. No question is open.
+
 **Answered 2026-11-16 02:29 UTC (V30): the Tag's version 2 "looks very good"; bring the docs up to
 date, then commit and push everything.** Done. No question is open; Little Peer's version 2 waits
 for his word (V28).
@@ -777,6 +791,11 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
+
+**Now (12:18 UTC, 16 November), ai-peer-video-controller-7:** follow
+`handoffs/HANDOFF-2026-11-16-ai-peer-video-controller-6.md`, "Next step, exactly": take over,
+check that window 5591 is gone, greet Manish, wait for his next word. Nothing runs and nothing
+is pending; the final video is the Tag's version 2 (V30, V31). The notes below are older.
 
 **Now (02:33 UTC, 16 November), ai-peer-video-controller-6:** nothing runs. Wait for Manish's
 next word (Little Peer's version 2 waits, V28). For new work: one fresh worker on Opus 5.5 with a
@@ -962,10 +981,18 @@ and 7 still hold.
 
 ## Settled, do not re-open
 
+- **The final demo video is the Tag version** (`demo-video/film/renders/blended-tag-v2.mp4`, V30,
+  V31). Little Peer is not used; do not build its version 2 without his word.
 - See `DESIGN.md` section 0.
 
 ## Lessons
 
+- **A builder's notes carried the private tag video's labels onto the screen.** WP7 described
+  Manish's tag video to its builder helper in `ui-concepts/BUILDERS-WP7.md`, with two of its
+  button labels; the helper used them as on-screen labels of the rebuilt tag, and its clips showed
+  them. The controller's `privacy-check.sh` (counts against the private list) caught it before
+  anything was sent; ai-peer-video-wp7-2 renamed them and re-rendered. Give builders made-up
+  labels in the brief, and run the check on a helper's folder before its first render.
 - **A weekday worked out by hand put the weekly reset a day early.** The controller turned
   "Monday 17 November 04:30 India time" into Sunday 23:00 UTC, but 17 November 2026 is a
   Tuesday; `/usage` says "resets Nov 17 at 4:29am (Asia/Calcutta)", which is Monday 16 November
@@ -1115,3 +1142,4 @@ and 7 still hold.
 | 2026-11-15 19:50 | ai-peer-video-controller-6 | Checked the merge of PR #15 (`f6c21b4`), tagged `blended-tag-v2`, stopped `stall-wp7-3` (wp7-3 idle at 35.2%), added WP7-3's $0.65 to Money spent ($42.08). | Waiting on his view of v2 |
 | 2026-11-16 02:33 | ai-peer-video-controller-6 | Manish approved the Tag's version 2 (V30) and asked for the docs to be brought up to date and everything committed and pushed: done (STATE, DESIGN, START-HERE, README, demo-video/AGENTS.md); every worktree checked; wp7-3 closed; the usage wait stopped. | Nothing runs; no question open |
 | 2026-11-16 12:03 | ai-peer-video-controller-6 | On Manish's question, closed the first controller's window 2952 (idle since 14 November); no other session or process of this work was left. | Only the controller is open |
+| 2026-11-16 12:18 | ai-peer-video-controller-6 | Manish chose the Tag version as the final video (V31) and asked for a hand-off: docs brought up to date, `HANDOFF-2026-11-16-ai-peer-video-controller-6.md` written; launching ai-peer-video-controller-7, then closing its own window. | Handed off |
