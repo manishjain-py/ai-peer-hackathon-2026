@@ -14,6 +14,7 @@ recordings, which stay out of git by rule.
 | Project rules for every agent | `AGENTS.md` (Claude Code loads it through `CLAUDE.md`) |
 | The live work (November 2026): the 2-minute demo video | `demo-video/AGENTS.md`, then `demo-video/docs/STATE.md` (the tracker) |
 | The final demo video (16 November 2026) | `demo-video/film/renders/blended-tag-v2.mp4`: the Tag version (V30, V31; Little Peer is not used) |
+| Mascot alternatives, awaiting Manish's choice (16 November 2026) | `demo-video/mascot-options/index.html`: twelve short in-demo previews, all delivered to Telegram (V32); `demo-video/docs/MASCOT-DELIVERY-2026-11-16.md` |
 | The demo video's decisions and Manish's words | `demo-video/docs/DESIGN.md` section 0 |
 | Briefs and hand-offs between sessions, dated, never edited | `demo-video/docs/handoffs/` |
 | The product, the generic AI Peer | `docs/build/STATE.md`: its build closed on this repo on 7 November and goes on, from a hand-off package, on Manish's company Mac |
@@ -34,6 +35,7 @@ the root `AGENTS.md`: one worker at a time (V15, C13), the 85% and 93% usage mar
 | `wow-concepts-v1` | The five "wow" concepts for the product's screens (PR 13); Manish liked Little Peer (V23) |
 | `blended-v1` | The two blended videos, Little Peer and Tag, version 1 (PR 14) |
 | `blended-tag-v2` | The Tag blended video, version 2 (PR 15): his eight changes (V27, V28) and transition C (V29); approved on 16 November (V30): the final video (V31) |
+| `mascot-options-v1` | Twelve mascot alternatives inside the same Tag film scenes (PR 16), delivered to Telegram on 16 November (V32); the approved full film is unchanged and the choice is pending |
 
 - Go back to one: `git worktree add ../ai-peer-at-draft-03 draft-03` (a separate folder;
   `main` stays as it is).

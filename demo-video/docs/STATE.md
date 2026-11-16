@@ -1,11 +1,11 @@
 # AI Peer demo video: state
 
-Current requested work (Codex, 16 November 2026, 12:40 UTC): **12 mascot alternatives for the
-approved Tag film**, V32. One implementation worker (`mascot_previews`) in the managed
-`mascot-options` worktree on `codex/mascot-options`; the controller reviews and delivers all
-options to Telegram. Brief: `BRIEF-MASCOT-OPTIONS-2026-11-16.md`; worker brief:
-`handoffs/HANDOFF-2026-11-16-mascot-options.md`. No paid generation planned. The approved
-film stays intact until Manish chooses. Codex weekly usage: 10% used at 12:38 UTC.
+Current requested work (Codex, 16 November 2026, 13:01 UTC): **V32 complete: twelve mascot
+alternatives delivered to Telegram** (overview, twelve numbered videos, recommendation).
+PR 16 merged as `083bef7`; checkpoint `mascot-options-v1`. Gallery:
+`demo-video/mascot-options/index.html`. Delivery record: `MASCOT-DELIVERY-2026-11-16.md`.
+The implementation worker finished. Await Manish's number or shortlist; the approved Tag v2
+full film remains unchanged. New paid spend $0; Codex weekly usage 11% at 12:55 UTC.
 
 Previous recorded controller on the source Mac (historical session details, not checked live
 on this Mac): ai-peer-video-controller-7 (Opus 5.5; Terminal window 5771 on Mac 48 GB, PID 13541,
@@ -14,7 +14,17 @@ November from ai-peer-video-controller-6 (window 5591, closed at 12:20 UTC). Rea
 hand-off, `handoffs/HANDOFF-2026-11-16-ai-peer-video-controller-6.md` (no worker is live). A new Mac or a
 take-over: `START-HERE.md` at the repo root. Other sessions message the controller by its name.
 
-## Where we are (2026-11-16 12:40 UTC)
+## Where we are (2026-11-16 13:01 UTC)
+
+**13:01 UTC, 16 November: all twelve mascot options delivered (V32), PR 16 merged.** Folio,
+Swift, Sable, Nox, Loop, Pip, Cairn, Luma, North, Manta, Tandem and Post each have a 23.3-second
+in-demo reel, 720p/1080p exports, portrait and scene sheet; the gallery and overview are in
+`demo-video/mascot-options/`. Telegram confirmed the overview and all twelve videos; the final
+recommendation went at 12:59:55 UTC (message 23050). Controller's recommendation: 01 Folio,
+then 08 Luma and 04 Nox. No selection from Manish yet. All 24 exports decode, 699 frames each;
+the original master hash is unchanged. Source, media and evidence are committed and pushed
+(PR 16, `083bef7`; tag `mascot-options-v1`). No private media used, no paid calls. Full details:
+`MASCOT-DELIVERY-2026-11-16.md`. The worker finished; nothing further starts before his choice.
 
 **12:40 UTC, 16 November: mascot exploration started at Manish's request (V32).** The approved
 119.6-second Tag film is the base. Twelve distinct code-native alternatives will be shown in
@@ -673,8 +683,9 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 
 ## Needs Manish
 
-**16 November, V32:** no choice needed during creation. The controller will send all twelve
-mascot previews and a recommendation to Telegram; Manish chooses after reviewing them.
+**16 November, 12:59 UTC, V32:** all twelve mascot previews and the overview are on Telegram.
+Await Manish's preferred number or shortlist. Recommendation: 01 Folio; alternatives 08 Luma,
+04 Nox. The approved full Tag film is unchanged.
 
 **Answered 2026-11-16 12:15 UTC (V31): the Tag version is the final video, not Little Peer; then
 a hand-off to a new controller.** Done. No question is open.
@@ -816,9 +827,10 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 
 ## Next
 
-**Now (16 November, V32), Codex:** complete and visually inspect twelve mascot preview reels,
-record public-source provenance and media checks, send all options to Telegram, then await
-Manish's selection. The approved Tag v2 master remains unchanged. Older notes follow.
+**Now (16 November, 13:01 UTC, V32), Codex:** the requested exploration and Telegram delivery
+are complete. Await Manish's choice or feedback. Record it in DESIGN, then scope full-film
+mascot integration if requested. Preserve all previews and the approved Tag v2 master. Older
+notes follow.
 
 **Now (12:21 UTC, 16 November), ai-peer-video-controller-7:** nothing runs and nothing is
 pending. Wait for Manish's next word. For new video work: the hand-off's "Next step, exactly",
@@ -1176,3 +1188,4 @@ and 7 still hold.
 | 2026-11-16 12:03 | ai-peer-video-controller-6 | On Manish's question, closed the first controller's window 2952 (idle since 14 November); no other session or process of this work was left. | Only the controller is open |
 | 2026-11-16 12:18 | ai-peer-video-controller-6 | Manish chose the Tag version as the final video (V31) and asked for a hand-off: docs brought up to date, `HANDOFF-2026-11-16-ai-peer-video-controller-6.md` written; launching ai-peer-video-controller-7, then closing its own window. | Handed off |
 | 2026-11-16 12:21 | ai-peer-video-controller-7 | Took over from ai-peer-video-controller-6 (read STATE by its parts and the hand-off); checked that controller-6's window 5591 closed itself at 12:20 UTC; greeted Manish. | Waiting for his next word |
+| 2026-11-16 | Codex controller + mascot_previews | V32: twelve original code-native mascot options, 23.3-second in-demo reels, gallery and evidence; PR 16 merged; overview and all twelve videos sent to Telegram | Await Manish's choice; approved Tag v2 unchanged; $0 new spend |
