@@ -14,11 +14,11 @@ The image-generation skill was read. The explicit Gemini/fal provider request go
 
 ### Models and official references checked on 16 November
 
-- **Gemini Nano Banana 2.1** (`gemini-nano-banana-2.1`): direct account/model probe returned HTTP200 with `generateContent` supported. Each of the 25 images is a separate 2K request. Google's current documentation recommends this successor to the 3.1 Flash Image model used in the inspected app. [Image API](https://ai.google.dev/gemini-api/docs/image-generation), [pricing](https://ai.google.dev/gemini-api/docs/pricing).
+- **Gemini Nano Banana 2.1** (`gemini-nano-banana-2.1`): direct account/model probe returned HTTP 200 with `generateContent` supported. Each of the 25 images is a separate 2K request. Google's current documentation recommends this successor to the 3.1 Flash Image model used in the inspected app. [Image API](https://ai.google.dev/gemini-api/docs/image-generation), [pricing](https://ai.google.dev/gemini-api/docs/pricing).
 - **fal BiRefNet**, General Use (Heavy), 2048 resolution, PNG, foreground refinement: extracts true alpha from each original image. [API](https://fal.ai/models/fal-ai/birefnet/api).
-- **fal MiniMax H3 Max Turbo**: character-only five-second takes, 768P, individual gestures, fixed camera. Public standard pricing changed on 16 November to $0.04/s at768p; the account's live base quote was lower, so the ledger keeps the conservative public-rate estimate. [API](https://fal.ai/models/minimax/h3-max-turbo/image-to-video/api), [pricing information](https://fal.ai/models/minimax/h3-max-turbo/image-to-video).
+- **fal MiniMax H3 Max Turbo**: character-only five-second takes, 768P, individual gestures, fixed camera. Public standard pricing changed on 16 November to $0.04/s at 768p; the account's live base quote was lower, so the ledger keeps the conservative public-rate estimate. [API](https://fal.ai/models/minimax/h3-max-turbo/image-to-video/api), [pricing information](https://fal.ai/models/minimax/h3-max-turbo/image-to-video).
 
-There are **23 generated motion takes**. Nori05 and Dew15 retain their provider-alpha still artwork to preserve translucent material detail; their later composed movement must be described accurately. All other options have real generated eye/head/limb/wing/tail/fabric movement, rather than only a rigid whole-sprite bob. `motion-manifest.json` names each method. Moss25 uses the second pilot, which has a clearer wave, closed-eye smile and head tilt; the subdued first take is preserved as experiment evidence.
+There are **23 generated motion takes**. Nori (05) and Dew (15) retain their provider-alpha still artwork to preserve translucent material detail; their later composed movement must be described accurately. All other options have real generated eye/head/limb/wing/tail/fabric movement, rather than only a rigid whole-sprite bob. `motion-manifest.json` names each method. Moss (25) uses the second pilot, which has a clearer wave, closed-eye smile and head tilt; the subdued first take is preserved as experiment evidence.
 
 ## Motion and alpha
 
@@ -28,7 +28,7 @@ There are **23 generated motion takes**. Nori05 and Dew15 retain their provider-
 
 ## Cost and guardrails
 
-At completion (rendering added no paid calls): **$6.826079** for this round, conservatively recorded; **$48.906079** project total including the prior $42.08. Gemini: $1.566079 from provider token usage × published rates, not an invoice. Fal: $5.26 conservative ledger amounts. There were 25 Gemini image calls and 49 fal calls (25 cutouts, two Moss animation pilots,22 other animation takes). No paid call is still pending.
+At completion (rendering added no paid calls): **$6.826079** for this round, conservatively recorded; **$48.906079** project total including the prior $42.08. Gemini: $1.566079 from provider token usage × published rates, not an invoice. Fal: $5.26 conservative ledger amounts. There were 25 Gemini image calls and 49 fal calls (25 cutouts, two Moss animation pilots, 22 other animation takes). No paid call is still pending.
 
 The round cap is **$15 total**. Gemini's runner enforces a $5 cap; fal's existing tool enforces $10 including in-flight reservations. These subcaps sum to the round cap. No subscription was bought. The $50 project milestone has not yet been reached; the controller must notify Manish if subsequent work passes it. See `ledger/summary.json`, `gemini.jsonl`, `fal.csv` and request/response metadata.
 
@@ -37,10 +37,10 @@ The round cap is **$15 total**. Gemini's runner enforces a $5 cap; fal's existin
 All 25 stills and their cutout overview were inspected by the worker and controller for material variety, coherent palette, warmth, silhouette, and complete framing. The renderer worker inspected all 23 motion sheets, all 25 small-face crops, and every final encoded audition sheet. The controller accepted the Moss/Nori pilots before the rest of the batch. `MANUAL-REVIEW.md` records the visual walk, source-window choices and limitations; `evidence/render-checks.json` records full decodes, exact frame counts, file sizes and the unchanged approved-master hash.
 
 - `tools/gemini_images.py`: one credential-safe request, cap reservation and token-cost reconciliation; no auto-retry of uncertain paid calls.
-- `tools/generate_all.py`: bounded concurrency3 for the 24 directions; Moss is the retained pilot/bonus25.
-- `tools/cutouts.py`: bounded concurrency2, existing fal budget guard, alpha validation and magenta plate composition.
-- `tools/animate_all.py`: bounded concurrency2, individual generated gestures and explicit translucent exceptions.
-- `tools/rematte.py`: the final despill pass on all23 clips (run after `animate_all.py`; that script's first matte does not apply the final despill).
+- `tools/generate_all.py`: bounded concurrency 3 for the 24 directions; Moss is the retained pilot/bonus 25.
+- `tools/cutouts.py`: bounded concurrency 2, existing fal budget guard, alpha validation and magenta plate composition.
+- `tools/animate_all.py`: bounded concurrency 2, individual generated gestures and explicit translucent exceptions.
+- `tools/rematte.py`: the final despill pass on all 23 clips (run after `animate_all.py`; that script's first matte does not apply the final despill).
 - `tools/make_boards.py`: overview, five larger groups and alpha-bound metadata.
 
 No application test suite or CI was added. Generation validation uses actual output images, alpha channels, metadata and visual inspection. The approved source film and previous twelve options are untouched. The original asset-to-render handoff remains in `docs/handoffs/HANDOFF-2026-11-16-generated-mascots-render.md` relative to `demo-video/`. The controller's final delivery note is linked from `demo-video/docs/STATE.md`.
@@ -54,12 +54,12 @@ No application test suite or CI was added. Generation validation uses actual out
 - `renders/NN-name-encoded.jpg`: eight decoded frames from the final send copy; `NN-name-sheet.png` is the separate source-scene probe sheet.
 - `evidence/avatar-framing.jpg`: all 25 face crops at 96, 64 and 48 pixels.
 
-Every audition uses the same timeline: 3s character introduction, source14–20s phone/desk entrance,
-76.5–81.5s meeting,105.6–111s paper morning brief,115.7–119.6s closing card. The source excerpts
+Every audition uses the same timeline: 3s character introduction, source 14–20s phone/desk entrance,
+76.5–81.5s meeting, 105.6–111s paper morning brief, 115.7–119.6s closing card. The source excerpts
 keep their original audio. Room and UI companions use full-body generated art; avatars, caption
 portraits and closing marks use deliberate still face crops. The body carries a separate AI identity
-label. Nori05 and Dew15 use provider-alpha still artwork with composed movement, stated in their
-intro and gallery. The other23 have internal generated character acting.
+label. Nori (05) and Dew (15) use provider-alpha still artwork with composed movement, stated in their
+intro and gallery. The other 23 have internal generated character acting.
 
 These auditions cover four representative contexts. They are not 25 full-length replacement films,
 and they do not claim that a new character is integrated into every setup/walkthrough recording.
@@ -67,7 +67,7 @@ No final mascot selection is implied by the gallery's local shortlist.
 
 ## Rebuild the local previews
 
-Requirements: Node22+, Chrome, ffmpeg/ffprobe, Python with Pillow, and Playwright. The renderer
+Requirements: Node 22+, Chrome, ffmpeg/ffprobe, Python with Pillow, and Playwright. The renderer
 uses installed Playwright or the Codex bundled runtime (override `CODEX_NODE_MODULES` if needed).
 All rendering inputs are public repository assets. No credential or private folder is required.
 

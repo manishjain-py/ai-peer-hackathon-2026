@@ -39,7 +39,7 @@ exactly 75 seconds.
   retain real wing/tail/face movement without adding paid generations or hiding a clipped edge.
 - Short generated acting takes are reused across excerpt contexts. Speech lip sync and per-line
   character acting have not been authored; the original body-position choreography is retained.
-- Nori05 and Dew15 preserve the provider-alpha still and use a small composed float plus the
+- Nori (05) and Dew (15) preserve the provider-alpha still and use a small composed float plus the
   film's existing choreography. The intro and gallery label that method explicitly.
 - The edge despill preserves wool, paper and silk detail. No visible magenta plate remains in
   the checked dark/cream frames. Very fine pale outlines are possible at magnification, especially
@@ -75,7 +75,7 @@ exactly 75 seconds.
 | 24 | Noodle | Paw wave and a broad smile; curled tail and cloth details remain coherent. |
 | 25 | Moss | Clear paw wave, closed-eye smile and head tilt; soft green/ivory material fits the existing film palette. |
 
-Moss25 and Nori05 were rendered first and visually accepted by the controller before the batch.
+Moss (25) and Nori (05) were rendered first and visually accepted by the controller before the batch.
 The controller accepted each numbered group as its encoded sheets became available. Telegram
 receipts and final delivery are recorded in the controller’s separate final delivery note, linked
 from `demo-video/docs/STATE.md`, rather than inferred here.
@@ -85,8 +85,8 @@ from `demo-video/docs/STATE.md`, rather than inferred here.
 `index.html` was inspected at 1440-pixel desktop and 390-pixel phone widths. The gallery showed
 25 cards, the translucent filter showed exactly two, a saved selection appeared in the shortlist,
 and Moss's local preview loaded at 1280×720 with the expected duration. No page errors or phone
-horizontal overflow were observed. The final quick-look loaded at exactly75seconds and1280×720,
-and all200linked per-character artwork/media files existed. The quick-look’s25decoded intro
+horizontal overflow were observed. The final quick-look loaded at exactly 75 seconds and 1280×720,
+and all 200 linked per-character artwork/media files existed. The quick-look’s 25 decoded intro
 frames were inspected for correct order, complete framing and readable names. Screenshots and the recorded observations are in
 `evidence/gallery-*.png` and `evidence/gallery-checks.json`.
 
@@ -97,11 +97,11 @@ package. No private footage or company media was used for this work.
 
 ## Final encoded media results
 
-All52exports passed full decode: 25auditions in two resolutions and the quick-look in two
-resolutions. Each audition is699video frames/23.3seconds. The quick-look is2250frames/75seconds.
-The720p auditions range from4.13–4.66MB and their1080p masters from7.49–8.49MB (decimalMB).
-The quick-look is5,280,184bytes at720p and10,205,045bytes at1080p. Every decoded frame in
-all23generated alpha sprites has nonzero character coverage. The original approved master’s
+All 52 exports passed full decode: 25 auditions in two resolutions and the quick-look in two
+resolutions. Each audition is 699 video frames / 23.3 seconds. The quick-look is 2250 frames / 75 seconds.
+The 720p auditions range from 4.13–4.66 MB and their 1080p masters from 7.49–8.49 MB (decimal MB).
+The quick-look is 5,280,184 bytes at 720p and 10,205,045 bytes at 1080p. Every decoded frame in
+all 23 generated alpha sprites has nonzero character coverage. The original approved master’s
 SHA256 remains `7756283021b7237605337f079e435babb25143c2fb1d9023e6b70204a952b039`.
 
 Round cost remains **$6.826079**; project total **$48.906079**. Rendering, gallery, compositing
