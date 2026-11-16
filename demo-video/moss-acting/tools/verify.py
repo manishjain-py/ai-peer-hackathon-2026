@@ -11,6 +11,8 @@ def packets(p):
  a=json.loads(run(['ffprobe','-v','error','-select_streams','a:0','-show_packets','-show_data_hash','sha256','-show_entries','packet=pts,dts,duration,size,data_hash','-of','json',str(p)]))
  return hashlib.sha256(json.dumps(a,sort_keys=True).encode()).hexdigest(),len(a['packets'])
 def pcm(p):return run(['ffmpeg','-v','error','-i',str(p),'-map','0:a:0','-f','hash','-hash','sha256','-']).strip()
+v1=DEMO/'film/renders/blended-moss-v1.mp4'
+assert sha(v1)=='c6672bd1b42b09b5c66c4dbd55bdb2f37ef5dbac6e79594f061f3fc5cb4f2941'
 baseline=sha(base);assert baseline=='7756283021b7237605337f079e435babb25143c2fb1d9023e6b70204a952b039'
 ba,bn=packets(base);bp=pcm(base)
 result={'base_sha256':baseline,'base_audio_packet_hash':ba,'base_audio_packet_count':bn,'base_decoded_audio_hash':bp,'files':[]}
@@ -33,5 +35,5 @@ for f in ['paper.js','room.js','style.css','tl.js','u.js','data-extra.js']:
  assert (DEMO/'ui-concepts/tag'/f).read_bytes()==(DEMO/'ui-concepts/moss-v2'/f).read_bytes(),f
 result['invariants']={'slot_count':20,'all_slot_times_camera_keys':True,'all_six_walk_spans':True,'original_audio_configuration':True,'walk_data_layout_style_timeline':True,'base_master_unchanged':True}
 result['privacy']='Only existing public fictional sources and generic generated Moss artwork. No private-term-list scan claimed.'
-result['new_cost_usd']=.4;result['project_cost_usd']=49.306079
+result['new_cost_usd']=0.859070;result['project_cost_usd']=50.165149
 (HERE/'evidence/checks.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps({'exports':len(files),'frames':3588,'seconds':119.6,'audio':'packet and decoded hashes identical','base':'unchanged'},indent=2))

@@ -133,7 +133,7 @@ function zoom(S, film, slot, opts = {}) {
           r.style.transform = `scale(${1 + (0.28 + i * 0.26) * k + i * 0.14})`;
           r.style.opacity = (0.14 + 0.55 * k) * (1 - i * 0.25);
         });
-        T.moss.draw({x:tw/2,y:th-39,s:1,label:false,...filmActing(t)});
+        T.moss.draw({x:tw/2,y:th-82,s:1,label:false,...filmActing(t)});
       } else {
         const s = 1.035 + 0.012 * Math.sin(local * 0.31 + T.i * 1.9);
         T.img.style.transform = `scale(${s.toFixed(4)}) translate(${(3 * Math.sin(local * 0.23 + T.i)).toFixed(2)}px, ${(2 * Math.cos(local * 0.19 + T.i * 2)).toFixed(2)}px)`;
