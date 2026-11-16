@@ -69,7 +69,7 @@ async function seekMascots(page,t){await page.evaluate(async t=>{
  await Promise.all(all.filter(v=>v.checkVisibility({checkOpacity:true,checkVisibilityCSS:true})).map(async v=>{
  if(v.readyState<1)await new Promise((ok,fail)=>{v.addEventListener('loadedmetadata',ok,{once:true});v.addEventListener('error',()=>fail(new Error('Sprite load failed '+v.src)),{once:true});v.load();});
  const start=Number(v.dataset.motionStart||0),end=Math.min(v.duration-.05,Number(v.dataset.motionEnd||4.9)),length=end-start,phase=t%(2*length),at=start+(phase<=length?phase:2*length-phase);
- if(Math.abs(v.currentTime-at)>.00001)await new Promise((ok,fail)=>{const timer=setTimeout(()=>fail(new Error('Sprite seek timeout '+v.src)),7000);v.addEventListener('seeked',()=>{clearTimeout(timer);ok();},{once:true});v.currentTime=at;});
+ if(Math.abs(v.currentTime-at)>.00001)await new Promise((ok,fail)=>{const timer=setTimeout(()=>fail(new Error('Sprite seek timeout '+v.src)),15000);v.addEventListener('seeked',()=>{clearTimeout(timer);ok();},{once:true});v.currentTime=at;});
  }));
  },t);}
 async function seekFilm(page,t){await page.evaluate(async t=>{
@@ -78,15 +78,18 @@ async function seekFilm(page,t){await page.evaluate(async t=>{
  await Promise.all(clips.map(async v=>{
  if(v.readyState<1)await new Promise((ok,fail)=>{v.addEventListener('loadedmetadata',ok,{once:true});v.addEventListener('error',()=>fail(new Error('Video cannot load '+v.src)),{once:true});v.load();});
  const at=Math.max(0,Math.min(v.duration-.001,Number(v.dataset.mediaStart)+(t-Number(v.dataset.start))*Number(v.dataset.playbackRate||1)));
- if(Math.abs(v.currentTime-at)>.00001)await new Promise((ok,fail)=>{const timer=setTimeout(()=>fail(new Error('Video seek timeout')),7000);v.addEventListener('seeked',()=>{clearTimeout(timer);ok();},{once:true});v.currentTime=at;});
+ if(Math.abs(v.currentTime-at)>.00001)await new Promise((ok,fail)=>{const timer=setTimeout(()=>fail(new Error('Video seek timeout '+v.src+' at '+at)),15000);v.addEventListener('seeked',()=>{clearTimeout(timer);ok();},{once:true});v.currentTime=at;});
  }));
  },t);await seekMascots(page,t);}
 function checkPage(page){if(page.__errors.length)throw new Error(page.__errors.join('\n'));}
-function muxAudio(video,out){
+async function execAsync(command,args){
+ const child=spawn(command,args,{stdio:['ignore','ignore','pipe']});let error='';child.stderr.on('data',x=>error+=x);const [code]=await once(child,'close');if(code!==0)throw new Error(command+' failed: '+error);
+}
+async function muxAudio(video,out){
  const a=path.join(FILM,'renders/blended-tag-v2.mp4');
  const parts=spans.map((s,i)=>s.kind==='intro'?`anullsrc=r=48000:cl=stereo,atrim=duration=${s.length},asetpts=PTS-STARTPTS[a${i}]`:`[1:a]atrim=start=${s.from}:duration=${s.length},asetpts=PTS-STARTPTS[a${i}]`);
  const filter=parts.join(';')+';'+spans.map((_,i)=>`[a${i}]`).join('')+`concat=n=${spans.length}:v=0:a=1[a]`;
- execFileSync('ffmpeg',['-hide_banner','-loglevel','error','-nostdin','-y','-i',video,'-i',a,'-filter_complex',filter,'-map','0:v','-map','[a]','-c:v','libx264','-preset','slow','-crf','25','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart',out]);
+ await execAsync('ffmpeg',['-hide_banner','-loglevel','error','-nostdin','-y','-i',video,'-i',a,'-filter_complex',filter,'-map','0:v','-map','[a]','-c:v','libx264','-preset','slow','-crf','25','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart',out]);
 }
 async function run(){
  prepare();const {srv,url}=await server();const browser=await PW.chromium.launch({executablePath:CHROME,headless:true,args:['--disable-background-networking','--disable-component-update','--no-first-run','--hide-scrollbars']});
@@ -100,7 +103,7 @@ async function run(){
  await intro.evaluate(()=>window.draw(.8));await seekMascots(intro,.8);await intro.screenshot({path:path.join(OUT,basename+'-portrait.png')});
  const probeTimes=[15.6,18.6,80,108.6,117.6];
  for(let j=0;j<probeTimes.length;j++){await seekFilm(film,probeTimes[j]);await film.screenshot({path:path.join(CACHE,basename+`-frame${j}.png`)});}
- execFileSync('ffmpeg',['-hide_banner','-loglevel','error','-nostdin','-y','-framerate','1','-i',path.join(CACHE,basename+'-frame%d.png'),'-vf','scale=480:-2,tile=3x2:padding=5:color=0xf1f0e4','-frames:v','1',path.join(OUT,basename+'-sheet.png')]);
+ await execAsync('ffmpeg',['-hide_banner','-loglevel','error','-nostdin','-y','-framerate','1','-i',path.join(CACHE,basename+'-frame%d.png'),'-vf','scale=480:-2,tile=3x2:padding=5:color=0xf1f0e4','-frames:v','1',path.join(OUT,basename+'-sheet.png')]);
  if(!args.includes('--probe')){
  const temp=path.join(CACHE,basename+'.mp4');let segment=-1;
  const writer=spawn('ffmpeg',['-hide_banner','-loglevel','error','-nostdin','-y','-f','image2pipe','-framerate',String(FPS),'-vcodec','mjpeg','-i','pipe:0','-an','-c:v','libx264','-preset','fast','-crf','18','-pix_fmt','yuv420p','-movflags','+faststart',temp],{stdio:['pipe','ignore','pipe']});let err='';writer.stderr.on('data',x=>err+=x);const finished=once(writer,'close');
@@ -108,10 +111,10 @@ async function run(){
  let p;if(span.kind==='intro'){p=intro;await p.evaluate(t=>window.draw(t),i/FPS);await seekMascots(p,i/FPS);}else{p=film;await seekFilm(p,span.from+i/FPS);}
  const buf=await p.screenshot({type:'jpeg',quality:96});if(!writer.stdin.write(buf))await once(writer.stdin,'drain');}}
  writer.stdin.end();const [exit]=await finished;if(exit!==0)throw new Error(err);checkPage(film);checkPage(intro);
- const master=path.join(OUT,basename+'-1080p.mp4');muxAudio(temp,master);
- execFileSync('ffmpeg',['-hide_banner','-loglevel','error','-nostdin','-y','-i',master,'-vf','scale=1280:720','-c:v','libx264','-preset','fast','-crf','22','-c:a','aac','-b:a','160k','-movflags','+faststart',path.join(OUT,basename+'.mp4')]);
- execFileSync('ffmpeg',['-hide_banner','-loglevel','error','-y','-i',path.join(OUT,basename+'.mp4'),'-vf',"select='eq(n,24)+eq(n,72)+eq(n,138)+eq(n,228)+eq(n,345)+eq(n,510)+eq(n,639)+eq(n,690)',scale=480:270,tile=4x2:padding=6:color=0xf3f0e4",'-frames:v','1',path.join(OUT,basename+'-encoded.jpg')]);
- for(const file of [master,path.join(OUT,basename+'.mp4')])execFileSync('ffmpeg',['-hide_banner','-loglevel','error','-i',file,'-f','null','-']);
+ const master=path.join(OUT,basename+'-1080p.mp4');await muxAudio(temp,master);
+ await execAsync('ffmpeg',['-hide_banner','-loglevel','error','-nostdin','-y','-i',master,'-vf','scale=1280:720','-c:v','libx264','-preset','fast','-crf','22','-c:a','aac','-b:a','160k','-movflags','+faststart',path.join(OUT,basename+'.mp4')]);
+ await execAsync('ffmpeg',['-hide_banner','-loglevel','error','-y','-i',path.join(OUT,basename+'.mp4'),'-vf',"select='eq(n,24)+eq(n,72)+eq(n,138)+eq(n,228)+eq(n,345)+eq(n,510)+eq(n,639)+eq(n,690)',scale=480:270,tile=4x2:padding=6:color=0xf3f0e4",'-frames:v','1',path.join(OUT,basename+'-encoded.jpg')]);
+ for(const file of [master,path.join(OUT,basename+'.mp4')])await execAsync('ffmpeg',['-hide_banner','-loglevel','error','-i',file,'-f','null','-']);
  }
  checkPage(film);checkPage(intro);await film.close();await intro.close();console.log('done '+id);
  }
