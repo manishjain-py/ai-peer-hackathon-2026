@@ -1,6 +1,14 @@
 # AI Peer demo video: state
 
-Current status (documentation reconciled 17 November 2026): **Moss acting v2 complete and delivered
+Current task (17 November 2026, V36): **Moss v3 revision in progress** from Manish's
+feedback in `FEEDBACK-MOSS-V2-2026-11-17.md`. Direct entrance/zoom, featured confidence
+stamp, removal of one narration line, speaking mouth motion, readable active Slack,
+morning screen greeting and a resolved musical ending. Controller `/root` and sole worker
+`moss_v3_builder`; no other video worker. Codex weekly usage checked at 19%. Current spend
+$50.165149 of $100; no new generation yet. Latest completed cut remains v2, pending review;
+Tag v2 remains the last explicitly approved movie. New outputs will be `blended-moss-v3`.
+
+Previous completion (documentation reconciled 17 November 2026): **Moss acting v2 complete and delivered
 (V35)**. The full `blended-moss-v2` is 119.600s / 3,588 frames, with context-specific
 activity and exact original audio. PR 19 merged as `8846d1b`; checkpoint `blended-moss-v2`
 is pushed. Full Telegram video 23099 and review 23100 are confirmed. Source, prompts,
