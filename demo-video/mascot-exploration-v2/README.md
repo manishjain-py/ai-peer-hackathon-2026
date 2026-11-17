@@ -1,6 +1,6 @@
 # Round 2: 25 generated mascot directions
 
-Requested by Manish on 16 November 2026 (DESIGN V33). The first twelve code-drawn options were too constrained. This round uses original AI-generated raster character design, then generated character acting where suitable. The approved Tag v2 film remains the base. Manish selected Moss (25) for the complete V34 trial, now delivered as `../film/renders/blended-moss-v1.mp4`; see `../docs/MOSS-FILM-DELIVERY-2026-11-16.md`. Tag v2 stays approved until his review.
+Requested by Manish on 16 November 2026 (DESIGN V33). The first twelve code-drawn options were too constrained. This preserved collection uses original AI-generated raster character design, then generated character acting where suitable, with Tag v2 as its base. Manish selected Moss (25) for the full V34 trial; the latest complete review movie is now [Moss acting v2](../film/renders/blended-moss-v2.mp4), refined under V35. See the [current delivery record](../docs/MOSS-ACTING-DELIVERY-2026-11-16.md) and [acting source](../moss-acting/README.md). Moss v1 is retained as the original full trial; Tag v2 remains the last explicitly approved full movie.
 
 **The collection is complete:** 25 comparable 23.3-second in-demo auditions, 720p send copies and 1080p masters, a 75-second quick-look reel, and a local shortlist gallery. Open `index.html`. `renders/overview.jpg` and `renders/group-1.jpg` through `group-5.jpg` show all 25 options. `concepts.json` contains names, personalities and individual art directions. Master art is in `images/NN-name.png`, true-alpha cutouts in `cutouts/NN-name.png`. `asset-metadata.json` records their bounds and anchors.
 
@@ -30,7 +30,7 @@ There are **23 generated motion takes**. Nori (05) and Dew (15) retain their pro
 
 At completion (rendering added no paid calls): **$6.826079** for this round, conservatively recorded; **$48.906079** project total including the prior $42.08. Gemini: $1.566079 from provider token usage × published rates, not an invoice. Fal: $5.26 conservative ledger amounts. There were 25 Gemini image calls and 49 fal calls (25 cutouts, two Moss animation pilots, 22 other animation takes). No paid call is still pending.
 
-The round cap is **$15 total**. Gemini's runner enforces a $5 cap; fal's existing tool enforces $10 including in-flight reservations. These subcaps sum to the round cap. No subscription was bought. The $50 project milestone has not yet been reached; the controller must notify Manish if subsequent work passes it. See `ledger/summary.json`, `gemini.jsonl`, `fal.csv` and request/response metadata.
+This round's cap was **$15 total**. Gemini's runner enforces a $5 cap; fal's existing tool enforces $10 including in-flight reservations. These subcaps sum to the round cap. No subscription was bought. The project was below $50 at this round's completion; later Moss acting work crossed it and the notice was sent (Telegram 23097). Use [STATE](../docs/STATE.md) for the current total and notification status. This round's unchanged accounting remains in `ledger/summary.json`, `ledger/gemini.jsonl`, `ledger/fal.csv` and request/response metadata.
 
 ## Asset inspection and reproducibility
 

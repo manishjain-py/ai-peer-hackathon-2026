@@ -1,6 +1,6 @@
 # AI Peer demo video: state
 
-Current status (Codex, 16 November 2026 UTC): **Moss acting v2 complete and delivered
+Current status (documentation reconciled 17 November 2026): **Moss acting v2 complete and delivered
 (V35)**. The full `blended-moss-v2` is 119.600s / 3,588 frames, with context-specific
 activity and exact original audio. PR 19 merged as `8846d1b`; checkpoint `blended-moss-v2`
 is pushed. Full Telegram video 23099 and review 23100 are confirmed. Source, prompts,
@@ -8,16 +8,28 @@ selected assets, ledger and evidence are saved. Nothing runs; no further work st
 before Manish's feedback. Latest handoff:
 `handoffs/HANDOFF-2026-11-16-moss-acting-controller-complete.md`; delivery:
 `MOSS-ACTING-DELIVERY-2026-11-16.md`. New cost $0.859070, project $50.165149 of $100;
-$50 milestone sent (23097). Codex weekly usage 18% at final verification.
+$50 milestone sent (23097). Codex weekly usage was 18% at the video's final verification.
+The current docs-only request does not change the chosen mascot, approval state, media,
+or budget.
 
 Previous recorded controller on the source Mac (historical session details, not checked live
 on this Mac): ai-peer-video-controller-7 (Opus 5.5; Terminal window 5771 on Mac 48 GB, PID 13541,
-https://claude.ai/code/session_01Nfn5h6N8JUSFGLBrqXFoYp), since its take-over at 12:21 UTC on 16
-November from ai-peer-video-controller-6 (window 5591, closed at 12:20 UTC). Read next: the newest
-hand-off, `handoffs/HANDOFF-2026-11-16-ai-peer-video-controller-6.md` (no worker is live). A new Mac or a
-take-over: `START-HERE.md` at the repo root. Other sessions message the controller by its name.
+https://claude.ai/code/session_01Nfn5h6N8JUSFGLBrqXFoYp), after its take-over at 12:21 UTC on 16
+November from ai-peer-video-controller-6 (window 5591, closed at 12:20 UTC). Its predecessor note
+was `handoffs/HANDOFF-2026-11-16-ai-peer-video-controller-6.md`; that is historical context, not
+the current takeover instruction. Use the latest handoff at the top of this file and root
+`START-HERE.md`. Do not act on these old session IDs without a fresh check.
 
-## Where we are (2026-11-16)
+## Where we are (checked 2026-11-17)
+
+**17 November: documentation reconciled at Manish's request.** The latest complete review cut
+is Moss acting v2; the last explicitly approved full movie is Tag v2. Current routing now points
+to the correct tracker, handoff and Moss renderer. The first-draft plan, old Claude procedure
+and earlier mascot packages are clearly historical. Gemini authorization reflects V33 and
+spending remains $50.165149; the $50 notice was already sent. All five checkouts were clean and
+had no commits absent from origin before this documentation pass; the media/source and V35 tag
+were already pushed. No new generation, render or media delivery was requested or performed.
+The remaining creative step is Manish's feedback on v2.
 
 **2026-11-16 18:54 UTC, Moss acting v2 complete, delivered and saved.** PR 19 is merged (`8846d1b`),
 checkpoint `blended-moss-v2` is pushed, and all source/media/evidence are in git/LFS. Full
@@ -822,7 +834,7 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 | 2026-11-15 | none (WP6, finished) | Five concept videos, all made by code (three.js and the film's renderer); no paid call, no ledger file | $0.00 |
 | 2026-11-15 | none (WP7, finished) | The two blended videos, Little Peer and Tag, all by code; the seven new lines on the ElevenLabs plan | $0.00 |
 | 2026-11-15 | fal.ai (WP7-3, the Tag's v2, finished) | One lip-sync take for the hook's new second line, and the morning desk shot (a picture edit and a 4 s take) | $0.65 (3 rows of `demo-video/ledger/wp7-3.csv`, on `main` since PR 15) |
-| 2026-11-16 | Gemini + fal.ai (Round 2 mascot assets) | 25 generated masters, 25 cutouts, 23 selected character animations plus pilots; ledgers on `codex/generated-mascots` | $6.826079 (Gemini $1.566079 estimated from usage; fal $5.26 conservatively logged) |
+| 2026-11-16 | Gemini + fal.ai (Round 2 mascot assets) | 25 generated masters, 25 cutouts, 23 selected character animations plus pilots; ledgers in `demo-video/mascot-exploration-v2/ledger/` on main | $6.826079 (Gemini $1.566079 estimated from usage; fal $5.26 conservatively logged) |
 | 2026-11-16 | fal.ai (Moss full-film gestures) | Two five-second generic-character gestures: attentive/thinking and presenting; `demo-video/moss-film/ledger/fal.csv` | $0.40 conservatively logged |
 | 2026-11-16 | Gemini + fal.ai (Moss acting v2) | Generic notebook keyframe and four five-second actions; per-call ledger in `demo-video/moss-acting/ledger/` | $0.859070 (Gemini $0.059070 estimate; fal $0.80 conservative); no further generation planned |
 | | **Total of the $100 cap** | | **$50.165149**; V35 $0.859070 of its $10 allocation. $50 notice sent (Telegram 23097). |
@@ -1223,9 +1235,12 @@ and 7 still hold.
 
 ## Settled, do not re-open
 
-- **The final demo video is the Tag version** (`demo-video/film/renders/blended-tag-v2.mp4`, V30,
-  V31). Little Peer is not used; do not build its version 2 without his word.
-- See `DESIGN.md` section 0.
+- **Moss is the selected character for the current film work** (V34), with context-specific
+  acting requested in V35. `blended-moss-v2.mp4` is the latest delivered review cut.
+- **Tag v2 is the last explicitly approved full movie** (V30/V31). Preserve it and all earlier
+  versions; documentation maintenance does not approve or replace a movie.
+- Little Peer is not used (V31); do not restart its version 2 from an old tracker entry.
+- See `DESIGN.md` section 0 for Manish's words and decisions.
 
 ## Lessons
 
@@ -1393,5 +1408,6 @@ and 7 still hold.
 | 2026-11-16 12:21 | ai-peer-video-controller-7 | Took over from ai-peer-video-controller-6 (read STATE by its parts and the hand-off); checked that controller-6's window 5591 closed itself at 12:20 UTC; greeted Manish. | Waiting for his next word |
 | 2026-11-16 | Codex controller + mascot_previews | V32: twelve original code-native mascot options, 23.3-second in-demo reels, gallery and evidence; PR 16 merged; overview and all twelve videos sent to Telegram | Await Manish's choice; approved Tag v2 unchanged; $0 new spend |
 | 2026-11-16 | Codex controller, mascot_previews, generated_mascot_renderer | V33: 25 generated-art mascots, 23 generated motion takes, 52 preview exports, gallery and provenance; PR 17 merged; all options and quick-look delivered to Telegram | Await selection; approved film unchanged; round $6.826079, project $48.906079 |
-
 | 2026-11-16 | Codex moss_film_controller + moss_film_builder | V34: full Moss replacement, source walkthrough, two purposeful gestures, complete encoded walk/audio proof; PR 18 merged and checkpoint saved; full video delivered to Telegram | Review pending; Tag v2 preserved; $0.40 new spend; $49.306079 total; nothing runs |
+| 2026-11-16 18:54 UTC | Codex moss_acting_controller + moss_acting_builder | V35: exact-time acting, notebook keyframe and four new actions; full film accepted and delivered; PR 19 merged as `8846d1b`, checkpoint `blended-moss-v2` | Await review of v2; Telegram 23099/23100; original audio and earlier cuts preserved; total $50.165149 |
+| 2026-11-17 | Codex documentation reconciliation | Checked all worktrees/origin; aligned resume routes, latest-cut pointers, historical-plan/controller labels, provider authorization and current spend; no media or product changes | Docs committed directly on main; latest review remains Moss v2 |

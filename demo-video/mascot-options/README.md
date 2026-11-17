@@ -1,6 +1,6 @@
 # AI Peer mascot options · 16 November 2026
 
-Twelve original animated characters explored at Manish's request (DESIGN V32), using the **approved Tag v2 film as the unchanged base**. These are short comparison reels for choosing a mascot. No replacement for the full approved film has been selected or exported.
+Twelve original animated characters explored at Manish's request (DESIGN V32), using the **approved Tag v2 film as the unchanged base**. These preserved comparison reels record the first exploration. Manish later chose Moss (25) from the [generated Round 2](../mascot-exploration-v2/README.md) for the full film. The latest complete review cut is [Moss acting v2](../film/renders/blended-moss-v2.mp4), with its [delivery record](../docs/MOSS-ACTING-DELIVERY-2026-11-16.md). This package and its original recommendations remain preserved.
 
 Open `index.html` for all twelve videos, `renders/overview.png` for the numbered contact sheet, or `renders/NN-name.mp4` for each Telegram-sized preview. The corresponding `-1080p.mp4` is its full-resolution master. Every candidate also has a portrait and a five-scene contact sheet.
 

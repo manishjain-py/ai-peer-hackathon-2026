@@ -15,7 +15,9 @@ The concept film that started the idea lives in `film/`.
 ## Start here
 
 0. A new Mac, or taking over a session's work: `START-HERE.md` first.
-1. `docs/build/STATE.md`: where we are, live sessions, what needs Manish, next, lessons.
+1. Read the tracker for the requested area: demo-video work uses `demo-video/AGENTS.md`
+   then `demo-video/docs/STATE.md`; product work uses `docs/build/STATE.md`. The product
+   build closed on this repo on 7 November and continues on Manish's company Mac.
 2. Your hand-off brief, if you were started with one.
 3. Then only the doc your task needs:
 

@@ -1,5 +1,18 @@
 # AI Peer: five "wow" concepts for its own screens (WP6, 15 November 2026)
 
+## Current source routing
+
+- Latest full-film walkthrough: `moss-v2/`, used by
+  [Moss acting v2](../moss-acting/README.md); film and source are complete and delivered for review.
+- Preserved earlier walkthroughs: `moss/` for [Moss v1](../moss-film/README.md), and `tag/`
+  for the approved Tag cut ([report](tag/REPORT.md)).
+- Current status and requested work: [demo-video STATE](../docs/STATE.md).
+
+The five-concept comparison below is the original WP6 exploration, preserved with its
+original recommendations and function-change notes.
+
+## Original five-concept exploration
+
 Manish asked for his "four to five best ideas" to make the AI Peer's own screens a "wow", with the
 same functions, each shown as an end-to-end walkthrough video (V22,
 `../docs/BRIEF-UI-WOW-2026-11-15.md`). Here are five. Each video opens on today's page, runs the

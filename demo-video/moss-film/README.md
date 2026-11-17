@@ -1,9 +1,15 @@
 # Moss full blended film, version 1
 
-Manish selected Round 2 option 25, Moss, for a complete film trial (DESIGN V34). The new
-master is `../film/renders/blended-moss-v1.mp4`; its Telegram copy is
+**Preserved V34 version.** The latest complete review cut is
+[Moss acting v2](../film/renders/blended-moss-v2.mp4), documented in the
+[acting source guide](../moss-acting/README.md) and
+[V35 delivery record](../docs/MOSS-ACTING-DELIVERY-2026-11-16.md). The implementation and
+costs below describe v1; use [STATE](../docs/STATE.md) for current status and spending.
+
+Manish selected Round 2 option 25, Moss, for a complete film trial (DESIGN V34). The
+v1 master is `../film/renders/blended-moss-v1.mp4`; its Telegram copy is
 `../film/renders/blended-moss-v1-720p.mp4`. The previously approved Tag v2 master and sources
-remain untouched. Moss V1 is a candidate awaiting Manish's review, not an approval record.
+remain untouched. Moss v1 was delivered for review and then refined by V35; it is not an approval record.
 
 ## What changed
 

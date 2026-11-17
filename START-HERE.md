@@ -7,6 +7,20 @@ project and can continue with the next steps"), then fixed after a stranger's te
 repo is the only memory. Everything a new session needs is here, except secrets and private
 recordings, which stay out of git by rule.
 
+## Current starting point (17 November 2026)
+
+The latest delivered review movie is **Moss acting v2**, 119.600 seconds, checkpoint
+`blended-moss-v2`. Start with `demo-video/docs/STATE.md` and its newest completion handoff;
+the full movie, delivery receipts, exact-time acting map, source and media evidence are saved.
+Manish has requested this documentation refresh, not a new film approval or render. His review
+of Moss v2 is the next creative step. Tag v2 remains the last explicitly approved full movie.
+Project generation spend is $50.165149 of $100; the $50 notification has already been sent.
+
+The product build's continuation is on the company Mac; this repository does not establish
+its later state. Dated briefs/handoffs and older tracker entries are history. The setup and
+Terminal-controller recipe below include preserved Claude-specific procedures; use the latest
+tracker/handoff for the current session rather than starting an old controller automatically.
+
 ## What is where
 
 | Need | Read |
@@ -36,7 +50,7 @@ the root `AGENTS.md`: one worker at a time (V15, C13), the 85% and 93% usage mar
 | `wow-concepts-v1` | The five "wow" concepts for the product's screens (PR 13); Manish liked Little Peer (V23) |
 | `blended-v1` | The two blended videos, Little Peer and Tag, version 1 (PR 14) |
 | `blended-tag-v2` | The Tag blended video, version 2 (PR 15): his eight changes (V27, V28) and transition C (V29); approved on 16 November (V30): the final video (V31) |
-| `mascot-options-v1` | Twelve mascot alternatives inside the same Tag film scenes (PR 16), delivered to Telegram on 16 November (V32); the approved full film is unchanged and the choice is pending |
+| `mascot-options-v1` | Twelve code-native mascot alternatives (PR 16), delivered on 16 November (V32); the choice was pending at this checkpoint. Moss was later selected from Round 2 (V34). |
 | `generated-mascots-v1` | Round 2: 25 Gemini-generated directions, 23 fal.ai character animations, 25 in-demo previews and a 75-second quick-look (PR 17), delivered 16 November (V33); Moss selected for the V34 full-film trial |
 | `blended-moss-v1` | Complete 119.600-second Moss film (PR 18, `2996671`): full source walkthrough and every mascot appearance/mark replaced, original audio/timing preserved; delivered for review on 16 November (V34) |
 | `blended-moss-v2` | Complete 119.600-second Moss acting revision (PR 19, `8846d1b`): exact-time purposeful activity, notebook/pen source reading, meeting deferral and post-click acknowledgment; original story/UI/timing/audio preserved, delivered 16 November UTC (V35) |
@@ -49,20 +63,20 @@ the root `AGENTS.md`: one worker at a time (V15, C13), the 85% and 93% usage mar
 
 ## Set up a new Mac (once, by Manish, or by a first plain session with him)
 
-1. **Tools.** Claude Code; `git` with `git-lfs`; `gh`, signed in as `manishjain-py`; `ffmpeg`;
+1. **Tools.** The coding application for the current session; `git` with `git-lfs`; `gh`, signed in as `manishjain-py`; `ffmpeg`;
    Node 22 or newer and Google Chrome (the film's renderer, `demo-video/film/README.md`);
-   `python3` and `uv` (every tool in `demo-video/tools/` runs with `uv run`); `jq` (the idle
-   ping). In System Settings, Privacy & Security, Automation, let the terminal app that runs
-   Claude control Terminal: the session scripts open and read Terminal windows.
+   `python3` and `uv`; the selected package's README specifies its renderer dependencies.
+   Claude Code, `jq`, and Terminal automation permission are needed only for the preserved
+   Claude session/idle-ping workflow below. No new generation is needed to render saved assets.
 2. **Clone** to the same place as on the 48 GB Mac:
    `git clone https://github.com/manishjain-py/ai-peer-hackathon-2026.git ~/repos/ai-peer-hackathon-2026`,
    then in it `git lfs install && git lfs pull`. The concept film's media is skipped by
    default: `git lfs pull --include="film/**" --exclude=""`.
-3. **Claude Code settings.** Merge `docs/ways-of-working/settings-snippet.json` into
+3. **Claude Code settings (Claude sessions only).** Merge `docs/ways-of-working/settings-snippet.json` into
    `~/.claude/settings.json`: the bypass permission mode the sessions run in, cross-session
    messages accepted, and the notify skill's idle ping. A setting takes effect in sessions
    started after the change.
-4. **Skills and rules.** Manish's Macs sync `~/claude-config` by themselves (skills, lessons,
+4. **Claude skills and rules (Claude sessions only).** Manish's Macs sync `~/claude-config` by themselves (skills, lessons,
    the global `CLAUDE.md`). On a Mac without it:
    - `mkdir -p ~/.claude/skills && cp -R docs/ways-of-working/skills/* ~/.claude/skills/`;
    - copy `docs/ways-of-working/manish-global-CLAUDE.md` to `~/.claude/CLAUDE.md` and change its
@@ -79,11 +93,14 @@ the root `AGENTS.md`: one worker at a time (V15, C13), the 85% and 93% usage mar
    | `FAL_KEY` | exported in `~/.zshrc` | `demo-video/tools/falgen.py` (paid pictures and clips, under the $100 cap) | for paid shots only |
    | `STABILITY_API_KEY` | exported in `~/.zshrc` | nothing in the video now | no |
    | `GITHUB_TOKEN`, `SLACK_*`, `SLACK_AS_*`, `RECALL_*`, `ZOOM_TEST_MEETING_URL` | `~/.ai-peer/.env` | the product (`peer/`) | no |
-   | Gemini and OpenAI keys | Learn Like Magic's own set-ups | nothing | no; ask Manish before any use |
+   | `GEMINI_API_KEY` | Existing authorized local configuration; pass its path to the saved generation tool's `--env-file` option, or use the environment | `demo-video/mascot-exploration-v2/tools/gemini_images.py` | only for new generic mascot art, authorized by V33; not needed for saved-asset rendering |
+   | OpenAI API keys | Learn Like Magic's own set-ups | nothing in this video workflow | not used or authorized by V33; do not substitute them automatically |
 
 6. **Private files** (never in git, rule C8), in `~/.ai-peer/demo-video-private/`:
-   - Current work needs no private file: the tag is rebuilt by code in
-     `demo-video/ui-concepts/tag/`. The tag video Manish made (`bases/tag-walkthrough-2026-11-15.mp4`)
+   - Current review/rebuild needs no private file: Moss v2 uses the saved generic art and
+     `demo-video/ui-concepts/moss-v2/` source; its renderer is documented in
+     `demo-video/moss-acting/README.md`. The earlier Tag source is also retained. The tag video
+     Manish made (`bases/tag-walkthrough-2026-11-15.mp4`)
      stays on the 48 GB Mac as the reference, out of git and sent nowhere.
    - The company walkthrough recording (`ui-wow/`) and the full renders with real recordings
      (`renders/`) never leave the 48 GB Mac. Public builds and every git artifact work without
@@ -91,6 +108,18 @@ the root `AGENTS.md`: one worker at a time (V15, C13), the 85% and 93% usage mar
    - Then `mkdir -p ~/.ai-peer/demo-video-private/controller` (the waits write their logs there).
 
 ## Take over as the controller
+
+Read the current tracker and the specific handoff it names first. At the latest completion,
+the Moss v2 workers and renders are finished; do not restart them or resend delivered media
+without a new task. Use the current checkout/branch and runtime reported by the active session.
+For video changes, preserve the one-worker rule and the latest approved/review distinction.
+For a docs-only request, update the current pointers on `main` and verify the push.
+
+### Preserved Claude Terminal controller procedure
+
+The following numbered recipe describes the earlier Claude workflow on the source Mac.
+Use it when taking over that workflow, not as an automatic launch instruction for a Codex chat.
+Old window IDs, PIDs, names and usage readings are historical unless freshly checked.
 
 1. **One Mac at a time.** Before starting here, the old Mac's controller, workers and waits must
    stop: ask Manish to close them, or tell the old controller to hand off and stop. Git and
@@ -148,8 +177,10 @@ The full recipe is `docs/ways-of-working/skills/big-initiative/SKILL.md`; this r
 - **His words** go into the repo at once, word for word, with the time: a dated brief or
   feedback file and a row in `DESIGN.md` section 0. Locked decisions change only by his words.
 - **Privacy.** Real company content never goes into git or any outside tool (C8).
-- **Money.** The demo video's cap is $100 (V3); each worker keeps a ledger in
-  `demo-video/ledger/`.
+- **Money.** The demo video's cap is $100 (V3); early package ledgers are in
+  `demo-video/ledger/`, and later ledgers are in `demo-video/mascot-exploration-v2/ledger/`,
+  `demo-video/moss-film/ledger/` and `demo-video/moss-acting/ledger/`. Current totals and
+  notification status are in `demo-video/docs/STATE.md`.
 - **Waiting** is done by shell scripts (`demo-video/tools/wait-for.sh`), never by polling from a
   session.
 

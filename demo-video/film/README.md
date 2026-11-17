@@ -3,7 +3,24 @@
 The two-minute AI Peer demo video ("He's asleep. I'm not.", `../docs/STORY.md`), built as one
 web page whose picture is a pure function of the film time, captured frame by frame.
 
-## Render it
+## Latest complete movie: Moss acting v2
+
+`renders/blended-moss-v2.mp4` is the latest delivered review cut: **119.600 seconds,
+3,588 frames, 1920×1080 at 30 fps**. Its smaller copy is
+`renders/blended-moss-v2-720p.mp4`. See the [delivery record](../docs/MOSS-ACTING-DELIVERY-2026-11-16.md)
+and [Moss acting source/rebuild guide](../moss-acting/README.md). That dedicated renderer builds
+the full source walkthrough and copies the original AAC audio exactly; it is the route for
+reproducing the current movie. Rebuilding saved assets needs no generation credentials.
+
+Moss v1 and Tag v2 are preserved. Tag v2 remains the last explicitly approved full movie;
+Moss v2 awaits Manish's review. Use [STATE](../docs/STATE.md) for current work and next steps.
+
+## Base/Draft 3 renderer
+
+The commands and 3,600-frame description below refer to the retained base film, not the
+latest Moss cut. `--cut NAME` selects a version under `cuts/`; for Moss use its dedicated
+guide above. The original no-argument output name `film-slates.mp4` is retained for compatibility;
+public Draft 3 builds now draw the made-up product screens described below.
 
 Needs Node 22 or newer, ffmpeg, Chrome, and the repo's LFS files (`git lfs pull`). The first
 run downloads the pinned renderer (`hyperframes@0.9.45`, Apache-2.0) through `npx`.
@@ -15,7 +32,7 @@ node demo-video/film/render.mjs --from 30 --to 40
 node demo-video/film/render.mjs --private        # with the product recordings (see below)
 ```
 
-Options: `--name NAME`, `--quality draft|looks|delivery`, `--crf N`, `--workers N`, `--no-check`,
+Options: `--cut NAME`, `--name NAME`, `--quality draft|looks|delivery`, `--crf N`, `--workers N`, `--no-check`,
 `--no-sound`, `--lane NAME` (a run with its own folders under `.build/lanes/`, beside other
 renders), `--with a,b` (use a scene or overlay that `shots.json` does not list as ready yet).
 The whole film (3,600 frames, 1920x1080, 30 fps) takes about two minutes on this Mac.

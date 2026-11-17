@@ -1,5 +1,12 @@
 # AI Peer demo video: plan for the first draft
 
+**Historical plan, written for Draft 1 on 14 November.** The running-session labels,
+dates and two-worker sequence below record that plan; they are not current instructions.
+For current status, use [STATE](STATE.md); for the latest completed movie, use the
+[Moss acting v2 delivery record](MOSS-ACTING-DELIVERY-2026-11-16.md). The later one-worker
+decision in DESIGN V15/C13 applies to new video work. No package in this old plan should
+restart automatically.
+
 The story is `STORY.md` ("He's asleep. I'm not."), approved by Manish for a first draft on
 2026-11-14 (`DESIGN.md` V10). He wants to see it end to end. At most two workers at once (the
 repo's rule), plus the controller.
