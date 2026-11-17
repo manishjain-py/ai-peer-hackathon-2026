@@ -1,6 +1,6 @@
 # AI Peer demo video: state
 
-**V42 is in progress.** Manish requested a new Moss v7 based on the delivered v6. See the [acting, stream and morning feedback](FEEDBACK-MOSS-V6-2026-11-17.md). Work is on `codex/moss-v7` in the retained Moss checkout. The controller handles visual review, records and delivery. One worker owns the source and exports. The existing soundtrack and saved assets are the starting point. Starting spend $52.097127 of $100, weekly usage 3%.
+**Moss v7 (V42) is complete and delivered.** The 4K master and 1080p edition run 119.600 seconds. Telegram confirmed the playable video (23172) and original download (23173). See the [delivery record](MOSS-V7-DELIVERY-2026-11-17.md), [completion handoff](handoffs/HANDOFF-2026-11-17-moss-v7-complete.md) and [review](../moss-choreography/CONTROLLER-REVIEW.md). Release tag `blended-moss-v7`. V7 used saved assets and added $0 to the $52.097127 project total. Earlier notes below are history.
 
 **Moss v6 (V41) is complete and delivered.** The [4K master](../film/renders/blended-moss-v6.mp4) and [1080p copy](../film/renders/blended-moss-v6-1080p.mp4) run 119.600 seconds. Telegram confirmed video 23168 and original document 23169. [PR 23](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/23) merged at `9105d79`. Checkpoint `blended-moss-v6` pins the delivery. Next is Manish’s creative review. V40 still designates v5 for implementing the prototype on the other Mac.
 
@@ -83,7 +83,7 @@ the current takeover instruction. Use the latest handoff at the top of this file
 
 ## Where we are (checked 2026-11-17)
 
-V41 was delivered after the restart. The completion handoff above records the final revision.
+V42 delivered. The v7 completion handoff above records the final revision.
 
 **17 November: V40 portable implementation handoff complete.** Central guide:
 `../../docs/prototype-moss-handoff/README.md`; manifest and paste prompt beside it.
@@ -869,7 +869,7 @@ minutes, its wait `stall-wp2-3` stopped first. Its worktree `~/repos/ai-peer-vid
 
 Still running:
 
-V41 is complete. The earlier sessions and jobs listed below are historical.
+V42 is complete. The earlier sessions and jobs listed below are historical.
 
 **V39 complete:** `moss_v5_builder` is finished. No renderer, server, provider request,
 check process or watcher remains. Canonical main and both retained Moss checkouts are
@@ -981,7 +981,7 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 
 ## Needs Manish
 
-V41 awaits creative review on Telegram (video 23168, original download 23169).
+V42 awaits creative review on Telegram (video 23172, original download 23173).
 
 **V40:** copy the repository with materialized media to the other Mac, provide its path
 in the saved paste prompt, and run that instruction in the actual prototype's workspace.
@@ -1170,7 +1170,7 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 
 ## Next
 
-Review feedback from Manish when it arrives. The completed v6 package is pinned at `blended-moss-v6`.
+Review feedback from Manish when it arrives. The completed v7 package is pinned at `blended-moss-v7`.
 
 **V40 media repair:** transfer the ready Downloads ZIP/checksum to the company Mac and
 merge-extract it into the existing demo reference root, preserving other files. Verify

@@ -9,7 +9,7 @@ recordings, which stay out of git by rule.
 
 ## Current starting point (17 November 2026)
 
-**Moss v6 is the latest delivered demo.** The 4K master and 1080p Telegram copy run 1:59.6. The revised UI has full-width sections, the meeting opens with a shorter greeting, and Moss carries three selected updates into Ram’s brief. Telegram messages 23168 and 23169 hold the stream and original download. See the [delivery record](demo-video/docs/MOSS-V6-DELIVERY-2026-11-17.md) and [completion handoff](demo-video/docs/handoffs/HANDOFF-2026-11-17-moss-v6-complete.md). The release tag is `blended-moss-v6`. Manish’s review is next.
+**Moss v7 is the latest delivered demo.** The 4K master and 1080p copy run 1:59.6. Moss slides into Ask and catches three ordinary updates from the moving stream. Their titles appear in Ram’s brief. Telegram messages 23172 and 23173 hold the video and original download. See the [delivery record](demo-video/docs/MOSS-V7-DELIVERY-2026-11-17.md) and [completion handoff](demo-video/docs/handoffs/HANDOFF-2026-11-17-moss-v7-complete.md). Checkpoint `blended-moss-v7` pins the release.
 
 ## Updating the prototype on another Mac (V40, 17 November)
 
@@ -36,7 +36,7 @@ asking that agent to interpret the film.
 | Project rules for every agent | `AGENTS.md` (Claude Code loads it through `CLAUDE.md`) |
 | The live work (November 2026): the 2-minute demo video | `demo-video/AGENTS.md`, then `demo-video/docs/STATE.md` (the tracker) |
 | The last approved full demo video (16 November 2026) | `demo-video/film/renders/blended-tag-v2.mp4`: the Tag version (V30, V31; Little Peer is not used) |
-| Latest complete movie for review | [Moss v6 in 4K](demo-video/film/renders/blended-moss-v6.mp4), [1080p copy](demo-video/film/renders/blended-moss-v6-1080p.mp4) and [rebuild guide](demo-video/moss-clarity/README.md). |
+| Latest complete movie for review | [Moss v7 in 4K](demo-video/film/renders/blended-moss-v7.mp4), [1080p download](demo-video/film/renders/blended-moss-v7-1080p.mp4) and [source guide](demo-video/moss-choreography/README.md). |
 | Preserved mascot exploration (16 November 2026) | `demo-video/mascot-exploration-v2/index.html`: 25 generated-art directions, individual in-demo previews and a 75-second quick-look, all delivered to Telegram (V33); `demo-video/docs/GENERATED-MASCOTS-DELIVERY-2026-11-16.md`. The first twelve code-native options remain in `demo-video/mascot-options/`. |
 | The demo video's decisions and Manish's words | `demo-video/docs/DESIGN.md` section 0 |
 | Briefs and hand-offs between sessions, dated, never edited | `demo-video/docs/handoffs/` |
@@ -66,6 +66,7 @@ the root `AGENTS.md`: one worker at a time (V15, C13), the 85% and 93% usage mar
 | `blended-moss-v4` | V37/V38 full 119.600-second revision (PR 21, `033fb44`): clear proactive-teammate/24/7 setup home with a new Matilda introduction, and morning Moss only on the laptop with no phone in view; delivered 17 November for review. |
 | `blended-moss-v5` | V39 complete 119.600-second revision (PR 22, `30de35e`): information ocean with explicit role/goal/interests matches, tighter walkthrough/Slack, simultaneous speaking and notebook writing; original introduction, laptop-only morning and resolved musical ending retained. |
 | `blended-moss-v6` | V41 delivered. Full-width UI, three physical selections, revised sound and product URL. |
+| `blended-moss-v7` | V42 delivered. Context-specific acting and travel, hidden stream picks, a longer wake and one continuous approach to Needs you. |
 
 - Go back to one: `git worktree add ../ai-peer-at-draft-03 draft-03` (a separate folder;
   `main` stays as it is).
@@ -109,7 +110,7 @@ the root `AGENTS.md`: one worker at a time (V15, C13), the 85% and 93% usage mar
    | OpenAI API keys | Learn Like Magic's own set-ups | nothing in this video workflow | not used or authorized by V33; do not substitute them automatically |
 
 6. **Private files** (never in git, rule C8), in `~/.ai-peer/demo-video-private/`:
-   - Moss v6 uses saved generic assets, the live UI in `demo-video/ui-concepts/moss-v6/` and its own film layer and soundtrack. The [package guide](demo-video/moss-clarity/README.md) explains offline rebuilds. The private
+   - Moss v7 uses saved generic assets and the v6 soundtrack. The [package guide](demo-video/moss-choreography/README.md) explains offline rebuilds. The private
      tag walkthrough (`bases/tag-walkthrough-2026-11-15.mp4`) remains on this Mac only,
      out of git and sent nowhere. Earlier Moss and Tag sources are retained.
    - The company walkthrough recording (`ui-wow/`) and the full renders with real recordings
@@ -120,7 +121,7 @@ the root `AGENTS.md`: one worker at a time (V15, C13), the 85% and 93% usage mar
 ## Take over as the controller
 
 Read the current tracker and the specific handoff it names first. At the latest completion,
-the Moss v6 review and renders are finished; do not restart them or resend delivered media
+the Moss v7 review and renders are finished; do not restart them or resend delivered media
 without a new task. Use the current checkout/branch and runtime reported by the active session.
 For video changes, preserve the one-worker rule and the latest approved/review distinction.
 For a docs-only request, update the current pointers on `main` and verify the push.

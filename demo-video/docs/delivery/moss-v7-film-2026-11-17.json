@@ -1,0 +1,24 @@
+{
+  "version": "blended-moss-v7",
+  "status": "delivered",
+  "sha256": "9f27de8563e746ec57ee08226f0dc7ec464378a88683cbfe5b0ec02a8915c2dc",
+  "local_bytes": 47810354,
+  "file": "blended-moss-v7-1080p.mp4",
+  "duration_seconds": 119.6,
+  "frames": 3588,
+  "video": {
+    "message_id": 23172,
+    "chat_id": -5506416790,
+    "date_utc": "2026-11-17T19:29:33+00:00",
+    "size": 47810354,
+    "width": 1920,
+    "height": 1080,
+    "telegram_duration": 120
+  },
+  "document": {
+    "message_id": 23173,
+    "chat_id": -5506416790,
+    "date_utc": "2026-11-17T19:29:45+00:00",
+    "size": 47810354
+  }
+}

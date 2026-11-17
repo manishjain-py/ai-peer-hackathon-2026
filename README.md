@@ -14,7 +14,7 @@ Like Magic as the test company.
 - Agent instructions: [AGENTS.md](AGENTS.md)
 - The concept film (Draft 07, 4:23) and its docs: [film/](film/README.md)
 - The 2-minute demo video (November 2026): [demo-video/](demo-video/AGENTS.md).
-- Latest demo film for review, 1:59.6. [Moss v6 in 4K](demo-video/film/renders/blended-moss-v6.mp4) · [1080p Telegram copy](demo-video/film/renders/blended-moss-v6-1080p.mp4) · [Delivery record](demo-video/docs/MOSS-V6-DELIVERY-2026-11-17.md).
+- Latest demo film for review, 1:59.6. [Moss v7 in 4K](demo-video/film/renders/blended-moss-v7.mp4) · [1080p Telegram copy](demo-video/film/renders/blended-moss-v7-1080p.mp4) · [Delivery record](demo-video/docs/MOSS-V7-DELIVERY-2026-11-17.md).
 - Updating the actual prototype on another Mac: [Moss v5 implementation handoff](docs/prototype-moss-handoff/README.md), with a verified asset manifest and [paste-ready instructions](docs/prototype-moss-handoff/PASTE-PROMPT.md). V40 designates Moss v5 as that implementation target; the target prototype remains authoritative for functionality. If the copied media are LFS placeholders, use the [verified media repair transfer](docs/prototype-moss-handoff/MEDIA-TRANSFER.md).
 - The [25 generated directions](demo-video/mascot-exploration-v2/index.html), [first twelve code-native options](demo-video/mascot-options/index.html), and every earlier film are preserved.
 

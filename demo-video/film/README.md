@@ -5,7 +5,7 @@ web page whose picture is a pure function of the film time, captured frame by fr
 
 ## Latest delivered movie
 
-[Moss v6 in 4K](renders/blended-moss-v6.mp4) and its [1080p Telegram edition](renders/blended-moss-v6-1080p.mp4) run **119.600 seconds** at 30 fps. The editable UI, information ocean and globe render at 4K. Moss physically selects three cards for the morning brief, and the final card invites viewers to create their own AI Peer. See the [delivery record](../docs/MOSS-V6-DELIVERY-2026-11-17.md) and [source and rebuild guide](../moss-clarity/README.md).
+[Moss v7 in 4K](renders/blended-moss-v7.mp4) and its [1080p Telegram edition](renders/blended-moss-v7-1080p.mp4) run **119.600 seconds** at 30 fps. Moss slides into Ask, picks messages directly out of the company stream and guides Ram to his morning decision. See the [release record](../docs/MOSS-V7-DELIVERY-2026-11-17.md) and [source guide](../moss-choreography/README.md).
 
 ## Base/Draft 3 renderer
 
