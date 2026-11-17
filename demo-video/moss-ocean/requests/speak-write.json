@@ -1,0 +1,21 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "The exact felt Moss in the reference speaks the supplied audio naturally while making a note in its small open notebook. Mouth opens and closes clearly in exact sync with the supplied audio from 0.3 seconds, a simple friendly dark felt opening, NO human lips, NO teeth, NO tongue. The notebook and wooden pencil stay visible throughout. For the first one second, look kindly at camera with pencil ready. From 1.2 seconds through 4.4 seconds, while KEEPING THE MOUTH SPEAKING, tip gaze slightly toward the notebook and visibly write several short pencil strokes across the page with wrist and paw movement, then briefly look back to camera while continuing to write. Pen tip must touch the notebook page. Simultaneous talking AND writing for at least three seconds. Preserve exact Moss green felt, cream face and belly, curled sprout, ears, amber pendant, proportions, notebook and pencil. Full body inside existing margins, feet planted, locked frontal camera, no zoom or reframing. Uniform pure magenta #FF00FF background. No shadow, text, subtitles, music or extra objects. Five seconds continuous calm action.",
+    "image_url": "file:demo-video/moss-acting/assets/moss-notebook-keyframe.png",
+    "target_audio_url": "file:demo-video/moss-refinement/audio/m4b-guide.wav",
+    "duration": 5,
+    "resolution": "768P",
+    "prompt_expansion_mode": "disabled",
+    "seed": 171126501
+  },
+  "expect": {
+    "units": 5,
+    "unit": "seconds at768p",
+    "unit_price": 0.04,
+    "cost_usd": 0.2,
+    "basis": "Saved verified conservative rate; fal schema rechecked2026-11-17"
+  },
+  "output": "demo-video/moss-ocean/assets/moss-speak-write-source",
+  "note": "V39 exact original invented m4b speech with simultaneous notebook strokes; generic Moss only."
+}

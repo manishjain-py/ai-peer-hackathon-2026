@@ -1,0 +1,339 @@
+{
+  "seconds": 119.6,
+  "new_line": "p07v5",
+  "new_line_start": 90.4,
+  "lines": [
+    {
+      "id": "h1",
+      "start": 0.46,
+      "seconds": 2.86,
+      "rms_dbfs": -20.39,
+      "call": false,
+      "file": "film/audio/lines/h1.wav"
+    },
+    {
+      "id": "h2b",
+      "start": 4,
+      "seconds": 2.95,
+      "rms_dbfs": -23.67,
+      "call": false,
+      "file": "film/audio/lines/h2b.wav"
+    },
+    {
+      "id": "h3",
+      "start": 8.4,
+      "seconds": 1.06,
+      "rms_dbfs": -18.83,
+      "call": false,
+      "file": "film/audio/lines/h3.wav"
+    },
+    {
+      "id": "p01",
+      "start": 10.3,
+      "seconds": 1.74,
+      "rms_dbfs": -21.13,
+      "call": false,
+      "file": "film/audio/lines/p01.wav"
+    },
+    {
+      "id": "p02v4",
+      "start": 15,
+      "seconds": 6.667,
+      "rms_dbfs": -23.33,
+      "call": false,
+      "file": "moss-introduction/audio/intro-v4.wav"
+    },
+    {
+      "id": "n01",
+      "start": 22.2,
+      "seconds": 1.81,
+      "rms_dbfs": -21.75,
+      "call": false,
+      "file": "film/audio/lines/n01.wav"
+    },
+    {
+      "id": "n02",
+      "start": 24.9,
+      "seconds": 3.18,
+      "rms_dbfs": -21.76,
+      "call": false,
+      "file": "film/audio/lines/n02.wav"
+    },
+    {
+      "id": "p03",
+      "start": 30.1,
+      "seconds": 4,
+      "rms_dbfs": -23.09,
+      "call": false,
+      "file": "film/audio/lines/p03.wav"
+    },
+    {
+      "id": "n03",
+      "start": 37.1,
+      "seconds": 2.44,
+      "rms_dbfs": -22.69,
+      "call": false,
+      "file": "film/audio/lines/n03.wav"
+    },
+    {
+      "id": "n04",
+      "start": 42.1,
+      "seconds": 3.16,
+      "rms_dbfs": -21.74,
+      "call": false,
+      "file": "film/audio/lines/n04.wav"
+    },
+    {
+      "id": "n05",
+      "start": 47.6,
+      "seconds": 2.09,
+      "rms_dbfs": -22.27,
+      "call": false,
+      "file": "film/audio/lines/n05.wav"
+    },
+    {
+      "id": "n06",
+      "start": 52.1,
+      "seconds": 3.03,
+      "rms_dbfs": -22.21,
+      "call": false,
+      "file": "film/audio/lines/n06.wav"
+    },
+    {
+      "id": "p05",
+      "start": 56.5,
+      "seconds": 1.67,
+      "rms_dbfs": -21.8,
+      "call": false,
+      "file": "film/audio/lines/p05.wav"
+    },
+    {
+      "id": "m1",
+      "start": 61.1,
+      "seconds": 5.38,
+      "rms_dbfs": -21.45,
+      "call": true,
+      "file": "film/audio/lines/m1.wav"
+    },
+    {
+      "id": "m2",
+      "start": 66.9,
+      "seconds": 7.19,
+      "rms_dbfs": -22.09,
+      "call": true,
+      "file": "film/audio/lines/m2.wav"
+    },
+    {
+      "id": "m3",
+      "start": 74.5,
+      "seconds": 2.73,
+      "rms_dbfs": -20.89,
+      "call": true,
+      "file": "film/audio/lines/m3.wav"
+    },
+    {
+      "id": "m4b",
+      "start": 77.65,
+      "seconds": 4.21,
+      "rms_dbfs": -21.54,
+      "call": true,
+      "file": "film/audio/lines/m4b.wav"
+    },
+    {
+      "id": "p06",
+      "start": 83.2,
+      "seconds": 2.94,
+      "rms_dbfs": -21.77,
+      "call": false,
+      "file": "film/audio/lines/p06.wav"
+    },
+    {
+      "id": "p08",
+      "start": 100.3,
+      "seconds": 1.94,
+      "rms_dbfs": -21.06,
+      "call": false,
+      "file": "film/audio/lines/p08.wav"
+    },
+    {
+      "id": "p10",
+      "start": 107.2,
+      "seconds": 2.71,
+      "rms_dbfs": -21.05,
+      "call": false,
+      "file": "film/audio/lines/p10.wav"
+    },
+    {
+      "id": "p11",
+      "start": 111.6,
+      "seconds": 2.421,
+      "rms_dbfs": -22.36,
+      "call": false,
+      "file": "film/audio/lines/p11.wav"
+    },
+    {
+      "id": "p12",
+      "start": 116.1,
+      "seconds": 1.34,
+      "rms_dbfs": -20.37,
+      "call": false,
+      "file": "film/audio/lines/p12.wav"
+    },
+    {
+      "id": "p07v5",
+      "start": 90.4,
+      "seconds": 7.5,
+      "rms_dbfs": -23,
+      "call": false,
+      "file": "moss-ocean/audio/ocean-v5.wav"
+    }
+  ],
+  "retained_voice_lines": 22,
+  "music_bed": "moss-ocean/audio/bed-moss-v5.wav",
+  "after": {
+    "lufs": -14,
+    "lra": 3.8,
+    "true_peak": -1.6
+  },
+  "voice_over_music": [
+    {
+      "id": "h1",
+      "voice_db": -22.737795,
+      "music_db": -44.779869,
+      "above_db": 22
+    },
+    {
+      "id": "h2b",
+      "voice_db": -23.335123,
+      "music_db": -44.890707,
+      "above_db": 21.6
+    },
+    {
+      "id": "h3",
+      "voice_db": -22.552559,
+      "music_db": -42.162283,
+      "above_db": 19.6
+    },
+    {
+      "id": "p01",
+      "voice_db": -23.316622,
+      "music_db": -44.831158,
+      "above_db": 21.5
+    },
+    {
+      "id": "p02v4",
+      "voice_db": -23.212935,
+      "music_db": -42.226648,
+      "above_db": 19
+    },
+    {
+      "id": "n01",
+      "voice_db": -23.086591,
+      "music_db": -45.450971,
+      "above_db": 22.4
+    },
+    {
+      "id": "n02",
+      "voice_db": -22.791142,
+      "music_db": -43.694346,
+      "above_db": 20.9
+    },
+    {
+      "id": "p03",
+      "voice_db": -22.84884,
+      "music_db": -42.905006,
+      "above_db": 20.1
+    },
+    {
+      "id": "n03",
+      "voice_db": -22.851338,
+      "music_db": -44.221138,
+      "above_db": 21.4
+    },
+    {
+      "id": "n04",
+      "voice_db": -23.276899,
+      "music_db": -43.030292,
+      "above_db": 19.8
+    },
+    {
+      "id": "n05",
+      "voice_db": -22.612563,
+      "music_db": -41.649417,
+      "above_db": 19
+    },
+    {
+      "id": "n06",
+      "voice_db": -22.792208,
+      "music_db": -41.920639,
+      "above_db": 19.1
+    },
+    {
+      "id": "p05",
+      "voice_db": -23.075354,
+      "music_db": -41.536207,
+      "above_db": 18.5
+    },
+    {
+      "id": "m1",
+      "voice_db": -23.941277,
+      "music_db": -40.854019,
+      "above_db": 16.9
+    },
+    {
+      "id": "m2",
+      "voice_db": -23.990039,
+      "music_db": -39.083036,
+      "above_db": 15.1
+    },
+    {
+      "id": "m3",
+      "voice_db": -23.54243,
+      "music_db": -42.532993,
+      "above_db": 19
+    },
+    {
+      "id": "m4b",
+      "voice_db": -23.909281,
+      "music_db": -41.02371,
+      "above_db": 17.1
+    },
+    {
+      "id": "p06",
+      "voice_db": -22.759122,
+      "music_db": -43.395106,
+      "above_db": 20.6
+    },
+    {
+      "id": "p08",
+      "voice_db": -22.664923,
+      "music_db": -42.235307,
+      "above_db": 19.6
+    },
+    {
+      "id": "p10",
+      "voice_db": -22.620256,
+      "music_db": -44.055171,
+      "above_db": 21.4
+    },
+    {
+      "id": "p11",
+      "voice_db": -23.418025,
+      "music_db": -47.593132,
+      "above_db": 24.2
+    },
+    {
+      "id": "p12",
+      "voice_db": -22.447794,
+      "music_db": -39.975759,
+      "above_db": 17.5
+    },
+    {
+      "id": "p07v5",
+      "voice_db": -23.092665,
+      "music_db": -38.228618,
+      "above_db": 15.1
+    }
+  ],
+  "note": "Exact V4 mixed PCM retained0–24.6 and99.9–119.6; original intro/morning/globe/ending unchanged. Middle retimed, same composition on bar-aligned joins. New Matilda ocean voice. Final AAC checked separately. Direct listening not claimed."
+}

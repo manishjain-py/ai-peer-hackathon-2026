@@ -1,0 +1,71 @@
+{
+  "seconds": 119.6,
+  "sample_rate": 48000,
+  "changed_spans": [
+    [
+      57.9,
+      99.9
+    ]
+  ],
+  "preserved_spans": [
+    {
+      "from": 0,
+      "to": 57.9,
+      "decoded_samples_identical": true,
+      "sha256": "cda93af2a3f7f226d7108e3bb0f867942fbe55199b63773629921bc727bdc707"
+    },
+    {
+      "from": 99.9,
+      "to": 119.6,
+      "decoded_samples_identical": true,
+      "sha256": "ee610bf5a5d8e8f832a940e49ec13837efa3ce6f15abf936763100edc0aa9a9a"
+    }
+  ],
+  "same_source_take": "lyria35-b2.mp3",
+  "ending": {
+    "final_downbeat_s": 116.0,
+    "no_intro_restart": true,
+    "half_second_rms_dbfs": [
+      {
+        "at": 115.0,
+        "rms": -12.6
+      },
+      {
+        "at": 115.5,
+        "rms": -14.43
+      },
+      {
+        "at": 116.0,
+        "rms": -12.43
+      },
+      {
+        "at": 116.5,
+        "rms": -15.53
+      },
+      {
+        "at": 117.0,
+        "rms": -16.39
+      },
+      {
+        "at": 117.5,
+        "rms": -20.57
+      },
+      {
+        "at": 118.0,
+        "rms": -27.26
+      },
+      {
+        "at": 118.5,
+        "rms": -36.01
+      },
+      {
+        "at": 119.0,
+        "rms": -46.62
+      },
+      {
+        "at": 119.5,
+        "rms": -78.77
+      }
+    ]
+  }
+}

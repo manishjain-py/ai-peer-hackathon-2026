@@ -1,0 +1,2 @@
+time_utc,session,endpoint,units,unit_price_usd,cost_usd,request_file,output_file,note,request_id,seconds
+2026-11-17 06:42:14,moss-v5-builder,minimax/h3-max-turbo/image-to-video,5,0.04,0.2000,demo-video/moss-ocean/requests/speak-write.json,demo-video/moss-ocean/assets/moss-speak-write-source.mp4,"V39 exact original invented m4b speech with simultaneous notebook strokes; generic Moss only. | cost basis: expected kept: fal.ai reported 8.0 units = $0.1500, lower than expected",01a1e83d-b994-7e61-b328-febf81a6df8b,16
