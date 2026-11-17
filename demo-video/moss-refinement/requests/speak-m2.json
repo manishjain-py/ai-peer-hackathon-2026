@@ -1,0 +1,21 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "The exact felt Moss in the reference speaks the supplied audio naturally to a video call. Lower its raised paw gently in the first 0.3 seconds. Start speaking at 0.3 seconds in exact sync with the supplied audio, mouth opening and closing clearly with each syllable and resting closed during pauses. Keep the mouth small and friendly, a simple dark soft felt opening; NO human lips, NO teeth, NO tongue. Eyes stay warm, one natural blink, restrained head and paw movement. After speech settles mouth CLOSED. Preserve EXACT green felt identity, cream face and belly, curled sprout, ears, amber pendant and all proportions. Full body within existing margins, feet planted, locked frontal camera with NO zoom/reframing. Uniform pure magenta #FF00FF background, no floor, shadow, objects, text, subtitles, music or new audio. 8 seconds continuous shot. Give one gentle open-paw explanatory gesture during the update, then settle.",
+    "image_url": "file:demo-video/mascot-exploration-v2/images/25-moss-chroma.png",
+    "target_audio_url": "file:demo-video/moss-refinement/audio/m2-guide.wav",
+    "duration": 8,
+    "resolution": "768P",
+    "prompt_expansion_mode": "disabled",
+    "seed": 171126309
+  },
+  "expect": {
+    "units": 8,
+    "unit": "seconds at768p",
+    "unit_price": 0.04,
+    "cost_usd": 0.32,
+    "basis": "Saved verified conservative rate; fal schema rechecked2026-11-17"
+  },
+  "output": "demo-video/moss-refinement/assets/moss-speak-m2-source",
+  "note": "V36 continuing controller-accepted lip-sync pilot; generic art and fictional existing voice only"
+}

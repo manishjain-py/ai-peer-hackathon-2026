@@ -1,0 +1,20 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "The exact same hand-felted woodland companion in the reference performs ONE clear rubber-stamping action. From0 to1 seconds it lifts the wooden-handled green rubber stamp slightly with both paws, looks down at it thoughtfully. From1 to2 seconds it brings the stamp forward and slightly down. At exactly2.5 seconds it firmly presses the round stamp straight downward onto an invisible flat surface at lower-belly height; wrists/paws follow through visibly. At3 seconds lift the stamp back up to reveal the invisible impression below. Then look toward the viewer and give one satisfied tiny smile, holding the stamp calmly. Stamp stays in paws; no extra objects or paper. Keep exact identity, all felt textures, cream face/belly, curled sprout, ears and amber pendant. Full body with margins, feet stay planted in same place and size. Locked camera, no reframing/zoom. Uniform pure magenta #FF00FF background, no floor, shadow, text, labels, actual ink mark, audio or music. All actual stamped text will be composited separately. Five-second continuous shot.",
+    "image_url": "file:demo-video/moss-refinement/assets/moss-stamp-keyframe.png",
+    "duration": 5,
+    "resolution": "768P",
+    "prompt_expansion_mode": "disabled",
+    "seed": 171126310
+  },
+  "expect": {
+    "units": 5,
+    "unit": "seconds at768p",
+    "unit_price": 0.04,
+    "cost_usd": 0.2,
+    "basis": "Saved verified conservative rate; fal schema rechecked2026-11-17"
+  },
+  "output": "demo-video/moss-refinement/assets/moss-stamp-source",
+  "note": "V36 generic stamping activity; no UI or private inputs"
+}

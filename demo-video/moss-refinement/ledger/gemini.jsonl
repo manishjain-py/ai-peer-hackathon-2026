@@ -1,0 +1,1 @@
+{"time_utc": "2026-11-17T02:49:45.974777+00:00", "provider": "Google Gemini API", "model": "gemini-nano-banana-2.1", "request": "requests/stamp-keyframe.json", "output": "assets/moss-stamp-keyframe.png", "cost_usd": 0.062778, "cost_basis": "Provider token usage x official Google standard pricing; estimate, not invoice", "status": "completed", "reserved_usd": 0.12}
