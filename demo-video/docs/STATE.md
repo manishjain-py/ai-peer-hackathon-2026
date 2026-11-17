@@ -1,5 +1,15 @@
 # AI Peer demo video: state
 
+**Current task, V41 (17 November2026): Moss v6 in progress.** Manish requests a complete
+clarity/editorial pass with12 specific changes, including no subtitles, vertical learned/
+brief layout, cleaner/reduced dialogue and AI labels, physical information selection,
+direct morning wake-to-laptop action, stronger ending and actual product URL CTA.
+Read `FEEDBACK-MOSS-V5-2026-11-17.md` and
+`handoffs/HANDOFF-2026-11-17-moss-v6-controller-start.md`. Active controller:
+`moss_v6_controller`; it may start one fresh worker. Root relays only. V5 remains the
+latest delivered movie and the V40 prototype-reference package stays pinned. Current
+spend$51.610827/$100; weeklyusage25%; no V6 paid call yet. All previous notes below are history.
+
 **V40 media transfer repaired (17 November 2026):** the receiving Mac reported LFS
 placeholders in the copied reference. Canonical and retained `moss-acting` checkouts on
 this personal Mac both match all 43 asset-manifest hashes before and after the requested
