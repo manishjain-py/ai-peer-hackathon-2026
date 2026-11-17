@@ -51,5 +51,10 @@ copy derives from the assembled master and stream-copies its AAC. The V3 mixed P
 exact outside14–24.6, including its original music cues and resolved ending; controller's
 `audio/pcm-preservation.json` records that proof. No direct listening claim is made.
 
-Source proof is complete; final exports and encoded checks follow before delivery. Controller
-owns final acceptance/Telegram receipts, shared docs and creative-review status.
+Both final exports are complete and accepted by the controller:119.600s/3588frames, correct
+1080p/720p dimensions, full decode,-14.0LUFS/-2.1dBTP. All5608 AAC packet payloads/timestamps
+match between exports. Exactly2742 decoded master frames(91.4s) match V3 outside the declared
+GOP spans. All previous movie hashes are unchanged. Controller accepted56 encoded scene
+frames,24 join/boundary frames and26 independent720p frames. `MANUAL-REVIEW.md`,
+`evidence/checks.json` and `evidence/assembly.json` record proof. No provider call or renderer
+remains running. Delivery and creative-review status are recorded in shared controller docs.
