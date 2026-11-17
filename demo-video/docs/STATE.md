@@ -1,12 +1,18 @@
 # AI Peer demo video: state
 
-Current task (17 November2026, V39): **Moss v5 in progress**. Restore a compact information
-ocean showing relevance to Ram's role/goals/interests, reclaim setup/Slack time, and make
-Zoom notebook writing begin during the spoken morning-brief promise. Music rhythm/impact
-must be preserved. Newcontroller `moss_v5_controller`; no implementation worker yet.
-Read `FEEDBACK-MOSS-V4-2026-11-17.md` and
-`handoffs/HANDOFF-2026-11-17-moss-v5-controller-start.md`. Current cost$51.398527/$100,
-weeklyusage22%; V4 is latestcompletedreview, Tagv2 last explicitapproval. Root relays only.
+Current task (17 November 2026, V39): **Moss v5 in progress**. Active controller
+`moss_v5_controller`; sole worker `moss_v5_builder` on `codex/moss-v5` in the retained
+`moss-acting` worktree. Original root relays only. New narration is selected and locally
+transcribed: “Thousands of company updates. I find what matters to Ram's role, goals
+and interests, and bring it into his morning brief.” It fits 90.4–97.9 seconds. The
+original ocean is being adapted into 90–100; setup and Slack are selectively trimmed.
+Music keeps the same Lyria take, moves thin bars to 58 and 82, and preserves the entire
+morning/ending from 100. Talk-and-writing motion is being proved against the saved
+meeting voice. Full visual acceptance and delivery remain pending. Read
+`FEEDBACK-MOSS-V4-2026-11-17.md` and
+`handoffs/HANDOFF-2026-11-17-moss-v5-controller-start.md`. Voice cost $0.0123; project
+$51.410827 before the pending motion call. Weekly usage 22%. V4 remains the latest
+completed review; Tag v2 remains the last explicit approval.
 
 Previous completion (17 November 2026, V37/V38): **Moss v4 complete and delivered**.
 The setup home and a new same-Matilda voiceover explain AI Peer as a proactive AI teammate,
