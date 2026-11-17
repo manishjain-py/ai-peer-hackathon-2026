@@ -10,6 +10,18 @@ Read `FEEDBACK-MOSS-V5-2026-11-17.md` and
 latest delivered movie and the V40 prototype-reference package stays pinned. Current
 spend$51.610827/$100; weeklyusage25%; no V6 paid call yet. All previous notes below are history.
 
+**V41 progress, 17 November 17:44 UTC:** source rebuild is underway in `codex/moss-v6`.
+The full-width learned→brief document, larger rules board, no global/Zoom subtitles and
+removed duplicate identity badges are in the first proof. Three physical ocean picks
+are being refined. Clean same-Chris colleague2 audio and matching new fictional motion
+pass local transcription and mouth-sync checks; original Matilda M1 is trimmed after
+“Peer.” and p05 is removed. Final voice cues have no overlap. The same composition now
+uses an uninterrupted five-bar finale, with the closing sentence before its resolving
+chord. Source/mix QA continues; no V6 delivery yet. Cost so far **$0.4663**, project
+**$52.077127/$100**. Live usage helper at17:36UTC reports week2%, Fable0% (a new reading;
+prior25% was historical). Controller `moss_v6_controller`; sole worker `moss_v6_builder`.
+
+
 **V40 media transfer repaired (17 November 2026):** the receiving Mac reported LFS
 placeholders in the copied reference. Canonical and retained `moss-acting` checkouts on
 this personal Mac both match all 43 asset-manifest hashes before and after the requested
