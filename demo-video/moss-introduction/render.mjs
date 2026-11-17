@@ -1,0 +1,68 @@
+#!/usr/bin/env node
+// Public-only Moss full film. Frame capture explicitly waits for every scene and alpha-video
+// seek. V36 uses the revised local mix; paid providers are never invoked here.
+import fs from 'node:fs';
+import path from 'node:path';
+import http from 'node:http';
+import os from 'node:os';
+import {fileURLToPath} from 'node:url';
+import {createRequire} from 'node:module';
+import {spawn,execFileSync} from 'node:child_process';
+import {once} from 'node:events';
+import {build} from '../film/build.mjs';
+const HERE=path.dirname(fileURLToPath(import.meta.url)),DEMO=path.dirname(HERE),CACHE=path.join(HERE,'.build'),EVIDENCE=path.join(HERE,'evidence');
+const FILM=path.join(DEMO,'film'),UI=path.join(DEMO,'ui-concepts'),FPS=30;
+const MASTER=path.join(HERE,'audio/mix.wav');
+const CHROME='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+let PW;try{PW=createRequire(import.meta.url)('playwright');}catch{PW=createRequire(path.join(process.env.CODEX_NODE_MODULES||path.join(os.homedir(),'.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules'),'package.json'))('playwright');}
+for(const p of [CACHE,EVIDENCE,path.join(UI,'renders'),path.join(FILM,'renders')])fs.mkdirSync(p,{recursive:true});
+const args=process.argv.slice(2),isFilm=true,probeOnly=args.includes('--probe'),liveWalk=false,actingProof=args.includes('--acting-proof');
+const project=path.join(CACHE,isFilm?'film':'walk');
+function prepare(){build({cut:'blended-moss-v4',out:project});}
+function serve(){return new Promise(resolve=>{const srv=http.createServer((req,res)=>{
+ if(req.url==='/favicon.ico'){res.writeHead(204).end();return;}
+ let decoded;try{decoded=decodeURIComponent(new URL(req.url,'http://localhost').pathname);}catch{res.writeHead(400).end();return;}
+ const file=path.resolve(CACHE,'.'+decoded);if(!file.startsWith(CACHE+path.sep)||!fs.existsSync(file)||!fs.statSync(file).isFile()){res.writeHead(404).end();return;}
+ const types={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.png':'image/png','.jpg':'image/jpeg','.svg':'image/svg+xml','.mp4':'video/mp4','.webm':'video/webm','.ttf':'font/ttf'};
+ const size=fs.statSync(file).size;res.setHeader('Content-Type',types[path.extname(file)]||'application/octet-stream');res.setHeader('Cache-Control','no-store');res.setHeader('Accept-Ranges','bytes');
+ const m=req.headers.range?.match(/bytes=(\d+)-(\d*)/);if(m){const start=+m[1],end=m[2]?Math.min(size-1,+m[2]):size-1;res.writeHead(206,{'Content-Range':`bytes ${start}-${end}/${size}`,'Content-Length':end-start+1});fs.createReadStream(file,{start,end}).pipe(res);}else{res.setHeader('Content-Length',size);fs.createReadStream(file).pipe(res);}
+ });srv.listen(0,'127.0.0.1',()=>resolve({srv,url:`http://127.0.0.1:${srv.address().port}`}));});}
+async function execAsync(command,args){const child=spawn(command,args,{stdio:['ignore','ignore','pipe']});let err='';child.stderr.on('data',x=>err+=x);const [code]=await once(child,'close');if(code!==0)throw new Error(command+' failed: '+err);}
+async function init(browser,url){const page=await browser.newPage({viewport:{width:1920,height:1080},deviceScaleFactor:1});page.errors=[];page.on('pageerror',e=>page.errors.push(e.message));page.on('console',m=>{if(m.type()==='error')page.errors.push(m.text());});await page.goto(url,{waitUntil:'load'});await page.waitForFunction(mode=>mode?window.__film:window.__concept,isFilm,{timeout:15000}).catch(async e=>{throw new Error(page.errors.join('\n')+'\n'+await page.locator('body').innerText());});
+ if(liveWalk){const slots=JSON.parse(fs.readFileSync(path.join(FILM,'cuts/blended-moss-v4/shots.json'),'utf8')).slots.filter(s=>s.id.startsWith('walk-'));await page.evaluate(({url,slots})=>{const f=document.createElement('iframe');f.src=url;f.style.cssText='position:absolute;inset:0;width:1920px;height:1080px;border:0;background:#f4f3eb;display:block';document.getElementById('shots').appendChild(f);window.__liveWalk={frame:f,slots};},{url:new URL('../walk/index.html',url).href,slots});await page.waitForFunction(()=>window.__liveWalk.frame.contentWindow.__concept,{timeout:60000});await page.evaluate(()=>window.__liveWalk.frame.style.display='none');}
+ return page;}
+async function seek(page,t){await page.evaluate(async ({t,isFilm})=>{
+ window.__mascotTime=t;if(isFilm)window.__film.renderAt(t);else await window.__concept.renderAt(t);
+ let actorDoc=document;const live=window.__liveWalk;if(live){const slot=live.slots.find(s=>t>=s.start&&t<s.start+s.length);live.frame.style.display=slot?'block':'none';for(const n of document.getElementById('shots').children)if(n!==live.frame){n.style.visibility=slot?'hidden':'';if(slot)n.style.display='none';}if(slot){await live.frame.contentWindow.__concept.renderAt(slot.in_s+(t-slot.start)*slot.rate);actorDoc=live.frame.contentDocument;}}
+ const seekVideo=async(v,at)=>{if(v.readyState<1)await new Promise((ok,fail)=>{v.addEventListener('loadedmetadata',ok,{once:true});v.addEventListener('error',()=>fail(new Error('Video load '+v.src)),{once:true});v.load();});at=Math.max(0,Math.min(v.duration-.01,at));if(Math.abs(v.currentTime-at)>0.00001)await new Promise((ok,fail)=>{const timeout=setTimeout(()=>fail(new Error('Video seek timeout '+v.src)),15000);v.addEventListener('seeked',()=>{clearTimeout(timeout);ok();},{once:true});v.currentTime=at;});};
+ const clips=[...document.querySelectorAll('video[data-start]')].filter(v=>t>=+v.dataset.start&&t<+v.dataset.start+(+v.dataset.duration));
+ await Promise.all(clips.map(v=>seekVideo(v,Number(v.dataset.mediaStart)+(t-Number(v.dataset.start))*Number(v.dataset.playbackRate||1))));
+ const actors=[...actorDoc.querySelectorAll('video[data-moss]')].filter(v=>v.checkVisibility({checkOpacity:true,checkVisibilityCSS:true}));
+ await Promise.all(actors.map(v=>seekVideo(v,+v.dataset.at||.04)));
+ await new Promise(ok=>requestAnimationFrame(()=>requestAnimationFrame(ok)));
+ },{t,isFilm});if(page.errors.length)throw new Error(page.errors.join('\n'));}
+const walkTimes=[2.8,4.3,5.8,6.9,8.9,10.9,11.5,12.4,13.9,14.9,16.2,17.1,18.5,19.7,20.8,22.5,23.9,25.7,28,30.6,33.5,36.5,39.9,41.8,43.7,45.7,47.4,48.6,50.35,50.9,51.4,51.9,53.5,54.9,55.4,56.3,57.45];
+const oldFilmTimes=[1.8,5.6,9.1,12.8,13.6,14.2,15.6,16.8,17.2,18.6,19.7,20.3,21.7,22.2,23.8,25.3,27,29,31,33,35,37,39.4,40.7,42.2,45.2,47.6,50.2,53.5,54.6,56.8,59,60.8,62.2,63.5,64.2,64.7,65.8,67,67.7,68.5,69.3,70,73,76.5,80,85,90,94.8,97.5,100.2,101.5,102.9,103.3,103.9,104.5,104.8,105.1,105.5,105.7,106.3,107.2,108.6,110.5,111.1,113.4,115.8,117.6,119.4];
+const filmTimes=[13.9,14,14.8,15.8,16.3,16.8,17.5,18.2,19,19.7,20.4,21.2,21.9,22,22.4,23.2,23.54,23.9,24.3,24.59,24.6,28.5,60.4,62.2,80,97.5,99.97,100,100.5,101.3,102.17,102.2,102.5,103.2,103.8,104.3,104.6,105,105.4,105.59,105.6,108.6,110.5,113.7,117.6,119.5];
+// Every caption/label arrival (including LEAD), middle and HOLD exit, plus source pans.
+const intervals=[[22.2,24.01],[24.9,28.08],[29.65,32.75],[33.07,37.07],[37.2,39.1],[39.2,40.6],[41.1,43.54],[47.5,50.66],[54.2,56.29],[59.45,62.48],[63.5,65.17],[65.4,68.173]];
+const denseWalkTimes=[...new Set([...Array.from({length:95},(_,i)=>22+i*.5),...intervals.flatMap(([a,b])=>[a-.12,a+.05,(a+b)/2,b-.05,b+.2,b+.33]),...[8.325,10.275,13.15,15.45,17.65].map(x=>24.6+(x-5.5)/1.21875),40.7,47.6,50.2,69.35].filter(t=>t>=22&&t<69.4).map(t=>Math.round(t*1000)/1000))].sort((a,b)=>a-b);
+async function board(page){const custom=args.find(a=>a.startsWith('--times='));const times=custom?custom.slice(8).split(',').map(Number):actingProof?[25.5,26.5,30.5,36,38,43,49,55.5,57.3,58.2,59.6,61.6,64.5,67,72,78.2,85.5,87.5,87.8,88.4,89.25,89.5,90.5,91.5,108,109.4,109.76,109.8,109.84,110.4]:liveWalk?denseWalkTimes:isFilm?filmTimes:walkTimes,dir=path.join(CACHE,isFilm?'film-probes':'walk-probes');fs.mkdirSync(dir,{recursive:true});for(let i=0;i<times.length;i++){await seek(page,times[i]);await page.screenshot({path:path.join(dir,`f${String(i).padStart(3,'0')}.jpg`),type:'jpeg',quality:92});}
+ const proofLabel=args.find(a=>a.startsWith('--label='))?.slice(8);const data={kind:liveWalk?'live-caption-composition':isFilm?'film-source':'walk-source',times,files:times.map((t,i)=>`f${String(i).padStart(3,'0')}.jpg`)};fs.writeFileSync(path.join(EVIDENCE,proofLabel?proofLabel+'-times.json':actingProof?'acting-proof-times.json':liveWalk?'caption-review-times.json':isFilm?'film-source-times.json':'walk-source-times.json'),JSON.stringify(data,null,2)+'\n');
+ await execAsync('uv',['run','--quiet','--with','pillow','python',path.join(HERE,'tools/sheets.py'),dir,path.join(EVIDENCE,proofLabel|| (actingProof?'acting-proof':liveWalk?'caption-review':isFilm?'film-source':'walk-source')),JSON.stringify(times)]);}
+async function encodeSegment(browser,url,start,end,out){const page=await init(browser,url);const writer=spawn('ffmpeg',['-hide_banner','-loglevel','error','-nostdin','-y','-f','image2pipe','-framerate',String(FPS),'-vcodec','mjpeg','-i','pipe:0','-an','-c:v','libx264','-preset','fast','-crf','18','-pix_fmt','yuv420p','-movflags','+faststart',out],{stdio:['pipe','ignore','pipe']});let err='';writer.stderr.on('data',x=>err+=x);const finished=once(writer,'close');for(let i=start;i<end;i++){await seek(page,i/FPS);const buf=await page.screenshot({type:'jpeg',quality:96});if(!writer.stdin.write(buf))await once(writer.stdin,'drain');if(i%300===0)console.log(`${isFilm?'film':'walk'} frame ${i}/${end}`);}writer.stdin.end();const[code]=await finished;if(code!==0)throw new Error(err);await page.close();}
+async function main(){
+ prepare();const{srv,url}=await serve();const browser=await PW.chromium.launch({executablePath:CHROME,headless:true,args:['--disable-background-networking','--disable-component-update','--no-first-run','--hide-scrollbars','--disable-gpu']});
+ try{const link=url+'/film/index.html';const p=await init(browser,link);await board(p);await p.close();console.log('V4 source probes ready');if(probeOnly)return;
+ if(args.includes('--full')){
+  const parts=[path.join(CACHE,'full-first.mp4'),path.join(CACHE,'full-second.mp4')];await Promise.all([encodeSegment(browser,link,0,1794,parts[0]),encodeSegment(browser,link,1794,3588,parts[1])]);
+  const list=path.join(CACHE,'full-concat.txt');fs.writeFileSync(list,parts.map(p=>`file '${p}'`).join('\n')+'\n');const raw=path.join(CACHE,'full-picture.mp4');await execAsync('ffmpeg',['-v','error','-y','-f','concat','-safe','0','-i',list,'-c','copy',raw]);
+  const master=path.join(FILM,'renders/blended-moss-v4.mp4');await execAsync('ffmpeg',['-v','error','-y','-i',raw,'-i',MASTER,'-map','0:v:0','-map','1:a:0','-c:v','libx264','-preset','slow','-crf','22','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart',master]);await execAsync('ffmpeg',['-v','error','-y','-i',master,'-vf','scale=1280:720','-c:v','libx264','-preset','slow','-crf','23','-c:a','copy','-movflags','+faststart',path.join(FILM,'renders/blended-moss-v4-720p.mp4')]);
+ }else{
+  const spans=[[420,738],[3000,3168]];await Promise.all(spans.map(([a,b],i)=>encodeSegment(browser,link,a,b,path.join(CACHE,`changed-${i}.mp4`))));
+  await execAsync('python3',[path.join(HERE,'tools/assemble_patch.py')]);
+ }
+ console.log('V4 complete exports ready');
+ }finally{await browser.close();srv.close();}
+}
+main().catch(e=>{console.error(e);process.exitCode=1;});

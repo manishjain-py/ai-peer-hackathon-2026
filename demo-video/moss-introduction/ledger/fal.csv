@@ -1,0 +1,2 @@
+time_utc,session,endpoint,units,unit_price_usd,cost_usd,request_file,output_file,note,request_id,seconds
+2026-11-17 03:57:50,moss-v4,fal-ai/elevenlabs/tts/multilingual-v2,0.106,0.1,0.0106,demo-video/moss-introduction/requests/intro-v4.json,demo-video/moss-introduction/audio/intro-v4-source.mp3,V37 fictional narrator introduction; sameMatilda/Multilingualv2 viafal because directcredentialabsent onthisMac. No privateinputs. | cost basis: billed units reported by fal.ai,01a1e7a7-4a49-7332-a79d-fa1e9076f92b,6

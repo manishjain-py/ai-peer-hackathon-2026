@@ -1,0 +1,24 @@
+{
+  "endpoint": "fal-ai/elevenlabs/tts/multilingual-v2",
+  "inputs": {
+    "text": "I'm Rahm's AI Peer, his proactive AI teammate, keeping him informed and covering for him around the clock.",
+    "voice": "Matilda",
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "speed": 1.0,
+    "timestamps": true,
+    "previous_text": "He does. I'm the one who's up.",
+    "next_text": "Setting me up takes one click.",
+    "language_code": "en"
+  },
+  "expect": {
+    "units": 106,
+    "unit": "character",
+    "unit_price": 0.0001,
+    "cost_usd": 0.0106,
+    "basis": "https://fal.ai/models/fal-ai/elevenlabs/tts/multilingual-v2, checked2026-11-17: $0.10 per1000characters"
+  },
+  "output": "demo-video/moss-introduction/audio/intro-v4-source",
+  "note": "V37 fictional narrator introduction; sameMatilda/Multilingualv2 viafal because directcredentialabsent onthisMac. No privateinputs."
+}

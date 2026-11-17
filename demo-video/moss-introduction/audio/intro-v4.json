@@ -1,0 +1,108 @@
+{
+  "id": "p02v4",
+  "voice": "Matilda",
+  "voice_id": "XrExE9yKIg1WjnnlVkGX",
+  "model": "eleven_multilingual_v2",
+  "provider": "ElevenLabs Multilingual v2 through fal.ai",
+  "text": "I'm Ram's AI Peer, his proactive AI teammate, keeping him informed and covering for him around the clock.",
+  "spoken": "I'm Rahm's AI Peer, his proactive AI teammate, keeping him informed and covering for him around the clock.",
+  "request_id": "01a1e7a7-4a49-7332-a79d-fa1e9076f92b",
+  "file": "intro-v4.wav",
+  "seconds": 6.667,
+  "trimmed_front": 0.02,
+  "raw_seconds": 6.687,
+  "peak_dbfs": -5.41,
+  "rms_dbfs": -23.33,
+  "words": [
+    {
+      "w": "I'm",
+      "s": 0.003,
+      "e": 0.224
+    },
+    {
+      "w": "Ram's",
+      "s": 0.293,
+      "e": 0.572
+    },
+    {
+      "w": "AI",
+      "s": 0.642,
+      "e": 0.909
+    },
+    {
+      "w": "Peer,",
+      "s": 0.99,
+      "e": 1.42
+    },
+    {
+      "w": "his",
+      "s": 1.571,
+      "e": 1.698
+    },
+    {
+      "w": "proactive",
+      "s": 1.768,
+      "e": 2.279
+    },
+    {
+      "w": "AI",
+      "s": 2.325,
+      "e": 2.569
+    },
+    {
+      "w": "teammate,",
+      "s": 2.615,
+      "e": 3.126
+    },
+    {
+      "w": "keeping",
+      "s": 3.335,
+      "e": 3.637
+    },
+    {
+      "w": "him",
+      "s": 3.684,
+      "e": 3.776
+    },
+    {
+      "w": "informed",
+      "s": 3.823,
+      "e": 4.276
+    },
+    {
+      "w": "and",
+      "s": 4.311,
+      "e": 4.38
+    },
+    {
+      "w": "covering",
+      "s": 4.438,
+      "e": 4.775
+    },
+    {
+      "w": "for",
+      "s": 4.821,
+      "e": 4.926
+    },
+    {
+      "w": "him",
+      "s": 4.984,
+      "e": 5.146
+    },
+    {
+      "w": "around",
+      "s": 5.204,
+      "e": 5.437
+    },
+    {
+      "w": "the",
+      "s": 5.472,
+      "e": 5.541
+    },
+    {
+      "w": "clock.",
+      "s": 5.564,
+      "e": 6.075
+    }
+  ]
+}
