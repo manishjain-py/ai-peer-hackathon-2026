@@ -1,0 +1,14 @@
+{
+  "uploaded_utc": "2026-11-17T14:19:49Z",
+  "verified_utc": "2026-11-17T14:24:53.233860+00:00",
+  "provider": "OneDrive",
+  "file_name": "Moss-v5-media-transfer-2026-11-17.zip",
+  "bytes": 501306894,
+  "sha256": "36f963794ad3a4c030a34c87699bd985d99ca6f1e0252f801082f8d2eb03e8f4",
+  "local_and_remote_quickxor": "a3bb5dc9418466b6e3bc52c05de5d5aeb80a0415",
+  "remote_path": "AI Peer Transfers/Moss-v5-media-transfer-2026-11-17.zip",
+  "public_url": "https://1drv.ms/u/c/4827bac9fc10dc91/IQCy7W5ACpptSrPVXc-OKMm-AeSN2GHenbDjpmFrIHk9cK4",
+  "sharing": "Anyone with the link can download; explicitly selected by Manish",
+  "verification": "Upload complete; remote size and QuickXorHash match source. Shared file opened in a signed-out browser and shows Download.",
+  "google_drive_note": "ZIP also copied into the existing personal Google Drive sync folder. Cloud sync/sharing not verified: native browser access remained locked after requested caffeinate signal; in-app Drive was signed out. User allowed Drive or another service; connected OneDrive supplied the working public link."
+}
