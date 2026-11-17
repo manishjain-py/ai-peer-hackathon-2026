@@ -27,5 +27,25 @@
   "retainedFrames": 2998,
   "recapturedLearned": 210,
   "recapturedSlackBridgeAndOcean": 380,
-  "note": "Only35–42 and87⅓–100 recaptured; all other compressed picture retained, including native4K Earth. Actual original felt paw; no extra limb."
+  "note": "Only35\u201342 and87\u2153\u2013100 recaptured; all other compressed picture retained, including native4K Earth. Actual original felt paw; no extra limb.",
+  "subsequent_slack_send_repair": {
+    "base": "full-picture-final-v6.mp4",
+    "frames": 3588,
+    "seconds": 119.6,
+    "segments": [
+      {
+        "file": "slack-base-0.mp4",
+        "frames": 2370
+      },
+      {
+        "file": "slack-send-repair.mp4",
+        "frames": 250
+      },
+      {
+        "file": "slack-base-2.mp4",
+        "frames": 968
+      }
+    ],
+    "note": "Retained the other 3338 compressed picture packets. The typing status and composer now clear at 84.35 s as the posted answer appears."
+  }
 }

@@ -1,6 +1,6 @@
 # Moss v6: clarity, physical selection and a direct call to action
 
-**PAUSED at Manish's explicit request for an app restart.** Read [PAUSED.md](PAUSED.md). Latest exports exist; final independent acceptance and delivery remain pending. Resume only after his explicit request.
+The 119.6-second cut has a 4K master and a 1080p Telegram edition. See the [project tracker](../docs/STATE.md) for delivery status.
 
 V41 rebuilds the public fictional-data film from editable source at 3840×2160, 30 fps.
 The logical 1920px composition is captured at 2× device density; the world canvas and
@@ -18,9 +18,7 @@ three trust rules in large text. One “Ram’s AI Peer” identity remains; red
 are removed, including the cached setup crossfade and morning footer.
 
 Zoom ends at 79, Slack runs 79–88 and the information ocean 88–100. Slack has 2.25 seconds
-of actual typing, a separate reply arrival, and a shorter readable final focus. Each
-of three paper cards is attached to a short felt paw during its own reach, grasp,
-carry, place and release; Moss’s body travels with it. The quiet source stream stays
+of actual typing, a separate reply arrival, and a shorter readable final focus. Moss grips each of the three paper cards with its original raised felt paw and carries it into the corresponding section of Ram’s brief. The quiet source stream stays
 behind the physical foreground. The ocean uses saved Moss art with local hand/card compositing; the separate colleague
 hook repair uses the new matching motion documented in `audio/README.md`.
 
@@ -53,6 +51,4 @@ Final master: `../film/renders/blended-moss-v6.mp4`. Delivery:
 CRF 16, muxed without a second picture generation. The 1080p download uses a two-pass
 3 Mbps average with 6.5 Mbps motion allowance and 192 kbps AAC, targeting under 50 MB.
 
-The controller owns voice repair, clean Zoom introduction, music and delivery. Its
-`audio/README.md` describes the soundtrack and receipts. Visual source acceptance is
-in `MANUAL-REVIEW.md`; final encoded checks are added after the full capture completes.
+[Soundtrack notes](audio/README.md) cover the colleague’s new take, shorter meeting introduction and musical close. The [source review](MANUAL-REVIEW.md) covers staging, and [checks.json](evidence/checks.json) records the export measurements.

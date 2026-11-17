@@ -69,6 +69,24 @@ async function finalExports(raw){
 async function main(){
  prepare();const{srv,url}=await serve();const browser=await PW.chromium.launch({executablePath:CHROME,headless:true,args:['--disable-background-networking','--disable-component-update','--no-first-run','--hide-scrollbars','--disable-gpu']});
  try{const link=url+'/film/index.html';const p=await init(browser,link);if(args.includes('--setup-frame')){await seek(p,24.6);await p.locator('iframe').screenshot({path:path.join(HERE,'assets/setup-first-v6.png')});console.log('Native V6 setup crossfade saved');await p.close();return;}await board(p);await p.close();console.log('V6 source probes ready');if(probeOnly)return;
+ if(args.includes('--repair-slack')){
+  // Replace the whole Slack keyframe interval so the repaired frames can be joined losslessly.
+  const parts=['slack-base-0.mp4','slack-send-repair.mp4','slack-base-2.mp4'].map(name=>path.join(CACHE,name));
+  const counts=[2370,250,968];
+  await encodeSegment(browser,link,2370,2620,parts[1]);
+  const base=path.join(CACHE,'full-picture-final-v6.mp4');
+  await execAsync('ffmpeg',['-v','error','-y','-i',base,'-an','-c:v','copy','-avoid_negative_ts','disabled','-f','segment','-segment_times','79,87.333333','-reset_timestamps','1','-segment_format_options','movflags=+faststart:avoid_negative_ts=disabled',path.join(CACHE,'slack-base-%01d.mp4')]);
+  for(let index=0;index<parts.length;index++){
+   const frames=Number(execFileSync('ffprobe',['-v','error','-select_streams','v:0','-show_entries','stream=nb_frames','-of','default=nw=1:nk=1',parts[index]],{encoding:'utf8'}));
+   if(frames!==counts[index])throw new Error(`Slack repair section ${index} has ${frames} frames. Expected ${counts[index]}.`);
+  }
+  const list=path.join(CACHE,'slack-repair-concat.txt');
+  fs.writeFileSync(list,parts.map((file,index)=>`file '${file}'\nduration ${counts[index]/FPS}\n`).join(''));
+  const raw=path.join(CACHE,'full-picture-slack-repair.mp4');
+  await execAsync('ffmpeg',['-v','error','-y','-f','concat','-safe','0','-i',list,'-c','copy',raw]);
+  await finalExports(raw);
+  return;
+ }
  if(args.includes('--repair-final')){
   const learned=path.join(CACHE,'repair-learned-v6.mp4'),ocean=path.join(CACHE,'repair-ocean-v6.mp4');
   await Promise.all([encodeSegment(browser,link,1050,1260,learned),encodeSegment(browser,link,2620,3000,ocean)]);

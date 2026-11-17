@@ -175,9 +175,14 @@ function slack(S,film,slot){
   q.style.opacity=ease.out(ramp(u,.5,.8));waiting.style.opacity=ease.out(ramp(u,.8,1.2))*(1-sent);
   thread.style.transform=`translate(${lerp(0,-95,close)}px,${lerp(0,-145,close)}px) scale(${lerp(1,1.05,close)})`;
   side.style.opacity=1-close*.6;q.style.opacity*=1-close;reply.style.opacity=sent;reply.style.transform=`translateY(${(1-sent)*18}px)`;
-  compose.style.opacity=1-close;status.style.opacity=1-close;status.textContent=u<2.1?'Reading Daniel’s question…':u<3?'Checking the sources…':'Ram’s AI Peer is typing…';status.style.display=u<1.4?'none':'';
-  const draft='It was a partner bank outage, not retry logic.';typed.textContent=u<3?'Message #host-payouts':draft.slice(0,Math.floor(ramp(u,3,5.25)*draft.length));send.style.opacity=u<3?.3:1;
-  const x=lerp(2020,1730,read),y=840;const a=(1-ease.inOut(ramp(u,5.8,6.3)))*read;
+  const submitted=u>=5.35;
+  compose.hidden=submitted;
+  status.hidden=u<1.4||submitted;
+  status.textContent=u<2.1?'Reading Daniel’s question…':u<3?'Checking the sources…':'Ram’s AI Peer is typing…';
+  const draft='It was a partner bank outage, not retry logic.';
+  typed.textContent=submitted?'':u<3?'Message #host-payouts':draft.slice(0,Math.floor(ramp(u,3,5.25)*draft.length));
+  send.style.opacity=u<3?.3:1;
+  const x=lerp(2020,1730,read),y=840;const a=(1-ease.inOut(ramp(u,5.15,5.35)))*read;
   moss.draw({x,y,s:1,alpha:a,shadow:.4,action:u<2.1?'listen':u<3?'attentive':'type',actionTime:u<2.1?1.2:u<3?2+(u-2.1):1.5+(u-3)*1.4});
  }};
 }

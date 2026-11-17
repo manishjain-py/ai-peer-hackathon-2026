@@ -1,4 +1,7 @@
-# Paused at Manish's request
+# Historical pause checkpoint
+
+Manish subsequently resumed the task. This note records the files at the pause. See the [project tracker](../docs/STATE.md) for the latest cut.
+
 
 17 November 2026 UTC. Manish explicitly paused work to restart the ChatGPT app and
 return with “resume.” **Do not continue until that explicit resume.**
