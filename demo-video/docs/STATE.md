@@ -4,8 +4,9 @@ Current task (17 November 2026, V37/V38): **Moss v4 in progress**. Clarify AI Pe
 setup home and in the introductory voiceover, filling the existing empty beat; show the
 morning Moss only on the laptop, with no external little Moss or phone in view. Brief:
 `FEEDBACK-MOSS-V3-2026-11-17.md`. Controller `/root`, sole worker `moss_v3_builder`.
-Weekly usage checked at21%; pay-per-use spend $51.387927/$100. Existing ElevenLabs plan
-is authorized for the new line; no new paid art planned. V3 remains the latest completed
+Weekly usage checked at21%; pay-per-use spend $51.398527/$100. The new same-Matilda line
+is generated through fal.ai for $0.0106 because the direct ElevenLabs credential is absent;
+no new artwork or motion generation. Voice/audio source and checks are complete. V3 remains the latest completed
 review cut, Tag v2 the last explicitly approved full movie.
 
 Previous completion (17 November 2026): **Moss v3 complete and delivered (V36)**.
