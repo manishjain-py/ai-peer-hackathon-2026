@@ -7,11 +7,12 @@ transcribed: “Thousands of company updates. I find what matters to Ram's role,
 and interests, and bring it into his morning brief.” It fits 90.4–97.9 seconds. The
 original ocean is being adapted into 90–100; setup and Slack are selectively trimmed.
 Music keeps the same Lyria take, moves thin bars to 58 and 82, and preserves the entire
-morning/ending from 100. Talk-and-writing motion is being proved against the saved
-meeting voice. Full visual acceptance and delivery remain pending. Read
+morning/ending from 100. The new talk-and-writing take passes the 20-frame source walk; the first in-context
+ocean proof is being refined for caption clearance and larger relevance labels. Full
+visual acceptance and delivery remain pending. Read
 `FEEDBACK-MOSS-V4-2026-11-17.md` and
-`handoffs/HANDOFF-2026-11-17-moss-v5-controller-start.md`. Voice cost $0.0123; project
-$51.410827 before the pending motion call. Weekly usage 22%. V4 remains the latest
+`handoffs/HANDOFF-2026-11-17-moss-v5-controller-start.md`. Voice cost $0.0123 and simultaneous speaking/writing motion $0.20; project
+$51.610827. No paid call is pending. Weekly usage 22%. V4 remains the latest
 completed review; Tag v2 remains the last explicit approval.
 
 Previous completion (17 November 2026, V37/V38): **Moss v4 complete and delivered**.
