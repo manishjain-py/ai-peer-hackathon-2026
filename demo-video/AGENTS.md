@@ -3,11 +3,7 @@
 A new 2-minute "wow" demo video for the AI Peer hackathon project, started 2026-11-14.
 It is a new film, separate from the September concept film in `../film/`.
 
-The last approved full video (16 November 2026): `film/renders/blended-tag-v2.mp4`, the Tag version, tag
-`blended-tag-v2` (V30, V31; Little Peer is not used). Earlier cuts and every checkpoint:
-`../START-HERE.md`, "Checkpoints".
-
-Latest delivered cut (V42), `film/renders/blended-moss-v7.mp4`, runs 119.600 seconds. The [delivery record](docs/MOSS-V7-DELIVERY-2026-11-17.md) links the 4K master and 1080p Telegram download. See the [source guide](moss-choreography/README.md) for the film and the [tracker](docs/STATE.md) for current status.
+The approved final film is **Moss v7**, 119.600 seconds, stable tag `stable-moss-v7`. See the [approval record](docs/MOSS-V7-APPROVAL.md), [4K master](film/renders/blended-moss-v7.mp4) and [1080p edition](film/renders/blended-moss-v7-1080p.mp4). Separate music auditions use the same picture. A future selection needs Manish’s decision.
 
 V40 (17 November): for implementing this design in the actual prototype on another Mac,
 use `../docs/prototype-moss-handoff/README.md`. Moss v5 is the designated implementation

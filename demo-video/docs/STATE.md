@@ -1,5 +1,8 @@
 # AI Peer demo video: state
 
+**Approved final film (V43): Moss v7 with its existing soundtrack.** Manish approved the delivered film for now and requested a stable checkpoint. Use `stable-moss-v7` and the [approval record](MOSS-V7-APPROVAL.md). Next is a separate music audition on the identical picture, with per-variant independent review before Telegram delivery.
+
+
 **Moss v7 (V42) is complete and delivered.** The 4K master and 1080p edition run 119.600 seconds. Telegram confirmed the playable video (23172) and original download (23173). See the [delivery record](MOSS-V7-DELIVERY-2026-11-17.md), [completion handoff](handoffs/HANDOFF-2026-11-17-moss-v7-complete.md) and [review](../moss-choreography/CONTROLLER-REVIEW.md). Release tag `blended-moss-v7`. V7 used saved assets and added $0 to the $52.097127 project total. Earlier notes below are history.
 
 **Moss v6 (V41) is complete and delivered.** The [4K master](../film/renders/blended-moss-v6.mp4) and [1080p copy](../film/renders/blended-moss-v6-1080p.mp4) run 119.600 seconds. Telegram confirmed video 23168 and original document 23169. [PR 23](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/23) merged at `9105d79`. Checkpoint `blended-moss-v6` pins the delivery. Next is Manish’s creative review. V40 still designates v5 for implementing the prototype on the other Mac.
@@ -981,7 +984,7 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 
 ## Needs Manish
 
-V42 awaits creative review on Telegram (video 23172, original download 23173).
+Manish approved the delivered v7 (23172/23173). His next decision is which music audition, if any, to adopt.
 
 **V40:** copy the repository with materialized media to the other Mac, provide its path
 in the saved paste prompt, and run that instruction in the actual prototype's workspace.
@@ -1170,7 +1173,7 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 
 ## Next
 
-Review feedback from Manish when it arrives. The completed v7 package is pinned at `blended-moss-v7`.
+Prepare the music auditions. The approved final is pinned at `stable-moss-v7`.
 
 **V40 media repair:** transfer the ready Downloads ZIP/checksum to the company Mac and
 merge-extract it into the existing demo reference root, preserving other files. Verify
@@ -1426,7 +1429,7 @@ and 7 still hold.
 - **Moss is the selected character for the current film work** (V34), with context-specific
   acting requested in V35, scene/audio refinements in V36, and the clearer introduction
   and laptop-only morning in V37/V38. `blended-moss-v4.mp4` is the latest delivered review cut.
-- **Tag v2 is the last explicitly approved full movie** (V30/V31). Preserve it and all earlier
+- **Tag v2 was the earlier approved full movie** (V30/V31). Preserve it and all earlier
   versions; documentation maintenance does not approve or replace a movie.
 - Little Peer is not used (V31); do not restart its version 2 from an old tracker entry.
 - See `DESIGN.md` section 0 for Manish's words and decisions.
