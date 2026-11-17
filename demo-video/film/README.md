@@ -3,23 +3,24 @@
 The two-minute AI Peer demo video ("He's asleep. I'm not.", `../docs/STORY.md`), built as one
 web page whose picture is a pure function of the film time, captured frame by frame.
 
-## Latest complete movie: Moss v4
+## Latest complete movie: Moss v5
 
-`renders/blended-moss-v4.mp4` is the latest delivered review cut: **119.600 seconds,
-3,588 frames, 1920×1080 at 30 fps**. The Telegram copy is
-`renders/blended-moss-v4-720p.mp4`. See the [delivery record](../docs/MOSS-V4-DELIVERY-2026-11-17.md)
-and [Moss v4 source/rebuild guide](../moss-introduction/README.md). The new setup home and
-same-Matilda voiceover define the proactive AI teammate, available 24/7. Morning Moss is
-shown only on the laptop; both phones and external mascot overlays are out of view.
+`renders/blended-moss-v5.mp4` is the latest delivered review cut: **119.600 seconds,
+3,588 frames, 1920×1080 at 30fps**. The Telegram copy is
+`renders/blended-moss-v5-720p.mp4`. See the [delivery record](../docs/MOSS-V5-DELIVERY-2026-11-17.md)
+and [Moss v5 source/rebuild guide](../moss-ocean/README.md).
 
-The new layer supplies the introduction and morning framing; the walkthrough after
-24.6 seconds uses retained `../ui-concepts/moss-v3/` source. The full V3 music bed and
-21 other voice lines are reused. The dedicated renderer documents both the delivered
-picture-preserving assembly and a full rebuild. Saved-asset rebuilding needs no generation
-credentials. Both exports share identical AAC.
+The original information-ocean visual language returns at 90–100 seconds. Moss selects
+three updates against explicit role, goal and interests matches, then readies Ram's brief.
+Setup and Slack are tighter; Zoom retains its complete dialogue, with a new simultaneous
+speaking/writing action during the morning-brief promise. The V4 introduction and laptop-only
+morning remain. The same Lyria composition has bar-aligned scene cues and its resolved ending.
 
-Earlier Moss cuts and Tag v2 are preserved. Tag v2 remains the last explicitly approved full
-movie; v4 awaits Manish's review. Use [STATE](../docs/STATE.md) for current work and next steps.
+The dedicated renderer makes a complete new movie from saved source; no private recording
+or generation credential is required. The clean V3 walkthrough is retimed selectively.
+Both exports fully decode, share identical AAC and measure -14.0 LUFS / -1.7 dBTP.
+All 22 previous voice entries and earlier movie files remain unchanged. Tag v2 remains the
+last explicitly approved full movie; V5 awaits Manish's review. See [STATE](../docs/STATE.md).
 
 ## Base/Draft 3 renderer
 

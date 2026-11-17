@@ -9,20 +9,25 @@ recordings, which stay out of git by rule.
 
 ## Current starting point (17 November 2026)
 
-The latest delivered review movie is **Moss v4**, 119.600 seconds, checkpoint
-`blended-moss-v4` (PR 21, `033fb44`). It implements Manish's V37/V38 feedback: the setup
-home and a new same-Matilda voiceover explain AI Peer as a proactive AI teammate, available
-24/7; morning Moss appears only on the laptop, with the phone and external little Moss
-out of view. Source, selected narration, audio recipes, manual evidence and Telegram
-receipts are saved. Start with `demo-video/docs/STATE.md` and
-`HANDOFF-2026-11-17-moss-v4-controller-complete.md` in its `handoffs/` directory. Nothing
-runs. Manish's review is next; Tag v2 remains the last explicitly approved full movie.
-Project spend is $51.398527 of $100; the $50 notice is sent.
+**Moss v5 is complete and delivered (V39, 17 November 2026 UTC).** The 119.600-second
+movie restores the deep company-information ocean at 90–100, with three useful updates
+explicitly matched to Ram's role, goal and interests. Setup and Slack are tighter, and
+Moss writes in its notebook while speaking the morning-brief promise. The V4 product
+introduction and laptop-only morning remain. The same music has deliberate bar joins,
+with the introduction, morning and resolved ending preserved exactly in the mixed audio.
+PR 22 merged as `30de35e`; checkpoint `blended-moss-v5` records this completed state.
+Telegram video **23119** and review **23120** are confirmed at 07:06:24/25 UTC. Source,
+audio recipes, selected assets, final exports, evidence and receipts are saved. Nothing
+runs. New cost **$0.2123**; project **$51.610827 / $100**, weekly usage **23%**. The $50
+notice was already sent; next notice $80. Tag v2 remains the last explicitly approved
+full movie. Manish's review of V5 is next; do not resend or start another revision without
+his next request.
 
-The product build's continuation is on the company Mac; this repository does not establish
-its later state. Dated briefs/handoffs and older tracker entries are history. The setup and
-Terminal-controller recipe below include preserved Claude-specific procedures; use the latest
-tracker/handoff for the current session rather than starting an old controller automatically.
+Start with `demo-video/docs/STATE.md` and
+`HANDOFF-2026-11-17-moss-v5-controller-complete.md` in its `handoffs/` directory. Saved-asset
+rebuilding needs no private recording or generation credential. The product build continues
+on the company Mac; this repository does not establish its later state. Historical setup
+and Terminal-controller recipes below should not restart an old controller automatically.
 
 ## What is where
 
@@ -31,7 +36,7 @@ tracker/handoff for the current session rather than starting an old controller a
 | Project rules for every agent | `AGENTS.md` (Claude Code loads it through `CLAUDE.md`) |
 | The live work (November 2026): the 2-minute demo video | `demo-video/AGENTS.md`, then `demo-video/docs/STATE.md` (the tracker) |
 | The last approved full demo video (16 November 2026) | `demo-video/film/renders/blended-tag-v2.mp4`: the Tag version (V30, V31; Little Peer is not used) |
-| Latest complete movie for review (17 November 2026 UTC) | `demo-video/film/renders/blended-moss-v4.mp4`: the full 119.600-second V37/V38 revision. Telegram copy `blended-moss-v4-720p.mp4`; delivery `demo-video/docs/MOSS-V4-DELIVERY-2026-11-17.md`; rebuild `demo-video/moss-introduction/README.md`. Earlier cuts preserved; Tag v2 remains the last explicitly approved movie. |
+| Latest complete movie for review (17 November 2026 UTC) | `demo-video/film/renders/blended-moss-v5.mp4`: the full 119.600-second V39 revision. Telegram copy `blended-moss-v5-720p.mp4`; delivery `demo-video/docs/MOSS-V5-DELIVERY-2026-11-17.md`; rebuild `demo-video/moss-ocean/README.md`. Earlier cuts preserved; Tag v2 remains the last explicitly approved movie. |
 | Preserved mascot exploration (16 November 2026) | `demo-video/mascot-exploration-v2/index.html`: 25 generated-art directions, individual in-demo previews and a 75-second quick-look, all delivered to Telegram (V33); `demo-video/docs/GENERATED-MASCOTS-DELIVERY-2026-11-16.md`. The first twelve code-native options remain in `demo-video/mascot-options/`. |
 | The demo video's decisions and Manish's words | `demo-video/docs/DESIGN.md` section 0 |
 | Briefs and hand-offs between sessions, dated, never edited | `demo-video/docs/handoffs/` |
@@ -59,6 +64,7 @@ the root `AGENTS.md`: one worker at a time (V15, C13), the 85% and 93% usage mar
 | `blended-moss-v2` | Complete 119.600-second Moss acting revision (PR 19, `8846d1b`): exact-time purposeful activity, notebook/pen source reading, meeting deferral and post-click acknowledgment; original story/UI/timing/audio preserved, delivered 16 November UTC (V35) |
 | `blended-moss-v3` | V36 full 119.600-second revision (PR 20, `c612624`): direct phone/home entrance, round confidence stamp, speaking Moss, active/readable Slack, greeting on the morning laptop, removed line and resolved ending; delivered 17 November for review. |
 | `blended-moss-v4` | V37/V38 full 119.600-second revision (PR 21, `033fb44`): clear proactive-teammate/24/7 setup home with a new Matilda introduction, and morning Moss only on the laptop with no phone in view; delivered 17 November for review. |
+| `blended-moss-v5` | V39 complete 119.600-second revision (PR 22, `30de35e`): information ocean with explicit role/goal/interests matches, tighter walkthrough/Slack, simultaneous speaking and notebook writing; original introduction, laptop-only morning and resolved musical ending retained. |
 
 - Go back to one: `git worktree add ../ai-peer-at-draft-03 draft-03` (a separate folder;
   `main` stays as it is).
@@ -102,13 +108,12 @@ the root `AGENTS.md`: one worker at a time (V15, C13), the 85% and 93% usage mar
    | OpenAI API keys | Learn Like Magic's own set-ups | nothing in this video workflow | not used or authorized by V33; do not substitute them automatically |
 
 6. **Private files** (never in git, rule C8), in `~/.ai-peer/demo-video-private/`:
-   - Current review/rebuild needs no private file: Moss v4 uses saved generic art, the new
-     setup-home/morning layer in `demo-video/moss-introduction/`, and the retained
-     `demo-video/ui-concepts/moss-v3/` walkthrough after 24.6 seconds. Its renderer and audio
-     rebuild are documented in `demo-video/moss-introduction/README.md`; saved-asset
-     rendering needs no generation credential. Earlier Moss and Tag sources are retained. The tag video
-     Manish made (`bases/tag-walkthrough-2026-11-15.mp4`)
-     stays on the 48 GB Mac as the reference, out of git and sent nowhere.
+   - Current review/rebuild needs no private file: Moss v5 uses saved generic art and
+     invented data, its `demo-video/moss-ocean/` layer and audio, and the retained
+     `demo-video/ui-concepts/moss-v3/` clean walkthrough with a selective time map.
+     Its offline renderer is documented in `demo-video/moss-ocean/README.md`. The private
+     tag walkthrough (`bases/tag-walkthrough-2026-11-15.mp4`) remains on this Mac only,
+     out of git and sent nowhere. Earlier Moss and Tag sources are retained.
    - The company walkthrough recording (`ui-wow/`) and the full renders with real recordings
      (`renders/`) never leave the 48 GB Mac. Public builds and every git artifact work without
      them.
@@ -187,7 +192,7 @@ The full recipe is `docs/ways-of-working/skills/big-initiative/SKILL.md`; this r
 - **Money.** The demo video's cap is $100 (V3); early package ledgers are in
   `demo-video/ledger/`, and later ledgers are in `demo-video/mascot-exploration-v2/ledger/`,
   `demo-video/moss-film/ledger/`, `demo-video/moss-acting/ledger/`,
-  `demo-video/moss-refinement/ledger/` and `demo-video/moss-introduction/ledger/`. Current totals and
+  `demo-video/moss-refinement/ledger/` and `demo-video/moss-introduction/ledger/` and `demo-video/moss-ocean/ledger/`. Current totals and
   notification status are in `demo-video/docs/STATE.md`.
 - **Waiting** is done by shell scripts (`demo-video/tools/wait-for.sh`), never by polling from a
   session.

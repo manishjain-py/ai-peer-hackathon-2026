@@ -47,8 +47,10 @@ Cut: `../film/cuts/blended-moss-v5/`. Outputs: `../film/renders/blended-moss-v5.
 `blended-moss-v5-720p.mp4`. Source acceptance is recorded in `MANUAL-REVIEW.md`; final
 encoded acceptance, delivery and merge status are recorded in shared controller docs.
 
-Both final exports are controller-accepted:119.600s/3588frames,full decode,−14.0LUFS/
-−1.7dBTP,matching5608 AAC packets. Accepted final evidence covers102 master scene points,
-60 boundaries and39 independent720p frames. `evidence/checks.json` records all prior movie
-hashes unchanged and22 retained voice entries. Delivery/merge details belong to the
-shared controller delivery record; Tagv2 remains the last explicitly user-approved movie.
+Both final exports are controller-accepted: 119.600 seconds / 3,588 frames, full decode,
+-14.0 LUFS / -1.7 dBTP, matching 5,608 AAC packets. Accepted final evidence covers 102
+master scene points, 60 boundaries and 39 independent 720p frames. `evidence/checks.json`
+records all earlier movie hashes unchanged and 22 retained voice entries. Telegram
+23119/23120 is confirmed; PR 22 is merged. See the
+[delivery record](../docs/MOSS-V5-DELIVERY-2026-11-17.md). Tag v2 remains the last explicitly
+user-approved movie; V5 awaits Manish's review.

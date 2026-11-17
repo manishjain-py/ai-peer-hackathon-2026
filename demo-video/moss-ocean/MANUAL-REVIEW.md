@@ -12,12 +12,12 @@ Controller source acceptance, 17 November 2026:
   result text sits above the narration; a stable dark gradient protects the ocean title.
 
 Evidence sheets and exact times live in `evidence/`. Source and final encoded movie are
-accepted by the controller. The final walk inspected all102 master scene points,60 cut and
-action boundaries, and39 independently extracted720p frames. The worker also inspected
-all102 master scene points. No new encoded visual issue was found.
+accepted by the controller. The final walk inspected all 102 master scene points, 60 cut
+and action boundaries, and 39 independently extracted 720p frames. The worker also
+inspected all 102 master scene points. No new encoded visual issue was found.
 
-Both exports fully decode:119.600 seconds /3588frames,30fps,1920×1080 and1280×720.
-Both measure−14.0LUFS /−1.7dBTP; all5608 AAC packet payloads/timestamps are identical.
-All22 retained narration entries and all earlier master hashes remain unchanged.
+Both exports fully decode: 119.600 seconds / 3,588 frames, 30fps, 1920×1080 and 1280×720.
+Both measure -14.0 LUFS / -1.7 dBTP; all 5,608 AAC packet payloads/timestamps are identical.
+All 22 retained narration entries and all earlier master hashes remain unchanged.
 `evidence/checks.json` contains probes, hashes, audio/PCM proofs and the cost reconciliation.
 No direct audio-listening claim is made; controller records source/PCM and local speech checks.

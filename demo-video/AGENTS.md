@@ -7,13 +7,14 @@ The last approved full video (16 November 2026): `film/renders/blended-tag-v2.mp
 `blended-tag-v2` (V30, V31; Little Peer is not used). Earlier cuts and every checkpoint:
 `../START-HERE.md`, "Checkpoints".
 
-Latest complete cut (17 November UTC, V37/V38): `film/renders/blended-moss-v4.mp4`,
-119.600 seconds. The setup home and new Matilda voiceover explain the proactive AI teammate,
-available 24/7; morning Moss appears only on the laptop, with the phone and external little
-Moss out of view. PR 21 merged; checkpoint `blended-moss-v4` pushed. Delivered on Telegram
-for review (23108/23109). See `docs/MOSS-V4-DELIVERY-2026-11-17.md`; rebuild from
-`moss-introduction/README.md`. Nothing runs. Earlier Moss cuts and Tag v2 remain preserved;
-Tag v2 is the last explicitly approved movie.
+Latest complete cut (17 November UTC, V39): `film/renders/blended-moss-v5.mp4`,
+119.600 seconds. A compact information ocean matches useful updates to Ram's role,
+goal and interests; setup/Slack are tighter and Moss writes while speaking in Zoom.
+The clear V4 introduction and laptop-only morning remain, with the same composition
+and resolved ending. PR 22 merged; checkpoint `blended-moss-v5` is pushed. Delivered
+on Telegram for review (23119/23120). See `docs/MOSS-V5-DELIVERY-2026-11-17.md`; rebuild
+from `moss-ocean/README.md`. Nothing runs. Earlier cuts remain preserved; Tag v2 is the
+last explicitly approved full movie.
 
 ## Start here
 
