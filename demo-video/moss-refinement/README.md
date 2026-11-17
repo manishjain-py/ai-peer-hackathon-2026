@@ -20,7 +20,6 @@ are needed to render saved assets. `git lfs pull --include="demo-video/**" --exc
 
 ```sh
 # Rebuild new music bed and mix (existing voice takes only).
-uv run --quiet demo-video/moss-refinement/audio/build_bed.py
 node demo-video/moss-refinement/audio/build_mix.mjs
 # Inspect source under captions before committing a long encode.
 node demo-video/moss-refinement/render.mjs --film --live-walk-probe --probe
@@ -50,6 +49,7 @@ Prompts/requests, provider results, selected source videos, alpha videos and led
 Alpha removes the generated stamp's tiny illegible mark below the feet; readable ink is
 composited from the actual High confidence value. No new voice generation.
 
-Intermediate source checkpoint: focused visual proof accepted, long film encoding next.
+Intermediate source checkpoint:56b4842 pushed; focused visual proof accepted, clean58s
+walkthrough encoded, long film encoding underway.
 Final media acceptance and delivery are recorded by the controller after render/review.
 Audio methodology/measurements are in `audio/README.md`; no direct listening claim.
