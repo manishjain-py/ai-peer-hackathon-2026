@@ -1,0 +1,138 @@
+{
+ "about": "V41: high-clarity source rebuild, vertical layout, deliberate physical selection and concise dialogue.",
+ "shots": "shots.json",
+ "narration": "narration.json",
+ "screens": "screens.json",
+ "script": "script.json",
+ "mix": "mix.json",
+ "layers": [
+  "../_blend/layer",
+  "../_blend/layer-tag-v2",
+  "../../../moss-refinement/layer",
+  "../../../moss-introduction/layer",
+  "../../../moss-ocean/layer",
+  "../../../moss-clarity/layer"
+ ],
+ "copies": [
+  {
+   "from": "../../../ui-concepts/little-peer/motion-core.js",
+   "to": "src/mascot/little-peer/motion-core.js"
+  },
+  {
+   "from": "../../../ui-concepts/shared/kit.js",
+   "to": "src/mascot/shared/kit.js"
+  },
+  {
+   "from": "../../../moss-clarity/layer/src/scenes/earth-d3.js",
+   "to": "src/scenes/earth-d3.js"
+  },
+  {
+   "from": "../../../mascot-exploration-v2/motion/25-moss.webm",
+   "to": "src/mascot/tag/moss-assets/wave.webm"
+  },
+  {
+   "from": "../../../mascot-exploration-v2/avatars/25-moss.png",
+   "to": "src/mascot/tag/moss-assets/avatar.png"
+  },
+  {
+   "from": "../../../moss-film/assets/moss-attentive.webm",
+   "to": "src/mascot/tag/moss-assets/attentive.webm"
+  },
+  {
+   "from": "../../../moss-film/assets/moss-present.webm",
+   "to": "src/mascot/tag/moss-assets/present.webm"
+  },
+  {
+   "from": "../../../mascot-exploration-v2/avatars/25-moss.png",
+   "to": "assets/screens/peer-face-moss.png"
+  },
+  {
+   "from": "../../../moss-acting/assets/moss-notebook.webm",
+   "to": "src/mascot/tag/moss-assets/notebook.webm"
+  },
+  {
+   "from": "../../../moss-acting/assets/moss-listen.webm",
+   "to": "src/mascot/tag/moss-assets/listen.webm"
+  },
+  {
+   "from": "../../../moss-acting/assets/moss-reassure.webm",
+   "to": "src/mascot/tag/moss-assets/reassure.webm"
+  },
+  {
+   "from": "../../../moss-acting/assets/moss-acknowledge.webm",
+   "to": "src/mascot/tag/moss-assets/acknowledge.webm"
+  },
+  {
+   "from": "../../../ui-concepts/moss-v6/acting.js",
+   "to": "src/mascot/tag/acting.js"
+  },
+  {
+   "from": "../../../moss-refinement/assets/moss-stamp.webm",
+   "to": "src/mascot/tag/moss-assets/stamp.webm"
+  },
+  {
+   "from": "../../../moss-refinement/assets/moss-speak-m1.webm",
+   "to": "src/mascot/tag/moss-assets/speak-m1.webm"
+  },
+  {
+   "from": "../../../moss-refinement/assets/moss-speak-m2.webm",
+   "to": "src/mascot/tag/moss-assets/speak-m2.webm"
+  },
+  {
+   "from": "../../../moss-refinement/assets/moss-speak-m4b.webm",
+   "to": "src/mascot/tag/moss-assets/speak-m4b.webm"
+  },
+  {
+   "from": "../../../moss-refinement/assets/phone-last.jpg",
+   "to": "assets/screens/phone-last.jpg"
+  },
+  {
+   "from": "../../../moss-refinement/assets/home.jpg",
+   "to": "assets/screens/home.jpg"
+  },
+  {
+   "from": "../../../moss-refinement/assets/moss-type.webm",
+   "to": "src/mascot/tag/moss-assets/type.webm"
+  },
+  {
+   "from": "../../../moss-clarity/assets/setup-first-v6.png",
+   "to": "assets/screens/setup-first.png"
+  },
+  {
+   "from": "../../../moss-ocean/assets/moss-speak-write.webm",
+   "to": "src/mascot/tag/moss-assets/speak-write.webm"
+  },
+  {
+   "from": "../../world.json",
+   "to": "assets/ocean-world.json"
+  },
+  {
+   "from": "../../../shots/meeting-listen/amara-listen-b.mp4",
+   "to": "assets/screens/amara-listen-b.mp4"
+  },
+  {
+   "from": "../../../shots/meeting-listen/amara-listen-a.mp4",
+   "to": "assets/screens/amara-listen-a.mp4"
+  },
+  {
+   "from": "../../../shots/meeting-listen/vikram-listen-a.mp4",
+   "to": "assets/screens/vikram-listen-a.mp4"
+  },
+  {
+   "from": "../../../shots/meeting-listen/daniel-listen-b.mp4",
+   "to": "assets/screens/daniel-listen-b.mp4"
+  },
+  {
+   "from": "../../../shots/meeting-listen/vikram-listen-b.mp4",
+   "to": "assets/screens/vikram-listen-b.mp4"
+  },
+  {
+   "from": "../../../shots/meeting-listen/daniel-listen-a.mp4",
+   "to": "assets/screens/daniel-listen-a.mp4"
+  },
+  {
+   "from": "../../../shots/meeting-amara/amara-m3-r1.mp4",
+   "to": "assets/screens/amara-m3.mp4"
+  }
+ ]
+}
