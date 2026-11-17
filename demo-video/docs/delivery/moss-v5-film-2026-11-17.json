@@ -1,0 +1,31 @@
+{
+  "version": "blended-moss-v5",
+  "status": "delivered",
+  "video": {
+    "confirmed": true,
+    "message_id": 23119,
+    "chat_id": -5506416790,
+    "date_utc": "2026-11-17T07:06:24+00:00",
+    "caption": "Moss v5 \u2014 full 1:59.6 revision. The company-wide information ocean is back: Moss selects three useful updates for Ram\u2019s role, goal and interests, then readies his morning brief. Setup and Slack are tighter. In Zoom, Moss speaks and writes in the notebook during the morning-brief promise. The same music has deliberate scene cues, with the introduction, morning and resolved ending preserved. Ready for your review.",
+    "file": "film/renders/blended-moss-v5-720p.mp4",
+    "sha256": "f7f7ed39a06bf3583bf5118b2f53c8b9f61dc6963431460f40732c0ba20bc48a",
+    "file_size": 25365901,
+    "width": 1280,
+    "height": 720,
+    "telegram_duration": 120,
+    "supports_streaming_requested": true
+  },
+  "actual_movie_seconds": 119.6,
+  "frames": 3588,
+  "new_cost_usd": 0.2123,
+  "project_cost_usd": 51.610827,
+  "controller_acceptance": "passed",
+  "approved_as_final_by_user": false,
+  "review_message": {
+    "confirmed": true,
+    "message_id": 23120,
+    "chat_id": -5506416790,
+    "date_utc": "2026-11-17T07:06:25+00:00",
+    "text": "The updated full film is above. The new ten-second ocean sits just before morning, with visible Role, Goal and Interests matches. Moss\u2019s notebook is present throughout its final Zoom reply, with writing while it says it will add the question to Ram\u2019s brief. The setup/Slack trims fund the new scene; the film stays under two minutes. Earlier cuts remain preserved."
+  }
+}
