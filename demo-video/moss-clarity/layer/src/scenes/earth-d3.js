@@ -17,8 +17,8 @@ import { el, prng, clamp, lerp } from "../lib.js";
 
 const DEV = { show: "", top: false, debug: false }; // development switches: all off in the film
 
-const W = 1920;
-const H = 1080;
+const W = 3840;
+const H = 2160; // All scene, motion and bloom calculations use physical4K pixels.
 const DEG = Math.PI / 180;
 const RE = 6371000; // Earth radius, metres
 const T_START = 108.0;
@@ -163,8 +163,8 @@ function cameraAt(t) {
   // Where it looks: at the window, then pitched for the framing.
   const m = modeAt(t);
   const alpha = Math.asin(Math.min(1, RE / rho));
-  const gammaCentre = -Math.atan((540 - cyAt(t)) / FOCAL);
-  const gammaHorizon = alpha + Math.atan((hyAt(t) - 540) / FOCAL);
+  const gammaCentre = -Math.atan((540 - cyAt(t)) / (FOCAL/2));
+  const gammaHorizon = alpha + Math.atan((hyAt(t) - 540) / (FOCAL/2));
   const gamma = t < 109.6 ? 0 : lerp(gammaCentre, gammaHorizon, m);
   const fwd = norm(swing(rot(mul(away, -1), AX_R, gamma)));
   const r = swing(AX_R);
@@ -1403,7 +1403,7 @@ void main() {
   float n2 = hash12(px + vec2(uFrame * 53.0 + 11.0, uFrame * 7.0 + 5.0));
   float tri = n1 + n2 - 1.0;
   float lum = dot(o, vec3(0.3, 0.59, 0.11));
-  o += tri * (1.6 + 2.4 * smoothstep(0.0, 0.5, lum) * (1.0 - smoothstep(0.6, 1.0, lum))) / 255.0;
+  // V41: no added grain; preserve the native texture/detail and clean gradients.
   fragColor = vec4(o, 1.0);
 }`;
 
@@ -1476,10 +1476,10 @@ async function build(slot, film) {
   }
 
   const canvas = makeCanvas(W, H);
-  canvas.style.cssText = `position:absolute;left:0;top:0;width:${W}px;height:${H}px;display:block`;
+  canvas.style.cssText = `position:absolute;left:0;top:0;width:1920px;height:1080px;display:block`;
   node.append(canvas);
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, alpha: false, depth: false, stencil: false, preserveDrawingBuffer: true, powerPreference: "high-performance" });
-  renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
+  renderer.setPixelRatio(1); // W/H already describe physical4K render buffers.
   renderer.setSize(W, H, false);
   renderer.autoClear = false;
   renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
@@ -1682,6 +1682,7 @@ async function build(slot, film) {
   const rtOpts = { type: THREE.HalfFloatType, format: THREE.RGBAFormat, depthBuffer: false, stencilBuffer: false, minFilter: THREE.LinearFilter, magFilter: THREE.LinearFilter, generateMipmaps: false };
   const sceneRT = new THREE.WebGLRenderTarget(W, H, { ...rtOpts, depthBuffer: true });
   const workRT = new THREE.WebGLRenderTarget(W, H, rtOpts);
+  canvas.dataset.renderTargets=JSON.stringify({scene:[W,H],work:[W,H]});
   const LEVELS = 6;
   const down = [];
   const up = [];
@@ -1819,7 +1820,7 @@ async function build(slot, film) {
   function shutterMaps(t) {
     const h = SHUTTER / 30 / 2;
     const c0 = cameraAt(t);
-    const src = [[0, -140], [-620, -400], [620, -400]];
+    const src = [[0, -140], [-620, -400], [620, -400]].map(p=>p.map(x=>x*2));
     const world = src.map(([x, y]) => {
       const dir = norm(add(add(c0.fwd, mul(c0.right, x / FOCAL)), mul(c0.up, y / FOCAL)));
       const oc = sub(c0.pos, CENTRE);

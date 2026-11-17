@@ -20,3 +20,11 @@ Source facts: direct UI HTML/SVG, 2× browser density, DPR-aware company ocean a
 original 1344×768 listener clips and 1920×1080 Amara speech replace 960×540 proxies.
 Full native film and delivery encode are the next checks; no encoded final acceptance is
 claimed by this source-only record.
+
+Native Earth follow-up: a final internal-buffer audit found that the original post chain
+was still 1080p behind a 4K canvas. V6 now uses 3840×2160 scene/work targets and removes
+its shader grain, with physical-pixel camera/shutter calibration preserving framing.
+`earth4k-review-1.jpg` records the initial camera-calibration check;
+`earth4k-confirm-1.jpg` and `earth-final-1.jpg` are the corrected, accepted source proofs. Final assembly preserves an exact
+3,250-frame closed-GOP prefix, recaptures 80 morning bridge frames, then 258 Earth/CTA
+frames. Generic 111 s stream-copy trimming was rejected because it produced 3,332 frames.

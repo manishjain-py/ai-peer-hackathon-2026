@@ -59,19 +59,32 @@ async function board(page){const custom=args.find(a=>a.startsWith('--times='));c
  fs.writeFileSync(path.join(EVIDENCE,label+'-times.json'),JSON.stringify({kind:'native-source',dimensions:[3840,2160],times,files:times.map((t,i)=>`f${String(i).padStart(3,'0')}.jpg`)},null,2)+'\n');
  await execAsync('uv',['run','--quiet','--with','pillow','python',path.join(HERE,'tools/sheets.py'),dir,path.join(EVIDENCE,label),JSON.stringify(times)]);}
 async function encodeSegment(browser,url,start,end,out){const page=await init(browser,url);const writer=spawn('ffmpeg',['-hide_banner','-loglevel','error','-nostdin','-y','-f','image2pipe','-framerate',String(FPS),'-vcodec','mjpeg','-i','pipe:0','-an','-c:v','libx264','-preset','fast','-crf','16','-pix_fmt','yuv420p','-movflags','+faststart',out],{stdio:['pipe','ignore','pipe']});let err='';writer.stderr.on('data',x=>err+=x);const finished=once(writer,'close');for(let i=start;i<end;i++){await seek(page,i/FPS);const buf=await page.screenshot({type:'jpeg',quality:99});if(!writer.stdin.write(buf))await once(writer.stdin,'drain');if(i%120===0)console.log(`${isFilm?'film':'walk'} frame ${i}/${end}`);}writer.stdin.end();const[code]=await finished;if(code!==0)throw new Error(err);await page.close();}
+async function finalExports(raw){
+ const master=path.join(FILM,'renders/blended-moss-v6.mp4');await execAsync('ffmpeg',['-v','error','-y','-i',raw,'-i',MASTER,'-map','0:v:0','-map','1:a:0','-c:v','copy','-c:a','aac','-b:a','192k','-movflags','+faststart','-metadata','comment=Earth imagery: NASA Earth Observatory (Black Marble 2016; Blue Marble: Next Generation). No endorsement implied.',master]);const delivery=path.join(FILM,'renders/blended-moss-v6-1080p.mp4'),pass=path.join(CACHE,'telegram-pass');
+  const enc=['-vf','scale=1920:1080:flags=lanczos','-c:v','libx264','-preset','slow','-b:v','3000k','-maxrate','6500k','-bufsize','13000k','-pix_fmt','yuv420p','-passlogfile',pass];
+  console.log('4K master complete; encoding 1080p delivery in two passes');
+  await execAsync('ffmpeg',['-v','error','-y','-i',master,...enc,'-pass','1','-an','-f','mp4','/dev/null']);
+  await execAsync('ffmpeg',['-v','error','-y','-i',master,...enc,'-pass','2','-c:a','copy','-movflags','+faststart','-metadata','comment=Earth imagery: NASA Earth Observatory (Black Marble 2016; Blue Marble: Next Generation). No endorsement implied.',delivery]);
+}
 async function main(){
  prepare();const{srv,url}=await serve();const browser=await PW.chromium.launch({executablePath:CHROME,headless:true,args:['--disable-background-networking','--disable-component-update','--no-first-run','--hide-scrollbars','--disable-gpu']});
  try{const link=url+'/film/index.html';const p=await init(browser,link);if(args.includes('--setup-frame')){await seek(p,24.6);await p.locator('iframe').screenshot({path:path.join(HERE,'assets/setup-first-v6.png')});console.log('Native V6 setup crossfade saved');await p.close();return;}await board(p);await p.close();console.log('V6 source probes ready');if(probeOnly)return;
+ if(args.includes('--replace-ending')){
+  const ending=path.join(CACHE,'ending-native4k-corrected.mp4');await encodeSegment(browser,link,3250,3588,ending);
+  const prior=path.join(CACHE,'full-picture.mp4'),prefix=path.join(CACHE,'exact-prefix-0.mp4');
+  await execAsync('ffmpeg',['-v','error','-y','-i',prior,'-an','-c:v','copy','-avoid_negative_ts','disabled','-f','segment','-segment_times','108.333333','-reset_timestamps','1','-segment_format_options','movflags=+faststart:avoid_negative_ts=disabled',path.join(CACHE,'exact-prefix-%01d.mp4')]);
+  let count=Number(execFileSync('ffprobe',['-v','error','-select_streams','v:0','-count_frames','-show_entries','stream=nb_read_frames','-of','default=nw=1:nk=1',prefix],{encoding:'utf8'}));
+  if(count!==3250)throw new Error('Exact closed-GOP prefix expected3250 frames; got'+count);
+  const list=path.join(CACHE,'native-ending-concat.txt');fs.writeFileSync(list,`file '${prefix}'\nduration 108.333333333333\nfile '${ending}'\n`);
+  const raw=path.join(CACHE,'full-picture-native4k.mp4');await execAsync('ffmpeg',['-v','error','-y','-f','concat','-safe','0','-i',list,'-c','copy',raw]);await finalExports(raw);
+  fs.writeFileSync(path.join(EVIDENCE,'assembly.json'),JSON.stringify({mode:'full with native4K Earth segment recapture',frames:3588,seconds:119.6,prefixFrames:3250,bridgeFrames:80,endingFrames:258,note:'Earlier movies intact; corrected Earth has3840×2160 internal scene/work targets as well as canvas backing.'},null,2)+'\n');console.log('Corrected native4K ending exports complete');return;
+ }
  const rangeArg=args.find(x=>x.startsWith('--range='));
  if(rangeArg){const [a,b]=rangeArg.slice(8).split(',').map(Number),raw=path.join(CACHE,'preview-picture.mp4');await encodeSegment(browser,link,Math.round(a*FPS),Math.round(b*FPS),raw);await execAsync('ffmpeg',['-v','error','-y','-i',raw,'-ss',String(a),'-t',String(b-a),'-i',MASTER,'-map','0:v:0','-map','1:a:0','-vf','scale=1920:1080:flags=lanczos','-c:v','libx264','-preset','fast','-crf','20','-c:a','aac','-b:a','192k','-movflags','+faststart',path.join(EVIDENCE,`preview-${a}-${b}.mp4`)]);return;}
  {
   const parts=[path.join(CACHE,'full-first.mp4'),path.join(CACHE,'full-second.mp4')];await Promise.all([encodeSegment(browser,link,0,1794,parts[0]),encodeSegment(browser,link,1794,3588,parts[1])]);
   const list=path.join(CACHE,'full-concat.txt');fs.writeFileSync(list,parts.map(p=>`file '${p}'`).join('\n')+'\n');const raw=path.join(CACHE,'full-picture.mp4');await execAsync('ffmpeg',['-v','error','-y','-f','concat','-safe','0','-i',list,'-c','copy',raw]);
-  const master=path.join(FILM,'renders/blended-moss-v6.mp4');await execAsync('ffmpeg',['-v','error','-y','-i',raw,'-i',MASTER,'-map','0:v:0','-map','1:a:0','-c:v','copy','-c:a','aac','-b:a','192k','-movflags','+faststart','-metadata','comment=Earth imagery: NASA Earth Observatory (Black Marble 2016; Blue Marble: Next Generation). No endorsement implied.',master]);const delivery=path.join(FILM,'renders/blended-moss-v6-1080p.mp4'),pass=path.join(CACHE,'telegram-pass');
-  const enc=['-vf','scale=1920:1080:flags=lanczos','-c:v','libx264','-preset','slow','-b:v','3000k','-maxrate','6500k','-bufsize','13000k','-pix_fmt','yuv420p','-passlogfile',pass];
-  console.log('4K master complete; encoding 1080p delivery in two passes');
-  await execAsync('ffmpeg',['-v','error','-y','-i',master,...enc,'-pass','1','-an','-f','mp4','/dev/null']);
-  await execAsync('ffmpeg',['-v','error','-y','-i',master,...enc,'-pass','2','-c:a','copy','-movflags','+faststart','-metadata','comment=Earth imagery: NASA Earth Observatory (Black Marble 2016; Blue Marble: Next Generation). No endorsement implied.',delivery]);
+  await finalExports(raw);
   fs.writeFileSync(path.join(EVIDENCE,'assembly.json'),JSON.stringify({mode:'full',frames:3588,seconds:119.6,note:'V6 deterministic full render. Earlier movie files remain intact; exact compressed/decoded picture identity is not claimed.'},null,2)+'\n');
  }
  console.log('V6 complete exports ready');

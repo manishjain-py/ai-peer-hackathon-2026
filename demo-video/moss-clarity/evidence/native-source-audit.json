@@ -36,7 +36,8 @@
           "css": [
             0,
             0
-          ]
+          ],
+          "internalTargets": null
         },
         {
           "class": "wcv",
@@ -47,7 +48,8 @@
           "css": [
             0,
             0
-          ]
+          ],
+          "internalTargets": null
         },
         {
           "class": "",
@@ -56,9 +58,19 @@
             2160
           ],
           "css": [
-            0,
-            0
-          ]
+            1920,
+            1080
+          ],
+          "internalTargets": {
+            "scene": [
+              3840,
+              2160
+            ],
+            "work": [
+              3840,
+              2160
+            ]
+          }
         }
       ]
     },

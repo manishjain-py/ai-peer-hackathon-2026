@@ -2,7 +2,9 @@
 
 V41 rebuilds the public fictional-data film from editable source at 3840×2160, 30 fps.
 The logical 1920px composition is captured at 2× device density; the world canvas and
-Earth renderer also use 2× backing resolution. The setup walkthrough runs live from
+Earth renderer also use 2× backing resolution, including the Earth’s internal scene and
+post-processing targets (3840 × 2160). Its original camera framing is calibrated to
+physical pixels, and no grain shader is added. The setup walkthrough runs live from
 `ui-concepts/moss-v6`, never by magnifying a compressed walkthrough movie. UI grain
 and all spoken subtitle overlays are absent. Original human footage retains its true
 native limits; this does not claim that every shot was photographed/generated at 4K.
@@ -17,7 +19,8 @@ Zoom ends at 79, Slack runs 79–88 and the information ocean 88–100. Slack ha
 of actual typing, a separate reply arrival, and a shorter readable final focus. Each
 of three paper cards is attached to a short felt paw during its own reach, grasp,
 carry, place and release; Moss’s body travels with it. The quiet source stream stays
-behind the physical foreground. No new paid visual generation was needed.
+behind the physical foreground. The ocean uses saved Moss art with local hand/card compositing; the separate colleague
+hook repair uses the new matching motion documented in `audio/README.md`.
 
 The wake excerpt is source 0.8–1.5 s: Ram rises, then the film cuts at 100.7 directly to
 the laptop. The source-action sheet proves that turn/reach/pick-up starts later and is
