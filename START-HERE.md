@@ -9,6 +9,8 @@ recordings, which stay out of git by rule.
 
 ## Current starting point (17 November 2026)
 
+**Moss v6 is paused at Manish’s explicit request for an app restart.** Latest source and repaired exports are saved on `codex/moss-v6` (checkpoint `94b3311`), with draft PR23. No V6 delivery or merge has occurred. Wait for his “resume,” then start with the top of `demo-video/docs/STATE.md` and `HANDOFF-2026-11-17-moss-v6-paused-for-app-restart.md`. V5 remains the last delivered cut and the V40 prototype reference stays pinned.
+
 **Moss v5 is complete and delivered (V39, 17 November 2026 UTC).** The 119.600-second
 movie restores the deep company-information ocean at 90–100, with three useful updates
 explicitly matched to Ram's role, goal and interests. Setup and Slack are tighter, and
