@@ -1,40 +1,8 @@
 # AI Peer demo video: state
 
-**PAUSED AT USER REQUEST — Moss v6,17 November2026 UTC.** Manish is restarting
-the ChatGPT app and will return with “resume.” Do not continue until that explicit resume.
-All owned render/browser/server/QA jobs are stopped. Latest repaired4K and1080 exports
-are checkpointed on `codex/moss-v6` at **94b3311**; [PR23](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/23)
-remains draft/unmerged. Worker final media checks/extraction finished before pause, but
-independent controller acceptance of the newest encoded repair is still pending.
-**No V6 Telegram delivery, final tag, merge or completion claim.**
-Read `handoffs/HANDOFF-2026-11-17-moss-v6-paused-for-app-restart.md` for exact artifacts,
-remaining steps and resume commands. Current spend **$52.097127/$100**; V6 **$0.4863**.
-Controller and sole worker are stopped; root is relay only. Earlier notes below are history.
+**Moss v6 (V41) is complete and delivered.** The [4K master](../film/renders/blended-moss-v6.mp4) and [1080p copy](../film/renders/blended-moss-v6-1080p.mp4) run 119.600 seconds. Telegram confirmed video 23168 and original document 23169. [PR 23](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/23) merged at `9105d79`. Checkpoint `blended-moss-v6` pins the delivery. Next is Manish’s creative review. V40 still designates v5 for implementing the prototype on the other Mac.
 
-**Current task, V41 (17 November2026): Moss v6 in progress.** Manish requests a complete
-clarity/editorial pass with12 specific changes, including no subtitles, vertical learned/
-brief layout, cleaner/reduced dialogue and AI labels, physical information selection,
-direct morning wake-to-laptop action, stronger ending and actual product URL CTA.
-Read `FEEDBACK-MOSS-V5-2026-11-17.md` and
-`handoffs/HANDOFF-2026-11-17-moss-v6-controller-start.md`. Active controller:
-`moss_v6_controller`; it may start one fresh worker. Root relays only. V5 remains the
-latest delivered movie and the V40 prototype-reference package stays pinned. Current
-spend $52.097127/$100; V6 generation/review $0.4863; latest weekly usage 2%.
-[PR 23](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/23) is open. Source
-acceptance passed; full 4K capture and 1080p delivery encode are running. All previous
-notes below are history.
-
-**V41 progress, 17 November 17:44 UTC:** source rebuild is underway in `codex/moss-v6`.
-The full-width learned→brief document, larger rules board, no global/Zoom subtitles and
-removed duplicate identity badges are in the first proof. Three physical ocean picks
-are being refined. Clean same-Chris colleague2 audio and matching new fictional motion
-pass local transcription and mouth-sync checks; original Matilda M1 is trimmed after
-“Peer.” and p05 is removed. Final voice cues have no overlap. The same composition now
-uses an uninterrupted five-bar finale, with the closing sentence before its resolving
-chord. Source/mix QA continues; no V6 delivery yet. Cost so far **$0.4663**, project
-**$52.077127/$100**. Live usage helper at17:36UTC reports week2%, Fable0% (a new reading;
-prior25% was historical). Controller `moss_v6_controller`; sole worker `moss_v6_builder`.
-
+See the [delivery record](MOSS-V6-DELIVERY-2026-11-17.md), [completion handoff](handoffs/HANDOFF-2026-11-17-moss-v6-complete.md) and [final review](../moss-clarity/FINAL-REVIEW.md). New spend was $0.4863, project total $52.097127 of $100. Earlier notes below are history.
 
 **V40 media transfer repaired (17 November 2026):** the receiving Mac reported LFS
 placeholders in the copied reference. Canonical and retained `moss-acting` checkouts on
@@ -112,6 +80,8 @@ the current takeover instruction. Use the latest handoff at the top of this file
 `START-HERE.md`. Do not act on these old session IDs without a fresh check.
 
 ## Where we are (checked 2026-11-17)
+
+V41 was delivered after the restart. The completion handoff above records the final revision.
 
 **17 November: V40 portable implementation handoff complete.** Central guide:
 `../../docs/prototype-moss-handoff/README.md`; manifest and paste prompt beside it.
@@ -897,6 +867,8 @@ minutes, its wait `stall-wp2-3` stopped first. Its worktree `~/repos/ai-peer-vid
 
 Still running:
 
+V41 is complete. The earlier sessions and jobs listed below are historical.
+
 **V39 complete:** `moss_v5_builder` is finished. No renderer, server, provider request,
 check process or watcher remains. Canonical main and both retained Moss checkouts are
 synchronized to the completed push. Older running/completion notes below are historical.
@@ -1002,9 +974,12 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 | 2026-11-17 | Gemini + fal.ai (Moss v3) | Generic stamp keyframe, stamp/keyboard actions and three speaking takes; `demo-video/moss-refinement/ledger/`; source/assets pushed at `56b4842` | $1.222778 (Gemini $0.062778 estimate; fal $1.16 conservative); no pending generation |
 | 2026-11-17 | fal.ai / ElevenLabs (Moss v4) | Same-Matilda introduction, 106 fictional characters; `demo-video/moss-introduction/ledger/fal.csv`; direct credential attempt stopped before HTTP | $0.0106; no pending generation |
 | 2026-11-17 | fal.ai (Moss v5) | Same-Matilda ocean narration plus generic simultaneous speaking/notebook motion; `demo-video/moss-ocean/ledger/` | $0.2123 ($0.0123 voice + $0.20 conservative motion); no pending generation |
-| | **Total of the $100 cap** | | **$51.610827**. $50 notice already sent (Telegram 23097); next notice $80. |
+| 2026-11-17 | fal.ai and audio review (Moss v6) | Clean colleague voice $0.0063, matching motion $0.36, four music reviews $0.12 | $0.4863 |
+| | **Total of the $100 cap** | | **$52.097127**. $50 notice already sent (Telegram 23097); next notice $80. |
 
 ## Needs Manish
+
+V41 awaits creative review on Telegram (video 23168, original download 23169).
 
 **V40:** copy the repository with materialized media to the other Mac, provide its path
 in the saved paste prompt, and run that instruction in the actual prototype's workspace.
@@ -1192,6 +1167,8 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
+
+Review feedback from Manish when it arrives. The completed v6 package is pinned at `blended-moss-v6`.
 
 **V40 media repair:** transfer the ready Downloads ZIP/checksum to the company Mac and
 merge-extract it into the existing demo reference root, preserving other files. Verify

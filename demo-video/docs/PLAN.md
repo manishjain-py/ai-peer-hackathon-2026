@@ -2,8 +2,7 @@
 
 **Historical plan, written for Draft 1 on 14 November.** The running-session labels,
 dates and two-worker sequence below record that plan; they are not current instructions.
-For current status, use [STATE](STATE.md); for the latest completed movie, use the
-[Moss acting v2 delivery record](MOSS-ACTING-DELIVERY-2026-11-16.md). The later one-worker
+Use the [current tracker](STATE.md) to find the latest delivered movie. The later one-worker
 decision in DESIGN V15/C13 applies to new video work. No package in this old plan should
 restart automatically.
 

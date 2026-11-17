@@ -3,24 +3,9 @@
 The two-minute AI Peer demo video ("He's asleep. I'm not.", `../docs/STORY.md`), built as one
 web page whose picture is a pure function of the film time, captured frame by frame.
 
-## Latest complete movie: Moss v5
+## Latest delivered movie
 
-`renders/blended-moss-v5.mp4` is the latest delivered review cut: **119.600 seconds,
-3,588 frames, 1920×1080 at 30fps**. The Telegram copy is
-`renders/blended-moss-v5-720p.mp4`. See the [delivery record](../docs/MOSS-V5-DELIVERY-2026-11-17.md)
-and [Moss v5 source/rebuild guide](../moss-ocean/README.md).
-
-The original information-ocean visual language returns at 90–100 seconds. Moss selects
-three updates against explicit role, goal and interests matches, then readies Ram's brief.
-Setup and Slack are tighter; Zoom retains its complete dialogue, with a new simultaneous
-speaking/writing action during the morning-brief promise. The V4 introduction and laptop-only
-morning remain. The same Lyria composition has bar-aligned scene cues and its resolved ending.
-
-The dedicated renderer makes a complete new movie from saved source; no private recording
-or generation credential is required. The clean V3 walkthrough is retimed selectively.
-Both exports fully decode, share identical AAC and measure -14.0 LUFS / -1.7 dBTP.
-All 22 previous voice entries and earlier movie files remain unchanged. Tag v2 remains the
-last explicitly approved full movie; V5 awaits Manish's review. See [STATE](../docs/STATE.md).
+[Moss v6 in 4K](renders/blended-moss-v6.mp4) and its [1080p Telegram edition](renders/blended-moss-v6-1080p.mp4) run **119.600 seconds** at 30 fps. The editable UI, information ocean and globe render at 4K. Moss physically selects three cards for the morning brief, and the final card invites viewers to create their own AI Peer. See the [delivery record](../docs/MOSS-V6-DELIVERY-2026-11-17.md) and [source and rebuild guide](../moss-clarity/README.md).
 
 ## Base/Draft 3 renderer
 
