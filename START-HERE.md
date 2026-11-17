@@ -29,10 +29,22 @@ rebuilding needs no private recording or generation credential. The product buil
 on the company Mac; this repository does not establish its later state. Historical setup
 and Terminal-controller recipes below should not restart an old controller automatically.
 
+## Updating the prototype on another Mac (V40, 17 November)
+
+Manish has designated **Moss v5 as the implementation reference** for the actual prototype
+on his other Mac. This is distinct from historical film approval records: do not implement
+Tag or ask for another mascot choice because an older note calls Tag v2 approved.
+Use `docs/prototype-moss-handoff/README.md`, its verified `asset-manifest.json` and
+`PASTE-PROMPT.md`. The copied demo folder supplies design/assets; the current prototype
+on that Mac supplies the functional truth and is where implementation happens. Do not
+replace it with this repo's archived `peer/`. The handoff is prepared and verified here;
+no target prototype changes have been made on this Mac. No new movie or Telegram send.
+
 ## What is where
 
 | Need | Read |
 |---|---|
+| Applying Moss v5 to the current prototype on another Mac | `docs/prototype-moss-handoff/README.md`; paste `docs/prototype-moss-handoff/PASTE-PROMPT.md` with the copied folder path. |
 | Project rules for every agent | `AGENTS.md` (Claude Code loads it through `CLAUDE.md`) |
 | The live work (November 2026): the 2-minute demo video | `demo-video/AGENTS.md`, then `demo-video/docs/STATE.md` (the tracker) |
 | The last approved full demo video (16 November 2026) | `demo-video/film/renders/blended-tag-v2.mp4`: the Tag version (V30, V31; Little Peer is not used) |

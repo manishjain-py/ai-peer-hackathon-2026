@@ -1,0 +1,806 @@
+{
+  "base_commit": "3c3b66a022fb487462573d088d6aa8192a17fbc1",
+  "reference_images": [
+    {
+      "path": "demo-video/mascot-exploration-v2/images/25-moss.png",
+      "bytes": 2350771,
+      "sha256": "a2aee111b87c1a79eaf6e97e223dff0ec9b1e108492e9d860b9475fe17935386",
+      "format": "JPEG",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "id": "moss-master"
+    },
+    {
+      "path": "demo-video/mascot-exploration-v2/cutouts/25-moss.png",
+      "bytes": 2989992,
+      "sha256": "38eb524dac944f9338e528db77f6151a95a3b1e7834197508d81c9e9c75ed959",
+      "format": "PNG",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        364,
+        151,
+        1597,
+        1873
+      ],
+      "id": "moss-cutout",
+      "alpha": true
+    },
+    {
+      "path": "demo-video/mascot-exploration-v2/avatars/25-moss.png",
+      "bytes": 331380,
+      "sha256": "245a01c9b61bbf5b004f23eb2cc3cd17c1ad4417dc7279a22115c05ed8bebed0",
+      "format": "PNG",
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "id": "moss-avatar"
+    },
+    {
+      "path": "demo-video/mascot-exploration-v2/images/25-moss-chroma.png",
+      "bytes": 2581308,
+      "sha256": "fd0f539bebf806ac53d19d3b74b42d5ac67d9b72868f5d7fa39dfcf5bf2c849a",
+      "format": "PNG",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "id": "moss-chroma-reference"
+    },
+    {
+      "path": "demo-video/moss-acting/assets/moss-notebook-keyframe.png",
+      "bytes": 1636192,
+      "sha256": "ca8c3fdea99ead7b7bdeaf5205a6c8eb853d539b25daa91a74e46323b4106566",
+      "format": "JPEG",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "id": "moss-notebook-reference"
+    },
+    {
+      "path": "demo-video/moss-refinement/assets/moss-stamp-keyframe.png",
+      "bytes": 1662360,
+      "sha256": "df940f8d51e54203672cf59c82d4a0b1fa5aa958ba06e82bf3419aed242a38aa",
+      "format": "JPEG",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "id": "moss-stamp-reference"
+    }
+  ],
+  "selected_action_sprites": [
+    {
+      "path": "demo-video/mascot-exploration-v2/motion/25-moss.webm",
+      "bytes": 1340468,
+      "sha256": "15ebaf00a6b53aa05e9ead9d2a4dc69d90fb928a9e622bcc80311aa861fdb814",
+      "format": "matroska,webm",
+      "codec": "vp9",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 5.167,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": "1",
+      "audio_streams": 0,
+      "decoded_alpha_at_1s": {
+        "min": 0,
+        "max": 255,
+        "fraction_nonopaque": 0.72067,
+        "fraction_transparent": 0.70916
+      },
+      "action": "wave",
+      "film_alias": "src/mascot/tag/moss-assets/wave.webm",
+      "id": "wave",
+      "source_path": "demo-video/mascot-exploration-v2/images/spike-moss-motion-v2.mp4",
+      "speech_bound_to_fixed_dialogue": false,
+      "use_note": "Silent generated action sprite. Trigger by actual application state; play bounded gesture then settle. Existing film playback windows are choreography references, not runtime timers.",
+      "alpha": true,
+      "runtime_use": "bounded silent gesture driven by actual application state"
+    },
+    {
+      "path": "demo-video/moss-film/assets/moss-attentive.webm",
+      "bytes": 1227149,
+      "sha256": "8cd544e8ddbfd7b8de4dbb74f53d4dbe006feda3072105fdb7807ea837c98537",
+      "format": "matroska,webm",
+      "codec": "vp9",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 5.167,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": "1",
+      "audio_streams": 0,
+      "decoded_alpha_at_1s": {
+        "min": 0,
+        "max": 255,
+        "fraction_nonopaque": 0.72898,
+        "fraction_transparent": 0.71853
+      },
+      "action": "attentive",
+      "film_alias": "src/mascot/tag/moss-assets/attentive.webm",
+      "id": "attentive",
+      "source_path": "demo-video/moss-film/assets/moss-attentive-source.mp4",
+      "speech_bound_to_fixed_dialogue": false,
+      "use_note": "Silent generated action sprite. Trigger by actual application state; play bounded gesture then settle. Existing film playback windows are choreography references, not runtime timers.",
+      "alpha": true,
+      "runtime_use": "bounded silent gesture driven by actual application state"
+    },
+    {
+      "path": "demo-video/moss-film/assets/moss-present.webm",
+      "bytes": 1330902,
+      "sha256": "8be3e9f29e4dd9c644dc8d8baf8cf799af4ba18e4072d490774a14217aede1a4",
+      "format": "matroska,webm",
+      "codec": "vp9",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 5.167,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": "1",
+      "audio_streams": 0,
+      "decoded_alpha_at_1s": {
+        "min": 0,
+        "max": 255,
+        "fraction_nonopaque": 0.72249,
+        "fraction_transparent": 0.71121
+      },
+      "action": "present",
+      "film_alias": "src/mascot/tag/moss-assets/present.webm",
+      "id": "present",
+      "source_path": "demo-video/moss-film/assets/moss-present-source.mp4",
+      "speech_bound_to_fixed_dialogue": false,
+      "use_note": "Silent generated action sprite. Trigger by actual application state; play bounded gesture then settle. Existing film playback windows are choreography references, not runtime timers.",
+      "alpha": true,
+      "runtime_use": "bounded silent gesture driven by actual application state"
+    },
+    {
+      "path": "demo-video/moss-acting/assets/moss-notebook.webm",
+      "bytes": 1001462,
+      "sha256": "00ddaf9007992930dd09e771a86c59f3c0aec6dfb93eb8dc424f2abb9893d8ef",
+      "format": "matroska,webm",
+      "codec": "vp9",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 5.167,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": "1",
+      "audio_streams": 0,
+      "decoded_alpha_at_1s": {
+        "min": 0,
+        "max": 255,
+        "fraction_nonopaque": 0.73644,
+        "fraction_transparent": 0.72685
+      },
+      "action": "notebook",
+      "film_alias": "src/mascot/tag/moss-assets/notebook.webm",
+      "id": "notebook",
+      "source_path": "demo-video/moss-acting/assets/moss-notebook-source.mp4",
+      "speech_bound_to_fixed_dialogue": false,
+      "use_note": "Silent generated action sprite. Trigger by actual application state; play bounded gesture then settle. Existing film playback windows are choreography references, not runtime timers.",
+      "alpha": true,
+      "runtime_use": "bounded silent gesture driven by actual application state"
+    },
+    {
+      "path": "demo-video/moss-acting/assets/moss-listen.webm",
+      "bytes": 1064605,
+      "sha256": "9806b8f25c5801ebb34a7d72a092877a910a575da17d93c946b03034eccda398",
+      "format": "matroska,webm",
+      "codec": "vp9",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 5.167,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": "1",
+      "audio_streams": 0,
+      "decoded_alpha_at_1s": {
+        "min": 0,
+        "max": 255,
+        "fraction_nonopaque": 0.72505,
+        "fraction_transparent": 0.71406
+      },
+      "action": "listen",
+      "film_alias": "src/mascot/tag/moss-assets/listen.webm",
+      "id": "listen",
+      "source_path": "demo-video/moss-acting/assets/moss-listen-source.mp4",
+      "speech_bound_to_fixed_dialogue": false,
+      "use_note": "Silent generated action sprite. Trigger by actual application state; play bounded gesture then settle. Existing film playback windows are choreography references, not runtime timers.",
+      "alpha": true,
+      "runtime_use": "bounded silent gesture driven by actual application state"
+    },
+    {
+      "path": "demo-video/moss-acting/assets/moss-reassure.webm",
+      "bytes": 1151910,
+      "sha256": "0bd46d725ec1656d3280a796473488cd36c796e1f78ef0716c10e9e02fb3aeed",
+      "format": "matroska,webm",
+      "codec": "vp9",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 5.167,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": "1",
+      "audio_streams": 0,
+      "decoded_alpha_at_1s": {
+        "min": 0,
+        "max": 255,
+        "fraction_nonopaque": 0.71964,
+        "fraction_transparent": 0.70759
+      },
+      "action": "reassure",
+      "film_alias": "src/mascot/tag/moss-assets/reassure.webm",
+      "id": "reassure",
+      "source_path": "demo-video/moss-acting/assets/moss-reassure-source.mp4",
+      "speech_bound_to_fixed_dialogue": false,
+      "use_note": "Silent generated action sprite. Trigger by actual application state; play bounded gesture then settle. Existing film playback windows are choreography references, not runtime timers.",
+      "alpha": true,
+      "runtime_use": "bounded silent gesture driven by actual application state"
+    },
+    {
+      "path": "demo-video/moss-acting/assets/moss-acknowledge.webm",
+      "bytes": 1049866,
+      "sha256": "aa004ec3bc4015de69864d2f161259305145e3de87ae0dcef4bac4ac2373b769",
+      "format": "matroska,webm",
+      "codec": "vp9",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 5.167,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": "1",
+      "audio_streams": 0,
+      "decoded_alpha_at_1s": {
+        "min": 0,
+        "max": 255,
+        "fraction_nonopaque": 0.72459,
+        "fraction_transparent": 0.71326
+      },
+      "action": "acknowledge",
+      "film_alias": "src/mascot/tag/moss-assets/acknowledge.webm",
+      "id": "acknowledge",
+      "source_path": "demo-video/moss-acting/assets/moss-acknowledge-source.mp4",
+      "speech_bound_to_fixed_dialogue": false,
+      "use_note": "Silent generated action sprite. Trigger by actual application state; play bounded gesture then settle. Existing film playback windows are choreography references, not runtime timers.",
+      "alpha": true,
+      "runtime_use": "bounded silent gesture driven by actual application state"
+    },
+    {
+      "path": "demo-video/moss-refinement/assets/moss-stamp.webm",
+      "bytes": 1276180,
+      "sha256": "cfa6da14e4bacaef61977cb2149492f0e49e3b0bfac9ba0300c1a29a6ad11f77",
+      "format": "matroska,webm",
+      "codec": "vp9",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 5.167,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": "1",
+      "audio_streams": 0,
+      "decoded_alpha_at_1s": {
+        "min": 0,
+        "max": 255,
+        "fraction_nonopaque": 0.74143,
+        "fraction_transparent": 0.73077
+      },
+      "action": "stamp",
+      "film_alias": "src/mascot/tag/moss-assets/stamp.webm",
+      "id": "stamp",
+      "source_path": "demo-video/moss-refinement/assets/moss-stamp-source.mp4",
+      "speech_bound_to_fixed_dialogue": false,
+      "use_note": "Silent generated action sprite. Trigger by actual application state; play bounded gesture then settle. Existing film playback windows are choreography references, not runtime timers.",
+      "alpha": true,
+      "runtime_use": "bounded silent gesture driven by actual application state"
+    },
+    {
+      "path": "demo-video/moss-refinement/assets/moss-speak-m1.webm",
+      "bytes": 1499769,
+      "sha256": "0f0559741a19dab381e10b0db0b543b5c46c7cdeafd9671c10151598f4b450c2",
+      "format": "matroska,webm",
+      "codec": "vp9",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 6.584,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": "1",
+      "audio_streams": 0,
+      "decoded_alpha_at_1s": {
+        "min": 0,
+        "max": 255,
+        "fraction_nonopaque": 0.72244,
+        "fraction_transparent": 0.71055
+      },
+      "action": "speak-m1",
+      "film_alias": "src/mascot/tag/moss-assets/speak-m1.webm",
+      "id": "speak-m1",
+      "source_path": "demo-video/moss-refinement/assets/moss-speak-m1-source.mp4",
+      "speech_bound_to_fixed_dialogue": true,
+      "use_note": "Visual reference for fixed fictional dialogue only. Runtime actual speech must drive an appropriate speaking state; do not use as arbitrary lip-sync or play provider-source audio.",
+      "alpha": true,
+      "runtime_use": "fixed-dialogue visual reference; adapt to actual speech lifecycle"
+    },
+    {
+      "path": "demo-video/moss-refinement/assets/moss-speak-m2.webm",
+      "bytes": 1838126,
+      "sha256": "38a85516cee9a629fb088dabe44b9c7080cda94c10dc2760a4b47177f21c9005",
+      "format": "matroska,webm",
+      "codec": "vp9",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 8.0,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": "1",
+      "audio_streams": 0,
+      "decoded_alpha_at_1s": {
+        "min": 0,
+        "max": 255,
+        "fraction_nonopaque": 0.72407,
+        "fraction_transparent": 0.71307
+      },
+      "action": "speak-m2",
+      "film_alias": "src/mascot/tag/moss-assets/speak-m2.webm",
+      "id": "speak-m2",
+      "source_path": "demo-video/moss-refinement/assets/moss-speak-m2-source.mp4",
+      "speech_bound_to_fixed_dialogue": true,
+      "use_note": "Visual reference for fixed fictional dialogue only. Runtime actual speech must drive an appropriate speaking state; do not use as arbitrary lip-sync or play provider-source audio.",
+      "alpha": true,
+      "runtime_use": "fixed-dialogue visual reference; adapt to actual speech lifecycle"
+    },
+    {
+      "path": "demo-video/moss-refinement/assets/moss-speak-m4b.webm",
+      "bytes": 1121422,
+      "sha256": "3e335203f1fd66b60dea584df75965ee1d71e181f2ef168178afbb7c4c7fe7bb",
+      "format": "matroska,webm",
+      "codec": "vp9",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 5.167,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": "1",
+      "audio_streams": 0,
+      "decoded_alpha_at_1s": {
+        "min": 0,
+        "max": 255,
+        "fraction_nonopaque": 0.72452,
+        "fraction_transparent": 0.71284
+      },
+      "action": "speak-m4b",
+      "film_alias": "src/mascot/tag/moss-assets/speak-m4b.webm",
+      "id": "speak-m4b",
+      "source_path": "demo-video/moss-refinement/assets/moss-speak-m4b-source.mp4",
+      "speech_bound_to_fixed_dialogue": true,
+      "use_note": "Retained older standalone speaking reply. V5 replaces its final meeting reply with speak-write; not arbitrary speech lip-sync.",
+      "alpha": true,
+      "runtime_use": "fixed-dialogue visual reference; adapt to actual speech lifecycle"
+    },
+    {
+      "path": "demo-video/moss-refinement/assets/moss-type.webm",
+      "bytes": 1287748,
+      "sha256": "1f5e6dd4e0ea12a1534b006482aa1c6df115f295db62797da69712be47a0f831",
+      "format": "matroska,webm",
+      "codec": "vp9",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 5.167,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": "1",
+      "audio_streams": 0,
+      "decoded_alpha_at_1s": {
+        "min": 0,
+        "max": 255,
+        "fraction_nonopaque": 0.71498,
+        "fraction_transparent": 0.70255
+      },
+      "action": "type",
+      "film_alias": "src/mascot/tag/moss-assets/type.webm",
+      "id": "type",
+      "source_path": "demo-video/moss-refinement/assets/moss-type-source.mp4",
+      "speech_bound_to_fixed_dialogue": false,
+      "use_note": "Silent generated action sprite. Trigger by actual application state; play bounded gesture then settle. Existing film playback windows are choreography references, not runtime timers.",
+      "alpha": true,
+      "runtime_use": "bounded silent gesture driven by actual application state"
+    },
+    {
+      "path": "demo-video/moss-ocean/assets/moss-speak-write.webm",
+      "bytes": 975252,
+      "sha256": "730cf377711e8c5e0e355bd8d2e74d30c3d18fc212a0e004985947e3844bccb8",
+      "format": "matroska,webm",
+      "codec": "vp9",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 5.167,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": "1",
+      "audio_streams": 0,
+      "decoded_alpha_at_1s": {
+        "min": 0,
+        "max": 255,
+        "fraction_nonopaque": 0.73278,
+        "fraction_transparent": 0.72282
+      },
+      "action": "speak-write",
+      "film_alias": "src/mascot/tag/moss-assets/speak-write.webm",
+      "id": "speak-write",
+      "source_path": "demo-video/moss-ocean/assets/moss-speak-write-source.mp4",
+      "speech_bound_to_fixed_dialogue": true,
+      "use_note": "Visual reference for fixed fictional dialogue only. Runtime actual speech must drive an appropriate speaking state; do not use as arbitrary lip-sync or play provider-source audio.",
+      "alpha": true,
+      "runtime_use": "fixed-dialogue visual reference; adapt to actual speech lifecycle"
+    }
+  ],
+  "provider_source_takes": [
+    {
+      "path": "demo-video/mascot-exploration-v2/images/spike-moss-motion-v2.mp4",
+      "bytes": 3631737,
+      "sha256": "13e0ff024e17c83f6e8c98bf198fd32c3ec4a93db4174c7a9f8bbee62fdfdbd6",
+      "format": "mov,mp4,m4a,3gp,3g2,mj2",
+      "codec": "h264",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 5.184,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": null,
+      "audio_streams": 1,
+      "use_note": "Opaque magenta provider take with an audio stream. Preserve as provenance; use selected silent alpha WebM for UI."
+    },
+    {
+      "path": "demo-video/moss-film/assets/moss-attentive-source.mp4",
+      "bytes": 3467334,
+      "sha256": "aa57a69c8783f7420b357f5b09082e508968599090018c7a506c8245e802d729",
+      "format": "mov,mp4,m4a,3gp,3g2,mj2",
+      "codec": "h264",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 5.184,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": null,
+      "audio_streams": 1,
+      "use_note": "Opaque magenta provider take with an audio stream. Preserve as provenance; use selected silent alpha WebM for UI."
+    },
+    {
+      "path": "demo-video/moss-film/assets/moss-present-source.mp4",
+      "bytes": 3553111,
+      "sha256": "0ea64c7f907b557e0b270036c7ff41431dc1a84178fc2032cfcb6c9d1d268851",
+      "format": "mov,mp4,m4a,3gp,3g2,mj2",
+      "codec": "h264",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 5.184,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": null,
+      "audio_streams": 1,
+      "use_note": "Opaque magenta provider take with an audio stream. Preserve as provenance; use selected silent alpha WebM for UI."
+    },
+    {
+      "path": "demo-video/moss-acting/assets/moss-notebook-source.mp4",
+      "bytes": 3109965,
+      "sha256": "e5c5003e4fd9fe9a5755fdaa8dfd4d75199c163150763ff209400dd7df2ff4e1",
+      "format": "mov,mp4,m4a,3gp,3g2,mj2",
+      "codec": "h264",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 5.184,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": null,
+      "audio_streams": 1,
+      "use_note": "Opaque magenta provider take with an audio stream. Preserve as provenance; use selected silent alpha WebM for UI."
+    },
+    {
+      "path": "demo-video/moss-acting/assets/moss-listen-source.mp4",
+      "bytes": 3269942,
+      "sha256": "8f5fc0b90e32b49192ec8d1bac23524a7bc40be8d71be08e96df0336f2a57024",
+      "format": "mov,mp4,m4a,3gp,3g2,mj2",
+      "codec": "h264",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 5.184,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": null,
+      "audio_streams": 1,
+      "use_note": "Opaque magenta provider take with an audio stream. Preserve as provenance; use selected silent alpha WebM for UI."
+    },
+    {
+      "path": "demo-video/moss-acting/assets/moss-reassure-source.mp4",
+      "bytes": 3375927,
+      "sha256": "9985a762abc6552b5ec7d6a870f95ba65a6695696b0acdbab044ebd2906f9563",
+      "format": "mov,mp4,m4a,3gp,3g2,mj2",
+      "codec": "h264",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 5.184,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": null,
+      "audio_streams": 1,
+      "use_note": "Opaque magenta provider take with an audio stream. Preserve as provenance; use selected silent alpha WebM for UI."
+    },
+    {
+      "path": "demo-video/moss-acting/assets/moss-acknowledge-source.mp4",
+      "bytes": 3280203,
+      "sha256": "c57f78870881853893b00c3f8c0c9cd5e92f87a3a64592f9ad05a2cf794bbf6e",
+      "format": "mov,mp4,m4a,3gp,3g2,mj2",
+      "codec": "h264",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 5.184,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": null,
+      "audio_streams": 1,
+      "use_note": "Opaque magenta provider take with an audio stream. Preserve as provenance; use selected silent alpha WebM for UI."
+    },
+    {
+      "path": "demo-video/moss-refinement/assets/moss-stamp-source.mp4",
+      "bytes": 3429654,
+      "sha256": "c866ae2b9ba2f4e6145124721645fa41754b4b43fa084d5f5a0805a0df3560a1",
+      "format": "mov,mp4,m4a,3gp,3g2,mj2",
+      "codec": "h264",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 5.184,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": null,
+      "audio_streams": 1,
+      "use_note": "Opaque magenta provider take with an audio stream. Preserve as provenance; use selected silent alpha WebM for UI."
+    },
+    {
+      "path": "demo-video/moss-refinement/assets/moss-speak-m1-source.mp4",
+      "bytes": 4279790,
+      "sha256": "b13c8225bb4359e2e7473c564760a512fcf6b3f579f1934c58b6b0f459c98c69",
+      "format": "mov,mp4,m4a,3gp,3g2,mj2",
+      "codec": "h264",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 6.624,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": null,
+      "audio_streams": 1,
+      "use_note": "Opaque magenta provider take with an audio stream. Preserve as provenance; use selected silent alpha WebM for UI."
+    },
+    {
+      "path": "demo-video/moss-refinement/assets/moss-speak-m2-source.mp4",
+      "bytes": 5196601,
+      "sha256": "edcabeec38844a98f8433f6716ee6d47070aa91b85b711b5b52a743c83fb25dd",
+      "format": "mov,mp4,m4a,3gp,3g2,mj2",
+      "codec": "h264",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 8.032,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": null,
+      "audio_streams": 1,
+      "use_note": "Opaque magenta provider take with an audio stream. Preserve as provenance; use selected silent alpha WebM for UI."
+    },
+    {
+      "path": "demo-video/moss-refinement/assets/moss-speak-m4b-source.mp4",
+      "bytes": 3315920,
+      "sha256": "f23eef85635452fb28bdc6d660f5bcbe029446ef54fc554c8348b7d7c15b679e",
+      "format": "mov,mp4,m4a,3gp,3g2,mj2",
+      "codec": "h264",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 5.184,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": null,
+      "audio_streams": 1,
+      "use_note": "Opaque magenta provider take with an audio stream. Preserve as provenance; use selected silent alpha WebM for UI."
+    },
+    {
+      "path": "demo-video/moss-refinement/assets/moss-type-source.mp4",
+      "bytes": 3373103,
+      "sha256": "ae7f94db0442491e2da5c7b2b5cecdd75ddd187b86134c1245e4b7272fb815d1",
+      "format": "mov,mp4,m4a,3gp,3g2,mj2",
+      "codec": "h264",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 5.184,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": null,
+      "audio_streams": 1,
+      "use_note": "Opaque magenta provider take with an audio stream. Preserve as provenance; use selected silent alpha WebM for UI."
+    },
+    {
+      "path": "demo-video/moss-ocean/assets/moss-speak-write-source.mp4",
+      "bytes": 3100097,
+      "sha256": "ca5e402e199e04014a365601ca32c28762f24a8bae47e64860c4a2ffd9c6ccaf",
+      "format": "mov,mp4,m4a,3gp,3g2,mj2",
+      "codec": "h264",
+      "dimensions": [
+        768,
+        768
+      ],
+      "duration_seconds": 5.184,
+      "fps": "24/1",
+      "pix_fmt": "yuv420p",
+      "alpha_mode": null,
+      "audio_streams": 1,
+      "use_note": "Opaque magenta provider take with an audio stream. Preserve as provenance; use selected silent alpha WebM for UI."
+    }
+  ],
+  "alpha_verification_method": "PNG alpha was read with Pillow. Each selected WebM was decoded at 1s with ffmpeg forced libvpx-vp9 to RGBA; alpha extrema 0–255 prove transparent and opaque pixels. ffprobe reports yuv420p despite alpha_mode=1. This verifies source bytes, not target browser compatibility.",
+  "runtime_alias_note": "film_alias names are build outputs mapped by film/cuts/blended-moss-v5/cut.json, not checked-in asset locations. Copy from path.",
+  "still_fallback_note": "Use moss-cutout for full-body transparent fallback or moss-avatar for compact avatar/logo. The avatar is an opaque mint-backed RGB image; notebook/stamp keyframes are opaque magenta references.",
+  "schema_version": 1,
+  "purpose": "V40 portable design/asset handoff. Every path is relative to the supplied demo repository root; copy selected assets into the target prototype asset pipeline.",
+  "verified_utc": "2026-11-17",
+  "reference_tag": "blended-moss-v5",
+  "copy_note": "Reference images and silent alpha action files are reusable. Provider MP4 source takes are provenance only; speaking actions are fixed-dialogue visual references, not arbitrary live lip-sync.",
+  "reference_videos": [
+    {
+      "path": "demo-video/film/renders/blended-moss-v5.mp4",
+      "bytes": 387536779,
+      "sha256": "1d10d67a6d3f62a60da35c8ff7d47d0f2df5d6d6e6551169d76d5155239252c8",
+      "format": "MP4",
+      "codec": "h264",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "duration_seconds": 119.6,
+      "fps": "30/1",
+      "alpha": false,
+      "audio_streams": 1,
+      "runtime_use": "reference viewing only; do not embed as the live product"
+    },
+    {
+      "path": "demo-video/film/renders/blended-moss-v5-720p.mp4",
+      "bytes": 25365901,
+      "sha256": "f7f7ed39a06bf3583bf5118b2f53c8b9f61dc6963431460f40732c0ba20bc48a",
+      "format": "MP4",
+      "codec": "h264",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "duration_seconds": 119.6,
+      "fps": "30/1",
+      "alpha": false,
+      "audio_streams": 1,
+      "runtime_use": "reference viewing only; do not embed as the live product"
+    }
+  ],
+  "font_files": [
+    {
+      "path": "demo-video/ui-concepts/shared/fonts/InstrumentSerif-Regular.ttf",
+      "bytes": 70012,
+      "sha256": "498efd461f6ddfcb7a111bf9a565709d2085d48201d501ead960d93e84ffbb88",
+      "kind": "font"
+    },
+    {
+      "path": "demo-video/ui-concepts/shared/fonts/InstrumentSerif-Italic.ttf",
+      "bytes": 71592,
+      "sha256": "08939b8bdf534afec24ae0ef5e03f948940cd9a8fe08e7fecbad040e62327385",
+      "kind": "font"
+    },
+    {
+      "path": "demo-video/ui-concepts/shared/fonts/Inter.ttf",
+      "bytes": 876576,
+      "sha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031",
+      "kind": "font"
+    },
+    {
+      "path": "demo-video/ui-concepts/shared/fonts/JetBrainsMono.ttf",
+      "bytes": 187208,
+      "sha256": "48715a42ec242c21e9f02692891e147d022299a52e48d5e413e1a942193ffeda",
+      "kind": "font"
+    },
+    {
+      "path": "demo-video/ui-concepts/shared/fonts/Manrope.ttf",
+      "bytes": 164700,
+      "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6",
+      "kind": "font"
+    },
+    {
+      "path": "demo-video/ui-concepts/shared/fonts/OFL-instrumentserif.txt",
+      "bytes": 4405,
+      "sha256": "129ed7618959716959f2941fdd5b49e0ad6e6c1d78726761786a00253d865521",
+      "kind": "license"
+    },
+    {
+      "path": "demo-video/ui-concepts/shared/fonts/OFL-inter.txt",
+      "bytes": 4377,
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+      "kind": "license"
+    },
+    {
+      "path": "demo-video/ui-concepts/shared/fonts/OFL-jetbrainsmono.txt",
+      "bytes": 4399,
+      "sha256": "b2fe5e8987594e9ffd1d2ca52a2f5d73eb8335243893c5d6254b5ad69269591d",
+      "kind": "license"
+    },
+    {
+      "path": "demo-video/ui-concepts/shared/fonts/OFL-manrope.txt",
+      "bytes": 4387,
+      "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b",
+      "kind": "license"
+    }
+  ]
+}

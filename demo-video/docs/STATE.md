@@ -1,5 +1,13 @@
 # AI Peer demo video: state
 
+**V40 handoff prepared (17 November 2026):** Manish will copy this repository to the Mac
+holding his actual prototype. [The central implementation guide](../../docs/prototype-moss-handoff/README.md),
+verified 43-file asset/reference/font manifest and paste-ready prompt are saved. Moss v5
+is the designated design/interaction reference for that task; historical Tag approval must
+not redirect the implementation. The receiving agent updates its current prototype using
+real events/data and its own repo rules. No prototype code, movie, generation or Telegram
+send was performed for this documentation task. Remote implementation remains pending.
+
 **Moss v5 is complete and delivered (V39, 17 November 2026 UTC).** The 119.600-second
 movie restores the deep company-information ocean at 90–100, with three useful updates
 explicitly matched to Ram's role, goal and interests. Setup and Slack are tighter, and
@@ -54,6 +62,14 @@ the current takeover instruction. Use the latest handoff at the top of this file
 `START-HERE.md`. Do not act on these old session IDs without a fresh check.
 
 ## Where we are (checked 2026-11-17)
+
+**17 November: V40 portable implementation handoff complete.** Central guide:
+`../../docs/prototype-moss-handoff/README.md`; manifest and paste prompt beside it.
+All 43 manifest file sizes/hashes and 13 selected actions' real alpha were verified.
+The guide maps the V5 scenes to live product states, identifies the actual source layers,
+separates fictional film data/timing from runtime functionality, and requires implementation
+through the target's authorized manual walks. This Mac did documentation only; the target
+prototype has not yet been changed by this task.
 
 **17 November: V39 complete.** PR 22, all media, delivery receipt and final records are
 saved; checkpoint `blended-moss-v5` is pushed. Controller accepted 102 encoded master
@@ -940,6 +956,10 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 
 ## Needs Manish
 
+**V40:** copy the repository with materialized media to the other Mac, provide its path
+in the saved paste prompt, and run that instruction in the actual prototype's workspace.
+No additional creative approval is needed to choose Moss v5 for that implementation.
+
 **V39 delivered:** review Moss v5 on Telegram (23119). No clarification or implementation
 task remains. The controller's acceptance is technical/visual delivery acceptance;
 Manish's final creative approval is not inferred. Tag v2 remains the last explicit approval.
@@ -1122,6 +1142,10 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
+
+**V40:** the receiving agent follows `docs/prototype-moss-handoff/README.md` in the copied
+reference and implements in its own current prototype. This source-Mac documentation task
+is complete. No new film, generation or Telegram delivery starts from this handoff.
 
 **V39 complete:** await Manish's review of `blended-moss-v5`. Nothing needs to be
 restarted or resent. For a new revision, begin with the latest completion handoff,
@@ -1556,3 +1580,5 @@ and 7 still hold.
 | 2026-11-17 04:13 UTC | Codex controller /root, moss_v3_builder; final docs moss_v4_closeout | V37/V38 complete: proactive-teammate/24/7 setup home and same-Matilda introduction; morning Moss only on the laptop. PR 21 merged `033fb44`, checkpoint `blended-moss-v4`; Telegram 23108/23109. | Await v4 review; all prior cuts preserved; $0.0106 new, $51.398527 total; weekly usage 22%; nothing runs |
 
 | 2026-11-17 07:06 UTC | Codex moss_v5_controller + moss_v5_builder | V39 complete: compact information ocean with explicit relevance, tighter setup/Slack, simultaneous Zoom speech/writing; PR 22 merged `30de35e`, checkpoint `blended-moss-v5`, Telegram 23119/23120. | Await V5 review; $0.2123 new, $51.610827 total; weekly usage 23%; nothing runs |
+
+| 2026-11-17 | Codex moss_v5_controller; read-only inventory moss_asset_inventory | V40: portable current-prototype implementation guide, exact request, verified 43-file manifest and paste prompt; Moss v5 designated implementation reference. | Docs only on this Mac; no target code or media changes; remote implementation pending |

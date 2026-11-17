@@ -16,6 +16,11 @@ on Telegram for review (23119/23120). See `docs/MOSS-V5-DELIVERY-2026-11-17.md`;
 from `moss-ocean/README.md`. Nothing runs. Earlier cuts remain preserved; Tag v2 is the
 last explicitly approved full movie.
 
+V40 (17 November): for implementing this design in the actual prototype on another Mac,
+use `../docs/prototype-moss-handoff/README.md`. Moss v5 is the designated implementation
+reference for that task, regardless of historical Tag approval. The receiving agent updates
+its own current prototype; the demo folder is a read-only reference. No new film is requested.
+
 ## Start here
 
 1. `docs/STATE.md`: where we are, live sessions, money spent, what needs Manish, next.

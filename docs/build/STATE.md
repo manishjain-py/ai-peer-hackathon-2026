@@ -3,6 +3,17 @@
 The tracker. Every session updates it at each milestone; the controller at least
 hourly while workers run. Times UTC. Decisions: [DESIGN §0](DESIGN.md). Plan: [PLAN](PLAN.md).
 
+## New prototype-design handoff (17 November 2026, V40)
+
+Manish's actual prototype continues on another Mac. He will copy this demo repository there
+as a design/asset reference and have that machine's agent update its own current prototype
+to match Moss v5. Use [the implementation handoff](../prototype-moss-handoff/README.md)
+and [paste-ready instructions](../prototype-moss-handoff/PASTE-PROMPT.md). The package and
+asset inventory are prepared here; implementation and end-to-end verification remain on
+the target Mac. **Do not overwrite that prototype with this repo's stale `peer/`.** Moss v5
+is the designated implementation reference, not historical Tag v2. The November 7 closure
+below remains historical fact; this task does not reopen the product build on this Mac.
+
 ## Where we are
 
 2026-11-07 07:09. **The build on this Mac is closed; it continues on Manish's Airbnb Mac from the hand-off package.**
