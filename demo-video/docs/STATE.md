@@ -1,6 +1,14 @@
 # AI Peer demo video: state
 
-Current status (17 November 2026): **Moss v3 complete and delivered (V36)**.
+Current task (17 November 2026, V37/V38): **Moss v4 in progress**. Clarify AI Peer on the
+setup home and in the introductory voiceover, filling the existing empty beat; show the
+morning Moss only on the laptop, with no external little Moss or phone in view. Brief:
+`FEEDBACK-MOSS-V3-2026-11-17.md`. Controller `/root`, sole worker `moss_v3_builder`.
+Weekly usage checked at21%; pay-per-use spend $51.387927/$100. Existing ElevenLabs plan
+is authorized for the new line; no new paid art planned. V3 remains the latest completed
+review cut, Tag v2 the last explicitly approved full movie.
+
+Previous completion (17 November 2026): **Moss v3 complete and delivered (V36)**.
 The full movie is 119.600s / 3,588 frames, with every requested scene revision and the
 new ending made from the original music. PR 20 merged as `c612624`; checkpoint
 `blended-moss-v3` is pushed. Telegram video 23106 and review 23107 are confirmed
