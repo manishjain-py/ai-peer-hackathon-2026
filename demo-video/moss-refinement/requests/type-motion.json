@@ -1,0 +1,20 @@
+{
+  "endpoint": "minimax/h3-max-turbo/image-to-video",
+  "inputs": {
+    "prompt": "Same exact hand-felted green woodland Moss from the reference, full body, locked camera. Lower raised paw. A very small thin cream computer keyboard is already in front of its belly held horizontally. Moss looks down, brings both paws onto the keyboard, then visibly types with quick alternating little paw taps from1 to4 seconds, looking up with a pleased soft smile at the end. Keep paws clearly touching keys; genuine arm/hand motion. No laptop, no screen, no letters or words on the keyboard. Preserve exact wool texture, cream face and belly, curled sage sprout, ears, amber pendant and body proportions; full body and feet within original square canvas margins and position. Background perfectly uniform pure magenta #FF00FF, no floor/shadow/scenery, no subtitles, no speech, no music. Five seconds continuous shot.",
+    "image_url": "file:demo-video/mascot-exploration-v2/images/25-moss-chroma.png",
+    "duration": 5,
+    "resolution": "768P",
+    "prompt_expansion_mode": "disabled",
+    "seed": 171126320
+  },
+  "expect": {
+    "units": 5,
+    "unit": "seconds at768p",
+    "unit_price": 0.04,
+    "cost_usd": 0.2,
+    "basis": "Saved verified conservative rate; fal schema rechecked2026-11-17"
+  },
+  "output": "demo-video/moss-refinement/assets/moss-type-source",
+  "note": "V36 generic Moss typing only; no UI or private data"
+}

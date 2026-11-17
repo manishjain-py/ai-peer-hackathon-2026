@@ -1,0 +1,24 @@
+{
+ "request_id": "01a1e76c-7d1f-7a60-b981-fe06a6a4de14",
+ "billable_units_header": "8.0",
+ "inputs_sent": {
+  "prompt": "Same exact hand-felted green woodland Moss from the reference, full body, locked camera. Lower raised paw. A very small thin cream computer keyboard is already in front of its belly held horizontally. Moss looks down, brings both paws onto the keyboard, then visibly types with quick alternating little paw taps from1 to4 seconds, looking up with a pleased soft smile at the end. Keep paws clearly touching keys; genuine arm/hand motion. No laptop, no screen, no letters or words on the keyboard. Preserve exact wool texture, cream face and belly, curled sage sprout, ears, amber pendant and body proportions; full body and feet within original square canvas margins and position. Background perfectly uniform pure magenta #FF00FF, no floor/shadow/scenery, no subtitles, no speech, no music. Five seconds continuous shot.",
+  "image_url": "https://v3b.fal.media/files/b/0ab2c678/Q2thcFCFEA9Gg3JQb2VLi_25-moss-chroma.png",
+  "duration": 5,
+  "resolution": "768P",
+  "prompt_expansion_mode": "disabled",
+  "seed": 171126320
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab2c691/NXhGgMWo2RXjTDK0w7y1r_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "NXhGgMWo2RXjTDK0w7y1r_minimax-h3.mp4",
+   "file_size": 3373103
+  },
+  "expanded_prompt": null,
+  "timings": {
+   "inference": 0.8610877400024037
+  }
+ }
+}

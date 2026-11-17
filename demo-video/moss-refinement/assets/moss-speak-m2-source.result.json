@@ -1,0 +1,25 @@
+{
+ "request_id": "01a1e769-c8e4-7f73-ab23-9eaea42ed889",
+ "billable_units_header": "12.8",
+ "inputs_sent": {
+  "prompt": "The exact felt Moss in the reference speaks the supplied audio naturally to a video call. Lower its raised paw gently in the first 0.3 seconds. Start speaking at 0.3 seconds in exact sync with the supplied audio, mouth opening and closing clearly with each syllable and resting closed during pauses. Keep the mouth small and friendly, a simple dark soft felt opening; NO human lips, NO teeth, NO tongue. Eyes stay warm, one natural blink, restrained head and paw movement. After speech settles mouth CLOSED. Preserve EXACT green felt identity, cream face and belly, curled sprout, ears, amber pendant and all proportions. Full body within existing margins, feet planted, locked frontal camera with NO zoom/reframing. Uniform pure magenta #FF00FF background, no floor, shadow, objects, text, subtitles, music or new audio. 8 seconds continuous shot. Give one gentle open-paw explanatory gesture during the update, then settle.",
+  "image_url": "https://v3b.fal.media/files/b/0ab2c678/Q2thcFCFEA9Gg3JQb2VLi_25-moss-chroma.png",
+  "target_audio_url": "https://v3b.fal.media/files/b/0ab2c67e/2KhfZJQIYYh4bIaJUJ0uO_m2-guide.wav",
+  "duration": 8,
+  "resolution": "768P",
+  "prompt_expansion_mode": "disabled",
+  "seed": 171126309
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab2c67f/b_DEaEA1CGBSGpI9p2FJc_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "b_DEaEA1CGBSGpI9p2FJc_minimax-h3.mp4",
+   "file_size": 5196601
+  },
+  "expanded_prompt": null,
+  "timings": {
+   "inference": 1.140659066993976
+  }
+ }
+}

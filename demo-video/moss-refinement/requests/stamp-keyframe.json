@@ -1,0 +1,30 @@
+{
+  "model": "gemini-nano-banana-2.1",
+  "reserve_usd": 0.12,
+  "output": "assets/moss-stamp-keyframe.png",
+  "references": [
+    "../mascot-exploration-v2/images/25-moss-chroma.png"
+  ],
+  "body": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Use case: identity-preserve. Edit target: the same chosen felt Moss character in reference. Preserve exact green wool texture, cream face/belly, curled sage sprout, amber charm, round ears, dark glossy eyes, face proportions, body scale and canvas position. Change ONLY the arm pose: both paws hold a small traditional wood-handled rubber stamp, with a short amber rounded handle and dark-green round base, in front of its lower belly. It looks down at the stamp with a pleased focused closed-mouth smile, ready to press it downward. Stamp is about one quarter body width; clearly readable silhouette. No ink mark, writing, notebook or other objects. Full body including feet/sprout, generous margins, same square canvas and character scale. Background perfectly flat pure magenta #FF00FF, no shadow/floor/gradient. No extra limbs or scenery. No text or logos."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseModalities": [
+        "TEXT",
+        "IMAGE"
+      ],
+      "maxOutputTokens": 8192,
+      "imageConfig": {
+        "aspectRatio": "1:1",
+        "imageSize": "2K"
+      }
+    }
+  }
+}

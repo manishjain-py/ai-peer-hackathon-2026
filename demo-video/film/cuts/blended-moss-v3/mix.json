@@ -1,0 +1,95 @@
+{
+  "about": "V36 Moss v3 mix: original voice takes, n07 removed, meeting2.8s earlier, Slack voice90.6, original morning/end narration. Same music with retimed scene cues and natural ending. Rebuild with node demo-video/moss-refinement/audio/build_mix.mjs.",
+  "music": {
+    "file": "../moss-refinement/audio/bed-moss-v3.wav",
+    "gain_db": -7.0,
+    "in": 0,
+    "fade_in": 0.01,
+    "fade_out": 0.1,
+    "duck_ratio": 8,
+    "duck_attack": 60,
+    "duck_release": 900,
+    "note": "Exact original bed PCM outside65.9\u201399.9 and113.9\u2013119.6; same source composition and original earlier musical changes. EDL and splice report are in moss-refinement/audio."
+  },
+  "sfx": [
+    {
+      "id": "phone",
+      "file": "audio/sfx/phone.wav",
+      "at": 12.125,
+      "gain_db": -8,
+      "event_s": 12.125,
+      "sync_s": 0,
+      "note": "the phone lights up in the sleeper close-up (clip 3.5 s at rate 0.8 from 1.8)"
+    },
+    {
+      "id": "rise",
+      "file": "audio/sfx/rise.wav",
+      "at": 12.45,
+      "gain_db": -17,
+      "event_s": 12.45,
+      "sync_s": 0,
+      "note": "Original phone/Moss emergence shimmer."
+    },
+    {
+      "id": "push",
+      "file": "audio/sfx/push.wav",
+      "at": 14.3,
+      "gain_db": -11,
+      "event_s": 16.3,
+      "sync_s": 2.0,
+      "note": "Direct phone/Moss zoom arrives at home16.3; rising whoosh ends there."
+    },
+    {
+      "id": "change-1",
+      "file": "audio/sfx/change-1.wav",
+      "at": 66.45,
+      "gain_db": -12,
+      "event_s": 66.6,
+      "sync_s": 0.15,
+      "note": "soft swish on the cut to Zoom"
+    },
+    {
+      "id": "change-2",
+      "file": "audio/sfx/change-2.wav",
+      "at": 89.25,
+      "gain_db": -13,
+      "event_s": 89.4,
+      "sync_s": 0.15,
+      "note": "the same, brighter, on the cut to Slack"
+    },
+    {
+      "id": "return",
+      "file": "audio/sfx/rise.wav",
+      "at": 101.9,
+      "gain_db": -19,
+      "event_s": 104.2,
+      "sync_s": 2.3,
+      "note": "Original quiet morning return shimmer."
+    },
+    {
+      "id": "tap",
+      "file": "audio/sfx/tap.wav",
+      "at": 109.8,
+      "gain_db": -10,
+      "event_s": 109.8,
+      "sync_s": 0,
+      "note": "his click on his answer in the laptop brief"
+    },
+    {
+      "id": "end",
+      "file": "audio/sfx/end.wav",
+      "at": 115.7,
+      "gain_db": -18,
+      "event_s": 115.7,
+      "sync_s": 0,
+      "note": "Soft original D-major end-card chime115.7; natural musical cadence follows116.0."
+    }
+  ],
+  "sfx_note": "To move an effect, set at = event_s - sync_s (sync_s is the moment inside the file that belongs on the picture event; audio/sfx/sfx.json lists it per file). All effects are made by audio/sfx/make_sfx.py.",
+  "master": {
+    "target": -14,
+    "ceiling": -2.5,
+    "voiceRms": -20
+  },
+  "master_note": "ceiling is -2.5, not -1.5: the limiter in tools/mix.mjs holds SAMPLE peaks 0.3 dB under the ceiling, and the true peak of this mix then comes out about 1 dB higher (measured: ceiling -2.0 gave a true peak of -1.3 dBFS in the AAC file, -2.5 gave -1.8, -3.0 gave -2.5). -2.5 keeps the film file under -1.5 dBFS true peak."
+}
