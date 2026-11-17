@@ -1,9 +1,9 @@
 # Moss full blended film, version 1
 
 **Preserved V34 version.** The latest complete review cut is
-[Moss acting v2](../film/renders/blended-moss-v2.mp4), documented in the
-[acting source guide](../moss-acting/README.md) and
-[V35 delivery record](../docs/MOSS-ACTING-DELIVERY-2026-11-16.md). The implementation and
+[Moss v3](../film/renders/blended-moss-v3.mp4), documented in the
+[v3 source guide](../moss-refinement/README.md) and
+[V36 delivery record](../docs/MOSS-V3-DELIVERY-2026-11-17.md). The implementation and
 costs below describe v1; use [STATE](../docs/STATE.md) for current status and spending.
 
 Manish selected Round 2 option 25, Moss, for a complete film trial (DESIGN V34). The

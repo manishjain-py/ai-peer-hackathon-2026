@@ -1,7 +1,7 @@
 # Moss v3 controller acceptance
 
-17 November 2026, V36. **Focused source/scene preflight accepted; final encoded exports
-are still pending.** This note is updated at completion with the final media evidence.
+17 November 2026, V36. **Final encoded exports accepted and delivered.** PR 20 merged as `c612624`;
+checkpoint `blended-moss-v3` pushed. Telegram video 23106 / review 23107 confirmed.
 
 The controller reviewed the 24-frame first speaking pilot and 16-frame stamp action.
 The selected Moss identity, felt texture, simple mouth shapes and actual stamp press
@@ -20,7 +20,7 @@ type/reply stages, and the morning screen/camera/brief boundary. Issues caught a
   the screen stays attached to the laptop until it fills the picture.
 - A Chrome GPU compositing ghost showed an old Moss position at 60.4 seconds. Software
   compositing eliminated it; a four-frame proof shows exactly one actor at the stamp.
-  The final encoded source must be checked at the same point.
+  The encoded source and full film were checked at the same point.
 
 The soundtrack is rebuilt from original saved voice takes and music. The controller
 checked the new mix's 22 line start times against the compiled picture. The unwanted
@@ -40,5 +40,18 @@ Moss art and existing fictional speech. The absent source-Mac private-term list 
 claimed as a completed scan. Product trust rules remain unchanged.
 
 New spend: $1.222778 ($0.062778 Gemini estimate, $1.16 conservative fal ledger), project
-$51.387927 of $100. Final render, decoded-media checks, full visual walk, Telegram delivery,
-PR merge and checkpoint remain to finish this task.
+$51.387927 of $100. Final checks and delivery are complete; no work or provider request remains.
+
+## Final encoded acceptance
+
+Controller inspected all 84 master frames, 62 transition-boundary frames and 31 independently
+decoded 720p frames in `moss-refinement/evidence/`. Both files fully decode, contain exactly
+3,588 frames at 30 fps and last 119.600 seconds. Both measure -14.1 LUFS / -2.1 dBTP; all
+5,608 AAC packet hashes and timestamps match between the two exports. Predecessor master
+hashes match the before-work records. The clean source is 58 seconds / 1,740 frames.
+
+The confidence seal lands as sources appear and remains through “how sure I am”; it is
+not claimed as an exact phoneme-timed impact. Final full-frame and send-copy checks show
+legible reply text, visible typing, single-Moss stamping, the attached greeting/push-in,
+all speaking/listening turns and clean scene transitions. See `evidence/checks.json` and
+the delivery record for exact hashes, sizes and receipts.

@@ -2,8 +2,9 @@
 
 ## Current source routing
 
-- Latest full-film walkthrough: `moss-v2/`, used by
-  [Moss acting v2](../moss-acting/README.md); film and source are complete and delivered for review.
+- Latest full-film walkthrough: `moss-v3/`, used by
+  [Moss v3](../moss-refinement/README.md); film and source are complete and delivered for review.
+- Preserved acting v2 source: `moss-v2/` ([guide](../moss-acting/README.md)).
 - Preserved earlier walkthroughs: `moss/` for [Moss v1](../moss-film/README.md), and `tag/`
   for the approved Tag cut ([report](tag/REPORT.md)).
 - Current status and requested work: [demo-video STATE](../docs/STATE.md).

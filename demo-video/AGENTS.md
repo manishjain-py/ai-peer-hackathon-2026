@@ -7,11 +7,12 @@ The last approved full video (16 November 2026): `film/renders/blended-tag-v2.mp
 `blended-tag-v2` (V30, V31; Little Peer is not used). Earlier cuts and every checkpoint:
 `../START-HERE.md`, "Checkpoints".
 
-Latest complete cut (16 November UTC, V35): `film/renders/blended-moss-v2.mp4`, 119.600
-seconds, with purposeful reading/note-taking, listening, thought, reassurance and handoff.
-Delivered to Telegram for Manish's review; source/evidence saved, PR 19 merged and checkpoint
-`blended-moss-v2` pushed. See `docs/MOSS-ACTING-DELIVERY-2026-11-16.md`. Nothing runs.
-V1 and all earlier work remain preserved; Tag v2 remains approved until his feedback.
+Latest complete cut (17 November UTC, V36): `film/renders/blended-moss-v3.mp4`, 119.600
+seconds. Direct phone/home entrance, prominent confidence stamping, speaking mouth motion,
+readable active Slack, morning laptop greeting and revised ending music; the requested line
+is removed. PR 20 merged; checkpoint `blended-moss-v3` pushed. Delivered on Telegram for
+review (23106/23107). See `docs/MOSS-V3-DELIVERY-2026-11-17.md`. Nothing runs.
+Earlier Moss cuts and Tag v2 remain preserved; Tag v2 is the last explicitly approved movie.
 
 ## Start here
 

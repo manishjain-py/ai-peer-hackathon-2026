@@ -1,0 +1,37 @@
+{
+  "version": "blended-moss-v3",
+  "status": "delivered",
+  "video": {
+    "confirmed": true,
+    "message_id": 23106,
+    "chat_id": -5506416790,
+    "date_utc": "2026-11-17T03:21:32+00:00",
+    "caption": "Moss v3 \u2014 full 1:59.6 revision. Direct phone-to-setup entrance, prominent confidence stamp, speaking Zoom animation, dynamic readable Slack, and a big \u201cGood morning, Ram\u201d on the laptop. The unwanted line is removed. Earlier musical cues are preserved, with a new closing resolution. Ready for your review.",
+    "file": "film/renders/blended-moss-v3-720p.mp4",
+    "sha256": "7d9d44c6fc3bb861b97e6dcd71b7a2f4cc21fb8ab3ce1e40a6b06f75e077b293",
+    "file_size": 20126236,
+    "width": 1280,
+    "height": 720,
+    "telegram_duration": 120,
+    "supports_streaming_requested": true
+  },
+  "actual_movie_seconds": 119.6,
+  "frames": 3588,
+  "new_cost_usd": 1.222778,
+  "project_cost_usd": 51.387927,
+  "controller_acceptance": "passed",
+  "approved_as_final_by_user": false,
+  "review_message": {
+    "confirmed": true,
+    "message_id": 23107,
+    "chat_id": -5506416790,
+    "date_utc": "2026-11-17T03:21:33+00:00",
+    "text": "The updated full Moss film is above. The entrance is direct, confidence is stamped clearly, Moss talks in Zoom, Slack shows the request \u2192 thinking \u2192 typing \u2192 readable reply, and the morning starts with Moss on the laptop. The familiar music remains; the ending now uses its own final phrase and a natural fade. Earlier cuts are preserved."
+  },
+  "pull_request": "https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/20",
+  "merge_sha": "c612624c97ff4c2ca69f5723311e91698f2b5c00",
+  "checkpoint": "blended-moss-v3",
+  "source_saved": true,
+  "master_file": "film/renders/blended-moss-v3.mp4",
+  "master_sha256": "e1dd89b0d0fbc99d544fdc69ae16539d53acf00ba83c981f567388311ec50841"
+}

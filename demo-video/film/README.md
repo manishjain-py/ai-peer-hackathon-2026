@@ -3,17 +3,17 @@
 The two-minute AI Peer demo video ("He's asleep. I'm not.", `../docs/STORY.md`), built as one
 web page whose picture is a pure function of the film time, captured frame by frame.
 
-## Latest complete movie: Moss acting v2
+## Latest complete movie: Moss v3
 
-`renders/blended-moss-v2.mp4` is the latest delivered review cut: **119.600 seconds,
-3,588 frames, 1920×1080 at 30 fps**. Its smaller copy is
-`renders/blended-moss-v2-720p.mp4`. See the [delivery record](../docs/MOSS-ACTING-DELIVERY-2026-11-16.md)
-and [Moss acting source/rebuild guide](../moss-acting/README.md). That dedicated renderer builds
-the full source walkthrough and copies the original AAC audio exactly; it is the route for
-reproducing the current movie. Rebuilding saved assets needs no generation credentials.
+`renders/blended-moss-v3.mp4` is the latest delivered review cut: **119.600 seconds,
+3,588 frames, 1920×1080 at 30 fps**. The Telegram copy is
+`renders/blended-moss-v3-720p.mp4`. See the [delivery record](../docs/MOSS-V3-DELIVERY-2026-11-17.md)
+and [Moss v3 source/rebuild guide](../moss-refinement/README.md). The dedicated renderer uses
+its source walkthrough and the revised soundtrack rebuilt from the original voice/music
+sources. Saved-asset rebuilding needs no generation credentials. Both exports share identical AAC.
 
-Moss v1 and Tag v2 are preserved. Tag v2 remains the last explicitly approved full movie;
-Moss v2 awaits Manish's review. Use [STATE](../docs/STATE.md) for current work and next steps.
+Earlier Moss cuts and Tag v2 are preserved. Tag v2 remains the last explicitly approved full
+movie; v3 awaits Manish's review. Use [STATE](../docs/STATE.md) for current work and next steps.
 
 ## Base/Draft 3 renderer
 

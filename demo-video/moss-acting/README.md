@@ -1,5 +1,9 @@
 # Moss acting pass, version 2
 
+**Preserved V35 version.** Latest: [Moss v3](../film/renders/blended-moss-v3.mp4), with
+[rebuild guide](../moss-refinement/README.md) and [V36 delivery](../docs/MOSS-V3-DELIVERY-2026-11-17.md).
+The original timing/audio claims below describe v2.
+
 V35 makes Moss act on the context of each moment while preserving the full film's story,
 UI, camera keys, caption/narration timing and original music/voice. V1 and Tag v2 are retained.
 The exact performance decisions are in `ACTING-MAP.md` and deterministic schedules in
