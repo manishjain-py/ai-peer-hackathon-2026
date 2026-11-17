@@ -1,5 +1,7 @@
 # AI Peer demo video: state
 
+**V42 is in progress.** Manish requested a new Moss v7 based on the delivered v6. See the [acting, stream and morning feedback](FEEDBACK-MOSS-V6-2026-11-17.md). Work is on `codex/moss-v7` in the retained Moss checkout. The controller handles visual review, records and delivery. One worker owns the source and exports. The existing soundtrack and saved assets are the starting point. Starting spend $52.097127 of $100, weekly usage 3%.
+
 **Moss v6 (V41) is complete and delivered.** The [4K master](../film/renders/blended-moss-v6.mp4) and [1080p copy](../film/renders/blended-moss-v6-1080p.mp4) run 119.600 seconds. Telegram confirmed video 23168 and original document 23169. [PR 23](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/23) merged at `9105d79`. Checkpoint `blended-moss-v6` pins the delivery. Next is Manish’s creative review. V40 still designates v5 for implementing the prototype on the other Mac.
 
 See the [delivery record](MOSS-V6-DELIVERY-2026-11-17.md), [completion handoff](handoffs/HANDOFF-2026-11-17-moss-v6-complete.md) and [final review](../moss-clarity/FINAL-REVIEW.md). New spend was $0.4863, project total $52.097127 of $100. Earlier notes below are history.
