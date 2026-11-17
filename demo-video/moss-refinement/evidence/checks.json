@@ -1,0 +1,139 @@
+{
+  "predecessor_sha256": {
+    "blended-tag-v2.mp4": "7756283021b7237605337f079e435babb25143c2fb1d9023e6b70204a952b039",
+    "blended-moss-v1.mp4": "c6672bd1b42b09b5c66c4dbd55bdb2f37ef5dbac6e79594f061f3fc5cb4f2941",
+    "blended-moss-v2.mp4": "acf0d9aa68f86f085c24a698f095e5606cf86b23b29db1f83965d6029aaac2b4"
+  },
+  "predecessors_unchanged": true,
+  "retained_voice_lines": 22,
+  "retained_voice_metadata_exact": true,
+  "removed_line": "n07",
+  "new_timing": {
+    "zoom": 66.6,
+    "slack": 89.4,
+    "morning": 100,
+    "globe": 111,
+    "endcard": 115.7
+  },
+  "exports": [
+    {
+      "file": "film/renders/blended-moss-v3.mp4",
+      "sha256": "e1dd89b0d0fbc99d544fdc69ae16539d53acf00ba83c981f567388311ec50841",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "start_time": "0.000000",
+            "duration": "119.600000",
+            "nb_read_frames": "3588",
+            "side_data_list": [
+              {}
+            ]
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "start_time": "0.000000",
+            "duration": "119.600000",
+            "nb_read_frames": "5607"
+          }
+        ],
+        "format": {
+          "duration": "119.600000",
+          "size": "389574799"
+        }
+      },
+      "full_decode": "passed",
+      "loudness": {
+        "lufs": -14.1,
+        "true_peak_dbfs": -2.1
+      },
+      "aac_packets": {
+        "hash": "84564404d98d500480ea88de42d096e7239772b39d2d5ed806eee4cfa75178f0",
+        "count": 5608
+      }
+    },
+    {
+      "file": "film/renders/blended-moss-v3-720p.mp4",
+      "sha256": "7d9d44c6fc3bb861b97e6dcd71b7a2f4cc21fb8ab3ce1e40a6b06f75e077b293",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "30/1",
+            "start_time": "0.000000",
+            "duration": "119.600000",
+            "nb_read_frames": "3588",
+            "side_data_list": [
+              {}
+            ]
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "start_time": "0.000000",
+            "duration": "119.600000",
+            "nb_read_frames": "5607"
+          }
+        ],
+        "format": {
+          "duration": "119.600000",
+          "size": "20126236"
+        }
+      },
+      "full_decode": "passed",
+      "loudness": {
+        "lufs": -14.1,
+        "true_peak_dbfs": -2.1
+      },
+      "aac_packets": {
+        "hash": "84564404d98d500480ea88de42d096e7239772b39d2d5ed806eee4cfa75178f0",
+        "count": 5608
+      }
+    }
+  ],
+  "source_walkthrough": {
+    "file": "ui-concepts/renders/moss-clean-v3.mp4",
+    "sha256": "594dbe386b4a0eb5515be4884b16965db498df594a6d33ca7fde4feabc6ca13f",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "30/1",
+          "start_time": "0.000000",
+          "duration": "58.000000",
+          "nb_read_frames": "1740",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "58.000000",
+        "size": "13406225"
+      }
+    }
+  },
+  "new_cost_usd": 1.222778,
+  "project_cost_usd": 51.387927,
+  "privacy": "Only repository fictional source and generic Moss art; no unavailable private-term-list scan claimed.",
+  "audio": "New V36 mix; original PCM music regions verified in audio/bed-verification.json; 720p AAC exactly stream-copied from1080p."
+}

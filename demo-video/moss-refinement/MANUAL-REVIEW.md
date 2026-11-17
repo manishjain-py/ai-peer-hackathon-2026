@@ -40,7 +40,14 @@ The existing entrance whoosh ends16.3, the upbeat20–22 musical rise remains. W
 
 ## Final encoded review
 
-Full film and720p delivery copy are being encoded. `tools/verify.py` and
-`tools/encoded_proof.py` will record completion and produce exact decoded scene/boundary/
-720p frames. The controller owns final acceptance and Telegram delivery. No final approval
-from Manish is implied by this build or controller's technical review.
+Both complete exports passed `tools/verify.py`:119.600s,3588frames at30fps, correct1080p/
+720p dimensions, full decode, original predecessors unchanged. Both measure-14.1LUFS and
+-2.1dBTP; all5608 AAC packet hashes/timestamps match. The clean source is58s/1740frames.
+
+`film-encoded-*` records84 scene frames; `transitions-encoded-*` records62 boundary frames;
+`send-encoded-*` records31 independently decoded720p frames. Controller confirmed the84-
+frame full-master walk; final boundary/720p acceptance is recorded in shared acceptance docs.
+No final approval from Manish is implied by this build or controller's technical review.
+The confidence impact begins as sources appear and the finished HIGH impression remains
+through the confidence phrase, preserving reading time. No extra retime was made from the
+old overlong n06 word-alignment metadata; original actual narration audio is preserved.

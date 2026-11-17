@@ -49,7 +49,12 @@ Prompts/requests, provider results, selected source videos, alpha videos and led
 Alpha removes the generated stamp's tiny illegible mark below the feet; readable ink is
 composited from the actual High confidence value. No new voice generation.
 
-Intermediate source checkpoint:56b4842 pushed; focused visual proof accepted, clean58s
-walkthrough encoded, long film encoding underway.
-Final media acceptance and delivery are recorded by the controller after render/review.
+Both full exports are complete and validated:119.600s,3588frames,30fps. Full decodes pass;
+all5608 AAC packet payloads/timestamps match between1080p and720p. Encoded audio measures
+-14.1LUFS/-2.1dBTP. The original Tagv2 and Mossv1/v2 master hashes are unchanged. The clean
+walkthrough is58s/1740frames. `MANUAL-REVIEW.md` and `evidence/checks.json` hold evidence;
+controller shared docs record acceptance/delivery. Review by Manish remains pending.
+
+New generation cost$1.222778 ($1.16 conservative fal ledger +$0.062778 Gemini estimate),
+project total$51.387927 of$100. No provider call or render remains pending.
 Audio methodology/measurements are in `audio/README.md`; no direct listening claim.
