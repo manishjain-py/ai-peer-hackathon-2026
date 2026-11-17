@@ -1,20 +1,17 @@
 # AI Peer demo video: state
 
-Current task (17 November 2026, V39): **Moss v5 in progress**. Active controller
-`moss_v5_controller`; sole worker `moss_v5_builder` on `codex/moss-v5` in the retained
-`moss-acting` worktree. Original root relays only. New narration is selected and locally
-transcribed: “Thousands of company updates. I find what matters to Ram's role, goals
-and interests, and bring it into his morning brief.” It fits 90.4–97.9 seconds. The
-original ocean is being adapted into 90–100; setup and Slack are selectively trimmed.
-Music keeps the same Lyria take, moves thin bars to 58 and 82, and preserves the entire
-morning/ending from 100. The new talk-and-writing take passes the 20-frame source walk. Corrected source proof
-passes: explicit role/goal/interests matches, caption clearance, readable Slack and
-retained walkthrough proof. Source/audio committed as `c7e273b`; full exports are rendering.
-Encoded-media acceptance and delivery remain pending. Read
-`FEEDBACK-MOSS-V4-2026-11-17.md` and
-`handoffs/HANDOFF-2026-11-17-moss-v5-controller-start.md`. Voice cost $0.0123 and simultaneous speaking/writing motion $0.20; project
-$51.610827. No paid call is pending. Weekly usage 23%. V4 remains the latest
-completed review; Tag v2 remains the last explicit approval.
+Current task (17 November 2026, V39): **Moss v5 accepted and delivered; Git closeout in
+progress**. Controller `moss_v5_controller` accepted 102 encoded master scene frames,
+60 boundaries and 39 independently decoded 720p frames. Both complete exports pass:
+119.600 seconds / 3,588 frames, -14.0 LUFS / -1.7 dBTP, identical 5,608 AAC packets.
+The ocean at 90–100 explicitly matches three useful updates to Ram's role, goal and
+interests; notebook writing and speaking coexist during the morning-brief promise.
+Telegram video **23119** and review **23120** are confirmed. Receipt:
+`delivery/moss-v5-film-2026-11-17.json`; acceptance:
+`MOSS-V5-ACCEPTANCE-2026-11-17.md`. Sole worker `moss_v5_builder` is pushing exports on
+`codex/moss-v5`, PR 22; merge/checkpoint and current-pointer updates remain. No render
+or paid call runs. Cost $0.2123 new, $51.610827 / $100 total; weekly usage 23%.
+Tag v2 remains the last explicitly approved full movie. Do not resend V5.
 
 Previous completion (17 November 2026, V37/V38): **Moss v4 complete and delivered**.
 The setup home and a new same-Matilda voiceover explain AI Peer as a proactive AI teammate,
@@ -51,6 +48,12 @@ the current takeover instruction. Use the latest handoff at the top of this file
 `START-HERE.md`. Do not act on these old session IDs without a fresh check.
 
 ## Where we are (checked 2026-11-17)
+
+**17 November: V39 full movie accepted and delivered.** Telegram 23119/23120 confirmed;
+master and send copy fully decode at 119.600 seconds / 3,588 frames. The controller's
+102 scene frames, 60 boundaries and 39 independent 720p frames pass. New ocean and
+simultaneous writing/speaking are present; V4 introduction and laptop-only morning stay.
+Earlier movies remain unchanged. PR 22 media upload/merge and final docs are next.
 
 **17 November: V39 source proof accepted.** The controller inspected 20 motion source
 frames and 76 in-context source points across the timing and correction passes. The
@@ -813,6 +816,9 @@ minutes, its wait `stall-wp2-3` stopped first. Its worktree `~/repos/ai-peer-vid
 `video-wp2-3-quicker-rise`, merged) is kept: two unused music takes sit there outside git.
 
 Still running:
+
+**V39 delivery complete:** `moss_v5_builder` finishes the Git LFS/source upload and PR22.
+Controller finishes merge/checkpoint records. No renderer, provider call or server runs.
 
 **V39 in progress:** sole worker `moss_v5_builder` owns the full render in the retained
 `moss-acting` checkout (`codex/moss-v5`). Controller `moss_v5_controller` owns final

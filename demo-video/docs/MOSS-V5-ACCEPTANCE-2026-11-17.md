@@ -1,6 +1,7 @@
 # Moss v5 controller acceptance
 
-17 November 2026. V39. In progress; this is not a claim that the final movie is accepted.
+17 November 2026. V39. The complete movie is accepted by the controller for delivery.
+This does not infer Manish's final creative approval.
 Controller `moss_v5_controller`; sole worker `moss_v5_builder`.
 
 ## Source and audio proof
@@ -50,9 +51,26 @@ first brief, ask/answer and the large round confidence stamp. Slack has a visibl
 read/think/type sequence and a final close reply held around 86–90, with its sources and
 Ram's decision boundary readable. The source walk is accepted for full rendering.
 
-## Pending
+## Complete encoded walk and media checks accepted
 
-Complete encoded media walk, independent 720p review, full decode,
-duration/dimensions/frame count, loudness/AAC comparison and predecessor preservation.
-Telegram delivery, implementation PR/merge/checkpoint and final documentation follow
-acceptance. Source evidence and audio reports live in `../moss-ocean/`.
+Controller inspected all 102 master scene frames in `film-encoded-1` through `-9`, all
+60 adjacent-boundary frames in `transitions-encoded-1` through `-5`, and independently
+decoded/viewed 39 final 720p frames in `controller-720p-1` through `-4`. The encoded
+performances match the accepted source walk; there is no stale duplicate actor, missing
+prop, caption collision or regression of the laptop-only morning. The company ocean,
+explicit relevance matches, result hold and scene joins remain clear in the send copy.
+
+Both final exports completely decode at 119.600 seconds / 3,588 frames / 30fps, with
+1920×1080 and 1280×720 dimensions. Both measure -14.0 LUFS / -1.7 dBTP and have identical
+5,608 AAC packet payloads/timestamps. The five earlier master hashes, including V4,
+remain unchanged. `../moss-ocean/evidence/checks.json` records sizes, hashes and results.
+This is a full new render; exact decoded-picture identity with V4 is not claimed.
+
+New spending is $0.2123: $0.0123 for narration and $0.20 conservative motion cost.
+Project total is $51.610827 / $100. All generation/render/check processes are finished.
+Only fictional narration and generic Moss art were submitted to the provider.
+
+Telegram video 23119 and review 23120 are confirmed in
+`delivery/moss-v5-film-2026-11-17.json`, with correct 1280×720 streaming metadata.
+The saved receipt is the authority for delivery timestamps. PR 22 and final checkpoint
+closeout are tracked in STATE and the delivery note. No resend is needed.
