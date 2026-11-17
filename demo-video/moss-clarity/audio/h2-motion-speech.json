@@ -1,0 +1,77 @@
+{
+ "model": "faster-whisper small.en",
+ "mode": "file",
+ "items": [
+  {
+   "file": "demo-video/moss-clarity/assets/hook-2-v6-source.mp4",
+   "heard": "ROM is out of office, but the update I needed is already here.",
+   "words": [
+    {
+     "w": "ROM",
+     "s": 0.76,
+     "e": 1.12
+    },
+    {
+     "w": "is",
+     "s": 1.12,
+     "e": 1.28
+    },
+    {
+     "w": "out",
+     "s": 1.28,
+     "e": 1.4
+    },
+    {
+     "w": "of",
+     "s": 1.4,
+     "e": 1.5
+    },
+    {
+     "w": "office,",
+     "s": 1.5,
+     "e": 1.76
+    },
+    {
+     "w": "but",
+     "s": 1.92,
+     "e": 2.02
+    },
+    {
+     "w": "the",
+     "s": 2.02,
+     "e": 2.14
+    },
+    {
+     "w": "update",
+     "s": 2.14,
+     "e": 2.4
+    },
+    {
+     "w": "I",
+     "s": 2.4,
+     "e": 2.56
+    },
+    {
+     "w": "needed",
+     "s": 2.56,
+     "e": 2.76
+    },
+    {
+     "w": "is",
+     "s": 2.76,
+     "e": 2.94
+    },
+    {
+     "w": "already",
+     "s": 2.94,
+     "e": 3.14
+    },
+    {
+     "w": "here.",
+     "s": 3.14,
+     "e": 3.5
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+  "id": "h2b",
+  "part": "hook",
+  "speaker": "colleague-2",
+  "voice": "Chris",
+  "voice_id": "iP95p4xoKVk53GoZ742B",
+  "model": "eleven_multilingual_v2",
+  "text": "Ram is out of office, but the update I needed is already here.",
+  "spoken": "Rahm is out of office, but the update I needed is already here.",
+  "file": "../moss-clarity/audio/h2-v6.wav",
+  "seconds": 2.73,
+  "trimmed_front": 0.03,
+  "raw_seconds": 3.004,
+  "peak_dbfs": -4.27,
+  "rms_dbfs": -24.28,
+  "words": [
+    {
+      "w": "Ram",
+      "s": 0.028,
+      "e": 0.237
+    },
+    {
+      "w": "is",
+      "s": 0.295,
+      "e": 0.353
+    },
+    {
+      "w": "out",
+      "s": 0.388,
+      "e": 0.481
+    },
+    {
+      "w": "of",
+      "s": 0.516,
+      "e": 0.562
+    },
+    {
+      "w": "office,",
+      "s": 0.62,
+      "e": 0.945
+    },
+    {
+      "w": "but",
+      "s": 0.968,
+      "e": 1.096
+    },
+    {
+      "w": "the",
+      "s": 1.131,
+      "e": 1.201
+    },
+    {
+      "w": "update",
+      "s": 1.247,
+      "e": 1.561
+    },
+    {
+      "w": "I",
+      "s": 1.595,
+      "e": 1.619
+    },
+    {
+      "w": "needed",
+      "s": 1.677,
+      "e": 1.92
+    },
+    {
+      "w": "is",
+      "s": 1.955,
+      "e": 2.013
+    },
+    {
+      "w": "already",
+      "s": 2.06,
+      "e": 2.304
+    },
+    {
+      "w": "here.",
+      "s": 2.362,
+      "e": 2.664
+    }
+  ],
+  "request_id": "01a1ea94-8d4a-7ab3-a628-982115edf886"
+}

@@ -1,0 +1,17 @@
+{
+  "endpoint": "fal-ai/audio-understanding",
+  "inputs": {
+    "audio_url": "file:demo-video/moss-clarity/audio/ending-v6b-review.m4a",
+    "prompt": "This attached clip is exactly9.6 seconds. Evaluate the music and sound after the last spoken words, especially the final3.6seconds: is there a distinct positive rhythmic/chime arrival then a smooth decay? Assess how effectively it ends a short technology film on a pleasing high note, any abrupt edit fault, or speech masked by music. Only describe what is audible; do not invent times.",
+    "detailed_analysis": true
+  },
+  "expect": {
+    "units": 2,
+    "unit": "5seconds audio",
+    "unit_price": 0.01,
+    "cost_usd": 0.02,
+    "basis": "Official fal audio-understanding verified endpoint; live price checked before call"
+  },
+  "output": "demo-video/moss-clarity/audio/ending-v6b-analysis",
+  "note": "V41 final audio experiment: quicker music recovery after final words, original D-major chime aligned with final downbeat; generic soundtrack only"
+}

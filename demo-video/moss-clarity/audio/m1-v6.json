@@ -1,0 +1,44 @@
+{
+  "id": "m1",
+  "part": "night",
+  "speaker": "peer",
+  "voice": "Matilda",
+  "text": "Hi everyone. I'm Ram's AI Peer.",
+  "file": "../moss-clarity/audio/m1-v6.wav",
+  "seconds": 2.45,
+  "words_per_second": 2.51,
+  "peak_dbfs": -3.26,
+  "rms_dbfs": -20.81,
+  "words": [
+    {
+      "w": "Hi",
+      "s": 0.0,
+      "e": 0.212
+    },
+    {
+      "w": "everyone.",
+      "s": 0.27,
+      "e": 0.746
+    },
+    {
+      "w": "I'm",
+      "s": 0.955,
+      "e": 1.141
+    },
+    {
+      "w": "Ram's",
+      "s": 1.211,
+      "e": 1.501
+    },
+    {
+      "w": "AI",
+      "s": 1.559,
+      "e": 1.78
+    },
+    {
+      "w": "Peer.",
+      "s": 1.872,
+      "e": 2.29
+    }
+  ]
+}

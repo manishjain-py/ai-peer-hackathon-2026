@@ -1,0 +1,17 @@
+{
+  "endpoint": "fal-ai/audio-understanding",
+  "inputs": {
+    "audio_url": "file:demo-video/moss-clarity/audio/ending-v5-review.m4a",
+    "prompt": "Evaluate this closing excerpt for a premium optimistic technology short film. Describe rhythm and instruments, whether cadence is uplifting and resolved or weak/abrupt. Identify precise times of last strong rhythmic phrase, final downbeat/chord and decay. Are there audible musical edit faults, clicks, restarts or rushed speech? Be candid and use seconds relative to this excerpt. Do not assume it is good.",
+    "detailed_analysis": true
+  },
+  "expect": {
+    "units": 3,
+    "unit": "5seconds audio",
+    "unit_price": 0.01,
+    "cost_usd": 0.03,
+    "basis": "Official fal audio-understanding verified endpoint; live price checked before call"
+  },
+  "output": "demo-video/moss-clarity/audio/ending-v5-analysis",
+  "note": "V41 music experiment evaluation; only generic fictional soundtrack, no private inputs"
+}

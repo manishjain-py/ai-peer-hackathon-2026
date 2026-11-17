@@ -1,0 +1,28 @@
+{
+  "seconds": 119.6,
+  "changed_spans": [
+    [
+      57.9,
+      99.9
+    ],
+    [
+      109.9,
+      119.6
+    ]
+  ],
+  "preserved_spans": [
+    {
+      "from": 0,
+      "to": 57.9,
+      "decoded_samples_identical": true
+    },
+    {
+      "from": 99.9,
+      "to": 109.9,
+      "decoded_samples_identical": true
+    }
+  ],
+  "final_cadence_s": 116,
+  "natural_tail_s": 3.55,
+  "source": "same Lyria b2"
+}

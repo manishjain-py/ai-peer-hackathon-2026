@@ -1,0 +1,17 @@
+{
+  "endpoint": "fal-ai/audio-understanding",
+  "inputs": {
+    "audio_url": "file:demo-video/moss-clarity/audio/ending-v6-review.m4a",
+    "prompt": "This attached excerpt is exactly9.6 seconds long. Listen only to this file. Does the music build positively and resolve cleanly after the final spoken words? Is its final sound smoothly decayed to silence rather than abruptly cut? Are there any clicks, repeated fragments, restarts, or speech covered by music? Give a concise candid evaluation; do not invent times outside0\u20139.6 seconds.",
+    "detailed_analysis": true
+  },
+  "expect": {
+    "units": 2,
+    "unit": "5seconds audio",
+    "unit_price": 0.01,
+    "cost_usd": 0.02,
+    "basis": "Official fal audio-understanding verified endpoint; live price checked before call"
+  },
+  "output": "demo-video/moss-clarity/audio/ending-v6-analysis",
+  "note": "V41 music experiment evaluation; only generic fictional soundtrack, no private inputs"
+}
