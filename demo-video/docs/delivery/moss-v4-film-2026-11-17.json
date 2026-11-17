@@ -1,0 +1,31 @@
+{
+  "version": "blended-moss-v4",
+  "status": "delivered",
+  "video": {
+    "confirmed": true,
+    "message_id": 23108,
+    "chat_id": -5506416790,
+    "date_utc": "2026-11-17T04:13:34+00:00",
+    "caption": "Moss v4 \u2014 full 1:59.6 revision. The setup home now explains \u201cYour proactive AI teammate, 24/7\u201d with a new Matilda voiceover and two clear benefits. In the morning, Moss appears only on the laptop; the phone and external little Moss are removed from view. The rest of the film and its music are preserved. Ready for your review.",
+    "file": "film/renders/blended-moss-v4-720p.mp4",
+    "sha256": "819b58b640e9f1bd6ee180ec8d6705bf5f2604d8fdebffc37519d76563206b46",
+    "file_size": 20090083,
+    "width": 1280,
+    "height": 720,
+    "telegram_duration": 120,
+    "supports_streaming_requested": true
+  },
+  "actual_movie_seconds": 119.6,
+  "frames": 3588,
+  "new_cost_usd": 0.0106,
+  "project_cost_usd": 51.398527,
+  "controller_acceptance": "passed",
+  "approved_as_final_by_user": false,
+  "review_message": {
+    "confirmed": true,
+    "message_id": 23109,
+    "chat_id": -5506416790,
+    "date_utc": "2026-11-17T04:13:35+00:00",
+    "text": "The updated full film is above. New introduction: \u2018I\u2019m Ram\u2019s AI Peer, his proactive AI teammate, keeping him informed and covering for him around the clock.\u2019 The screen highlights keeping you informed and covering when you\u2019re away. The morning now focuses entirely on Moss greeting Ram from the laptop. Earlier cuts are preserved."
+  }
+}

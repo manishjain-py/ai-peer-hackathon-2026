@@ -9,6 +9,11 @@ is generated through fal.ai for $0.0106 because the direct ElevenLabs credential
 no new artwork or motion generation. Voice/audio source and checks are complete. V3 remains the latest completed
 review cut, Tag v2 the last explicitly approved full movie.
 
+**Closeout handoff:** implementation and final review are complete; Telegram23108/23109
+confirmed and PR21 merged as`033fb44`. Controller ownership moves from`/root` to
+`moss_v4_closeout` to finish shared docs and synchronization. Read
+`handoffs/HANDOFF-2026-11-17-moss-v4-controller-closeout.md`. Do not rerender or resend.
+
 Previous completion (17 November 2026): **Moss v3 complete and delivered (V36)**.
 The full movie is 119.600s / 3,588 frames, with every requested scene revision and the
 new ending made from the original music. PR 20 merged as `c612624`; checkpoint
