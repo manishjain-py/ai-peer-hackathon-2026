@@ -1,6 +1,14 @@
 # AI Peer demo video: state
 
-Current completion (17 November 2026, V37/V38): **Moss v4 complete and delivered**.
+Current task (17 November2026, V39): **Moss v5 in progress**. Restore a compact information
+ocean showing relevance to Ram's role/goals/interests, reclaim setup/Slack time, and make
+Zoom notebook writing begin during the spoken morning-brief promise. Music rhythm/impact
+must be preserved. Newcontroller `moss_v5_controller`; no implementation worker yet.
+Read `FEEDBACK-MOSS-V4-2026-11-17.md` and
+`handoffs/HANDOFF-2026-11-17-moss-v5-controller-start.md`. Current cost$51.398527/$100,
+weeklyusage22%; V4 is latestcompletedreview, Tagv2 last explicitapproval. Root relays only.
+
+Previous completion (17 November 2026, V37/V38): **Moss v4 complete and delivered**.
 The setup home and a new same-Matilda voiceover explain AI Peer as a proactive AI teammate,
 available 24/7; morning Moss appears only on the laptop, with no phone or external little
 Moss in view. Full movie: 119.600 seconds / 3,588 frames. PR 21 merged as `033fb44`;
