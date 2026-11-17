@@ -11,6 +11,8 @@ recordings, which stay out of git by rule.
 
 **Moss v7 is the approved final demo. Stable tag `stable-moss-v7` pins its picture, soundtrack and approval record.** The 4K master and 1080p copy run 1:59.6. Moss slides into Ask and catches three ordinary updates from the moving stream. Their titles appear in Ram’s brief. Telegram messages 23172 and 23173 hold the video and original download. See the [delivery record](demo-video/docs/MOSS-V7-DELIVERY-2026-11-17.md) and [completion handoff](demo-video/docs/handoffs/HANDOFF-2026-11-17-moss-v7-complete.md). Checkpoint `blended-moss-v7` pins the release.
 
+Six music auditions on the same picture have passed independent review and were delivered privately for selection. See the [scoring notes](demo-video/music-auditions-v7/SCORING-NOTES.md). Use the approved checkpoint until Manish chooses another soundtrack.
+
 ## Updating the prototype on another Mac (V40, 17 November)
 
 Manish has designated **Moss v5 as the implementation reference** for the actual prototype

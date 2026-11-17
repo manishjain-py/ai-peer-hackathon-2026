@@ -5,3 +5,5 @@ Manish approved the delivered film on 17 November 2026 UTC: “let's keep the vi
 [4K master](../film/renders/blended-moss-v7.mp4) · [Original 1080p edition](../film/renders/blended-moss-v7-1080p.mp4) · [File sizes, hashes and Telegram receipts](MOSS-V7-DELIVERY-2026-11-17.md)
 
 Music auditions are separate listening copies. Only a later selection from Manish changes the approved soundtrack. The prototype handoff has its own v5 reference.
+
+The six music auditions were independently reviewed and delivered to Manish’s Telegram group. His soundtrack selection is pending.

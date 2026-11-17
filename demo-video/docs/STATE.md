@@ -1,6 +1,6 @@
 # AI Peer demo video: state
 
-**Approved final film (V43): Moss v7 with its existing soundtrack.** Manish approved the delivered film for now and requested a stable checkpoint. Use `stable-moss-v7` and the [approval record](MOSS-V7-APPROVAL.md). Next is a separate music audition on the identical picture, with per-variant independent review before Telegram delivery.
+**Approved final film (V43): Moss v7 with its existing soundtrack.** Manish approved the delivered film for now and requested a stable checkpoint. Use `stable-moss-v7` and the [approval record](MOSS-V7-APPROVAL.md). Six separately named full-length listening copies were independently reviewed and delivered in the internal Telegram group. Manish’s music selection is pending. The copy at the stable tag is still his approved final. The comparison guide, media and receipts are in the private audition archive.
 
 
 **Moss v7 (V42) is complete and delivered.** The 4K master and 1080p edition run 119.600 seconds. Telegram confirmed the playable video (23172) and original download (23173). See the [delivery record](MOSS-V7-DELIVERY-2026-11-17.md), [completion handoff](handoffs/HANDOFF-2026-11-17-moss-v7-complete.md) and [review](../moss-choreography/CONTROLLER-REVIEW.md). Release tag `blended-moss-v7`. V7 used saved assets and added $0 to the $52.097127 project total. Earlier notes below are history.
@@ -980,7 +980,8 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 | 2026-11-17 | fal.ai / ElevenLabs (Moss v4) | Same-Matilda introduction, 106 fictional characters; `demo-video/moss-introduction/ledger/fal.csv`; direct credential attempt stopped before HTTP | $0.0106; no pending generation |
 | 2026-11-17 | fal.ai (Moss v5) | Same-Matilda ocean narration plus generic simultaneous speaking/notebook motion; `demo-video/moss-ocean/ledger/` | $0.2123 ($0.0123 voice + $0.20 conservative motion); no pending generation |
 | 2026-11-17 | fal.ai and audio review (Moss v6) | Clean colleague voice $0.0063, matching motion $0.36, four music reviews $0.12 | $0.4863 |
-| | **Total of the $100 cap** | | **$52.097127**. $50 notice already sent (Telegram 23097); next notice $80. |
+| 2026-11-17 | Moss v7 soundtrack experiment | Six original music generation calls ($0.60) plus seven recorded audio assessments ($1.68, conservative); evidence and per-call records in the private audition archive | $2.28 |
+| | **Total of the $100 cap** | | **$54.377127**. $50 notice already sent (Telegram 23097); next notice $80. |
 
 ## Needs Manish
 
@@ -1173,7 +1174,7 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 
 ## Next
 
-Prepare the music auditions. The approved final is pinned at `stable-moss-v7`.
+Await Manish’s selection from the six delivered music auditions. Use `stable-moss-v7` as the approved final.
 
 **V40 media repair:** transfer the ready Downloads ZIP/checksum to the company Mac and
 merge-extract it into the existing demo reference root, preserving other files. Verify
