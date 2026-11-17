@@ -11,3 +11,5 @@ The wake uses 1.7 seconds of the original bedroom shot, from 0.25 to 1.95 second
 The final decision move was also measured in screen coordinates because the original reversal came from the combined camera and actor motion. On a 960-pixel-wide image, v6 moved 281 pixels back across the frame after approaching the decision. In v7 the center of Moss’s identity label advances from x=83 to x=573 and stays at the card. All 60 samples at 15 fps from 105.7 through 109.633 seconds had a single visible label, with zero measured backward movement. [Decoded position measurements](evidence/morning-screen-travel.json)
 
 The 4K master carries the v6 audio packet for packet, including timestamps. The export record covers runtime, sound, retained picture, and both movie files. [Media verification](evidence/checks.json)
+
+In the 1080p delivery file, the three catches also passed a separate [decoded review](evidence/stream-1080-controller.jpg). The identity label followed the same one-way decision path in the delivery file as in the master. Both editions passed full decoding and use the v6 soundtrack.

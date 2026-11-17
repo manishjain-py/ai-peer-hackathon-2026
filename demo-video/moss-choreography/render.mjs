@@ -70,7 +70,7 @@ async function assemble(){
  await execAsync('ffmpeg',['-v','error','-y','-i',MASTER,'-an','-c:v','copy','-avoid_negative_ts','disabled','-f','segment','-segment_times','23.133333,59.3,87.333333,111','-reset_timestamps','1','-segment_format_options','movflags=+faststart:avoid_negative_ts=disabled',pattern]);
  const base=i=>pattern.replace('%01d',String(i));
  const pieces=[[base(0),694],[part(ranges[0]),566],[part(ranges[1]),519],[base(2),841],[part(ranges[2]),380],[part(ranges[3]),330],[base(4),258]];
- for(const [file,n] of pieces){const frames=Number(execFileSync('ffprobe',['-v','error','-select_streams','v:0','-show_entries','stream=nb_frames','-of','csv=p=0',file]));if(frames!==n)throw new Error(file+' has '+frames+' frames; expected '+n);}
+ for(const [file,n] of pieces){const frames=Number(execFileSync('ffprobe',['-v','error','-select_streams','v:0','-show_entries','stream=nb_frames','-of','default=nw=1:nk=1',file]));if(frames!==n)throw new Error(file+' has '+frames+' frames; expected '+n);}
  const list=path.join(CACHE,'assembly.txt');fs.writeFileSync(list,pieces.map(([f,n])=>`file '${f}'\nduration ${n/FPS}\n`).join(''));
  const raw=path.join(CACHE,'v7-picture.mp4');await execAsync('ffmpeg',['-v','error','-y','-f','concat','-safe','0','-i',list,'-c:v','copy',raw]);await finalExports(raw);
 }
