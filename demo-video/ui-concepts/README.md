@@ -2,8 +2,10 @@
 
 ## Current source routing
 
-- Latest full-film walkthrough: `moss-v3/`, used by
-  [Moss v3](../moss-refinement/README.md); film and source are complete and delivered for review.
+- Latest movie: [Moss v4](../moss-introduction/README.md), complete and delivered for review.
+  Its new setup home is in `../moss-introduction/layer/`; the walkthrough after 24.6 seconds
+  uses the retained `moss-v3/` source. There is no separate `moss-v4/` UI directory.
+- Preserved v3 walkthrough and movie: `moss-v3/` ([guide](../moss-refinement/README.md)).
 - Preserved acting v2 source: `moss-v2/` ([guide](../moss-acting/README.md)).
 - Preserved earlier walkthroughs: `moss/` for [Moss v1](../moss-film/README.md), and `tag/`
   for the approved Tag cut ([report](tag/REPORT.md)).

@@ -1,5 +1,10 @@
 # Moss blended refinement v3
 
+**Preserved V36 version.** Latest: [Moss v4](../film/renders/blended-moss-v4.mp4), with
+[rebuild guide](../moss-introduction/README.md) and
+[V37/V38 delivery](../docs/MOSS-V4-DELIVERY-2026-11-17.md). The implementation and audio
+claims below describe v3; its walkthrough and music are also retained inputs to v4.
+
 V36 addresses Manish's 17 November feedback. This is a new preserved cut built beside
 Moss v2, v1 and the approved Tag v2. Runtime remains 119.600 seconds, 3588 frames at30fps.
 

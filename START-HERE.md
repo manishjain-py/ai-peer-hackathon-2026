@@ -9,14 +9,15 @@ recordings, which stay out of git by rule.
 
 ## Current starting point (17 November 2026)
 
-The latest delivered review movie is **Moss v3**, 119.600 seconds, checkpoint
-`blended-moss-v3` (PR 20, `c612624`). It implements Manish's V36 feedback: direct phone
-entrance, confidence stamping, speaking mouth motion, dynamic/readable Slack, a morning
-screen greeting, one removed narration line and a resolved musical ending. Source, audio
-recipes, selected assets, manual evidence and Telegram receipts are saved. Start with
-`demo-video/docs/STATE.md` and `HANDOFF-2026-11-17-moss-v3-controller-complete.md` in its
-`handoffs/` directory. Nothing runs. Manish's review is next; Tag v2 remains the last
-explicitly approved full movie. Project spend is $51.387927 of $100; the $50 notice is sent.
+The latest delivered review movie is **Moss v4**, 119.600 seconds, checkpoint
+`blended-moss-v4` (PR 21, `033fb44`). It implements Manish's V37/V38 feedback: the setup
+home and a new same-Matilda voiceover explain AI Peer as a proactive AI teammate, available
+24/7; morning Moss appears only on the laptop, with the phone and external little Moss
+out of view. Source, selected narration, audio recipes, manual evidence and Telegram
+receipts are saved. Start with `demo-video/docs/STATE.md` and
+`HANDOFF-2026-11-17-moss-v4-controller-complete.md` in its `handoffs/` directory. Nothing
+runs. Manish's review is next; Tag v2 remains the last explicitly approved full movie.
+Project spend is $51.398527 of $100; the $50 notice is sent.
 
 The product build's continuation is on the company Mac; this repository does not establish
 its later state. Dated briefs/handoffs and older tracker entries are history. The setup and
@@ -30,7 +31,7 @@ tracker/handoff for the current session rather than starting an old controller a
 | Project rules for every agent | `AGENTS.md` (Claude Code loads it through `CLAUDE.md`) |
 | The live work (November 2026): the 2-minute demo video | `demo-video/AGENTS.md`, then `demo-video/docs/STATE.md` (the tracker) |
 | The last approved full demo video (16 November 2026) | `demo-video/film/renders/blended-tag-v2.mp4`: the Tag version (V30, V31; Little Peer is not used) |
-| Latest complete movie for review (17 November 2026 UTC) | `demo-video/film/renders/blended-moss-v3.mp4`: the full 119.600-second V36 revision. Telegram copy `blended-moss-v3-720p.mp4`; delivery `demo-video/docs/MOSS-V3-DELIVERY-2026-11-17.md`; rebuild `demo-video/moss-refinement/README.md`. Earlier cuts preserved; Tag v2 remains the last explicitly approved movie. |
+| Latest complete movie for review (17 November 2026 UTC) | `demo-video/film/renders/blended-moss-v4.mp4`: the full 119.600-second V37/V38 revision. Telegram copy `blended-moss-v4-720p.mp4`; delivery `demo-video/docs/MOSS-V4-DELIVERY-2026-11-17.md`; rebuild `demo-video/moss-introduction/README.md`. Earlier cuts preserved; Tag v2 remains the last explicitly approved movie. |
 | Preserved mascot exploration (16 November 2026) | `demo-video/mascot-exploration-v2/index.html`: 25 generated-art directions, individual in-demo previews and a 75-second quick-look, all delivered to Telegram (V33); `demo-video/docs/GENERATED-MASCOTS-DELIVERY-2026-11-16.md`. The first twelve code-native options remain in `demo-video/mascot-options/`. |
 | The demo video's decisions and Manish's words | `demo-video/docs/DESIGN.md` section 0 |
 | Briefs and hand-offs between sessions, dated, never edited | `demo-video/docs/handoffs/` |
@@ -57,6 +58,7 @@ the root `AGENTS.md`: one worker at a time (V15, C13), the 85% and 93% usage mar
 | `blended-moss-v1` | Complete 119.600-second Moss film (PR 18, `2996671`): full source walkthrough and every mascot appearance/mark replaced, original audio/timing preserved; delivered for review on 16 November (V34) |
 | `blended-moss-v2` | Complete 119.600-second Moss acting revision (PR 19, `8846d1b`): exact-time purposeful activity, notebook/pen source reading, meeting deferral and post-click acknowledgment; original story/UI/timing/audio preserved, delivered 16 November UTC (V35) |
 | `blended-moss-v3` | V36 full 119.600-second revision (PR 20, `c612624`): direct phone/home entrance, round confidence stamp, speaking Moss, active/readable Slack, greeting on the morning laptop, removed line and resolved ending; delivered 17 November for review. |
+| `blended-moss-v4` | V37/V38 full 119.600-second revision (PR 21, `033fb44`): clear proactive-teammate/24/7 setup home with a new Matilda introduction, and morning Moss only on the laptop with no phone in view; delivered 17 November for review. |
 
 - Go back to one: `git worktree add ../ai-peer-at-draft-03 draft-03` (a separate folder;
   `main` stays as it is).
@@ -100,9 +102,11 @@ the root `AGENTS.md`: one worker at a time (V15, C13), the 85% and 93% usage mar
    | OpenAI API keys | Learn Like Magic's own set-ups | nothing in this video workflow | not used or authorized by V33; do not substitute them automatically |
 
 6. **Private files** (never in git, rule C8), in `~/.ai-peer/demo-video-private/`:
-   - Current review/rebuild needs no private file: Moss v3 uses the saved generic art and
-     `demo-video/ui-concepts/moss-v3/` source; its renderer and audio rebuild are documented in
-     `demo-video/moss-refinement/README.md`. Earlier Moss and Tag sources are retained. The tag video
+   - Current review/rebuild needs no private file: Moss v4 uses saved generic art, the new
+     setup-home/morning layer in `demo-video/moss-introduction/`, and the retained
+     `demo-video/ui-concepts/moss-v3/` walkthrough after 24.6 seconds. Its renderer and audio
+     rebuild are documented in `demo-video/moss-introduction/README.md`; saved-asset
+     rendering needs no generation credential. Earlier Moss and Tag sources are retained. The tag video
      Manish made (`bases/tag-walkthrough-2026-11-15.mp4`)
      stays on the 48 GB Mac as the reference, out of git and sent nowhere.
    - The company walkthrough recording (`ui-wow/`) and the full renders with real recordings
@@ -113,7 +117,7 @@ the root `AGENTS.md`: one worker at a time (V15, C13), the 85% and 93% usage mar
 ## Take over as the controller
 
 Read the current tracker and the specific handoff it names first. At the latest completion,
-the Moss v3 worker and renders are finished; do not restart them or resend delivered media
+the Moss v4 worker and renders are finished; do not restart them or resend delivered media
 without a new task. Use the current checkout/branch and runtime reported by the active session.
 For video changes, preserve the one-worker rule and the latest approved/review distinction.
 For a docs-only request, update the current pointers on `main` and verify the push.
@@ -182,7 +186,8 @@ The full recipe is `docs/ways-of-working/skills/big-initiative/SKILL.md`; this r
 - **Privacy.** Real company content never goes into git or any outside tool (C8).
 - **Money.** The demo video's cap is $100 (V3); early package ledgers are in
   `demo-video/ledger/`, and later ledgers are in `demo-video/mascot-exploration-v2/ledger/`,
-  `demo-video/moss-film/ledger/` and `demo-video/moss-acting/ledger/`. Current totals and
+  `demo-video/moss-film/ledger/`, `demo-video/moss-acting/ledger/`,
+  `demo-video/moss-refinement/ledger/` and `demo-video/moss-introduction/ledger/`. Current totals and
   notification status are in `demo-video/docs/STATE.md`.
 - **Waiting** is done by shell scripts (`demo-video/tools/wait-for.sh`), never by polling from a
   session.

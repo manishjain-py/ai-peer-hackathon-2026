@@ -1,18 +1,20 @@
 # AI Peer demo video: state
 
-Current task (17 November 2026, V37/V38): **Moss v4 in progress**. Clarify AI Peer on the
-setup home and in the introductory voiceover, filling the existing empty beat; show the
-morning Moss only on the laptop, with no external little Moss or phone in view. Brief:
-`FEEDBACK-MOSS-V3-2026-11-17.md`. Controller `/root`, sole worker `moss_v3_builder`.
-Weekly usage checked at21%; pay-per-use spend $51.398527/$100. The new same-Matilda line
-is generated through fal.ai for $0.0106 because the direct ElevenLabs credential is absent;
-no new artwork or motion generation. Voice/audio source and checks are complete. V3 remains the latest completed
-review cut, Tag v2 the last explicitly approved full movie.
+Current completion (17 November 2026, V37/V38): **Moss v4 complete and delivered**.
+The setup home and a new same-Matilda voiceover explain AI Peer as a proactive AI teammate,
+available 24/7; morning Moss appears only on the laptop, with no phone or external little
+Moss in view. Full movie: 119.600 seconds / 3,588 frames. PR 21 merged as `033fb44`;
+annotated checkpoint `blended-moss-v4` is pushed. Telegram video 23108 and review 23109
+are confirmed (04:13:34/35 UTC). Source, selected narration, recipes, evidence and receipts
+are saved. Nothing runs; the sole worker `moss_v3_builder` finished. Final docs closeout:
+`moss_v4_closeout`, following `/root`'s accepted implementation and delivery.
 
-**Closeout handoff:** implementation and final review are complete; Telegram23108/23109
-confirmed and PR21 merged as`033fb44`. Controller ownership moves from`/root` to
-`moss_v4_closeout` to finish shared docs and synchronization. Read
-`handoffs/HANDOFF-2026-11-17-moss-v4-controller-closeout.md`. Do not rerender or resend.
+Latest handoff: `handoffs/HANDOFF-2026-11-17-moss-v4-controller-complete.md`;
+delivery: `MOSS-V4-DELIVERY-2026-11-17.md`; rebuild: `../moss-introduction/README.md`.
+Moss v4 is the latest review cut; Tag v2 remains the last explicitly approved full movie.
+New cost $0.0106; project $51.398527 of $100. The same voice/model used the authorized
+fal.ai route because the direct ElevenLabs credential was absent. No new art was generated.
+The $50 notice was already sent; next notice $80. Weekly usage 22% at final closeout.
 
 Previous completion (17 November 2026): **Moss v3 complete and delivered (V36)**.
 The full movie is 119.600s / 3,588 frames, with every requested scene revision and the
@@ -33,6 +35,16 @@ the current takeover instruction. Use the latest handoff at the top of this file
 `START-HERE.md`. Do not act on these old session IDs without a fresh check.
 
 ## Where we are (checked 2026-11-17)
+
+**17 November: V37/V38 complete.** Both requested changes are implemented, reviewed and
+on Telegram (23108/23109). Controller accepted 24 source points, 56 final scene frames,
+24 boundaries and 26 independent 720p frames. Both exports fully decode at
+119.600 seconds / 3,588 frames, -14.0 LUFS / -2.1 dBTP, with identical AAC packets.
+The 18-word introduction runs 15.0–21.667; all 21 other voice entries are retained.
+The complete V3 music bed is reused; mixed PCM is exact outside 14–24.6 seconds.
+2,742 decoded master frames remain identical to V3; the re-encoded bridges use V3 pictures.
+PR 21, checkpoint, delivery receipt and completion handoff are saved. No work remains
+before Manish's review. Earlier progress and completion entries below are historical.
 
 **17 November: V36 complete.** All seven feedback areas are implemented. Controller
 accepted 84 final scene frames, 62 boundaries and 31 independent 720p frames. Both exports
@@ -778,9 +790,10 @@ minutes, its wait `stall-wp2-3` stopped first. Its worktree `~/repos/ai-peer-vid
 
 Still running:
 
-**V36 complete:** `moss_v3_builder` finished; no renderer, server, provider request or
-watcher remains. The controller completed final review, Telegram delivery and saved docs.
-The retained active checkouts are synchronized after the completion push. Older notes follow.
+**V37/V38 complete:** `moss_v3_builder` finished; no renderer, server, provider request or
+watcher remains. `/root` completed final review and Telegram delivery; `moss_v4_closeout`
+completed the shared records. Canonical main and both retained Moss checkouts are synchronized
+to the completion push. No worker is active. Older notes follow.
 
 | What | PID | Log | Stop command |
 |---|---|---|---|
@@ -868,9 +881,14 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 | 2026-11-16 | fal.ai (Moss full-film gestures) | Two five-second generic-character gestures: attentive/thinking and presenting; `demo-video/moss-film/ledger/fal.csv` | $0.40 conservatively logged |
 | 2026-11-16 | Gemini + fal.ai (Moss acting v2) | Generic notebook keyframe and four five-second actions; per-call ledger in `demo-video/moss-acting/ledger/` | $0.859070 (Gemini $0.059070 estimate; fal $0.80 conservative); no further generation planned |
 | 2026-11-17 | Gemini + fal.ai (Moss v3) | Generic stamp keyframe, stamp/keyboard actions and three speaking takes; `demo-video/moss-refinement/ledger/`; source/assets pushed at `56b4842` | $1.222778 (Gemini $0.062778 estimate; fal $1.16 conservative); no pending generation |
-| | **Total of the $100 cap** | | **$51.387927**; V36 $1.222778 of its $5 controller allocation. $50 notice already sent (Telegram 23097); next notice $80. |
+| 2026-11-17 | fal.ai / ElevenLabs (Moss v4) | Same-Matilda introduction, 106 fictional characters; `demo-video/moss-introduction/ledger/fal.csv`; direct credential attempt stopped before HTTP | $0.0106; no pending generation |
+| | **Total of the $100 cap** | | **$51.398527**. $50 notice already sent (Telegram 23097); next notice $80. |
 
 ## Needs Manish
+
+**V37/V38 delivered, 17 November:** review the full Moss v4 on Telegram (23108).
+No clarification or unfinished implementation task remains. No user approval of v4 is
+inferred; Tag v2 remains the last explicitly approved full movie. Older requests are history.
 
 **V36 delivered, 17 November:** review the full Moss v3 on Telegram (23106). No
 clarification or unfinished implementation task remains. No user approval of v3 is inferred.
@@ -1043,6 +1061,10 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
+
+**V37/V38 complete:** await Manish's review of `blended-moss-v4`. No further render,
+generation or product change starts without his next request. Start from the latest
+controller completion handoff and delivery note. Earlier next steps below are historical.
 
 **V36 complete:** await Manish's review of `blended-moss-v3`. No further render,
 generation or product change starts without his next request. Start from the latest
@@ -1275,8 +1297,8 @@ and 7 still hold.
 ## Settled, do not re-open
 
 - **Moss is the selected character for the current film work** (V34), with context-specific
-  acting requested in V35 and scene/audio refinements in V36. `blended-moss-v3.mp4` is
-  the latest delivered review cut.
+  acting requested in V35, scene/audio refinements in V36, and the clearer introduction
+  and laptop-only morning in V37/V38. `blended-moss-v4.mp4` is the latest delivered review cut.
 - **Tag v2 is the last explicitly approved full movie** (V30/V31). Preserve it and all earlier
   versions; documentation maintenance does not approve or replace a movie.
 - Little Peer is not used (V31); do not restart its version 2 from an old tracker entry.
@@ -1462,3 +1484,4 @@ and 7 still hold.
 | 2026-11-16 18:54 UTC | Codex moss_acting_controller + moss_acting_builder | V35: exact-time acting, notebook keyframe and four new actions; full film accepted and delivered; PR 19 merged as `8846d1b`, checkpoint `blended-moss-v2` | Await review of v2; Telegram 23099/23100; original audio and earlier cuts preserved; total $50.165149 |
 | 2026-11-17 | Codex documentation reconciliation | Checked all worktrees/origin; aligned resume routes, latest-cut pointers, historical-plan/controller labels, provider authorization and current spend; no media or product changes | Docs committed directly on main; latest review remains Moss v2 |
 | 2026-11-17 03:21 UTC | Codex controller + moss_v3_builder | V36 complete: direct entrance, confidence stamp, speaking Zoom, active readable Slack, laptop greeting and resolved original music; unwanted line removed. PR 20 merged `c612624`, checkpoint `blended-moss-v3`; Telegram 23106/23107. | Await v3 review; all prior cuts preserved; $1.222778 new, $51.387927 total; nothing runs |
+| 2026-11-17 04:13 UTC | Codex controller /root, moss_v3_builder; final docs moss_v4_closeout | V37/V38 complete: proactive-teammate/24/7 setup home and same-Matilda introduction; morning Moss only on the laptop. PR 21 merged `033fb44`, checkpoint `blended-moss-v4`; Telegram 23108/23109. | Await v4 review; all prior cuts preserved; $0.0106 new, $51.398527 total; weekly usage 22%; nothing runs |

@@ -1,7 +1,7 @@
 # Moss acting pass, version 2
 
-**Preserved V35 version.** Latest: [Moss v3](../film/renders/blended-moss-v3.mp4), with
-[rebuild guide](../moss-refinement/README.md) and [V36 delivery](../docs/MOSS-V3-DELIVERY-2026-11-17.md).
+**Preserved V35 version.** Latest: [Moss v4](../film/renders/blended-moss-v4.mp4), with
+[rebuild guide](../moss-introduction/README.md) and [V37/V38 delivery](../docs/MOSS-V4-DELIVERY-2026-11-17.md).
 The original timing/audio claims below describe v2.
 
 V35 makes Moss act on the context of each moment while preserving the full film's story,

@@ -3,17 +3,23 @@
 The two-minute AI Peer demo video ("He's asleep. I'm not.", `../docs/STORY.md`), built as one
 web page whose picture is a pure function of the film time, captured frame by frame.
 
-## Latest complete movie: Moss v3
+## Latest complete movie: Moss v4
 
-`renders/blended-moss-v3.mp4` is the latest delivered review cut: **119.600 seconds,
+`renders/blended-moss-v4.mp4` is the latest delivered review cut: **119.600 seconds,
 3,588 frames, 1920×1080 at 30 fps**. The Telegram copy is
-`renders/blended-moss-v3-720p.mp4`. See the [delivery record](../docs/MOSS-V3-DELIVERY-2026-11-17.md)
-and [Moss v3 source/rebuild guide](../moss-refinement/README.md). The dedicated renderer uses
-its source walkthrough and the revised soundtrack rebuilt from the original voice/music
-sources. Saved-asset rebuilding needs no generation credentials. Both exports share identical AAC.
+`renders/blended-moss-v4-720p.mp4`. See the [delivery record](../docs/MOSS-V4-DELIVERY-2026-11-17.md)
+and [Moss v4 source/rebuild guide](../moss-introduction/README.md). The new setup home and
+same-Matilda voiceover define the proactive AI teammate, available 24/7. Morning Moss is
+shown only on the laptop; both phones and external mascot overlays are out of view.
+
+The new layer supplies the introduction and morning framing; the walkthrough after
+24.6 seconds uses retained `../ui-concepts/moss-v3/` source. The full V3 music bed and
+21 other voice lines are reused. The dedicated renderer documents both the delivered
+picture-preserving assembly and a full rebuild. Saved-asset rebuilding needs no generation
+credentials. Both exports share identical AAC.
 
 Earlier Moss cuts and Tag v2 are preserved. Tag v2 remains the last explicitly approved full
-movie; v3 awaits Manish's review. Use [STATE](../docs/STATE.md) for current work and next steps.
+movie; v4 awaits Manish's review. Use [STATE](../docs/STATE.md) for current work and next steps.
 
 ## Base/Draft 3 renderer
 
