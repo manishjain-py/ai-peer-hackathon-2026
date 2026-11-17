@@ -49,7 +49,7 @@
   "exports": [
     {
       "file": "film/renders/blended-moss-v6.mp4",
-      "sha256": "47e67e31adc0a4e745e30f4cc787d0f29ccf1d0a2a7c4ee0edf762bc4098f3fe",
+      "sha256": "eb541daa30c59f2ee73dc3f816f99aca05730c8c21866bffffb655a6784eb208",
       "probe": {
         "programs": [],
         "stream_groups": [],
@@ -78,7 +78,7 @@
         ],
         "format": {
           "duration": "119.600000",
-          "size": "219361038",
+          "size": "219266595",
           "tags": {
             "comment": "Earth imagery: NASA Earth Observatory (Black Marble 2016; Blue Marble: Next Generation). No endorsement implied."
           }
@@ -96,7 +96,7 @@
     },
     {
       "file": "film/renders/blended-moss-v6-1080p.mp4",
-      "sha256": "3ad6ad0e824e59d13d072cbebf98bbc0739e480c1a858d7e1d50a3a445be4ced",
+      "sha256": "e3f32330f289037587b5f2ec0adf8ce9e693f611bd9ebc75771cf60b55ce083c",
       "probe": {
         "programs": [],
         "stream_groups": [],
@@ -125,7 +125,7 @@
         ],
         "format": {
           "duration": "119.600000",
-          "size": "47821028",
+          "size": "47829863",
           "tags": {
             "comment": "Earth imagery: NASA Earth Observatory (Black Marble 2016; Blue Marble: Next Generation). No endorsement implied."
           }

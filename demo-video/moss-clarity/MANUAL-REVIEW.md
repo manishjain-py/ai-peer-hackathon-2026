@@ -1,5 +1,9 @@
 # V41 visual acceptance
 
+The [final review](FINAL-REVIEW.md) covers the twelve feedback areas in the delivered cut. This file records how the scenes were checked during production.
+
+After the restart, the controller inspected the five 1080p contact sheets. During Slack’s reply arrival, the composing indicator crossed the source links. The revised scene clears the indicator and draft at 84.35 seconds. The controller checked fresh frames decoded from the new 4K master at 37.4, 84.5 and 94.0 seconds for the source line, posted reply and Moss’s grip. Fresh frames from the 1080p file at 83.8, 85.1 and 117.8 seconds confirmed visible typing, unobstructed reply sources and the exact end-card hostname. The unchanged audio packet sequence carries forward the earlier transcription and closing-cue checks.
+
 17 November 2026. Worker source review, independently reviewed by the controller.
 
 Final source repairs (accepted at full1080): `paw-contact-1/2.jpg` and
