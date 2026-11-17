@@ -1,5 +1,16 @@
 # AI Peer demo video: state
 
+**PAUSED AT USER REQUEST — Moss v6,17 November2026 UTC.** Manish is restarting
+the ChatGPT app and will return with “resume.” Do not continue until that explicit resume.
+All owned render/browser/server/QA jobs are stopped. Latest repaired4K and1080 exports
+are checkpointed on `codex/moss-v6` at **94b3311**; [PR23](https://github.com/manishjain-py/ai-peer-hackathon-2026/pull/23)
+remains draft/unmerged. Worker final media checks/extraction finished before pause, but
+independent controller acceptance of the newest encoded repair is still pending.
+**No V6 Telegram delivery, final tag, merge or completion claim.**
+Read `handoffs/HANDOFF-2026-11-17-moss-v6-paused-for-app-restart.md` for exact artifacts,
+remaining steps and resume commands. Current spend **$52.097127/$100**; V6 **$0.4863**.
+Controller and sole worker are stopped; root is relay only. Earlier notes below are history.
+
 **Current task, V41 (17 November2026): Moss v6 in progress.** Manish requests a complete
 clarity/editorial pass with12 specific changes, including no subtitles, vertical learned/
 brief layout, cleaner/reduced dialogue and AI labels, physical information selection,
