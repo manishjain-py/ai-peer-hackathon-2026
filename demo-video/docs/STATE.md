@@ -5,7 +5,10 @@ feedback in `FEEDBACK-MOSS-V2-2026-11-17.md`. Direct entrance/zoom, featured con
 stamp, removal of one narration line, speaking mouth motion, readable active Slack,
 morning screen greeting and a resolved musical ending. Controller `/root` and sole worker
 `moss_v3_builder`; no other video worker. Codex weekly usage checked at 19%. Current spend
-$50.165149 of $100; no new generation yet. Latest completed cut remains v2, pending review;
+$51.387927 of $100; new generic assets cost $1.222778. Focused source/scene review and
+the revised soundtrack are accepted (`MOSS-V3-ACCEPTANCE-2026-11-17.md`). Source/assets/audio
+checkpoint `56b4842` is pushed on `codex/moss-v3`; complete rendering and final review are
+under way. Latest completed cut remains v2;
 Tag v2 remains the last explicitly approved movie. New outputs will be `blended-moss-v3`.
 
 Previous completion (documentation reconciled 17 November 2026): **Moss acting v2 complete and delivered
@@ -29,6 +32,12 @@ the current takeover instruction. Use the latest handoff at the top of this file
 `START-HERE.md`. Do not act on these old session IDs without a fresh check.
 
 ## Where we are (checked 2026-11-17)
+
+**17 November, V36:** Manish's seven feedback areas are recorded verbatim. The direct
+entrance, stamp, speaking mouth motion, dynamic/readable Slack and morning greeting/camera
+pass focused review. The unwanted narration line is removed. Original music samples remain
+exact outside the two changed cue/ending regions; the final phrase now resolves naturally.
+Source/assets/audio are pushed; the sole worker is rendering the complete new v3.
 
 **17 November: documentation reconciled at Manish's request.** The latest complete review cut
 is Moss acting v2; the last explicitly approved full movie is Tag v2. Current routing now points
@@ -760,6 +769,10 @@ minutes, its wait `stall-wp2-3` stopped first. Its worktree `~/repos/ai-peer-vid
 
 Still running:
 
+**V36:** `/root/moss_v3_builder` is the sole active video worker, rendering and verifying
+the new cut from `codex/moss-v3` in the retained `moss-acting` checkout. The controller owns
+review, shared docs and delivery. No old Terminal controller/watcher has been restarted.
+
 | What | PID | Log | Stop command |
 |---|---|---|---|
 
@@ -845,9 +858,13 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 | 2026-11-16 | Gemini + fal.ai (Round 2 mascot assets) | 25 generated masters, 25 cutouts, 23 selected character animations plus pilots; ledgers in `demo-video/mascot-exploration-v2/ledger/` on main | $6.826079 (Gemini $1.566079 estimated from usage; fal $5.26 conservatively logged) |
 | 2026-11-16 | fal.ai (Moss full-film gestures) | Two five-second generic-character gestures: attentive/thinking and presenting; `demo-video/moss-film/ledger/fal.csv` | $0.40 conservatively logged |
 | 2026-11-16 | Gemini + fal.ai (Moss acting v2) | Generic notebook keyframe and four five-second actions; per-call ledger in `demo-video/moss-acting/ledger/` | $0.859070 (Gemini $0.059070 estimate; fal $0.80 conservative); no further generation planned |
-| | **Total of the $100 cap** | | **$50.165149**; V35 $0.859070 of its $10 allocation. $50 notice sent (Telegram 23097). |
+| 2026-11-17 | Gemini + fal.ai (Moss v3) | Generic stamp keyframe, stamp/keyboard actions and three speaking takes; `demo-video/moss-refinement/ledger/`; source/assets pushed at `56b4842` | $1.222778 (Gemini $0.062778 estimate; fal $1.16 conservative); no pending generation |
+| | **Total of the $100 cap** | | **$51.387927**; V36 $1.222778 of its $5 controller allocation. $50 notice already sent (Telegram 23097); next notice $80. |
 
 ## Needs Manish
+
+**V36, 17 November:** no clarification is needed. His feedback is being implemented as
+a complete new movie for review. Earlier review requests below are historical.
 
 **V35 delivered, 16 November UTC:** review full Moss acting v2 on Telegram (23099).
 No clarification or implementation task remains. Tag v2 is the last user-approved film
@@ -1016,6 +1033,10 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
+
+**V36:** finish the complete 119.6-second v3 render, inspect encoded scenes and the 720p
+send copy, verify media/audio, deliver to Telegram, merge the package PR and save its
+checkpoint. Preserve previous films; update current docs after delivery. Older notes follow.
 
 **V35 complete:** await Manish's review of the full `blended-moss-v2`. No new
 render, generation or product work starts without his next request. Read the latest
