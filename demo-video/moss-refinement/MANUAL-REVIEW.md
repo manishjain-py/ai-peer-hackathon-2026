@@ -45,8 +45,8 @@ Both complete exports passed `tools/verify.py`:119.600s,3588frames at30fps, corr
 -2.1dBTP; all5608 AAC packet hashes/timestamps match. The clean source is58s/1740frames.
 
 `film-encoded-*` records84 scene frames; `transitions-encoded-*` records62 boundary frames;
-`send-encoded-*` records31 independently decoded720p frames. Controller confirmed the84-
-frame full-master walk; final boundary/720p acceptance is recorded in shared acceptance docs.
+`send-encoded-*` records31 independently decoded720p frames. Controller accepted all84 master frames,62 boundary frames and31 send-copy frames.
+Final acceptance is also recorded in the shared acceptance document.
 No final approval from Manish is implied by this build or controller's technical review.
 The confidence impact begins as sources appear and the finished HIGH impression remains
 through the confidence phrase, preserving reading time. No extra retime was made from the
