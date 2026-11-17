@@ -36,9 +36,23 @@ earlier sideways camera clearance, and raising the result copy clear of narratio
 The talk/write actor is being enlarged from 220 to 250 pixels with its notebook above
 the meeting captions. These are routine readability corrections within V39.
 
+## Corrected source walk accepted
+
+The controller inspected `timing-proof-1` through `timing-proof-5` (57 points) and
+`final-focus-1`/`final-focus-2` (19 points, including the corrected repeated ocean points).
+The revised title backdrop, larger 24px relevance labels, earlier lateral clearance and
+raised result text fix the first-proof collisions. Moss is clear of the relevance cards.
+The reply actor is now 250px; the notebook remains above the meeting captions while
+its mouth and pencil move during the morning-brief promise around 79.1–81.8 seconds.
+
+The 24.6–59.2 walkthrough still shows each connection, accumulated notes, sources, the
+first brief, ask/answer and the large round confidence stamp. Slack has a visible tag,
+read/think/type sequence and a final close reply held around 86–90, with its sources and
+Ram's decision boundary readable. The source walk is accepted for full rendering.
+
 ## Pending
 
-Corrected source walk, complete encoded media walk, independent 720p review, full decode,
+Complete encoded media walk, independent 720p review, full decode,
 duration/dimensions/frame count, loudness/AAC comparison and predecessor preservation.
 Telegram delivery, implementation PR/merge/checkpoint and final documentation follow
 acceptance. Source evidence and audio reports live in `../moss-ocean/`.

@@ -7,12 +7,13 @@ transcribed: “Thousands of company updates. I find what matters to Ram's role,
 and interests, and bring it into his morning brief.” It fits 90.4–97.9 seconds. The
 original ocean is being adapted into 90–100; setup and Slack are selectively trimmed.
 Music keeps the same Lyria take, moves thin bars to 58 and 82, and preserves the entire
-morning/ending from 100. The new talk-and-writing take passes the 20-frame source walk; the first in-context
-ocean proof is being refined for caption clearance and larger relevance labels. Full
-visual acceptance and delivery remain pending. Read
+morning/ending from 100. The new talk-and-writing take passes the 20-frame source walk. Corrected source proof
+passes: explicit role/goal/interests matches, caption clearance, readable Slack and
+retained walkthrough proof. Source/audio committed as `c7e273b`; full exports are rendering.
+Encoded-media acceptance and delivery remain pending. Read
 `FEEDBACK-MOSS-V4-2026-11-17.md` and
 `handoffs/HANDOFF-2026-11-17-moss-v5-controller-start.md`. Voice cost $0.0123 and simultaneous speaking/writing motion $0.20; project
-$51.610827. No paid call is pending. Weekly usage 22%. V4 remains the latest
+$51.610827. No paid call is pending. Weekly usage 23%. V4 remains the latest
 completed review; Tag v2 remains the last explicit approval.
 
 Previous completion (17 November 2026, V37/V38): **Moss v4 complete and delivered**.
@@ -50,6 +51,14 @@ the current takeover instruction. Use the latest handoff at the top of this file
 `START-HERE.md`. Do not act on these old session IDs without a fresh check.
 
 ## Where we are (checked 2026-11-17)
+
+**17 November: V39 source proof accepted.** The controller inspected 20 motion source
+frames and 76 in-context source points across the timing and correction passes. The
+compact ocean selects three items against explicit role/goal/interests labels, then
+readies the brief; Zoom has simultaneous speaking and writing from the promise. The
+setup and Slack trims preserve essential proof and a readable reply. New soundtrack
+transcription and sample-preservation checks pass. Full render and final media checks
+are next; no completed V5 delivery is claimed yet.
 
 **17 November: V37/V38 complete.** Both requested changes are implemented, reviewed and
 on Telegram (23108/23109). Controller accepted 24 source points, 56 final scene frames,
@@ -805,6 +814,11 @@ minutes, its wait `stall-wp2-3` stopped first. Its worktree `~/repos/ai-peer-vid
 
 Still running:
 
+**V39 in progress:** sole worker `moss_v5_builder` owns the full render in the retained
+`moss-acting` checkout (`codex/moss-v5`). Controller `moss_v5_controller` owns final
+acceptance, Telegram and records. Source/audio `c7e273b` is committed. No paid call runs.
+Older completion records below are historical.
+
 **V37/V38 complete:** `moss_v3_builder` finished; no renderer, server, provider request or
 watcher remains. `/root` completed final review and Telegram delivery; `moss_v4_closeout`
 completed the shared records. Canonical main and both retained Moss checkouts are synchronized
@@ -897,9 +911,13 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 | 2026-11-16 | Gemini + fal.ai (Moss acting v2) | Generic notebook keyframe and four five-second actions; per-call ledger in `demo-video/moss-acting/ledger/` | $0.859070 (Gemini $0.059070 estimate; fal $0.80 conservative); no further generation planned |
 | 2026-11-17 | Gemini + fal.ai (Moss v3) | Generic stamp keyframe, stamp/keyboard actions and three speaking takes; `demo-video/moss-refinement/ledger/`; source/assets pushed at `56b4842` | $1.222778 (Gemini $0.062778 estimate; fal $1.16 conservative); no pending generation |
 | 2026-11-17 | fal.ai / ElevenLabs (Moss v4) | Same-Matilda introduction, 106 fictional characters; `demo-video/moss-introduction/ledger/fal.csv`; direct credential attempt stopped before HTTP | $0.0106; no pending generation |
-| | **Total of the $100 cap** | | **$51.398527**. $50 notice already sent (Telegram 23097); next notice $80. |
+| 2026-11-17 | fal.ai (Moss v5) | Same-Matilda ocean narration plus generic simultaneous speaking/notebook motion; `demo-video/moss-ocean/ledger/` | $0.2123 ($0.0123 voice + $0.20 conservative motion); no pending generation |
+| | **Total of the $100 cap** | | **$51.610827**. $50 notice already sent (Telegram 23097); next notice $80. |
 
 ## Needs Manish
+
+**V39 in progress:** no clarification is needed. The new full movie is authorized,
+including Telegram delivery and Git publication. Final creative review follows delivery.
 
 **V37/V38 delivered, 17 November:** review the full Moss v4 on Telegram (23108).
 No clarification or unfinished implementation task remains. No user approval of v4 is
@@ -1076,6 +1094,10 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
    seconds and the end accent at 116; a plainer cut, `bed-alt-1.wav`, is ready as a fallback.
 
 ## Next
+
+**V39:** finish full exports, inspect encoded scene and boundary frames plus an
+independent 720p walk, complete media checks, send the new movie to Telegram, merge the
+single implementation PR, tag and refresh the current pointers/receipt/handoff.
 
 **V37/V38 complete:** await Manish's review of `blended-moss-v4`. No further render,
 generation or product change starts without his next request. Start from the latest
