@@ -1,0 +1,102 @@
+{
+ "model": "faster-whisper small.en",
+ "mode": "file",
+ "items": [
+  {
+   "file": "demo-video/moss-introduction/audio/intro-v4.wav",
+   "heard": "I'm Rahm's AI peer, his proactive AI teammate, keeping him informed and covering for him around the clock.",
+   "words": [
+    {
+     "w": "I'm",
+     "s": 0.0,
+     "e": 0.3
+    },
+    {
+     "w": "Rahm's",
+     "s": 0.3,
+     "e": 0.62
+    },
+    {
+     "w": "AI",
+     "s": 0.62,
+     "e": 0.94
+    },
+    {
+     "w": "peer,",
+     "s": 0.94,
+     "e": 1.22
+    },
+    {
+     "w": "his",
+     "s": 1.62,
+     "e": 1.74
+    },
+    {
+     "w": "proactive",
+     "s": 1.74,
+     "e": 2.16
+    },
+    {
+     "w": "AI",
+     "s": 2.16,
+     "e": 2.56
+    },
+    {
+     "w": "teammate,",
+     "s": 2.56,
+     "e": 2.94
+    },
+    {
+     "w": "keeping",
+     "s": 3.3,
+     "e": 3.6
+    },
+    {
+     "w": "him",
+     "s": 3.6,
+     "e": 3.78
+    },
+    {
+     "w": "informed",
+     "s": 3.78,
+     "e": 4.2
+    },
+    {
+     "w": "and",
+     "s": 4.2,
+     "e": 4.42
+    },
+    {
+     "w": "covering",
+     "s": 4.42,
+     "e": 4.7
+    },
+    {
+     "w": "for",
+     "s": 4.7,
+     "e": 4.92
+    },
+    {
+     "w": "him",
+     "s": 4.92,
+     "e": 5.16
+    },
+    {
+     "w": "around",
+     "s": 5.16,
+     "e": 5.42
+    },
+    {
+     "w": "the",
+     "s": 5.42,
+     "e": 5.54
+    },
+    {
+     "w": "clock.",
+     "s": 5.54,
+     "e": 5.82
+    }
+   ]
+  }
+ ]
+}

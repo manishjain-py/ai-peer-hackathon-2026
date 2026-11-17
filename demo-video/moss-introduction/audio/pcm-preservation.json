@@ -1,0 +1,24 @@
+{
+  "seconds": 119.6,
+  "sample_rate": 48000,
+  "changed_span": [
+    14,
+    24.6
+  ],
+  "boundary_fade_ms": 50,
+  "preserved_v3_mix_spans": [
+    {
+      "from": 0,
+      "to": 14,
+      "decoded_samples_identical": true,
+      "sha256": "1ce3f3a4c658ec5cc29585bd839e07e293740df17ec5d3cba09e01a537c572a8"
+    },
+    {
+      "from": 24.6,
+      "to": 119.6,
+      "decoded_samples_identical": true,
+      "sha256": "2ff3d09f4cc43e672469bdc121a5801219e7c86841940e2c24f04803e4dd772d"
+    }
+  ],
+  "entire_v3_music_bed_reused": true
+}

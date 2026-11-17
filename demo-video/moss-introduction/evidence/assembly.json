@@ -1,0 +1,52 @@
+{
+  "baseline": "film/renders/blended-moss-v3.mp4",
+  "baseline_sha256": "e1dd89b0d0fbc99d544fdc69ae16539d53acf00ba83c981f567388311ec50841",
+  "fps": 30,
+  "actual_new_scene_frames": [
+    [
+      420,
+      738
+    ],
+    [
+      3000,
+      3168
+    ]
+  ],
+  "baseline_picture_bridges": [
+    [
+      738,
+      857
+    ],
+    [
+      3168,
+      3409
+    ]
+  ],
+  "encoded_patch_gops": [
+    [
+      420,
+      857
+    ],
+    [
+      3000,
+      3409
+    ]
+  ],
+  "stream_copied_ranges": [
+    [
+      0,
+      420
+    ],
+    [
+      857,
+      3000
+    ],
+    [
+      3409,
+      3588
+    ]
+  ],
+  "frame_total": 3588,
+  "note": "High-profile H.264 throughout. GOP bridges change compression only; their scene pictures come from V3. Full-render route remains available. Exact unchanged-range frame hashes are checked by verify.py.",
+  "mode": "gop-patch"
+}
