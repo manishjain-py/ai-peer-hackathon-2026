@@ -10,8 +10,8 @@ const mix=(a,b,k)=>a+(b-a)*k;
 const wrap=(x,n)=>((x%n)+n)%n;
 const W=105,H=33;
 const catches=[
- {time:2.05,lane:3,col:5,atX:422,tag:'ROLE · Payments engineer',title:'Brazil fraud threshold drops Thursday',why:'New holds could look like payout retry failures.'},
- {time:4.53,lane:1,col:7,atX:715,tag:'GOAL · Launch retry in Brazil',title:'Brazil launch review at 9:00 AM',why:'Ram’s go/no-go decision is on the agenda.'},
+ {time:2.05,lane:2,col:5,atX:422,tag:'ROLE · Payments engineer',title:'Brazil fraud threshold drops Thursday',why:'New holds could look like payout retry failures.'},
+ {time:4.53,lane:4,col:7,atX:715,tag:'GOAL · Launch retry in Brazil',title:'Brazil launch review at 9:00 AM',why:'Ram’s go/no-go decision is on the agenda.'},
  {time:6.94,lane:7,col:3,atX:355,tag:'INTEREST · Applied AI',title:'Hands-on AI workshop on Friday',why:'A chance to try new models with other engineers.'}
 ];
 const gap=153,cols=16,period=gap*cols;
@@ -22,7 +22,7 @@ const shift=l=>{
 };
 function fieldPosition(l,c,t){
  const x=wrap(c*gap+shift(l)+velocity(l)*t,period)-185;
- return [x,148+l*89+Math.sin(x/318+l*1.44+t*.28)*59+Math.sin(x/185+l*.3)*14];
+ return [x,216+l*84+Math.sin(x/318+l*1.44+t*.28)*59+Math.sin(x/185+l*.3)*14];
 }
 const slotY=i=>298+i*173;
 function cardPosition(i,t){
@@ -33,12 +33,32 @@ function cardPosition(i,t){
 }
 const svg=(name,attrs,parent)=>{const node=document.createElementNS(ns,name);for(const [k,v] of Object.entries(attrs))node.setAttribute(k,v);parent?.append(node);return node;};
 const ink=['#8ecac6','#9eafde','#a9c5ab','#c5acbc','#a6c3db'];
+const symbols=['MAIL','CHAT','DOC','PR','ISSUE','CAL'];
+const cache=new Map();
+function tile(l,c){
+ const kind=(l*2+c)%ink.length,source=(l+c*3)%symbols.length,key=l+','+c;
+ if(cache.has(key))return cache.get(key);
+ const surface=document.createElement('canvas');surface.width=W*2+8;surface.height=H*2+8;
+ const g=surface.getContext('2d');g.scale(2,2);g.translate(2,2);
+ g.fillStyle=fill[kind];g.strokeStyle=ink[kind];g.lineWidth=1.3;
+ g.beginPath();g.roundRect(0,0,W,H,6);g.fill();g.stroke();
+ g.lineWidth=1.8;g.lineJoin='round';g.lineCap='round';
+ const paths=['M7 10H24V23H7Z M7 11L15.5 17L24 11','M8 8H23Q25 8 25 11V18Q25 20 22 20H15L10 25V20H8Q6 20 6 17V11Q6 8 8 8Z','M9 7H18L23 12V25H9Z M17 7V13H23 M12 17H19 M12 21H18','M11 9V24 M21 9V15Q21 19 12 19 M8 9A3 3 0 1 0 14 9A3 3 0 1 0 8 9 M18 9A3 3 0 1 0 24 9A3 3 0 1 0 18 9','M6 11H25V15Q21 16 25 19V23H6V19Q10 17 6 15Z M16 13V15 M16 18V20','M7 10H24V24H7Z M7 15H24 M11 7V12 M20 7V12'];
+ g.stroke(new Path2D(paths[source]));
+ g.fillStyle='#e2eae3';g.font='650 11px Manrope';g.fillText(symbols[source],31,14);
+ g.fillStyle=ink[kind];g.font='9px monospace';
+ const serial=137+l*223+c*41;
+ g.fillText('#'+serial,31,25);
+ g.fillRect(82,10,13,2);g.fillRect(82,16,8+(c%3)*2,2);g.fillRect(82,22,4,2);
+ cache.set(key,surface);return surface;
+}
 const fill=['#243c43','#28394a','#29413e','#373a49','#233c48'];
 export async function create(slot){
  const node=el('div.scene.v7-ocean');
  node.append(el('style',{text:`
  .v7-ocean{position:absolute;inset:0;overflow:hidden;background:radial-gradient(ellipse at 24% 58%,#1b3f48 0%,#102731 48%,#08181f 92%);color:#f0f5e6;font-family:Manrope,sans-serif}
  .v7-ocean canvas,.v7-ocean svg{position:absolute;inset:0;width:1920px;height:1080px}.v7-ocean canvas{opacity:.97}
+ .v7-header-shade{position:absolute;inset:0 0 auto;height:214px;background:linear-gradient(#10252ee8 0 52%,#10252eaa 72%,transparent)}
  .v7-heading{position:absolute;left:82px;top:56px;font-size:53px;font-weight:750;line-height:1.16;letter-spacing:-1.5px;text-shadow:0 2px 12px #061218}
  .v7-sub{position:absolute;left:85px;top:128px;font-size:25px;color:#c2dacf}
  .v7-panel{position:absolute;left:1018px;top:205px;width:815px;height:639px;border:2px solid #81a996;border-radius:26px;box-sizing:border-box;background:#193c34;box-shadow:0 15px 60px #00180e88}
@@ -50,28 +70,27 @@ export async function create(slot){
  .v7-result b{display:block;padding:12px 23px 0;font:750 30px/1.15 Manrope;letter-spacing:-.5px}
  .v7-result p{margin:8px 23px;font:550 22px Manrope;color:#3b5747}
  .v7-count{position:absolute;left:1050px;top:883px;font:650 28px Manrope;color:#e5eedb}
- .v7-identity{position:absolute;left:84px;bottom:57px;color:#b5cec6;font:600 23px Manrope}
+ .v7-identity{position:absolute;left:84px;bottom:57px;color:#deece4;font:600 23px Manrope;background:#10282bdb;border-radius:9px;padding:4px 11px}
  `}));
  const canvas=el('canvas');canvas.width=3840;canvas.height=2160;
  const ctx=canvas.getContext('2d');ctx.scale(2,2);
  const heading=el('div.v7-heading',{text:'Thousands of updates. Three that matter.'});
  const sub=el('div.v7-sub',{text:'Email · Slack · Code · Tickets · Documents · Meetings'});
  const panel=el('div.v7-panel',{},el('h2',{text:'RAM’S MORNING BRIEF'}));
+ const slotLabels=['Role','Goal','Interest'].map(text=>el('span',{text}));
  const papers=catches.map((c,i)=>{
-   panel.append(el('div.v7-slot',{style:{top:(slotY(i)-205)+'px'}},el('span',{text:['Role','Goal','Interest'][i]})));
+   panel.append(el('div.v7-slot',{style:{top:(slotY(i)-205)+'px'}},slotLabels[i]));
    return el('div.v7-result',{style:{top:(slotY(i)+2)+'px'}},el('small',{text:c.tag}),el('b',{text:c.title}),el('p',{text:c.why}));
  });
  // Draw captured tokens on a second transparent canvas to fly over the edge of the brief.
  const top=el('canvas');top.width=3840;top.height=2160;const front=top.getContext('2d');front.scale(2,2);
  const stage=svg('svg',{viewBox:'0 0 1920 1080'});const moss=buildTag(stage,{height:242});
  const count=el('div.v7-count',{text:'3 useful updates. Ready when he wakes.'});
- node.append(canvas,heading,sub,panel,...papers,top,stage,count,el('div.v7-identity',{text:'Ram’s AI Peer'}));
+ node.append(canvas,el('div.v7-header-shade'),heading,sub,panel,...papers,top,stage,count,el('div.v7-identity',{text:'Ram’s AI Peer'}));
  function slip(g,l,c,x,y,lit=0){
-   const kind=(l*2+c)%ink.length;
-   g.fillStyle=fill[kind];g.strokeStyle=lit?'#e9d69b':ink[kind];g.lineWidth=lit?2.6:1.5;
-   g.beginPath();g.roundRect(x,y,W,H,6);g.fill();g.stroke();
-   g.fillStyle=ink[kind];g.fillRect(x+9,y+9,12,14);
-   g.fillRect(x+29,y+10,45+(c%3)*6,3);g.fillRect(x+29,y+19,25+((l+c)%4)*6,3);
+   g.drawImage(tile(l,c),x-2,y-2,W+4,H+4);
+   if(lit){g.strokeStyle='#f6dea5';g.lineWidth=2.4;g.beginPath();g.roundRect(x,y,W,H,6);g.stroke();}
+
  }
  const rest=[732,845];
  function actor(u){
@@ -95,9 +114,19 @@ export async function create(slot){
  return {el:node,render(t){
    const u=t-slot.start;
    ctx.clearRect(0,0,1920,1080);front.clearRect(0,0,1920,1080);
+   // Fainter light points travel more slowly than the documents, with short exposure trails.
+   ctx.lineCap='round';
+   for(let n=0;n<210;n++){
+     const x=wrap(n*821.37 + u*(16+(n%11)*2.4),2050)-50;
+     const y=156+wrap(n*647.22 + 40*Math.sin(x/320+n*.11),893);
+     const strength=.12+.24*(.5+.5*Math.sin(n*.54+u*.33));
+     ctx.globalAlpha=strength;ctx.lineWidth=.7+(n%4)*.28;ctx.strokeStyle=n%4===0?'#a0c5b1':'#79acb9';
+     ctx.beginPath();ctx.moveTo(x-5-(n%7)*2,y+1.8);ctx.lineTo(x,y);ctx.stroke();
+     ctx.fillStyle='#bcdbd3';ctx.fillRect(x,y,1.5,1.5);
+   }
    for(let l=0;l<10;l++){
      ctx.globalAlpha=.19;ctx.strokeStyle=ink[l%5];ctx.lineWidth=1;ctx.beginPath();
-     for(let x=-100;x<=2000;x+=18){const y=148+l*89+Math.sin(x/318+l*1.44+u*.28)*59+Math.sin(x/185+l*.3)*14+H/2; if(x===-100)ctx.moveTo(x,y);else ctx.lineTo(x,y);}ctx.stroke();
+     for(let x=-100;x<=2000;x+=18){const y=216+l*84+Math.sin(x/318+l*1.44+u*.28)*59+Math.sin(x/185+l*.3)*14+H/2; if(x===-100)ctx.moveTo(x,y);else ctx.lineTo(x,y);}ctx.stroke();
      for(let c=0;c<cols;c++){
        const pick=catches.find(p=>p.lane===l&&p.col===c);if(pick&&u>=pick.time)continue;
        const [x,y]=fieldPosition(l,c,u);if(x<-W||x>1920)continue;
@@ -108,8 +137,10 @@ export async function create(slot){
    const reveal=smooth(progress(u,.45,1.18));panel.style.opacity=reveal;
    papers.forEach((paper,i)=>{
      const c=catches[i],age=u-c.time,k=smooth(progress(age,.74,1.15));
-     paper.style.opacity=k;paper.style.transform='scale('+mix(.15,1,k)+','+mix(.22,1,k)+')';
-     if(age>=0&&age<1.15){const [x,y]=cardPosition(i,u);front.globalAlpha=1-k;slip(front,c.lane,c.col,x,y,1);}
+     slotLabels[i].style.opacity=1-smooth(progress(age,.72,.82));
+     for(const text of paper.children)text.style.opacity=smooth(progress(age,.93,1.15));
+     paper.style.opacity=smooth(progress(age,.76,.96));paper.style.transform='scale('+mix(.15,1,k)+','+mix(.22,1,k)+')';
+     if(age>=0&&age<1.15){const [x,y]=cardPosition(i,u);front.globalAlpha=1-smooth(progress(age,.75,.88));slip(front,c.lane,c.col,x,y,1);}
    });
    const p=actor(u);
    moss.draw({x:p.xy[0],y:p.xy[1],s:1,sx:-1,label:false,shadow:.2,alpha:smooth(progress(u,.12,.64)),action:p.grip?'present':u>8.65?'acknowledge':'attentive',actionTime:p.grip?2:u>8.65?1+Math.min(2.3,(u-8.65)*.8):1.65+.36*Math.sin(u)});

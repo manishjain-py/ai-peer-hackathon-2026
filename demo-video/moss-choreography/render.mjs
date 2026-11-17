@@ -9,7 +9,7 @@ import {createRequire} from 'node:module';
 import {spawn,execFileSync} from 'node:child_process';
 import {once} from 'node:events';
 import {build} from '../film/build.mjs';
-const HERE=path.dirname(fileURLToPath(import.meta.url)),DEMO=path.dirname(HERE),CACHE=path.join(HERE,'.build'),EVIDENCE=path.join(HERE,'evidence');
+const HERE=path.dirname(fileURLToPath(import.meta.url)),DEMO=path.dirname(HERE),CACHE=path.join(HERE,'.build',process.env.MOSS_V7_LANE||'.'),EVIDENCE=path.join(HERE,'evidence');
 const FILM=path.join(DEMO,'film'),UI=path.join(DEMO,'ui-concepts'),FPS=30;
 const MASTER=path.join(FILM,'renders/blended-moss-v6.mp4');
 const CHROME='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
@@ -64,7 +64,7 @@ async function finalExports(raw){
 // Frame boundaries are existing V6 IDRs. Intermediate divisions let independent
 // source viewports capture shorter spans without additional lossy movie encodes.
 const ranges=[[694,1260],[1260,1779],[2620,3000],[3000,3330]];
-const part=([a,b])=>path.join(CACHE,`v7-${a}-${b}.mp4`);
+const part=([a,b])=>path.join(HERE,'.build',`v7-${a}-${b}.mp4`);
 async function assemble(){
  const pattern=path.join(CACHE,'v6-%01d.mp4');
  await execAsync('ffmpeg',['-v','error','-y','-i',MASTER,'-an','-c:v','copy','-avoid_negative_ts','disabled','-f','segment','-segment_times','23.133333,59.3,87.333333,111','-reset_timestamps','1','-segment_format_options','movflags=+faststart:avoid_negative_ts=disabled',pattern]);
