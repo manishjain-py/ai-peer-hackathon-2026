@@ -1,0 +1,25 @@
+{
+ "request_id": "01a1e83d-b994-7e61-b328-febf81a6df8b",
+ "billable_units_header": "8.0",
+ "inputs_sent": {
+  "prompt": "The exact felt Moss in the reference speaks the supplied audio naturally while making a note in its small open notebook. Mouth opens and closes clearly in exact sync with the supplied audio from 0.3 seconds, a simple friendly dark felt opening, NO human lips, NO teeth, NO tongue. The notebook and wooden pencil stay visible throughout. For the first one second, look kindly at camera with pencil ready. From 1.2 seconds through 4.4 seconds, while KEEPING THE MOUTH SPEAKING, tip gaze slightly toward the notebook and visibly write several short pencil strokes across the page with wrist and paw movement, then briefly look back to camera while continuing to write. Pen tip must touch the notebook page. Simultaneous talking AND writing for at least three seconds. Preserve exact Moss green felt, cream face and belly, curled sprout, ears, amber pendant, proportions, notebook and pencil. Full body inside existing margins, feet planted, locked frontal camera, no zoom or reframing. Uniform pure magenta #FF00FF background. No shadow, text, subtitles, music or extra objects. Five seconds continuous calm action.",
+  "image_url": "https://v3b.fal.media/files/b/0ab2cbeb/w9VIMtAhHDKjJUCDiIhnL_moss-notebook-keyframe.png",
+  "target_audio_url": "https://v3b.fal.media/files/b/0ab2cbeb/ppJjuMh422l_Z1iDndVjp_m4b-guide.wav",
+  "duration": 5,
+  "resolution": "768P",
+  "prompt_expansion_mode": "disabled",
+  "seed": 171126501
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab2cbec/osu29qzkUuq2Tit5uf2uB_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "osu29qzkUuq2Tit5uf2uB_minimax-h3.mp4",
+   "file_size": 3100097
+  },
+  "expanded_prompt": null,
+  "timings": {
+   "inference": 0.8063605259994802
+  }
+ }
+}

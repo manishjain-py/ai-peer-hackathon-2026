@@ -1,0 +1,2 @@
+time_utc,session,endpoint,units,unit_price_usd,cost_usd,request_file,output_file,note,request_id,seconds
+2026-11-17 06:41:33,moss-v5-controller,fal-ai/elevenlabs/tts/multilingual-v2,0.123,0.1,0.0123,demo-video/moss-ocean/requests/ocean-v5.json,demo-video/moss-ocean/audio/ocean-v5-source.mp3,"V39 fictional information-ocean narration. Same Matilda Multilingual v2; invented Ram only, no private input. | cost basis: billed units reported by fal.ai",01a1e83d-2d45-7c22-aefa-c6c6b04ed65f,6

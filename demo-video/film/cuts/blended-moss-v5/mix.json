@@ -1,0 +1,95 @@
+{
+  "about": "V39: preserved V4 introduction and morning/ending. Retimed middle with same Lyria composition and one new Matilda information-ocean line. Audio guide in moss-ocean/audio.",
+  "music": {
+    "file": "../moss-ocean/audio/bed-moss-v5.wav",
+    "gain_db": -7.0,
+    "in": 0,
+    "fade_in": 0.01,
+    "fade_out": 0.1,
+    "duck_ratio": 8,
+    "duck_attack": 60,
+    "duck_release": 900,
+    "note": "Same Lyria b2. Thin bars58/82; continuous second-form progression84\u2013100; ocean lift90, selection94, brief98. Actual bed PCM retained0\u201357.9 and99.9\u2013119.6."
+  },
+  "sfx": [
+    {
+      "id": "phone",
+      "file": "audio/sfx/phone.wav",
+      "at": 12.125,
+      "gain_db": -8,
+      "event_s": 12.125,
+      "sync_s": 0,
+      "note": "the phone lights up in the sleeper close-up (clip 3.5 s at rate 0.8 from 1.8)"
+    },
+    {
+      "id": "rise",
+      "file": "audio/sfx/rise.wav",
+      "at": 12.45,
+      "gain_db": -17,
+      "event_s": 12.45,
+      "sync_s": 0,
+      "note": "Original phone/Moss emergence shimmer."
+    },
+    {
+      "id": "push",
+      "file": "audio/sfx/push.wav",
+      "at": 14.3,
+      "gain_db": -11,
+      "event_s": 16.3,
+      "sync_s": 2.0,
+      "note": "Direct phone/Moss zoom arrives at home16.3; rising whoosh ends there."
+    },
+    {
+      "id": "change-1",
+      "file": "audio/sfx/change-1.wav",
+      "at": 59.05,
+      "gain_db": -12,
+      "event_s": 59.2,
+      "sync_s": 0.15,
+      "note": "soft swish on the cut to Zoom"
+    },
+    {
+      "id": "change-2",
+      "file": "audio/sfx/change-2.wav",
+      "at": 81.85,
+      "gain_db": -13,
+      "event_s": 82,
+      "sync_s": 0.15,
+      "note": "the same, brighter, on the cut to Slack"
+    },
+    {
+      "id": "return",
+      "file": "audio/sfx/rise.wav",
+      "at": 101.9,
+      "gain_db": -19,
+      "event_s": 104.2,
+      "sync_s": 2.3,
+      "note": "Quiet morning shimmer supports the laptop greeting; no physical phone-return action inV4."
+    },
+    {
+      "id": "tap",
+      "file": "audio/sfx/tap.wav",
+      "at": 109.8,
+      "gain_db": -10,
+      "event_s": 109.8,
+      "sync_s": 0,
+      "note": "his click on his answer in the laptop brief"
+    },
+    {
+      "id": "end",
+      "file": "audio/sfx/end.wav",
+      "at": 115.7,
+      "gain_db": -18,
+      "event_s": 115.7,
+      "sync_s": 0,
+      "note": "Soft original D-major end-card chime115.7; natural musical cadence follows116.0."
+    }
+  ],
+  "sfx_note": "To move an effect, set at = event_s - sync_s (sync_s is the moment inside the file that belongs on the picture event; audio/sfx/sfx.json lists it per file). All effects are made by audio/sfx/make_sfx.py.",
+  "master": {
+    "target": -14,
+    "ceiling": -2.5,
+    "voiceRms": -20
+  },
+  "master_note": "ceiling is -2.5, not -1.5: the limiter in tools/mix.mjs holds SAMPLE peaks 0.3 dB under the ceiling, and the true peak of this mix then comes out about 1 dB higher (measured: ceiling -2.0 gave a true peak of -1.3 dBFS in the AAC file, -2.5 gave -1.8, -3.0 gave -2.5). -2.5 keeps the film file under -1.5 dBFS true peak."
+}

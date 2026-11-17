@@ -1,0 +1,123 @@
+{
+  "id": "p07v5",
+  "voice": "Matilda",
+  "voice_id": "XrExE9yKIg1WjnnlVkGX",
+  "model": "eleven_multilingual_v2",
+  "provider": "ElevenLabs Multilingual v2 through fal.ai",
+  "text": "Thousands of company updates. I find what matters to Ram's role, goals and interests, and bring it into his morning brief.",
+  "spoken": "Thousands of company updates. I find what matters to Rahm's role, goals and interests, and bring it into his morning brief.",
+  "request_id": "01a1e83d-2d45-7c22-aefa-c6c6b04ed65f",
+  "file": "ocean-v5.wav",
+  "seconds": 7.5,
+  "trimmed_front": 0.11,
+  "raw_seconds": 8.255,
+  "peak_dbfs": -2.81,
+  "rms_dbfs": -23.0,
+  "words": [
+    {
+      "w": "Thousands",
+      "s": 0.0,
+      "e": 0.47
+    },
+    {
+      "w": "of",
+      "s": 0.505,
+      "e": 0.563
+    },
+    {
+      "w": "company",
+      "s": 0.633,
+      "e": 0.958
+    },
+    {
+      "w": "updates.",
+      "s": 1.016,
+      "e": 1.701
+    },
+    {
+      "w": "I",
+      "s": 2.305,
+      "e": 2.351
+    },
+    {
+      "w": "find",
+      "s": 2.467,
+      "e": 2.7
+    },
+    {
+      "w": "what",
+      "s": 2.746,
+      "e": 2.874
+    },
+    {
+      "w": "matters",
+      "s": 2.932,
+      "e": 3.28
+    },
+    {
+      "w": "to",
+      "s": 3.327,
+      "e": 3.396
+    },
+    {
+      "w": "Ram's",
+      "s": 3.477,
+      "e": 3.756
+    },
+    {
+      "w": "role,",
+      "s": 3.803,
+      "e": 4.209
+    },
+    {
+      "w": "goals",
+      "s": 4.36,
+      "e": 4.731
+    },
+    {
+      "w": "and",
+      "s": 4.766,
+      "e": 4.847
+    },
+    {
+      "w": "interests,",
+      "s": 4.906,
+      "e": 5.544
+    },
+    {
+      "w": "and",
+      "s": 5.66,
+      "e": 5.811
+    },
+    {
+      "w": "bring",
+      "s": 5.858,
+      "e": 6.055
+    },
+    {
+      "w": "it",
+      "s": 6.101,
+      "e": 6.183
+    },
+    {
+      "w": "into",
+      "s": 6.241,
+      "e": 6.415
+    },
+    {
+      "w": "his",
+      "s": 6.484,
+      "e": 6.577
+    },
+    {
+      "w": "morning",
+      "s": 6.647,
+      "e": 6.937
+    },
+    {
+      "w": "brief.",
+      "s": 6.984,
+      "e": 7.483
+    }
+  ]
+}

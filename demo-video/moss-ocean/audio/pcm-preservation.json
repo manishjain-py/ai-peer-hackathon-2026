@@ -1,0 +1,24 @@
+{
+  "seconds": 119.6,
+  "sample_rate": 48000,
+  "changed_span": [
+    24.6,
+    99.9
+  ],
+  "boundary_fade_ms": 50,
+  "preserved_v4_mix_spans": [
+    {
+      "from": 0,
+      "to": 24.6,
+      "decoded_samples_identical": true,
+      "sha256": "909e3b1101abcd5225dc7addcccdd7a2c6c36ff3b24e9ee81bfd753a80cc5b4a"
+    },
+    {
+      "from": 99.9,
+      "to": 119.6,
+      "decoded_samples_identical": true,
+      "sha256": "350e9a5cb810ea0dafbcfe80cff692a8a468441af1a554255fcc44c740a2e098"
+    }
+  ],
+  "music_source": "same Lyria b2; bar edits documented separately"
+}

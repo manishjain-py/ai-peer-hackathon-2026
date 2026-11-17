@@ -1,0 +1,117 @@
+{
+ "model": "faster-whisper small.en",
+ "mode": "file",
+ "items": [
+  {
+   "file": "demo-video/moss-ocean/audio/ocean-v5.wav",
+   "heard": "thousands of company updates. I find what matters to Rahm's role, goals and interests, and bring it into his morning brief.\"",
+   "words": [
+    {
+     "w": "thousands",
+     "s": 0.0,
+     "e": 0.4
+    },
+    {
+     "w": "of",
+     "s": 0.4,
+     "e": 0.62
+    },
+    {
+     "w": "company",
+     "s": 0.62,
+     "e": 0.92
+    },
+    {
+     "w": "updates.",
+     "s": 0.92,
+     "e": 1.44
+    },
+    {
+     "w": "I",
+     "s": 2.26,
+     "e": 2.44
+    },
+    {
+     "w": "find",
+     "s": 2.44,
+     "e": 2.7
+    },
+    {
+     "w": "what",
+     "s": 2.7,
+     "e": 2.86
+    },
+    {
+     "w": "matters",
+     "s": 2.86,
+     "e": 3.18
+    },
+    {
+     "w": "to",
+     "s": 3.18,
+     "e": 3.46
+    },
+    {
+     "w": "Rahm's",
+     "s": 3.46,
+     "e": 3.78
+    },
+    {
+     "w": "role,",
+     "s": 3.78,
+     "e": 4.02
+    },
+    {
+     "w": "goals",
+     "s": 4.48,
+     "e": 4.62
+    },
+    {
+     "w": "and",
+     "s": 4.62,
+     "e": 4.88
+    },
+    {
+     "w": "interests,",
+     "s": 4.88,
+     "e": 5.22
+    },
+    {
+     "w": "and",
+     "s": 5.74,
+     "e": 5.84
+    },
+    {
+     "w": "bring",
+     "s": 5.84,
+     "e": 6.04
+    },
+    {
+     "w": "it",
+     "s": 6.04,
+     "e": 6.18
+    },
+    {
+     "w": "into",
+     "s": 6.18,
+     "e": 6.44
+    },
+    {
+     "w": "his",
+     "s": 6.44,
+     "e": 6.6
+    },
+    {
+     "w": "morning",
+     "s": 6.6,
+     "e": 6.86
+    },
+    {
+     "w": "brief.\"",
+     "s": 6.86,
+     "e": 7.48
+    }
+   ]
+  }
+ ]
+}

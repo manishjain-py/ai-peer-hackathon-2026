@@ -1,0 +1,109 @@
+{
+ "about": "V39: restored information ocean, compact walkthrough/Slack, speaking while writing.",
+ "shots": "shots.json",
+ "narration": "narration.json",
+ "screens": "screens.json",
+ "script": "script.json",
+ "mix": "mix.json",
+ "layers": [
+  "../_blend/layer",
+  "../_blend/layer-tag-v2",
+  "../../../moss-refinement/layer",
+  "../../../moss-introduction/layer",
+  "../../../moss-ocean/layer"
+ ],
+ "copies": [
+  {
+   "from": "../../../ui-concepts/little-peer/motion-core.js",
+   "to": "src/mascot/little-peer/motion-core.js"
+  },
+  {
+   "from": "../../../ui-concepts/shared/kit.js",
+   "to": "src/mascot/shared/kit.js"
+  },
+  {
+   "from": "../../src/scenes/earth.js",
+   "to": "src/scenes/earth-d3.js"
+  },
+  {
+   "from": "../../../mascot-exploration-v2/motion/25-moss.webm",
+   "to": "src/mascot/tag/moss-assets/wave.webm"
+  },
+  {
+   "from": "../../../mascot-exploration-v2/avatars/25-moss.png",
+   "to": "src/mascot/tag/moss-assets/avatar.png"
+  },
+  {
+   "from": "../../../moss-film/assets/moss-attentive.webm",
+   "to": "src/mascot/tag/moss-assets/attentive.webm"
+  },
+  {
+   "from": "../../../moss-film/assets/moss-present.webm",
+   "to": "src/mascot/tag/moss-assets/present.webm"
+  },
+  {
+   "from": "../../../mascot-exploration-v2/avatars/25-moss.png",
+   "to": "assets/screens/peer-face-moss.png"
+  },
+  {
+   "from": "../../../moss-acting/assets/moss-notebook.webm",
+   "to": "src/mascot/tag/moss-assets/notebook.webm"
+  },
+  {
+   "from": "../../../moss-acting/assets/moss-listen.webm",
+   "to": "src/mascot/tag/moss-assets/listen.webm"
+  },
+  {
+   "from": "../../../moss-acting/assets/moss-reassure.webm",
+   "to": "src/mascot/tag/moss-assets/reassure.webm"
+  },
+  {
+   "from": "../../../moss-acting/assets/moss-acknowledge.webm",
+   "to": "src/mascot/tag/moss-assets/acknowledge.webm"
+  },
+  {
+   "from": "../../../ui-concepts/moss-v3/acting.js",
+   "to": "src/mascot/tag/acting.js"
+  },
+  {
+   "from": "../../../moss-refinement/assets/moss-stamp.webm",
+   "to": "src/mascot/tag/moss-assets/stamp.webm"
+  },
+  {
+   "from": "../../../moss-refinement/assets/moss-speak-m1.webm",
+   "to": "src/mascot/tag/moss-assets/speak-m1.webm"
+  },
+  {
+   "from": "../../../moss-refinement/assets/moss-speak-m2.webm",
+   "to": "src/mascot/tag/moss-assets/speak-m2.webm"
+  },
+  {
+   "from": "../../../moss-refinement/assets/moss-speak-m4b.webm",
+   "to": "src/mascot/tag/moss-assets/speak-m4b.webm"
+  },
+  {
+   "from": "../../../moss-refinement/assets/phone-last.jpg",
+   "to": "assets/screens/phone-last.jpg"
+  },
+  {
+   "from": "../../../moss-refinement/assets/home.jpg",
+   "to": "assets/screens/home.jpg"
+  },
+  {
+   "from": "../../../moss-refinement/assets/moss-type.webm",
+   "to": "src/mascot/tag/moss-assets/type.webm"
+  },
+  {
+   "from": "../../../moss-introduction/assets/setup-first.png",
+   "to": "assets/screens/setup-first.png"
+  },
+  {
+   "from": "../../../moss-ocean/assets/moss-speak-write.webm",
+   "to": "src/mascot/tag/moss-assets/speak-write.webm"
+  },
+  {
+   "from": "../../world.json",
+   "to": "assets/ocean-world.json"
+  }
+ ]
+}

@@ -1,0 +1,137 @@
+{
+  "retained_count": 22,
+  "voices": [
+    {
+      "id": "h1",
+      "file": "audio/lines/h1.wav",
+      "sha256": "8d587773552ba5e2c161c54cc3ad4c3da11ef99f8770290ada8c07f0aedeb189",
+      "metadata_unchanged": true
+    },
+    {
+      "id": "h2b",
+      "file": "audio/lines/h2b.wav",
+      "sha256": "d341d4c3f7f7d037fc46adf7a3c15857b201c27992f31e99f2a1621adc0e5d26",
+      "metadata_unchanged": true
+    },
+    {
+      "id": "h3",
+      "file": "audio/lines/h3.wav",
+      "sha256": "346e546a9c5e2a656187f39bb5e7bd3c82082e18c9d87c8fc85b96ab4e986ba8",
+      "metadata_unchanged": true
+    },
+    {
+      "id": "p01",
+      "file": "audio/lines/p01.wav",
+      "sha256": "0f2df5d905ba809440da77363281fc47f803afb99f728511278de89174c4abc5",
+      "metadata_unchanged": true
+    },
+    {
+      "id": "p02v4",
+      "file": "../moss-introduction/audio/intro-v4.wav",
+      "sha256": "5bf4078a28d5954a62a60670ca37603424e85f4f678cc249c4f9036be12b95af",
+      "metadata_unchanged": true
+    },
+    {
+      "id": "n01",
+      "file": "audio/lines/n01.wav",
+      "sha256": "dd3d943f03aa384079f5c72a7ec072f12f9fac014519a8c04c4d83b7eb279f80",
+      "metadata_unchanged": true
+    },
+    {
+      "id": "n02",
+      "file": "audio/lines/n02.wav",
+      "sha256": "16d7353dd34da6d386c8598105ebfc55e70940f2195e4eadab5bde44d434f7bc",
+      "metadata_unchanged": true
+    },
+    {
+      "id": "p03",
+      "file": "audio/lines/p03.wav",
+      "sha256": "1aa1b1a3ea7d957f3ae18c51730c69dee8bfcb78111953bffdf608bad69b1527",
+      "metadata_unchanged": true
+    },
+    {
+      "id": "n03",
+      "file": "audio/lines/n03.wav",
+      "sha256": "db5bd776310dcda54a1e3308a887655c5c8385f79f280c6b85b9af3f61908bd0",
+      "metadata_unchanged": true
+    },
+    {
+      "id": "n04",
+      "file": "audio/lines/n04.wav",
+      "sha256": "0e719c6ed1c11301530eb3cc3750a896c41489f730048e7c6e52634e2e94e70b",
+      "metadata_unchanged": true
+    },
+    {
+      "id": "n05",
+      "file": "audio/lines/n05.wav",
+      "sha256": "c5b1a29834d13dd7d44435eb0a0d5b9652b98805fa66756fba7cbdba241a25dd",
+      "metadata_unchanged": true
+    },
+    {
+      "id": "n06",
+      "file": "audio/lines/n06.wav",
+      "sha256": "52ef637dbdf855b1f916b7ddeb6bc92d11b36c591691675b2eff648c7512dc0e",
+      "metadata_unchanged": true
+    },
+    {
+      "id": "p05",
+      "file": "audio/lines/p05.wav",
+      "sha256": "555c6068b7777cd15d52054450b35c6654a3b6a4a8c19da53a70cfbd5cf07601",
+      "metadata_unchanged": true
+    },
+    {
+      "id": "m1",
+      "file": "audio/lines/m1.wav",
+      "sha256": "f6ac05c93f6a5578c6b111b5855735ab915c1d8653eda179a8511d3c20eb36ed",
+      "metadata_unchanged": true
+    },
+    {
+      "id": "m2",
+      "file": "audio/lines/m2.wav",
+      "sha256": "df75c1c8601f5d0a5f25329abf16e512e1a596f768c6323c85619e4748da121e",
+      "metadata_unchanged": true
+    },
+    {
+      "id": "m3",
+      "file": "audio/lines/m3.wav",
+      "sha256": "8d697c37bce53d8b23ed296093c6c9483f3b6be1fa540154b3a17ab0b234f0f0",
+      "metadata_unchanged": true
+    },
+    {
+      "id": "m4b",
+      "file": "audio/lines/m4b.wav",
+      "sha256": "42fa4e7d434cd212c7e26ef5bd77ea23707c158b787861f6b2cc8b140ba3b4bd",
+      "metadata_unchanged": true
+    },
+    {
+      "id": "p06",
+      "file": "audio/lines/p06.wav",
+      "sha256": "3c79e8c15dedf22108f698ff0c9fc0cd09f76c20fe84470ca64096eb295d2602",
+      "metadata_unchanged": true
+    },
+    {
+      "id": "p08",
+      "file": "audio/lines/p08.wav",
+      "sha256": "90e57217321074d70641257aefb172ce248ff593eef9f85bfeeccd6f88e265c0",
+      "metadata_unchanged": true
+    },
+    {
+      "id": "p10",
+      "file": "audio/lines/p10.wav",
+      "sha256": "51f9eb85b58ff7a13f786940cc2add7ac7627416fc66f956c67ac896e17b101c",
+      "metadata_unchanged": true
+    },
+    {
+      "id": "p11",
+      "file": "audio/lines/p11.wav",
+      "sha256": "8181359f41d623d04a37c20e85f5958d4c54e427742fafe1d99d31078a5f5656",
+      "metadata_unchanged": true
+    },
+    {
+      "id": "p12",
+      "file": "audio/lines/p12.wav",
+      "sha256": "e4510eccbe4b6250eda0900ddd2bc86df8814cbf011af1bf198a2a95dc601392",
+      "metadata_unchanged": true
+    }
+  ]
+}

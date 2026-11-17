@@ -1,0 +1,24 @@
+{
+  "endpoint": "fal-ai/elevenlabs/tts/multilingual-v2",
+  "inputs": {
+    "text": "Thousands of company updates. I find what matters to Rahm's role, goals and interests, and bring it into his morning brief.",
+    "voice": "Matilda",
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "speed": 1.0,
+    "timestamps": true,
+    "previous_text": "A question from another time zone doesn't have to wait a day.",
+    "next_text": "By morning it's all in one brief.",
+    "language_code": "en"
+  },
+  "expect": {
+    "units": 123,
+    "unit": "character",
+    "unit_price": 0.0001,
+    "cost_usd": 0.0123,
+    "basis": "fal official endpoint rate $0.10 per 1000 characters, checked 2026-11-17"
+  },
+  "output": "demo-video/moss-ocean/audio/ocean-v5-source",
+  "note": "V39 fictional information-ocean narration. Same Matilda Multilingual v2; invented Ram only, no private input."
+}
