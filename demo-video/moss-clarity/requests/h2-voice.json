@@ -1,0 +1,22 @@
+{
+  "endpoint": "fal-ai/elevenlabs/tts/multilingual-v2",
+  "inputs": {
+    "text": "Rahm is out of office, but the update I needed is already here.",
+    "voice": "Chris",
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "speed": 1.05,
+    "timestamps": true,
+    "language_code": "en"
+  },
+  "expect": {
+    "units": 63,
+    "unit": "character",
+    "unit_price": 0.0001,
+    "cost_usd": 0.0063,
+    "basis": "Official fal ElevenLabs Multilingual v2, checked2026-11-17; $0.10/1000 characters"
+  },
+  "output": "demo-video/moss-clarity/audio/h2-v6-source",
+  "note": "V41 clean fictional colleague2 same Chris voice, no ellipsis/repetition; no private input"
+}

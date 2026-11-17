@@ -1,0 +1,25 @@
+{
+ "request_id": "01a1ea95-9079-76d3-8550-1e3733420769",
+ "billable_units_header": "19.200000000000003",
+ "inputs_sent": {
+  "prompt": "Preserve exactly the fictional man, clothing, face, meeting room, afternoon lighting and framing of the reference. Locked camera, crisp cinematic realistic shot. He looks toward the offscreen display to camera right, then speaks the supplied audio naturally in precise lip synchronization starting at0.9 seconds. He says: Ram is out of office, but the update I needed is already here. One fluent sentence with no hesitation, restart, extra words or fumble. Natural small smile of pleased surprise, restrained facial motion, no large turn or gesture. Lips remain closed before speech and after it ends at about3.63 seconds. No music, no subtitles, no text, no camera movement. Six seconds continuous.",
+  "image_url": "https://v3b.fal.media/files/b/0ab2db46/TWRwrJvh0p2y0QlLjORuH_hook-2.png",
+  "target_audio_url": "https://v3b.fal.media/files/b/0ab2db47/DdUHs_KDoA3n0KYx6ix-9_h2-guide.wav",
+  "seed": 171126602,
+  "duration": 6,
+  "resolution": "1080P",
+  "prompt_expansion_mode": "disabled"
+ },
+ "result": {
+  "video": {
+   "url": "https://v3b.fal.media/files/b/0ab2db47/y5fvR-NgsRG0-TryWrx6x_minimax-h3.mp4",
+   "content_type": "video/mp4",
+   "file_name": "y5fvR-NgsRG0-TryWrx6x_minimax-h3.mp4",
+   "file_size": 8347379
+  },
+  "expanded_prompt": null,
+  "timings": {
+   "inference": 3.8845310199994856
+  }
+ }
+}

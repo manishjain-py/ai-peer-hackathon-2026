@@ -1,0 +1,142 @@
+{
+  "lines": [
+    {
+      "id": "h1",
+      "text": "It's 2 AM for Ram... and I just got my answer.",
+      "start": 0.46,
+      "end": 3.32
+    },
+    {
+      "id": "h2b",
+      "text": "Ram is out of office, but the update I needed is already here.",
+      "start": 4.0,
+      "end": 6.73
+    },
+    {
+      "id": "h3",
+      "text": "Does he ever sleep?",
+      "start": 8.4,
+      "end": 9.46
+    },
+    {
+      "id": "p01",
+      "text": "He does. I'm the one who's up.",
+      "start": 10.3,
+      "end": 12.04
+    },
+    {
+      "id": "p02v4",
+      "text": "I'm Ram's AI Peer, his proactive AI teammate, keeping him informed and covering for him around the clock.",
+      "start": 15.0,
+      "end": 21.667
+    },
+    {
+      "id": "n01",
+      "text": "Setting me up takes one click.",
+      "start": 22.2,
+      "end": 24.01
+    },
+    {
+      "id": "n02",
+      "text": "I read only what Ram can already see, signed in as him.",
+      "start": 24.9,
+      "end": 28.08
+    },
+    {
+      "id": "p03",
+      "text": "I know his projects, his code, his conversations, the way he knows them.",
+      "start": 30.1,
+      "end": 34.1
+    },
+    {
+      "id": "n03",
+      "text": "Every fact I learn shows where it came from.",
+      "start": 37.1,
+      "end": 39.54
+    },
+    {
+      "id": "n04",
+      "text": "Then I tell him what matters, with a next step for each.",
+      "start": 42.1,
+      "end": 45.26
+    },
+    {
+      "id": "n05",
+      "text": "He can ask me anything about his work.",
+      "start": 47.6,
+      "end": 49.69
+    },
+    {
+      "id": "n06",
+      "text": "Every answer shows its sources, and how sure I am.",
+      "start": 52.1,
+      "end": 55.13
+    },
+    {
+      "id": "m1",
+      "text": "Hi everyone. I'm Ram's AI Peer.",
+      "start": 60.7,
+      "end": 63.15
+    },
+    {
+      "id": "m2",
+      "text": "His update: the payout retry fix is done and in review. Failed payouts are down to 0.4%.",
+      "start": 63.9,
+      "end": 71.09
+    },
+    {
+      "id": "m3",
+      "text": "Great. Can we switch it on for Brazil this week?",
+      "start": 71.5,
+      "end": 74.23
+    },
+    {
+      "id": "m4b",
+      "text": "That's Ram's call. I'll put it in his morning brief, and he'll get back to you.",
+      "start": 74.65,
+      "end": 78.86
+    },
+    {
+      "id": "p06",
+      "text": "A question from another time zone doesn't have to wait a day.",
+      "start": 80.2,
+      "end": 83.14
+    },
+    {
+      "id": "p07v5",
+      "text": "Thousands of company updates. I find what matters to Ram's role, goals and interests, and bring it into his morning brief.",
+      "start": 88.4,
+      "end": 95.9
+    },
+    {
+      "id": "p08",
+      "text": "By morning it's all in one brief.",
+      "start": 100.3,
+      "end": 102.24
+    },
+    {
+      "id": "p10",
+      "text": "And the decisions that are his, because they always were.",
+      "start": 107.2,
+      "end": 109.91
+    },
+    {
+      "id": "p11",
+      "text": "It's always night for someone on your team.",
+      "start": 111.6,
+      "end": 114.021
+    },
+    {
+      "id": "p12",
+      "text": "Now someone's still there.",
+      "start": 114.4,
+      "end": 115.74
+    }
+  ],
+  "overlaps": [],
+  "removed": [
+    "p05 full line",
+    "m1 second sentence"
+  ],
+  "p12_ends_before_final_cadence": true
+}

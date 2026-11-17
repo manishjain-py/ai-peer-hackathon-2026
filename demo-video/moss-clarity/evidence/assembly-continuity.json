@@ -1,0 +1,46 @@
+{
+  "assembled_frames": 3588,
+  "presentation_timestamps_exact_30fps_grid": true,
+  "retained_video_packets": 2998,
+  "retained_ranges_frames": [
+    [
+      0,
+      1050
+    ],
+    [
+      1260,
+      2620
+    ],
+    [
+      3000,
+      3588
+    ]
+  ],
+  "retained_packet_payload_and_timestamps_identical": true,
+  "native4k_tail_100_to_119_6_frames": 588,
+  "native4k_tail_all_packet_payload_and_timestamps_identical": true,
+  "recaptured_learned_frames": 210,
+  "recaptured_slack_bridge_frames": 20,
+  "recaptured_ocean_frames": 360,
+  "last_presentation_timestamp_s": 119.566667,
+  "slack_send_repair": {
+    "parent_checkpoint": "94b3311",
+    "retained_frame_ranges_end_exclusive": [
+      [
+        0,
+        2370
+      ],
+      [
+        2620,
+        3588
+      ]
+    ],
+    "retained_picture_packets": 3338,
+    "identical_retained_payloads_timestamps_durations_and_sizes": true,
+    "recaptured_frames": 250,
+    "presentation_grid": "3588 consecutive frames at 30 fps",
+    "aac_packet_count": 5608,
+    "aac_packet_hash_including_timestamps": "e3c1975d25f62f45bba16d42e8f1a2583538e9c45d5461cff8f722bcf15b199f",
+    "aac_identical_to_pause_checkpoint": true
+  }
+}

@@ -1,0 +1,385 @@
+{
+  "purpose": "Read-only audit of final native source build. Raster shots retain their measured original resolutions.",
+  "pages": [
+    {
+      "name": "film",
+      "devicePixelRatio": 2,
+      "viewport": [
+        1920,
+        1080
+      ],
+      "fonts": [
+        {
+          "family": "Manrope",
+          "status": "loaded"
+        },
+        {
+          "family": "\"TGB Serif\"",
+          "status": "loaded"
+        },
+        {
+          "family": "\"TGB Mono\"",
+          "status": "loaded"
+        },
+        {
+          "family": "\"TGB Sans\"",
+          "status": "loaded"
+        }
+      ],
+      "canvases": [
+        {
+          "class": "wcv",
+          "backing": [
+            3840,
+            2160
+          ],
+          "css": [
+            0,
+            0
+          ],
+          "internalTargets": null
+        },
+        {
+          "class": "wcv",
+          "backing": [
+            3840,
+            2160
+          ],
+          "css": [
+            0,
+            0
+          ],
+          "internalTargets": null
+        },
+        {
+          "class": "",
+          "backing": [
+            3840,
+            2160
+          ],
+          "css": [
+            1920,
+            1080
+          ],
+          "internalTargets": {
+            "scene": [
+              3840,
+              2160
+            ],
+            "work": [
+              3840,
+              2160
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "walk",
+      "devicePixelRatio": 2,
+      "viewport": [
+        1920,
+        1080
+      ],
+      "fonts": [
+        {
+          "family": "Manrope",
+          "status": "loaded"
+        },
+        {
+          "family": "Inter",
+          "status": "loaded"
+        },
+        {
+          "family": "Caveat",
+          "status": "loaded"
+        },
+        {
+          "family": "Instrument Serif",
+          "status": "loaded"
+        },
+        {
+          "family": "Instrument Serif",
+          "status": "loaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "status": "loaded"
+        }
+      ],
+      "canvases": []
+    }
+  ],
+  "sources": [
+    {
+      "file": "film/assets/shots/hook-1-ram-r1.mp4",
+      "bytes": 4612616,
+      "codec_name": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "moss-clarity/assets/hook-2-v6-source.mp4",
+      "bytes": 8347379,
+      "codec_name": "h264",
+      "width": 1928,
+      "height": 1076,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "film/assets/shots/hook-3-final-v1.mp4",
+      "bytes": 3276205,
+      "codec_name": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "film/assets/shots/hook-sleeper-lit-v1.mp4",
+      "bytes": 3183223,
+      "codec_name": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "film/assets/shots/morning-wake-final-v3.mp4",
+      "bytes": 5578873,
+      "codec_name": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "film/assets/shots/morning-desk-t1.mp4",
+      "bytes": 2179664,
+      "codec_name": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "mascot-exploration-v2/motion/25-moss.webm",
+      "bytes": 1340468,
+      "codec_name": "vp9",
+      "width": 768,
+      "height": 768,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "mascot-exploration-v2/avatars/25-moss.png",
+      "bytes": 331380,
+      "codec_name": "png",
+      "width": 512,
+      "height": 512,
+      "pix_fmt": "rgb24",
+      "r_frame_rate": "25/1"
+    },
+    {
+      "file": "moss-film/assets/moss-attentive.webm",
+      "bytes": 1227149,
+      "codec_name": "vp9",
+      "width": 768,
+      "height": 768,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "moss-film/assets/moss-present.webm",
+      "bytes": 1330902,
+      "codec_name": "vp9",
+      "width": 768,
+      "height": 768,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "moss-acting/assets/moss-notebook.webm",
+      "bytes": 1001462,
+      "codec_name": "vp9",
+      "width": 768,
+      "height": 768,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "moss-acting/assets/moss-listen.webm",
+      "bytes": 1064605,
+      "codec_name": "vp9",
+      "width": 768,
+      "height": 768,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "moss-acting/assets/moss-reassure.webm",
+      "bytes": 1151910,
+      "codec_name": "vp9",
+      "width": 768,
+      "height": 768,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "moss-acting/assets/moss-acknowledge.webm",
+      "bytes": 1049866,
+      "codec_name": "vp9",
+      "width": 768,
+      "height": 768,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "moss-refinement/assets/moss-stamp.webm",
+      "bytes": 1276180,
+      "codec_name": "vp9",
+      "width": 768,
+      "height": 768,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "moss-refinement/assets/moss-speak-m1.webm",
+      "bytes": 1499769,
+      "codec_name": "vp9",
+      "width": 768,
+      "height": 768,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "moss-refinement/assets/moss-speak-m2.webm",
+      "bytes": 1838126,
+      "codec_name": "vp9",
+      "width": 768,
+      "height": 768,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "moss-refinement/assets/moss-speak-m4b.webm",
+      "bytes": 1121422,
+      "codec_name": "vp9",
+      "width": 768,
+      "height": 768,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "moss-refinement/assets/phone-last.jpg",
+      "bytes": 62223,
+      "codec_name": "mjpeg",
+      "width": 1920,
+      "height": 1080,
+      "pix_fmt": "yuvj420p",
+      "r_frame_rate": "25/1"
+    },
+    {
+      "file": "moss-refinement/assets/home.jpg",
+      "bytes": 47164,
+      "codec_name": "mjpeg",
+      "width": 1920,
+      "height": 1080,
+      "pix_fmt": "yuvj420p",
+      "r_frame_rate": "25/1"
+    },
+    {
+      "file": "moss-refinement/assets/moss-type.webm",
+      "bytes": 1287748,
+      "codec_name": "vp9",
+      "width": 768,
+      "height": 768,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "moss-clarity/assets/setup-first-v6.png",
+      "bytes": 815754,
+      "codec_name": "png",
+      "width": 3840,
+      "height": 2160,
+      "pix_fmt": "rgb24",
+      "r_frame_rate": "25/1"
+    },
+    {
+      "file": "moss-ocean/assets/moss-speak-write.webm",
+      "bytes": 975252,
+      "codec_name": "vp9",
+      "width": 768,
+      "height": 768,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "shots/meeting-listen/amara-listen-b.mp4",
+      "bytes": 5028668,
+      "codec_name": "h264",
+      "width": 1344,
+      "height": 768,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "shots/meeting-listen/amara-listen-a.mp4",
+      "bytes": 10062375,
+      "codec_name": "h264",
+      "width": 1344,
+      "height": 768,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "shots/meeting-listen/vikram-listen-a.mp4",
+      "bytes": 9883795,
+      "codec_name": "h264",
+      "width": 1344,
+      "height": 768,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "shots/meeting-listen/daniel-listen-b.mp4",
+      "bytes": 7219817,
+      "codec_name": "h264",
+      "width": 1344,
+      "height": 768,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "shots/meeting-listen/vikram-listen-b.mp4",
+      "bytes": 9708008,
+      "codec_name": "h264",
+      "width": 1344,
+      "height": 768,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "shots/meeting-listen/daniel-listen-a.mp4",
+      "bytes": 7183459,
+      "codec_name": "h264",
+      "width": 1344,
+      "height": 768,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    },
+    {
+      "file": "shots/meeting-amara/amara-m3-r1.mp4",
+      "bytes": 9747138,
+      "codec_name": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1"
+    }
+  ]
+}

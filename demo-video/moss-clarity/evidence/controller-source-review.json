@@ -1,0 +1,58 @@
+{
+  "reviewer": "moss_v6_controller",
+  "reviewed_utc": "2026-11-17T18:05:54.688611+00:00",
+  "scope": "source frames, composition, readable1080 frames, timing and visible actions; final encoded acceptance follows separately",
+  "status": "PAUSED AT USER REQUEST: latest real-paw source accepted; newest encoded frames await independent controller acceptance",
+  "batches": [
+    {
+      "label": "first",
+      "points": 21
+    },
+    {
+      "label": "physical",
+      "points": 17
+    },
+    {
+      "label": "refined",
+      "points": 8
+    },
+    {
+      "label": "all-scenes",
+      "points": 57
+    },
+    {
+      "label": "actions",
+      "points": 23
+    },
+    {
+      "label": "paw-contact",
+      "points": 14
+    }
+  ],
+  "accepted": [
+    "Full-width learned-to-brief downward document flow",
+    "Large unobscured1080 brief and rules typography",
+    "No global speech subtitles or Zoom live captions",
+    "Normal-length physical arm, card held at wrist, three individual placements",
+    "Native setup crossfade removes final duplicate AI label",
+    "Physical confidence stamp contact and departure",
+    "Mouth movement and notebook strokes coexist during the promise",
+    "Morning wake ends before turn/reach; direct laptop greeting",
+    "Exact CTAcase and hostname; no on-screen NASA credit",
+    "Corrected native4K internal Earth targets and original calibrated camera framing; seven final source points reviewed",
+    "Real saved felt paw replaces synthetic arm; exactly two natural arms and visible paper-corner contact checked at full1080 for all three actions",
+    "Learned highlight now ends at its actual measured source chip"
+  ],
+  "rejected_then_fixed": [
+    "Initial overlong ocean arm replaced with body-following short arm",
+    "An inherited transition still had a duplicate AI tag; regenerated fromV6 native source",
+    "Empty morning transition was populated earlier",
+    "Earth output canvas was4K but internal targets were1080; closing-only recapture required",
+    "Full-size1080 inspection revealed the original hanging arm remained under the new articulated arm; replacement/masking required before final acceptance"
+  ],
+  "limits": [
+    "Generated motion/people retain their true source dimensions; vectorUI and canvas rendered native4K",
+    "Audio model opinions support checks but are not a direct human listening claim"
+  ],
+  "pause_note": "Worker final exports/integrity/extraction completed before pause; no V6 Telegram delivery, merge or tag. Wait for explicit resume."
+}

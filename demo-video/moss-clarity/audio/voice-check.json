@@ -1,0 +1,179 @@
+{
+ "model": "faster-whisper small.en",
+ "mode": "file",
+ "items": [
+  {
+   "file": "demo-video/film/audio/lines/h2b.wav",
+   "heard": "Rom's out of office, but the update I needed is already here.",
+   "words": [
+    {
+     "w": "Rom's",
+     "s": 0.0,
+     "e": 0.3
+    },
+    {
+     "w": "out",
+     "s": 0.3,
+     "e": 0.4
+    },
+    {
+     "w": "of",
+     "s": 0.4,
+     "e": 0.5
+    },
+    {
+     "w": "office,",
+     "s": 0.5,
+     "e": 0.82
+    },
+    {
+     "w": "but",
+     "s": 1.04,
+     "e": 1.24
+    },
+    {
+     "w": "the",
+     "s": 1.24,
+     "e": 1.38
+    },
+    {
+     "w": "update",
+     "s": 1.38,
+     "e": 1.62
+    },
+    {
+     "w": "I",
+     "s": 1.62,
+     "e": 1.78
+    },
+    {
+     "w": "needed",
+     "s": 1.78,
+     "e": 1.98
+    },
+    {
+     "w": "is",
+     "s": 1.98,
+     "e": 2.2
+    },
+    {
+     "w": "already",
+     "s": 2.2,
+     "e": 2.4
+    },
+    {
+     "w": "here.",
+     "s": 2.4,
+     "e": 2.78
+    }
+   ]
+  },
+  {
+   "file": "demo-video/moss-clarity/audio/h2-v6.wav",
+   "heard": "ROM is out of office, but the update I needed is already here.",
+   "words": [
+    {
+     "w": "ROM",
+     "s": 0.0,
+     "e": 0.24
+    },
+    {
+     "w": "is",
+     "s": 0.24,
+     "e": 0.38
+    },
+    {
+     "w": "out",
+     "s": 0.38,
+     "e": 0.5
+    },
+    {
+     "w": "of",
+     "s": 0.5,
+     "e": 0.58
+    },
+    {
+     "w": "office,",
+     "s": 0.58,
+     "e": 0.86
+    },
+    {
+     "w": "but",
+     "s": 1.04,
+     "e": 1.12
+    },
+    {
+     "w": "the",
+     "s": 1.12,
+     "e": 1.24
+    },
+    {
+     "w": "update",
+     "s": 1.24,
+     "e": 1.5
+    },
+    {
+     "w": "I",
+     "s": 1.5,
+     "e": 1.66
+    },
+    {
+     "w": "needed",
+     "s": 1.66,
+     "e": 1.86
+    },
+    {
+     "w": "is",
+     "s": 1.86,
+     "e": 2.04
+    },
+    {
+     "w": "already",
+     "s": 2.04,
+     "e": 2.24
+    },
+    {
+     "w": "here.",
+     "s": 2.24,
+     "e": 2.56
+    }
+   ]
+  },
+  {
+   "file": "demo-video/moss-clarity/audio/m1-v6.wav",
+   "heard": "Hi everyone, I'm Ram's AI peer.",
+   "words": [
+    {
+     "w": "Hi",
+     "s": 0.0,
+     "e": 0.22
+    },
+    {
+     "w": "everyone,",
+     "s": 0.22,
+     "e": 0.56
+    },
+    {
+     "w": "I'm",
+     "s": 0.92,
+     "e": 1.18
+    },
+    {
+     "w": "Ram's",
+     "s": 1.18,
+     "e": 1.52
+    },
+    {
+     "w": "AI",
+     "s": 1.52,
+     "e": 1.8
+    },
+    {
+     "w": "peer.",
+     "s": 1.8,
+     "e": 2.04
+    }
+   ]
+  }
+ ]
+}
