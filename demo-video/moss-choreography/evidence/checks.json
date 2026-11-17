@@ -1,0 +1,54 @@
+{
+  "exports": [
+    {
+      "file": "blended-moss-v7.mp4",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "seconds": 119.6,
+      "frames": 3588,
+      "fps": 30,
+      "bytes": 163707681,
+      "sha256": "d5bfc4b12f4786cc62c7e5c243ca03307d814c45ac49eef78c2cf64d7e785d1a",
+      "full_decode": "passed",
+      "integrated_lufs": -14.0,
+      "true_peak_dbtp": -1.6
+    },
+    {
+      "file": "blended-moss-v7-1080p.mp4",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "seconds": 119.6,
+      "frames": 3588,
+      "fps": 30,
+      "bytes": 47810354,
+      "sha256": "9f27de8563e746ec57ee08226f0dc7ec464378a88683cbfe5b0ec02a8915c2dc",
+      "full_decode": "passed",
+      "integrated_lufs": -14.0,
+      "true_peak_dbtp": -1.6
+    }
+  ],
+  "retained_parent_picture_ranges": [
+    [
+      0,
+      694
+    ],
+    [
+      1779,
+      2620
+    ],
+    [
+      3330,
+      3588
+    ]
+  ],
+  "retained_picture_packets": 1793,
+  "all_video_presentation_timestamps_match_v6": true,
+  "exact_audio_packets_and_timestamps_from_v6": 5608,
+  "morning_brief_data_identical_to_v6": true,
+  "parent_movie_hashes_match": true,
+  "new_generation_usd": 0
+}

@@ -1,0 +1,46 @@
+// V41: one full-width paper document. Learned → brief → ask move down the same page.
+// Source times are mapped by the film renderer. No text is baked into a movie frame.
+import {learned,brief,ask,sources,rules} from '../shared/data.js';
+import {buildTag} from './mascot.js';
+import {walkPose} from './walk-pose.js';
+const E=(tag,cls,html='',parent)=>{const e=document.createElement(tag);e.className=cls;e.innerHTML=html;if(parent)parent.append(e);return e;};
+const clamp=x=>Math.max(0,Math.min(1,x)),p=(t,a,b)=>clamp((t-a)/(b-a)),smooth=x=>x*x*(3-2*x),mix=(a,b,k)=>a+(b-a)*k;
+const short={directory:'Directory',docs:'Docs',slack:'Slack',code:'Code',tickets:'Tickets',mail:'Mail'};
+export function createClarityPage(stage){
+ const node=E('div','v6-page','',stage),rail=E('div','v6-rail','<b>AI Peer</b><small>HOST PAYOUTS</small>',node);
+ const nav=['Set up','What I learned','Your brief','Ask your Peer','How it works'].map(s=>E('div','v6-nav',s,rail));
+ const paper=E('div','v6-document','',node);E('div','v6-header','Hello, Ram <span>Updated Nov 15</span>',paper);
+ const chips=E('div','v6-sources','',paper);sources.forEach(s=>E('span','',s.short+' <b>✓</b>',chips));
+ const learnedBox=E('section','v6-learned','<h1>What I learned</h1><p>'+learned.summary+'</p>',paper);
+ const facts=learned.facts.map((f,i)=>E('div','v6-fact',`<i>${String(i+1).padStart(2,'0')}</i><b>${f.title}</b><span>${short[f.source]} · ${f.date}</span>`,learnedBox));
+ const B=E('section','v6-brief','<h1>Your brief</h1><p>'+brief.lead+'</p>',paper);
+ const items=brief.items.map((it,i)=>E('div','v6-item',`<small>${short[it.source]} · ${it.date} · ${it.ref}</small><b>${it.title}</b><div><strong>NEXT</strong> ${it.next}</div>`,B));
+ const A=E('section','v6-ask','<h1>Ask your Peer</h1>',paper);
+ const input=E('div','v6-input','',A);const typed=E('span','', '',input);E('b','','Ask →',input);
+ E('div','v6-examples',ask.examples.join('　 ·　 '),A);
+ const answer=E('div','v6-answer','<small>Ram’s AI Peer</small>',A),answerText=E('p','', '',answer),citations=E('div','v6-citations',ask.sources.map(s=>`<span>${s.ref}</span>`).join(''),answer);
+ const seal=E('div','v6-seal','<i>✓</i><b>HIGH</b><span>CONFIDENCE</span>',answer);
+ const thinking=E('div','v6-thinking','Checking the sources…<span>Slack · Payments Risk · PR #4182</span>',answer);
+ const board=E('div','v6-board','<h1>Your sources. Your choices.</h1>',node);
+ rules.slice(0,3).forEach((r,i)=>E('div','v6-rule',`<i>${String(i+1).padStart(2,'0')}</i><div><b>${r.title}</b><p>${r.body}</p></div>`,board));
+ const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 1920 1080');svg.style.cssText='position:absolute;inset:0;width:1920px;height:1080px;overflow:visible';node.append(svg);
+ const line=document.createElementNS(svg.namespaceURI,'path');line.setAttribute('fill','none');line.setAttribute('stroke','#d59632');line.setAttribute('stroke-width','4');line.setAttribute('stroke-linecap','round');svg.append(line);
+ const moss=buildTag(svg,{height:255});
+ const style=E('style','',`
+ .v6-page{position:absolute;inset:0;background:#f4f3eb;color:#1d2920;font-family:Inter,sans-serif;overflow:hidden}.v6-rail{position:absolute;left:0;top:0;width:330px;height:1080px;background:#eae7da;border-right:2px solid #d7d3c4;padding:44px 26px;box-sizing:border-box}.v6-rail>b{display:block;font-size:34px;color:#205f46;padding-left:16px}.v6-rail small{display:block;font:600 15px monospace;letter-spacing:2px;color:#53624f;padding:15px 16px 40px}.v6-nav{font:550 23px Inter;padding:17px 18px;border-radius:12px;margin:6px 0}.v6-nav.on{background:#d8ddc9;color:#174d35;font-weight:750}.v6-document{position:absolute;left:400px;top:0;width:1400px}.v6-header{position:absolute;top:46px;font:600 42px Inter}.v6-header span{font:500 20px Inter;color:#596452;margin-left:30px}.v6-sources{position:absolute;top:130px;display:flex;gap:13px}.v6-sources span{font:650 23px Inter;padding:16px 22px;border:2px solid #cbd5bf;border-radius:13px;background:#fffef6}.v6-sources b{color:#27704d;margin-left:14px}.v6-page section{position:absolute;left:0;width:1400px}.v6-page h1{font:650 56px/1.1 Inter;letter-spacing:-1.5px;margin:0 0 22px}.v6-page section>p{font:450 29px/1.45 Inter;max-width:1320px;margin:0 0 24px;color:#40513e}.v6-learned{top:240px}.v6-fact{position:relative;display:flex;gap:20px;align-items:center;height:82px;border-top:1px solid #d5dac9;padding:0 20px;border-radius:10px;box-sizing:border-box;transition:none}.v6-fact i{font:600 20px monospace;color:#5c6a53;font-style:normal}.v6-fact>b{font:600 30px Inter;letter-spacing:-.4px}.v6-fact>span{margin-left:auto;font:550 20px Inter;white-space:nowrap;color:#285f44;background:#e2ebda;padding:10px 14px;border-radius:18px}.v6-fact.active{background:#f8e4b9;box-shadow:0 0 0 2px #d79e3e}.v6-brief{top:1150px}.v6-brief>p{font-size:31px}.v6-item{height:155px;box-sizing:border-box;border:2px solid #d5dbc8;border-radius:16px;background:#fffef7;margin-bottom:16px;padding:19px 24px}.v6-item small{display:block;color:#466348;font:550 19px Inter;margin-bottom:10px}.v6-item>b{font:650 27px/1.2 Inter;display:block}.v6-item>div{font:500 24px Inter;margin-top:13px;color:#2f5d3d}.v6-item strong{font:750 16px Inter;background:#286345;color:white;padding:5px 9px;border-radius:6px;margin-right:10px}.v6-item.active{background:#fff1d3;border-color:#d89f40}.v6-ask{top:2300px}.v6-input{height:100px;display:flex;align-items:center;border:2px solid #aebea4;border-radius:24px;background:#fffef9;padding:0 28px;font:550 32px Inter}.v6-input>b{margin-left:auto;padding:23px 30px;background:#205f46;color:#fff;border-radius:18px;font:700 28px Inter}.v6-examples{font:500 20px Inter;color:#53624e;margin:22px 0}.v6-answer{position:relative;padding:32px;border:2px solid #d3d9c7;border-radius:22px;background:#fffef8;height:490px;box-sizing:border-box}.v6-answer>small{font:700 23px Inter;color:#296147}.v6-answer>p{font:450 33px/1.4 Inter;width:1040px;margin:18px 0}.v6-citations{display:flex;gap:12px;position:absolute;left:32px;bottom:30px}.v6-citations span{font:600 19px Inter;color:#245b3d;background:#e5ecdd;border:1px solid #bacbb2;padding:11px 15px;border-radius:20px}.v6-seal{position:absolute;right:30px;top:155px;width:235px;height:235px;border:6px solid #236148;border-radius:50%;color:#236148;background:#f4f3eb;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:inset 0 0 0 8px #f4f3eb,inset 0 0 0 11px #236148;transform:rotate(-9deg)}.v6-seal i{font:800 30px Inter;font-style:normal}.v6-seal b{font:800 47px Inter;margin:9px 0}.v6-seal span{font:800 22px Inter}.v6-thinking{position:absolute;inset:0;background:#fffef8;border-radius:22px;display:flex;flex-direction:column;justify-content:center;align-items:center;font:500 40px Inter;color:#52614c}.v6-thinking span{font:550 24px Inter;margin-top:25px;color:#35614b}.v6-board{position:absolute;left:400px;top:110px;width:1400px;height:815px;box-sizing:border-box;padding:60px 65px;background:#1b583e;border:2px solid #12452f;border-radius:32px;color:#fff;box-shadow:0 25px 70px #143d2924}.v6-board h1{font-size:49px;margin-bottom:55px}.v6-rule{display:flex;gap:25px;border-top:2px solid #a6ccb755;padding:30px 0}.v6-rule i{font:600 25px monospace;color:#b1dbc1;font-style:normal;padding-top:4px}.v6-rule b{font:700 36px Inter;color:#fff}.v6-rule p{font:450 28px/1.35 Inter;color:#e0efe3;margin:14px 0 0}
+ `,node);
+ return{node,render(t){
+  const down=smooth(p(t,31.65,32.8)),askDown=smooth(p(t,39.45,40.4));const scroll=mix(0,1040,down)+1160*askDown;paper.style.transform=`translateY(${-scroll}px)`;
+  const isRules=t>=50;paper.style.opacity=isRules?0:1;board.style.display=isRules?'':'none';board.style.opacity=smooth(p(t,50,50.5));
+  nav.forEach((n,i)=>n.classList.toggle('on',i===(isRules?4:t>=39.5?3:t>=31.7?2:1)));
+  let fi=-1;if(t>=26.1&&t<31.6)fi=[0,2,4][Math.min(2,Math.floor((t-26.1)/1.8))];
+  facts.forEach((f,i)=>{f.classList.toggle('active',fi===i);f.style.opacity=smooth(p(t,22.1+i*.1,22.5+i*.1));});
+  const bi=t>=32.9&&t<39?Math.min(3,Math.floor((t-32.9)/1.45)):-1;items.forEach((it,i)=>it.classList.toggle('active',bi===i));
+  const stampBox=seal.getBoundingClientRect();
+  moss.draw(walkPose(t,stampBox));
+  if(fi>=0){const f=facts[fi].getBoundingClientRect(),si=sources.findIndex(x=>x.id===learned.facts[fi].source),c=chips.children[si].getBoundingClientRect(),y=f.top+f.height/2;line.setAttribute('d',`M ${f.right} ${y} Q 1865 ${y} 1865 ${c.bottom+16} L ${c.left+c.width/2} ${c.bottom+16}`);line.style.opacity='1';}else line.style.opacity='0';
+  typed.textContent=t<41.1?'Ask about your work…':ask.question.slice(0,Math.floor(p(t,41.1,42.7)*ask.question.length));
+  answer.style.opacity=smooth(p(t,43,43.25));thinking.style.display=t<45.5?'':'none';
+  const full=ask.answer.map(a=>a.text).join(' ');answerText.textContent=full.slice(0,Math.floor(p(t,45.5,47.3)*full.length));citations.style.opacity=smooth(p(t,47.45,47.75));seal.style.opacity=smooth(p(t,47.9,48.06));seal.style.transform=`rotate(-9deg) scale(${mix(1.35,1,smooth(p(t,47.9,48.06)))})`;
+ }};
+}
