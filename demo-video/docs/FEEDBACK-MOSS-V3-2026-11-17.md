@@ -35,3 +35,13 @@ remain preserved. These are revision instructions, not a new final approval.
 - Existing ElevenLabs plan is authorized for the new fictional narration (C5/V12); record
   character usage. Current pay-per-use total remains $51.387927/$100. No new art is needed
   for the setup introduction. Manual scene/media walk is acceptance, then PR/merge/tag.
+
+## Implementation note
+
+The direct ElevenLabs credential is absent on this Mac; that attempt stopped locally before
+any API request. The same Matilda voice and Multilingual v2 model are available through the
+already authorized fal.ai account, so the controller used that route under the existing
+generation budget. One106-character request cost $0.0106. Selected narration is6.667seconds
+at normal speed, placed15.0–21.667, with the exact working sentence above. Its local speech
+check matches the words. All other V3 mixed audio is sample-identical outside14–24.6seconds;
+the complete original music bed is reused. Current project total is $51.398527/$100.
