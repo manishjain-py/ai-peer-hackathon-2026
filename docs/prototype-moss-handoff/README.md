@@ -228,18 +228,23 @@ perfect filter. Permission checks must still govern any source/card/detail shown
 
 ## 8. Materialization and completion
 
+**If the receiving copy contains placeholders, use [the media repair transfer](MEDIA-TRANSFER.md).**
+The ready ZIP is built from verified real files on the personal Mac and merges into the
+already copied reference folder. No personal account download, Git setup or installation
+is needed on the company Mac. Verify the overlay before inspecting the movie or assets.
+
 The copied folder should contain real media bytes. [asset-manifest.json](asset-manifest.json)
 records sizes and SHA256 values. A tiny text file beginning
 `version https://git-lfs.github.com/spec/v1` is an LFS pointer, not an image/movie. Verify
 required reference videos, static assets and selected actions before wiring them into the
-app. WebM and font files are ordinary Git blobs here; `.png`, `.jpg`, `.mp4`, `.wav`
-and other media patterns use LFS.
+app. Seven older selected WebMs also use LFS through nested package `.gitattributes`;
+the six newer selected WebMs and fonts are ordinary Git blobs. Images/movies and other
+media patterns use LFS. An extension alone does not establish whether bytes are present.
 
-If files are missing/pointers, restore materialized files from the copied source or the
-existing Git LFS store. If an authorized remote fetch is necessary, use a writable staging
-copy and the repository's established access, leaving the supplied reference unchanged.
-For that staging checkout, an explicit include prevents the root `film/**` exclusion from
-causing confusion:
+Hydrate missing files on the **personal Mac**, verify them there and transfer the checked
+filesystem ZIP described in `MEDIA-TRANSFER.md`. The company Mac should verify and extract
+that local bundle, not acquire personal accounts or fetch the assets itself. The source-side
+hydration command is:
 
 ```sh
 git lfs pull --include="demo-video/**" --exclude=""

@@ -40,6 +40,12 @@ on that Mac supplies the functional truth and is where implementation happens. D
 replace it with this repo's archived `peer/`. The handoff is prepared and verified here;
 no target prototype changes have been made on this Mac. No new movie or Telegram send.
 
+If the copied reference has LFS placeholders, use
+`docs/prototype-moss-handoff/MEDIA-TRANSFER.md`. Hydrate and package on the personal Mac;
+the checked Downloads ZIP overlays the existing reference on the company Mac without
+replacing folders or requiring personal account access there. Verify real bytes before
+asking that agent to interpret the film.
+
 ## What is where
 
 | Need | Read |

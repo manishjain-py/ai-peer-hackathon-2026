@@ -1,5 +1,19 @@
 # AI Peer demo video: state
 
+**V40 media transfer repaired (17 November 2026):** the receiving Mac reported LFS
+placeholders in the copied reference. Canonical and retained `moss-acting` checkouts on
+this personal Mac both match all 43 asset-manifest hashes before and after the requested
+`git lfs pull --include="demo-video/**" --exclude=""`. Seven older WebMs are LFS-backed
+through nested attributes; the handoff guide is corrected. A verified materialized ZIP
+is ready in Downloads: `Moss-v5-media-transfer-2026-11-17.zip` (501,306,894 bytes;
+SHA256 `36f963794ad3a4c030a34c87699bd985d99ca6f1e0252f801082f8d2eb03e8f4`).
+All 131 entries pass pointer/path/symlink/hash checks; an extracted overlay passes with
+an unrelated existing file preserved. It contains all 43 manifest files, all 46 public
+V5 evidence files and current handoff/transfer tools. ZIP/checksum/report remain outside
+Git. See `../../docs/prototype-moss-handoff/MEDIA-TRANSFER.md`. Copy/extract on the other
+Mac; no account download or installation is needed there. No media was regenerated and
+no target-prototype work or Telegram send occurred. V5 media hashes/checkpoint are unchanged.
+
 **V40 handoff prepared (17 November 2026):** Manish will copy this repository to the Mac
 holding his actual prototype. [The central implementation guide](../../docs/prototype-moss-handoff/README.md),
 verified 43-file asset/reference/font manifest and paste-ready prompt are saved. Moss v5
@@ -1143,6 +1157,11 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 
 ## Next
 
+**V40 media repair:** transfer the ready Downloads ZIP/checksum to the company Mac and
+merge-extract it into the existing demo reference root, preserving other files. Verify
+with the bundled helper, then resume actual visual inspection/implementation there.
+The source-Mac media repair and documentation are complete; no new render is needed.
+
 **V40:** the receiving agent follows `docs/prototype-moss-handoff/README.md` in the copied
 reference and implements in its own current prototype. This source-Mac documentation task
 is complete. No new film, generation or Telegram delivery starts from this handoff.
@@ -1582,3 +1601,5 @@ and 7 still hold.
 | 2026-11-17 07:06 UTC | Codex moss_v5_controller + moss_v5_builder | V39 complete: compact information ocean with explicit relevance, tighter setup/Slack, simultaneous Zoom speech/writing; PR 22 merged `30de35e`, checkpoint `blended-moss-v5`, Telegram 23119/23120. | Await V5 review; $0.2123 new, $51.610827 total; weekly usage 23%; nothing runs |
 
 | 2026-11-17 | Codex moss_v5_controller; read-only inventory moss_asset_inventory | V40: portable current-prototype implementation guide, exact request, verified 43-file manifest and paste prompt; Moss v5 designated implementation reference. | Docs only on this Mac; no target code or media changes; remote implementation pending |
+
+| 2026-11-17 | Codex moss_v5_controller; read-only transfer audit moss_transfer_audit | Repaired V40 reference delivery: successful personal-Mac LFS pull, 43/43 hashes before/after, materialized 131-entry overlay ZIP and standalone verifier; nested WebM LFS documentation corrected. | ZIP outside Git, ready to copy; no company-Mac account/download/install or new media generation |
