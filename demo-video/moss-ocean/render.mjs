@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Public-only Moss full film. Frame capture explicitly waits for every scene and alpha-video
-// seek. V36 uses the revised local mix; paid providers are never invoked here.
+// seek. V39 uses the retimed local mix; paid providers are never invoked here.
 import fs from 'node:fs';
 import path from 'node:path';
 import http from 'node:http';
@@ -56,14 +56,11 @@ async function main(){
  try{const link=url+'/film/index.html';const p=await init(browser,link);await board(p);await p.close();console.log('V5 source probes ready');if(probeOnly)return;
  const rangeArg=args.find(x=>x.startsWith('--range='));
  if(rangeArg){const [a,b]=rangeArg.slice(8).split(',').map(Number),raw=path.join(CACHE,'preview-picture.mp4');await encodeSegment(browser,link,Math.round(a*FPS),Math.round(b*FPS),raw);await execAsync('ffmpeg',['-v','error','-y','-i',raw,'-ss',String(a),'-t',String(b-a),'-i',MASTER,'-map','0:v:0','-map','1:a:0','-vf','scale=1280:720','-c:v','libx264','-preset','fast','-crf','20','-c:a','aac','-b:a','192k','-movflags','+faststart',path.join(EVIDENCE,`preview-${a}-${b}.mp4`)]);return;}
- if(true){
+ {
   const parts=[path.join(CACHE,'full-first.mp4'),path.join(CACHE,'full-second.mp4')];await Promise.all([encodeSegment(browser,link,0,1794,parts[0]),encodeSegment(browser,link,1794,3588,parts[1])]);
   const list=path.join(CACHE,'full-concat.txt');fs.writeFileSync(list,parts.map(p=>`file '${p}'`).join('\n')+'\n');const raw=path.join(CACHE,'full-picture.mp4');await execAsync('ffmpeg',['-v','error','-y','-f','concat','-safe','0','-i',list,'-c','copy',raw]);
   const master=path.join(FILM,'renders/blended-moss-v5.mp4');await execAsync('ffmpeg',['-v','error','-y','-i',raw,'-i',MASTER,'-map','0:v:0','-map','1:a:0','-c:v','libx264','-preset','slow','-crf','22','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart',master]);await execAsync('ffmpeg',['-v','error','-y','-i',master,'-vf','scale=1280:720','-c:v','libx264','-preset','slow','-crf','23','-c:a','copy','-movflags','+faststart',path.join(FILM,'renders/blended-moss-v5-720p.mp4')]);
-  fs.writeFileSync(path.join(EVIDENCE,'assembly.json'),JSON.stringify({mode:'full',frames:3588,seconds:119.6,note:'Fresh deterministic full render. Exact preservation of V3 compressed/decoded frames is not claimed for this optional route.'},null,2)+'\n');
- }else{
-  const spans=[[420,738],[3000,3168]];await Promise.all(spans.map(([a,b],i)=>encodeSegment(browser,link,a,b,path.join(CACHE,`changed-${i}.mp4`))));
-  await execAsync('python3',[path.join(HERE,'tools/assemble_patch.py')]);
+  fs.writeFileSync(path.join(EVIDENCE,'assembly.json'),JSON.stringify({mode:'full',frames:3588,seconds:119.6,note:'V5 deterministic full render. Earlier movie files remain intact; exact compressed/decoded picture identity is not claimed.'},null,2)+'\n');
  }
  console.log('V5 complete exports ready');
  }finally{await browser.close();srv.close();}

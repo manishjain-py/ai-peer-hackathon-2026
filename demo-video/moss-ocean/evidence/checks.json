@@ -1,0 +1,143 @@
+{
+  "predecessor_sha256": {
+    "blended-tag-v2.mp4": "7756283021b7237605337f079e435babb25143c2fb1d9023e6b70204a952b039",
+    "blended-moss-v1.mp4": "c6672bd1b42b09b5c66c4dbd55bdb2f37ef5dbac6e79594f061f3fc5cb4f2941",
+    "blended-moss-v2.mp4": "acf0d9aa68f86f085c24a698f095e5606cf86b23b29db1f83965d6029aaac2b4",
+    "blended-moss-v3.mp4": "e1dd89b0d0fbc99d544fdc69ae16539d53acf00ba83c981f567388311ec50841",
+    "blended-moss-v4.mp4": "c23a8e7e5b5d20e650ee20508e52cd6e2ab2cbda37b0a49032756f26c2113432"
+  },
+  "predecessors_unchanged": true,
+  "unchanged_voice_entries": 22,
+  "new_voice": "p07v5",
+  "new_voice_start": 90.4,
+  "new_voice_duration": 7.5,
+  "timeline": {
+    "zoom": 59.2,
+    "slack": 82,
+    "ocean": 90,
+    "morning": 100,
+    "globe": 111,
+    "endcard": 115.7
+  },
+  "exports": [
+    {
+      "file": "film/renders/blended-moss-v5.mp4",
+      "sha256": "1d10d67a6d3f62a60da35c8ff7d47d0f2df5d6d6e6551169d76d5155239252c8",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "start_time": "0.000000",
+            "duration": "119.600000",
+            "nb_read_frames": "3588",
+            "side_data_list": [
+              {}
+            ]
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "start_time": "0.000000",
+            "duration": "119.600000",
+            "nb_read_frames": "5607"
+          }
+        ],
+        "format": {
+          "duration": "119.600000",
+          "size": "387536779"
+        }
+      },
+      "full_decode": "passed",
+      "loudness": {
+        "lufs": -14.0,
+        "true_peak_dbfs": -1.7
+      },
+      "aac_packets": {
+        "hash": "ed06315a95fb69eb8c4aa65c8531ed7cd8f899a5b699692d27a203ce90364d20",
+        "count": 5608
+      }
+    },
+    {
+      "file": "film/renders/blended-moss-v5-720p.mp4",
+      "sha256": "f7f7ed39a06bf3583bf5118b2f53c8b9f61dc6963431460f40732c0ba20bc48a",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "30/1",
+            "start_time": "0.000000",
+            "duration": "119.600000",
+            "nb_read_frames": "3588",
+            "side_data_list": [
+              {}
+            ]
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "start_time": "0.000000",
+            "duration": "119.600000",
+            "nb_read_frames": "5607"
+          }
+        ],
+        "format": {
+          "duration": "119.600000",
+          "size": "25365901"
+        }
+      },
+      "full_decode": "passed",
+      "loudness": {
+        "lufs": -14.0,
+        "true_peak_dbfs": -1.7
+      },
+      "aac_packets": {
+        "hash": "ed06315a95fb69eb8c4aa65c8531ed7cd8f899a5b699692d27a203ce90364d20",
+        "count": 5608
+      }
+    }
+  ],
+  "picture_preservation": {
+    "mode": "full",
+    "note": "Fresh deterministic full render; prior movie files unchanged. No decoded-frame identity claim."
+  },
+  "audio_preservation": {
+    "seconds": 119.6,
+    "sample_rate": 48000,
+    "changed_span": [
+      24.6,
+      99.9
+    ],
+    "boundary_fade_ms": 50,
+    "preserved_v4_mix_spans": [
+      {
+        "from": 0,
+        "to": 24.6,
+        "decoded_samples_identical": true,
+        "sha256": "909e3b1101abcd5225dc7addcccdd7a2c6c36ff3b24e9ee81bfd753a80cc5b4a"
+      },
+      {
+        "from": 99.9,
+        "to": 119.6,
+        "decoded_samples_identical": true,
+        "sha256": "350e9a5cb810ea0dafbcfe80cff692a8a468441af1a554255fcc44c740a2e098"
+      }
+    ],
+    "music_source": "same Lyria b2; bar edits documented separately"
+  },
+  "new_cost_usd": 0.2123,
+  "project_cost_usd": 51.610827,
+  "privacy": "Only fictional/public repository data, existing generic Moss art, invented voice. No private recording or real company content."
+}

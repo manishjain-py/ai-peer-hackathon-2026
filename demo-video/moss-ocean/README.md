@@ -46,3 +46,9 @@ seeking the saved clean walkthrough. The original source clips and earlier cuts 
 Cut: `../film/cuts/blended-moss-v5/`. Outputs: `../film/renders/blended-moss-v5.mp4` and
 `blended-moss-v5-720p.mp4`. Source acceptance is recorded in `MANUAL-REVIEW.md`; final
 encoded acceptance, delivery and merge status are recorded in shared controller docs.
+
+Both final exports are controller-accepted:119.600s/3588frames,full decode,−14.0LUFS/
+−1.7dBTP,matching5608 AAC packets. Accepted final evidence covers102 master scene points,
+60 boundaries and39 independent720p frames. `evidence/checks.json` records all prior movie
+hashes unchanged and22 retained voice entries. Delivery/merge details belong to the
+shared controller delivery record; Tagv2 remains the last explicitly user-approved movie.
