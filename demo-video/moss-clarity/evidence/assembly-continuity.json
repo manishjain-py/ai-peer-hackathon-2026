@@ -1,0 +1,26 @@
+{
+  "assembled_frames": 3588,
+  "presentation_timestamps_exact_30fps_grid": true,
+  "retained_video_packets": 2998,
+  "retained_ranges_frames": [
+    [
+      0,
+      1050
+    ],
+    [
+      1260,
+      2620
+    ],
+    [
+      3000,
+      3588
+    ]
+  ],
+  "retained_packet_payload_and_timestamps_identical": true,
+  "native4k_tail_100_to_119_6_frames": 588,
+  "native4k_tail_all_packet_payload_and_timestamps_identical": true,
+  "recaptured_learned_frames": 210,
+  "recaptured_slack_bridge_frames": 20,
+  "recaptured_ocean_frames": 360,
+  "last_presentation_timestamp_s": 119.566667
+}

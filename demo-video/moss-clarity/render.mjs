@@ -69,6 +69,17 @@ async function finalExports(raw){
 async function main(){
  prepare();const{srv,url}=await serve();const browser=await PW.chromium.launch({executablePath:CHROME,headless:true,args:['--disable-background-networking','--disable-component-update','--no-first-run','--hide-scrollbars','--disable-gpu']});
  try{const link=url+'/film/index.html';const p=await init(browser,link);if(args.includes('--setup-frame')){await seek(p,24.6);await p.locator('iframe').screenshot({path:path.join(HERE,'assets/setup-first-v6.png')});console.log('Native V6 setup crossfade saved');await p.close();return;}await board(p);await p.close();console.log('V6 source probes ready');if(probeOnly)return;
+ if(args.includes('--repair-final')){
+  const learned=path.join(CACHE,'repair-learned-v6.mp4'),ocean=path.join(CACHE,'repair-ocean-v6.mp4');
+  await Promise.all([encodeSegment(browser,link,1050,1260,learned),encodeSegment(browser,link,2620,3000,ocean)]);
+  const base=path.join(CACHE,'full-picture-native4k.mp4'),pattern=path.join(CACHE,'final-base-%01d.mp4');
+  await execAsync('ffmpeg',['-v','error','-y','-i',base,'-an','-c:v','copy','-avoid_negative_ts','disabled','-f','segment','-segment_times','35,42,87.333333,100','-reset_timestamps','1','-segment_format_options','movflags=+faststart:avoid_negative_ts=disabled',pattern]);
+  const parts=[path.join(CACHE,'final-base-0.mp4'),learned,path.join(CACHE,'final-base-2.mp4'),ocean,path.join(CACHE,'final-base-4.mp4')],counts=[1050,210,1360,380,588];
+  for(let i=0;i<parts.length;i++){const n=Number(execFileSync('ffprobe',['-v','error','-select_streams','v:0','-show_entries','stream=nb_frames','-of','default=nw=1:nk=1',parts[i]],{encoding:'utf8'}));if(n!==counts[i])throw new Error('Repair segment count '+n+' != '+counts[i]);}
+  const list=path.join(CACHE,'final-repair-concat.txt');fs.writeFileSync(list,parts.map((p,i)=>`file '${p}'\nduration ${counts[i]/30}`).join('\n')+'\n');
+  const raw=path.join(CACHE,'full-picture-final-v6.mp4');await execAsync('ffmpeg',['-v','error','-y','-f','concat','-safe','0','-i',list,'-c','copy',raw]);await finalExports(raw);
+  fs.writeFileSync(path.join(EVIDENCE,'assembly.json'),JSON.stringify({mode:'native4K with two accepted visual repairs',frames:3588,seconds:119.6,segments:parts.map((p,i)=>({file:path.basename(p),frames:counts[i]})),retainedFrames:2998,recapturedLearned:210,recapturedSlackBridgeAndOcean:380,note:'Only35–42 and87⅓–100 recaptured; all other compressed picture retained, including native4K Earth. Actual original felt paw; no extra limb.'},null,2)+'\n');console.log('Final two-repair exports complete');return;
+ }
  if(args.includes('--replace-ending')){
   const ending=path.join(CACHE,'ending-native4k-corrected.mp4');await encodeSegment(browser,link,3250,3588,ending);
   const prior=path.join(CACHE,'full-picture.mp4'),prefix=path.join(CACHE,'exact-prefix-0.mp4');

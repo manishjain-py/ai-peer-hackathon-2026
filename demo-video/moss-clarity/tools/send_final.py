@@ -2,7 +2,7 @@
 """Explicit final V6 Telegram delivery; never invoked by the offline renderer."""
 from pathlib import Path
 from datetime import datetime,timezone
-import hashlib,json,math,os,subprocess,sys,tempfile
+import csv,hashlib,json,math,os,subprocess,sys,tempfile
 
 movie=Path(sys.argv[1]).resolve();receipt=Path(sys.argv[2]).resolve()
 assert movie.name=='blended-moss-v6-1080p.mp4'
@@ -33,7 +33,8 @@ def request(method,fields,file_kind=None):
   return out['result']
  finally:Path(cfg).unlink(missing_ok=True)
 dest=request('getChat',{'chat_id':chat});assert dest['id']==chat and dest.get('title')=='Attention Learnlikemagic'
-data={'version':'blended-moss-v6','status':'partial','actual_movie_seconds':duration,'frames':int(v['nb_frames']),'file':'film/renders/'+movie.name,'sha256':hashlib.sha256(movie.read_bytes()).hexdigest(),'local_bytes':movie.stat().st_size,'new_cost_usd':0.4863,'project_cost_usd':52.097127,'controller_acceptance':'passed','approved_as_final_by_user':False}
+cost=sum(float(r['cost_usd']) for f in (Path(__file__).resolve().parents[1]/'ledger').glob('*.csv') for r in csv.DictReader(f.open()))
+data={'version':'blended-moss-v6','status':'partial','actual_movie_seconds':duration,'frames':int(v['nb_frames']),'file':'film/renders/'+movie.name,'sha256':hashlib.sha256(movie.read_bytes()).hexdigest(),'local_bytes':movie.stat().st_size,'new_cost_usd':round(cost,6),'project_cost_usd':round(51.610827+cost,6),'controller_acceptance':'passed','approved_as_final_by_user':False}
 receipt.parent.mkdir(parents=True,exist_ok=True)
 caption='Moss v6 — final 1:59.6 revision in crisp 1080p. All twelve feedback areas addressed: no subtitles; clearer, vertically stacked content; clean colleague voice; shorter Zoom intro; more Slack typing; Moss physically picks and places three relevant updates; direct wake-to-laptop cut; stronger musical finish; your exact product link. A 4K source-rendered master is saved locally. Earth imagery: NASA Earth Observatory (Black Marble2016; Blue Marble: Next Generation).'
 result=request('sendVideo',{'chat_id':chat,'caption':caption,'supports_streaming':'true','width':v['width'],'height':v['height'],'duration':math.ceil(duration)},'video')

@@ -1,0 +1,325 @@
+{
+  "predecessor_sha256": {
+    "blended-moss-v1.mp4": "c6672bd1b42b09b5c66c4dbd55bdb2f37ef5dbac6e79594f061f3fc5cb4f2941",
+    "blended-moss-v2.mp4": "acf0d9aa68f86f085c24a698f095e5606cf86b23b29db1f83965d6029aaac2b4",
+    "blended-moss-v3.mp4": "e1dd89b0d0fbc99d544fdc69ae16539d53acf00ba83c981f567388311ec50841",
+    "blended-moss-v2-720p.mp4": "5100a99eac405bc9e91c6f770fd938e66e6267e4e6a4ec0a89ece17ed2a885f3",
+    "blended-moss-v3-720p.mp4": "7d9d44c6fc3bb861b97e6dcd71b7a2f4cc21fb8ab3ce1e40a6b06f75e077b293",
+    "blended-moss-v4.mp4": "c23a8e7e5b5d20e650ee20508e52cd6e2ab2cbda37b0a49032756f26c2113432",
+    "blended-moss-v5.mp4": "1d10d67a6d3f62a60da35c8ff7d47d0f2df5d6d6e6551169d76d5155239252c8",
+    "blended-moss-v5-720p.mp4": "f7f7ed39a06bf3583bf5118b2f53c8b9f61dc6963431460f40732c0ba20bc48a",
+    "blended-moss-v4-720p.mp4": "819b58b640e9f1bd6ee180ec8d6705bf5f2604d8fdebffc37519d76563206b46",
+    "blended-tag-v1.mp4": "fc1616ea7fc3b717b3a3501b53d844c387a566ebff6bfa08b5c86472357f3df1",
+    "blended-tag-v2.mp4": "7756283021b7237605337f079e435babb25143c2fb1d9023e6b70204a952b039",
+    "blended-moss-v1-720p.mp4": "0348b89c4c99b315cc0a7b4221db71823b01572796b7c97b3ae8b4ab2fab0651",
+    "blended-little-peer-v1.mp4": "5749532d669c231885085dd894ab735c15dbca086ce3897fbc7e9b7db036ad4d"
+  },
+  "predecessors_unchanged": true,
+  "unchanged_voice_entries": [
+    "h1",
+    "h3",
+    "p01",
+    "p02v4",
+    "n01",
+    "n02",
+    "p03",
+    "n03",
+    "n04",
+    "n05",
+    "n06",
+    "m2",
+    "m3",
+    "m4b",
+    "p06",
+    "p08",
+    "p10",
+    "p11",
+    "p12",
+    "p07v5"
+  ],
+  "timeline": {
+    "zoom": 59.2,
+    "slack": 79,
+    "ocean": 88,
+    "wake": 100,
+    "laptop": 100.7,
+    "globe": 111,
+    "endcard": 115.7
+  },
+  "exports": [
+    {
+      "file": "film/renders/blended-moss-v6.mp4",
+      "sha256": "47e67e31adc0a4e745e30f4cc787d0f29ccf1d0a2a7c4ee0edf762bc4098f3fe",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 3840,
+            "height": 2160,
+            "r_frame_rate": "30/1",
+            "start_time": "0.000000",
+            "duration": "119.600000",
+            "nb_read_frames": "3588",
+            "side_data_list": [
+              {}
+            ]
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "start_time": "0.000000",
+            "duration": "119.600000",
+            "nb_read_frames": "5607"
+          }
+        ],
+        "format": {
+          "duration": "119.600000",
+          "size": "219361038",
+          "tags": {
+            "comment": "Earth imagery: NASA Earth Observatory (Black Marble 2016; Blue Marble: Next Generation). No endorsement implied."
+          }
+        }
+      },
+      "full_decode": "passed",
+      "loudness": {
+        "lufs": -14.0,
+        "true_peak_dbfs": -1.6
+      },
+      "aac_packets": {
+        "sha256": "e3c1975d25f62f45bba16d42e8f1a2583538e9c45d5461cff8f722bcf15b199f",
+        "count": 5608
+      }
+    },
+    {
+      "file": "film/renders/blended-moss-v6-1080p.mp4",
+      "sha256": "3ad6ad0e824e59d13d072cbebf98bbc0739e480c1a858d7e1d50a3a445be4ced",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "start_time": "0.000000",
+            "duration": "119.600000",
+            "nb_read_frames": "3588",
+            "side_data_list": [
+              {}
+            ]
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "start_time": "0.000000",
+            "duration": "119.600000",
+            "nb_read_frames": "5607"
+          }
+        ],
+        "format": {
+          "duration": "119.600000",
+          "size": "47821028",
+          "tags": {
+            "comment": "Earth imagery: NASA Earth Observatory (Black Marble 2016; Blue Marble: Next Generation). No endorsement implied."
+          }
+        }
+      },
+      "full_decode": "passed",
+      "loudness": {
+        "lufs": -14.0,
+        "true_peak_dbfs": -1.6
+      },
+      "aac_packets": {
+        "sha256": "e3c1975d25f62f45bba16d42e8f1a2583538e9c45d5461cff8f722bcf15b199f",
+        "count": 5608
+      }
+    }
+  ],
+  "preserved_movie_files": 13,
+  "audio_preservation": {
+    "seconds": 119.6,
+    "changed_spans": [
+      [
+        3.9,
+        7.2
+      ],
+      [
+        55.7,
+        119.6
+      ]
+    ],
+    "preserved_v5_mix_spans": [
+      {
+        "from": 0,
+        "to": 3.9,
+        "decoded_samples_identical": true,
+        "sha256": "a57e4fe781cf15030adeb730ffe5a31aa1d20f74578a0550e66db21a10f2f736"
+      },
+      {
+        "from": 7.2,
+        "to": 55.7,
+        "decoded_samples_identical": true,
+        "sha256": "4f663779953d4df1ed364fefb1e07edda68de4af56c262a87cfefbe7a0d0552d"
+      }
+    ],
+    "boundary_fade_ms": 50
+  },
+  "cue_audit": {
+    "lines": [
+      {
+        "id": "h1",
+        "text": "It's 2 AM for Ram... and I just got my answer.",
+        "start": 0.46,
+        "end": 3.32
+      },
+      {
+        "id": "h2b",
+        "text": "Ram is out of office, but the update I needed is already here.",
+        "start": 4.0,
+        "end": 6.73
+      },
+      {
+        "id": "h3",
+        "text": "Does he ever sleep?",
+        "start": 8.4,
+        "end": 9.46
+      },
+      {
+        "id": "p01",
+        "text": "He does. I'm the one who's up.",
+        "start": 10.3,
+        "end": 12.04
+      },
+      {
+        "id": "p02v4",
+        "text": "I'm Ram's AI Peer, his proactive AI teammate, keeping him informed and covering for him around the clock.",
+        "start": 15.0,
+        "end": 21.667
+      },
+      {
+        "id": "n01",
+        "text": "Setting me up takes one click.",
+        "start": 22.2,
+        "end": 24.01
+      },
+      {
+        "id": "n02",
+        "text": "I read only what Ram can already see, signed in as him.",
+        "start": 24.9,
+        "end": 28.08
+      },
+      {
+        "id": "p03",
+        "text": "I know his projects, his code, his conversations, the way he knows them.",
+        "start": 30.1,
+        "end": 34.1
+      },
+      {
+        "id": "n03",
+        "text": "Every fact I learn shows where it came from.",
+        "start": 37.1,
+        "end": 39.54
+      },
+      {
+        "id": "n04",
+        "text": "Then I tell him what matters, with a next step for each.",
+        "start": 42.1,
+        "end": 45.26
+      },
+      {
+        "id": "n05",
+        "text": "He can ask me anything about his work.",
+        "start": 47.6,
+        "end": 49.69
+      },
+      {
+        "id": "n06",
+        "text": "Every answer shows its sources, and how sure I am.",
+        "start": 52.1,
+        "end": 55.13
+      },
+      {
+        "id": "m1",
+        "text": "Hi everyone. I'm Ram's AI Peer.",
+        "start": 60.7,
+        "end": 63.15
+      },
+      {
+        "id": "m2",
+        "text": "His update: the payout retry fix is done and in review. Failed payouts are down to 0.4%.",
+        "start": 63.9,
+        "end": 71.09
+      },
+      {
+        "id": "m3",
+        "text": "Great. Can we switch it on for Brazil this week?",
+        "start": 71.5,
+        "end": 74.23
+      },
+      {
+        "id": "m4b",
+        "text": "That's Ram's call. I'll put it in his morning brief, and he'll get back to you.",
+        "start": 74.65,
+        "end": 78.86
+      },
+      {
+        "id": "p06",
+        "text": "A question from another time zone doesn't have to wait a day.",
+        "start": 80.2,
+        "end": 83.14
+      },
+      {
+        "id": "p07v5",
+        "text": "Thousands of company updates. I find what matters to Ram's role, goals and interests, and bring it into his morning brief.",
+        "start": 88.4,
+        "end": 95.9
+      },
+      {
+        "id": "p08",
+        "text": "By morning it's all in one brief.",
+        "start": 100.3,
+        "end": 102.24
+      },
+      {
+        "id": "p10",
+        "text": "And the decisions that are his, because they always were.",
+        "start": 107.2,
+        "end": 109.91
+      },
+      {
+        "id": "p11",
+        "text": "It's always night for someone on your team.",
+        "start": 111.6,
+        "end": 114.021
+      },
+      {
+        "id": "p12",
+        "text": "Now someone's still there.",
+        "start": 114.4,
+        "end": 115.74
+      }
+    ],
+    "overlaps": [],
+    "removed": [
+      "p05 full line",
+      "m1 second sentence"
+    ],
+    "p12_ends_before_final_cadence": true
+  },
+  "native_capture": {
+    "ui": "HTML/SVG at2x browser device density; source-generated setup crossfade; no compressed walkthrough used for visible picture",
+    "canvas": "World and Earth backing at2x; source logical1920x1080",
+    "capture": "3840x2160 JPEG99 \u2192 H.264 CRF16, muxed without another master picture encode",
+    "source_limit": "Retained generated people and Moss art retain their original raster resolution; not all footage is native4K"
+  },
+  "privacy": "Only repository fictional data, generic invented people/Moss and authorized narration. No private recordings or actual company screens.",
+  "new_cost_usd": 0.4863,
+  "project_cost_usd": 52.097127
+}

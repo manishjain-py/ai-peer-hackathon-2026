@@ -1,0 +1,31 @@
+{
+  "mode": "native4K with two accepted visual repairs",
+  "frames": 3588,
+  "seconds": 119.6,
+  "segments": [
+    {
+      "file": "final-base-0.mp4",
+      "frames": 1050
+    },
+    {
+      "file": "repair-learned-v6.mp4",
+      "frames": 210
+    },
+    {
+      "file": "final-base-2.mp4",
+      "frames": 1360
+    },
+    {
+      "file": "repair-ocean-v6.mp4",
+      "frames": 380
+    },
+    {
+      "file": "final-base-4.mp4",
+      "frames": 588
+    }
+  ],
+  "retainedFrames": 2998,
+  "recapturedLearned": 210,
+  "recapturedSlackBridgeAndOcean": 380,
+  "note": "Only35–42 and87⅓–100 recaptured; all other compressed picture retained, including native4K Earth. Actual original felt paw; no extra limb."
+}

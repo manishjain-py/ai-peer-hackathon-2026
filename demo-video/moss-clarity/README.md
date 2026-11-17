@@ -1,5 +1,7 @@
 # Moss v6: clarity, physical selection and a direct call to action
 
+**PAUSED at Manish's explicit request for an app restart.** Read [PAUSED.md](PAUSED.md). Latest exports exist; final independent acceptance and delivery remain pending. Resume only after his explicit request.
+
 V41 rebuilds the public fictional-data film from editable source at 3840×2160, 30 fps.
 The logical 1920px composition is captured at 2× device density; the world canvas and
 Earth renderer also use 2× backing resolution, including the Earth’s internal scene and

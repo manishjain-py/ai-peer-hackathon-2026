@@ -2,6 +2,15 @@
 
 17 November 2026. Worker source review, independently reviewed by the controller.
 
+Final source repairs (accepted at full1080): `paw-contact-1/2.jpg` and
+`paw-contact-1080/` replace the earlier drawn-arm ocean. The actual raised felt paw
+from the saved present performance grips each paper corner; exactly two original
+arms remain. No extra SVG limb is drawn. A close inspection also corrected the
+learned-fact source line: its endpoint now measures the matching Docs/Code/Tickets
+chip directly. Final repair captures cover35–42 and87⅓–100 (the latter includes20
+unchanged Slack bridge frames for a closed-GOP join). Earlier proofs below are the
+review history, not the final ocean anatomy.
+
 - `first-1/2.jpg`: initial complete changed-scene proof. Found an overlong ocean arm.
 - `physical-1/2.jpg`: corrected body-following grip and three individual placements;
   each paper stays on the same wrist path until release. Accepted by controller.
