@@ -5,7 +5,7 @@ web page whose picture is a pure function of the film time, captured frame by fr
 
 ## Moss v7 picture reference
 
-The current approved film is v8 at the private checkpoint `stable-moss-v8-controls`. This directory retains the [earlier v7 picture reference](renders/blended-moss-v7.mp4). [Current approval](../docs/MOSS-V8-APPROVAL.md).
+The current full film is Moss v8 · Brief Bindery at the private checkpoint `stable-moss-v8-brief-bindery`. This directory retains the [earlier v7 picture reference](renders/blended-moss-v7.mp4). [Current approval](../docs/MOSS-V8-APPROVAL.md).
 
 ## Base/Draft 3 renderer
 

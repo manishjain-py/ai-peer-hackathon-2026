@@ -1,6 +1,6 @@
 # AI Peer demo video: state
 
-**Current approval (V47): Moss v8 is the final demo.** Both approved editions are pinned in the private film archive at `stable-moss-v8-controls`; see the [approval record](MOSS-V8-APPROVAL.md). Six standalone information-stream previews passed pre-production and post-render reviews and were delivered on Telegram. The private audition checkpoint is `moss-v8-stream-auditions`. Manish’s selection is pending. The earlier review and delivery notes below record prior milestones.
+**Final and delivered (V48): Moss v8 · Brief Bindery.** Manish selected option 06. Both full editions with that 12-second scene, Peer controls, soundtrack A and Ribbon Pull are pinned at `stable-moss-v8-brief-bindery` in the private archive. Telegram delivery is complete. The previous approved movie remains at `stable-moss-v8-controls`. [Release record](MOSS-V8-APPROVAL.md).
 
 
 **V46 delivered for review.** The 119.600-second Moss v8 cut adds a 5.20-second control panel at 0:55 with a short Matilda line. Ram chooses where the peer may act, edits reply instructions and sets what it can share. The new film is in the private archive at `review-moss-v8-controls`. Both exports were delivered to Telegram. The previously approved film remains at `stable-moss-v7-a-ribbon-pull`. New cost $0.0062; project total $54.383327 of $100.
@@ -1181,7 +1181,7 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 
 ## Next
 
-Await Manish’s selection among the six delivered information-stream auditions. Use `stable-moss-v8-controls` for the current full movie.
+The selected Brief Bindery release is complete. Use `stable-moss-v8-brief-bindery` for the full movie.
 
 **V40 media repair:** transfer the ready Downloads ZIP/checksum to the company Mac and
 merge-extract it into the existing demo reference root, preserving other files. Verify

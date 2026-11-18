@@ -3,9 +3,9 @@
 A new 2-minute "wow" demo video for the AI Peer hackathon project, started 2026-11-14.
 It is a new film, separate from the September concept film in `../film/`.
 
-The approved final demo is Moss v8 with Peer controls, A · Moss in Motion and Ribbon Pull. Use the private `stable-moss-v8-controls` tag for delivery. [Approval record](docs/MOSS-V8-APPROVAL.md).
+The final film is Moss v8 · Brief Bindery with Peer controls, soundtrack A and Ribbon Pull. Use the private `stable-moss-v8-brief-bindery` tag for delivery. [Release record](docs/MOSS-V8-APPROVAL.md).
 
-Further stream concepts are standalone auditions until Manish selects one for integration.
+The earlier pre-Bindery movie is preserved at `stable-moss-v8-controls`.
 
 V40 (17 November): for implementing this design in the actual prototype on another Mac,
 use `../docs/prototype-moss-handoff/README.md`. Moss v5 is the designated implementation
