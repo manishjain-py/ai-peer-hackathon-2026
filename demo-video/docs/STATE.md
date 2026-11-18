@@ -1,6 +1,6 @@
 # AI Peer demo video: state
 
-**V46 review cut in progress.** Manish asked for a compact owner-control panel and matching narration within the two-minute demo. Before editing, the remote `stable-moss-v7-a-ribbon-pull` checkpoint was verified on the public project and private film archive. That tag remains the approved rollback. V46 is a separate private package.
+**V46 delivered for review.** The 119.600-second Moss v8 cut adds a 5.20-second control panel at 0:55 with a short Matilda line. Ram chooses where the peer may act, edits reply instructions and sets what it can share. The new film is in the private archive at `review-moss-v8-controls`. Both exports were delivered to Telegram. The previously approved film remains at `stable-moss-v7-a-ribbon-pull`. New cost $0.0062; project total $54.383327 of $100.
 
 
 **Final and delivered (V45): Moss v7 · A · Ribbon Pull.** The selected end card is integrated into the full 119.600-second film. The private archive holds both final editions, verification and Telegram receipts at `stable-moss-v7-a-ribbon-pull`. This project has the matching documentation checkpoint. [Approval record](MOSS-V7-APPROVAL.md).
@@ -984,11 +984,12 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 | 2026-11-17 | fal.ai (Moss v5) | Same-Matilda ocean narration plus generic simultaneous speaking/notebook motion; `demo-video/moss-ocean/ledger/` | $0.2123 ($0.0123 voice + $0.20 conservative motion); no pending generation |
 | 2026-11-17 | fal.ai and audio review (Moss v6) | Clean colleague voice $0.0063, matching motion $0.36, four music reviews $0.12 | $0.4863 |
 | 2026-11-17 | Moss v7 soundtrack experiment | Six original music generation calls ($0.60) plus seven recorded audio assessments ($1.68, conservative); evidence and per-call records in the private audition archive | $2.28 |
-| | **Total of the $100 cap** | | **$54.377127**. $50 notice already sent (Telegram 23097); next notice $80. |
+| 2026-11-18 | Moss v8 controls | One Matilda voice line through the established fal.ai route | $0.0062 |
+| | **Total of the $100 cap** | | **$54.383327**. $50 notice already sent (Telegram 23097); next notice $80. |
 
 ## Needs Manish
 
-Manish selected A and 03 · Ribbon Pull. Final delivery is complete.
+Manish selected A and 03 · Ribbon Pull for the approved film. His current open decision is whether to adopt the separate v8 setup-controls review.
 
 **V40:** copy the repository with materialized media to the other Mac, provide its path
 in the saved paste prompt, and run that instruction in the actual prototype's workspace.
@@ -1177,7 +1178,7 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 
 ## Next
 
-Use `stable-moss-v7-a-ribbon-pull` for the final demo. A further revision begins on a new request.
+Review v8 controls in the private archive (`review-moss-v8-controls`). For the approved pre-controls movie use `stable-moss-v7-a-ribbon-pull`.
 
 **V40 media repair:** transfer the ready Downloads ZIP/checksum to the company Mac and
 merge-extract it into the existing demo reference root, preserving other files. Verify

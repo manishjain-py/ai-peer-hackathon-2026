@@ -13,6 +13,8 @@ recordings, which stay out of git by rule.
 
 The final end card unrolls “Create your AI Peer today” and the full HTTPS address before Moss settles into the logo. Telegram delivery is complete.
 
+**New review cut.** Moss v8 adds a 5.2-second setup controls scene while keeping the film at 119.6 seconds. The private archive holds the review files at `review-moss-v8-controls`. Manish’s review is pending.
+
 ## Updating the prototype on another Mac (V40, 17 November)
 
 Manish has designated **Moss v5 as the implementation reference** for the actual prototype
