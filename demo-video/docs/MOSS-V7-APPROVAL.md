@@ -1,6 +1,6 @@
 # Moss v7 picture and soundtrack approval
 
-**Final approval (V45).** Manish chose “A is final. Let's go with A” for the soundtrack and “I liked ribbon pull the most, so put that in the final video” for the ending. The finished film runs 119.600 seconds. The private archive holds the 4K master, original 1080p edition, checksums and Telegram confirmations at `stable-moss-v7-a-ribbon-pull`. The same tag in this public project pins the decision and current documentation.
+**Earlier approval (V45).** The current final version is [Moss v8](MOSS-V8-APPROVAL.md). Manish chose “A is final. Let's go with A” for the soundtrack and “I liked ribbon pull the most, so put that in the final video” for the ending. The finished film runs 119.600 seconds. The private archive holds the 4K master, original 1080p edition, checksums and Telegram confirmations at `stable-moss-v7-a-ribbon-pull`. The same tag in this public project pins the decision and current documentation.
 
 Ribbon Pull reveals “Create your AI Peer today” and `https://ai-peer.sandcastle.musta.ch`, then Moss takes its place beside “AI Peer”. The full soundtrack is the approved A mix. The earlier private tag `approved-moss-v7-a` holds A with the previous closing artwork.
 

@@ -3,9 +3,9 @@
 A new 2-minute "wow" demo video for the AI Peer hackathon project, started 2026-11-14.
 It is a new film, separate from the September concept film in `../film/`.
 
-The final film uses the Moss v7 picture, **A · Moss in Motion** soundtrack and **03 · Ribbon Pull** end card. Deliver the private `stable-moss-v7-a-ribbon-pull` checkpoint. The public `stable-moss-v7` tag is the earlier reference with the original mix and card. [Approval record](docs/MOSS-V7-APPROVAL.md).
+The approved final demo is Moss v8 with Peer controls, A · Moss in Motion and Ribbon Pull. Use the private `stable-moss-v8-controls` tag for delivery. [Approval record](docs/MOSS-V8-APPROVAL.md).
 
-The latest cut for review is `review-moss-v8-controls` in the private archive. It adds owner controls during setup. Preserve the separate stable Ribbon Pull release.
+Further stream concepts are standalone auditions until Manish selects one for integration.
 
 V40 (17 November): for implementing this design in the actual prototype on another Mac,
 use `../docs/prototype-moss-handoff/README.md`. Moss v5 is the designated implementation

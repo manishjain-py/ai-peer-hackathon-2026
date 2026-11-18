@@ -5,7 +5,7 @@ web page whose picture is a pure function of the film time, captured frame by fr
 
 ## Moss v7 picture reference
 
-The final film uses A · Moss in Motion and the Ribbon Pull end card. Current copies are in the private archive at `stable-moss-v7-a-ribbon-pull`. The [public 4K picture reference](renders/blended-moss-v7.mp4) and [original 1080p copy](renders/blended-moss-v7-1080p.mp4) use the earlier mix and run **119.600 seconds** at 30 fps. Moss slides into Ask, picks messages directly out of the company stream and guides Ram to his morning decision. See the [release record](../docs/MOSS-V7-DELIVERY-2026-11-17.md) and [source guide](../moss-choreography/README.md).
+The current approved film is v8 at the private checkpoint `stable-moss-v8-controls`. This directory retains the [earlier v7 picture reference](renders/blended-moss-v7.mp4). [Current approval](../docs/MOSS-V8-APPROVAL.md).
 
 ## Base/Draft 3 renderer
 

@@ -9,11 +9,11 @@ recordings, which stay out of git by rule.
 
 ## Current starting point (18 November 2026)
 
-**Final demo: Moss v7 with A · Moss in Motion and 03 · Ribbon Pull.** The 4K master and 1080p delivery are pinned in the private archive at `stable-moss-v7-a-ribbon-pull`. The full movie runs 119.600 seconds. See the [approval record](demo-video/docs/MOSS-V7-APPROVAL.md).
+**Approved final demo: Moss v8 · Peer controls.** Use `stable-moss-v8-controls` in the private film archive for the 4K master and 1080p delivery. It runs 119.600 seconds with soundtrack A and Ribbon Pull. [Approval record](demo-video/docs/MOSS-V8-APPROVAL.md).
 
 The final end card unrolls “Create your AI Peer today” and the full HTTPS address before Moss settles into the logo. Telegram delivery is complete.
 
-**New review cut.** Moss v8 adds a 5.2-second setup controls scene while keeping the film at 119.6 seconds. The private archive holds the review files at `review-moss-v8-controls`. Manish’s review is pending.
+A separate audition explores faster information streams and several useful updates per category within the existing 1:28–1:40 slot. The full film remains pinned to the v8 approval.
 
 ## Updating the prototype on another Mac (V40, 17 November)
 
@@ -39,8 +39,8 @@ asking that agent to interpret the film.
 | Applying Moss v5 to the current prototype on another Mac | `docs/prototype-moss-handoff/README.md`; paste `docs/prototype-moss-handoff/PASTE-PROMPT.md` with the copied folder path. |
 | Project rules for every agent | `AGENTS.md` (Claude Code loads it through `CLAUDE.md`) |
 | The live work (November 2026): the 2-minute demo video | `demo-video/AGENTS.md`, then `demo-video/docs/STATE.md` (the tracker) |
-| Approved final demo | Moss v7. See the [approval and stable checkpoint](demo-video/docs/MOSS-V7-APPROVAL.md). |
-| Current approved movie | The 4K and 1080p editions with soundtrack A and Ribbon Pull are in the private archive at `stable-moss-v7-a-ribbon-pull`. [Approval and delivery status](demo-video/docs/MOSS-V7-APPROVAL.md). |
+| Approved final demo | Moss v8. [Approval and stable checkpoint](demo-video/docs/MOSS-V8-APPROVAL.md). |
+| Current approved movie | Private archive tag `stable-moss-v8-controls` contains both full v8 editions. |
 | Preserved mascot exploration (16 November 2026) | `demo-video/mascot-exploration-v2/index.html`: 25 generated-art directions, individual in-demo previews and a 75-second quick-look, all delivered to Telegram (V33); `demo-video/docs/GENERATED-MASCOTS-DELIVERY-2026-11-16.md`. The first twelve code-native options remain in `demo-video/mascot-options/`. |
 | The demo video's decisions and Manish's words | `demo-video/docs/DESIGN.md` section 0 |
 | Briefs and hand-offs between sessions, dated, never edited | `demo-video/docs/handoffs/` |
@@ -72,6 +72,7 @@ the root `AGENTS.md`: one worker at a time (V15, C13), the 85% and 93% usage mar
 | `blended-moss-v6` | V41 delivered. Full-width UI, three physical selections, revised sound and product URL. |
 | `blended-moss-v7` | V42 delivered. Context-specific acting and travel, hidden stream picks, a longer wake and one continuous approach to Needs you. |
 | `stable-moss-v7` | Earlier picture and original mix. The final film checkpoint with soundtrack A and Ribbon Pull is `stable-moss-v7-a-ribbon-pull` in the private archive. |
+| `stable-moss-v8-controls` | Approved full v8 in the private archive; matching documentation checkpoint here. |
 
 - Go back to one: `git worktree add ../ai-peer-at-draft-03 draft-03` (a separate folder;
   `main` stays as it is).
