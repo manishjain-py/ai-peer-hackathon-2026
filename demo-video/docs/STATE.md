@@ -1,5 +1,8 @@
 # AI Peer demo video: state
 
+**V46 review cut in progress.** Manish asked for a compact owner-control panel and matching narration within the two-minute demo. Before editing, the remote `stable-moss-v7-a-ribbon-pull` checkpoint was verified on the public project and private film archive. That tag remains the approved rollback. V46 is a separate private package.
+
+
 **Final and delivered (V45): Moss v7 · A · Ribbon Pull.** The selected end card is integrated into the full 119.600-second film. The private archive holds both final editions, verification and Telegram receipts at `stable-moss-v7-a-ribbon-pull`. This project has the matching documentation checkpoint. [Approval record](MOSS-V7-APPROVAL.md).
 
 
