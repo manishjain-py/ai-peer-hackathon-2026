@@ -13,7 +13,7 @@ recordings, which stay out of git by rule.
 
 The final end card unrolls “Create your AI Peer today” and the full HTTPS address before Moss settles into the logo. Telegram delivery is complete.
 
-A separate audition explores faster information streams and several useful updates per category within the existing 1:28–1:40 slot. The full film remains pinned to the v8 approval.
+Six independently reviewed, standalone stream auditions for the 1:28–1:40 slot are on Telegram for selection. The private experiment tag is `moss-v8-stream-auditions`.
 
 ## Updating the prototype on another Mac (V40, 17 November)
 
@@ -71,7 +71,7 @@ the root `AGENTS.md`: one worker at a time (V15, C13), the 85% and 93% usage mar
 | `blended-moss-v5` | V39 complete 119.600-second revision (PR 22, `30de35e`): information ocean with explicit role/goal/interests matches, tighter walkthrough/Slack, simultaneous speaking and notebook writing; original introduction, laptop-only morning and resolved musical ending retained. |
 | `blended-moss-v6` | V41 delivered. Full-width UI, three physical selections, revised sound and product URL. |
 | `blended-moss-v7` | V42 delivered. Context-specific acting and travel, hidden stream picks, a longer wake and one continuous approach to Needs you. |
-| `stable-moss-v7` | Earlier picture and original mix. The final film checkpoint with soundtrack A and Ribbon Pull is `stable-moss-v7-a-ribbon-pull` in the private archive. |
+| `stable-moss-v7` | Earlier picture and original mix. The later v7 picture with soundtrack A and Ribbon Pull is preserved at `stable-moss-v7-a-ribbon-pull`. |
 | `stable-moss-v8-controls` | Approved full v8 in the private archive; matching documentation checkpoint here. |
 
 - Go back to one: `git worktree add ../ai-peer-at-draft-03 draft-03` (a separate folder;
