@@ -7,11 +7,11 @@ project and can continue with the next steps"), then fixed after a stranger's te
 repo is the only memory. Everything a new session needs is here, except secrets and private
 recordings, which stay out of git by rule.
 
-## Current starting point (17 November 2026)
+## Current starting point (18 November 2026)
 
-**Current approved demo: Moss v7 picture with A · Moss in Motion.** The private archive’s `approved-moss-v7-a` checkpoint includes the selected 1080p edition and its matching 4K master. The full film still has the existing end card. See the [approval record](demo-video/docs/MOSS-V7-APPROVAL.md).
+**Final demo: Moss v7 with A · Moss in Motion and 03 · Ribbon Pull.** The 4K master and 1080p delivery are pinned in the private archive at `stable-moss-v7-a-ribbon-pull`. The full movie runs 119.600 seconds. See the [approval record](demo-video/docs/MOSS-V7-APPROVAL.md).
 
-Six three-second previews show Moss creating the CTA and HTTPS address before settling into the logo. They were delivered privately for selection. Wait for Manish’s end-card number before editing the full film.
+The final end card unrolls “Create your AI Peer today” and the full HTTPS address before Moss settles into the logo. Telegram delivery is complete.
 
 ## Updating the prototype on another Mac (V40, 17 November)
 
@@ -38,7 +38,7 @@ asking that agent to interpret the film.
 | Project rules for every agent | `AGENTS.md` (Claude Code loads it through `CLAUDE.md`) |
 | The live work (November 2026): the 2-minute demo video | `demo-video/AGENTS.md`, then `demo-video/docs/STATE.md` (the tracker) |
 | Approved final demo | Moss v7. See the [approval and stable checkpoint](demo-video/docs/MOSS-V7-APPROVAL.md). |
-| Current approved movie | Private archive, `approved-moss-v7-a`: 1080p soundtrack edition A and corresponding 4K master. The [public picture reference](demo-video/film/renders/blended-moss-v7.mp4) has the earlier original mix. |
+| Current approved movie | The 4K and 1080p editions with soundtrack A and Ribbon Pull are in the private archive at `stable-moss-v7-a-ribbon-pull`. [Approval and delivery status](demo-video/docs/MOSS-V7-APPROVAL.md). |
 | Preserved mascot exploration (16 November 2026) | `demo-video/mascot-exploration-v2/index.html`: 25 generated-art directions, individual in-demo previews and a 75-second quick-look, all delivered to Telegram (V33); `demo-video/docs/GENERATED-MASCOTS-DELIVERY-2026-11-16.md`. The first twelve code-native options remain in `demo-video/mascot-options/`. |
 | The demo video's decisions and Manish's words | `demo-video/docs/DESIGN.md` section 0 |
 | Briefs and hand-offs between sessions, dated, never edited | `demo-video/docs/handoffs/` |
@@ -69,7 +69,7 @@ the root `AGENTS.md`: one worker at a time (V15, C13), the 85% and 93% usage mar
 | `blended-moss-v5` | V39 complete 119.600-second revision (PR 22, `30de35e`): information ocean with explicit role/goal/interests matches, tighter walkthrough/Slack, simultaneous speaking and notebook writing; original introduction, laptop-only morning and resolved musical ending retained. |
 | `blended-moss-v6` | V41 delivered. Full-width UI, three physical selections, revised sound and product URL. |
 | `blended-moss-v7` | V42 delivered. Context-specific acting and travel, hidden stream picks, a longer wake and one continuous approach to Needs you. |
-| `stable-moss-v7` | Earlier approved picture with the original mix. The subsequent soundtrack A selection is pinned at `approved-moss-v7-a` in the private archive. |
+| `stable-moss-v7` | Earlier picture and original mix. The final film checkpoint with soundtrack A and Ribbon Pull is `stable-moss-v7-a-ribbon-pull` in the private archive. |
 
 - Go back to one: `git worktree add ../ai-peer-at-draft-03 draft-03` (a separate folder;
   `main` stays as it is).

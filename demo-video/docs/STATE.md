@@ -1,6 +1,6 @@
 # AI Peer demo video: state
 
-**Current (V44): soundtrack A · Moss in Motion is final.** The approved Moss v7 picture and selected A soundtrack are available together in the private archive at `approved-moss-v7-a`. All six standalone end-card ideas were delivered on Telegram and await Manish’s number. The full movie still uses its existing closing artwork. [Approval record](MOSS-V7-APPROVAL.md).
+**Final and delivered (V45): Moss v7 · A · Ribbon Pull.** The selected end card is integrated into the full 119.600-second film. The private archive holds both final editions, verification and Telegram receipts at `stable-moss-v7-a-ribbon-pull`. This project has the matching documentation checkpoint. [Approval record](MOSS-V7-APPROVAL.md).
 
 
 **Moss v7 (V42) is complete and delivered.** The 4K master and 1080p edition run 119.600 seconds. Telegram confirmed the playable video (23172) and original download (23173). See the [delivery record](MOSS-V7-DELIVERY-2026-11-17.md), [completion handoff](handoffs/HANDOFF-2026-11-17-moss-v7-complete.md) and [review](../moss-choreography/CONTROLLER-REVIEW.md). Release tag `blended-moss-v7`. V7 used saved assets and added $0 to the $52.097127 project total. Earlier notes below are history.
@@ -985,7 +985,7 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 
 ## Needs Manish
 
-Manish selected soundtrack A. His next decision is end-card option 01–06.
+Manish selected A and 03 · Ribbon Pull. Final delivery is complete.
 
 **V40:** copy the repository with materialized media to the other Mac, provide its path
 in the saved paste prompt, and run that instruction in the actual prototype's workspace.
@@ -1174,7 +1174,7 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 
 ## Next
 
-Wait for Manish to select one of the six end cards. Integrate only the approved visual with the full A soundtrack.
+Use `stable-moss-v7-a-ribbon-pull` for the final demo. A further revision begins on a new request.
 
 **V40 media repair:** transfer the ready Downloads ZIP/checksum to the company Mac and
 merge-extract it into the existing demo reference root, preserving other files. Verify
