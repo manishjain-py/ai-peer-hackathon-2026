@@ -28,3 +28,5 @@ google-client.json
 # Internal soundtrack auditions are archived separately; this repo carries the scoring notes.
 /demo-video/music-auditions-v7/*
 !/demo-video/music-auditions-v7/SCORING-NOTES.md
+/demo-video/moss-endcard-auditions/
+/demo-video/approved-moss-v7-a/

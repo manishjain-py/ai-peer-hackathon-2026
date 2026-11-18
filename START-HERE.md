@@ -9,9 +9,9 @@ recordings, which stay out of git by rule.
 
 ## Current starting point (17 November 2026)
 
-**Moss v7 is the approved final demo. Stable tag `stable-moss-v7` pins its picture, soundtrack and approval record.** The 4K master and 1080p copy run 1:59.6. Moss slides into Ask and catches three ordinary updates from the moving stream. Their titles appear in Ram’s brief. Telegram messages 23172 and 23173 hold the video and original download. See the [delivery record](demo-video/docs/MOSS-V7-DELIVERY-2026-11-17.md) and [completion handoff](demo-video/docs/handoffs/HANDOFF-2026-11-17-moss-v7-complete.md). Checkpoint `blended-moss-v7` pins the release.
+**Current approved demo: Moss v7 picture with A · Moss in Motion.** The private archive’s `approved-moss-v7-a` checkpoint includes the selected 1080p edition and its matching 4K master. The full film still has the existing end card. See the [approval record](demo-video/docs/MOSS-V7-APPROVAL.md).
 
-Six music auditions on the same picture have passed independent review and were delivered privately for selection. See the [scoring notes](demo-video/music-auditions-v7/SCORING-NOTES.md). Use the approved checkpoint until Manish chooses another soundtrack.
+Six three-second previews show Moss creating the CTA and HTTPS address before settling into the logo. They were delivered privately for selection. Wait for Manish’s end-card number before editing the full film.
 
 ## Updating the prototype on another Mac (V40, 17 November)
 
@@ -38,7 +38,7 @@ asking that agent to interpret the film.
 | Project rules for every agent | `AGENTS.md` (Claude Code loads it through `CLAUDE.md`) |
 | The live work (November 2026): the 2-minute demo video | `demo-video/AGENTS.md`, then `demo-video/docs/STATE.md` (the tracker) |
 | Approved final demo | Moss v7. See the [approval and stable checkpoint](demo-video/docs/MOSS-V7-APPROVAL.md). |
-| Current approved movie | [Moss v7 in 4K](demo-video/film/renders/blended-moss-v7.mp4), [1080p download](demo-video/film/renders/blended-moss-v7-1080p.mp4) and [source guide](demo-video/moss-choreography/README.md). |
+| Current approved movie | Private archive, `approved-moss-v7-a`: 1080p soundtrack edition A and corresponding 4K master. The [public picture reference](demo-video/film/renders/blended-moss-v7.mp4) has the earlier original mix. |
 | Preserved mascot exploration (16 November 2026) | `demo-video/mascot-exploration-v2/index.html`: 25 generated-art directions, individual in-demo previews and a 75-second quick-look, all delivered to Telegram (V33); `demo-video/docs/GENERATED-MASCOTS-DELIVERY-2026-11-16.md`. The first twelve code-native options remain in `demo-video/mascot-options/`. |
 | The demo video's decisions and Manish's words | `demo-video/docs/DESIGN.md` section 0 |
 | Briefs and hand-offs between sessions, dated, never edited | `demo-video/docs/handoffs/` |
@@ -69,7 +69,7 @@ the root `AGENTS.md`: one worker at a time (V15, C13), the 85% and 93% usage mar
 | `blended-moss-v5` | V39 complete 119.600-second revision (PR 22, `30de35e`): information ocean with explicit role/goal/interests matches, tighter walkthrough/Slack, simultaneous speaking and notebook writing; original introduction, laptop-only morning and resolved musical ending retained. |
 | `blended-moss-v6` | V41 delivered. Full-width UI, three physical selections, revised sound and product URL. |
 | `blended-moss-v7` | V42 delivered. Context-specific acting and travel, hidden stream picks, a longer wake and one continuous approach to Needs you. |
-| `stable-moss-v7` | Manish’s approved final movie, including its original v7 mix. |
+| `stable-moss-v7` | Earlier approved picture with the original mix. The subsequent soundtrack A selection is pinned at `approved-moss-v7-a` in the private archive. |
 
 - Go back to one: `git worktree add ../ai-peer-at-draft-03 draft-03` (a separate folder;
   `main` stays as it is).

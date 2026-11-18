@@ -1,6 +1,6 @@
 # AI Peer demo video: state
 
-**Approved final film (V43): Moss v7 with its existing soundtrack.** Manish approved the delivered film for now and requested a stable checkpoint. Use `stable-moss-v7` and the [approval record](MOSS-V7-APPROVAL.md). Six separately named full-length listening copies were independently reviewed and delivered in the internal Telegram group. Manish’s music selection is pending. The copy at the stable tag is still his approved final. The comparison guide, media and receipts are in the private audition archive.
+**Current (V44): soundtrack A · Moss in Motion is final.** The approved Moss v7 picture and selected A soundtrack are available together in the private archive at `approved-moss-v7-a`. All six standalone end-card ideas were delivered on Telegram and await Manish’s number. The full movie still uses its existing closing artwork. [Approval record](MOSS-V7-APPROVAL.md).
 
 
 **Moss v7 (V42) is complete and delivered.** The 4K master and 1080p edition run 119.600 seconds. Telegram confirmed the playable video (23172) and original download (23173). See the [delivery record](MOSS-V7-DELIVERY-2026-11-17.md), [completion handoff](handoffs/HANDOFF-2026-11-17-moss-v7-complete.md) and [review](../moss-choreography/CONTROLLER-REVIEW.md). Release tag `blended-moss-v7`. V7 used saved assets and added $0 to the $52.097127 project total. Earlier notes below are history.
@@ -985,7 +985,7 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 
 ## Needs Manish
 
-Manish approved the delivered v7 (23172/23173). His next decision is which music audition, if any, to adopt.
+Manish selected soundtrack A. His next decision is end-card option 01–06.
 
 **V40:** copy the repository with materialized media to the other Mac, provide its path
 in the saved paste prompt, and run that instruction in the actual prototype's workspace.
@@ -1174,7 +1174,7 @@ animatic, WP1's side-by-side clip, the sheet of four looks and WP3's two key fra
 
 ## Next
 
-Await Manish’s selection from the six delivered music auditions. Use `stable-moss-v7` as the approved final.
+Wait for Manish to select one of the six end cards. Integrate only the approved visual with the full A soundtrack.
 
 **V40 media repair:** transfer the ready Downloads ZIP/checksum to the company Mac and
 merge-extract it into the existing demo reference root, preserving other files. Verify

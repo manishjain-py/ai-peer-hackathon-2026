@@ -3,9 +3,9 @@
 The two-minute AI Peer demo video ("He's asleep. I'm not.", `../docs/STORY.md`), built as one
 web page whose picture is a pure function of the film time, captured frame by frame.
 
-## Approved final movie · stable-moss-v7
+## Moss v7 picture reference
 
-[Moss v7 in 4K](renders/blended-moss-v7.mp4) and its [1080p Telegram edition](renders/blended-moss-v7-1080p.mp4) run **119.600 seconds** at 30 fps. Moss slides into Ask, picks messages directly out of the company stream and guides Ram to his morning decision. See the [release record](../docs/MOSS-V7-DELIVERY-2026-11-17.md) and [source guide](../moss-choreography/README.md).
+The approved soundtrack is A · Moss in Motion. Current listening copies are in the private archive at `approved-moss-v7-a`. The [public 4K picture reference](renders/blended-moss-v7.mp4) and [original 1080p copy](renders/blended-moss-v7-1080p.mp4) use the earlier mix and run **119.600 seconds** at 30 fps. Moss slides into Ask, picks messages directly out of the company stream and guides Ram to his morning decision. See the [release record](../docs/MOSS-V7-DELIVERY-2026-11-17.md) and [source guide](../moss-choreography/README.md).
 
 ## Base/Draft 3 renderer
 
