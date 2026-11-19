@@ -15,6 +15,8 @@ The final end card unrolls “Create your AI Peer today” and the full HTTPS ad
 
 Manish chose the open-book treatment from six audition scenes. It fills 1:28–1:40 of the full film and leads directly into Ram waking.
 
+**New cut for review.** The private archive’s `review-moss-v8-architecture` adds a diagram at 0:42 while keeping the approved audio and 119.6-second runtime. The stable Brief Bindery edition remains available at `stable-moss-v8-brief-bindery`.
+
 ## Updating the prototype on another Mac (V40, 17 November)
 
 Manish has designated **Moss v5 as the implementation reference** for the actual prototype

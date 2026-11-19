@@ -1,5 +1,8 @@
 # AI Peer demo video: state
 
+**V49 delivered for review.** A separate 119.600-second cut adds a short architecture diagram during the early brief recap. The private tag is `review-moss-v8-architecture`. Both editions preserve the approved soundtrack, and the original closing sequence is intact. The stable final checkpoint is `stable-moss-v8-brief-bindery`. No new generation cost.
+
+
 **Final and delivered (V48): Moss v8 · Brief Bindery.** Manish selected option 06. Both full editions with that 12-second scene, Peer controls, soundtrack A and Ribbon Pull are pinned at `stable-moss-v8-brief-bindery` in the private archive. Telegram delivery is complete. The previous approved movie remains at `stable-moss-v8-controls`. [Release record](MOSS-V8-APPROVAL.md).
 
 
