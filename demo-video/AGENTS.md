@@ -3,7 +3,7 @@
 A new 2-minute "wow" demo video for the AI Peer hackathon project, started 2026-11-14.
 It is a new film, separate from the September concept film in `../film/`.
 
-The final film is Moss v8 · Brief Bindery with Peer controls, soundtrack A and Ribbon Pull. Use the private `stable-moss-v8-brief-bindery` tag for delivery. [Release record](docs/MOSS-V8-APPROVAL.md).
+The current hackathon submission is the single 4K master in the private `hackathon-submission-final` release. It includes the supplied architecture chart during the music-only closing segment. The earlier Brief Bindery and architecture review cuts are retained.
 
 The earlier pre-Bindery movie is preserved at `stable-moss-v8-controls`.
 

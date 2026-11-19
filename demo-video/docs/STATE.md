@@ -1,5 +1,8 @@
 # AI Peer demo video: state
 
+**Final for submission (V51).** Use the private release `hackathon-submission-final`. It delivers one 3840 × 2160 H.264/AAC MP4 titled `AI-Peer-Hackathon-Submission-4K.mp4`, running 119.600 seconds. The supplied architecture chart replaces the earlier diagram during the music-only ending. The approved timing, soundtrack and Ribbon Pull are preserved. The previous cuts below are history.
+
+
 **V50 delivered for review.** The early brief recap is four seconds shorter. The diagram appears from 1:51.80 to 1:55.70 after the final spoken line, over music only. The existing composition plays at its original tempo and resolves with the original closing hit. Private checkpoint `review-moss-v8-architecture-end`, approved rollback `stable-moss-v8-brief-bindery`. The first diagram placement below was declined.
 
 

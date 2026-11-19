@@ -9,13 +9,12 @@ recordings, which stay out of git by rule.
 
 ## Current starting point (18 November 2026)
 
-**Final demo: Moss v8 · Brief Bindery.** Use `stable-moss-v8-brief-bindery` in the private film archive for the 4K master and 1080p delivery. The complete film runs 119.600 seconds. [Release record](demo-video/docs/MOSS-V8-APPROVAL.md).
+**Final hackathon submission.** Use `AI-Peer-Hackathon-Submission-4K.mp4` in the private release `hackathon-submission-final`. The supplied architecture chart appears after the final words and before Ribbon Pull. 3840 × 2160, 30 fps, 119.600 seconds.
 
 The final end card unrolls “Create your AI Peer today” and the full HTTPS address before Moss settles into the logo. Telegram delivery is complete.
 
 Manish chose the open-book treatment from six audition scenes. It fills 1:28–1:40 of the full film and leads directly into Ram waking.
 
-**Latest review cut.** The private tag `review-moss-v8-architecture-end` holds the 119.6-second version with the architecture diagram after the last words and before Ribbon Pull. The approved rollback is `stable-moss-v8-brief-bindery`.
 
 ## Updating the prototype on another Mac (V40, 17 November)
 
@@ -41,8 +40,8 @@ asking that agent to interpret the film.
 | Applying Moss v5 to the current prototype on another Mac | `docs/prototype-moss-handoff/README.md`; paste `docs/prototype-moss-handoff/PASTE-PROMPT.md` with the copied folder path. |
 | Project rules for every agent | `AGENTS.md` (Claude Code loads it through `CLAUDE.md`) |
 | The live work (November 2026): the 2-minute demo video | `demo-video/AGENTS.md`, then `demo-video/docs/STATE.md` (the tracker) |
-| Approved final demo | Moss v8. [Approval and stable checkpoint](demo-video/docs/MOSS-V8-APPROVAL.md). |
-| Current approved movie | Private release tag `stable-moss-v8-brief-bindery` contains both complete editions. |
+| Earlier v8 approval | Brief Bindery source film. [Approval and checkpoint](demo-video/docs/MOSS-V8-APPROVAL.md). |
+| Current submission movie | Private release `hackathon-submission-final` contains the one submission MP4. |
 | Preserved mascot exploration (16 November 2026) | `demo-video/mascot-exploration-v2/index.html`: 25 generated-art directions, individual in-demo previews and a 75-second quick-look, all delivered to Telegram (V33); `demo-video/docs/GENERATED-MASCOTS-DELIVERY-2026-11-16.md`. The first twelve code-native options remain in `demo-video/mascot-options/`. |
 | The demo video's decisions and Manish's words | `demo-video/docs/DESIGN.md` section 0 |
 | Briefs and hand-offs between sessions, dated, never edited | `demo-video/docs/handoffs/` |
@@ -76,6 +75,7 @@ the root `AGENTS.md`: one worker at a time (V15, C13), the 85% and 93% usage mar
 | `stable-moss-v7` | Earlier picture and original mix. The later v7 picture with soundtrack A and Ribbon Pull is preserved at `stable-moss-v7-a-ribbon-pull`. |
 | `stable-moss-v8-controls` | Approved full v8 in the private archive; matching documentation checkpoint here. |
 | `stable-moss-v8-brief-bindery` | Selected 06 · Brief Bindery integrated into the full film. Media are in the private archive. |
+| `hackathon-submission-final` | Final submission file with supplied diagram. Media in the private archive. |
 
 - Go back to one: `git worktree add ../ai-peer-at-draft-03 draft-03` (a separate folder;
   `main` stays as it is).
