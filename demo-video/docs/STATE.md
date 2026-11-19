@@ -1,5 +1,8 @@
 # AI Peer demo video: state
 
+**V50 delivered for review.** The early brief recap is four seconds shorter. The diagram appears from 1:51.80 to 1:55.70 after the final spoken line, over music only. The existing composition plays at its original tempo and resolves with the original closing hit. Private checkpoint `review-moss-v8-architecture-end`, approved rollback `stable-moss-v8-brief-bindery`. The first diagram placement below was declined.
+
+
 **V49 delivered for review.** A separate 119.600-second cut adds a short architecture diagram during the early brief recap. The private tag is `review-moss-v8-architecture`. Both editions preserve the approved soundtrack, and the original closing sequence is intact. The stable final checkpoint is `stable-moss-v8-brief-bindery`. No new generation cost.
 
 
@@ -991,7 +994,8 @@ waits are in `START-HERE.md`, "Take over as the controller", step 5.
 | 2026-11-17 | fal.ai and audio review (Moss v6) | Clean colleague voice $0.0063, matching motion $0.36, four music reviews $0.12 | $0.4863 |
 | 2026-11-17 | Moss v7 soundtrack experiment | Six original music generation calls ($0.60) plus seven recorded audio assessments ($1.68, conservative); evidence and per-call records in the private audition archive | $2.28 |
 | 2026-11-18 | Moss v8 controls | One Matilda voice line through the established fal.ai route | $0.0062 |
-| | **Total of the $100 cap** | | **$54.383327**. $50 notice already sent (Telegram 23097); next notice $80. |
+| 2026-11-19 | Architecture end-cut listening checks | Two audio-only excerpts, private ledger | $0.06 |
+| | **Total of the $100 cap** | | **$54.443327**. $50 notice already sent (Telegram 23097); next notice $80. |
 
 ## Needs Manish
 
